@@ -27,6 +27,7 @@ const SimpleTextEditorWidget = (props) => {
     setSelected,
     onSelectBlock,
     onChangeBlock,
+    fieldName,
     block,
     value,
     selected,
@@ -66,8 +67,9 @@ const SimpleTextEditorWidget = (props) => {
 
   useEffect(() => {
     //inizializzazione del valore nel campo
-    if (fieldRef.current && value?.length > 0) {
-      fieldRef.current.innerText = value;
+    const _value = value ?? data[fieldName];
+    if (fieldRef.current && _value?.length > 0) {
+      fieldRef.current.innerText = _value;
     }
   }, []);
 
@@ -82,7 +84,13 @@ const SimpleTextEditorWidget = (props) => {
         tabIndex={0}
         placeholder={placeholder || intl.formatMessage(messages.text)}
         onInput={(e) => {
-          onChangeBlock(block, { ...data, value: e.target.textContent });
+          let retVal = {
+            value,
+          };
+          if (fieldName) {
+            retVal = { [fieldName]: value };
+          }
+          onChangeBlock(block, { ...data, ...retVal });
         }}
         onFocus={(e) => {
           if (!selected) {

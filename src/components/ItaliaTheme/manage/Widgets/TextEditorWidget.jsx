@@ -100,10 +100,16 @@ const TextEditorWidget = (props) => {
               }
             }}
             onChange={(value, selection, editor) => {
-              onChangeBlock(block, {
-                ...data,
+              let retVal = {
                 value,
                 plaintext: serializeNodesToText(value || []),
+              };
+              if (fieldName) {
+                retVal = { [fieldName]: value };
+              }
+              onChangeBlock(block, {
+                ...data,
+                ...retVal,
                 // TODO: also add html serialized value
               });
             }}
