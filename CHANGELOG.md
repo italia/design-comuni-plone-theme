@@ -1,5 +1,18 @@
 
 
+## [8.7.6](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.5...v8.7.6) (2023-10-09)
+
+
+### Bug Fixes
+
+* allineamento testo blocco elenco quadratoni ([#353](https://github.com/redturtle/design-comuni-plone-theme/issues/353)) ([79bdf64](https://github.com/redturtle/design-comuni-plone-theme/commit/79bdf64f0fff59dde7f31a573a0678d6f6e0331b))
+
+
+### Maintenance
+
+* preparing release 8.7.6 ([6a2c6a9](https://github.com/redturtle/design-comuni-plone-theme/commit/6a2c6a9405cc44f17c8a06cc198fc8490ddc6e6f))
+* updated volto-data-grid-widget 2.2.3 ([47a6171](https://github.com/redturtle/design-comuni-plone-theme/commit/47a61712a6074c2b699bdddde90b4f489c3bc3d9))
+
 ## [8.7.5](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.4...v8.7.5) (2023-10-05)
 
 
