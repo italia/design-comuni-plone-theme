@@ -44,7 +44,7 @@ const Block = ({ data, block, inEditMode, selected, ...otherProps }) => {
   }, [selected]);
 
   useEffect(() => {
-    if (!selected && selectedField) {
+    if (!selected && selectedField && otherProps?.onSelectBlock) {
       otherProps.onSelectBlock(block);
     }
   }, [selectedField]);

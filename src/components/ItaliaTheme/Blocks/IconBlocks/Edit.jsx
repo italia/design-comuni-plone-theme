@@ -77,19 +77,18 @@ class Edit extends SubblocksEdit {
             <div className="block-header">
               <div className="title">
                 <TextEditorWidget
+                  {...this.props}
+                  showToolbar={false}
                   data={this.props.data}
+                  key={'title'}
                   fieldName="title"
                   selected={this.state.selectedField === 'title'}
-                  block={this.props.block}
-                  onChangeBlock={(data) => {
-                    this.props.onChangeBlock(this.props.block, {
-                      ...data,
-                    });
+                  setSelected={() => {
+                    this.setState({ selectedField: 'title' });
+                    this.onSubblockChangeFocus(-1);
                   }}
                   placeholder={this.props.intl.formatMessage(messages.title)}
-                  showToolbar={false}
-                  onSelectBlock={() => {}}
-                  onAddBlock={() => {
+                  focusNextField={() => {
                     this.setState({ selectedField: 'description' });
                   }}
                 />
@@ -97,21 +96,25 @@ class Edit extends SubblocksEdit {
 
               <div className="description">
                 <TextEditorWidget
+                  {...this.props}
+                  showToolbar={true}
                   data={this.props.data}
                   fieldName="description"
                   selected={this.state.selectedField === 'description'}
-                  block={this.props.block}
-                  onChangeBlock={(data) =>
-                    this.props.onChangeBlock(this.props.block, {
-                      ...data,
-                    })
-                  }
+                  setSelected={() => {
+                    this.setState({ selectedField: 'description' });
+                    this.onSubblockChangeFocus(-1);
+                  }}
                   placeholder={this.props.intl.formatMessage(
                     messages.description,
                   )}
-                  showToolbar={true}
-                  onSelectBlock={() => {}}
-                  onAddBlock={() => {}}
+                  focusPrevField={() => {
+                    this.setState({ selectedField: 'title' });
+                  }}
+                  focusNextField={() => {
+                    this.onSubblockChangeFocus(0);
+                    this.setState({ selectedField: null });
+                  }}
                 />
               </div>
             </div>
@@ -121,11 +124,17 @@ class Edit extends SubblocksEdit {
                 {this.state.subblocks.map((subblock, subindex) => (
                   <Col lg="4" xl="3" key={subblock.id}>
                     <EditBlock
+                      {...this.props}
                       data={subblock}
                       index={subindex}
                       selected={this.isSubblockSelected(subindex)}
                       {...this.subblockProps}
+                      isFirst={subindex === 0}
+                      isLast={subindex === this.state.subblocks?.length - 1}
                       openObjectBrowser={this.props.openObjectBrowser}
+                      onFocusPreviousBlock={() => {
+                        this.setState({ selectedField: 'description' });
+                      }}
                     />
                   </Col>
                 ))}

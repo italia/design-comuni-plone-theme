@@ -71,7 +71,7 @@ class EditBlock extends SubblockEdit {
     if (__SERVER__) {
       return <div />;
     }
-
+    console.log(this.props);
     return (
       <Subblock subblock={this} className="subblock-edit">
         <Card
@@ -101,23 +101,33 @@ class EditBlock extends SubblockEdit {
                 }}
               >
                 <TextEditorWidget
+                  {...this.props}
+                  showToolbar={false}
                   data={this.props.data}
                   fieldName="title"
                   selected={
                     this.props.selected && this.state.focusOn === 'title'
                   }
+                  setSelected={() => this.setState({ focusOn: 'title' })}
                   block={this.props.block}
-                  onChangeBlock={this.onChange}
+                  onChangeBlock={(block, _data) => {
+                    this.props.onChangeBlock(this.props.index, _data);
+                  }}
                   placeholder={this.props.intl.formatMessage(
                     messages.titlePlaceholder,
                   )}
-                  prevFocus="text"
-                  nextFocus="text"
-                  disableMoveToNearest={true}
-                  setFocus={(f) => {
-                    this.setState({ focusOn: f });
+                  focusPrevField={() => {
+                    this.props.isFirst
+                      ? this.props.onFocusPreviousBlock
+                      : () => {
+                          this.props.onSubblockChangeFocus(
+                            this.props.index - 1,
+                          );
+                        };
                   }}
-                  showToolbar={false}
+                  focusNextField={() => {
+                    this.setState({ focusOn: 'text' });
+                  }}
                   key="title"
                 />
               </div>
@@ -130,21 +140,29 @@ class EditBlock extends SubblockEdit {
               }}
             >
               <TextEditorWidget
+                {...this.props}
                 data={this.props.data}
+                key="text"
                 fieldName="text"
                 selected={this.props.selected && this.state.focusOn === 'text'}
-                block={this.props.block}
-                onChangeBlock={this.onChange}
+                setSelected={() => this.setState({ focusOn: 'text' })}
+                onChangeBlock={(block, _data) => {
+                  this.props.onChangeBlock(this.props.index, _data);
+                }}
                 placeholder={this.props.intl.formatMessage(
                   messages.textPlaceholder,
                 )}
-                disableMoveToNearest={true}
-                prevFocus="title"
-                nextFocus="title"
-                setFocus={(f) => {
-                  this.setState({ focusOn: f });
+                focusNextField={
+                  !this.props.isLast
+                    ? () => {
+                        this.setState({ focusOn: null });
+                        this.props.onSubblockChangeFocus(this.props.index + 1);
+                      }
+                    : null //default go to next block
+                }
+                focusPrevField={() => {
+                  this.setState({ focusOn: 'title' });
                 }}
-                key="text"
               />
             </div>
 

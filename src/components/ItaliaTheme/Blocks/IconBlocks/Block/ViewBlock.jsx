@@ -12,6 +12,7 @@ import { UniversalLink } from '@plone/volto/components';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { Card, CardBody, CardReadMore } from 'design-react-kit';
 import config from '@plone/volto/registry';
+import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 
 const messages = defineMessages({
   vedi: {
@@ -25,8 +26,9 @@ const messages = defineMessages({
  * @class ViewBlock
  * @extends Component
  */
-const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
+const ViewBlock = ({ data }) => {
   const intl = useIntl();
+  console.log(data);
   return (
     <Card
       className="card-bg rounded subblock-view"
@@ -41,22 +43,10 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
           </div>
         )}
 
-        {data.title && (
-          <div className="iconblock-title">
-            {redraft(
-              data.title,
-              config.settings.richtextViewSettings.ToHTMLRenderers,
-              config.settings.richtextViewSettings.ToHTMLOptions,
-            )}
-          </div>
-        )}
+        {data.title && <div className="iconblock-title">{data.title}</div>}
         {data.text && (
           <div className="iconblock-text">
-            {redraft(
-              data.text,
-              config.settings.richtextViewSettings.ToHTMLRenderers,
-              config.settings.richtextViewSettings.ToHTMLOptions,
-            )}
+            <TextBlockView data={{ value: data.text }} />
           </div>
         )}
         {data.href && (

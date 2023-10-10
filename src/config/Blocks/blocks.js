@@ -297,6 +297,7 @@ const italiaBlocks = {
       view: [],
     },
     sidebarTab: 1,
+    blockHasOwnFocusManagement: true,
   },
   contacts: {
     id: 'contacts',

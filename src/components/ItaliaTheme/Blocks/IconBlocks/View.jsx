@@ -5,12 +5,11 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import redraft from 'redraft';
 import ViewBlock from './Block/ViewBlock';
 import { Container, Row, Col } from 'design-react-kit';
 import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
-import config from '@plone/volto/registry';
+import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 
 /**
  * View Accordion block class.
@@ -39,22 +38,10 @@ const AccordionView = ({ data, block }) => {
           )}
           <Container className="px-md-4">
             <div className="block-header">
-              {data.title && (
-                <div className="title">
-                  {redraft(
-                    data.title,
-                    config.settings.richtextViewSettings.ToHTMLRenderers,
-                    config.settings.richtextViewSettings.ToHTMLOptions,
-                  )}
-                </div>
-              )}
+              {data.title && <div className="title">{data.title}</div>}
               {data.description && (
                 <div className="description">
-                  {redraft(
-                    data.description,
-                    config.settings.richtextViewSettings.ToHTMLRenderers,
-                    config.settings.richtextViewSettings.ToHTMLOptions,
-                  )}
+                  <TextBlockView data={{ value: data.description }} />
                 </div>
               )}
             </div>
