@@ -6,7 +6,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { isEqual } from 'lodash';
 import { SidebarPortal } from '@plone/volto/components';
 
 import { Callout, CalloutTitle, CalloutText } from 'design-react-kit';
@@ -34,7 +33,6 @@ const Edit = ({
   onChangeBlock,
   block,
   onSelectBlock,
-  onAddBlock,
   selected,
   ...otherProps
 }) => {

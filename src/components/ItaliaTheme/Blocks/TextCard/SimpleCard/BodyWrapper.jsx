@@ -8,7 +8,7 @@ const BodyWrapper = ({ inEditMode, children }) => {
         'public-ui': inEditMode,
       })}
     >
-      <div>{children}</div>
+      {children}
     </div>
   );
 };
