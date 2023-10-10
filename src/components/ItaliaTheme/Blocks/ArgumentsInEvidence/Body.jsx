@@ -30,7 +30,7 @@ class Body extends SubblockEdit {
           inEditMode={this.props.inEditMode}
           selected={this.props.selected || this.state.focusOn === 'title'}
           block={this.props.block}
-          focusOn={this.props.focusOn}
+          focusOn={this.state.focusOn}
           intl={this.props.intl}
           onChange={this.onChange}
         />

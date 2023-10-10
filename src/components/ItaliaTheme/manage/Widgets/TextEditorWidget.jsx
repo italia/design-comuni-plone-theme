@@ -66,10 +66,10 @@ const TextEditorWidget = (props) => {
   const _value = value ?? data[fieldName];
 
   const selectThis = () => {
-    if (onSelectBlock) {
-      onSelectBlock(block);
-    } else {
+    if (setSelected) {
       setSelected();
+    } else if (onSelectBlock) {
+      onSelectBlock(block);
     }
   };
   return (
@@ -131,7 +131,6 @@ const TextEditorWidget = (props) => {
 TextEditorWidget.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
   setSelected: PropTypes.func.isRequired,
-  onSelectBlock: PropTypes.func.isRequired,
   onChangeBlock: PropTypes.func.isRequired,
   block: PropTypes.string.isRequired,
   selected: PropTypes.bool.isRequired,
@@ -143,6 +142,7 @@ TextEditorWidget.propTypes = {
   properties: PropTypes.objectOf(PropTypes.any).isRequired,
   onFocusPreviousBlock: PropTypes.objectOf(PropTypes.any).isRequired,
   onFocusNextBlock: PropTypes.objectOf(PropTypes.any).isRequired,
+  onSelectBlock: PropTypes.func.isRequired,
 };
 
 export default connect(

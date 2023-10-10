@@ -45,6 +45,7 @@ class Edit extends SubblocksEdit {
     super(props);
     this.state.selectedField = 'title';
   }
+
   /**
    * Render method.
    * @method render
@@ -67,12 +68,11 @@ class Edit extends SubblocksEdit {
               <div className="title">
                 <TextEditorWidget
                   {...this.props}
+                  key="title"
                   showToolbar={false}
                   data={this.props.data}
-                  onSelectBlock={null}
                   fieldName="title"
                   selected={this.state.selectedField === 'title'}
-                  onChangeBlock={this.props.onChangeBlock}
                   placeholder={this.props.intl.formatMessage(messages.title)}
                   setSelected={() => {
                     this.setState({ selectedField: 'title' });
@@ -86,18 +86,17 @@ class Edit extends SubblocksEdit {
               <div className="description">
                 <TextEditorWidget
                   {...this.props}
-                  showToolbar={true}
+                  key="description"
                   data={this.props.data}
                   fieldName="description"
                   selected={this.state.selectedField === 'description'}
-                  onSelectBlock={null}
-                  onChangeBlock={this.props.onChangeBlock}
                   placeholder={this.props.intl.formatMessage(
                     messages.description,
                   )}
-                  setSelected={() =>
-                    this.setState({ selectedField: 'description' })
-                  }
+                  onSelectBlock={null}
+                  setSelected={() => {
+                    this.setState({ selectedField: 'description' });
+                  }}
                   focusPrevField={() => {
                     this.setState({ selectedField: 'title' });
                   }}
@@ -129,6 +128,9 @@ class Edit extends SubblocksEdit {
                       onSubblockChangeFocus={this.onSubblockChangeFocus}
                       isLast={this.state.subblocks.length - 1 === subindex}
                       isFirst={subindex === 0}
+                      onFocusPreviousBlock={() => {
+                        this.setState({ selectedField: 'description' });
+                      }}
                     />
                   </Col>
                 ))}

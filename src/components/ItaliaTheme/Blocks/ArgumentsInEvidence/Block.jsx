@@ -33,7 +33,6 @@ const Block = ({
   data,
   inEditMode,
   selected,
-  focusOn,
   block,
   onChange,
   intl,
@@ -61,7 +60,7 @@ const Block = ({
                 onChange({ ...data, title: _data.value });
               }}
               setSelected={() => {
-                focusOn('title');
+                otherProps.onSubblockChangeFocus(index);
               }}
             />
           ) : (

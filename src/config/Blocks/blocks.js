@@ -313,6 +313,7 @@ const italiaBlocks = {
       view: [],
     },
     sidebarTab: 1,
+    blockHasOwnFocusManagement: true,
   },
 
   video_gallery: {
@@ -362,6 +363,7 @@ const italiaBlocks = {
       view: [],
     },
     sidebarTab: 1,
+    blockHasOwnFocusManagement: true,
   },
   callout_block: {
     id: 'callout_block',

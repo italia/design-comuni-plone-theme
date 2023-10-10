@@ -17,16 +17,7 @@ const messages = defineMessages({
 });
 
 const Edit = (props) => {
-  const {
-    data,
-    block,
-    onChangeBlock,
-    selected,
-    onSelectBlock,
-    onAddBlock,
-    index,
-    ...otherProps
-  } = props;
+  const { data, block, selected, ...otherProps } = props;
   const intl = useIntl();
   const [selectedField, setSelectedField] = useState('text');
   useEffect(() => {
@@ -36,6 +27,12 @@ const Edit = (props) => {
       setSelectedField(null);
     }
   }, [selected]);
+
+  useEffect(() => {
+    if (!selected && selectedField) {
+      props.onSelectBlock(block);
+    }
+  }, [selectedField]);
 
   return (
     <>
@@ -74,12 +71,10 @@ const Edit = (props) => {
               >
                 <TextEditorWidget
                   {...otherProps}
-                  showToolbar={true}
                   data={data}
                   fieldName="text"
                   selected={selectedField === 'text'}
                   block={block}
-                  onChangeBlock={onChangeBlock}
                   placeholder={intl.formatMessage(messages.text)}
                   setSelected={() => {
                     setSelectedField('text');
@@ -113,7 +108,6 @@ const Edit = (props) => {
                   block={block}
                   fieldName="countdown_text"
                   selected={selectedField === 'countdown_text'}
-                  onChangeBlock={onChangeBlock}
                   placeholder={intl.formatMessage(messages.text)}
                   setSelected={() => {
                     setSelectedField('countdown_text');

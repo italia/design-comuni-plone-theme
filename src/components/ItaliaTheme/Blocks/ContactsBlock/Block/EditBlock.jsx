@@ -58,6 +58,18 @@ class EditBlock extends SubblockEdit {
       }
     });
   }
+
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    if (!this.props.selected && nextProps.focusOn) {
+      this.props.onSelectBlock(this.props.block);
+    }
+
+    if (nextProps.selected && !this.state.focusOn) {
+      this.setState({ focusOn: 'title' });
+    } else if (!nextProps.selected) {
+      this.setState({ focusOn: null });
+    }
+  }
   /**
    * Render method.
    * @method render
@@ -81,7 +93,6 @@ class EditBlock extends SubblockEdit {
           <CardBody tag="div">
             <div className="contact-title">
               {/* eslint-disable */}
-
               <TextEditorWidget
                 {...this.props}
                 key="title"

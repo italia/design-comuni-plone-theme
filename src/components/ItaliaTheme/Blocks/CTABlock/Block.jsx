@@ -43,6 +43,12 @@ const Block = ({ data, block, inEditMode, selected, ...otherProps }) => {
     }
   }, [selected]);
 
+  useEffect(() => {
+    if (!selected && selectedField) {
+      otherProps.onSelectBlock(block);
+    }
+  }, [selectedField]);
+
   return (
     <div
       className={cx('cta-block-wrapper', {
@@ -87,16 +93,17 @@ const Block = ({ data, block, inEditMode, selected, ...otherProps }) => {
               title
             )}
           </h2>
+
           {inEditMode ? (
             <TextEditorWidget
               {...otherProps}
               showToolbar={true}
               data={data}
               fieldName="cta_content"
-              selected={selectedField === 'content'}
-              setSelected={() => setSelectedField('content')}
               block={block}
+              selected={selectedField === 'content'}
               placeholder={intl.formatMessage(messages.cta_content)}
+              setSelected={() => setSelectedField('content')}
               focusPrevField={() => {
                 setSelectedField('title');
               }}
