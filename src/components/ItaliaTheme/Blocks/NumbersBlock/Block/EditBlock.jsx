@@ -72,20 +72,29 @@ class EditBlock extends SubblockEdit {
               }}
             >
               <TextEditorWidget
+                {...this.props}
+                showToolbar={false}
                 data={this.props.data}
                 fieldName="title"
                 selected={this.props.selected && this.state.focusOn === 'title'}
+                setSelected={() => this.setState({ focusOn: 'title' })}
                 block={this.props.block}
-                onChangeBlock={this.onChange}
+                onChangeBlock={(block, _data) => {
+                  this.props.onChangeBlock(this.props.index, _data);
+                }}
                 placeholder={this.props.intl.formatMessage(
                   messages.numberPlaceholder,
                 )}
-                prevFocus="text"
-                nextFocus="text"
-                setFocus={(f) => {
-                  this.setState({ focusOn: f });
+                focusPrevField={
+                  this.props.isFirst
+                    ? this.props.onFocusPreviousBlock
+                    : () => {
+                        this.props.onSubblockChangeFocus(this.props.index - 1);
+                      }
+                }
+                focusNextField={() => {
+                  this.setState({ focusOn: 'text' });
                 }}
-                showToolbar={false}
                 key="title"
               />
             </div>
@@ -98,21 +107,30 @@ class EditBlock extends SubblockEdit {
             }}
           >
             <TextEditorWidget
+              {...this.props}
+              showToolbar={false}
               data={this.props.data}
+              key="text"
               fieldName="text"
               selected={this.props.selected && this.state.focusOn === 'text'}
               block={this.props.block}
-              onChangeBlock={this.onChange}
+              onChangeBlock={(block, _data) => {
+                this.props.onChangeBlock(this.props.index, _data);
+              }}
               placeholder={this.props.intl.formatMessage(
                 messages.descriptionPlaceholder,
               )}
-              prevFocus="title"
-              nextFocus="title"
-              setFocus={(f) => {
-                this.setState({ focusOn: f });
+              focusNextField={
+                !this.props.isLast
+                  ? () => {
+                      this.setState({ focusOn: null });
+                      this.props.onSubblockChangeFocus(this.props.index + 1);
+                    }
+                  : null //default go to next block
+              }
+              focusPrevField={() => {
+                this.setState({ focusOn: 'title' });
               }}
-              showToolbar={false}
-              key="text"
             />
           </div>
         </div>

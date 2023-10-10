@@ -28,7 +28,7 @@ const messages = defineMessages({
  */
 const ViewBlock = ({ data }) => {
   const intl = useIntl();
-  console.log(data);
+
   return (
     <Card
       className="card-bg rounded subblock-view"

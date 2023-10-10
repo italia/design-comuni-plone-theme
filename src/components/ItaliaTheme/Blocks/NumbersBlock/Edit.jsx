@@ -49,6 +49,13 @@ class Edit extends SubblocksEdit {
     super(props);
     this.state.selectedField = 'title';
   }
+  UNSAFE_componentWillReceiveProps(newProps) {
+    if (newProps.selected) {
+      this.setState({ selectedField: 'title' });
+    } else {
+      this.setState({ selectedField: null });
+    }
+  }
   /**
    * Render method.
    * @method render
@@ -115,22 +122,24 @@ class Edit extends SubblocksEdit {
 
                     <div className="title">
                       <TextEditorWidget
+                        {...this.props}
+                        showToolbar={false}
                         data={this.props.data}
+                        key={'title'}
                         fieldName="title"
                         selected={this.state.selectedField === 'title'}
-                        block={this.props.block}
-                        onChangeBlock={(data) => {
-                          this.props.onChangeBlock(this.props.block, {
-                            ...data,
-                          });
+                        setSelected={() => {
+                          this.setState({ selectedField: 'title' });
                         }}
+                        onChangeBlock={this.props.onChangeBlock}
                         placeholder={this.props.intl.formatMessage(
                           messages.title,
                         )}
-                        showToolbar={false}
-                        onSelectBlock={() => {}}
-                        onAddBlock={() => {
-                          this.setState({ selectedField: 'description' });
+                        focusNextField={() => {
+                          this.setState({
+                            selectedField: null,
+                            subIndexSelected: 0,
+                          });
                         }}
                       />
                     </div>
@@ -140,11 +149,20 @@ class Edit extends SubblocksEdit {
                 {this.state.subblocks.map((subblock, subindex) => (
                   <Col sm="6" lg="4" key={subblock.id}>
                     <EditBlock
+                      {...this.props}
                       data={subblock}
                       index={subindex}
                       selected={this.isSubblockSelected(subindex)}
                       {...this.subblockProps}
+                      isFirst={subindex === 0}
+                      isLast={subindex === this.state.subblocks?.length - 1}
                       openObjectBrowser={this.props.openObjectBrowser}
+                      onFocusPreviousBlock={() => {
+                        this.setState({
+                          selectedField: 'title',
+                          subIndexSelected: -1,
+                        });
+                      }}
                     />
                   </Col>
                 ))}

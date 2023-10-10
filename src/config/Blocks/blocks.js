@@ -281,6 +281,7 @@ const italiaBlocks = {
       view: [],
     },
     sidebarTab: 1,
+    blockHasOwnFocusManagement: true,
   },
   iconBlocks: {
     id: 'iconBlocks',

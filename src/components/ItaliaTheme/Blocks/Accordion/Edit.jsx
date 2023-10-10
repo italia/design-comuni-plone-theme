@@ -30,6 +30,14 @@ const messages = defineMessages({
  * @extends Component
  */
 class Edit extends SubblocksEdit {
+  UNSAFE_componentWillReceiveProps(newProps) {
+    if (newProps.selected) {
+      console.log('selected');
+      this.onSubblockChangeFocus(0);
+    } else {
+      this.onSubblockChangeFocus(-1);
+    }
+  }
   /**
    * Render method.
    * @method render

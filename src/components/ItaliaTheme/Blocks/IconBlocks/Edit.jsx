@@ -45,6 +45,14 @@ class Edit extends SubblocksEdit {
     super(props);
     this.state.selectedField = 'title';
   }
+
+  UNSAFE_componentWillReceiveProps(newProps) {
+    if (newProps.selected) {
+      this.setState({ selectedField: 'title' });
+    } else {
+      this.setState({ selectedField: null });
+    }
+  }
   /**
    * Render method.
    * @method render
@@ -84,8 +92,10 @@ class Edit extends SubblocksEdit {
                   fieldName="title"
                   selected={this.state.selectedField === 'title'}
                   setSelected={() => {
-                    this.setState({ selectedField: 'title' });
-                    this.onSubblockChangeFocus(-1);
+                    this.setState({
+                      selectedField: 'title',
+                      subIndexSelected: -1,
+                    });
                   }}
                   placeholder={this.props.intl.formatMessage(messages.title)}
                   focusNextField={() => {
@@ -102,8 +112,10 @@ class Edit extends SubblocksEdit {
                   fieldName="description"
                   selected={this.state.selectedField === 'description'}
                   setSelected={() => {
-                    this.setState({ selectedField: 'description' });
-                    this.onSubblockChangeFocus(-1);
+                    this.setState({
+                      selectedField: 'description',
+                      subIndexSelected: -1,
+                    });
                   }}
                   placeholder={this.props.intl.formatMessage(
                     messages.description,
@@ -112,8 +124,7 @@ class Edit extends SubblocksEdit {
                     this.setState({ selectedField: 'title' });
                   }}
                   focusNextField={() => {
-                    this.onSubblockChangeFocus(0);
-                    this.setState({ selectedField: null });
+                    this.setState({ selectedField: null, subIndexSelected: 0 });
                   }}
                 />
               </div>

@@ -71,7 +71,7 @@ class EditBlock extends SubblockEdit {
     if (__SERVER__) {
       return <div />;
     }
-    console.log(this.props);
+
     return (
       <Subblock subblock={this} className="subblock-edit">
         <Card
@@ -116,15 +116,15 @@ class EditBlock extends SubblockEdit {
                   placeholder={this.props.intl.formatMessage(
                     messages.titlePlaceholder,
                   )}
-                  focusPrevField={() => {
+                  focusPrevField={
                     this.props.isFirst
                       ? this.props.onFocusPreviousBlock
                       : () => {
                           this.props.onSubblockChangeFocus(
                             this.props.index - 1,
                           );
-                        };
-                  }}
+                        }
+                  }
                   focusNextField={() => {
                     this.setState({ focusOn: 'text' });
                   }}

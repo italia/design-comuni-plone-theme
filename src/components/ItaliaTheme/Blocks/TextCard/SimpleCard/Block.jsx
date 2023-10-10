@@ -1,14 +1,13 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardBody, CardTitle, CardText } from 'design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import redraft from 'redraft';
+import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { Divider } from 'semantic-ui-react';
 import cx from 'classnames';
-import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   simple_card_title: {
@@ -30,15 +29,11 @@ const Block = ({
   data,
   block,
   onChange,
-  onSelectBlock,
-  onAddBlock,
-  onFocusPreviousBlock,
-  onFocusNextBlock,
-  index,
   selected,
+  ...otherProps
 }) => {
   const intl = useIntl();
-  const title = data?.simple_card_title?.blocks[0]?.text;
+  const title = data?.simple_card_title;
   const content = data?.simple_card_content;
   const [selectedField, setSelectedField] = useState('title');
 
@@ -49,6 +44,12 @@ const Block = ({
       setSelectedField(null);
     }
   }, [selected]);
+
+  useEffect(() => {
+    if (!selected && selectedField && otherProps.onSelectBlock) {
+      otherProps.onSelectBlock(block);
+    }
+  }, [selectedField]);
 
   return (
     <div className="simple-text-card-wrapper">
@@ -64,69 +65,46 @@ const Block = ({
             {inEditMode ? (
               <>
                 <CardTitle tag="h4">
-                  <div
-                    onClick={() => {
+                  <TextEditorWidget
+                    {...otherProps}
+                    showToolbar={false}
+                    data={data}
+                    block={block}
+                    fieldName="simple_card_title"
+                    selected={selectedField === 'title'}
+                    onChangeBlock={(block, data) =>
+                      onChange(data, 'simple_card_title')
+                    }
+                    placeholder={intl.formatMessage(messages.simple_card_title)}
+                    setSelected={() => {
                       setSelectedField('title');
                     }}
-                    onFocus={() => {
-                      setSelectedField('title');
+                    focusNextField={() => {
+                      setSelectedField('content');
                     }}
-                  >
-                    <TextEditorWidget
-                      data={data}
-                      fieldName="simple_card_title"
-                      selected={selectedField === 'title'}
-                      block={block}
-                      onChangeBlock={(data) =>
-                        onChange(data, 'simple_card_title')
-                      }
-                      placeholder={intl.formatMessage(
-                        messages.simple_card_title,
-                      )}
-                      showToolbar={false}
-                      onSelectBlock={() => {}}
-                      onAddBlock={() => {
-                        setSelectedField('content');
-                      }}
-                      onFocusNextBlock={() => {
-                        setSelectedField('content');
-                      }}
-                      onFocusPreviousBlock={onFocusPreviousBlock}
-                    />
-                  </div>
+                  />
                 </CardTitle>
                 <Divider />
-                <div
-                  onClick={() => {
-                    setSelectedField('content');
-                  }}
-                  onFocus={() => {
-                    setSelectedField('content');
-                  }}
-                >
-                  <CardText>
-                    <TextEditorWidget
-                      data={data}
-                      fieldName="simple_card_content"
-                      selected={selectedField === 'content'}
-                      block={block}
-                      onChangeBlock={(data) =>
-                        onChange(data, 'simple_card_content')
-                      }
-                      placeholder={intl.formatMessage(
-                        messages.simple_card_content,
-                      )}
-                      showToolbar={true}
-                      onSelectBlock={onSelectBlock}
-                      onAddBlock={onAddBlock}
-                      index={index}
-                      onFocusNextBlock={onFocusNextBlock}
-                      onFocusPreviousBlock={() => {
-                        setSelectedField('title');
-                      }}
-                    />
-                  </CardText>
-                </div>
+
+                <CardText>
+                  <TextEditorWidget
+                    {...otherProps}
+                    showToolbar={true}
+                    data={data}
+                    fieldName="simple_card_content"
+                    selected={selectedField === 'content'}
+                    block={block}
+                    onChangeBlock={(block, data) =>
+                      onChange(data, 'simple_card_content')
+                    }
+                    placeholder={intl.formatMessage(
+                      messages.simple_card_content,
+                    )}
+                    focusPrevField={() => {
+                      setSelectedField('title');
+                    }}
+                  />
+                </CardText>
               </>
             ) : (
               <>
@@ -136,11 +114,7 @@ const Block = ({
                 <Divider />
                 <div>
                   <CardText>
-                    {redraft(
-                      content,
-                      config.settings.richtextViewSettings.ToHTMLRenderers,
-                      config.settings.richtextViewSettings.ToHTMLOptions,
-                    )}
+                    <TextBlockView data={{ value: content }} />
                   </CardText>
                 </div>
               </>

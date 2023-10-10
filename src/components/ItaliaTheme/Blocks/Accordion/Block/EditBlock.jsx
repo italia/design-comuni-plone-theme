@@ -100,7 +100,9 @@ class EditBlock extends SubblockEdit {
                 )}
                 selected={this.props.selected && this.state.focusOn === 'title'}
                 setSelected={() => {
-                  this.setState({ focusOn: 'title' });
+                  this.setState({
+                    focusOn: 'title',
+                  });
                 }}
                 focusNextField={() => {
                   this.setState({ focusOn: 'text' });
@@ -141,10 +143,10 @@ class EditBlock extends SubblockEdit {
                   focusNextField={
                     !this.props.isLast
                       ? () => {
-                          this.setState({ focusOn: null });
-                          this.props.onSubblockChangeFocus(
-                            this.props.index + 1,
-                          );
+                          this.setState({
+                            focusOn: null,
+                            subIndexSelected: this.props.index + 1,
+                          });
                         }
                       : null //default go to next block
                   }

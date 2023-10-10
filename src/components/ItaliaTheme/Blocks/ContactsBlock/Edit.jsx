@@ -46,6 +46,13 @@ class Edit extends SubblocksEdit {
     this.state.selectedField = 'title';
   }
 
+  UNSAFE_componentWillReceiveProps(newProps) {
+    if (newProps.selected) {
+      this.setState({ selectedField: 'title' });
+    } else {
+      this.setState({ selectedField: null });
+    }
+  }
   /**
    * Render method.
    * @method render
@@ -101,8 +108,7 @@ class Edit extends SubblocksEdit {
                     this.setState({ selectedField: 'title' });
                   }}
                   focusNextField={() => {
-                    this.setState({ selectedField: null });
-                    this.onSubblockChangeFocus(0);
+                    this.setState({ selectedField: null, subIndexSelected: 0 });
                   }}
                 />
               </div>
@@ -129,7 +135,10 @@ class Edit extends SubblocksEdit {
                       isLast={this.state.subblocks.length - 1 === subindex}
                       isFirst={subindex === 0}
                       onFocusPreviousBlock={() => {
-                        this.setState({ selectedField: 'description' });
+                        this.setState({
+                          selectedField: 'description',
+                          subIndexSelected: -1,
+                        });
                       }}
                     />
                   </Col>
