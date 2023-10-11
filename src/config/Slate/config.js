@@ -20,7 +20,6 @@ export default function applyItaliaSlateConfig(config) {
 
   installHandlers(config);
 
-
   //remove callout because there's a Volto's block for it
   delete config.settings.slate.elements.callout;
   delete config.settings.slate.buttons.callout;
@@ -30,4 +29,5 @@ export default function applyItaliaSlateConfig(config) {
   config.settings.slate.expandedToolbarButtons = config.settings.slate.toolbarButtons.filter(
     (b) => b !== 'callout',
   );
+  return config;
 }

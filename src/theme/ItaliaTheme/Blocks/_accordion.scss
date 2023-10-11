@@ -146,15 +146,5 @@ $accordion-icon-color: #7fb2e5;
         }
       }
     }
-
-    &.is-edit-mode {
-      .card {
-        .card-body {
-          //per mostrare la barra di formattazione di draft-js
-          padding-left: 10em;
-          margin-left: -7em;
-        }
-      }
-    }
   }
 }

@@ -34,10 +34,6 @@ $alert-block-warning: #f0c250;
       background-color: $alert-block-danger;
       color: $white;
 
-      .public-DraftEditorPlaceholder-inner {
-        color: $white;
-      }
-
       h1,
       h2,
       h3,
@@ -56,10 +52,6 @@ $alert-block-warning: #f0c250;
       background-color: $alert-block-warning-orange;
       color: $black;
 
-      .public-DraftEditorPlaceholder-inner {
-        color: $black;
-      }
-
       h1,
       h2,
       h3,
@@ -77,10 +69,6 @@ $alert-block-warning: #f0c250;
     .bg-alert-warning {
       background-color: $alert-block-warning;
       color: $black;
-
-      .public-DraftEditorPlaceholder-inner {
-        color: $black;
-      }
 
       h1,
       h2,
@@ -104,10 +92,6 @@ $alert-block-warning: #f0c250;
         padding-right: calc(var(--bs-gutter-x) * 0.25);
         padding-left: calc(var(--bs-gutter-x) * 0.25);
       }
-    }
-
-    .DraftEditor-root {
-      background: none;
     }
 
     p {

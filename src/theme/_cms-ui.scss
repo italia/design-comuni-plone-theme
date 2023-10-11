@@ -47,21 +47,6 @@ body.cms-ui {
 
     @import 'bootstrap-italia/src/scss/custom/type'; //to apply styles for headers on different screen sizes
 
-    // Placeholder block title
-    .title {
-      .public-DraftEditorPlaceholder-inner {
-        font-family: $font-family-sans-serif;
-      }
-    }
-
-    &.title {
-      .public-DraftEditorPlaceholder-inner {
-        font-weight: bold;
-        line-height: 1.25;
-        font-size: 2.66rem;
-      }
-    }
-
     //align
     .text-center {
       text-align: center;
@@ -262,14 +247,6 @@ body.cms-ui {
     }
   }
 
-  .menu-configuration-widget {
-    .menu-blocks-container {
-      .DraftEditor-editorContainer .public-DraftEditor-content {
-        min-height: 19px;
-      }
-    }
-  }
-
   .sidebar-container .object-listing,
   .icon-align-name {
     svg.icon {
@@ -419,39 +396,6 @@ body.cms-ui {
     }
   }
 
-  /*.DraftEditor-root {
-    font-family: $font-family-serif;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: $font-family-sans-serif;
-    }
-  }*/
-
-  //stili per l'editor di testo dei ct con i campi
-  .DraftEditor-root {
-    .public-DraftStyleDefault-block {
-      margin-bottom: 1rem;
-    }
-
-    li {
-      .public-DraftStyleDefault-block {
-        margin-bottom: unset;
-      }
-    }
-  }
-
-  .block.text {
-    .DraftEditor-root {
-      .public-DraftStyleDefault-block {
-        margin-bottom: unset;
-      }
-    }
-  }
-
   // z-index necessario su Volto 17 finché non passiamo ad usare slate
   .block {
     &.image {
@@ -471,17 +415,6 @@ body.cms-ui {
     &:hover {
       color: $link-hover-color;
       text-decoration: $link-decoration;
-    }
-  }
-  .footer-configuration-widget {
-    .DraftEditor-editorContainer {
-      a.link-anchorlink-theme {
-        color: #06c;
-
-        &:hover {
-          color: darken(#06c, 20);
-        }
-      }
     }
   }
 
@@ -519,10 +452,6 @@ body.cms-ui {
 
   .block-editor-title,
   .block-editor-description {
-    .DraftEditor-root {
-      padding: 0 1.333em;
-    }
-
     & + [class^='block-editor'] {
       margin-top: 2.8rem;
     }
@@ -543,76 +472,6 @@ body.cms-ui {
   }
 
   /////
-
-  .draftJsToolbarDropdown {
-    position: relative;
-
-    .draftJsToolbarDropdown-toggle {
-      display: flex;
-      width: 42px;
-      align-items: center;
-      justify-content: space-between;
-
-      .caret {
-        display: inline-block;
-        width: 0;
-        height: 0;
-
-        border: 5px solid transparent;
-
-        &.down {
-          border-top-color: #888;
-          margin-top: 5px;
-        }
-
-        &.up {
-          border-bottom-color: #888;
-          margin-bottom: 5px;
-        }
-      }
-    }
-
-    ul.draftJsToolbarDropdown-optionswrapper {
-      position: absolute;
-      top: 35px;
-      left: 50%;
-      padding: 0;
-      margin: 0;
-      background-color: #fff;
-      border-bottom-left-radius: 3px;
-      border-bottom-right-radius: 3px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
-      list-style-type: none;
-      transform: translateX(-50%);
-
-      &.hide {
-        display: none;
-      }
-
-      .draftJsToolbarDropdown-option {
-        padding: 0.5rem;
-        color: $neutral-2-b5;
-
-        svg {
-          fill: $neutral-2-b5 !important;
-        }
-
-        > * {
-          display: block;
-        }
-
-        button {
-          width: 100%;
-          height: auto;
-
-          > * {
-            margin: 0;
-            color: $neutral-2-b5;
-          }
-        }
-      }
-    }
-  }
 
   .column.color-chooser {
     padding-top: 0.5em;

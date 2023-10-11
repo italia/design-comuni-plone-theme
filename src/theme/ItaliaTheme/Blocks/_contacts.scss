@@ -54,17 +54,6 @@
       font-weight: bold;
       line-height: 3rem;
       text-align: center;
-
-      .DraftEditor-root {
-        .public-DraftEditor-content {
-          text-align: center;
-        }
-
-        .public-DraftEditorPlaceholder-root {
-          width: 100%;
-          text-align: center;
-        }
-      }
     }
 
     .description {
@@ -72,17 +61,6 @@
 
       line-height: 1.65em;
       text-align: center;
-
-      .DraftEditor-root {
-        .public-DraftEditor-content {
-          text-align: center;
-        }
-
-        .public-DraftEditorPlaceholder-root {
-          width: 100%;
-          text-align: center;
-        }
-      }
     }
   }
 
@@ -152,6 +130,8 @@
       .icon-wrapper {
         margin-top: 0.2rem;
         margin-right: 1rem;
+        display: flex;
+        align-items: center;
       }
 
       .tel {
@@ -167,22 +147,12 @@
         flex: 1 1 auto;
         word-break: break-word;
 
-        .DraftEditor-editorContainer {
-          line-height: 1.48em;
-        }
-
         p {
           line-height: 1.48em;
 
           &:last-child {
             margin: 0;
           }
-        }
-      }
-
-      .public-DraftStyleDefault-block {
-        &:last-of-type {
-          margin-bottom: 0;
         }
       }
     }

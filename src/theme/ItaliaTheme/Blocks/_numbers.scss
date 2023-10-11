@@ -88,11 +88,7 @@
       font-weight: 500;
       line-height: 1em;
 
-      .DraftEditor-root
-        .DraftEditor-editorContainer
-        .public-DraftEditor-content
-        span,
-      .public-DraftEditorPlaceholder-root .public-DraftEditorPlaceholder-inner {
+      .simple-text-editor-widget {
         font-family: $font-family-monospace !important;
       }
     }

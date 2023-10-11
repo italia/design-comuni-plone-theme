@@ -154,6 +154,7 @@ class EditBlock extends SubblockEdit {
                 key="tel"
                 data={this.props.data}
                 fieldName="tel"
+                wrapClass="tel"
                 selected={this.props.selected && this.state.focusOn === 'tel'}
                 onChangeBlock={(block, _data) => {
                   this.onChange({ ...this.props.data, tel: _data.value });
@@ -177,6 +178,7 @@ class EditBlock extends SubblockEdit {
               <TextEditorWidget
                 {...this.props}
                 key="email"
+                wrapClass="email"
                 data={this.props.data}
                 fieldName="email"
                 selected={this.props.selected && this.state.focusOn === 'email'}

@@ -27,12 +27,11 @@ const ServizioAccedi = ({ content }) => {
         >
           {content.canale_digitale_link && (
             <div className="mb-4">
-              {/* TODO */}
-              <p
-                className="draftjs-buttons"
-                data-element="service-online-access"
-              >
-                <UniversalLink href={content.canale_digitale_link}>
+              <p data-element="service-online-access">
+                <UniversalLink
+                  href={content.canale_digitale_link}
+                  className="btn btn-primary mobile-full"
+                >
                   {intl.formatMessage(messages.canale_digitale_link)}
                 </UniversalLink>
               </p>

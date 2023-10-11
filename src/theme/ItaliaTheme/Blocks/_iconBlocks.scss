@@ -47,17 +47,6 @@
       font-weight: bold;
       line-height: 3rem;
       text-align: center;
-
-      .DraftEditor-root {
-        .public-DraftEditor-content {
-          text-align: center;
-        }
-
-        .public-DraftEditorPlaceholder-root {
-          width: 100%;
-          text-align: center;
-        }
-      }
     }
 
     .description {
@@ -74,17 +63,6 @@
       h6,
       a {
         color: #fff;
-      }
-
-      .DraftEditor-root {
-        .public-DraftEditor-content {
-          text-align: center;
-        }
-
-        .public-DraftEditorPlaceholder-root {
-          width: 100%;
-          text-align: center;
-        }
       }
     }
   }
@@ -178,18 +156,10 @@
       font-weight: bold;
       line-height: 1.8rem;
       text-align: center;
-
-      .public-DraftEditor-content {
-        text-align: center;
-      }
     }
 
     .iconblock-text {
       text-align: center;
-
-      .public-DraftEditor-content {
-        text-align: center;
-      }
     }
 
     a.read-more {

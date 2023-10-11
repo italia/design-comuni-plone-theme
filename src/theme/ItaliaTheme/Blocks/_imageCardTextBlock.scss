@@ -2,9 +2,10 @@
   .card {
     .card-body {
       .card-text {
-        .DraftEditor-root * {
+        .slate-editor * {
+          line-height: 1.5em;
           font-family: 'Lora, Georgia, serif';
-          font-size: 0.875rem;
+          font-size: 1.1rem;
         }
       }
     }

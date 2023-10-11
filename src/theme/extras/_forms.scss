@@ -12,7 +12,7 @@ $sidebarFormBg: #fafafa;
     .ui.input input[type='text'],
     .ui.input input[type='url'],
     textarea,
-    .DraftEditor-root {
+    .slate-editor {
       padding-right: 10px;
       padding-left: 10px;
       margin-top: 0.5rem;
@@ -40,20 +40,8 @@ $sidebarFormBg: #fafafa;
       padding: 10px;
     }
 
-    .DraftEditor-editorContainer {
-      .public-DraftEditor-content {
-        min-height: 60px;
-      }
-    }
-
     .blocks-widget-container {
-      .DraftEditor-editorContainer {
-        .public-DraftEditor-content {
-          min-height: unset;
-        }
-      }
-
-      .DraftEditor-root {
+      .slate-editor {
         border-bottom: none;
         background-color: transparent;
       }

@@ -5,13 +5,12 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import redraft from 'redraft';
 import { useIntl, defineMessages } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
 
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { Card, CardBody, CardReadMore } from 'design-react-kit';
-import config from '@plone/volto/registry';
+
 import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 
 const messages = defineMessages({

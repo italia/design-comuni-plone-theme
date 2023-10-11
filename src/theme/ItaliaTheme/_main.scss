@@ -103,59 +103,11 @@ iframe {
 
   .callout {
     box-shadow: none; //override pastanaga styles
-    p,
-    .public-DraftStyleDefault-block {
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
   }
 
-  .draftjs-text-smaller {
-    font-size: 0.75em;
-  }
-
-  .draftjs-text-larger,
   .text-larger {
     //.text-larger: stile applicabile da editor Slate
     font-size: 1.75em;
-  }
-
-  .draftjs-buttons {
-    margin: 0;
-    clear: both;
-
-    a {
-      display: inline-block;
-      padding: 1em 2em;
-      margin: 0.5em 1em 0.5em 0;
-      background-color: $primary;
-      border-radius: $btn-border-radius;
-      color: $primary-text;
-      font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-
-      &:hover,
-      &:active {
-        background-color: darken($primary, 8);
-        color: $primary-text;
-        font-weight: 700;
-      }
-    }
-  }
-
-  div[class^='draftJsToolbar__toolbar__'] {
-    line-height: 1rem;
-
-    .icon {
-      font-size: 1rem;
-    }
-
-    .ui.input > input {
-      height: auto;
-      font-size: 0.8rem;
-    }
   }
 }
 

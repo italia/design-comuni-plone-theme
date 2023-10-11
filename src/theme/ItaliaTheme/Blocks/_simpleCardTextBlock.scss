@@ -1,10 +1,16 @@
 .block.simple-text-block {
   .card {
     .card-body {
+      .card-title {
+        .simple-text-editor-widget {
+          font-weight: 600;
+        }
+      }
       .card-text {
-        .DraftEditor-root * {
+        .slate-editor * {
           font-family: 'Lora, Georgia, serif';
-          font-size: 0.875rem;
+          line-height: 1.5em;
+          font-size: 1.1rem;
         }
       }
     }
