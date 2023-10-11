@@ -93,7 +93,7 @@ class EditBlock extends SubblockEdit {
                 data={this.props.data}
                 fieldName="title"
                 onChangeBlock={(block, _data) => {
-                  this.onChange({ ...this.props.data, title: _data.value });
+                  this.onChange(_data);
                 }}
                 placeholder={this.props.intl.formatMessage(
                   messages.titlePlaceholder,
@@ -137,7 +137,7 @@ class EditBlock extends SubblockEdit {
                     messages.textPlaceholder,
                   )}
                   onChangeBlock={(block, _data) => {
-                    this.onChange({ ...this.props.data, text: _data.value });
+                    this.onChange(_data);
                   }}
                   setSelected={() => this.setState({ focusOn: 'text' })}
                   focusNextField={

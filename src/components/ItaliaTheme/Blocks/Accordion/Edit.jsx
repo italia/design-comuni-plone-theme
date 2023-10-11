@@ -32,8 +32,9 @@ const messages = defineMessages({
 class Edit extends SubblocksEdit {
   UNSAFE_componentWillReceiveProps(newProps) {
     if (newProps.selected) {
-      console.log('selected');
-      this.onSubblockChangeFocus(0);
+      if (this.state.subIndexSelected < 0) {
+        this.onSubblockChangeFocus(0);
+      }
     } else {
       this.onSubblockChangeFocus(-1);
     }
@@ -58,14 +59,13 @@ class Edit extends SubblocksEdit {
                     <div className="accordion-item" key={subblock.id}>
                       <EditBlock
                         {...this.props}
+                        {...this.subblockProps}
                         data={subblock}
                         index={subindex}
                         selected={
                           this.props.selected &&
                           this.isSubblockSelected(subindex)
                         }
-                        {...this.subblockProps}
-                        onSubblockChangeFocus={this.onSubblockChangeFocus}
                         isLast={this.state.subblocks.length - 1 === subindex}
                         isFirst={subindex === 0}
                       />
