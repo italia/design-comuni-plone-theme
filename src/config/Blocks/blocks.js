@@ -208,7 +208,6 @@ const italiaBlocks = {
     restricted: false,
     mostUsed: false,
     cloneData: cloneBlock,
-    blockHasOwnFocusManagement: true,
     security: {
       addPermission: [],
       view: [],
