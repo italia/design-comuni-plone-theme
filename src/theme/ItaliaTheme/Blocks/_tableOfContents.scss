@@ -4,6 +4,7 @@ $space-left: 1rem;
   // template for "Indice dei contenuti"
   .ui.bulleted.list {
     padding-left: 0;
+
     & .ui.bulleted.list {
       padding-left: 0;
       display: flex;
@@ -32,25 +33,11 @@ $space-left: 1rem;
       }
       &.headline-2 {
         margin-top: 0.5rem;
-        font-size: 1rem;
-        font-weight: 600;
+        font-size: 0.889em;
         width: 100%;
-
-        &::before {
-          width: 0;
-          height: 0;
-          border-top: 0.4rem solid transparent;
-          border-bottom: 0.4rem solid transparent;
-          border-left: 0.5rem solid $link-color;
-          content: '' !important;
-          list-style: none;
-          position: absolute;
-          top: 0.4rem;
-        }
       }
 
-      &:not(.headline-2)::before {
-        position: relative;
+      &::before {
         display: inline-block;
         width: 0.55rem;
         min-width: 0.55rem;

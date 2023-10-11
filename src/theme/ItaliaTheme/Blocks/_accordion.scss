@@ -128,6 +128,10 @@ $accordion-icon-color: #7fb2e5;
 
             .accordion-inner {
               padding: 2em 0;
+              p {
+                min-height: 1rem;
+                margin-bottom: 0;
+              }
             }
 
             .link-more {
