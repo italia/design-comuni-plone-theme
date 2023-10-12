@@ -30,6 +30,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Nel blocco Calendario, è stata sistemata la sovrapposizione dei pallini di navigazione con il pulsante per il link agli approfondimenti
+
 ## Versione 8.7.7 (12/10/2023)
 
 ### Migliorie
