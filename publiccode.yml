@@ -229,7 +229,7 @@ platforms:
   - web
 releaseDate: '2023-10-12'
 softwareType: standalone/web
-softwareVersion: 8.7.7
+softwareVersion: 8.7.8
 url: 'https://github.com/italia/design-comuni-plone-theme'
 usedBy:
   - ASP Comuni Modenesi Area Nord

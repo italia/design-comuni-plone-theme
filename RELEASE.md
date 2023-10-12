@@ -30,7 +30,7 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 8.7.8 (12/10/2023)
 
 ### Fix
 
