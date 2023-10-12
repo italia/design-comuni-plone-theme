@@ -32,6 +32,10 @@
 
 ## Versione X.X.X (06/10/2023)
 
+### Migliorie
+
+- Aggiornata nuova icona di Twitter
+
 ### Fix
 
 - Uniformato e impostato a sinistra l'allineamento del testo nel blocco Elenco nella variazione Quadratoni con immagine
