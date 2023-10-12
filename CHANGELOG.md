@@ -1,3 +1,11 @@
+## [8.7.7](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.6...v8.7.7) (2023-10-12)
+
+
+### Maintenance
+
+* preparing release 8.7.7 ([1136269](https://github.com/redturtle/design-comuni-plone-theme/commit/1136269c2afd1de887d44c96edbe1fffcbdb990e))
+* updated twitter icon ([#361](https://github.com/redturtle/design-comuni-plone-theme/issues/361)) ([ce75b74](https://github.com/redturtle/design-comuni-plone-theme/commit/ce75b74e5d2b7eccdb56456f7b474184483d3035))
+
 
 
 ## [8.7.6](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.5...v8.7.6) (2023-10-09)
