@@ -42,6 +42,10 @@
 
         .it-search-wrapper {
           a {
+            &.search-link {
+              outline: $subsite-primary 2px solid !important;
+            }
+
             &.rounded-icon {
               svg {
                 @if $subsite-light-theme {

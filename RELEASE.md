@@ -30,6 +30,13 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Cambiato il colore del bordo dell'icona Ricerca nell'header dei sottositi per garantire il contrasto per accessibilità
+- Non mostrare la fascia colorata del footer di un sottosito quando questo non è compilato
+
 ## Versione 8.7.8 (12/10/2023)
 
 ### Fix
@@ -42,10 +49,11 @@
 
 - Aggiornata nuova icona di Twitter
 
+## Versione 8.7.6 (06/10/2023)
+
 ### Fix
 
 - Uniformato e impostato a sinistra l'allineamento del testo nel blocco Elenco nella variazione Quadratoni con immagine
-- Non mostrare la fascia colorata del footer di un sottosito quando questo non è compilato
 
 ## Versione 8.7.3 (26/09/2023)
 
