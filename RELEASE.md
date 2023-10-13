@@ -41,6 +41,7 @@
 - ...
 -->
 
+
 ## Versione X.X.X (dd/mm/yyyy)
 
 ### Migliorie
@@ -53,6 +54,7 @@
 - Non mostrare la fascia colorata del footer di un sottosito quando questo non è compilato
 - Risolto un bug nel componente Object Browser che permetteva di selezionare più elementi di quelli consentiti
 - Alcune icone mancanti nel widget icone fontawesome sono state rese nuovamente visibili
+- Sistemate inconsistenze nella visualizzazione di alcuni tipi di elementi della lista degli allegati in Cartella Modulistica
 
 ## Versione 8.7.8 (12/10/2023)
 
