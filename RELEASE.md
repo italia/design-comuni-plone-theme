@@ -41,7 +41,6 @@
 - ...
 -->
 
-
 ## Versione X.X.X (dd/mm/yyyy)
 
 ### Migliorie
@@ -56,6 +55,7 @@
 - Risolto un bug nel componente Object Browser che permetteva di selezionare più elementi di quelli consentiti
 - Alcune icone mancanti nel widget icone fontawesome sono state rese nuovamente visibili
 - Sistemate inconsistenze nella visualizzazione di alcuni tipi di elementi della lista degli allegati in Cartella Modulistica
+- Visualizzazione sidebar in edit del blocco Numeri: sistemato overflowing del testo di aiuto
 
 ## Versione 8.7.8 (12/10/2023)
 
