@@ -50,9 +50,6 @@ const FooterSmall = () => {
   return subFooterItems?.length > 0 || links.length > 0 || true ? (
     <div className="it-footer-small-prints clearfix">
       <Container tag="div">
-        <h3 className="visually-hidden">
-          {intl.formatMessage(messages.goToPage)}
-        </h3>
         <ul className="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
           {subFooterItems?.length > 0 &&
             subFooterItems.map((item, index) => {
