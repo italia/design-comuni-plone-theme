@@ -45,6 +45,7 @@
 ### Fix
 
 - Uniformato e impostato a sinistra l'allineamento del testo nel blocco Elenco nella variazione Quadratoni con immagine
+- Non mostrare la fascia colorata del footer di un sottosito quando questo non è compilato
 
 ## Versione 8.7.3 (26/09/2023)
 
