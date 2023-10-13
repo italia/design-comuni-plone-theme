@@ -50,6 +50,7 @@
 
 ### Fix
 
+- Eliminata la sovrapposizione tra immagine e testo nel tipo documento Pagina quando l'immagine è verticale
 - Cambiato il colore del bordo dell'icona Ricerca nell'header dei sottositi per garantire il contrasto per accessibilità
 - Non mostrare la fascia colorata del footer di un sottosito quando questo non è compilato
 - Risolto un bug nel componente Object Browser che permetteva di selezionare più elementi di quelli consentiti
