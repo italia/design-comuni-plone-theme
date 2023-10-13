@@ -52,6 +52,7 @@
 - Cambiato il colore del bordo dell'icona Ricerca nell'header dei sottositi per garantire il contrasto per accessibilità
 - Non mostrare la fascia colorata del footer di un sottosito quando questo non è compilato
 - Risolto un bug nel componente Object Browser che permetteva di selezionare più elementi di quelli consentiti
+- Alcune icone mancanti nel widget icone fontawesome sono state rese nuovamente visibili
 
 ## Versione 8.7.8 (12/10/2023)
 

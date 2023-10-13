@@ -20,7 +20,7 @@ export const defaultIconWidgetOptions = [
   ['bus', 'Trasporto'],
   ['heart', 'Matrimonio'],
   ['person-booth', 'Procedura elettorale e voto'],
-  ['masks-theater	', 'Tempo libero'],
+  ['masks-theater', 'Tempo libero'],
   ['book', 'Cultura'],
   ['passport', 'Immigrazione'],
   ['smog', 'Inquinamento'],
