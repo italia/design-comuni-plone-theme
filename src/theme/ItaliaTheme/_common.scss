@@ -72,6 +72,9 @@
 
   .external-link {
     fill: $link-color !important;
+    &.align-sub {
+      vertical-align: sub;
+    }
 
     &:hover {
       fill: #004080 !important;

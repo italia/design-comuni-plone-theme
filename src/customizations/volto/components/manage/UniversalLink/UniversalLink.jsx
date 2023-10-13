@@ -123,7 +123,7 @@ const UniversalLink = ({
               icon="it-external-link"
               title={title}
               size="xs"
-              className="align-top ms-1 external-link"
+              className="ms-1 align-sub external-link"
             />
           )}
       </a>
