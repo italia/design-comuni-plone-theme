@@ -130,7 +130,7 @@ const TextEditorWidget = (props) => {
 
 TextEditorWidget.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
-  setSelected: PropTypes.func.isRequired,
+  setSelected: PropTypes.func,
   onChangeBlock: PropTypes.func.isRequired,
   block: PropTypes.string.isRequired,
   selected: PropTypes.bool.isRequired,
@@ -140,8 +140,8 @@ TextEditorWidget.propTypes = {
   focusNextField: PropTypes.func,
   //from block props:
   properties: PropTypes.objectOf(PropTypes.any).isRequired,
-  onFocusPreviousBlock: PropTypes.objectOf(PropTypes.any).isRequired,
-  onFocusNextBlock: PropTypes.objectOf(PropTypes.any).isRequired,
+  onFocusPreviousBlock: PropTypes.func.isRequired,
+  onFocusNextBlock: PropTypes.func.isRequired,
   onSelectBlock: PropTypes.func.isRequired,
 };
 

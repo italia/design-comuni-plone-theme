@@ -60,6 +60,7 @@ class Edit extends SubblocksEdit {
                       <EditBlock
                         {...this.props}
                         {...this.subblockProps}
+                        onChangeFocus={this.onSubblockChangeFocus}
                         data={subblock}
                         index={subindex}
                         selected={

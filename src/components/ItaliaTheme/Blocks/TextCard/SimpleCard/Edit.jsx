@@ -77,6 +77,7 @@ const Edit = ({
                   fieldName="simple_card_title"
                   selected={selectedField === 'title'}
                   onChangeBlock={onChangeBlock}
+                  onSelectBlock={onSelectBlock}
                   placeholder={intl.formatMessage(messages.simple_card_title)}
                   setSelected={() => {
                     setSelectedField('title');
@@ -94,8 +95,12 @@ const Edit = ({
                     data={data}
                     fieldName="simple_card_content"
                     selected={selectedField === 'content'}
+                    setSelected={() => {
+                      setSelectedField('content');
+                    }}
                     block={block}
                     onChangeBlock={onChangeBlock}
+                    onSelectBlock={onSelectBlock}
                     placeholder={intl.formatMessage(
                       messages.simple_card_content,
                     )}

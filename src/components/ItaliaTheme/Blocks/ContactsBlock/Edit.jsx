@@ -81,6 +81,7 @@ class Edit extends SubblocksEdit {
                   fieldName="title"
                   selected={this.state.selectedField === 'title'}
                   placeholder={this.props.intl.formatMessage(messages.title)}
+                  onSelectBlock={() => {}}
                   setSelected={() => {
                     this.setState({ selectedField: 'title' });
                   }}
@@ -100,7 +101,7 @@ class Edit extends SubblocksEdit {
                   placeholder={this.props.intl.formatMessage(
                     messages.description,
                   )}
-                  onSelectBlock={null}
+                  onSelectBlock={() => {}}
                   setSelected={() => {
                     this.setState({ selectedField: 'description' });
                   }}
@@ -132,6 +133,7 @@ class Edit extends SubblocksEdit {
                       {...this.subblockProps}
                       openObjectBrowser={this.props.openObjectBrowser}
                       onSubblockChangeFocus={this.onSubblockChangeFocus}
+                      onChangeFocus={this.onSubblockChangeFocus}
                       isLast={this.state.subblocks.length - 1 === subindex}
                       isFirst={subindex === 0}
                       onFocusPreviousBlock={() => {

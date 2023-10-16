@@ -74,7 +74,7 @@ class Edit extends Component {
    * Constructor
    * @method constructor
    * @param {Object} props Component properties
-   * @constructs WysiwygEditor
+   * @constructs Video block edit
    */
   constructor(props) {
     super(props);

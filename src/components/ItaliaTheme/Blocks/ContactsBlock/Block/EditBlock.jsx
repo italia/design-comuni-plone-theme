@@ -38,7 +38,7 @@ class EditBlock extends SubblockEdit {
    * Constructor
    * @method constructor
    * @param {Object} props Component properties
-   * @constructs WysiwygEditor
+   * @constructs Contacts Blocks edit
    */
   constructor(props) {
     super(props);

@@ -105,7 +105,7 @@ class EditComponent extends Component {
    * Constructor
    * @method constructor
    * @param {Object} props Component properties
-   * @constructs WysiwygEditor
+   * @constructs Hero Image left edit
    */
   constructor(props) {
     super(props);

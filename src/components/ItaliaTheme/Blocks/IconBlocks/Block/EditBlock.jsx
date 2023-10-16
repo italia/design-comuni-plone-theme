@@ -42,7 +42,7 @@ class EditBlock extends SubblockEdit {
    * Constructor
    * @method constructor
    * @param {Object} props Component properties
-   * @constructs WysiwygEditor
+   * @constructs Icons Blocks edit
    */
   constructor(props) {
     super(props);
@@ -108,7 +108,9 @@ class EditBlock extends SubblockEdit {
                   selected={
                     this.props.selected && this.state.focusOn === 'title'
                   }
-                  setSelected={() => this.setState({ focusOn: 'title' })}
+                  setSelected={() => {
+                    this.setState({ focusOn: 'title' });
+                  }}
                   block={this.props.block}
                   onChangeBlock={(block, _data) => {
                     this.props.onChangeBlock(this.props.index, _data);
@@ -145,7 +147,9 @@ class EditBlock extends SubblockEdit {
                 key="text"
                 fieldName="text"
                 selected={this.props.selected && this.state.focusOn === 'text'}
-                setSelected={() => this.setState({ focusOn: 'text' })}
+                setSelected={() => {
+                  this.setState({ focusOn: 'text' });
+                }}
                 onChangeBlock={(block, _data) => {
                   this.props.onChangeBlock(this.props.index, _data);
                 }}

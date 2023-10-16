@@ -115,15 +115,15 @@ SimpleTextEditorWidget.propTypes = {
   onSelectBlock: PropTypes.func.isRequired,
   onChangeBlock: PropTypes.func.isRequired,
   block: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
   selected: PropTypes.bool.isRequired,
   placeholder: PropTypes.string.isRequired,
   focusPrevField: PropTypes.func,
   focusNextField: PropTypes.func,
   //from block props:
   properties: PropTypes.objectOf(PropTypes.any).isRequired,
-  onFocusPreviousBlock: PropTypes.objectOf(PropTypes.any).isRequired,
-  onFocusNextBlock: PropTypes.objectOf(PropTypes.any).isRequired,
+  onFocusPreviousBlock: PropTypes.func.isRequired,
+  onFocusNextBlock: PropTypes.func.isRequired,
 };
 
 export default SimpleTextEditorWidget;

@@ -79,6 +79,7 @@ const Edit = ({
             focusNextField={() => {
               setSelectedField('text');
             }}
+            onSelectBlock={onSelectBlock}
           />
         </CalloutTitle>
         <CalloutText>
@@ -87,6 +88,7 @@ const Edit = ({
             data={data}
             fieldName="text"
             block={block}
+            onSelectBlock={onSelectBlock}
             selected={selectedField === 'text'}
             placeholder={intl.formatMessage(messages.text)}
             onChangeBlock={onChangeBlock}
