@@ -56,6 +56,7 @@
 - Alcune icone mancanti nel widget icone fontawesome sono state rese nuovamente visibili
 - Sistemate inconsistenze nella visualizzazione di alcuni tipi di elementi della lista degli allegati in Cartella Modulistica
 - Visualizzazione sidebar in edit del blocco Numeri: sistemato overflowing del testo di aiuto
+- Sistemate le dimensioni dei risultati del blocco search con colonne laterali, rimosso overflow.
 
 ## Versione 8.7.8 (12/10/2023)
 
