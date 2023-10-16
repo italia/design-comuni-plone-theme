@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-09-20T11:30:56.175Z\n"
+"POT-Creation-Date: 2023-10-10T15:52:06.253Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -3733,6 +3733,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/TextFilter
 # defaultMessage: Inserisci un valore
 msgid "text_filter_placeholder"
+msgstr ""
+
+#: helpers/FormValidation/DataGridFormValidationHelpers
+# defaultMessage: Impossibile aggiungere un elemento alla timeline senza aver compilato il campo "Titolo"
+msgid "timeline_tempi_scadenze_validation_error"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoText

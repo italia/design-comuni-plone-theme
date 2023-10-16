@@ -43,5 +43,10 @@ export {
   getRealEmptyField,
   eventFormValidationHelper,
 } from 'design-comuni-plone-theme/helpers/FormValidation/FormValidationHelpers';
+export {
+  getSpecificDataGridFieldValidation,
+  realWidgetType,
+  CUSTOM_DGFIELD_VALIDATION,
+} from 'design-comuni-plone-theme/helpers/FormValidation/DataGridFormValidationHelpers';
 
 export { commonSearchBlockMessages } from 'design-comuni-plone-theme/helpers/Translations/searchBlockExtendedTranslations';

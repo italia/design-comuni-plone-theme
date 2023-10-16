@@ -3748,6 +3748,11 @@ msgstr ""
 msgid "text_filter_placeholder"
 msgstr ""
 
+#: helpers/FormValidation/DataGridFormValidationHelpers
+# defaultMessage: Impossibile aggiungere un elemento alla timeline senza aver compilato il campo "Titolo"
+msgid "timeline_tempi_scadenze_validation_error"
+msgstr ""
+
 #: components/ItaliaTheme/View/BandoView/BandoText
 # defaultMessage: Tipologia del bando
 msgid "tipologia_bando"

@@ -4,6 +4,21 @@
  * - gestione motivo dello stato di servizio che è required solo se il servizio non è fruibile
  * - gestione campi tipo dataGridField
  * - gestione timeline_tempi_scadenze nel servizio che ha solo un campo richiesto su 5
+ * - aggiunta la possibilita' di avere validazioni pluggable per ogni campo con widget data_grid,
+ *   aggiungi i tuoi dgfield e le funzioni di validazione sotto CUSTOM_DGFIELD_VALIDATION.
+ *   Rispettare la convenzione con l'id del campo proveniente dallo schema del CT, ie:
+ *   export const CUSTOM_DGFIELD_VALIDATION = {
+        timeline_tempi_scadenze: {
+          isValid: (value, itemObj, intlFunc) => {
+            const isValid = value.every((val, i) => val.title);
+            return !isValid
+              ? intlFunc(
+                  dgfieldValidationMessages.timeline_tempi_scadenze_validation_error,
+                )
+              : null;
+          },
+        },
+      };
  */
 import { map, uniq, keys, intersection, isEmpty } from 'lodash';
 import { messages } from '@plone/volto/helpers/MessageLabels/MessageLabels';
@@ -13,6 +28,9 @@ import {
   serviceFormValidationHelper,
   eventFormValidationHelper,
   getRealEmptyField,
+  getSpecificDataGridFieldValidation,
+  realWidgetType,
+  CUSTOM_DGFIELD_VALIDATION,
 } from 'design-comuni-plone-theme/helpers';
 import config from '@plone/volto/registry';
 
@@ -162,6 +180,7 @@ const widgetValidation = {
     maximum: (value, itemObj, intlFunc) =>
       isMaxPropertyValid(value, itemObj.maximum, 'maximum', intlFunc),
   },
+  ...CUSTOM_DGFIELD_VALIDATION,
 };
 
 /**
@@ -288,10 +307,10 @@ const validateFieldsPerFieldset = (
   );
 
   map(schema.properties, (field, fieldId) => {
-    const fieldWidgetType = field.widget || field.type;
+    const fieldWidgetType = realWidgetType(field, fieldId);
     const widgetValidationCriteria = widgetValidation[fieldWidgetType]
       ? Object.keys(widgetValidation[fieldWidgetType])
-      : [];
+      : getSpecificDataGridFieldValidation(fieldId);
     let fieldData = formData[fieldId];
     // test each criterion ex maximum, isEmail, isUrl, maxLength etc
     const fieldErrors = widgetValidationCriteria
