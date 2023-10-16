@@ -82,7 +82,6 @@ const getItaliaWidgets = (config) => {
     },
     widget: {
       ...config.widgets.widget,
-      //richtext: WysiwygWidget,
       color_list: ColorListWidget,
       path_filters: PathFiltersWidget,
       location_filter: LocationFiltersWidget,

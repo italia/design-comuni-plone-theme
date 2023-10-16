@@ -1,3 +1,4 @@
+/*Customized LinkEditor to handle data-element*/
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ReactEditor } from 'slate-react';
@@ -99,7 +100,10 @@ export default function install(config) {
     isActiveElement,
     unwrapElement,
   };
-
+  //remove Volto helper link to add custom helper link
+  slate.persistentHelpers = slate.persistentHelpers.filter(
+    (h) => h().props.pluginId !== 'link',
+  );
   slate.persistentHelpers.push((props) => (
     <LinkEditor {...props} pluginId={PLUGINID} {...pluginOptions} />
   ));

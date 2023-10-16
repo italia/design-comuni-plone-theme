@@ -105,12 +105,6 @@ class AddLinkForm extends Component {
   }
 
   handleClickOutside = (e) => {
-    // console.log(
-    //   'handle',
-    //   this.linkFormContainer.current,
-    //   this.props,
-    //   doesNodeContainClick(this.linkFormContainer.current, e),
-    // );
     if (
       this.linkFormContainer.current &&
       doesNodeContainClick(this.linkFormContainer.current, e)
@@ -248,7 +242,13 @@ class AddLinkForm extends Component {
       : cx('ui input editor-link', 'input-anchorlink-theme');
 
     return (
-      <div className="link-form-container" ref={this.linkFormContainer}>
+      <div
+        className="link-form-container"
+        ref={this.linkFormContainer}
+        onClick={(e) => {
+          console.log(e.target);
+        }}
+      >
         <div
           style={{ marginLeft: '5px', display: 'flex', alignItems: 'center' }}
         >

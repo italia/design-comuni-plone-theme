@@ -33,7 +33,7 @@ import LeftColumnFacets from '@plone/volto/components/manage/Blocks/Search/layou
 import HandleAnchor from 'design-comuni-plone-theme/components/ItaliaTheme/AppExtras/HandleAnchor';
 import GenericAppExtras from 'design-comuni-plone-theme/components/ItaliaTheme/AppExtras/GenericAppExtras';
 import PageLoader from 'design-comuni-plone-theme/components/ItaliaTheme/AppExtras/PageLoader';
-import redraft from 'redraft';
+
 import { loadables as ItaliaLoadables } from 'design-comuni-plone-theme/config/loadables';
 
 // CTs icons
@@ -286,6 +286,7 @@ export default function applyConfig(voltoConfig) {
         'break',
         'testo_riquadro_semplice',
         'testo_riquadro_immagine',
+        'callout_block',
         'rssBlock',
         //se si aggiunge un nuovo blocco, verificare che in edit non ci siano bottoni che provocano il submit della form. Se succede, gestirli con e.prevenDefault() e.stopPropagation().
       ],
