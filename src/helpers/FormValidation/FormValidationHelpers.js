@@ -12,6 +12,9 @@ const customValidationMessages = defineMessages({
 export const blocksFieldIsEmpty = (field) => {
   return (
     filter(field?.blocks, (block) => {
+      if (block?.['@type'] === 'slate') {
+        return !!block?.plaintext?.trim()?.length;
+      }
       if (block?.['@type'] === 'text') {
         return !!block?.text?.blocks?.filter((block) => !!block.text.trim())
           ?.length;
