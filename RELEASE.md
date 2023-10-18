@@ -45,7 +45,7 @@
 
 ### Migliorie
 
-- Migliorato il comportamento alla selezione/deselezione degli elementi multipli nel menù laterale a scomparsa
+- Migliorato il comportamento per la selezione/deselezione degli elementi multipli nel menù laterale a scomparsa
 
 ### Fix
 
