@@ -80,7 +80,7 @@
 
 ### Fix
 
-- Sistemato margine del blocco Alert quando allineato a sinistra
+- Sistemato margine del blocco Alert quando allineato a sinistra.
 - Sistemato il template degli Rss Card con immagine per mostrare la data corretta
 
 ## Versione 8.7.0 (20/09/2023)
