@@ -41,22 +41,22 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 8.7.9 (18/10/2023)
 
 ### Migliorie
 
-- Migliorato il comportamento alla selezione/deselezione degli elementi multipli nel componente Object Browser
+- Migliorato il comportamento alla selezione/deselezione degli elementi multipli nel menù laterale a scomparsa
 
 ### Fix
 
 - Eliminata la sovrapposizione tra immagine e testo nel tipo documento Pagina quando l'immagine è verticale
 - Cambiato il colore del bordo dell'icona Ricerca nell'header dei sottositi per garantire il contrasto per accessibilità
 - Non mostrare la fascia colorata del footer di un sottosito quando questo non è compilato
-- Risolto un bug nel componente Object Browser che permetteva di selezionare più elementi di quelli consentiti
-- Alcune icone mancanti nel widget icone fontawesome sono state rese nuovamente visibili
+- Risolto un bug nel selettore dei link nel menù laterale a scomparsa, che permetteva di selezionare più elementi di quelli consentiti
+- Alcune icone mancanti nel widget di selezione delle icone di fontawesome sono state rese nuovamente visibili
 - Sistemate inconsistenze nella visualizzazione di alcuni tipi di elementi della lista degli allegati in Cartella Modulistica
 - Visualizzazione sidebar in edit del blocco Numeri: sistemato overflowing del testo di aiuto
-- Sistemate le dimensioni dei risultati del blocco search con colonne laterali, rimosso overflow.
+- Sistemate le dimensioni dei risultati del blocco search con colonne laterali, rimosso overflow
 
 ## Versione 8.7.8 (12/10/2023)
 
