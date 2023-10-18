@@ -51,12 +51,12 @@
 
 - Eliminata la sovrapposizione tra immagine e testo nel tipo documento Pagina quando l'immagine è verticale
 - Cambiato il colore del bordo dell'icona Ricerca nell'header dei sottositi per garantire il contrasto per accessibilità
-- Non mostrare la fascia colorata del footer di un sottosito quando questo non è compilato
+- Nascosta la fascia colorata del footer di un sottosito quando questo non è compilato
 - Risolto un bug nel selettore dei link nel menù laterale a scomparsa, che permetteva di selezionare più elementi di quelli consentiti
 - Alcune icone mancanti nel widget di selezione delle icone di fontawesome sono state rese nuovamente visibili
 - Sistemate inconsistenze nella visualizzazione di alcuni tipi di elementi della lista degli allegati in Cartella Modulistica
-- Visualizzazione sidebar in edit del blocco Numeri: sistemato overflowing del testo di aiuto
-- Sistemate le dimensioni dei risultati del blocco search con colonne laterali, rimosso overflow
+- Visualizzazione sidebar in edit del blocco Numeri: sistemata la visualizzazione del testo di aiuto
+- Sistemate le dimensioni dei risultati del blocco search con colonne laterali, rimosso overflow sopra ad altri elementi della pagina
 
 ## Versione 8.7.8 (12/10/2023)
 
@@ -80,14 +80,14 @@
 
 ### Fix
 
-- Sistemato margine del blocco Alert quando allineato a sinistra.
-- Sistemato il template degli Rss Card con immagine per mostrare la data corretta
+- Sistemato margine del blocco Alert quando è allineato a sinistra.
+- Sistemato il template degli Rss Card con immagine per mostrare la data corretta di pubblicazione della notizia
 
 ## Versione 8.7.0 (20/09/2023)
 
 ### Migliorie
 
-- Nel template Blocco link solo immagini con link esterni, icona accessibilità per link esterni ora è disattivabile attraverso opzione del template
+- Nel template Blocco link solo immagini con link esterni, l'icona per i link esterni (richiesta dall'accessibilità) ora è disattivabile attraverso opzione del template
 - Migliorata l'accessibilità e il supporto Screen Reader per il menu a tendina "Ordina Per" nella pagina di ricerca
 - Migliorata la navigazione da tastiera quando si è in modifica dei blocchi Alert, Card Semplice, Card con Immagine, Accordion
 
@@ -96,4 +96,4 @@
 - sistemati gli oggetti link che puntano a file nella Cartella Modulistica
 - Sistemato l'allineamento degli elementi nel blocco Contatti: se ci sono meno di tre elementi l'allineamento è centrato, se ce ne sono più di 3 l'allineamento è a sinistra.
 - Migliorata accessibilità del calendario nel blocco ricerca Eventi e ricerca Bandi
-- Fissato il layout del template Blocco link solo immagini con link esterni, posizionata l'icona di accessibilità per link esterni in overlay se presente
+- Fissato il layout del template Blocco link solo immagini con link esterni, posizionata l'icona di accessibilità per link esterni in overlay (se presente)
