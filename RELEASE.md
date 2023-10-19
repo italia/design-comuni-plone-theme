@@ -41,7 +41,7 @@
 - ...
 -->
 
-## Versione x.x.x (xx/xx/xx)
+## Versione 8.7.10 (19/10/2023)
 
 ## Fix
 
