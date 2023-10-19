@@ -1,5 +1,23 @@
 
 
+## [8.7.10](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.7.9...v8.7.10) (2023-10-19)
+
+
+### Bug Fixes
+
+* timeline_tempi_scadenze validation ([#370](https://github.com/RedTurtle/design-comuni-plone-theme/issues/370)) ([c97e325](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c97e3252b21c409dbe575d43448ee4cf9a58ffba))
+
+
+### Maintenance
+
+* updated github workflows ([0445653](https://github.com/RedTurtle/design-comuni-plone-theme/commit/04456532b38742877b5879e12492a6a2d0fdcabc))
+
+
+### Documentation
+
+* updated publiccode and release log ([59ea5b7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/59ea5b73e43bb5e937e34d67ef6bdad3da35e2ee))
+* updated release log ([80bdcd1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/80bdcd1e63bf6d405fcc692e860bc6fee138d58c))
+
 ## [8.7.9](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.7.8...v8.7.9) (2023-10-18)
 
 
