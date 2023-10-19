@@ -11,7 +11,7 @@ const dgfieldValidationMessages = defineMessages({
 export const CUSTOM_DGFIELD_VALIDATION = {
   timeline_tempi_scadenze: {
     isValid: (value, itemObj, intlFunc) => {
-      const isValid = value.every((val, i) => val.title);
+      const isValid = value.every((val, i) => val.milestone);
       return !isValid
         ? intlFunc(
             dgfieldValidationMessages.timeline_tempi_scadenze_validation_error,

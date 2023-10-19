@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione x.x.x (xx/xx/xx)
+
+## Fix
+
+- Sistemata validazione del campo Timeline tempi e scadenze
+
 ## Versione 8.7.9 (18/10/2023)
 
 ### Migliorie
