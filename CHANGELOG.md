@@ -1,5 +1,18 @@
 
 
+## [8.7.11](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.10...v8.7.11) (2023-10-23)
+
+
+### Bug Fixes
+
+* fixed requiredBlocks config with spread and added controls in EventView props ([#374](https://github.com/redturtle/design-comuni-plone-theme/issues/374)) ([f4ec297](https://github.com/redturtle/design-comuni-plone-theme/commit/f4ec297e3e5a5b2ec7cfc60b96fa73565c202de7))
+* tabnav label in Release log ([#373](https://github.com/redturtle/design-comuni-plone-theme/issues/373)) ([c4abcd9](https://github.com/redturtle/design-comuni-plone-theme/commit/c4abcd95d40ecc3af56baeb8aa7a06d442b9154d))
+
+
+### Maintenance
+
+* preparing release 8.7.11 ([fbf6386](https://github.com/redturtle/design-comuni-plone-theme/commit/fbf638682c30de694134bcf2686714204837d5cd))
+
 ## [8.7.10](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.7.9...v8.7.10) (2023-10-19)
 
 
