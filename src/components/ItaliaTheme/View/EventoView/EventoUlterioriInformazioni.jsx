@@ -34,7 +34,7 @@ const EventoUlterioriInformazioni = ({ content }) => {
       richTextHasContent(content?.ulteriori_informazioni) ||
       content?.event_url ||
       richTextHasContent(content?.patrocinato_da) ||
-      content?.strutture_politiche.length > 0,
+      content?.strutture_politiche?.length > 0,
     [content],
   );
 
@@ -64,11 +64,11 @@ const EventoUlterioriInformazioni = ({ content }) => {
           )}
         </div>
       )}
-      {content?.strutture_politiche.length > 0 && (
+      {content?.strutture_politiche?.length > 0 && (
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.strutture_politiche)}</h5>
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-            {content.strutture_politiche.map((item, i) => (
+            {content?.strutture_politiche?.map((item, i) => (
               <GenericCard
                 key={i}
                 index={item['@id']}

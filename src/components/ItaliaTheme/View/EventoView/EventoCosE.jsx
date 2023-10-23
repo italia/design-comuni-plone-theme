@@ -12,6 +12,7 @@ import {
   richTextHasContent,
   Gallery,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { contentFolderHasItems } from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
   cos_e: {
@@ -36,7 +37,11 @@ const messages = defineMessages({
 const EventoCosE = ({ content }) => {
   const intl = useIntl();
 
-  return (
+  return richTextHasContent(content?.descrizione_estesa) ||
+    contentFolderHasItems(content, 'immagini') ||
+    contentFolderHasItems(content, 'video') ||
+    content?.persone_amministrazione?.length > 0 ||
+    richTextHasContent(content?.descrizione_destinatari) ? (
     <RichTextSection
       tag_id={'text-body'}
       title={intl.formatMessage(messages.cos_e)}
@@ -48,7 +53,7 @@ const EventoCosE = ({ content }) => {
           <h5 className="parteciperanno-section">
             {intl.formatMessage(messages.parteciperanno)}
           </h5>
-          {content.persone_amministrazione.map((item, i) => (
+          {content?.persone_amministrazione?.map((item, i) => (
             <UniversalLink
               href={flattenToAppURL(item['@id'])}
               key={item['@id']}
@@ -85,6 +90,8 @@ const EventoCosE = ({ content }) => {
         </div>
       )}
     </RichTextSection>
+  ) : (
+    <></>
   );
 };
 

@@ -438,9 +438,7 @@ export default function applyConfig(voltoConfig) {
     blocksConfig: { ...config.blocks.blocksConfig, ...customBlocks },
     groupBlocksOrder: config.blocks.groupBlocksOrder.concat(customBlocksOrder),
     initialBlocks: { ...config.blocks.initialBlocks, ...customInitialBlocks },
-    requiredBlocks: {
-      ...config.blocks.requiredBlocks.concat(...customRequiredBlocks),
-    },
+    requiredBlocks: [...config.blocks.requiredBlocks, ...customRequiredBlocks],
     showEditBlocksInBabelView: true,
   };
 
