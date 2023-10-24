@@ -417,7 +417,7 @@ export const fontAwesomeAliases = {
   'pencil-paintbrush': 'pen-paintbrush',
   'pencil-ruler': 'pen-ruler',
   pennant: 'flag-pennant',
-  'people-arrows': 'people-arrows-left-right',
+  'people-arrows': 'people-arrows',
   'people-carry': 'people-carry-box',
   percentage: 'percent',
   'person-carry': 'person-carry-box',

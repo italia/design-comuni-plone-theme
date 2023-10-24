@@ -247,7 +247,6 @@ class ObjectBrowserBody extends Component {
   onSelectItem = (item) => {
     const url = item['@id'];
     const { block, data, mode, dataName, onChangeBlock } = this.props;
-
     const updateState = (mode) => {
       switch (mode) {
         case 'image':
@@ -312,8 +311,18 @@ class ObjectBrowserBody extends Component {
   };
 
   isSelectable = (item) => {
-    return this.props.selectableTypes.length > 0
-      ? this.props.selectableTypes.indexOf(item['@type']) >= 0
+    const { maximumSelectionSize, data, mode, selectableTypes } = this.props;
+    if (
+      maximumSelectionSize &&
+      data &&
+      mode === 'multiple' &&
+      maximumSelectionSize <= data.length
+    )
+      return data.some(
+        (d) => flattenToAppURL(d['@id']) === flattenToAppURL(item['@id']),
+      );
+    return selectableTypes.length > 0
+      ? selectableTypes.indexOf(item['@type']) >= 0
       : true;
   };
 
@@ -331,16 +340,24 @@ class ObjectBrowserBody extends Component {
           !this.props.maximumSelectionSize ||
           this.props.mode === 'multiple' ||
           !this.props.data ||
-          this.props.data.length < this.props.maximumSelectionSize
+          this.props.data.length <= this.props.maximumSelectionSize
         ) {
+          let isDeselecting;
+          if (this.props.mode === 'multiple' && Array.isArray(this.props.data))
+            isDeselecting = this.props.data.some(
+              (d) => flattenToAppURL(d['@id']) === flattenToAppURL(item['@id']),
+            );
           this.onSelectItem(item);
           let length = this.props.data ? this.props.data.length : 0;
-
-          let stopSelecting =
-            this.props.mode !== 'multiple' ||
-            (this.props.maximumSelectionSize > 0 &&
-              length + 1 >= this.props.maximumSelectionSize);
-
+          let stopSelecting = this.props.mode !== 'multiple';
+          if (isDeselecting && !stopSelecting)
+            stopSelecting =
+              this.props.maximumSelectionSize > 0 &&
+              length - 1 >= this.props.maximumSelectionSize;
+          else
+            stopSelecting =
+              this.props.maximumSelectionSize > 0 &&
+              length + 1 >= this.props.maximumSelectionSize;
           if (stopSelecting) {
             this.props.closeObjectBrowser();
           }

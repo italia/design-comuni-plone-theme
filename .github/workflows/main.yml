@@ -1,10 +1,10 @@
 name: Docker build for latest main version
 on:
-  release:
-    types: [released]
+  push:
+    branches: [main]
 
 jobs:
-  build_main:
+  build_develop:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,21 +18,30 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Get the version
-        id: get_version
-        run: echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> "$GITHUB_OUTPUT"
-
       - name: Build and push Docker images
         uses: docker/build-push-action@v4
         with:
           context: .
           file: ./dockerfiles/Dockerfile
-          tags: redturtletech/io-comune-base:${{ steps.get_version.outputs.VERSION }}
+          tags: redturtletech/io-comune-base:main
           pull: true
           push: true
-          cache-from: type=registry,ref=redturtletech/io-comune-base:${{ steps.get_version.outputs.VERSION }}
+          cache-from: type=registry,ref=redturtletech/io-comune-base:main
           cache-to: type=inline
           build-args: |
             ADDON_NAME=design-comuni-plone-theme
             ADDON_PATH=design-comuni-plone-theme
             VOLTO_VERSION=17.0.0-alpha.19
+
+      - name: Deploy to rancher
+        uses: redturtle/rancher-deploy-action@v0.2.0
+        with:
+          host: ${{ secrets.RANCHER_HOST }}
+          api-username: ${{ secrets.RANCHER_API_USERNAME }}
+          api-password: ${{ secrets.RANCHER_API_PASSWORD }}
+          cluster-id: ${{ secrets.RANCHER_CLUSTER_ID }}
+          project-id: ${{ secrets.RANCHER_PROJECT_ID }}
+          namespace: ${{ secrets.RANCHER_NAMESPACE_DEVELOP }}
+          workload: ${{ secrets.RANCHER_WORKLOAD_DEVELOP }}
+          image: redturtletech/io-comune-base:main
+          slack-hook-url: ${{ secrets.RANCHER_SLACK_HOOK_URL }}

@@ -81,7 +81,11 @@ const DocRow = ({ doc }) => {
 
       {/*Single file*/}
       {doc.items?.length === 1 && (
-        <div className="doc">
+        <div
+          className={cx('doc', {
+            'link-to-doc': doc.items[0]?.['@type'] === 'Link',
+          })}
+        >
           {titleWrapper}
           {doc.items?.length === 1 && (
             <Downloads item={doc.items[0]} titleDoc={doc.title} />

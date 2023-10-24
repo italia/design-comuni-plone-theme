@@ -35,58 +35,63 @@ const Sidebar = ({
   const intl = useIntl();
 
   return (
-    <Segment.Group raised>
-      <header className="header pulled">
-        <h2>
-          <FormattedMessage id="numbers_block" defaultMessage="Blocco numeri" />
-        </h2>
-      </header>
-      <Accordion className="form">
-        <Accordion.Content active={true}>
-          <ObjectBrowserWidget
-            id="background"
-            title={intl.formatMessage(messages.backgroundImage)}
-            description=""
-            required={false}
-            widgetOptions={{
-              pattern_options: {
-                selectableTypes: ['Image'],
-                maximumSelectionSize: 1,
-              },
-            }}
-            value={data.background ?? []}
-            onChange={(id, value) =>
-              onChangeBlock(block, { ...data, [id]: value })
-            }
-          />
+    <div className="numbers-block-sidebar-form-container">
+      <Segment.Group raised>
+        <header className="header pulled">
+          <h2>
+            <FormattedMessage
+              id="numbers_block"
+              defaultMessage="Blocco numeri"
+            />
+          </h2>
+        </header>
+        <Accordion className="form">
+          <Accordion.Content active={true}>
+            <ObjectBrowserWidget
+              id="background"
+              title={intl.formatMessage(messages.backgroundImage)}
+              description=""
+              required={false}
+              widgetOptions={{
+                pattern_options: {
+                  selectableTypes: ['Image'],
+                  maximumSelectionSize: 1,
+                },
+              }}
+              value={data.background ?? []}
+              onChange={(id, value) =>
+                onChangeBlock(block, { ...data, [id]: value })
+              }
+            />
 
-          <IconWidget
-            id="icon1"
-            value={data.icon1 ?? ''}
-            defaultOptions={defaultIconWidgetOptions}
-            onChange={(name, value) => {
-              onChangeBlock(block, { ...data, [name]: value });
-            }}
-          />
-          <IconWidget
-            id="icon2"
-            value={data.icon2 ?? ''}
-            defaultOptions={defaultIconWidgetOptions}
-            onChange={(name, value) => {
-              onChangeBlock(block, { ...data, [name]: value });
-            }}
-          />
-          <IconWidget
-            id="icon3"
-            value={data.icon3 ?? ''}
-            defaultOptions={defaultIconWidgetOptions}
-            onChange={(name, value) => {
-              onChangeBlock(block, { ...data, [name]: value });
-            }}
-          />
-        </Accordion.Content>
-      </Accordion>
-    </Segment.Group>
+            <IconWidget
+              id="icon1"
+              value={data.icon1 ?? ''}
+              defaultOptions={defaultIconWidgetOptions}
+              onChange={(name, value) => {
+                onChangeBlock(block, { ...data, [name]: value });
+              }}
+            />
+            <IconWidget
+              id="icon2"
+              value={data.icon2 ?? ''}
+              defaultOptions={defaultIconWidgetOptions}
+              onChange={(name, value) => {
+                onChangeBlock(block, { ...data, [name]: value });
+              }}
+            />
+            <IconWidget
+              id="icon3"
+              value={data.icon3 ?? ''}
+              defaultOptions={defaultIconWidgetOptions}
+              onChange={(name, value) => {
+                onChangeBlock(block, { ...data, [name]: value });
+              }}
+            />
+          </Accordion.Content>
+        </Accordion>
+      </Segment.Group>
+    </div>
   );
 };
 

@@ -19,7 +19,9 @@
     position: relative;
     display: flex;
     height: 195px;
+    flex-direction: row;
     align-items: flex-end;
+    justify-content: left;
     padding: 1.2rem;
     text-decoration: none;
 

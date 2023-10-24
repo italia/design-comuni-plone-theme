@@ -3,6 +3,7 @@
   .btn.dropdown-toggle {
     text-decoration: underline;
   }
+
   .link-list-wrapper {
     ul {
       li {
@@ -10,7 +11,10 @@
         button.btn-link {
           display: flex;
           align-items: center;
+
           .icon {
+            height: 28px;
+            width: 28px;
             margin-right: 0.5em;
           }
         }

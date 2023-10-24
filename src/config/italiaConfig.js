@@ -281,7 +281,7 @@ export default function applyConfig(voltoConfig) {
     'volto-blocks-widget': {
       allowedBlocks: [
         ...(config.settings['volto-blocks-widget']?.allowedBlocks ?? []).filter(
-          (block) => block.id !== 'maps',
+          (block) => block !== 'maps',
         ),
         'break',
         'testo_riquadro_semplice',
@@ -423,9 +423,7 @@ export default function applyConfig(voltoConfig) {
     blocksConfig: { ...config.blocks.blocksConfig, ...customBlocks },
     groupBlocksOrder: config.blocks.groupBlocksOrder.concat(customBlocksOrder),
     initialBlocks: { ...config.blocks.initialBlocks, ...customInitialBlocks },
-    requiredBlocks: {
-      ...config.blocks.requiredBlocks.concat(...customRequiredBlocks),
-    },
+    requiredBlocks: [...config.blocks.requiredBlocks, ...customRequiredBlocks],
     showEditBlocksInBabelView: true,
   };
 

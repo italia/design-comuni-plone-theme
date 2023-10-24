@@ -2,7 +2,7 @@
   "name": "design-comuni-plone-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "GPL-v3",
-  "version": "8.7.4",
+  "version": "8.7.11",
   "main": "src/index.js",
   "keywords": [
     "volto-addon",
@@ -130,7 +130,7 @@
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
     "volto-blocks-widget": "3.1.0",
-    "volto-data-grid-widget": "2.2.2",
+    "volto-data-grid-widget": "2.2.3",
     "volto-dropdownmenu": "4.1.0",
     "volto-editablefooter": "5.0.1",
     "volto-feedback": "0.1.5",

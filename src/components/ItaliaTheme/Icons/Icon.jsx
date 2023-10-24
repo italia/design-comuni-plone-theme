@@ -7,6 +7,7 @@ import classNames from 'classnames';
 
 import DesignIcon from './DesignIcon';
 import TelegramSVG from './svg/TelegramSVG';
+import XTwitterSVG from './svg/XTwitterSVG';
 import { FontAwesomeIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const Icon = (props) => {
@@ -25,10 +26,13 @@ const Icon = (props) => {
 
     const parts = icon.split(' ');
 
-    if (icon.indexOf('it-') === 0) {
+    // TO DO: rimuovere le condizioni dell'icona di twitter quando verrà aggiornato Bootstrap Italia
+    if (icon.indexOf('it-') === 0 && icon !== 'it-twitter') {
       return <DesignIcon {...props} className={classes} {...rest} />;
     } else if (icon === 'telegram') {
       return <TelegramSVG className={classes} {...rest} />;
+    } else if (icon === 'it-twitter') {
+      return <XTwitterSVG className={classes} {...rest} />;
     } else if (parts.length > 1) {
       return (
         <FontAwesomeIcon icon={parts} className={`fal ${classes}`} {...rest} />
