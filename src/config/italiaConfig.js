@@ -438,9 +438,6 @@ export default function applyConfig(voltoConfig) {
   // comment out the following line and add the leadimage behavior in Document.xml file
   delete config.blocks.blocksConfig['leadimage'];
 
-  config.blocks.blocksConfig.text = {
-    ...config.blocks.blocksConfig.text,
-  };
   // Remove Horizontal Menu variation of TOC Block
   config.blocks.blocksConfig.toc.variations = config.blocks.blocksConfig.toc.variations.filter(
     (v) => v.id !== 'horizontalMenu',

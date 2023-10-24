@@ -19,35 +19,52 @@ import alignJustifySVG from '@plone/volto/icons/align-justify.svg';
 
 import 'design-comuni-plone-theme/config/Slate/dropdownStyle.scss';
 
-const ALIGN_OPTIONS = [
-  {
-    cssClass: 'text-left',
-    title: 'Allinea a sinistra',
-    icon: alignLeftSVG,
-  },
-  {
-    cssClass: 'text-center',
-    title: 'Allinea al centro',
-    icon: alignCenterSVG,
-  },
-  {
-    cssClass: 'text-end',
-    title: 'Allinea a destra',
-    icon: alignRightSVG,
-  },
-  {
-    cssClass: 'text-justify',
-    title: 'Allinea il testo giustificato',
-    icon: alignJustifySVG,
-  },
-];
-
 const messages = defineMessages({
   align: {
     id: 'Allineamento',
     defaultMessage: 'Allineamento',
   },
+
+  align_left: {
+    id: 'Allinea a sinistra',
+    defaultMessage: 'Allinea a sinistra',
+  },
+  align_center: {
+    id: 'Allinea al centro',
+    defaultMessage: 'Allinea al centro',
+  },
+  align_right: {
+    id: 'Allinea a destra',
+    defaultMessage: 'Allinea a destra',
+  },
+  align_justify: {
+    id: 'Allinea il testo giustificato',
+    defaultMessage: 'Allinea il testo giustificato',
+  },
 });
+
+const ALIGN_OPTIONS = [
+  {
+    cssClass: 'text-left',
+    title: messages.align_left,
+    icon: alignLeftSVG,
+  },
+  {
+    cssClass: 'text-center',
+    title: messages.align_center,
+    icon: alignCenterSVG,
+  },
+  {
+    cssClass: 'text-end',
+    title: messages.align_right,
+    icon: alignRightSVG,
+  },
+  {
+    cssClass: 'text-justify',
+    title: messages.align_justify,
+    icon: alignJustifySVG,
+  },
+];
 
 const AlignMenuButton = ({ icon, active, ...props }) => (
   <ToolbarButton {...props} icon={icon} active={active} />
@@ -82,7 +99,7 @@ const AlignButton = (props) => {
     return {
       value: def.cssClass,
       text: def.text,
-      title: def.title,
+      title: intl.formatMessage(def.title),
       icon: (props) => <Icon name={def.icon} size="24px" />,
       isBlock: true,
       originalIcon: def.icon,
@@ -108,9 +125,7 @@ const AlignButton = (props) => {
     editor,
   };
 
-  const showMenu = blockOpts.length;
-
-  return showMenu ? (
+  return (
     <Dropdown
       id="align-menu"
       pointing="top left"
@@ -137,8 +152,6 @@ const AlignButton = (props) => {
           ))}
       </Dropdown.Menu>
     </Dropdown>
-  ) : (
-    ''
   );
 };
 
