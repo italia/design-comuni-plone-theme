@@ -126,11 +126,11 @@ const ReleaseLog = () => {
               <div
                 dangerouslySetInnerHTML={{
                   __html:
-                    log.name === 'io-comune' ? (
+                    log.name === 'io-Comune' ? (
                       logDCPT
-                    ) : log.name == 'io-cittadino' ? (
+                    ) : log.name == 'io-Cittadino' ? (
                       logIoCittadino
-                    ) : log.name == 'io-prenoto' ? (
+                    ) : log.name == 'io-Prenoto' ? (
                       logIoPrenoto
                     ) : (
                       <div></div>
