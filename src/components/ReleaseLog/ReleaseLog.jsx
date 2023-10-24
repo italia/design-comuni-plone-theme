@@ -100,7 +100,7 @@ const ReleaseLog = () => {
       <Helmet>
         <meta name="robots" content="noindex" />
       </Helmet>
-      <Container className="px-4 my-4">
+      <Container className="px-4 my-4 release-log">
         <h1>Lista degli aggiornamenti</h1>
         <Nav tabs className="mb-3">
           {LOGS_TO_VIEW.filter((log) => log.file != null).map((log) => (
