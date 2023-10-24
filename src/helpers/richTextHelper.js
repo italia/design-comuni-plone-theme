@@ -4,9 +4,7 @@ import { serializeNodesToText } from '@plone/volto-slate/editor/render';
 */
 export const checkRichTextHasContent = (text) => {
   if (text?.[0]?.children) {
-    return serializeNodesToText(text?.[0]?.children || [])?.length > 0
-      ? true
-      : false;
+    return serializeNodesToText(text?.[0]?.children || [])?.length > 0;
   }
   return false;
 };
