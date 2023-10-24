@@ -9,7 +9,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useIntl } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useSelector } from 'react-redux';
 import {
@@ -21,7 +21,12 @@ import { matchPath } from 'react-router';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 import config from '@plone/volto/registry';
-
+const messages = defineMessages({
+  opensInNewTab: {
+    id: 'opensInNewTab',
+    defaultMessage: 'Apre in un nuovo tab',
+  },
+});
 const UniversalLink = ({
   href,
   item = null,
@@ -33,7 +38,20 @@ const UniversalLink = ({
   overrideMarkSpecialLinks = false,
   ...props
 }) => {
-  const intl = useIntl();
+  let translations = {
+    opensInNewTab: {
+      defaultMessage: messages.opensInNewTab.defaultMessage,
+    },
+  };
+  //questo perchè il provider di intl non è sempre definito, ad esempio in slate_wysiwyg_box (Slate RichTextWidget)
+  try {
+    const intl = useIntl();
+    Object.keys(translations).forEach(
+      (k) => (translations[k].message = intl.formatMessage(messages[k])),
+    );
+  } catch (e) {
+    console.log('Cannot use intl here. View default messages.', e);
+  }
   const token = useSelector((state) => state.userSession?.token);
 
   let url = href;
@@ -102,9 +120,10 @@ const UniversalLink = ({
     tag = (
       <a
         href={url}
-        title={`${title ? title + ' - ' : ''}${intl.formatMessage({
-          id: 'opensInNewTab',
-        })}`}
+        title={`${title ? title + ' - ' : ''}${
+          translations.opensInNewTab.message ??
+          translations.opensInNewTab.defaultMessage
+        }`}
         target={
           !checkedURL.isMail &&
           !checkedURL.isTelephone &&
