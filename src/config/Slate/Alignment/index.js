@@ -10,7 +10,11 @@ const messages = defineMessages({
 });
 
 export const AlignElement = ({ attributes, children, element }) => {
-  return <p {...attributes}>{children}</p>;
+  return (
+    <p {...attributes} align="test">
+      {children}
+    </p>
+  );
 };
 
 const AlignButton = (props) => {
