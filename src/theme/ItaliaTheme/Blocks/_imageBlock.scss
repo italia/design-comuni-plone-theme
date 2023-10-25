@@ -17,3 +17,12 @@
     margin-bottom: 0;
   }
 }
+
+.block.image.align {
+  &.left,
+  &.right {
+    + blockquote {
+      display: inline-block;
+    }
+  }
+}
