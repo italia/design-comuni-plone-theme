@@ -13,7 +13,7 @@ import { useSelectionPosition } from '@plone/volto-slate/hooks';
 import { setPluginOptions } from '@plone/volto-slate/actions';
 import { PositionedToolbar } from '@plone/volto-slate/editor/ui';
 import AddLinkForm from '@plone/volto/components/manage/AnchorPlugin/components/LinkButton/AddLinkForm';
-
+import { simpleLinkDeserializer } from 'design-comuni-plone-theme/config/Slate/Link/deserializer';
 const LinkEditor = (props) => {
   const {
     editor,
@@ -107,6 +107,7 @@ export default function install(config) {
   slate.persistentHelpers.push((props) => (
     <LinkEditor {...props} pluginId={PLUGINID} {...pluginOptions} />
   ));
+  slate.htmlTagsToSlate.A = simpleLinkDeserializer;
 
   return config;
 }

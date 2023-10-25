@@ -242,13 +242,7 @@ class AddLinkForm extends Component {
       : cx('ui input editor-link', 'input-anchorlink-theme');
 
     return (
-      <div
-        className="link-form-container"
-        ref={this.linkFormContainer}
-        onClick={(e) => {
-          console.log(e.target);
-        }}
-      >
+      <div className="link-form-container" ref={this.linkFormContainer}>
         <div
           style={{ marginLeft: '5px', display: 'flex', alignItems: 'center' }}
         >

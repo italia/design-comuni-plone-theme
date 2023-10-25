@@ -1,6 +1,6 @@
 //config.settings.slate.contextToolbarButtons
-import RichTextWidget from '@plone/volto-slate/widgets/RichTextWidget';
-import HtmlSlateWidget from '@plone/volto-slate/widgets/HtmlSlateWidget';
+import RichTextWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/RichTextWidget';
+import HtmlSlateWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/HtmlSlateWidget';
 import installAlignment from 'design-comuni-plone-theme/config/Slate/Alignment';
 import installHeadings from 'design-comuni-plone-theme/config/Slate/Headings';
 import installUnderline from 'design-comuni-plone-theme/config/Slate/Underline';
@@ -10,6 +10,7 @@ import installTextLarger from 'design-comuni-plone-theme/config/Slate/TextLarger
 import installLink from 'design-comuni-plone-theme/config/Slate/Link';
 
 import installHandlers from 'design-comuni-plone-theme/config/Slate/handlers';
+import installDeserializers from 'design-comuni-plone-theme/config/Slate/deserializers';
 
 export default function applyItaliaSlateConfig(config) {
   installAlignment(config);
@@ -21,6 +22,7 @@ export default function applyItaliaSlateConfig(config) {
   installLinkButton(config);
 
   installHandlers(config);
+  installDeserializers(config);
 
   //remove callout because there's a Volto's block for it
   delete config.settings.slate.elements.callout;
@@ -33,25 +35,9 @@ export default function applyItaliaSlateConfig(config) {
   );
 
   //add wrapper public-ui to widgets
-  config.widgets.widget.slate = (props) => (
-    <div className="public-ui">
-      <RichTextWidget {...props} />
-    </div>
-  );
-  config.widgets.widget.slate_richtext = (props) => (
-    <div className="public-ui">
-      <RichTextWidget {...props} />
-    </div>
-  );
-  config.widgets.widget.slate_html = (props) => (
-    <div className="public-ui">
-      <HtmlSlateWidget {...props} />
-    </div>
-  );
-  config.widgets.widget.richtext = (props) => (
-    <div className="public-ui">
-      <HtmlSlateWidget {...props} />
-    </div>
-  );
+  config.widgets.widget.slate = RichTextWidget;
+  config.widgets.widget.slate_richtext = RichTextWidget;
+  config.widgets.widget.slate_html = HtmlSlateWidget;
+  config.widgets.widget.richtext = HtmlSlateWidget;
   return config;
 }

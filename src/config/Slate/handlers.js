@@ -23,7 +23,7 @@ const focusPrev = (props) => {
     index,
     saveSlateBlockSelection,
   } = props.editor.getBlockProps();
-  console.log('focusPrev');
+
   let isAtStart = false;
 
   if (showToolbar) {
@@ -100,7 +100,7 @@ const focusNext = (props) => {
     showToolbar,
     onFocusNextBlock,
   } = props.editor.getBlockProps();
-  console.log('focusNext');
+
   props.event.stopPropagation();
   let isAtEnd = false;
 

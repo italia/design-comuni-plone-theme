@@ -118,7 +118,6 @@ iframe {
 }
 
 .slate-editor-link {
-  margin: 0 0.5rem;
   clear: both;
 
   &.btn {
@@ -128,6 +127,7 @@ iframe {
     font-weight: 600;
     text-align: center;
     text-decoration: none;
+    margin: 0 0.5rem;
     &:hover,
     &:active {
       font-weight: 600;

@@ -4762,7 +4762,7 @@ __metadata:
     volto-blocks-widget: 3.1.0
     volto-data-grid-widget: 2.2.3
     volto-dropdownmenu: 4.1.0
-    volto-editablefooter: 5.0.1
+    volto-editablefooter: 5.0.2
     volto-feedback: 0.1.5
     volto-form-block: 3.1.0
     volto-gdpr-privacy: 2.1.0
@@ -11941,14 +11941,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-editablefooter@npm:5.0.1":
-  version: 5.0.1
-  resolution: "volto-editablefooter@npm:5.0.1"
+"volto-editablefooter@npm:5.0.2":
+  version: 5.0.2
+  resolution: "volto-editablefooter@npm:5.0.2"
   dependencies:
     react-outside-click-handler: 1.3.0
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 8aecc466a36f8b53b1c84cd1c29860d3078d4e54ed9da35d4e0ad221d8545eecf8c14a324194c1a939fc21eca02b768367ade32e3baef2a1af6e9cd1ce519d05
+  checksum: 837dbe26a095e51bdbb8f9539d8afc8cd981dcfbcd7c9050878b14ee4e2068720c748e8f89c79048ffefa4186a54ecf5ca36a5e813e8456953a25e8a24f76d75
   languageName: node
   linkType: hard
 

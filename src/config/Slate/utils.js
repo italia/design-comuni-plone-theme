@@ -28,3 +28,19 @@ export const insertToolbarButtons = (buttons = [], insertAfter = '', slate) => {
 
   //rimuovo doppi separator
 };
+
+export const getRichTextWidgetToolbarButtons = (config) => {
+  const EXCLUDE_TOOLBAR_BUTTONS = ['textLarger', 'headings'];
+
+  let toolbarButtons = (config.settings.slate?.toolbarButtons ?? [])
+    .filter((b) => EXCLUDE_TOOLBAR_BUTTONS.indexOf(b) < 0)
+    .filter(
+      (e, index, array) =>
+        !(
+          e === 'separator' &&
+          (index === 0 || array[index - 1] === 'separator')
+        ), //rimuovi i separatori consecutivi e il primo elemento se è un separatore
+    );
+
+  return toolbarButtons;
+};

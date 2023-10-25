@@ -40,5 +40,6 @@ export default function install(config) {
   //aggiungo il bottone di headings alla toolbar, dopo strikethrough
   insertToolbarButtons(['linkButton'], 'link', slate);
 
+  //htmlTagToSlate deserializer is defined in ./Link/deserializer.js
   return config;
 }

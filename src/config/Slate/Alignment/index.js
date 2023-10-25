@@ -37,5 +37,6 @@ export default function install(config) {
     ...slate.expandedToolbarButtons,
   ];
 
+  //il deserializer html per aggiungere le classi è definito in deserializers.js
   return config;
 }
