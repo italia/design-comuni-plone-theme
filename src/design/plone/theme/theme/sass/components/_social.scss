@@ -43,6 +43,25 @@
                 span {
                     @extend .sr-only;
                 }
+
+                &[title~='twitter']::before {
+                    height: 17px;
+                    width: 17px;
+                    content: '';
+                    -webkit-mask: url($img-path+'x-twitter.svg') no-repeat 50%
+                        50%;
+                    mask: url($img-path+'x-twitter.svg') no-repeat 50% 50%;
+                    -webkit-mask-size: contain;
+                    mask-size: contain;
+                    background-color: #fff;
+                    display: inline-block;
+                    margin-top: 6px;
+                    margin-left: 1px;
+                }
+
+                svg.fa-twitter {
+                    display: none;
+                }
             }
         }
     }

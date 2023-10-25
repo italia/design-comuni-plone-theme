@@ -24,6 +24,7 @@ logger = logging.getLogger(__name__)
 socialCSSClassDict = {
     'facebook': 'fab fa-facebook-f',
     'twitter': 'fab fa-twitter',
+    'whatsapp': 'fab fa-whatsapp',
     'instagram': 'fab fa-instagram',
     'telegram': 'fab fa-telegram',
     'youtube': 'fab fa-youtube',
