@@ -144,7 +144,11 @@ const customSoftBreak = (props) => {
 
 const breakInSimpleTextEditor = (props) => {
   //disable break in SimpleTextEditorWidget
-  const { showToolbar } = props.editor.getBlockProps();
+
+  const getBlockProps = props.editor.getBlockProps;
+  const { showToolbar } = getBlockProps
+    ? getBlockProps()
+    : { showToolbar: true };
   if (props.event.key === 'Enter' && !props.event.shiftKey && !showToolbar) {
     props.event.preventDefault();
     goToNextVoltoBlock(props);
