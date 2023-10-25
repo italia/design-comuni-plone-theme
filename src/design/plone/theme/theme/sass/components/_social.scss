@@ -53,10 +53,14 @@
                     mask: url($img-path+'x-twitter.svg') no-repeat 50% 50%;
                     -webkit-mask-size: contain;
                     mask-size: contain;
-                    background-color: #fff;
+                    background-color: $brand-primary;
                     display: inline-block;
                     margin-top: 6px;
                     margin-left: 1px;
+                }
+
+                &[title~='twitter']:hover::before {
+                    background-color: #fff;
                 }
 
                 svg.fa-twitter {
