@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-6.0.3 (unreleased)
+6.0.3 (2023-10-26)
 ------------------
 
 - Added new Twitter icon and updated Whatsapp social link.
