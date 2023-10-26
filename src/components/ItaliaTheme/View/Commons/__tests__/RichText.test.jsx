@@ -22,26 +22,23 @@ it('renders content', () => {
         <RichText
           data={{
             blocks: {
-              'c3aac6c5-b8d9-48b7-bc01-a7211248548b': {
-                '@type': 'text',
-                text: {
-                  blocks: [
-                    {
-                      data: {},
-                      depth: 0,
-                      entityRanges: [],
-                      inlineStyleRanges: [],
-                      key: 'e0m83',
-                      text: 'Un mega evento con delle mega iniziative',
-                      type: 'unstyled',
-                    },
-                  ],
-                  entityMap: {},
-                },
+              '77317d1d-92a1-4e94-946c-f00647c71f32': {
+                '@type': 'slate',
+                plaintext: 'Un mega evento con delle mega iniziative',
+                value: [
+                  {
+                    children: [
+                      {
+                        text: 'Un mega evento con delle mega iniziative',
+                      },
+                    ],
+                    type: 'p',
+                  },
+                ],
               },
             },
             blocks_layout: {
-              items: ['c3aac6c5-b8d9-48b7-bc01-a7211248548b'],
+              items: ['77317d1d-92a1-4e94-946c-f00647c71f32'],
             },
           }}
         />

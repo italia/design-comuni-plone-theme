@@ -6,7 +6,6 @@ import configureStore from 'redux-mock-store';
 import { Provider } from 'react-intl-redux';
 import { MemoryRouter } from 'react-router-dom';
 import thunk from 'redux-thunk';
-
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 

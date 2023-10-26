@@ -657,7 +657,7 @@ const mock_allfields = {
           {
             children: [
               {
-                text: 'Open yout eyes',
+                text: 'Open your eyes',
               },
             ],
             type: 'p',

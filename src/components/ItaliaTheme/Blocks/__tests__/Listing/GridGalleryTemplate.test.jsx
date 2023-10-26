@@ -6,8 +6,6 @@ import configureStore from 'redux-mock-store';
 import { Provider } from 'react-intl-redux';
 import { MemoryRouter } from 'react-router-dom';
 import thunk from 'redux-thunk';
-import config from '@plone/volto/registry';
-import { initSlateTests } from 'design-comuni-plone-theme/helpers/tests/test';
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
@@ -1549,8 +1547,6 @@ const store = mockStore({
     messages: {},
   },
 });
-
-initSlateTests(config);
 
 test('View renders all fields', async () => {
   render(

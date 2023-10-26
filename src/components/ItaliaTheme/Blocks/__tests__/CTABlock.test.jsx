@@ -59,7 +59,8 @@ const mock_fields = {
       has_children: false,
       head_title: null,
       icona: null,
-      id: 'business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp',
+      id:
+        'business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp',
       image: {
         scales: {
           gallery: {
@@ -286,34 +287,18 @@ const mock_fields = {
   ],
   ctaLink: 'http://localhost:3000/eventi',
   ctaLinkTitle: 'In conversation',
-  cta_content: {
-    blocks: [
-      {
-        data: {},
-        depth: 0,
-        entityRanges: [],
-        inlineStyleRanges: [],
-        key: '2urs0',
-        text: 'She never kept the same address',
-        type: 'unstyled',
-      },
-    ],
-    entityMap: {},
-  },
-  cta_title: {
-    blocks: [
-      {
-        data: {},
-        depth: 0,
-        entityRanges: [],
-        inlineStyleRanges: [],
-        key: 'd77m6',
-        text: 'To avoid complications',
-        type: 'unstyled',
-      },
-    ],
-    entityMap: {},
-  },
+  cta_content: [
+    {
+      children: [
+        {
+          text: 'She never kept the same address',
+        },
+      ],
+      type: 'p',
+    },
+  ],
+
+  cta_title: 'To avoid complications',
   showFullWidth: true,
   showImage: true,
 };

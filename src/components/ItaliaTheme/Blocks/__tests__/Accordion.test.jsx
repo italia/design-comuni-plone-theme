@@ -18,34 +18,17 @@ const mock_fields = {
       href: '/',
       id: '1675245121000',
       linkMoreTitle: 'Caught in a landside',
-      text: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: 'b6vem',
-            text: 'Is this just fantasy',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
-      title: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: '2ikdv',
-            text: 'Accordion 1',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
+      text: [
+        {
+          children: [
+            {
+              text: 'Is this just fantasy?',
+            },
+          ],
+          type: 'p',
+        },
+      ],
+      title: 'Accordion 1',
     },
   ],
 };

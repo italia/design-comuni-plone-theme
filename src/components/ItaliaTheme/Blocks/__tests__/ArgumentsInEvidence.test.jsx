@@ -607,20 +607,16 @@ const mock_fields = {
         },
       ],
       id: '1675259976943',
-      title: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: 'b3tg0',
-            text: 'Gunpowder',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
+      title: [
+        {
+          type: 'p',
+          children: [
+            {
+              text: 'Gunpowder',
+            },
+          ],
+        },
+      ],
     },
     {
       argument: [
@@ -879,20 +875,16 @@ const mock_fields = {
         },
       ],
       id: '1675262982489',
-      title: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: '1dq8b',
-            text: 'Gelatine',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
+      title: [
+        {
+          type: 'p',
+          children: [
+            {
+              text: 'Gelatine',
+            },
+          ],
+        },
+      ],
     },
   ],
   text: "She's a killer queen",

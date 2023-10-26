@@ -218,12 +218,12 @@ const mock_all_fields = {
     blocks: {
       '7bebaf7f-40fd-4274-82a4-59180e9dff0b': {
         '@type': 'slate',
-        plaintext: 'Open yout eyes',
+        plaintext: 'Open your eyes',
         value: [
           {
             children: [
               {
-                text: 'Open yout eyes',
+                text: 'Open your eyes',
               },
             ],
             type: 'p',
@@ -943,20 +943,20 @@ const mock_all_fields = {
       '@type': 'Servizio',
       canale_digitale: {
         blocks: {
-          '33545c64-eadf-429d-9a20-0ab4451bbf2c': {{
-        '@type': 'slate',
-        plaintext: "",
-        value: [
-          {
-            children: [
+          '33545c64-eadf-429d-9a20-0ab4451bbf2c': {
+            '@type': 'slate',
+            plaintext: '',
+            value: [
               {
-                text: '',
+                children: [
+                  {
+                    text: '',
+                  },
+                ],
+                type: 'p',
               },
             ],
-            type: 'p',
           },
-        ],
-},
         },
         blocks_layout: {
           items: ['33545c64-eadf-429d-9a20-0ab4451bbf2c'],
@@ -1945,7 +1945,7 @@ const store = mockStore({
                         type: 'p',
                       },
                     ],
-            },
+                  },
                 },
                 blocks_layout: {
                   items: ['7bebaf7f-40fd-4274-82a4-59180e9dff0b'],

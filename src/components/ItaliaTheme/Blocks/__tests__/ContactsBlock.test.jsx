@@ -13,157 +13,92 @@ const mockStore = configureStore(middlewares);
 const mock_fields = {
   '@type': 'contacts',
   bg_color: 'primary',
-  description: {
-    blocks: [
-      {
-        data: {},
-        depth: 0,
-        entityRanges: [],
-        inlineStyleRanges: [],
-        key: '1hkp5',
-        text: 'Let them eat cake',
-        type: 'unstyled',
-      },
-    ],
-    entityMap: {},
-  },
+  description: [
+    {
+      children: [
+        {
+          text: 'Let them eat cake',
+        },
+      ],
+      type: 'p',
+    },
+  ],
   href: 'http://localhost:3000/eventi',
   lastChange: 1675330752814,
   linkMoreTitle: 'Extraordinarily nice',
   subblocks: [
     {
-      email: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: 'b64ho',
-            text: 'For Khrushchev and Kennedy',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
+      email: [
+        {
+          children: [
+            {
+              text: 'For Khrushchev and Kennedy',
+            },
+          ],
+          type: 'p',
+        },
+      ],
+
       id: '1675328833526',
-      tel: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: '8jj4b',
-            text: 'A built-in remedy',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
-      text: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: '797hd',
-            text: 'Just like Mary Antoinette',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
-      title: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: 'cue58',
-            text: 'She said',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
+      tel: [
+        {
+          children: [
+            {
+              text: 'A built-in remedy',
+            },
+          ],
+          type: 'p',
+        },
+      ],
+      text: [
+        {
+          children: [
+            {
+              text: 'Just like Mary Antoinette',
+            },
+          ],
+          type: 'p',
+        },
+      ],
+      title: 'She said',
     },
     {
-      email: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: 'd9ppr',
-            text: 'Well versed in etiquette',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
+      email: [
+        {
+          children: [
+            {
+              text: 'Well versed in etiquette',
+            },
+          ],
+          type: 'p',
+        },
+      ],
       id: '1675330720693',
-      tel: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: '519mp',
-            text: 'Caviar and cigarettes',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
-      text: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: 'fdbkp',
-            text: "You can't decline",
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
-      title: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: '999ad',
-            text: 'At anytime an invitation',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
+      tel: [
+        {
+          children: [
+            {
+              text: 'Caviar and cigarettes',
+            },
+          ],
+          type: 'p',
+        },
+      ],
+
+      text: [
+        {
+          children: [
+            {
+              text: "You can't decline",
+            },
+          ],
+          type: 'p',
+        },
+      ],
+      title: 'At anytime an invitation',
     },
   ],
-  title: {
-    blocks: [
-      {
-        data: {},
-        depth: 0,
-        entityRanges: [],
-        inlineStyleRanges: [],
-        key: '12dh5',
-        text: 'In her pretty cabinet',
-        type: 'unstyled',
-      },
-    ],
-    entityMap: {},
-  },
+  title: 'In her pretty cabinet',
 };
 
 const store = mockStore({

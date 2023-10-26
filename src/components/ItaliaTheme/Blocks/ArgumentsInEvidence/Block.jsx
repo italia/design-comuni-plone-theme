@@ -57,7 +57,7 @@ const Block = ({
               selected={selected}
               placeholder={intl.formatMessage(messages.text)}
               onChangeBlock={(block, _data) => {
-                onChange({ ...data, title: _data.value });
+                onChange(_data);
               }}
               setSelected={() => {
                 otherProps.onSubblockChangeFocus(index);

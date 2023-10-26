@@ -10,6 +10,30 @@
 import '@plone/volto/config';
 import config from '@plone/volto/registry';
 import applyItaliaConfig from './src';
+import TextBlockView from '@plone/volto-slate/blocks/Text/TextBlockView';
+import TextBlockEdit from '@plone/volto-slate/blocks/Text/TextBlockEdit';
+import TextBlockSchema from '@plone/volto-slate/blocks/Text/TextBlockSchema';
+
+//slate config need to exists for italiaConfig
+config.set('settings', {
+  ...config.settings,
+  slate: {
+    elements: {
+      default: ({ attributes, children }) => <p {...attributes}>{children}</p>,
+    },
+    leafs: {},
+    persistentHelpers: [],
+    contextToolbarButtons: [],
+    textblockExtensions: [],
+    extensions: [],
+    elementToolbarButtons: {},
+    buttons: {},
+    toolbarButtons: [],
+    expandedToolbarButtons: [],
+    htmlTagsToSlate: {},
+    topLevelTargetElements: [],
+  },
+});
 
 applyItaliaConfig(config);
 
@@ -81,5 +105,39 @@ config.set('widgets', {
 config.set('experimental', {
   addBlockButton: {
     enabled: false,
+  },
+});
+
+const slateBlockConfig = {
+  id: 'slate',
+  view: TextBlockView,
+  edit: TextBlockEdit,
+  schema: TextBlockSchema,
+  blockHasValue: (data) => {
+    // TODO: this should be handled better
+    return data && !!data.plaintext?.trim();
+  },
+  tocEntry: (block = {}) => {
+    const { value, override_toc, entry_text, level, plaintext } = block;
+    const type = value?.[0]?.type;
+    return override_toc && level
+      ? [parseInt(level.slice(1)), entry_text]
+      : config.settings.slate.topLevelTargetElements.includes(type)
+      ? [parseInt(type.slice(1)), plaintext]
+      : null;
+  },
+};
+config.set('blocks', {
+  ...config.blocks,
+  blocksConfig: {
+    ...(config.blocks.blocksConfig ?? {}),
+    slate: slateBlockConfig,
+    gridBlock: {
+      ...(config.blocks.blocksConfig?.gridBlock ?? {}),
+      blocksConfig: {
+        ...(config.blocks.blocksConfig?.gridBlock?.blocksConfig ?? {}),
+        slate: slateBlockConfig,
+      },
+    },
   },
 });

@@ -59,7 +59,8 @@ const mock_fields = {
       has_children: false,
       head_title: null,
       icona: null,
-      id: 'business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp',
+      id:
+        'business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp',
       image: {
         scales: {
           gallery: {
@@ -284,20 +285,16 @@ const mock_fields = {
       whole_day: null,
     },
   ],
-  description: {
-    blocks: [
-      {
-        data: {},
-        depth: 0,
-        entityRanges: [],
-        inlineStyleRanges: [],
-        key: '9v9gk',
-        text: 'With his brim pulled way down low',
-        type: 'unstyled',
-      },
-    ],
-    entityMap: {},
-  },
+  description: [
+    {
+      children: [
+        {
+          text: 'With his brim pulled way down low',
+        },
+      ],
+      type: 'p',
+    },
+  ],
   href: '/',
   lastChange: 1675437158941,
   linkMoreTitle: "Ain't no sound but the sound of his feet",
@@ -307,50 +304,20 @@ const mock_fields = {
       icon: 'hand-holding-heart',
       id: '1675437158941',
       linkMoreTitle: 'Are you hanging on the edge of your seat?',
-      text: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: '606nn',
-            text: 'Are you ready for this?\n',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
-      title: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: '3qt26',
-            text: 'Machine guns ready to go',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
+      text: [
+        {
+          children: [
+            {
+              text: 'Are you ready for this?',
+            },
+          ],
+          type: 'p',
+        },
+      ],
+      title: 'Machine guns ready to go',
     },
   ],
-  title: {
-    blocks: [
-      {
-        data: {},
-        depth: 0,
-        entityRanges: [],
-        inlineStyleRanges: [],
-        key: 'ap3pb',
-        text: 'Steve walks warily down the street',
-        type: 'unstyled',
-      },
-    ],
-    entityMap: {},
-  },
+  title: 'Steve walks warily down the street',
 };
 
 const store = mockStore({

@@ -19,34 +19,17 @@ const mock_fields = {
     encoding: 'base64',
     filename: 'fisiatria.jpeg',
   },
-  image_card_content: {
-    blocks: [
-      {
-        data: {},
-        depth: 0,
-        entityRanges: [],
-        inlineStyleRanges: [],
-        key: '40dgi',
-        text: 'Is this just fantasy?',
-        type: 'unstyled',
-      },
-    ],
-    entityMap: {},
-  },
-  image_card_title: {
-    blocks: [
-      {
-        data: {},
-        depth: 0,
-        entityRanges: [],
-        inlineStyleRanges: [],
-        key: '61l6b',
-        text: 'Is this the real life?',
-        type: 'unstyled',
-      },
-    ],
-    entityMap: {},
-  },
+  image_card_content: [
+    {
+      children: [
+        {
+          text: 'Is this just fantasy?',
+        },
+      ],
+      type: 'p',
+    },
+  ],
+  image_card_title: 'Is this the real life?',
   rightImage: true,
   showImage: true,
   sizeNatural: true,

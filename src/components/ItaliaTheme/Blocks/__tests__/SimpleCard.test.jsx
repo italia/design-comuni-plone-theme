@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Block from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block';
+import View from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard/SimpleCard/View';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-intl-redux';
 import { MemoryRouter } from 'react-router-dom';
@@ -12,34 +12,18 @@ const mockStore = configureStore(middlewares);
 
 const mock_fields = {
   '@type': 'testo_riquadro_semplice',
-  simple_card_content: {
-    blocks: [
-      {
-        data: {},
-        depth: 0,
-        entityRanges: [],
-        inlineStyleRanges: [],
-        key: 'a898u',
-        text: 'Is this just fantasy?',
-        type: 'unstyled',
-      },
-    ],
-    entityMap: {},
-  },
-  simple_card_title: {
-    blocks: [
-      {
-        data: {},
-        depth: 0,
-        entityRanges: [],
-        inlineStyleRanges: [],
-        key: '23dhi',
-        text: 'Is this the real life?',
-        type: 'unstyled',
-      },
-    ],
-    entityMap: {},
-  },
+  simple_card_content: [
+    {
+      children: [
+        {
+          text: 'Is this just fantasy?',
+        },
+      ],
+      type: 'p',
+    },
+  ],
+
+  simple_card_title: 'Is this the real life?',
 };
 
 const store = mockStore({
@@ -53,7 +37,7 @@ test('View renders all fields', async () => {
   render(
     <Provider store={store}>
       <MemoryRouter>
-        <Block data={mock_fields} block={{ id: '1234' }} />
+        <View data={mock_fields} block={{ id: '1234' }} />
       </MemoryRouter>
     </Provider>,
   );

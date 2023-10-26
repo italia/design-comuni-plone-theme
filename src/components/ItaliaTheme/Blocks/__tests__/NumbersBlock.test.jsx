@@ -59,7 +59,8 @@ const mock_fields = {
       has_children: false,
       head_title: null,
       icona: null,
-      id: 'business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp',
+      id:
+        'business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp',
       image: {
         scales: {
           gallery: {
@@ -291,50 +292,20 @@ const mock_fields = {
   subblocks: [
     {
       id: '1675873050846',
-      text: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: '6l805',
-            text: 'Is this just fantasy',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
-      title: {
-        blocks: [
-          {
-            data: {},
-            depth: 0,
-            entityRanges: [],
-            inlineStyleRanges: [],
-            key: 'd13g8',
-            text: '26',
-            type: 'unstyled',
-          },
-        ],
-        entityMap: {},
-      },
+      text: [
+        {
+          children: [
+            {
+              text: 'Is this just fantasy',
+            },
+          ],
+          type: 'p',
+        },
+      ],
+      title: '26',
     },
   ],
-  title: {
-    blocks: [
-      {
-        data: {},
-        depth: 0,
-        entityRanges: [],
-        inlineStyleRanges: [],
-        key: '7d5lk',
-        text: 'Is this the real life',
-        type: 'unstyled',
-      },
-    ],
-    entityMap: {},
-  },
+  title: 'Is this the real life',
 };
 
 const store = mockStore({
