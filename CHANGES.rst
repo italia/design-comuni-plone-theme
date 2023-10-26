@@ -5,7 +5,8 @@ Changelog
 6.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added new Twitter icon and updated Whatsapp social link.
+  [sara]
 
 
 6.0.2 (2022-08-12)
