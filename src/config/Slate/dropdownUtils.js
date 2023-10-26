@@ -1,7 +1,28 @@
 /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
 import { Editor, Transforms } from 'slate';
-import { isBlockActive, toggleFormat } from '@plone/volto-slate/utils';
+import { isBlockActive } from '@plone/volto-slate/utils';
 import config from '@plone/volto/registry';
+
+export const toggleFormat = (editor, format, allowedChildren) => {
+  const { slate } = config.settings;
+  const isActive = isBlockActive(editor, format);
+  const type = isActive ? slate.defaultBlockType : format;
+  Transforms.setNodes(editor, {
+    type,
+  });
+  const selectedChildren = editor.selection.focus.path[0];
+  allowedChildren?.length &&
+    Transforms.unwrapNodes(editor, {
+      mode: 'all',
+      at: [selectedChildren],
+      match: (n, path) => {
+        const isMatch =
+          path.length > 1 && // we don't deal with the parent nodes
+          !(Text.isText(n) || allowedChildren.includes(n?.type));
+        return isMatch;
+      },
+    });
+};
 
 /**
  * Toggles a style (e.g. in the StyleMenu plugin).
@@ -69,7 +90,8 @@ export const toggleBlockStyle = (
     // changeBlockToList(editor, format);
   } else if (!isListItem && !wantsList) {
     //se ho rimosso tutti gli stili devo rimuoverre anche il format
-    if (format && editor.children?.[0]?.type !== format) {
+    const selectedChildren = editor.selection.focus.path[0];
+    if (format && editor.children?.[selectedChildren]?.type !== format) {
       toggleFormat(editor, format, allowedChildren);
     }
     internalToggleBlockStyle(editor, style, oneOf, format);
