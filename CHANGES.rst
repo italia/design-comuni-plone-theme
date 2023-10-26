@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-6.0.4 (unreleased)
+6.0.4 (2023-10-26)
 ------------------
 
 - Changed Twitter icon color
