@@ -5,7 +5,8 @@ Changelog
 6.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix. Hidden old Twitter icon
+  [sara]
 
 
 6.0.4 (2023-10-26)
