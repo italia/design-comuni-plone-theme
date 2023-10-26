@@ -62,7 +62,18 @@ const mock_allfields = {
       '@type': 'title',
     },
     'fbd627d2-46a1-4d32-b610-6aed2a142b36': {
-      '@type': 'text',
+      '@type': 'slate',
+      plaintext: '',
+      value: [
+        {
+          children: [
+            {
+              text: '',
+            },
+          ],
+          type: 'p',
+        },
+      ],
     },
   },
   blocks_layout: {

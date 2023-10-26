@@ -60,21 +60,18 @@ const mock_mandatory = {
   a_chi_si_rivolge: {
     blocks: {
       '2851114d-2489-4ea3-9b46-062cf6437418': {
-        '@type': 'text',
-        text: {
-          blocks: [
-            {
-              data: {},
-              depth: 0,
-              entityRanges: [],
-              inlineStyleRanges: [],
-              key: 'f5rrc',
-              text: 'Animaletti',
-              type: 'unstyled',
-            },
-          ],
-          entityMap: {},
-        },
+        '@type': 'slate',
+        plaintext: 'Animaletti',
+        value: [
+          {
+            children: [
+              {
+                text: 'Animaletti',
+              },
+            ],
+            type: 'p',
+          },
+        ],
       },
     },
     blocks_layout: {
@@ -255,21 +252,18 @@ const mock_mandatory = {
   come_si_fa: {
     blocks: {
       'dd7c859c-8053-4c16-b753-161c438b32ce': {
-        '@type': 'text',
-        text: {
-          blocks: [
-            {
-              data: {},
-              depth: 0,
-              entityRanges: [],
-              inlineStyleRanges: [],
-              key: '1mlqd',
-              text: "There's a lady who's sure",
-              type: 'unstyled',
-            },
-          ],
-          entityMap: {},
-        },
+        '@type': 'slate',
+        plaintext: "There's a lady who's sure",
+        value: [
+          {
+            children: [
+              {
+                text: "There's a lady who's sure",
+              },
+            ],
+            type: 'p',
+          },
+        ],
       },
     },
     blocks_layout: {
@@ -308,21 +302,18 @@ const mock_mandatory = {
   cosa_serve: {
     blocks: {
       'acfa657c-fbab-45ee-859f-21bb62b7c661': {
-        '@type': 'text',
-        text: {
-          blocks: [
-            {
-              data: {},
-              depth: 0,
-              entityRanges: [],
-              inlineStyleRanges: [],
-              key: '2sdeq',
-              text: "And she's buying a stairway to heaven",
-              type: 'unstyled',
-            },
-          ],
-          entityMap: {},
-        },
+        '@type': 'slate',
+        plaintext: "And she's buying a stairway to heaven",
+        value: [
+          {
+            children: [
+              {
+                text: "And she's buying a stairway to heaven",
+              },
+            ],
+            type: 'p',
+          },
+        ],
       },
     },
     blocks_layout: {
@@ -332,21 +323,18 @@ const mock_mandatory = {
   cosa_si_ottiene: {
     blocks: {
       'bb4db7e4-0a27-41c9-8f34-512eff06aa86': {
-        '@type': 'text',
-        text: {
-          blocks: [
-            {
-              data: {},
-              depth: 0,
-              entityRanges: [],
-              inlineStyleRanges: [],
-              key: 'pru2',
-              text: 'All that glitters is gold',
-              type: 'unstyled',
-            },
-          ],
-          entityMap: {},
-        },
+        '@type': 'slate',
+        plaintext: 'All that glitters is gold',
+        value: [
+          {
+            children: [
+              {
+                text: 'All that glitters is gold',
+              },
+            ],
+            type: 'p',
+          },
+        ],
       },
     },
     blocks_layout: {
@@ -373,21 +361,18 @@ const mock_mandatory = {
   tempi_e_scadenze: {
     blocks: {
       'e0c64130-00d4-4747-bc21-b58733cb1b7f': {
-        '@type': 'text',
-        text: {
-          blocks: [
-            {
-              data: {},
-              depth: 0,
-              entityRanges: [],
-              inlineStyleRanges: [],
-              key: 'b6mg7',
-              text: 'Dopodomani',
-              type: 'unstyled',
-            },
-          ],
-          entityMap: {},
-        },
+        '@type': 'slate',
+        plaintext: 'Dopodomani',
+        value: [
+          {
+            children: [
+              {
+                text: 'Dopodomani',
+              },
+            ],
+            type: 'p',
+          },
+        ],
       },
     },
     blocks_layout: {
@@ -503,22 +488,19 @@ const mock_mandatory = {
 //   canale_digitale: {
 //     blocks: {
 //       '7bebaf7f-40fd-4274-82a4-59180e9dff0b': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: '1e42l',
-//               text: 'Open your eyes',
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//   '@type': 'slate',
+//   plaintext: "Open your eyes",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "Open your eyes",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['7bebaf7f-40fd-4274-82a4-59180e9dff0b'],
@@ -528,22 +510,19 @@ const mock_mandatory = {
 //   casi_particolari: {
 //     blocks: {
 //       '02eda6cd-04cf-471e-b002-a0759264c4d9': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: '743f8',
-//               text: 'Mama, Just killed a man',
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//   '@type': 'slate',
+//   plaintext: "Mama, just killed a man",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "Mama, just killed a man",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['02eda6cd-04cf-471e-b002-a0759264c4d9'],
@@ -553,22 +532,19 @@ const mock_mandatory = {
 //   chi_puo_presentare: {
 //     blocks: {
 //       '3e317fff-a0a6-49c8-85a6-8d415fbc3568': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: '5gmg4',
-//               text: 'Is this just fantasy?',
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//   '@type': 'slate',
+//   plaintext: "Is this just fantasy?",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "Is this just fantasy?",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['3e317fff-a0a6-49c8-85a6-8d415fbc3568'],
@@ -586,22 +562,19 @@ const mock_mandatory = {
 //   copertura_geografica: {
 //     blocks: {
 //       'a04413ee-4676-41b4-9155-6310d8e6ad49': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: 'em5i1',
-//               text: 'Caught in a landside',
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//   '@type': 'slate',
+//   plaintext: "Cought in a landside",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "Cought in a landside",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['a04413ee-4676-41b4-9155-6310d8e6ad49'],
@@ -631,22 +604,19 @@ const mock_mandatory = {
 //   costi: {
 //     blocks: {
 //       'fb4ab549-4d60-4a24-a5c4-960e7151b28e': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: 'foiq2',
-//               text: '345',
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//   '@type': 'slate',
+//   plaintext: "345",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "345",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['fb4ab549-4d60-4a24-a5c4-960e7151b28e'],
@@ -657,22 +627,19 @@ const mock_mandatory = {
 //   descrizione_estesa: {
 //     blocks: {
 //       '038eb313-2c32-4db4-adae-888197220fd9': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: 'c0a5j',
-//               text: 'Is this the real life?',
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//   '@type': 'slate',
+//   plaintext: "Is this the real life?",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "Is this the real life?",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['038eb313-2c32-4db4-adae-888197220fd9'],
@@ -774,22 +741,19 @@ const mock_mandatory = {
 //   dove_rivolgersi_extra: {
 //     blocks: {
 //       '894e9d1d-1c20-4ed6-a4d0-5e25adbfbd9c': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: '8h4ue',
-//               text: 'I need no sympathy',
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//   '@type': 'slate',
+//   plaintext: "I need no simpathy",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "I need no simpathy",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['894e9d1d-1c20-4ed6-a4d0-5e25adbfbd9c'],
@@ -927,22 +891,19 @@ const mock_mandatory = {
 //   link_siti_esterni: {
 //     blocks: {
 //       'ff02a375-2be1-4a43-b758-dbb1fae8fa71': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: 'f14ja',
-//               text: 'Put a gun against his head',
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//   '@type': 'slate',
+//   plaintext: "Put a gun against his head",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "Put a gun against his head",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['ff02a375-2be1-4a43-b758-dbb1fae8fa71'],
@@ -956,22 +917,19 @@ const mock_mandatory = {
 //   motivo_stato_servizio: {
 //     blocks: {
 //       'c19f982c-ce7a-4050-aa60-65a92723db34': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: '3d3cq',
-//               text: 'Motivazione',
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//   '@type': 'slate',
+//   plaintext: "Motivazione",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "Motivazione",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['c19f982c-ce7a-4050-aa60-65a92723db34'],
@@ -998,22 +956,19 @@ const mock_mandatory = {
 //   prenota_appuntamento: {
 //     blocks: {
 //       'e26f97de-e008-40a1-929f-315a362f7107': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: 'btarf',
-//               text: "Because I'm easy come, easy go",
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//   '@type': 'slate',
+//   plaintext: "Because I'm easy come, easy go",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "Because I'm easy come, easy go",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['e26f97de-e008-40a1-929f-315a362f7107'],
@@ -1118,22 +1073,19 @@ const mock_mandatory = {
 //   procedure_collegate: {
 //     blocks: {
 //       '3ab3b686-ab6e-4a85-bd7b-361e091c05b3': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: 'ba4oq',
-//               text: 'No escape from reality',
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//   '@type': 'slate',
+//   plaintext: "No escape from reality",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "No escape from reality",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['3ab3b686-ab6e-4a85-bd7b-361e091c05b3'],
@@ -1175,8 +1127,19 @@ const mock_mandatory = {
 //       canale_digitale: {
 //         blocks: {
 //           '33545c64-eadf-429d-9a20-0ab4451bbf2c': {
-//             '@type': 'text',
-//           },
+//   '@type': 'slate',
+//   plaintext: "",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "",
+//         },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //         },
 //         blocks_layout: {
 //           items: ['33545c64-eadf-429d-9a20-0ab4451bbf2c'],
@@ -1225,23 +1188,20 @@ const mock_mandatory = {
 //   ],
 //   ulteriori_informazioni: {
 //     blocks: {
-//       '89f08a66-9c6a-4a30-86d8-d403475eba6e': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: '72f2h',
-//               text: 'pulled my trigger',
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//       '89f08a66-9c6a-4a30-86d8-d403475eba6e':{
+//   '@type': 'slate',
+//   plaintext: "pulled my trigger",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "pulled my trigger",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['89f08a66-9c6a-4a30-86d8-d403475eba6e'],
@@ -1252,22 +1212,19 @@ const mock_mandatory = {
 //   vincoli: {
 //     blocks: {
 //       'b3206125-d0d6-474e-935e-09d28602beca': {
-//         '@type': 'text',
-//         text: {
-//           blocks: [
-//             {
-//               data: {},
-//               depth: 0,
-//               entityRanges: [],
-//               inlineStyleRanges: [],
-//               key: '2hlds',
-//               text: 'Little high, little low',
-//               type: 'unstyled',
-//             },
-//           ],
-//           entityMap: {},
+//   '@type': 'slate',
+//   plaintext: "Little high, little low",
+//   value: [
+//     {
+//       children: [
+//         {
+//           text: "Little high, little low",
 //         },
-//       },
+//       ],
+//       type: 'p',
+//     },
+//   ],
+// },
 //     },
 //     blocks_layout: {
 //       items: ['b3206125-d0d6-474e-935e-09d28602beca'],
@@ -2099,21 +2056,18 @@ const store = mockStore({
               canale_digitale: {
                 blocks: {
                   '7bebaf7f-40fd-4274-82a4-59180e9dff0b': {
-                    '@type': 'text',
-                    text: {
-                      blocks: [
-                        {
-                          data: {},
-                          depth: 0,
-                          entityRanges: [],
-                          inlineStyleRanges: [],
-                          key: '1e42l',
-                          text: 'Open your eyes',
-                          type: 'unstyled',
-                        },
-                      ],
-                      entityMap: {},
-                    },
+                    '@type': 'slate',
+                    plaintext: 'Open your eyes',
+                    value: [
+                      {
+                        children: [
+                          {
+                            text: 'Open yout eyes',
+                          },
+                        ],
+                        type: 'p',
+                      },
+                    ],
                   },
                 },
                 blocks_layout: {
@@ -2195,21 +2149,18 @@ const store = mockStore({
       a_chi_si_rivolge: {
         blocks: {
           '2851114d-2489-4ea3-9b46-062cf6437418': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: 'f5rrc',
-                  text: 'Animaletti',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'Animaletti',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'Animaletti',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -2270,21 +2221,18 @@ const store = mockStore({
       canale_digitale: {
         blocks: {
           '7bebaf7f-40fd-4274-82a4-59180e9dff0b': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: '1e42l',
-                  text: 'Open your eyes',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'Open your eyes',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'Open your eyes',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -2467,21 +2415,18 @@ const store = mockStore({
       casi_particolari: {
         blocks: {
           '02eda6cd-04cf-471e-b002-a0759264c4d9': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: '743f8',
-                  text: 'Mama, Just killed a man',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'Mamama, Just killed a man',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'Mama, Just killed a man',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -2492,21 +2437,18 @@ const store = mockStore({
       chi_puo_presentare: {
         blocks: {
           '3e317fff-a0a6-49c8-85a6-8d415fbc3568': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: '5gmg4',
-                  text: 'Is this just fantasy?',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'Is this just fantasy?',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'Is this just fantasy?',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -2517,21 +2459,18 @@ const store = mockStore({
       come_si_fa: {
         blocks: {
           'dd7c859c-8053-4c16-b753-161c438b32ce': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: '1mlqd',
-                  text: "There's a lady who's sure",
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: "There's a lady who's sure",
+            value: [
+              {
+                children: [
+                  {
+                    text: "There's a lady who's sure",
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -2571,21 +2510,18 @@ const store = mockStore({
       copertura_geografica: {
         blocks: {
           'a04413ee-4676-41b4-9155-6310d8e6ad49': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: 'em5i1',
-                  text: 'Caught in a landside',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'Caught in a landside',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'Caught in a landside',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -2616,21 +2552,18 @@ const store = mockStore({
       cosa_serve: {
         blocks: {
           'acfa657c-fbab-45ee-859f-21bb62b7c661': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: '2sdeq',
-                  text: "And she's buying a stairway to heaven",
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: "And she's buying a stairway to heaven",
+            value: [
+              {
+                children: [
+                  {
+                    text: "And she's buying a stairway to heaven",
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -2640,21 +2573,18 @@ const store = mockStore({
       cosa_si_ottiene: {
         blocks: {
           'bb4db7e4-0a27-41c9-8f34-512eff06aa86': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: 'pru2',
-                  text: 'All that glitters is gold',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'All that glitters is gold',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'All that glitters is gold',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -2664,21 +2594,18 @@ const store = mockStore({
       costi: {
         blocks: {
           'fb4ab549-4d60-4a24-a5c4-960e7151b28e': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: 'foiq2',
-                  text: '345',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: '345',
+            value: [
+              {
+                children: [
+                  {
+                    text: '345',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -2691,21 +2618,18 @@ const store = mockStore({
       descrizione_estesa: {
         blocks: {
           '038eb313-2c32-4db4-adae-888197220fd9': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: 'c0a5j',
-                  text: 'Is this the real life?',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'Is this the real life?',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'Is this the real life?',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -2808,21 +2732,18 @@ const store = mockStore({
       dove_rivolgersi_extra: {
         blocks: {
           '894e9d1d-1c20-4ed6-a4d0-5e25adbfbd9c': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: '8h4ue',
-                  text: 'I need no sympathy',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'I need no sympathy',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'I need no sympathy',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -2964,21 +2885,18 @@ const store = mockStore({
       link_siti_esterni: {
         blocks: {
           'ff02a375-2be1-4a43-b758-dbb1fae8fa71': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: 'f14ja',
-                  text: 'Put a gun against his head',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'Put a gun against his head',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'Put a gun against his head',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -3002,21 +2920,18 @@ const store = mockStore({
       motivo_stato_servizio: {
         blocks: {
           'c19f982c-ce7a-4050-aa60-65a92723db34': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: '3d3cq',
-                  text: 'Motivazione',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'Motivazione',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'Motivazione',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -3044,21 +2959,18 @@ const store = mockStore({
       prenota_appuntamento: {
         blocks: {
           'e26f97de-e008-40a1-929f-315a362f7107': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: 'btarf',
-                  text: "Because I'm easy come, easy go",
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: "Because I'm easy come, easy go",
+            value: [
+              {
+                children: [
+                  {
+                    text: "Because I'm easy come, easy go",
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -3165,21 +3077,18 @@ const store = mockStore({
       procedure_collegate: {
         blocks: {
           '3ab3b686-ab6e-4a85-bd7b-361e091c05b3': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: 'ba4oq',
-                  text: 'No escape from reality',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'No escape from reality',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'No escape from reality',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -3222,7 +3131,18 @@ const store = mockStore({
           canale_digitale: {
             blocks: {
               '33545c64-eadf-429d-9a20-0ab4451bbf2c': {
-                '@type': 'text',
+                '@type': 'slate',
+                plaintext: '',
+                value: [
+                  {
+                    children: [
+                      {
+                        text: '',
+                      },
+                    ],
+                    type: 'p',
+                  },
+                ],
               },
             },
             blocks_layout: {
@@ -3264,21 +3184,18 @@ const store = mockStore({
       tempi_e_scadenze: {
         blocks: {
           'e0c64130-00d4-4747-bc21-b58733cb1b7f': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: 'b6mg7',
-                  text: 'Dopodomani',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'Dopodomani',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'Dopodomani',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -3351,21 +3268,18 @@ const store = mockStore({
       ulteriori_informazioni: {
         blocks: {
           '89f08a66-9c6a-4a30-86d8-d403475eba6e': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: '72f2h',
-                  text: 'pulled my trigger',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'pulled my trigger',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'pulled my trigger',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {
@@ -3377,21 +3291,18 @@ const store = mockStore({
       vincoli: {
         blocks: {
           'b3206125-d0d6-474e-935e-09d28602beca': {
-            '@type': 'text',
-            text: {
-              blocks: [
-                {
-                  data: {},
-                  depth: 0,
-                  entityRanges: [],
-                  inlineStyleRanges: [],
-                  key: '2hlds',
-                  text: 'Little high, little low',
-                  type: 'unstyled',
-                },
-              ],
-              entityMap: {},
-            },
+            '@type': 'slate',
+            plaintext: 'Little high, little low',
+            value: [
+              {
+                children: [
+                  {
+                    text: 'Little high, little low',
+                  },
+                ],
+                type: 'p',
+              },
+            ],
           },
         },
         blocks_layout: {

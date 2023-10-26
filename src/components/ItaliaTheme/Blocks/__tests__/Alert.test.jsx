@@ -19,20 +19,16 @@ const mock_fields = {
     encoding: 'base64',
     filename: 'insalata-1280x720.jpeg',
   },
-  text: {
-    blocks: [
-      {
-        data: {},
-        depth: 0,
-        entityRanges: [],
-        inlineStyleRanges: [],
-        key: 'ctqrv',
-        text: 'Ciao',
-        type: 'unstyled',
-      },
-    ],
-    entityMap: {},
-  },
+  text: [
+    {
+      children: [
+        {
+          text: 'Ciao',
+        },
+      ],
+      type: 'p',
+    },
+  ],
 };
 
 const store = mockStore({

@@ -77,7 +77,18 @@ const mock_allfields = {
       variation: 'simpleCard',
     },
     'e274abbd-0239-46ac-b3a8-dad1dee0691c': {
-      '@type': 'text',
+      '@type': 'slate',
+      plaintext: '',
+      value: [
+        {
+          children: [
+            {
+              text: '',
+            },
+          ],
+          type: 'p',
+        },
+      ],
     },
     'fcfde1bb-0d46-4678-bb6a-2f64fc0084b9': {
       '@type': 'title',
@@ -756,7 +767,18 @@ const store = mockStore({
           variation: 'simpleCard',
         },
         'e274abbd-0239-46ac-b3a8-dad1dee0691c': {
-          '@type': 'text',
+          '@type': 'slate',
+          plaintext: '',
+          value: [
+            {
+              children: [
+                {
+                  text: '',
+                },
+              ],
+              type: 'p',
+            },
+          ],
         },
         'fcfde1bb-0d46-4678-bb6a-2f64fc0084b9': {
           '@type': 'title',

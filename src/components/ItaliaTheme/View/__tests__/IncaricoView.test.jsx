@@ -116,21 +116,18 @@ const mock_allfields = {
   compensi: {
     blocks: {
       'f943ce1c-cc67-4568-8526-1281f01a9202': {
-        '@type': 'text',
-        text: {
-          blocks: [
-            {
-              data: {},
-              depth: 0,
-              entityRanges: [],
-              inlineStyleRanges: [],
-              key: '4ruln',
-              text: "You don't ever say too much",
-              type: 'unstyled',
-            },
-          ],
-          entityMap: {},
-        },
+        '@type': 'slate',
+        plaintext: "You don't ever say too much",
+        value: [
+          {
+            children: [
+              {
+                text: "You don't ever say too much",
+              },
+            ],
+            type: 'p',
+          },
+        ],
       },
     },
     blocks_layout: {
@@ -151,21 +148,18 @@ const mock_allfields = {
   importi_viaggio_servizio: {
     blocks: {
       '2d2dd70c-3af5-4ff8-816b-46b34ea186b7': {
-        '@type': 'text',
-        text: {
-          blocks: [
-            {
-              data: {},
-              depth: 0,
-              entityRanges: [],
-              inlineStyleRanges: [],
-              key: '3v7r',
-              text: "You don't really read into",
-              type: 'unstyled',
-            },
-          ],
-          entityMap: {},
-        },
+        '@type': 'slate',
+        plaintext: "You don't really read into",
+        value: [
+          {
+            children: [
+              {
+                text: "You don't really read into",
+              },
+            ],
+            type: 'p',
+          },
+        ],
       },
     },
     blocks_layout: {

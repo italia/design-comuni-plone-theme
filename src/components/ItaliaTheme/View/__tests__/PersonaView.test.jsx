@@ -149,21 +149,18 @@ const mock_allfields = {
   biografia: {
     blocks: {
       '49066162-9327-4aa7-930c-ebc24971bfef': {
-        '@type': 'text',
-        text: {
-          blocks: [
-            {
-              data: {},
-              depth: 0,
-              entityRanges: [],
-              inlineStyleRanges: [],
-              key: 'att33',
-              text: 'No escape from reality',
-              type: 'unstyled',
-            },
-          ],
-          entityMap: {},
-        },
+        '@type': 'slate',
+        plaintext: 'No escape from reality',
+        value: [
+          {
+            children: [
+              {
+                text: 'No escape from reality',
+              },
+            ],
+            type: 'p',
+          },
+        ],
       },
     },
     blocks_layout: {
@@ -174,21 +171,18 @@ const mock_allfields = {
   competenze: {
     blocks: {
       '353a16e6-e4c0-4305-a19d-2638b720881a': {
-        '@type': 'text',
-        text: {
-          blocks: [
-            {
-              data: {},
-              depth: 0,
-              entityRanges: [],
-              inlineStyleRanges: [],
-              key: '6923e',
-              text: 'Is this just fantasy?',
-              type: 'unstyled',
-            },
-          ],
-          entityMap: {},
-        },
+        '@type': 'slate',
+        plaintext: 'Is this jusst fantasy?',
+        value: [
+          {
+            children: [
+              {
+                text: 'Is this just fantasy?',
+              },
+            ],
+            type: 'p',
+          },
+        ],
       },
     },
     blocks_layout: {
@@ -208,21 +202,18 @@ const mock_allfields = {
   deleghe: {
     blocks: {
       '792eac6b-5110-4878-9c11-31ef3de20c45': {
-        '@type': 'text',
-        text: {
-          blocks: [
-            {
-              data: {},
-              depth: 0,
-              entityRanges: [],
-              inlineStyleRanges: [],
-              key: '5hop7',
-              text: 'Caught in a landside',
-              type: 'unstyled',
-            },
-          ],
-          entityMap: {},
-        },
+        '@type': 'slate',
+        plaintext: 'Caught in a landside',
+        value: [
+          {
+            children: [
+              {
+                text: 'Caught in a landside',
+              },
+            ],
+            type: 'p',
+          },
+        ],
       },
     },
     blocks_layout: {
@@ -660,21 +651,18 @@ const mock_allfields = {
   ulteriori_informazioni: {
     blocks: {
       'f11ecf5a-7248-49d5-95d8-970c05577860': {
-        '@type': 'text',
-        text: {
-          blocks: [
-            {
-              data: {},
-              depth: 0,
-              entityRanges: [],
-              inlineStyleRanges: [],
-              key: '71kmg',
-              text: 'Open your eyes',
-              type: 'unstyled',
-            },
-          ],
-          entityMap: {},
-        },
+        '@type': 'slate',
+        plaintext: 'Open your eyes',
+        value: [
+          {
+            children: [
+              {
+                text: 'Open yout eyes',
+              },
+            ],
+            type: 'p',
+          },
+        ],
       },
     },
     blocks_layout: {
@@ -1891,21 +1879,18 @@ const store = mockStore({
           competenze: {
             blocks: {
               'd1cb20b4-1adb-4475-9ac5-2aa3c01679be': {
-                '@type': 'text',
-                text: {
-                  blocks: [
-                    {
-                      data: {},
-                      depth: 0,
-                      entityRanges: [],
-                      inlineStyleRanges: [],
-                      key: '9n2eu',
-                      text: 'Prova',
-                      type: 'unstyled',
-                    },
-                  ],
-                  entityMap: {},
-                },
+                '@type': 'slate',
+                plaintext: 'Prova',
+                value: [
+                  {
+                    children: [
+                      {
+                        text: 'Prova',
+                      },
+                    ],
+                    type: 'p',
+                  },
+                ],
               },
             },
             blocks_layout: {
@@ -2078,7 +2063,18 @@ const store = mockStore({
           orario_pubblico: {
             blocks: {
               '006b939d-cb64-4e40-b585-a352c666847c': {
-                '@type': 'text',
+                '@type': 'slate',
+                plaintext: '',
+                value: [
+                  {
+                    children: [
+                      {
+                        text: '',
+                      },
+                    ],
+                    type: 'p',
+                  },
+                ],
               },
             },
             blocks_layout: {
@@ -2348,21 +2344,18 @@ const store = mockStore({
               orario_pubblico: {
                 blocks: {
                   'b87e0b6c-e210-4d75-964b-17d71a281ada': {
-                    '@type': 'text',
-                    text: {
-                      blocks: [
-                        {
-                          data: {},
-                          depth: 0,
-                          entityRanges: [],
-                          inlineStyleRanges: [],
-                          key: 'b1c6n',
-                          text: 'Built a home and watched it burn',
-                          type: 'unstyled',
-                        },
-                      ],
-                      entityMap: {},
-                    },
+                    '@type': 'slate',
+                    plaintext: 'Built a home and watched it burn',
+                    value: [
+                      {
+                        children: [
+                          {
+                            text: 'Built a home and watched it burn',
+                          },
+                        ],
+                        type: 'p',
+                      },
+                    ],
                   },
                 },
                 blocks_layout: {
@@ -2404,7 +2397,18 @@ const store = mockStore({
           ulteriori_informazioni: {
             blocks: {
               'e4d319e0-0b67-449e-b625-1bcfbb267117': {
-                '@type': 'text',
+                '@type': 'slate',
+                plaintext: '',
+                value: [
+                  {
+                    children: [
+                      {
+                        text: '',
+                      },
+                    ],
+                    type: 'p',
+                  },
+                ],
               },
             },
             blocks_layout: {

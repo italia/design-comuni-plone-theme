@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Block from '../TextCard/SimpleCard/Block';
+import Block from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-intl-redux';
 import { MemoryRouter } from 'react-router-dom';
