@@ -5,7 +5,8 @@ Changelog
 6.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Changed Twitter icon color
+  [sara]
 
 
 6.0.3 (2023-10-26)
