@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-6.0.5 (unreleased)
+6.0.5 (2023-10-27)
 ------------------
 
 - Fix. Hidden old Twitter icon
