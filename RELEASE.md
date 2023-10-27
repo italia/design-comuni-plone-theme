@@ -41,15 +41,7 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
+## Versione 8.7.11 (27/10/2023)
 
 ### Fix
 
