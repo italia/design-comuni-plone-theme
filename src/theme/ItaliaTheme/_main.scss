@@ -89,6 +89,7 @@ iframe {
 .public-ui,
 .cms-ui {
   blockquote {
+    display: flex; //serve per quando i blockquote sono affiancati alle immagini allineate a dx o sx
     border-color: $primary !important;
 
     ul:first-child,
