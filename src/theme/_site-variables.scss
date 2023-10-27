@@ -19,6 +19,12 @@ $tertiary-text: #fff !default;
 $highlight-search: #ff0 !default;
 $font-family-monospace-light: Roboto Mono Light !default;
 
+// Per abilitare l'header bianco impostare a true
+// e impostare "$header-center-bg-color: white" come qui sotto
+$enable-header-white-background: false;
+// $header-center-bg-color: white;
+// $header-slim-bg-color: #3f3f3f;
+
 // GDPR-BANNER RELATED
 $gdpr-accept-all: #005700 !default;
 $gdpr-toggle-checked: #005700 !default;

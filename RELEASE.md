@@ -41,6 +41,21 @@
 - ...
 -->
 
+## Versione 8.7.11 (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Migliorata icona del menù mobile
+- Sistemata dimensione logo e bottone di ricerca su mobile
+
 ## Versione 8.7.10 (19/10/2023)
 
 ## Fix
