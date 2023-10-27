@@ -59,7 +59,7 @@ const TextSizeButton = (props) => {
   const createInlineStyleButton = props.draftJsCreateInlineStyleButton.default;
   return createInlineStyleButton({
     style: 'TEXT_LARGER',
-    children: ButtonIcon,
+    children: <ButtonIcon />,
   });
 };
 export default TextSizeButton;
