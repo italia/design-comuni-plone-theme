@@ -36,8 +36,10 @@ const messages = defineMessages({
 const Gallery = ({
   content,
   folder_name,
+  id = '',
   title,
   title_type = 'h4',
+  title_id = 'galleria',
   title_video,
   className = '',
   reactSlick,
@@ -121,12 +123,23 @@ const Gallery = ({
       {images?.length > 0 ? (
         <div
           className={`it-carousel-wrapper it-carousel-landscape-abstract-three-cols ${className}`}
+          id={id}
         >
           <div className="slider-container">
             <div className="it-header-block">
               <div className="it-header-block-title">
-                {title_type === 'h4' && <h4 id="galleria">{gallery_title}</h4>}
-                {title_type === 'h5' && <h5 id="galleria">{gallery_title}</h5>}
+                {title_type === 'h2' && (
+                  <h2 id={title_id} className="mb-3 h4">
+                    {gallery_title}
+                  </h2>
+                )}
+                {title_type === 'h3' && (
+                  <h3 id={title_id} className="h5">
+                    {gallery_title}
+                  </h3>
+                )}
+                {title_type === 'h4' && <h4 id={title_id}>{gallery_title}</h4>}
+                {title_type === 'h5' && <h5 id={title_id}>{gallery_title}</h5>}
               </div>
             </div>
             <div className="it-carousel-all it-card-bg">
