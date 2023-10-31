@@ -3,7 +3,7 @@
  * @module components/theme/View/DocumentoView
  */
 
-import React, { useState, createRef, useEffect } from 'react';
+import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -23,6 +23,7 @@ import {
   RelatedItemInEvidence,
   SkipToMainContent,
   ContentTypeViewSections,
+  useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 export const DocumentoViewSectionsOrder = [
@@ -48,16 +49,9 @@ export const DocumentoViewSectionsOrder = [
  */
 const DocumentoView = ({ content, location }) => {
   let documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
-  //const userLogged = useSelector((state) => state.userSession);
+  const { sideMenuElements } = useSideMenu(content, documentBody);
 
-  useEffect(() => {
-    if (documentBody.current) {
-      if (__CLIENT__) {
-        setSideMenuElements(documentBody.current);
-      }
-    }
-  }, [documentBody]);
+  //const userLogged = useSelector((state) => state.userSession);
 
   return (
     <>

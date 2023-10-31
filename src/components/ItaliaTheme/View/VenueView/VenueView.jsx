@@ -23,6 +23,7 @@ import {
   VenueContacts,
   VenueMoreInfos,
   ContentTypeViewSections,
+  useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 export const VenueViewSectionsOrder = [
@@ -56,15 +57,7 @@ export const VenueViewSectionsOrder = [
  */
 const VenueView = ({ content }) => {
   let documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
-
-  useEffect(() => {
-    if (documentBody.current) {
-      if (__CLIENT__) {
-        setSideMenuElements(documentBody.current);
-      }
-    }
-  }, [documentBody]);
+  const { sideMenuElements } = useSideMenu(content, documentBody);
 
   useEffect(() => {
     if (

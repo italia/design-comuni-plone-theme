@@ -3,7 +3,7 @@
  * @module components/theme/View/PaginaArgomentoViewNoBlocks
  */
 
-import React, { createRef, useState, useEffect } from 'react';
+import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import {
@@ -20,6 +20,7 @@ import {
   SkipToMainContent,
   RelatedItems,
   RelatedItemInEvidence,
+  useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
@@ -68,15 +69,7 @@ const messages = defineMessages({
 const PaginaArgomentoViewNoBlocks = ({ content }) => {
   const intl = useIntl();
   let documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
-
-  useEffect(() => {
-    if (documentBody.current) {
-      if (__CLIENT__) {
-        setSideMenuElements(documentBody.current);
-      }
-    }
-  }, [documentBody]);
+  const { sideMenuElements } = useSideMenu(content, documentBody);
 
   return (
     <>

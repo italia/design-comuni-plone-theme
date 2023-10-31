@@ -23,6 +23,7 @@ import {
   RelatedItemInEvidence,
   SkipToMainContent,
   ContentTypeViewSections,
+  useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 export const UOViewSectionsOrder = [
@@ -56,13 +57,7 @@ export const UOViewSectionsOrder = [
  */
 const UOView = ({ content }) => {
   let documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
-
-  useEffect(() => {
-    if (documentBody.current && __CLIENT__) {
-      setSideMenuElements(documentBody.current);
-    }
-  }, [documentBody]);
+  const { sideMenuElements } = useSideMenu(content, documentBody);
 
   return (
     <>
