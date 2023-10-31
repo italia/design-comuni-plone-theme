@@ -1,5 +1,22 @@
 
 
+## [8.8.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.12...v8.8.0) (2023-10-31)
+
+
+### Features
+
+* added id and title_it adttrs and handled h2 title_type in  Gallery component ([4d5949e](https://github.com/redturtle/design-comuni-plone-theme/commit/4d5949eb2393f442e6541637e89123153606279e))
+
+
+### Bug Fixes
+
+* fixed image url in Photogallery listing popup ([#383](https://github.com/redturtle/design-comuni-plone-theme/issues/383)) ([b8d2e20](https://github.com/redturtle/design-comuni-plone-theme/commit/b8d2e207cdefd018824229975ac0f5ac0bdb8d0c))
+
+
+### Maintenance
+
+* preparing release ([2e6d0a5](https://github.com/redturtle/design-comuni-plone-theme/commit/2e6d0a56ddd96ecbf48e68e03fcc3caf061ceb55))
+
 ## [8.7.12](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.7.11...v8.7.12) (2023-10-27)
 
 
