@@ -1,5 +1,40 @@
 
 
+## [8.8.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.12...v8.8.0) (2023-10-31)
+
+
+### Features
+
+* added id and title_it adttrs and handled h2 title_type in  Gallery component ([4d5949e](https://github.com/redturtle/design-comuni-plone-theme/commit/4d5949eb2393f442e6541637e89123153606279e))
+
+
+### Bug Fixes
+
+* fixed image url in Photogallery listing popup ([#383](https://github.com/redturtle/design-comuni-plone-theme/issues/383)) ([b8d2e20](https://github.com/redturtle/design-comuni-plone-theme/commit/b8d2e207cdefd018824229975ac0f5ac0bdb8d0c))
+
+
+### Maintenance
+
+* preparing release ([2e6d0a5](https://github.com/redturtle/design-comuni-plone-theme/commit/2e6d0a56ddd96ecbf48e68e03fcc3caf061ceb55))
+
+## [8.7.12](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.7.11...v8.7.12) (2023-10-27)
+
+
+### Bug Fixes
+
+* backport white header preset from child themes and fix header mobile ([#380](https://github.com/RedTurtle/design-comuni-plone-theme/issues/380)) ([60276ec](https://github.com/RedTurtle/design-comuni-plone-theme/commit/60276ecc3aa0dc51016f0bc8d1fad2e4a09ccd4e))
+* fixed conditions for rendering + fix title tag ([#371](https://github.com/RedTurtle/design-comuni-plone-theme/issues/371)) ([522774b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/522774bee6dafd21dc09beef2fbc5b70936b7944))
+* icon component for TextSizeButton in RichTextEditor ([#379](https://github.com/RedTurtle/design-comuni-plone-theme/issues/379)) ([d2160ce](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d2160ce95eb8c98f1221c690f019ec42c20c8fcd))
+* overlapping block chooser in small pages/screens ([#372](https://github.com/RedTurtle/design-comuni-plone-theme/issues/372)) ([3035ea2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3035ea2b2c1e7ddfa3968d3d685614cb3dda097d))
+* release-log class added ([#376](https://github.com/RedTurtle/design-comuni-plone-theme/issues/376)) ([92e5a68](https://github.com/RedTurtle/design-comuni-plone-theme/commit/92e5a680afd15bc25a8b8eb97ab96845f77e8294))
+* release-log text ([#377](https://github.com/RedTurtle/design-comuni-plone-theme/issues/377)) ([46a4d5f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/46a4d5f174d9dedd6cf190466a88ade0d6746d68))
+
+
+### Documentation
+
+* updated publiccode and release log ([b1e9e81](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b1e9e81c3506851e41b5f35d866353b579358edd))
+* updated publiccode and release log ([276ca06](https://github.com/RedTurtle/design-comuni-plone-theme/commit/276ca0605b13923f2941a9ec843ca7e04dce20a1))
+
 ## [8.7.11](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.10...v8.7.11) (2023-10-23)
 
 

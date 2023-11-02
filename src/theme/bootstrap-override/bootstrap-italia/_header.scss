@@ -1,0 +1,19 @@
+.it-header-wrapper {
+  @media (max-width: map-get($map: $grid-breakpoints, $key: 'lg') - 1px) {
+    .it-header-navbar-wrapper {
+      background-color: transparent;
+
+      > .container {
+        padding: 0;
+      }
+    }
+
+    .it-nav-wrapper .it-header-navbar-wrapper nav {
+      padding-right: 0;
+    }
+
+    .it-nav-wrapper .it-header-navbar-wrapper {
+      margin-top: -20px;
+    }
+  }
+}

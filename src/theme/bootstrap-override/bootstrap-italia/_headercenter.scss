@@ -24,4 +24,23 @@
       }
     }
   }
+
+  @media (max-width: map-get($map: $grid-breakpoints, $key: 'lg') - 1px) {
+    .it-header-center-content-wrapper {
+      .it-brand-wrapper {
+        .header-logo {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
+      .it-right-zone .it-search-wrapper a.rounded-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+      }
+    }
+  }
 }

@@ -41,6 +41,15 @@
 - ...
 -->
 
+## Versione 8.7.12 (27/10/2023)
+
+### Fix
+
+- Migliorato il dimensionamento dell'icona del menù su dispositivi mobile
+- Sistemata dimensione logo e bottone di ricerca su dispositivi mobile
+- Migliorato il comportamento del menu laterale dei contenuti quando si aggiungono file nelle cartelle al loro interno
+- Sistemata sovrapposizione della finestra di selezione blocchi con l'header del sito per alcune dimensioni dello schermo
+
 ## Versione 8.7.10 (19/10/2023)
 
 ## Fix

@@ -1,0 +1,62 @@
+@if ($enable-header-white-background) {
+  .it-header-wrapper {
+    .it-header-center-wrapper {
+      .it-header-center-content-wrapper {
+        .it-brand-wrapper {
+          .it-brand-text,
+          .it-brand-text h2,
+          .it-brand-text h3 {
+            color: $text-color;
+            font-weight: 700;
+          }
+        }
+
+        .it-right-zone {
+          color: $text-color;
+
+          .it-socials {
+            ul {
+              .icon {
+                color: $primary;
+                fill: $primary;
+              }
+
+              a:hover svg {
+                fill: darken($primary, 10%);
+              }
+            }
+          }
+
+          .it-search-wrapper a.rounded-icon {
+            background-color: $primary;
+            color: white;
+
+            &:hover {
+              background-color: darken($primary, 10%);
+            }
+          }
+        }
+      }
+    }
+
+    .it-header-navbar-wrapper {
+      background-color: $primary;
+    }
+
+    .navbar .navbar-collapsable {
+      .menu-wrapper .it-brand-wrapper {
+        .it-brand-text,
+        .it-brand-text h2,
+        .it-brand-text h3 {
+          color: $text-color;
+          font-weight: 700;
+        }
+      }
+    }
+    @media (max-width: map-get($map: $grid-breakpoints, $key: 'lg') - 1px) {
+      button.custom-navbar-toggler svg.icon {
+        fill: $primary;
+      }
+    }
+  }
+}

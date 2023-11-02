@@ -3,7 +3,6 @@ import { defineMessages, useIntl } from 'react-intl';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 import PropTypes from 'prop-types';
-
 import { Modal, ModalBody, Button, ModalHeader } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
@@ -33,6 +32,10 @@ const messages = defineMessages({
 const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
   const intl = useIntl();
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const checkUrlImage =
+    items[viewIndex]?.image?.scales?.larger?.download ||
+    items[viewIndex]?.image_scales?.image[0]?.scales?.larger?.download;
 
   const closeModal = () => {
     setViewIndex(null);
@@ -92,11 +95,9 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
                 </Button>
               )}
               <div className="image">
-                {items[viewIndex].image ? (
+                {checkUrlImage ? (
                   <img
-                    src={flattenToAppURL(
-                      items[viewIndex].image.scales.larger.download,
-                    )}
+                    src={flattenToAppURL(checkUrlImage)}
                     loading="lazy"
                     alt={items[viewIndex].title}
                   />
