@@ -213,6 +213,7 @@ const italiaBlocks = {
       view: [],
     },
     sidebarTab: 1,
+    blockHasOwnFocusManagement: true,
   },
 
   testo_riquadro_semplice: {

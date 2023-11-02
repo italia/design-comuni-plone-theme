@@ -20,6 +20,8 @@ import {
   saveSlateBlockSelection,
 } from '@plone/volto-slate/actions';
 import SimpleTextEditorWidget from './SimpleTextEditorWidget';
+import { breakList as customBreakList } from 'design-comuni-plone-theme/config/Slate/extensions/breakList';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   text: {
@@ -44,10 +46,15 @@ const TextEditorWidget = (props) => {
     data,
     ...otherProps
   } = props;
-
+  const { slate } = config.settings;
+  const { textblockExtensions } = slate;
   const withBlockProperties = React.useCallback(
     (editor) => {
-      const p = { ...props, showToolbar: showToolbar };
+      const p = {
+        ...props,
+        showToolbar: showToolbar,
+        data: { ...props.data, disableNewBlocks: true },
+      };
       editor.getBlockProps = () => p;
       return editor;
     },
@@ -72,6 +79,13 @@ const TextEditorWidget = (props) => {
       onSelectBlock(block);
     }
   };
+  console.log(textblockExtensions.map((f) => f.name));
+  const extensions = [...textblockExtensions].map((f) => {
+    if (f.name === 'breakList') {
+      return customBreakList;
+    }
+    return f;
+  });
   return (
     <div
       className={wrapClass}
@@ -90,6 +104,7 @@ const TextEditorWidget = (props) => {
             index={index}
             readOnly={!inView}
             properties={properties}
+            extensions={extensions}
             renderExtensions={[withBlockProperties]}
             value={_value}
             block={block /* is this needed? */}

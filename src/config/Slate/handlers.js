@@ -2,6 +2,7 @@ import {
   goDown,
   goUp,
   softBreak,
+  unwrapEmptyString,
 } from '@plone/volto-slate/blocks/Text/keyboard';
 
 import {
@@ -139,7 +140,6 @@ const customSoftBreak = (props) => {
     goToNextVoltoBlock(props);
     return false;
   }
-  return softBreak;
 };
 
 const breakInSimpleTextEditor = (props) => {
@@ -154,13 +154,19 @@ const breakInSimpleTextEditor = (props) => {
     goToNextVoltoBlock(props);
     return false;
   }
+
   return true;
 };
 
 export default function install(config) {
   config.settings.slate.textblockDetachedKeyboardHandlers = {
     ...config.settings.slate.textblockDetachedKeyboardHandlers,
-    Enter: [breakInSimpleTextEditor, customSoftBreak, focusNext],
+    Enter: [
+      unwrapEmptyString,
+      breakInSimpleTextEditor,
+      customSoftBreak,
+      //focusNext,
+    ],
     ArrowUp: [focusPrev],
     ArrowDown: [focusNext],
   };

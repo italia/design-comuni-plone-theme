@@ -34,13 +34,6 @@ export const toggleStyle = (
   editor,
   { cssClass, isBlock, oneOf, format, allowedChildren },
 ) => {
-  console.log('toggle style', {
-    cssClass,
-    isBlock,
-    oneOf,
-    format,
-    allowedChildren,
-  });
   if (isBlock) {
     toggleBlockStyle(editor, cssClass, oneOf, format, allowedChildren);
   } else {
