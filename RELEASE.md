@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Nei template dei feed RSS ora viene mostrata la sorgente se presente.
+
 ## Versione 8.7.12 (27/10/2023)
 
 ### Fix
