@@ -17,7 +17,6 @@ import {
   DocumentoDocAllegati,
   DocumentoUlterioriInformazioni,
   ContentImage,
-  SideMenu,
   PageHeader,
   RelatedItems,
   RelatedItemInEvidence,
@@ -49,7 +48,7 @@ export const DocumentoViewSectionsOrder = [
  */
 const DocumentoView = ({ content, location }) => {
   let documentBody = createRef();
-  const { sideMenuElements } = useSideMenu(content, documentBody);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   //const userLogged = useSelector((state) => state.userSession);
 

@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 
 import {
   ContentImage,
-  SideMenu,
   PageHeader,
   RelatedItems,
   EventoPlaceholderAfterContent,
@@ -54,7 +53,7 @@ export const EventoViewSectionsOrder = [
  */
 const EventoView = ({ content, location }) => {
   let documentBody = createRef();
-  const { sideMenuElements } = useSideMenu(content, documentBody);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   return (
     <>

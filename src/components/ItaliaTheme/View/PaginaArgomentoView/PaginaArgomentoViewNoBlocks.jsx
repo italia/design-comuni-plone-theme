@@ -9,7 +9,6 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   GenericCard,
   ContentImage,
-  SideMenu,
   PageHeader,
   OfficeCard,
   RichTextSection,
@@ -69,7 +68,7 @@ const messages = defineMessages({
 const PaginaArgomentoViewNoBlocks = ({ content }) => {
   const intl = useIntl();
   let documentBody = createRef();
-  const { sideMenuElements } = useSideMenu(content, documentBody);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   return (
     <>

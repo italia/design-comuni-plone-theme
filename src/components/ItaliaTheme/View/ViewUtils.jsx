@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { IntlProvider } from 'react-intl';
 import { renderToString } from 'react-dom/server';
+import { SideMenu } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import config from '@plone/volto/registry';
 
 export const readingTime = (title, description, htmlBody) => {
@@ -39,6 +40,9 @@ export const useSideMenu = (content, documentBody) => {
   const updateSideMenuOnLoadingBlocks =
     config.settings?.italiaThemeViewsConfig?.[content['@type']]
       ?.updateSideMenuOnLoadingBlocks ?? false;
+  const SideMenuComponent =
+    config.settings?.italiaThemeViewsConfig?.[content['@type']]?.sideMenu ??
+    SideMenu;
 
   useEffect(() => {
     if (documentBody.current) {
@@ -73,5 +77,5 @@ export const useSideMenu = (content, documentBody) => {
     };
   }, [observer, documentBody, updateSideMenuOnLoadingBlocks]);
 
-  return { sideMenuElements, setSideMenuElements };
+  return { sideMenuElements, setSideMenuElements, SideMenu: SideMenuComponent };
 };

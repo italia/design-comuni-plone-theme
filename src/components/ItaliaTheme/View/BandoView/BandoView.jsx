@@ -7,7 +7,6 @@ import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  SideMenu,
   PageHeader,
   RelatedItems,
   BandoPlaceholderAfterContent,
@@ -45,7 +44,7 @@ export const BandoViewSectionsOrder = [
  */
 const BandoView = ({ content, location }) => {
   let documentBody = createRef();
-  const { sideMenuElements } = useSideMenu(content, documentBody);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   return (
     <>

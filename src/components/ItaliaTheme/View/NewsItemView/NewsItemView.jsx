@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 
 import {
   PageHeader,
-  SideMenu,
   ContentImage,
   RelatedItems,
   NewsItemPlaceholderAfterContent,
@@ -50,7 +49,7 @@ export const NewsItemViewSectionsOrder = [
  */
 const NewsItemView = ({ content, location }) => {
   let documentBody = createRef();
-  const { sideMenuElements } = useSideMenu(content, documentBody);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
   const { readingtime } = useReadingTime(content, documentBody);
 
   let related_items = [];

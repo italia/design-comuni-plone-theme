@@ -1,6 +1,6 @@
-/* ************
-Costruisce il sidemenu in base alle sections strutturate nella parte destra del contenuto
-**************/
+/* ****************
+Costuisce il SideMenu utilizzando tutti gli h2 che trova nella parte di destra del contenuto.
+******************/
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-expressions */
@@ -18,7 +18,7 @@ import cx from 'classnames';
 const messages = defineMessages({
   index: {
     id: 'index',
-    defaultMessage: 'Indice della pagina',
+    defaultMessage: 'Indice',
   },
   contenuto: {
     id: 'Contenuto',
@@ -40,6 +40,16 @@ const extractHeaders = (elements, intl) => {
           intl.formatMessage(messages.contenuto),
         item: item,
       });
+
+      const h = item.getElementsByTagName('h2');
+
+      for (var hi = 0; hi < h.length; hi++) {
+        headers.push({
+          id: h[hi].id,
+          title: h[hi].innerText,
+          item: h[hi],
+        });
+      }
     } else {
       let item_header = item.querySelector('#header-' + item.id);
       if (item_header) {
@@ -55,12 +65,12 @@ const extractHeaders = (elements, intl) => {
 };
 
 /**
- * SideMenu view component class.
- * @function SideMenu
+ * SideMenuByTitles view component class.
+ * @function SideMenuByTitles
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const SideMenu = ({ data, content_uid }) => {
+const SideMenuByTitles = ({ data, content_uid }) => {
   const intl = useIntl();
 
   const [headers, setHeaders] = useState([]);
@@ -94,6 +104,8 @@ const SideMenu = ({ data, content_uid }) => {
         headers[0],
       );
       setActiveSection(section.id);
+    } else {
+      setActiveSection(null); //di default nessun header è selezionato.
     }
   }, [headers, activeSection]);
 
@@ -103,7 +115,7 @@ const SideMenu = ({ data, content_uid }) => {
 
       if (extractedHeaders.length > 0) {
         setHeaders(extractedHeaders);
-        setActiveSection(extractedHeaders[0].id);
+        // setActiveSection(extractedHeaders[0].id); //di default nessun header è selezionato.
       }
     }
   }, [data, content_uid]);
@@ -205,4 +217,4 @@ const SideMenu = ({ data, content_uid }) => {
     </div>
   ) : null;
 };
-export default SideMenu;
+export default SideMenuByTitles;

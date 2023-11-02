@@ -3,11 +3,10 @@
  * @module components/theme/View/PersonaView
  */
 
-import React, { createRef, useEffect } from 'react';
+import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  SideMenu,
   PageHeader,
   RelatedItems,
   PersonaRuolo,
@@ -37,7 +36,7 @@ export const PersonaViewSectionsOrder = [
  */
 const PersonaView = ({ content }) => {
   let documentBody = createRef();
-  const { sideMenuElements } = useSideMenu(content, documentBody);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   return (
     <>

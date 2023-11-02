@@ -3,11 +3,10 @@
  * @module components/theme/View/VenueView
  */
 
-import React, { createRef, useEffect, useState } from 'react';
+import React, { createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  SideMenu,
   PageHeader,
   ContentImage,
   RelatedItems,
@@ -57,7 +56,7 @@ export const VenueViewSectionsOrder = [
  */
 const VenueView = ({ content }) => {
   let documentBody = createRef();
-  const { sideMenuElements } = useSideMenu(content, documentBody);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   useEffect(() => {
     if (

@@ -25,6 +25,7 @@ export TextOrBlocks from 'design-comuni-plone-theme/components/ItaliaTheme/View/
 export Sharing from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/Sharing';
 export Actions from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/Actions';
 export SideMenu from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/SideMenu';
+export SideMenuByTitles from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/SideMenuByTitles';
 export Gallery from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/Gallery';
 export Dates from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/Dates';
 export HelpBox from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/HelpBox';
