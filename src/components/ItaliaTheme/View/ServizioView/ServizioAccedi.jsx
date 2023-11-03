@@ -40,12 +40,14 @@ const ServizioAccedi = ({ content }) => {
           )}
           <RichText data={content.prenota_appuntamento} content={content} />
           {content.canale_fisico?.map?.((canale) => (
-            <OfficeCard
-              key={canale['@id']}
-              office={canale}
-              load_data={false}
-              data-element="service-generic-access"
-            />
+            <div className="mt-3">
+              <OfficeCard
+                key={canale['@id']}
+                office={canale}
+                load_data={false}
+                data-element="service-generic-access"
+              />
+            </div>
           ))}
         </RichTextSection>
       )}

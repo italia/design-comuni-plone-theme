@@ -6,7 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  RichTextArticle,
+  RichTextSection,
   Module,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -21,13 +21,13 @@ const Modules = ({ content, title, id = 'documenti' }) => {
     content.items?.filter((item) => item.id !== 'multimedia') ?? [];
 
   return moduli.length > 0 ? (
-    <RichTextArticle tag_id={id} title={title}>
+    <RichTextSection tag_id={id} title={title}>
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal modules">
         {moduli.map((modulo) => (
           <Module key={modulo['@id']} item={modulo} />
         ))}
       </div>
-    </RichTextArticle>
+    </RichTextSection>
   ) : null;
 };
 

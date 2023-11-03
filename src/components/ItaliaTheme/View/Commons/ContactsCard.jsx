@@ -27,10 +27,10 @@ const ContactsCard = ({ contact = {}, show_title = false, ...rest }) => {
     }
   }, [dispatch, contactUrl, loading, loaded]);
 
-  useEffect(
-    () => () => dispatch(resetContent(flattenToAppURL(contactUrl))),
-    [dispatch, contactUrl],
-  );
+  useEffect(() => () => dispatch(resetContent(flattenToAppURL(contactUrl))), [
+    dispatch,
+    contactUrl,
+  ]);
 
   if (error) {
     return null;

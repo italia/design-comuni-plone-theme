@@ -9,7 +9,8 @@ import { RichTextRender } from 'design-comuni-plone-theme/components/ItaliaTheme
  */
 const RichText = ({
   title,
-  title_size = 'h5',
+  title_size = 'h3',
+  title_class_name = 'h5',
   data,
   add_class,
   children,
@@ -33,6 +34,7 @@ const RichText = ({
         <Tag
           className={cx('mt-4 it-page-subsection', {
             'fw-bold': title_size === 'h6',
+            [title_class_name]: title_class_name,
           })}
         >
           {title}
@@ -48,6 +50,7 @@ export default RichText;
 RichText.propTypes = {
   title: PropTypes.string,
   title_size: PropTypes.oneOf(['h2', 'h3', 'h4', 'h5', 'h6']),
+  title_class_name: PropTypes.string,
   data: PropTypes.object,
   add_class: PropTypes.string,
   serif: PropTypes.bool,

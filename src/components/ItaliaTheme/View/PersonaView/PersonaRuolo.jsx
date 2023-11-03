@@ -296,7 +296,6 @@ const PersonaRuolo = ({ content }) => {
           content={content}
           folder_name="foto-e-attivita-politica"
           title={intl.formatMessage(messages.foto_attivita_politica)}
-          title_type="h3"
         />
       )}
 

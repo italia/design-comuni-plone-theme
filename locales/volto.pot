@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-10-10T15:52:06.253Z\n"
+"POT-Creation-Date: 2023-11-03T10:53:24.029Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1582,13 +1582,17 @@ msgstr ""
 msgid "desc"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoText
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 #: components/ItaliaTheme/View/VenueView/VenueDescription
 #: helpers/amministrazioneTrasparenteHelper
 # defaultMessage: Descrizione
 msgid "descrizione"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoText
+# defaultMessage: Descrizione
+msgid "descrizione_bando"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal

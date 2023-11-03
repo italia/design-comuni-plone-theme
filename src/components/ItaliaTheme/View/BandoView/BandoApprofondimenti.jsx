@@ -47,7 +47,7 @@ const BandoApprofondimenti = ({ content }) => {
             padding={false}
           />
           <CardBody>
-            <CardTitle tag="h5" className="title">
+            <CardTitle className="title h5">
               <UniversalLink
                 href={flattenToAppURL(item.url)}
                 rel="noopener noreferrer"
@@ -67,7 +67,7 @@ const BandoApprofondimenti = ({ content }) => {
         >
           <Icon className={undefined} icon={'it-file'} padding={false} />
           <CardBody>
-            <CardTitle tag="h5" className="title">
+            <CardTitle className="title h5">
               <UniversalLink
                 item={{
                   ...item,
@@ -111,7 +111,7 @@ const BandoApprofondimenti = ({ content }) => {
         <>
           {content.approfondimento.map((item, i) => (
             <>
-              <h5>{item.title}</h5>
+              <h3 className="h5">{item.title}</h3>
               <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                 {content.approfondimento[i].children.map((inner_item, x) =>
                   inner_item.type === 'Modulo' ? (

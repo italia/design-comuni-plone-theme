@@ -21,11 +21,8 @@ const UODocuments = ({ content }) => {
     <>
       {(contentFolderHasItems(content, 'allegati') ||
         content.documenti_pubblici?.length > 0) && (
-        <section
-          id="allegati"
-          className="it-page-section anchor-offset mt-5 mb-5"
-        >
-          <h2 className="h4" id="header-allegati">
+        <section id="allegati" className="it-page-section anchor-offset mb-5">
+          <h2 className="mb-3 h4" id="header-allegati">
             {intl.formatMessage(messages.documenti)}
           </h2>
           <Attachments
@@ -33,6 +30,7 @@ const UODocuments = ({ content }) => {
             folder_name={'allegati'}
             as_section={false}
           />
+
           <Row className="card-wrapper card-teaser-wrapper documenti-pubblici">
             {content?.documenti_pubblici?.map((dp, i) => (
               <Attachment {...dp} download_url={dp?.['@id']} key={dp['@id']} />

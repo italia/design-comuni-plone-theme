@@ -10,7 +10,7 @@ import {
 
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-
+import { RichTextSection } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import Image from '@plone/volto/components/theme/Image/Image';
 import { viewDate } from 'design-comuni-plone-theme/helpers';
 
@@ -40,7 +40,7 @@ const Evento = ({ event, show_image }) => {
 
   return event ? (
     <div className="card-wrapper card-teaser">
-      <Card noWrapper className="card-img no-after">
+      <Card noWrapper className="card card-img no-after shadow rounded">
         {show_image &&
           (event.image_field || event.preview_image || event.image) && (
             <div className="img-responsive-wrapper">
@@ -65,16 +65,16 @@ const Evento = ({ event, show_image }) => {
             </div>
           )}
         <CardBody>
-          <CardTitle tag="h5" className="card-title-icon">
+          <CardTitle className="h5">
             <UniversalLink
               href={flattenToAppURL(event['@id'])}
               title={event.title}
               className="text-decoration-none"
             >
-              <h6 className="fw-semibold">{event.title}</h6>
+              {event.title}
             </UniversalLink>
           </CardTitle>
-          <CardText></CardText>
+          <CardText> </CardText>
           <CardReadMore
             iconName="it-arrow-right"
             tag={UniversalLink}
@@ -103,22 +103,16 @@ const Events = ({ content, title, show_image, folder_name, isChild }) => {
     : content?.items?.filter((el) => el['@type'] === 'Event') || [];
 
   return events.length > 0 ? (
-    <article
-      id="appuntamenti"
-      className="it-page-section anchor-offset mt-5"
-      aria-labelledby="header-appuntamenti"
+    <RichTextSection
+      tag_id="appuntamenti"
+      title={title || intl.formatMessage(messages.events)}
     >
-      {title ? (
-        <h4 id="header-appuntamenti">{title}</h4>
-      ) : (
-        <h4 id="header-appuntamenti">{intl.formatMessage(messages.events)}</h4>
-      )}
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
         {events.map((item, i) => (
           <Evento key={item['@id']} event={item} show_image={show_image} />
         ))}
       </div>
-    </article>
+    </RichTextSection>
   ) : null;
 };
 

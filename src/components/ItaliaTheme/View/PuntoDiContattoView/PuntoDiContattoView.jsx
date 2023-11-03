@@ -14,7 +14,7 @@ import {
   PuntoDiContattoPlaceholderAfterRelatedItems,
   RelatedItems,
   IncaricoPersone,
-  RichTextArticle,
+  RichTextSection,
   RelatedItemsChipsPDC,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import { renderPDCItemValue } from 'design-comuni-plone-theme/helpers';
@@ -88,51 +88,53 @@ const PuntoDiContattoView = (props) => {
   const { content } = props;
   const intl = useIntl();
   return (
-    <div className="container px-4 my-4 punto-di-contatto-view">
-      <SkipToMainContent />
-      <PageHeader
-        content={{ ...content, stato_servizio: null }}
-        showreadingtime={false}
-        showdates={false}
-        showtassonomiaargomenti={false}
-      />
-      <section
-        className="col-lg-12 it-page-sections-container my-4 py-4"
-        id="main-content-section"
-      >
-        {/* TODO: add tipologia when present */}
-        <RichTextArticle
-          tag_id="contatti"
-          title={intl.formatMessage(messages.contatti)}
-        >
-          {content?.value_punto_contatto?.map((pdc, i) => {
-            return (
-              <div className="my-2" key={i}>
-                <h6>
-                  {messages[pdc?.pdc_type] === undefined
-                    ? pdc?.pdc_type
-                    : intl.formatMessage(messages.label, {
-                        value: intl.formatMessage(messages[pdc?.pdc_type]),
-                      })}
-                  <span className="ml-1">{renderPDCItemValue(pdc)}</span>
-                </h6>
-              </div>
-            );
-          })}
-        </RichTextArticle>
-        <IncaricoPersone content={content} />
-        <RelatedItemsChipsPDC
-          content={content}
-          fieldLists={[
-            'strutture_correlate',
-            'servizi_correlati',
-            'eventi_correlati',
-            'luoghi_correlati',
-            'persone_correlate',
-          ]}
+    <div className="punto-di-contatto-view">
+      <div className="container px-4 my-4">
+        <SkipToMainContent />
+        <PageHeader
+          content={{ ...content, stato_servizio: null }}
+          showreadingtime={false}
+          showdates={false}
+          showtassonomiaargomenti={false}
         />
-      </section>
-      <PuntoDiContattoPlaceholderAfterContent content={content} />
+        <section
+          className="col-lg-12 it-page-sections-container border-light my-4 py-4"
+          id="main-content-section"
+        >
+          {/* TODO: add tipologia when present */}
+          <RichTextSection
+            tag_id="contatti"
+            title={intl.formatMessage(messages.contatti)}
+          >
+            {content?.value_punto_contatto?.map((pdc, i) => {
+              return (
+                <div className="my-2" key={i}>
+                  <h5 className="h6">
+                    {messages[pdc?.pdc_type] === undefined
+                      ? pdc?.pdc_type
+                      : intl.formatMessage(messages.label, {
+                          value: intl.formatMessage(messages[pdc?.pdc_type]),
+                        })}
+                    <span className="ml-1">{renderPDCItemValue(pdc)}</span>
+                  </h5>
+                </div>
+              );
+            })}
+          </RichTextSection>
+          <IncaricoPersone content={content} />
+          <RelatedItemsChipsPDC
+            content={content}
+            fieldLists={[
+              'strutture_correlate',
+              'servizi_correlati',
+              'eventi_correlati',
+              'luoghi_correlati',
+              'persone_correlate',
+            ]}
+          />
+        </section>
+        <PuntoDiContattoPlaceholderAfterContent content={content} />
+      </div>
       <RelatedItems list={content?.relatedItems} />
       <PuntoDiContattoPlaceholderAfterRelatedItems content={content} />
     </div>

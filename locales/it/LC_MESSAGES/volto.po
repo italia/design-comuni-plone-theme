@@ -1580,7 +1580,6 @@ msgstr "Deleghe"
 msgid "desc"
 msgstr "Link rapidi"
 
-#: components/ItaliaTheme/View/BandoView/BandoText
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 #: components/ItaliaTheme/View/VenueView/VenueDescription
@@ -1588,6 +1587,11 @@ msgstr "Link rapidi"
 # defaultMessage: Descrizione
 msgid "descrizione"
 msgstr "Descrizione"
+
+#: components/ItaliaTheme/View/BandoView/BandoText
+# defaultMessage: Descrizione
+msgid "descrizione_bando"
+msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Non cercare nella sezione

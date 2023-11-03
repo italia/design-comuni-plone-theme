@@ -9,7 +9,7 @@ import {
 
 const messages = defineMessages({
   descrizione: {
-    id: 'descrizione',
+    id: 'descrizione_bando',
     defaultMessage: 'Descrizione',
   },
   tipologia_bando: {
@@ -38,20 +38,18 @@ const BandoText = ({ content }) => {
       show_title={true}
     >
       {/* DESCRIZIONE DEL BANDO */}
-      {richTextHasContent(content?.text) && (
-        <RichText title_size="h5" title={''} data={content?.text} />
-      )}
+      {richTextHasContent(content?.text) && <RichText data={content?.text} />}
       {/* TIPOLOGIA DEL BANDO */}
       {content?.tipologia_bando && (
         <>
-          <h5>{intl.formatMessage(messages.tipologia_bando)}</h5>
+          <h3 className="h5">{intl.formatMessage(messages.tipologia_bando)}</h3>
           <span>{content.tipologia_bando.title}</span>
         </>
       )}
       {/* DESTINATARI DEL BANDO */}
       {content?.destinatari?.length > 0 && (
         <>
-          <h5>{intl.formatMessage(messages.destinatari)}</h5>
+          <h3 className="h5">{intl.formatMessage(messages.destinatari)}</h3>
           {content.destinatari.map((item, i) => (
             <p key={'destinatari-' + i}>{item.title}</p>
           ))}
@@ -60,7 +58,7 @@ const BandoText = ({ content }) => {
       {/* ENTE DEL BANDO */}
       {content?.ente_bando?.length > 0 && (
         <>
-          <h5>{intl.formatMessage(messages.ente)}</h5>
+          <h3 className="h5">{intl.formatMessage(messages.ente)}</h3>
           {content.ente_bando.map((item, i) => (
             <span key={'ente_' + i}>
               {item}

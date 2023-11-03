@@ -1595,13 +1595,17 @@ msgstr ""
 msgid "desc"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoText
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 #: components/ItaliaTheme/View/VenueView/VenueDescription
 #: helpers/amministrazioneTrasparenteHelper
 # defaultMessage: Descrizione
 msgid "descrizione"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoText
+# defaultMessage: Descrizione
+msgid "descrizione_bando"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal

@@ -41,7 +41,7 @@ const Module = ({ item }) => {
       tag="div"
     >
       <CardBody tag="div">
-        <CardTitle tag="h5">
+        <CardTitle className="h5">
           {modulo.file_principale ? (
             <a
               href={flattenToAppURL(modulo.file_principale.download)}

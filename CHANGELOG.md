@@ -1,5 +1,64 @@
 
 
+## [10.0.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.9.0...v10.0.0) (2023-11-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* h titles in views (#381)
+
+### Bug Fixes
+
+* h titles in views ([#381](https://github.com/redturtle/design-comuni-plone-theme/issues/381)) ([1b871e9](https://github.com/redturtle/design-comuni-plone-theme/commit/1b871e9f86b3fa5866ddf7192ccbc900e2629ce7))
+
+
+### Maintenance
+
+* prapring release 9.0.1 ([7d7376c](https://github.com/redturtle/design-comuni-plone-theme/commit/7d7376cf2f536a8262c73b1e0f2aabda08818e78))
+* preparing release 8.10.0 ([a33e32b](https://github.com/redturtle/design-comuni-plone-theme/commit/a33e32bd6cdda6aea0227140580a43e26501f475))
+* preparing release 9.0.0 ([95f5cc0](https://github.com/redturtle/design-comuni-plone-theme/commit/95f5cc0bd486198c0b66dcd4d0b659113d51527f))
+* preparing release 9.0.1 (9.0.0) ([e230881](https://github.com/redturtle/design-comuni-plone-theme/commit/e23088116b5422081a9ce22763288cd0b65fc4cc))
+
+## [8.9.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.8.2...v8.9.0) (2023-11-03)
+
+
+### Features
+
+* added data-element for service-link pagination ([#387](https://github.com/RedTurtle/design-comuni-plone-theme/issues/387)) ([3ef75a5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3ef75a5f8dde74b948bbfe3e61fd58575baa7c13))
+
+
+### Bug Fixes
+
+* locales ([e6b8904](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e6b890401222739a756a77cc06958ea3b9173759))
+
+
+### Documentation
+
+* updated publiccode and release log ([2fe4539](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2fe4539ee4cf6dcc88d0dfeb9fe9c49bb972244f))
+
+## [8.8.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.8.1...v8.8.2) (2023-11-03)
+
+
+### Maintenance
+
+* changed descrizione bando i18n id ([5bef0e8](https://github.com/redturtle/design-comuni-plone-theme/commit/5bef0e8e1ebfbf6e7254ee177817960cc829b3aa))
+* preparing release 8.8.2 ([d842e66](https://github.com/redturtle/design-comuni-plone-theme/commit/d842e66c891fd19a4eef81bea2aaaf2d33c6ead7))
+
+## [8.8.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.8.0...v8.8.1) (2023-11-03)
+
+
+### Bug Fixes
+
+* fix gallery preview image ([f2ddb87](https://github.com/redturtle/design-comuni-plone-theme/commit/f2ddb8798fcdd88cc003791c483240f4d95e3880))
+* fix slider dr dots margin ([8e24914](https://github.com/redturtle/design-comuni-plone-theme/commit/8e2491430c7951cbc87fcf30cb860c1ae0f55460))
+* RSS template div source moved inside condition and changed release.md ([#386](https://github.com/redturtle/design-comuni-plone-theme/issues/386)) ([200fefa](https://github.com/redturtle/design-comuni-plone-theme/commit/200fefad7b0c7596cdcb3109ef5962d53b643626))
+* source added for rss single card ([#384](https://github.com/redturtle/design-comuni-plone-theme/issues/384)) ([669f165](https://github.com/redturtle/design-comuni-plone-theme/commit/669f16575e93944a354119aff4a6dd4ba9cf58b8))
+
+
+### Maintenance
+
+* preparing release 8.8.1 ([d12c618](https://github.com/redturtle/design-comuni-plone-theme/commit/d12c61899c0cd5b658e6fa38234f90a029b1786c))
+
 ## [8.8.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.12...v8.8.0) (2023-10-31)
 
 

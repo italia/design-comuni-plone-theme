@@ -37,7 +37,8 @@ const DocumentoAutori = ({ autori, title }) => {
               <CardPersona
                 item={autore}
                 className="shadow-sm"
-                titleTagName="h5"
+                titleTagName="div"
+                titleClassName="h5"
                 showImage={true}
               />
             </Col>

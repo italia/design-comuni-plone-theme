@@ -44,7 +44,8 @@ const ServizioCostiVincoli = ({ content }) => {
               ? intl.formatMessage(messages.vincoli)
               : null
           }
-          title_size="h4"
+          title_size="h3"
+          title_class_name="h5"
           add_class="mb-5"
           data={content.vincoli}
         />

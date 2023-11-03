@@ -45,7 +45,7 @@ const EventoUlterioriInformazioni = ({ content }) => {
       )}
       {content?.event_url && (
         <div className="mt-4">
-          <h5>{intl.formatMessage(messages.event_url)}</h5>
+          <h3 className="h5">{intl.formatMessage(messages.event_url)}</h3>
           <UniversalLink href={content.event_url}>
             {content.event_url}
           </UniversalLink>
@@ -56,7 +56,6 @@ const EventoUlterioriInformazioni = ({ content }) => {
           {richTextHasContent(content?.patrocinato_da) && (
             <div className="mb-5">
               <RichText
-                title_size="h5"
                 title={intl.formatMessage(messages.patrocinato_da)}
                 data={content?.patrocinato_da}
               />
@@ -66,7 +65,9 @@ const EventoUlterioriInformazioni = ({ content }) => {
       )}
       {content?.strutture_politiche?.length > 0 && (
         <div className="mt-4">
-          <h5>{intl.formatMessage(messages.strutture_politiche)}</h5>
+          <h3 className="h5">
+            {intl.formatMessage(messages.strutture_politiche)}
+          </h3>
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
             {content?.strutture_politiche?.map((item, i) => (
               <GenericCard

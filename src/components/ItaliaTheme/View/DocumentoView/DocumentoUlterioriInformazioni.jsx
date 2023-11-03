@@ -23,8 +23,9 @@ const DocumentoUlterioriInformazioni = ({ content }) => {
       richTextHasContent(content?.riferimenti_normativi),
     [content],
   );
+
   return (
-    <Metadata content={content} showSectionTitle={showSectionTitle}>
+    <Metadata content={content} showSectionTitle={showSectionTitle} title="">
       {richTextHasContent(content?.ulteriori_informazioni) && (
         <HelpBox text={content?.ulteriori_informazioni} />
       )}
@@ -32,7 +33,9 @@ const DocumentoUlterioriInformazioni = ({ content }) => {
       {/* RIFERIMENTI NORMATIVI */}
       {richTextHasContent(content?.riferimenti_normativi) && (
         <div className="mt-2">
-          <h5>{intl.formatMessage(messages.riferimenti_normativi)}</h5>
+          <h3 className="h5 mb-3">
+            {intl.formatMessage(messages.riferimenti_normativi)}
+          </h3>
           <RichText serif={false} data={content.riferimenti_normativi} />
         </div>
       )}
