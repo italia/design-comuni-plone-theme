@@ -3,11 +3,10 @@
  * @module components/theme/View/BandoView
  */
 
-import React, { useState, createRef, useEffect } from 'react';
+import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  SideMenu,
   PageHeader,
   RelatedItems,
   BandoPlaceholderAfterContent,
@@ -22,6 +21,7 @@ import {
   RelatedItemInEvidence,
   SkipToMainContent,
   ContentTypeViewSections,
+  useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 export const BandoViewSectionsOrder = [
@@ -44,15 +44,8 @@ export const BandoViewSectionsOrder = [
  */
 const BandoView = ({ content, location }) => {
   let documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
-  useEffect(() => {
-    if (documentBody.current) {
-      if (__CLIENT__) {
-        setSideMenuElements(documentBody.current);
-      }
-    }
-  }, [documentBody]);
   return (
     <>
       <div className="container px-4 my-4 bando-view">

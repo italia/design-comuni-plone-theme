@@ -3,14 +3,13 @@
  * @module components/theme/View/UOView
  */
 
-import React, { createRef, useEffect, useState } from 'react';
+import React, { createRef } from 'react';
 
 import PropTypes from 'prop-types';
 import {
   PageHeader,
   UOServices,
   RelatedItems,
-  SideMenu,
   ContentImage,
   UOPlaceholderAfterContent,
   UOPlaceholderAfterRelatedItems,
@@ -23,6 +22,7 @@ import {
   RelatedItemInEvidence,
   SkipToMainContent,
   ContentTypeViewSections,
+  useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 export const UOViewSectionsOrder = [
@@ -56,13 +56,7 @@ export const UOViewSectionsOrder = [
  */
 const UOView = ({ content }) => {
   let documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
-
-  useEffect(() => {
-    if (documentBody.current && __CLIENT__) {
-      setSideMenuElements(documentBody.current);
-    }
-  }, [documentBody]);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   return (
     <>

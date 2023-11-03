@@ -3,12 +3,11 @@
  * @module components/theme/View/EventoView
  */
 
-import React, { useState, createRef, useEffect } from 'react';
+import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import {
   ContentImage,
-  SideMenu,
   PageHeader,
   RelatedItems,
   EventoPlaceholderAfterContent,
@@ -25,6 +24,7 @@ import {
   SkipToMainContent,
   ContentTypeViewSections,
   EventoSponsors,
+  useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 export const EventoViewSectionsOrder = [
@@ -53,15 +53,7 @@ export const EventoViewSectionsOrder = [
  */
 const EventoView = ({ content, location }) => {
   let documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
-
-  useEffect(() => {
-    if (documentBody.current) {
-      if (__CLIENT__) {
-        setSideMenuElements(documentBody.current);
-      }
-    }
-  }, [documentBody]);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   return (
     <>

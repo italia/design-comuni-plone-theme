@@ -3,12 +3,11 @@
  * @module components/theme/View/ServizioView
  */
 
-import React, { createRef, useEffect, useState } from 'react';
+import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import {
-  SideMenu,
   PageHeader,
   ContentImage,
   ServizioPlaceholderAfterContent,
@@ -38,6 +37,7 @@ import {
   ServizioArgomenti,
   ServizioMetatag,
   ContentTypeViewSections,
+  useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 export const ServizioViewSectionsOrder = (props) => [
@@ -109,14 +109,7 @@ const ServizioView = ({ content, moment }) => {
   Moment.locale(intl.locale);
 
   const documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
-  useEffect(() => {
-    if (documentBody.current) {
-      if (__CLIENT__) {
-        setSideMenuElements(documentBody.current);
-      }
-    }
-  }, [documentBody]);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   return (
     <>

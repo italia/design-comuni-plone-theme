@@ -3,11 +3,10 @@
  * @module components/theme/View/VenueView
  */
 
-import React, { createRef, useEffect, useState } from 'react';
+import React, { createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  SideMenu,
   PageHeader,
   ContentImage,
   RelatedItems,
@@ -23,6 +22,7 @@ import {
   VenueContacts,
   VenueMoreInfos,
   ContentTypeViewSections,
+  useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 export const VenueViewSectionsOrder = [
@@ -56,15 +56,7 @@ export const VenueViewSectionsOrder = [
  */
 const VenueView = ({ content }) => {
   let documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
-
-  useEffect(() => {
-    if (documentBody.current) {
-      if (__CLIENT__) {
-        setSideMenuElements(documentBody.current);
-      }
-    }
-  }, [documentBody]);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   useEffect(() => {
     if (

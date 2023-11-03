@@ -5,6 +5,12 @@ export {
   RichTextRender,
   richTextHasContent,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichTextRender';
+export {
+  useSideMenu,
+  useReadingTime,
+  readingTime,
+  getHTMLString,
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View/ViewUtils';
 
 export RenderBlocks from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RenderBlocks';
 export RelatedNewsArticles from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RelatedNewsArticles';

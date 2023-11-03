@@ -3,11 +3,10 @@
  * @module components/theme/View/PersonaView
  */
 
-import React, { createRef, useEffect, useState } from 'react';
+import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  SideMenu,
   PageHeader,
   RelatedItems,
   PersonaRuolo,
@@ -19,6 +18,7 @@ import {
   RelatedItemInEvidence,
   SkipToMainContent,
   ContentTypeViewSections,
+  useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 export const PersonaViewSectionsOrder = [
@@ -36,14 +36,7 @@ export const PersonaViewSectionsOrder = [
  */
 const PersonaView = ({ content }) => {
   let documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
-  useEffect(() => {
-    if (documentBody.current) {
-      if (__CLIENT__) {
-        setSideMenuElements(documentBody.current);
-      }
-    }
-  }, [documentBody]);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   return (
     <>
