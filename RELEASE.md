@@ -41,7 +41,7 @@
 - ...
 -->
 
-## Versione X.X.X (xx/xx/xxxx)
+## Versione 9.0.0 (03/11/2023)
 
 ### Migliorie
 
