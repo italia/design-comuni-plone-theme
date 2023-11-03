@@ -43,6 +43,9 @@ class Pagination extends Component {
     /** Total number of pages. */
     totalPages: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
       .isRequired,
+
+    /** Lighthouse ID to set Agid data-element on pager link for CT Servizio*/
+    isServiceLink: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -69,8 +72,13 @@ class Pagination extends Component {
   };
 
   render() {
-    const { boundaryRange, ellipsisItem, siblingRange, totalPages } =
-      this.props;
+    const {
+      boundaryRange,
+      ellipsisItem,
+      siblingRange,
+      totalPages,
+      isServiceLink,
+    } = this.props;
     const { activePage } = this.state;
 
     const items = createPaginationItems({
@@ -96,6 +104,7 @@ class Pagination extends Component {
                   onClick={this.handleItemClick}
                   type={type}
                   ellipsisItem={ellipsisItem}
+                  isServiceLink={isServiceLink}
                 >
                   {value}
                 </PaginationItem>

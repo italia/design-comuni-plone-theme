@@ -43,6 +43,10 @@
 
 ## Versione 8.8.1 (03/11/2023)
 
+### Novità
+
+- Aggiunto data-element al paginatore per validatore AGID per i blocchi Elenco per i quali viene impostata l'opzione service-link.
+
 ### Fix
 
 - Nei template dei feed RSS ora viene mostrata la sorgente se presente.
