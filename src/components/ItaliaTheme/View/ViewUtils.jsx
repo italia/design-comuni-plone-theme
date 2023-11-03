@@ -53,29 +53,39 @@ export const useSideMenu = (content, documentBody) => {
   }, [content.description, content.title, documentBody]);
 
   //observer is needed for loadable blocks like listing and rss, if you want to use their title's for SideMenu
-  useEffect(() => {
-    const obs = updateSideMenuOnLoadingBlocks
-      ? new MutationObserver((mutationList) => {
-          setSideMenuElements(documentBody.current);
-        })
-      : null;
-    setObserver(obs);
-  }, [setObserver]);
+  // useEffect(() => {
+  //   const obs = updateSideMenuOnLoadingBlocks
+  //     ? new MutationObserver((mutationList) => {
+  //         setSideMenuElements(documentBody.current);
+  //       })
+  //     : null;
+  //   setObserver(obs);
+  // }, [setObserver]);
 
   useEffect(() => {
     if (!observer && !updateSideMenuOnLoadingBlocks) return;
 
-    observer.observe(documentBody.current, {
-      //attributes: true,
-      childList: true,
-      subtree: true,
-    });
+    if (!observer) {
+      const obs = updateSideMenuOnLoadingBlocks
+        ? new MutationObserver((mutationList) => {
+            setSideMenuElements(documentBody.current);
+          })
+        : null;
+      setObserver(obs);
+    }
+    if (observer) {
+      observer.observe(documentBody.current, {
+        //attributes: true,
+        childList: true,
+        subtree: true,
+      });
+    }
     return () => {
       if (observer) {
         observer.disconnect();
       }
     };
-  }, [observer, documentBody, updateSideMenuOnLoadingBlocks]);
+  }, [observer, setObserver, documentBody, updateSideMenuOnLoadingBlocks]);
 
   return { sideMenuElements, setSideMenuElements, SideMenu: SideMenuComponent };
 };
