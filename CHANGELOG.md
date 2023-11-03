@@ -1,5 +1,24 @@
 
 
+## [10.0.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.9.0...v10.0.0) (2023-11-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* h titles in views (#381)
+
+### Bug Fixes
+
+* h titles in views ([#381](https://github.com/redturtle/design-comuni-plone-theme/issues/381)) ([1b871e9](https://github.com/redturtle/design-comuni-plone-theme/commit/1b871e9f86b3fa5866ddf7192ccbc900e2629ce7))
+
+
+### Maintenance
+
+* prapring release 9.0.1 ([7d7376c](https://github.com/redturtle/design-comuni-plone-theme/commit/7d7376cf2f536a8262c73b1e0f2aabda08818e78))
+* preparing release 8.10.0 ([a33e32b](https://github.com/redturtle/design-comuni-plone-theme/commit/a33e32bd6cdda6aea0227140580a43e26501f475))
+* preparing release 9.0.0 ([95f5cc0](https://github.com/redturtle/design-comuni-plone-theme/commit/95f5cc0bd486198c0b66dcd4d0b659113d51527f))
+* preparing release 9.0.1 (9.0.0) ([e230881](https://github.com/redturtle/design-comuni-plone-theme/commit/e23088116b5422081a9ce22763288cd0b65fc4cc))
+
 ## [8.9.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.8.2...v8.9.0) (2023-11-03)
 
 
