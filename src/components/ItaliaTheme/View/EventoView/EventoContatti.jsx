@@ -34,22 +34,8 @@ const messages = defineMessages({
   },
 });
 
-const EventoDocumenti = ({ content }) => {
+const EventoContatti = ({ content }) => {
   const intl = useIntl();
-  const getSupportatoDa = () => {
-    return (
-      content?.supportato_da?.length > 0 && (
-        <>
-          <h5 className="mt-4 supported-by">
-            {intl.formatMessage(messages.supported_by)}
-          </h5>
-          {content?.supportato_da?.map((item) => (
-            <OfficeCard key={item['@id']} office={item} icon={'it-pa'} />
-          ))}
-        </>
-      )
-    );
-  };
 
   return richTextHasContent(content?.organizzato_da_esterno) ||
     content?.organizzato_da_interno.length > 0 ||
@@ -62,7 +48,6 @@ const EventoDocumenti = ({ content }) => {
       {content.contact_info.map((contact) => (
         <ContactsCard contact={contact} key={contact['@id']} />
       ))}
-
       {/* ---organizzato da esterno */}
       {richTextHasContent(content?.organizzato_da_esterno) ||
       content?.telefono ||
@@ -74,9 +59,8 @@ const EventoDocumenti = ({ content }) => {
             noWrapper={true}
             tag="div"
           >
-            <CardTitle tag="h5">
-              <Icon icon="it-telephone" padding={true} />
-            </CardTitle>
+            <Icon icon="it-telephone" />
+
             <CardBody tag="div" className={'card-body pe-3'}>
               <RichText data={content.organizzato_da_esterno} />
               {content?.telefono && (
@@ -104,11 +88,10 @@ const EventoDocumenti = ({ content }) => {
           </Card>
         </div>
       ) : null}
-
       {/* ---contatti interno */}
       {content?.organizzato_da_interno?.length > 0 && (
         <div className="mb-5">
-          <h5>{intl.formatMessage(messages.organizzato_da)}</h5>
+          <h3 className="h5">{intl.formatMessage(messages.organizzato_da)}</h3>
           {content?.organizzato_da_interno?.map((item, index) => (
             <OfficeCard
               margin_bottom={
@@ -127,15 +110,23 @@ const EventoDocumenti = ({ content }) => {
           ))}
         </div>
       )}
-
       {/* ---supportato da */}
-      {getSupportatoDa()}
+      {content?.supportato_da?.length > 0 && (
+        <div className="mb-5">
+          <h3 className="mt-4 supported-by h5">
+            {intl.formatMessage(messages.supported_by)}
+          </h3>
+          {content?.supportato_da?.map((item) => (
+            <OfficeCard key={item['@id']} office={item} icon={'it-pa'} />
+          ))}
+        </div>
+      )}
     </RichTextSection>
   ) : null;
 };
 
-EventoDocumenti.propTypes = {
+EventoContatti.propTypes = {
   content: PropTypes.object.isRequired,
 };
 
-export default EventoDocumenti;
+export default EventoContatti;

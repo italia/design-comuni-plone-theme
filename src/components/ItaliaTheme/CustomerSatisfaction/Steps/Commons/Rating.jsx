@@ -79,7 +79,7 @@ export const Rating: FC<RatingProps> = ({
 
   if (isCustomLegendObject(legend)) {
     legendClass = classNames({
-      'sr-only': legend.srOnly
+      'visually-hidden': legend.srOnly
     });
     legendText = legend.content;
   }

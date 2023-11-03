@@ -35,11 +35,11 @@ const SmallVenue = ({ venue }) => {
     <>
       <div className="card card-teaser shadow mt-3 rounded bigborder">
         <div className="card-body">
-          <h5 className="card-title">
+          <div className="card-title h5">
             <UniversalLink item={venue_fo} title={venue_fo.title}>
               {venue_fo.title}
             </UniversalLink>
-          </h5>
+          </div>
           <div className="card-text">
             {venue_fo.telefono && (
               <p>

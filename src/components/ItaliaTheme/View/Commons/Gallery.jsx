@@ -38,7 +38,7 @@ const Gallery = ({
   folder_name,
   id = '',
   title,
-  title_type = 'h4',
+  title_type = 'h3',
   title_id = 'galleria',
   title_video,
   className = '',

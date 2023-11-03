@@ -26,7 +26,7 @@ const Attachment = ({ title, description, download_url }) => {
         title={intl.formatMessage(messages.attachment)}
       />
       <CardBody tag="div">
-        <CardTitle tag="h5">
+        <CardTitle className="h5">
           <a href={flattenToAppURL(download_url)}>{title}</a>
         </CardTitle>
         {description && <p>{description}</p>}

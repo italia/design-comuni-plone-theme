@@ -89,14 +89,14 @@ const VenueView = ({ content }) => {
         {/* HEADER IMAGE */}
         <ContentImage content={content} position="afterHeader" />
 
-        <div className="row row-column-border row-column-menu-left">
+        <div className="row row-column-border border-light row-column-menu-left">
           <aside className="col-lg-4">
             {__CLIENT__ && (
               <SideMenu data={sideMenuElements} content_uid={content?.UID} />
             )}
           </aside>
           <section
-            className="col-lg-8 it-page-sections-container"
+            className="col-lg-8 it-page-sections-container border-light"
             id="main-content-section"
             ref={documentBody}
           >

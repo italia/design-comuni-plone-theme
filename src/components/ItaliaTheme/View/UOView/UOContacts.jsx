@@ -34,7 +34,7 @@ const UOContacts = ({ content }) => {
         content?.zip_code?.length > 0 ||
         richTextHasContent(content?.orario_pubblico) ||
         content?.contact_info?.length > 0) && (
-        <section id="contatti" className="it-page-section anchor-offset mt-5">
+        <section id="contatti" className="it-page-section anchor-offset mb-5">
           <h2 id="header-contatti" className="mb-3 h4">
             {intl.formatMessage(messages.contatti)}
           </h2>
@@ -43,13 +43,15 @@ const UOContacts = ({ content }) => {
           <UOContactsLocations content={content} />
 
           {richTextHasContent(content.contact_info) && (
-            <div className="mb-5 mt-3">
+            <div className="mb-5">
               <RichText data={content.contact_info} />
             </div>
           )}
           {richTextHasContent(content.orario_pubblico) && (
-            <div className="mb-5 mt-3">
-              <h5>{intl.formatMessage(messages.orario_pubblico)}</h5>
+            <div className="mb-5">
+              <h3 className="h5">
+                {intl.formatMessage(messages.orario_pubblico)}
+              </h3>
               <RichText data={content.orario_pubblico} />
             </div>
           )}

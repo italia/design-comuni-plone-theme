@@ -55,7 +55,7 @@ const OfficeCard = ({
     >
       {icon && <Icon icon={icon}></Icon>}
       <div className="card-body pe-3">
-        <h5 className="card-title">
+        <div className="card-title h5">
           <UniversalLink
             item={office_fo}
             title={office_fo.title}
@@ -63,7 +63,7 @@ const OfficeCard = ({
           >
             {office_fo.title}
           </UniversalLink>
-        </h5>
+        </div>
         <p className="card-text">{office_fo.description}</p>
         {show_contacts && office_fo?.sede?.length > 0 && (
           <div>

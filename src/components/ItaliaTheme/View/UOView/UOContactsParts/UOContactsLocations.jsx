@@ -12,7 +12,7 @@ const UOContactsLocations = ({ content }) => {
     content?.zip_code?.length > 0 ||
     content?.quartiere?.length > 0 ||
     content?.circoscrizione?.length > 0 ? (
-    <div className="mb-5 mt-3">
+    <div className="mb-5">
       <Locations
         content={content}
         locations={content.sede ?? []}

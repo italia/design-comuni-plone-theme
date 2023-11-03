@@ -20,23 +20,23 @@ const UOPeople = ({ content }) => {
   return content?.persone_struttura?.length > 0 ? (
     <section
       id="persone-struttura"
-      className="it-page-section anchor-offset mt-5"
+      className="it-page-section anchor-offset mb-5 "
     >
-      <h2 className="h4" id="header-persone-struttura">
+      <h2 className="mb-3 h4" id="header-persone-struttura">
         {intl.formatMessage(messages.persone_struttura)}
       </h2>
-      <p className="mt-4">
-        {intl.formatMessage(messages.persone_p_description)}:
-      </p>
+      <p>{intl.formatMessage(messages.persone_p_description)}:</p>
+
       <Row className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal ruolo-persone-struttura">
         {content?.persone_struttura?.map((p, _i) => {
           return (
-            <Col xs="12" lg="12" xl="6" md="12" key={p['@id']}>
+            <Col xs="12" lg="12" xl="6" md="12" className="mb-3" key={p['@id']}>
               <CardPersona
                 item={p}
                 className={'shadow-sm'}
                 showImage={true}
-                titleTagName={'h5'}
+                titleTagName="h3"
+                titleClassName="h5"
               />
             </Col>
           );

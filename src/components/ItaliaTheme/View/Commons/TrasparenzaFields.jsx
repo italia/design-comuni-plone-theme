@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage, defineMessages, useIntl } from 'react-intl';
 import {
-  RichTextArticle,
+  RichTextSection,
   RichTextRender,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import { UniversalLink } from '@plone/volto/components';
@@ -284,12 +284,12 @@ const TrasparenzaFields = ({ content }) => {
   });
 
   return fields.length > 0 ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id="trasparenza"
       title={intl.formatMessage(messages.trasparenza)}
     >
       <dl className="trasparenza-fields">{fields}</dl>
-    </RichTextArticle>
+    </RichTextSection>
   ) : null;
 };
 

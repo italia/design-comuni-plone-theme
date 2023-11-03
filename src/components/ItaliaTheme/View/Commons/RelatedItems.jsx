@@ -96,9 +96,9 @@ const RelatedItems = ({
                               <div className="card-header">
                                 <Icon icon={SITE_SECTIONS[sectionId].icon} />
 
-                                <h5 className="card-title">
+                                <div className="card-title h5">
                                   {intl.formatMessage(messages[sectionId])}
-                                </h5>
+                                </div>
                               </div>
                               <div className="card-body">
                                 <div className="link-list-wrapper mt-3">

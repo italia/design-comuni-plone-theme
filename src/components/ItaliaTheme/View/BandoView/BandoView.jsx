@@ -65,7 +65,7 @@ const BandoView = ({ content, location }) => {
           showtassonomiaargomenti={true}
           showbandostate={true}
         />
-        <div className="row row-column-border row-column-menu-left">
+        <div className="row row-column-border border-light row-column-menu-left">
           <aside className="col-lg-4">
             {__CLIENT__ && (
               <SideMenu data={sideMenuElements} content_uid={content?.UID} />
@@ -74,7 +74,7 @@ const BandoView = ({ content, location }) => {
           <section
             ref={documentBody}
             id="main-content-section"
-            className="col-lg-8 it-page-sections-container"
+            className="col-lg-8 it-page-sections-container border-light"
           >
             {/* SEZIONI */}
             <ContentTypeViewSections

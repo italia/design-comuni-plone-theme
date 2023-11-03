@@ -1,5 +1,4 @@
 /* --- Commons --- */
-export RichTextArticle from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichTextArticle';
 export RichTextSection from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichTextSection';
 export RichText from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichText';
 export {

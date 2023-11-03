@@ -3,6 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Chip, ChipLabel } from 'design-react-kit';
+import { RichTextSection } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   persona: {
@@ -15,10 +16,10 @@ const IncaricoPersone = ({ content }) => {
   const intl = useIntl();
 
   return content?.persona?.length > 0 ? (
-    <section id="persone-struttura" className="it-page-section mb-5">
-      <h2 id="header-persone-struttura">
-        {intl.formatMessage(messages.persona)}
-      </h2>
+    <RichTextSection
+      tag_id="persone-struttura"
+      title={intl.formatMessage(messages.persona)}
+    >
       <div className="ruolo-persone-struttura">
         {content?.persona?.map((person, _i) => (
           <Link
@@ -39,7 +40,7 @@ const IncaricoPersone = ({ content }) => {
           </Link>
         ))}
       </div>
-    </section>
+    </RichTextSection>
   ) : null;
 };
 

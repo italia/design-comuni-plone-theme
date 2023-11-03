@@ -82,7 +82,7 @@ const IncaricoView = (props) => {
         showtassonomiaargomenti={false}
       />
       <section
-        className="col-lg-12 it-page-sections-container my-4 py-4"
+        className="col-lg-12 it-page-sections-container border-light my-4 py-4"
         id="main-content-section"
       >
         {content.tipologia_incarico && (

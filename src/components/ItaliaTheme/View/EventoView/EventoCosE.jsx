@@ -50,9 +50,9 @@ const EventoCosE = ({ content }) => {
     >
       {content?.persone_amministrazione?.length > 0 && (
         <>
-          <h5 className="parteciperanno-section">
+          <h3 className="parteciperanno-section h5">
             {intl.formatMessage(messages.parteciperanno)}
-          </h5>
+          </h3>
           {content?.persone_amministrazione?.map((item, i) => (
             <UniversalLink
               href={flattenToAppURL(item['@id'])}
@@ -83,7 +83,6 @@ const EventoCosE = ({ content }) => {
       {richTextHasContent(content?.descrizione_destinatari) && (
         <div className="mb-5 pt-2">
           <RichText
-            title_size="h5"
             title={intl.formatMessage(messages.a_chi_rivolto)}
             data={content?.descrizione_destinatari}
           />

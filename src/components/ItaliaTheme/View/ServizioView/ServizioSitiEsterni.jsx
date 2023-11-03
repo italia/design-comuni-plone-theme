@@ -28,7 +28,7 @@ const ServizioSitiEsterni = ({ content }) => {
         tag="div"
       >
         <CardBody tag="div">
-          <RichText add_class="p-4 pt-0" data={content.link_siti_esterni} />
+          <RichText add_class="p-4 py-0" data={content.link_siti_esterni} />
         </CardBody>
       </Card>
     </RichTextSection>

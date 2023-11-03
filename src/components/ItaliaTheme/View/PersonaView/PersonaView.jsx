@@ -58,12 +58,12 @@ const PersonaView = ({ content }) => {
           showdates={false}
           showtassonomiaargomenti={true}
         />
-        <div className="row row-column-border row-column-menu-left">
+        <div className="row row-column-border border-light row-column-menu-left">
           <aside className="col-lg-4">
             <SideMenu data={sideMenuElements} content_uid={content?.UID} />
           </aside>
           <section
-            className="col-lg-8 it-page-sections-container"
+            className="col-lg-8 it-page-sections-container border-light"
             id="main-content-section"
             ref={documentBody}
           >

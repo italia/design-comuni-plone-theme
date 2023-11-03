@@ -58,7 +58,7 @@ const VenueDescription = ({ content }) => {
       {richTextHasContent(content.elementi_di_interesse) && (
         <RichTextSection
           tag_id="elementi-di-interesse"
-          title={`${intl.formatMessage(messages.elementi_di_interesse)}:`}
+          title={`${intl.formatMessage(messages.elementi_di_interesse)}`}
           data={content.elementi_di_interesse}
         />
       )}

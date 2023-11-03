@@ -24,16 +24,15 @@ const UOServices = ({ content }) => {
   return content?.servizi_offerti?.length > 0 ? (
     <section
       id={'servizi_offerti'}
-      className={'it-page-section anchor-offset mt-5'}
+      className={'it-page-section anchor-offset mb-5 '}
     >
-      <h2 id={`header-servizi_offerti`} className="h4">
+      <h2 id={`header-servizi_offerti`} className="mb-3 h4">
         {intl.formatMessage(messages.servizi_offerti)}
       </h2>
-
-      <Row className="card-wrapper card-teaser-wrapper mt-4">
+      <Row className="card-wrapper card-teaser-wrapper">
         {content?.servizi_offerti?.map((servizio, i) => (
           <Col xs="12" lg="6">
-            <Card className="shadow rounded card-big-io-comune p-3">
+            <Card className="shadow rounded card-big-io-comune p-3 my-3">
               <CardBody>
                 <CardCategory date="">{servizio.parent_title}</CardCategory>
                 <CardTitle tag="h5">
