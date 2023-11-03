@@ -5,7 +5,6 @@ export CuredBy from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commo
 export VenuesSmall from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/VenuesSmall';
 export WideImage from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/WideImage';
 export SideMenu from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/SideMenu';
-export SideMenuByTitles from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/SideMenuByTitles';
 export PageHeader from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/PageHeader/PageHeader';
 export RichTextArticle from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichTextArticle';
 export OfficeCard from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/OfficeCard';
