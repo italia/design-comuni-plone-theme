@@ -1,5 +1,13 @@
 
 
+## [8.8.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.8.1...v8.8.2) (2023-11-03)
+
+
+### Maintenance
+
+* changed descrizione bando i18n id ([5bef0e8](https://github.com/redturtle/design-comuni-plone-theme/commit/5bef0e8e1ebfbf6e7254ee177817960cc829b3aa))
+* preparing release 8.8.2 ([d842e66](https://github.com/redturtle/design-comuni-plone-theme/commit/d842e66c891fd19a4eef81bea2aaaf2d33c6ead7))
+
 ## [8.8.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.8.0...v8.8.1) (2023-11-03)
 
 
