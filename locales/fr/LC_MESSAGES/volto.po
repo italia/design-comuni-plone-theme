@@ -1608,7 +1608,7 @@ msgstr "Description"
 #: components/ItaliaTheme/View/BandoView/BandoText
 # defaultMessage: Descrizione
 msgid "descrizione_bando"
-msgstr ""
+msgstr "Description"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Non cercare nella sezione
