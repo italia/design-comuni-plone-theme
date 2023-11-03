@@ -9,7 +9,7 @@ import {
 
 const messages = defineMessages({
   descrizione: {
-    id: 'descrizione',
+    id: 'descrizione_bando',
     defaultMessage: 'Descrizione',
   },
   tipologia_bando: {
