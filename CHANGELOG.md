@@ -1,5 +1,29 @@
 
 
+## [10.2.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.1.1...v10.2.0) (2023-11-06)
+
+
+### Features
+
+* added pager-link data-element to search block pagination ([#389](https://github.com/RedTurtle/design-comuni-plone-theme/issues/389)) ([fbc32a3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fbc32a32ffc04054b39eb623584aadd1dc517beb))
+* added title param to SideMenuByTitle ([d6718b4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d6718b41ef0ce61959ca884ad0012825c09701bf))
+
+
+### Bug Fixes
+
+* messages in EventoView contatti ([348469f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/348469fcbe63136dc9bfa3fcbfe04ea1728ab953))
+* missing locales update ([633be45](https://github.com/RedTurtle/design-comuni-plone-theme/commit/633be45a7ea425ebfa1a5e9bf7cf3c0b44d6250c))
+
+
+### Maintenance
+
+* split EventoVView Contatti in different components ([5abf0d8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5abf0d85d101fd2c67f663c8eb68ddce698d6c2d))
+
+
+### Documentation
+
+* updated publiccode and release log ([0a09061](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0a090616afffd574822c8d3874e7de9abb90242a))
+
 ## [10.1.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.1.0...v10.1.1) (2023-11-06)
 
 
