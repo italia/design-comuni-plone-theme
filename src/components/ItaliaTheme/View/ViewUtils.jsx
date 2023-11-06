@@ -53,14 +53,6 @@ export const useSideMenu = (content, documentBody) => {
   }, [content.description, content.title, documentBody]);
 
   //observer is needed for loadable blocks like listing and rss, if you want to use their title's for SideMenu
-  // useEffect(() => {
-  //   const obs = updateSideMenuOnLoadingBlocks
-  //     ? new MutationObserver((mutationList) => {
-  //         setSideMenuElements(documentBody.current);
-  //       })
-  //     : null;
-  //   setObserver(obs);
-  // }, [setObserver]);
 
   useEffect(() => {
     if (!updateSideMenuOnLoadingBlocks) return;

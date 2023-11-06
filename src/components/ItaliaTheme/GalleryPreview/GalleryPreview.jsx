@@ -35,7 +35,7 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
   const image = items[viewIndex];
 
   let checkUrlImage = image?.image_field
-    ? image.image_scales?.[image.image_field]?.[0]?.scales?.larger?.download
+    ? image?.image_scales?.[image?.image_field]?.[0]?.scales?.larger?.download
     : image?.image?.scales?.larger?.download ||
       image?.image_scales?.image[0]?.scales?.larger?.download;
 
