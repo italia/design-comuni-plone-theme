@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { Card, CardBody, CardTitle } from 'design-react-kit';
-import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
-  RichText,
   richTextHasContent,
   RichTextSection,
-  ContactLink,
   OfficeCard,
   ContactsCard,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import EventoContattiOrganizzatoreEsterno from 'design-comuni-plone-theme/components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno';
+import EventoContattiOrganizzatoreInterno from 'design-comuni-plone-theme/components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreInterno';
+import EventoContattiSupportatoDa from 'design-comuni-plone-theme/components/ItaliaTheme/View/EventoView/EventoContattiSupportatoDa';
 
 const messages = defineMessages({
   supported_by: {
@@ -48,79 +47,15 @@ const EventoContatti = ({ content }) => {
       {content.contact_info.map((contact) => (
         <ContactsCard contact={contact} key={contact['@id']} />
       ))}
-      {/* ---organizzato da esterno */}
-      {richTextHasContent(content?.organizzato_da_esterno) ||
-      content?.telefono ||
-      content?.email ||
-      content?.fax ? (
-        <div className="mb-5">
-          <Card
-            className="card card-teaser rounded shadow mt-3"
-            noWrapper={true}
-            tag="div"
-          >
-            <Icon icon="it-telephone" />
 
-            <CardBody tag="div" className={'card-body pe-3'}>
-              <RichText data={content.organizzato_da_esterno} />
-              {content?.telefono && (
-                <p className="card-text mt-3">
-                  <ContactLink tel={content.telefono} label={true} />
-                </p>
-              )}
-              {content?.fax && (
-                <p className="card-text mt-3">
-                  <ContactLink fax={content.fax} label={true} />
-                </p>
-              )}
-              {content?.reperibilita?.replace(/(<([^>]+)>)/g, '').length >
-                0 && (
-                <p className="card-text mt-3">
-                  {content?.reperibilita?.replace(/(<([^>]+)>)/g, '')}
-                </p>
-              )}
-              {content?.email && (
-                <p className="card-text mt-3">
-                  <ContactLink email={content.email} label={true} />
-                </p>
-              )}
-            </CardBody>
-          </Card>
-        </div>
-      ) : null}
+      {/* ---organizzato da esterno */}
+      <EventoContattiOrganizzatoreEsterno content={content} />
+
       {/* ---contatti interno */}
-      {content?.organizzato_da_interno?.length > 0 && (
-        <div className="mb-5">
-          <h3 className="h5">{intl.formatMessage(messages.organizzato_da)}</h3>
-          {content?.organizzato_da_interno?.map((item, index) => (
-            <OfficeCard
-              margin_bottom={
-                index < content?.organizzato_da_interno?.length - 1
-              }
-              key={item['@id']}
-              office={item}
-              icon={'it-telephone'}
-            >
-              {richTextHasContent(content?.contatto_reperibilita) && (
-                <p className="card-text mt-3">
-                  {content?.contatto_reperibilita?.replace(/(<([^>]+)>)/g, '')}
-                </p>
-              )}
-            </OfficeCard>
-          ))}
-        </div>
-      )}
+      <EventoContattiOrganizzatoreInterno content={content} />
+
       {/* ---supportato da */}
-      {content?.supportato_da?.length > 0 && (
-        <div className="mb-5">
-          <h3 className="mt-4 supported-by h5">
-            {intl.formatMessage(messages.supported_by)}
-          </h3>
-          {content?.supportato_da?.map((item) => (
-            <OfficeCard key={item['@id']} office={item} icon={'it-pa'} />
-          ))}
-        </div>
-      )}
+      <EventoContattiSupportatoDa content={content} />
     </RichTextSection>
   ) : null;
 };
