@@ -1,5 +1,18 @@
 
 
+## [10.2.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.2.0...v10.2.1) (2023-11-06)
+
+
+### Bug Fixes
+
+* fix id for gallery video title ([5d35058](https://github.com/redturtle/design-comuni-plone-theme/commit/5d35058308c04eaa416146a3966a9cfb4915bbab))
+* sidemenu by titles work only with h2 and not items with id #header-* ([71ca592](https://github.com/redturtle/design-comuni-plone-theme/commit/71ca5921f68ade764e9aaab47b529342befe51d3))
+
+
+### Maintenance
+
+* updated publiccode ([3041114](https://github.com/redturtle/design-comuni-plone-theme/commit/3041114b59fced1d47ea05812f19006daf55eb0b))
+
 ## [10.2.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.1.1...v10.2.0) (2023-11-06)
 
 
