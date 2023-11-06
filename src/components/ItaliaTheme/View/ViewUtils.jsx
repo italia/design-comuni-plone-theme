@@ -63,7 +63,7 @@ export const useSideMenu = (content, documentBody) => {
   // }, [setObserver]);
 
   useEffect(() => {
-    if (!observer && !updateSideMenuOnLoadingBlocks) return;
+    if (!updateSideMenuOnLoadingBlocks) return;
 
     if (!observer) {
       const obs = updateSideMenuOnLoadingBlocks
