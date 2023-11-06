@@ -149,7 +149,6 @@ msgid "Content in evidence"
 msgstr "Contenuto in primo piano"
 
 #: components/ItaliaTheme/View/Commons/SideMenu
-#: components/ItaliaTheme/View/Commons/SideMenuByTitles
 # defaultMessage: Contenuto
 msgid "Contenuto"
 msgstr "Contenuto"
@@ -1248,11 +1247,6 @@ msgstr "Contatti"
 # defaultMessage: Contatti
 msgid "contatti"
 msgstr "Contatti"
-
-#: components/ItaliaTheme/View/EventoView/EventoContatti
-# defaultMessage: Contatti interni
-msgid "contatti_interni"
-msgstr "Contatti interni"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge
 # defaultMessage: Copertura geografica del servizio
@@ -2598,7 +2592,7 @@ msgstr "Orario per il pubblico"
 msgid "order_by"
 msgstr "Ordina per"
 
-#: components/ItaliaTheme/View/EventoView/EventoContatti
+#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreInterno
 # defaultMessage: Organizzato da
 msgid "organizzato_da"
 msgstr "Organizzato da"
@@ -3685,7 +3679,7 @@ msgstr "Tags"
 msgid "successivo"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView/EventoContatti
+#: components/ItaliaTheme/View/EventoView/EventoContattiSupportatoDa
 # defaultMessage: Con il supporto di
 msgid "supported_by"
 msgstr "Con il supporto di"
