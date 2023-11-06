@@ -33,14 +33,6 @@ const extractHeaders = (elements, intl) => {
     item = elements[index];
 
     if (item.id === 'text-body') {
-      headers.push({
-        id: item.id,
-        title:
-          item.getAttribute('menu_title') ||
-          intl.formatMessage(messages.contenuto),
-        item: item,
-      });
-
       const h = item.getElementsByTagName('h2');
 
       for (var hi = 0; hi < h.length; hi++) {
