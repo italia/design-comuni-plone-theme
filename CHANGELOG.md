@@ -1,5 +1,12 @@
 
 
+## [10.1.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.1.0...v10.1.1) (2023-11-06)
+
+
+### Bug Fixes
+
+* fix sideMenuByTitles to remove duplicate text title when it is hidden ([9da33c8](https://github.com/redturtle/design-comuni-plone-theme/commit/9da33c8d5f5470e20873a04e5963d66a3cc46515))
+
 ## [10.1.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.0.0...v10.1.0) (2023-11-06)
 
 
