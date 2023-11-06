@@ -202,8 +202,18 @@ const Gallery = ({
             {title_video && (
               <div className="it-header-block">
                 <div className="it-header-block-title">
-                  {title_type === 'h4' && <h4 id="galleria">{title_video}</h4>}
-                  {title_type === 'h5' && <h5 id="galleria">{title_video}</h5>}
+                  {title_type === 'h2' && (
+                    <h2 className="h4" id={title_id}>
+                      {title_video}
+                    </h2>
+                  )}
+                  {title_type === 'h3' && (
+                    <h3 className="h5" id={title_id}>
+                      {title_video}
+                    </h3>
+                  )}
+                  {title_type === 'h4' && <h4 id={title_id}>{title_video}</h4>}
+                  {title_type === 'h5' && <h5 id={title_id}>{title_video}</h5>}
                 </div>
               </div>
             )}
