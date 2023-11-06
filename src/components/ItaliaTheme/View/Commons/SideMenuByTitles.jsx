@@ -28,25 +28,14 @@ const extractHeaders = (elements, intl) => {
   for (var index = 0; index < elements.length; index++) {
     item = elements[index];
 
-    if (item.id === 'text-body') {
-      const h = item.getElementsByTagName('h2');
+    const h = item.getElementsByTagName('h2');
 
-      for (var hi = 0; hi < h.length; hi++) {
-        headers.push({
-          id: h[hi].id,
-          title: h[hi].innerText,
-          item: h[hi],
-        });
-      }
-    } else {
-      let item_header = item.querySelector('#header-' + item.id);
-      if (item_header) {
-        headers.push({
-          id: item.id,
-          title: item_header.textContent,
-          item: item,
-        });
-      }
+    for (var hi = 0; hi < h.length; hi++) {
+      headers.push({
+        id: h[hi].id,
+        title: h[hi].innerText,
+        item: h[hi],
+      });
     }
   }
   return headers;
