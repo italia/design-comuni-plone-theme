@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-11-03T10:53:24.029Z\n"
+"POT-Creation-Date: 2023-11-06T09:06:10.531Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -151,6 +151,7 @@ msgid "Content in evidence"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SideMenu
+#: components/ItaliaTheme/View/Commons/SideMenuByTitles
 # defaultMessage: Contenuto
 msgid "Contenuto"
 msgstr ""
@@ -2201,6 +2202,7 @@ msgid "incarico"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SideMenu
+#: components/ItaliaTheme/View/Commons/SideMenuByTitles
 # defaultMessage: Indice della pagina
 msgid "index"
 msgstr ""
