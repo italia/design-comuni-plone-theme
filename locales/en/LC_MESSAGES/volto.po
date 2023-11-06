@@ -149,6 +149,7 @@ msgid "Content in evidence"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SideMenu
+#: components/ItaliaTheme/View/Commons/SideMenuByTitles
 # defaultMessage: Contenuto
 msgid "Contenuto"
 msgstr "Content"
@@ -2199,6 +2200,7 @@ msgid "incarico"
 msgstr "assignment"
 
 #: components/ItaliaTheme/View/Commons/SideMenu
+#: components/ItaliaTheme/View/Commons/SideMenuByTitles
 # defaultMessage: Indice della pagina
 msgid "index"
 msgstr "Page index"

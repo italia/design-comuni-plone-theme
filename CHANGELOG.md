@@ -1,5 +1,19 @@
 
 
+## [10.1.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.0.0...v10.1.0) (2023-11-06)
+
+
+### Features
+
+* Sidemenu customizable ([#388](https://github.com/redturtle/design-comuni-plone-theme/issues/388)) ([94fa0c1](https://github.com/redturtle/design-comuni-plone-theme/commit/94fa0c107f73acb9b7e89638f613206391cefc46))
+
+
+### Bug Fixes
+
+* GalleryPreview ([29f0299](https://github.com/redturtle/design-comuni-plone-theme/commit/29f02990f1e7467e536f151c9e86821c1b0c9e98))
+* locales ([14d268b](https://github.com/redturtle/design-comuni-plone-theme/commit/14d268be970d6fccce06c0c24f99c67745735fef))
+* useSideMenu observer ([bd2e4ab](https://github.com/redturtle/design-comuni-plone-theme/commit/bd2e4ab451d4bc5a05b2673cdbf4a2b05038f4b4))
+
 ## [10.0.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.9.0...v10.0.0) (2023-11-03)
 
 
