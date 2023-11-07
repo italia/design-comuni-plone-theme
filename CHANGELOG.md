@@ -1,5 +1,17 @@
 
 
+## [10.2.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.2.1...v10.2.2) (2023-11-07)
+
+
+### Bug Fixes
+
+* header Metadata to h2 ([d2952b7](https://github.com/redturtle/design-comuni-plone-theme/commit/d2952b781df8b7e42f9e8c48999aa9f79538081e))
+
+
+### Maintenance
+
+* preparing release ([6b70a73](https://github.com/redturtle/design-comuni-plone-theme/commit/6b70a739835175b39478156d29a6f144b1ecb9ae))
+
 ## [10.2.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.2.0...v10.2.1) (2023-11-06)
 
 
