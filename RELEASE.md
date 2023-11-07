@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (xx/xx/xxxx)
+
+### Fix
+
+- Adeguata la sezione dei Metadati della pagina (Ulteriori informazioni) ai template AGID.
+
 ## Versione 10.2.0 (06/11/2023)
 
 ### Novità
