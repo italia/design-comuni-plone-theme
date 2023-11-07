@@ -320,10 +320,3 @@ dl.trasparenza-fields {
 #search-page-button {
   border-bottom: 1px solid $neutral-1-a7;
 }
-
-#metadata {
-  font-family: $font-family-serif;
-  color: $gray-secondary;
-  @include rem-size(font-size, 16px);
-  @include rem-size(line-height, 24px);
-}

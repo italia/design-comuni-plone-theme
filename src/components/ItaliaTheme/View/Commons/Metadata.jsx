@@ -47,11 +47,8 @@ const Metadata = ({
           {title}
         </h2>
       )}
-      {children}
-      <p className="font-serif mb-0 mt-4 last-modified">
-        <strong>{intl.formatMessage(messages.modified)}:</strong>{' '}
-        {viewDate(intl.locale, content.modified, 'DD-MM-Y, HH:MM')}
-      </p>
+      {children && <div className="font-serif">{children}</div>}
+
       {content.rights && (
         <>
           <p className="font-serif mb-0 mt-4 metadata">
@@ -80,6 +77,11 @@ const Metadata = ({
           ))}
         </>
       )}
+
+      <p className="mb-0 mt-4 last-modified">
+        <strong>{intl.formatMessage(messages.modified)}:</strong>{' '}
+        {viewDate(intl.locale, content.modified, 'DD-MM-Y, HH:MM')}
+      </p>
     </section>
   );
 };

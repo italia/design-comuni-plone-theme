@@ -1,4 +1,15 @@
 #metadata {
+  color: $gray-secondary;
+  @include rem-size(font-size, 16px);
+  @include rem-size(line-height, 24px);
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $gray-secondary;
+  }
+
   h6 {
     margin-bottom: 1em;
   }
