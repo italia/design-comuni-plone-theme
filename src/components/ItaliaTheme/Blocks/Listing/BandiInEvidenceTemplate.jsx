@@ -19,6 +19,8 @@ import {
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { viewDate } from 'design-comuni-plone-theme/helpers';
 
+import { BandoStatus } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+
 const messages = defineMessages({
   vedi: {
     id: 'bando_vedi',
@@ -39,22 +41,6 @@ const messages = defineMessages({
   stato: {
     id: 'bando_stato',
     defaultMessage: 'Stato:',
-  },
-  open: {
-    id: 'bando_open',
-    defaultMessage: 'Attivo',
-  },
-  scheduled: {
-    id: 'bando_scheduled',
-    defaultMessage: 'Programmato',
-  },
-  closed: {
-    id: 'bando_closed',
-    defaultMessage: 'Scaduto',
-  },
-  inProgress: {
-    id: 'bando_inProgress',
-    defaultMessage: 'In corso',
   },
   ente: {
     id: 'bando_ente',
@@ -215,7 +201,7 @@ const BandiInEvidenceTemplate = ({
                               ),
                             })}
                           >
-                            {intl.formatMessage(messages[item.bando_state[0]])}
+                            <BandoStatus content={item} />
                           </div>
                         </span>
                       </span>

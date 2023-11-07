@@ -73,6 +73,7 @@ export Sponsors from 'design-comuni-plone-theme/components/ItaliaTheme/View/Comm
 export RelatedItems from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RelatedItems';
 export RelatedItemInEvidence from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/RelatedItemInEvidence';
 export DownloadFileFormat from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/DownloadFileFormat';
+export BandoStatus from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/BandoStatus';
 export BandoDates from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/BandoDates';
 
 /* --- View --- */

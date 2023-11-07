@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
+import { BandoStatus } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+
 /**
  * PageHeaderBando view component class.
  * @function PageHeaderBando
@@ -16,22 +18,6 @@ const messages = defineMessages({
   bando: {
     id: 'Bando',
     defaultMessage: 'Bando',
-  },
-  open: {
-    id: 'bando_open',
-    defaultMessage: 'attivo',
-  },
-  closed: {
-    id: 'bando_closed',
-    defaultMessage: 'scaduto',
-  },
-  inProgress: {
-    id: 'bando_inProgress',
-    defaultMessage: 'in corso',
-  },
-  scheduled: {
-    id: 'bando_scheduled',
-    defaultMessage: 'programmato',
   },
 });
 
@@ -64,7 +50,7 @@ const PageHeaderBando = ({ content }) => {
                 size=""
               />
               {intl.formatMessage(messages.bando)}{' '}
-              {intl.formatMessage(messages[content.bando_state[0]])}
+              <BandoStatus content={content} />
             </div>
           </div>
         </div>

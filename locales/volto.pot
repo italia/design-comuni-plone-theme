@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-11-06T11:52:47.601Z\n"
+"POT-Creation-Date: 2023-11-07T09:01:50.705Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -998,8 +998,7 @@ msgstr ""
 msgid "bandi_search_no_filters"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
+#: components/ItaliaTheme/View/Commons/BandoStatus
 # defaultMessage: Scaduto
 msgid "bando_closed"
 msgstr ""
@@ -1025,14 +1024,12 @@ msgstr ""
 msgid "bando_ente"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
+#: components/ItaliaTheme/View/Commons/BandoStatus
 # defaultMessage: In corso
 msgid "bando_inProgress"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
+#: components/ItaliaTheme/View/Commons/BandoStatus
 # defaultMessage: Attivo
 msgid "bando_open"
 msgstr ""
@@ -1042,8 +1039,7 @@ msgstr ""
 msgid "bando_scadenza"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
+#: components/ItaliaTheme/View/Commons/BandoStatus
 # defaultMessage: Programmato
 msgid "bando_scheduled"
 msgstr ""
