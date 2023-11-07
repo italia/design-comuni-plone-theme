@@ -43,9 +43,9 @@ const Metadata = ({
       className={cx('it-page-section', { 'mb-5': !noMargin })}
     >
       {showSectionTitle && title && (
-        <h4 id="header-metadata" className="mb-3">
+        <h2 id="header-metadata" className="mb-3">
           {title}
-        </h4>
+        </h2>
       )}
       {children}
       <p className="font-serif mb-0 mt-4 last-modified">
