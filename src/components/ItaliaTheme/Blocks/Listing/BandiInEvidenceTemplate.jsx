@@ -123,14 +123,13 @@ const BandiInEvidenceTemplate = ({
                     )}
 
                     {/* Tipologia */}
-
-                    {show_tipologia && item.tipologia_bando?.title?.length > 0 && (
+                    {show_tipologia && item?.tipologia_bando && (
                       <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
                         <div className="bando-dati-label me-2">
                           {intl.formatMessage(messages.tipologia)}:
                         </div>
                         <span className="bando-dati-date">
-                          {item.tipologia_bando?.title}
+                          {item.tipologia_bando}
                         </span>
                       </span>
                     )}
