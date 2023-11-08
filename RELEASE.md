@@ -41,12 +41,11 @@
 - ...
 -->
 
-## Versione x.x.x (xx/xx/xxxx)
+## Versione 10.3.0 (08/11/2023)
 
 ### Fix
 
 - Sistemata la visualizzazione della tipologia del bando nel template del blocco elenco 'Bandi'
-
 
 ## Versione 10.2.0 (06/11/2023)
 
