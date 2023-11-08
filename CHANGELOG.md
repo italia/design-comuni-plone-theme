@@ -1,5 +1,23 @@
 
 
+## [10.3.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.2.2...v10.3.0) (2023-11-08)
+
+
+### Features
+
+* new BandoStatus component to manage the current status translations ([#390](https://github.com/redturtle/design-comuni-plone-theme/issues/390)) ([4f0f775](https://github.com/redturtle/design-comuni-plone-theme/commit/4f0f775e99572152f359c3dd6b227601ebffcdd9))
+
+
+### Bug Fixes
+
+* updated tipologia_bando data in Bando listing template ([#393](https://github.com/redturtle/design-comuni-plone-theme/issues/393)) ([6f38934](https://github.com/redturtle/design-comuni-plone-theme/commit/6f3893457c10035cfc17bede816b91fcbeae93d7))
+
+
+### Maintenance
+
+* preparing release ([73632c8](https://github.com/redturtle/design-comuni-plone-theme/commit/73632c832a5f7ad350d407cb2bfe5723d193730b))
+* Update RELEASE.md ([#394](https://github.com/redturtle/design-comuni-plone-theme/issues/394)) ([0da8790](https://github.com/redturtle/design-comuni-plone-theme/commit/0da8790b5238ade33a491894d98c06f2813e8993))
+
 ## [10.2.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.2.1...v10.2.2) (2023-11-07)
 
 
