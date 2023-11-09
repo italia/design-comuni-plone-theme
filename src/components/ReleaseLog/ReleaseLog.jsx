@@ -15,28 +15,21 @@ import {
 } from 'design-react-kit';
 import { Helmet } from '@plone/volto/helpers';
 import { marked } from 'marked';
-
+import config from '@plone/volto/registry';
 import './ReleaseLog.css';
 
 const ReleaseLog = () => {
-  let ReleaseDCPT = null;
-  let ReleaseIoCittadino = null;
-  let ReleaseIoPrenoto = null;
-  try {
-    ReleaseDCPT = require('design-comuni-plone-theme/../RELEASE.md');
-  } catch {
-    console.log("design-comuni-plone-theme/../RELEASE.md doesn't exists");
-  }
-  try {
-    ReleaseIoCittadino = require('@redturtle/volto-io-cittadino/../RELEASE.md');
-  } catch {
-    console.log("@redturtle/volto-io-cittadino/../RELEASE.md doesn't exists");
-  }
-  try {
-    ReleaseIoPrenoto = require('@redturtle/volto-io-prenoto/../RELEASE.md');
-  } catch {
-    console.log("@redturtle/volto-io-prenoto/../RELEASE.md doesn't exists");
-  }
+  const { addonsInfo } = config.settings;
+  const addons = addonsInfo.map((addon) => addon.name);
+  const ReleaseDCPT = addons.includes('design-comuni-plone-theme')
+    ? require('design-comuni-plone-theme/../RELEASE.md')
+    : null;
+  const ReleaseIoCittadino = addons.includes('@redturtle/volto-io-cittadino')
+    ? require('@redturtle/volto-io-cittadino/../RELEASE.md')
+    : null;
+  const ReleaseIoPrenoto = addons.includes('@redturtle/volto-io-prenoto')
+    ? require('@redturtle/volto-io-prenoto/../RELEASE.md')
+    : null;
 
   const LOGS_TO_VIEW = [
     { name: 'io-Comune', file: ReleaseDCPT },
