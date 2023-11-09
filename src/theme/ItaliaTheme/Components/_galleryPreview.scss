@@ -23,30 +23,29 @@
       }
     }
 
+    .modal-body {
+      padding-top: 0;
+    }
+
     .item-preview {
       position: relative;
       margin-bottom: 1.25rem;
-
-      .image {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
 
       img {
         width: auto !important;
         max-width: 100%;
-
         height: auto;
-        max-height: calc(100vh - 12rem);
+        max-height: 72vh;
       }
 
       button.btn {
         position: absolute;
         z-index: 1;
-
         top: 50%;
-
         border-radius: 100%;
         transform: translateY(-50%);
         height: 3.05rem;
@@ -69,9 +68,6 @@
           height: auto;
         }
       }
-    }
-    .modal-body {
-      padding-top: 0;
     }
   }
 }

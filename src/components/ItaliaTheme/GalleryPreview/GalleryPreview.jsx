@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { flattenToAppURL } from '@plone/volto/helpers';
-
 import PropTypes from 'prop-types';
 import { Modal, ModalBody, Button, ModalHeader } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 const messages = defineMessages({
   view_prev: {
@@ -31,17 +29,9 @@ const messages = defineMessages({
  */
 const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
   const intl = useIntl();
+
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const image = items[viewIndex];
-
-  let checkUrlImage = image?.image_field
-    ? image?.image_scales?.[image?.image_field]?.[0]?.scales?.larger?.download
-    : image?.image?.scales?.larger?.download ||
-      image?.image_scales?.image[0]?.scales?.larger?.download;
-
-  if (checkUrlImage?.startsWith('@@')) {
-    checkUrlImage = image['@id'] + '/' + checkUrlImage;
-  }
 
   const closeModal = () => {
     setViewIndex(null);
@@ -74,7 +64,6 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
       {viewIndex != null && (
         <>
           <ModalHeader
-            closeButton={true}
             closeAriaLabel={intl.formatMessage(messages.close_preview)}
             toggle={closeModal}
           >
@@ -98,17 +87,15 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
                   <Icon color="" icon="it-arrow-left" padding={false} />
                 </Button>
               )}
-              <div className="image">
-                {checkUrlImage ? (
-                  <img
-                    src={flattenToAppURL(checkUrlImage)}
-                    loading="lazy"
-                    alt={image.title}
-                  />
-                ) : (
-                  <img src={DefaultImageSVG} alt="" />
-                )}
-              </div>
+
+              {image && (
+                <Image
+                  key={image['@id']}
+                  itemUrl={image['@id']}
+                  image={image['@id']}
+                  alt={image.title}
+                />
+              )}
 
               {items.length > 1 && (
                 <Button
