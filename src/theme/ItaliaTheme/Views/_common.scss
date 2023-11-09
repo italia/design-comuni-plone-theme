@@ -292,6 +292,16 @@ div.sticky-wrapper {
   & > article.mt-5:first-of-type {
     margin-top: 0 !important;
   }
+
+  //gestione scroll per h2 con classe .visually-hidden: non devono avere il margine sopra altrimenti lo scroll si posiziona più in basso rispetto all'inizio del testo
+  .public-ui .h2,
+  .public-ui h2,
+  .h2,
+  h2 {
+    &.visually-hidden {
+      margin-top: 0 !important;
+    }
+  }
 }
 
 #view .it-carousel-wrapper .it-header-block .it-header-block-title h2.h4 {
