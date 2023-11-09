@@ -29,7 +29,7 @@ const View = ({ data, pathname }) => {
 
   return (
     <section role="alert" className="block alertblock">
-      <div className={cx('full-width', 'bg-alert-' + data.color)}>
+      <div className={cx('full-width', 'bg-alert-' + data.bg_color)}>
         <Container className="p-4 pt-5 pb-5">
           <Row className="align-items-start">
             {data.image?.data && (
@@ -38,7 +38,9 @@ const View = ({ data, pathname }) => {
                   src={`data:${data.image['content-type']};${data.image.encoding},${data.image.data}`}
                   alt=""
                   aria-hidden="true"
-                  className="left-image"
+                  className={cx('left-image', [
+                    data.sizeImage ? 'size-' + data.sizeImage : 'size-l',
+                  ])}
                   loading="lazy"
                 />
               </Col>

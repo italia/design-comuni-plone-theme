@@ -367,6 +367,20 @@ body.cms-ui {
     .button.tertiary.active {
       background-color: $tertiary;
     }
+
+    // Alert block
+    .button.info,
+    .button.info.active {
+      background-color: $alert-info;
+    }
+    .button.warning,
+    .button.warning.active {
+      background-color: $alert-warning;
+    }
+    .button.danger,
+    .button.danger.active {
+      background-color: $alert-danger;
+    }
   }
 
   .path-filter-widget {

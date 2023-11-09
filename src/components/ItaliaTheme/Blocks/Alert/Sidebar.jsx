@@ -1,30 +1,35 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Form } from 'semantic-ui-react';
-import { Button, Grid, Segment } from 'semantic-ui-react';
+import { Segment } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
 import { FileWidget } from '@plone/volto/components';
+import { ColorListWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import ImageSizeWidget from '@plone/volto/components/manage/Widgets/ImageSizeWidget';
 
 const messages = defineMessages({
   Color: {
     id: 'Color',
     defaultMessage: 'Colore',
   },
-  Color_warning: {
-    id: 'Color_warning',
+  color_warning: {
+    id: 'color_warning',
     defaultMessage: 'Giallo',
   },
-  Color_warning_orange: {
-    id: 'Color_warning_orange',
+  color_orange: {
+    id: 'color_orange',
     defaultMessage: 'Arancione',
   },
-  Color_danger: {
-    id: 'Color_danger',
+  color_danger: {
+    id: 'color_danger',
     defaultMessage: 'Rosso',
   },
   Image: {
     id: 'Image',
     defaultMessage: 'Immagine',
+  },
+  CardImageSize: {
+    id: 'CardImageSize',
+    defaultMessage: 'Dimensione immagine',
   },
 });
 
@@ -37,6 +42,21 @@ class Sidebar extends Component {
   };
 
   render() {
+    const bg_colors = [
+      {
+        name: 'info',
+        label: this.props.intl.formatMessage(messages.color_warning),
+      },
+      {
+        name: 'warning',
+        label: this.props.intl.formatMessage(messages.color_orange),
+      },
+      {
+        name: 'danger',
+        label: this.props.intl.formatMessage(messages.color_danger),
+      },
+    ];
+
     return (
       <Segment.Group raised>
         <header className="header pulled">
@@ -46,74 +66,18 @@ class Sidebar extends Component {
         </header>
 
         <Segment className="form">
-          <Form.Field inline required={this.props.required}>
-            <Grid>
-              <Grid.Row>
-                <Grid.Column width="4">
-                  <div className="wrapper">
-                    <label htmlFor="field-align">
-                      {this.props.intl.formatMessage(messages.Color)}
-                    </label>
-                  </div>
-                </Grid.Column>
-                <Grid.Column
-                  width="8"
-                  verticalAlign="middle"
-                  className="color-chooser"
-                >
-                  <Button.Group vertical compact>
-                    <Button
-                      icon
-                      basic={this.props.data.color !== 'warning'}
-                      color="yellow"
-                      onClick={(name, value) => {
-                        this.props.onChangeBlock(this.props.block, {
-                          ...this.props.data,
-                          color: 'warning',
-                        });
-                      }}
-                      active={this.props.data.color === 'warning'}
-                      content={this.props.intl.formatMessage(
-                        messages.Color_warning,
-                      )}
-                    />
-
-                    <Button
-                      icon
-                      basic={this.props.data.color !== 'warning-orange'}
-                      color="orange"
-                      onClick={(name, value) => {
-                        this.props.onChangeBlock(this.props.block, {
-                          ...this.props.data,
-                          color: 'warning-orange',
-                        });
-                      }}
-                      active={this.props.data.color === 'warning-orange'}
-                      content={this.props.intl.formatMessage(
-                        messages.Color_warning_orange,
-                      )}
-                    />
-
-                    <Button
-                      icon
-                      basic={this.props.data.color !== 'danger'}
-                      color="red"
-                      onClick={(name, value) => {
-                        this.props.onChangeBlock(this.props.block, {
-                          ...this.props.data,
-                          color: 'danger',
-                        });
-                      }}
-                      active={this.props.data.color === 'danger'}
-                      content={this.props.intl.formatMessage(
-                        messages.Color_danger,
-                      )}
-                    />
-                  </Button.Group>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-          </Form.Field>
+          <ColorListWidget
+            id="bg_color"
+            title={this.props.intl.formatMessage(messages.Color)}
+            value={this.props.data.bg_color}
+            onChange={(id, value) => {
+              this.props.onChangeBlock(this.props.block, {
+                ...this.props.data,
+                [id]: value,
+              });
+            }}
+            colors={bg_colors}
+          />
           <FileWidget
             id="image"
             title={this.props.intl.formatMessage(messages.Image)}
@@ -124,6 +88,17 @@ class Sidebar extends Component {
                 image: value,
               });
             }}
+          />
+          <ImageSizeWidget
+            id="sizeImage"
+            title={this.props.intl.formatMessage(messages.CardImageSize)}
+            onChange={(name, value) => {
+              this.props.onChangeBlock(this.props.block, {
+                ...this.props.data,
+                sizeImage: value,
+              });
+            }}
+            value={this.props.data.sizeImage}
           />
         </Segment>
       </Segment.Group>

@@ -59,8 +59,8 @@ class Edit extends Component {
 
   constructor(props) {
     super(props);
-    if (!this.props.data.color) {
-      this.props.data.color = 'warning';
+    if (!this.props.data.bg_color) {
+      this.props.data.bg_color = 'warning';
     }
     this.blockNode = React.createRef();
   }
@@ -78,8 +78,8 @@ class Edit extends Component {
         >
           <Row
             className={cx(
-              'row-full-width p-5',
-              'bg-alert-' + this.props.data.color,
+              'full-width p-5',
+              'bg-alert-' + this.props.data.bg_color,
             )}
           >
             <Container className="ui">
@@ -89,7 +89,11 @@ class Edit extends Component {
                     <img
                       src={`data:${this.props.data.image['content-type']};${this.props.data.image.encoding},${this.props.data.image.data}`}
                       alt=""
-                      className="left-image"
+                      className={cx('left-image', [
+                        this.props.data.sizeImage
+                          ? 'size-' + this.props.data.sizeImage
+                          : 'size-l',
+                      ])}
                     />
                   </Col>
                 )}

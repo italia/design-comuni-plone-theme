@@ -88,6 +88,7 @@ msgstr "Voir"
 msgid "CardImageRight"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Dimensione immagine
 msgid "CardImageSize"
@@ -133,21 +134,6 @@ msgstr "Cliquez ici pour remplacer le fichier"
 #: components/ItaliaTheme/manage/Widgets/ColorListWidget
 # defaultMessage: Colore
 msgid "Color"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Alert/Sidebar
-# defaultMessage: Rosso
-msgid "Color_danger"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Alert/Sidebar
-# defaultMessage: Giallo
-msgid "Color_warning"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Alert/Sidebar
-# defaultMessage: Arancione
-msgid "Color_warning_orange"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoContatti
@@ -1219,6 +1205,16 @@ msgstr "Fermer la recherche"
 msgid "codice_ipa"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Alert/Sidebar
+# defaultMessage: Rosso
+msgid "color_danger"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Alert/Sidebar
+# defaultMessage: Arancione
+msgid "color_orange"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Primario
@@ -1228,6 +1224,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Trasparente
 msgid "color_transparent"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Alert/Sidebar
+# defaultMessage: Giallo
+msgid "color_warning"
 msgstr ""
 
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView

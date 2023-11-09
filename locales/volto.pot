@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-11-07T16:35:33.634Z\n"
+"POT-Creation-Date: 2023-11-08T17:11:37.097Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -73,6 +73,7 @@ msgstr ""
 msgid "CardImageRight"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Dimensione immagine
 msgid "CardImageSize"
@@ -118,21 +119,6 @@ msgstr ""
 #: components/ItaliaTheme/manage/Widgets/ColorListWidget
 # defaultMessage: Colore
 msgid "Color"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Alert/Sidebar
-# defaultMessage: Rosso
-msgid "Color_danger"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Alert/Sidebar
-# defaultMessage: Giallo
-msgid "Color_warning"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Alert/Sidebar
-# defaultMessage: Arancione
-msgid "Color_warning_orange"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoContatti
@@ -1204,6 +1190,16 @@ msgstr ""
 msgid "codice_ipa"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Alert/Sidebar
+# defaultMessage: Rosso
+msgid "color_danger"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Alert/Sidebar
+# defaultMessage: Arancione
+msgid "color_orange"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Primario
@@ -1213,6 +1209,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Trasparente
 msgid "color_transparent"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Alert/Sidebar
+# defaultMessage: Giallo
+msgid "color_warning"
 msgstr ""
 
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
