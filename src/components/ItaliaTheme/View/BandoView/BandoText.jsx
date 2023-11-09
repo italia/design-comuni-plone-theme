@@ -7,22 +7,14 @@ import {
   richTextHasContent,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
+import BandoTextTipologia from 'design-comuni-plone-theme/components/ItaliaTheme/View/BandoView/BandoTextTipologia';
+import BandoTextDestinatari from 'design-comuni-plone-theme/components/ItaliaTheme/View/BandoView/BandoTextDestinatari';
+import BandoTextEnte from 'design-comuni-plone-theme/components/ItaliaTheme/View/BandoView/BandoTextEnte';
+
 const messages = defineMessages({
   descrizione: {
     id: 'descrizione_bando',
     defaultMessage: 'Descrizione',
-  },
-  tipologia_bando: {
-    id: 'tipologia_bando',
-    defaultMessage: 'Tipologia del bando',
-  },
-  destinatari: {
-    id: 'bando_destinatari',
-    defaultMessage: 'Destinatari del bando',
-  },
-  ente: {
-    id: 'bando_ente',
-    defaultMessage: 'Ente erogatore',
   },
 });
 
@@ -40,33 +32,11 @@ const BandoText = ({ content }) => {
       {/* DESCRIZIONE DEL BANDO */}
       {richTextHasContent(content?.text) && <RichText data={content?.text} />}
       {/* TIPOLOGIA DEL BANDO */}
-      {content?.tipologia_bando && (
-        <>
-          <h3 className="h5">{intl.formatMessage(messages.tipologia_bando)}</h3>
-          <span>{content.tipologia_bando.title}</span>
-        </>
-      )}
+      <BandoTextTipologia content={content} />
       {/* DESTINATARI DEL BANDO */}
-      {content?.destinatari?.length > 0 && (
-        <>
-          <h3 className="h5">{intl.formatMessage(messages.destinatari)}</h3>
-          {content.destinatari.map((item, i) => (
-            <p key={'destinatari-' + i}>{item.title}</p>
-          ))}
-        </>
-      )}
+      <BandoTextDestinatari content={content} />
       {/* ENTE DEL BANDO */}
-      {content?.ente_bando?.length > 0 && (
-        <>
-          <h3 className="h5">{intl.formatMessage(messages.ente)}</h3>
-          {content.ente_bando.map((item, i) => (
-            <span key={'ente_' + i}>
-              {item}
-              {i < content.ente_bando.length - 1 ? ', ' : ''}
-            </span>
-          ))}
-        </>
-      )}
+      <BandoTextEnte content={content} />
     </RichTextSection>
   ) : (
     <></>

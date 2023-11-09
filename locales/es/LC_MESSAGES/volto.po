@@ -1015,7 +1015,7 @@ msgstr "Expirado"
 msgid "bando_data_pubblicazione"
 msgstr "Fecha de publicación"
 
-#: components/ItaliaTheme/View/BandoView/BandoText
+#: components/ItaliaTheme/View/BandoView/BandoTextDestinatari
 # defaultMessage: Destinatari del bando
 msgid "bando_destinatari"
 msgstr "Destinatarios del anuncio de concurso"
@@ -1026,7 +1026,7 @@ msgid "bando_effective"
 msgstr "Fecha de publicación"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/BandoView/BandoText
+#: components/ItaliaTheme/View/BandoView/BandoTextEnte
 # defaultMessage: Ente
 msgid "bando_ente"
 msgstr "Autoridad proveedora"
@@ -3743,7 +3743,7 @@ msgstr "Insertar un valor"
 msgid "timeline_tempi_scadenze_validation_error"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoText
+#: components/ItaliaTheme/View/BandoView/BandoTextTipologia
 # defaultMessage: Tipologia del bando
 msgid "tipologia_bando"
 msgstr "Tipo de llamada"

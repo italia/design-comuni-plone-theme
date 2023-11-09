@@ -1006,7 +1006,7 @@ msgstr "Expired"
 msgid "bando_data_pubblicazione"
 msgstr "Publication date"
 
-#: components/ItaliaTheme/View/BandoView/BandoText
+#: components/ItaliaTheme/View/BandoView/BandoTextDestinatari
 # defaultMessage: Destinatari del bando
 msgid "bando_destinatari"
 msgstr "Recipients of the competition notice"
@@ -1017,7 +1017,7 @@ msgid "bando_effective"
 msgstr "Publication date"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/BandoView/BandoText
+#: components/ItaliaTheme/View/BandoView/BandoTextEnte
 # defaultMessage: Ente
 msgid "bando_ente"
 msgstr "Supplying authority"
@@ -3734,7 +3734,7 @@ msgstr "Insert a value"
 msgid "timeline_tempi_scadenze_validation_error"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoText
+#: components/ItaliaTheme/View/BandoView/BandoTextTipologia
 # defaultMessage: Tipologia del bando
 msgid "tipologia_bando"
 msgstr "Type of call"
