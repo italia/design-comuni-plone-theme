@@ -9,3 +9,13 @@ body.public-ui.contenttype-lrf {
 .sidebar-container-enter-done {
   z-index: 150000 !important;
 }
+
+body.subsite.subsite-root {
+  &,
+  .public-ui {
+    .documentFirstHeading,
+    #briciole {
+      display: none;
+    }
+  }
+}

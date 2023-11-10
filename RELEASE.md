@@ -52,6 +52,7 @@
 ### Fix
 
 - Sistemata la visualizzazione della tipologia del bando nel template del blocco elenco 'Bandi'
+- Rimosso titolo della pagina nei sottositi senza nessuno stile applicato
 
 ## Versione 10.2.0 (06/11/2023)
 
