@@ -195,6 +195,10 @@ export VenueWhere from 'design-comuni-plone-theme/components/ItaliaTheme/View/Ve
 export VenuePublicTimetable from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenuePublicTimetable';
 export VenueContacts from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueContacts';
 export VenueMoreInfos from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueMoreInfos';
+export VenueTipologia from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueTipologia';
+export VenueElementiDiInteresse from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueElementiDiInteresse';
+export VenueLuoghiCorrelati from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueLuoghiCorrelati';
+export VenueMultimedia from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueMultimedia';
 
 export PuntoDiContattoView from 'design-comuni-plone-theme/components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView';
 export PuntoDiContattoPlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/PuntoDiContattoView/Placeholder/AfterContent';
