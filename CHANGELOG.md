@@ -1,5 +1,34 @@
 
 
+## [10.4.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.3.0...v10.4.0) (2023-11-14)
+
+
+### Features
+
+* added image size and colorListWidget in Alert block ([#396](https://github.com/RedTurtle/design-comuni-plone-theme/issues/396)) ([63f3b5b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/63f3b5b60364e650de5123cf8b8108dd86eab9f9))
+* split VenueDescription component ([#399](https://github.com/RedTurtle/design-comuni-plone-theme/issues/399)) ([68c3ca5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/68c3ca5338f27f4e64ea257f679ae91dc1842491))
+
+
+### Bug Fixes
+
+* documentFirstHeading in subsites without style ([#400](https://github.com/RedTurtle/design-comuni-plone-theme/issues/400)) ([9588073](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9588073d4a2a72e4eb3664c5741b0368f59781fb))
+* icons in NumbersBlock and Sidebar Widget not updating  ([#402](https://github.com/RedTurtle/design-comuni-plone-theme/issues/402)) ([0df93a5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0df93a59c100df69085db83b4ade85101601ed35))
+* locales ([c4bdc14](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c4bdc148aa76ad7ee81945185f22b2eeead3feeb))
+* mark section filters correctly when navigating to search page from page header ([#401](https://github.com/RedTurtle/design-comuni-plone-theme/issues/401)) ([fdc6207](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fdc62074fa2b92292b128a31f7d227ed5e97c074))
+* ParentSiteMenu now draws only Visible site menu elements in subsites ([#403](https://github.com/RedTurtle/design-comuni-plone-theme/issues/403)) ([9fc0a24](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9fc0a2456030d1480fbe5b76cf4f9c29eab0d10e))
+* Photogallery popup image ([#395](https://github.com/RedTurtle/design-comuni-plone-theme/issues/395)) ([4fce154](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4fce154045e2cbc710fed9d975842edb1af7e85a))
+* scroll position on h2 .visually-hidden ([#397](https://github.com/RedTurtle/design-comuni-plone-theme/issues/397)) ([9356e6a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9356e6af8a3273ebb1d51c80d84ae0cce7c7dd3a))
+
+
+### Maintenance
+
+* split BandoView Text in different components ([#391](https://github.com/RedTurtle/design-comuni-plone-theme/issues/391)) ([e787f38](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e787f38899519daa2e6743e896e5f8d53fc8bf8a))
+
+
+### Documentation
+
+* updated publiccode and release log ([f95133b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f95133b0ddaa5ac27a07dfa772f48dfb1b59c067))
+
 ## [10.3.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.2.2...v10.3.0) (2023-11-08)
 
 
