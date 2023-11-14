@@ -49,6 +49,7 @@ class Edit extends SubblocksEdit {
     super(props);
     this.state.selectedField = 'title';
   }
+
   /**
    * Render method.
    * @method render

@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { defineMessages, useIntl } from 'react-intl';
@@ -14,6 +13,7 @@ const messages = defineMessages({
 const IconPreviewWidget = ({ icon, onEdit, title, description, children }) => {
   const intl = useIntl();
   const parts = icon?.split(' ') ?? [];
+
   return (
     <Form.Field inline className="help" id="icon-preview-widget-id">
       <Grid>

@@ -49,6 +49,7 @@
 
 ### Fix
 
+- Le icone del Blocco Numeri, del Blocco Icone e della Sidebar si aggiornano istantaneamente quando vengono cambiate
 - Sistemato un bug nell'header dei sottositi che mostrava le voci del menu del sito padre anche se queste erano indicate come non visibili nella configurazione del menu.
 
 ## Versione 10.3.0 (08/11/2023)
