@@ -27,7 +27,8 @@ const ParentSiteMenu = () => {
       // eslint-disable-next-line no-loop-func
       dropdownMenu.forEach((m) => {
         if (m.rootPath === s) {
-          menu = m;
+          // Filter non visible dropdown menu entries
+          menu = { ...m, items: m.items.filter((mi) => mi.visible) };
           i = 0;
         }
       });

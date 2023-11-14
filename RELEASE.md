@@ -47,6 +47,10 @@
 
 - Aggiunta la possibilità di selezionare la dimensione dell'immagine nel blocco Alert, inoltre è stato aggiornato anche il widget per la selezione del colore di sfondo.
 
+### Fix
+
+- Sistemato un bug nell'header dei sottositi che mostrava le voci del menu del sito padre anche se queste erano indicate come non visibili nella configurazione del menu.
+
 ## Versione 10.3.0 (08/11/2023)
 
 ### Fix
