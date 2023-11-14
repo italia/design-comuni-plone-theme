@@ -682,7 +682,7 @@ msgstr "Vedi tutto"
 msgid "VenuesSmall"
 msgstr "Luoghi"
 
-#: components/ItaliaTheme/View/VenueView/VenueDescription
+#: components/ItaliaTheme/View/VenueView/VenueMultimedia
 # defaultMessage: Video
 msgid "Video"
 msgstr "Video"
@@ -1798,7 +1798,7 @@ msgstr "Visibile"
 msgid "edit_social_links"
 msgstr "Modifica i social"
 
-#: components/ItaliaTheme/View/VenueView/VenueDescription
+#: components/ItaliaTheme/View/VenueView/VenueElementiDiInteresse
 # defaultMessage: Elementi di interesse
 msgid "elementi_di_interesse"
 msgstr "Elementi di interesse"
@@ -2354,7 +2354,7 @@ msgid "logo-subsite-alt"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
-#: components/ItaliaTheme/View/VenueView/VenueDescription
+#: components/ItaliaTheme/View/VenueView/VenueLuoghiCorrelati
 # defaultMessage: Luoghi correlati
 msgid "luoghi_correlati"
 msgstr "Luoghi correlati"
@@ -3746,7 +3746,7 @@ msgstr "Tipologia del bando"
 msgid "tipologia_incarico"
 msgstr "Tipo di incarico"
 
-#: components/ItaliaTheme/View/VenueView/VenueDescription
+#: components/ItaliaTheme/View/VenueView/VenueTipologia
 # defaultMessage: Tipo di luogo
 msgid "tipologia_luogo"
 msgstr "Tipo di luogo"

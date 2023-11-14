@@ -691,7 +691,7 @@ msgstr "Ver todo"
 msgid "VenuesSmall"
 msgstr "Lugares"
 
-#: components/ItaliaTheme/View/VenueView/VenueDescription
+#: components/ItaliaTheme/View/VenueView/VenueMultimedia
 # defaultMessage: Video
 msgid "Video"
 msgstr "Vídeo"
@@ -1807,7 +1807,7 @@ msgstr "Visibile"
 msgid "edit_social_links"
 msgstr "Editar redes sociales"
 
-#: components/ItaliaTheme/View/VenueView/VenueDescription
+#: components/ItaliaTheme/View/VenueView/VenueElementiDiInteresse
 # defaultMessage: Elementi di interesse
 msgid "elementi_di_interesse"
 msgstr "Elementos de interés"
@@ -2363,7 +2363,7 @@ msgid "logo-subsite-alt"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
-#: components/ItaliaTheme/View/VenueView/VenueDescription
+#: components/ItaliaTheme/View/VenueView/VenueLuoghiCorrelati
 # defaultMessage: Luoghi correlati
 msgid "luoghi_correlati"
 msgstr ""
@@ -3755,7 +3755,7 @@ msgstr "Tipo de llamada"
 msgid "tipologia_incarico"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView/VenueDescription
+#: components/ItaliaTheme/View/VenueView/VenueTipologia
 # defaultMessage: Tipo di luogo
 msgid "tipologia_luogo"
 msgstr ""

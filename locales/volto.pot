@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-11-08T17:11:37.097Z\n"
+"POT-Creation-Date: 2023-11-14T17:26:17.874Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -684,7 +684,7 @@ msgstr ""
 msgid "VenuesSmall"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView/VenueDescription
+#: components/ItaliaTheme/View/VenueView/VenueMultimedia
 # defaultMessage: Video
 msgid "Video"
 msgstr ""
@@ -1800,7 +1800,7 @@ msgstr ""
 msgid "edit_social_links"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView/VenueDescription
+#: components/ItaliaTheme/View/VenueView/VenueElementiDiInteresse
 # defaultMessage: Elementi di interesse
 msgid "elementi_di_interesse"
 msgstr ""
@@ -2356,7 +2356,7 @@ msgid "logo-subsite-alt"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
-#: components/ItaliaTheme/View/VenueView/VenueDescription
+#: components/ItaliaTheme/View/VenueView/VenueLuoghiCorrelati
 # defaultMessage: Luoghi correlati
 msgid "luoghi_correlati"
 msgstr ""
@@ -3748,7 +3748,7 @@ msgstr ""
 msgid "tipologia_incarico"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView/VenueDescription
+#: components/ItaliaTheme/View/VenueView/VenueTipologia
 # defaultMessage: Tipo di luogo
 msgid "tipologia_luogo"
 msgstr ""
