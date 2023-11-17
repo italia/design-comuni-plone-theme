@@ -57,11 +57,8 @@ $alert-block-warning: #f0c250;
       }
     }
 
-<<<<<<< HEAD
-    .bg-alert-warning-orange {
-      background-color: $alert-block-warning-orange;
-      color: $black;
-
+    .bg-alert-warning {
+      background-color: $alert-warning;
       h1,
       h2,
       h3,
@@ -70,20 +67,13 @@ $alert-block-warning: #f0c250;
       h6 {
         color: $black;
       }
-=======
-    .bg-alert-warning {
-      background-color: $alert-warning;
->>>>>>> main
-
       a {
         color: $body-color;
       }
     }
 
-<<<<<<< HEAD
-    .bg-alert-warning {
-      background-color: $alert-block-warning;
-      color: $black;
+    .bg-alert-info {
+      background-color: $alert-info;
 
       h1,
       h2,
@@ -91,12 +81,8 @@ $alert-block-warning: #f0c250;
       h4,
       h5,
       h6 {
-        color: $black;
+        color: $body-color;
       }
-=======
-    .bg-alert-info {
-      background-color: $alert-info;
->>>>>>> main
 
       a {
         color: $body-color;
