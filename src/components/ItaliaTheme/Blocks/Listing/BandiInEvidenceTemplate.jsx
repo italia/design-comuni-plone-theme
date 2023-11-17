@@ -19,6 +19,8 @@ import {
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { viewDate } from 'design-comuni-plone-theme/helpers';
 
+import { BandoStatus } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+
 const messages = defineMessages({
   vedi: {
     id: 'bando_vedi',
@@ -39,22 +41,6 @@ const messages = defineMessages({
   stato: {
     id: 'bando_stato',
     defaultMessage: 'Stato:',
-  },
-  open: {
-    id: 'bando_open',
-    defaultMessage: 'Attivo',
-  },
-  scheduled: {
-    id: 'bando_scheduled',
-    defaultMessage: 'Programmato',
-  },
-  closed: {
-    id: 'bando_closed',
-    defaultMessage: 'Scaduto',
-  },
-  inProgress: {
-    id: 'bando_inProgress',
-    defaultMessage: 'In corso',
   },
   ente: {
     id: 'bando_ente',
@@ -137,14 +123,13 @@ const BandiInEvidenceTemplate = ({
                     )}
 
                     {/* Tipologia */}
-
-                    {show_tipologia && item.tipologia_bando?.title?.length > 0 && (
+                    {show_tipologia && item?.tipologia_bando && (
                       <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
                         <div className="bando-dati-label me-2">
                           {intl.formatMessage(messages.tipologia)}:
                         </div>
                         <span className="bando-dati-date">
-                          {item.tipologia_bando?.title}
+                          {item.tipologia_bando}
                         </span>
                       </span>
                     )}
@@ -215,7 +200,7 @@ const BandiInEvidenceTemplate = ({
                               ),
                             })}
                           >
-                            {intl.formatMessage(messages[item.bando_state[0]])}
+                            <BandoStatus content={item} />
                           </div>
                         </span>
                       </span>

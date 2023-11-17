@@ -3,13 +3,12 @@
  * @module components/theme/View/PaginaArgomentoViewNoBlocks
  */
 
-import React, { createRef, useState, useEffect } from 'react';
+import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   GenericCard,
   ContentImage,
-  SideMenu,
   PageHeader,
   OfficeCard,
   RichTextSection,
@@ -20,6 +19,7 @@ import {
   SkipToMainContent,
   RelatedItems,
   RelatedItemInEvidence,
+  useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
@@ -68,15 +68,7 @@ const messages = defineMessages({
 const PaginaArgomentoViewNoBlocks = ({ content }) => {
   const intl = useIntl();
   let documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
-
-  useEffect(() => {
-    if (documentBody.current) {
-      if (__CLIENT__) {
-        setSideMenuElements(documentBody.current);
-      }
-    }
-  }, [documentBody]);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   return (
     <>
@@ -92,12 +84,12 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
         {/* HEADER IMAGE */}
         <ContentImage content={content} position="afterHeader" />
 
-        <div className="row row-column-border row-column-menu-left">
+        <div className="row row-column-border border-light row-column-menu-left">
           <aside className="col-lg-4">
             <SideMenu data={sideMenuElements} content_uid={content?.UID} />
           </aside>
           <section
-            className="col-lg-8 it-page-sections-container"
+            className="col-lg-8 it-page-sections-container border-light"
             id="main-content-section"
             ref={documentBody}
           >

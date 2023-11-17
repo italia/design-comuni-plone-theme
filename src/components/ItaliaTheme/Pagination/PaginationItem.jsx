@@ -46,6 +46,9 @@ class PaginationItem extends Component {
       'nextItem',
       'lastItem',
     ]),
+
+    /** Lighthouse ID to set Agid data-element on pager link for CT Servizio*/
+    isServiceLink: PropTypes.bool,
   };
 
   handleClick = (e) => {
@@ -59,7 +62,14 @@ class PaginationItem extends Component {
   };
 
   render() {
-    const { active, type, children, intl, ellipsisItem } = this.props;
+    const {
+      active,
+      type,
+      children,
+      intl,
+      ellipsisItem,
+      isServiceLink,
+    } = this.props;
     const disabled = this.props.disabled || type === 'ellipsisItem';
     return (
       <PagerItem disabled={disabled}>
@@ -68,6 +78,7 @@ class PaginationItem extends Component {
           onClick={this.handleClick}
           onKeyDown={this.handleKeyDown}
           aria-current={active ? 'page' : null}
+          data-element={isServiceLink ? 'pager-link' : null}
         >
           {type === 'prevItem' && (
             <>

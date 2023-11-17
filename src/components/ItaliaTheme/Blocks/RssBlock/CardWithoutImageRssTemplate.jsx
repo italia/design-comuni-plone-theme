@@ -71,11 +71,11 @@ const CardWithoutImageRssTemplate = ({
                       )}
                     </div>
                     <CardTitle tag="h5">{item.title}</CardTitle>
-                    <div className="source-title">
-                      {item?.source?.length > 0 && (
+                    {item?.source?.length > 0 && (
+                      <div className="source-title">
                         <span className="source">{item.source}</span>
-                      )}
-                    </div>
+                      </div>
+                    )}
                     <CardText tag="p" className="font-serif">
                       {item.contentSnippet}
                     </CardText>

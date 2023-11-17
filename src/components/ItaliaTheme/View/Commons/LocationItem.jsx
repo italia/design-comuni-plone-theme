@@ -61,7 +61,7 @@ const LocationItem = ({
     <div className="card card-teaser shadow mt-3 border-left-card card-big-io-comune p-4 rounded location-item">
       {show_icon && <Icon icon={'it-pin'} />}
       <div className="card-body">
-        <h5 className="card-title venue-card-title">
+        <div className="card-title h5 venue-card-title">
           {(location_fo.nome_sede || location_fo.title) && (
             <>
               {location_fo['@type'] === 'Venue' ||
@@ -78,7 +78,7 @@ const LocationItem = ({
               )}
             </>
           )}
-        </h5>
+        </div>
         <div className="card-text">
           <p>{address}</p>
 

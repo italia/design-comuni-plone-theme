@@ -79,7 +79,9 @@ function NextArrow(props) {
       id="sliderNextArrow"
     >
       <Icon icon="chevron-right" key="chevron-right" />
-      <span class="sr-only">{intl.formatMessage(messages.successivo)}</span>
+      <span class="visually-hidden">
+        {intl.formatMessage(messages.successivo)}
+      </span>
     </button>
   );
 }
@@ -122,7 +124,9 @@ function PrevArrow(props) {
       onKeyDown={handleKeyboardUsers}
     >
       <Icon icon="chevron-left" key="chevron-left-prev" />
-      <span class="sr-only">{intl.formatMessage(messages.precedente)}</span>
+      <span class="visually-hidden">
+        {intl.formatMessage(messages.precedente)}
+      </span>
     </button>
   );
 }

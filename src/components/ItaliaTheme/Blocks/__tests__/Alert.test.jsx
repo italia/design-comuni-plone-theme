@@ -11,7 +11,7 @@ const mockStore = configureStore(middlewares);
 
 const mock_fields = {
   '@type': 'alert',
-  color: 'warning',
+  bg_color: 'warning',
   image: {
     'content-type': 'image/jpeg',
     data:

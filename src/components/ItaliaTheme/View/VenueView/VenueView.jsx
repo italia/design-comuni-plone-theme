@@ -3,11 +3,10 @@
  * @module components/theme/View/VenueView
  */
 
-import React, { createRef, useEffect, useState } from 'react';
+import React, { createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  SideMenu,
   PageHeader,
   ContentImage,
   RelatedItems,
@@ -23,6 +22,7 @@ import {
   VenueContacts,
   VenueMoreInfos,
   ContentTypeViewSections,
+  useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 export const VenueViewSectionsOrder = [
@@ -56,15 +56,7 @@ export const VenueViewSectionsOrder = [
  */
 const VenueView = ({ content }) => {
   let documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
-
-  useEffect(() => {
-    if (documentBody.current) {
-      if (__CLIENT__) {
-        setSideMenuElements(documentBody.current);
-      }
-    }
-  }, [documentBody]);
+  const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   useEffect(() => {
     if (
@@ -89,14 +81,14 @@ const VenueView = ({ content }) => {
         {/* HEADER IMAGE */}
         <ContentImage content={content} position="afterHeader" />
 
-        <div className="row row-column-border row-column-menu-left">
+        <div className="row row-column-border border-light row-column-menu-left">
           <aside className="col-lg-4">
             {__CLIENT__ && (
               <SideMenu data={sideMenuElements} content_uid={content?.UID} />
             )}
           </aside>
           <section
-            className="col-lg-8 it-page-sections-container"
+            className="col-lg-8 it-page-sections-container border-light"
             id="main-content-section"
             ref={documentBody}
           >

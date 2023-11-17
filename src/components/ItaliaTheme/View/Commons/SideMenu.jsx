@@ -1,3 +1,6 @@
+/* ************
+Costruisce il sidemenu in base alle sections strutturate nella parte destra del contenuto
+**************/
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-expressions */

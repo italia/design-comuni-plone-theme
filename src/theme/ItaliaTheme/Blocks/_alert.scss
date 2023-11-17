@@ -1,4 +1,3 @@
-$alert-block-danger: #a32219;
 $alert-block-warning-orange: #eb973f;
 $alert-block-warning: #f0c250;
 .alert-colors-widget {
@@ -18,7 +17,7 @@ $alert-block-warning: #f0c250;
     .ui.button.danger {
       &,
       &.active {
-        background-color: $alert-block-danger;
+        background-color: $alert-danger;
       }
     }
   }
@@ -30,8 +29,18 @@ $alert-block-warning: #f0c250;
       height: auto;
     }
 
+    .draftjs-buttons a {
+      background-color: $white;
+      color: $body-color;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
     .bg-alert-danger {
-      background-color: $alert-block-danger;
+      background-color: $alert-danger;
       color: $white;
 
       h1,
@@ -48,6 +57,7 @@ $alert-block-warning: #f0c250;
       }
     }
 
+<<<<<<< HEAD
     .bg-alert-warning-orange {
       background-color: $alert-block-warning-orange;
       color: $black;
@@ -60,12 +70,17 @@ $alert-block-warning: #f0c250;
       h6 {
         color: $black;
       }
+=======
+    .bg-alert-warning {
+      background-color: $alert-warning;
+>>>>>>> main
 
       a {
-        color: $black;
+        color: $body-color;
       }
     }
 
+<<<<<<< HEAD
     .bg-alert-warning {
       background-color: $alert-block-warning;
       color: $black;
@@ -78,9 +93,13 @@ $alert-block-warning: #f0c250;
       h6 {
         color: $black;
       }
+=======
+    .bg-alert-info {
+      background-color: $alert-info;
+>>>>>>> main
 
       a {
-        color: $black;
+        color: $body-color;
       }
     }
 
@@ -99,26 +118,22 @@ $alert-block-warning: #f0c250;
     }
 
     img.left-image {
-      max-width: 80%;
       object-fit: unset;
+      max-width: 80%;
+
+      &.size {
+        &-m {
+          max-width: 50%;
+        }
+
+        &-s {
+          max-width: 30%;
+        }
+      }
     }
 
     .image-col {
       text-align: center;
-    }
-
-    div + h3,
-    p + h3,
-    h3 + div,
-    h3 + p {
-      margin-top: 1.33rem;
-    }
-
-    div + h2,
-    p + h2,
-    h2 + div,
-    h2 + p {
-      margin-top: 1rem;
     }
   }
 }

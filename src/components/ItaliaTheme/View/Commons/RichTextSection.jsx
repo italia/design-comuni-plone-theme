@@ -5,6 +5,7 @@ import { RichTextRender } from 'design-comuni-plone-theme/components/ItaliaTheme
 const RichTextSection = ({
   title,
   title_tag = 'h2',
+  title_class_name = 'h4',
   show_title = true,
   data,
   tag_id,
@@ -41,8 +42,9 @@ const RichTextSection = ({
       {title && (
         <Tag
           id={title_tag === 'h2' ? `header-${tag_id}` : undefined}
-          className={cx('mb-3 h4', {
-            'sr-only': !show_title,
+          className={cx('mb-3', {
+            'visually-hidden': !show_title,
+            [title_class_name]: title_class_name,
           })}
         >
           {title}
@@ -58,6 +60,7 @@ export default RichTextSection;
 RichTextSection.propTypes = {
   title: PropTypes.string,
   title_tag: PropTypes.oneOf(['h2', 'h3', 'h4', 'h5', 'h6']),
+  title_class_name: PropTypes.string,
   data: PropTypes.object,
   tag_id: PropTypes.string,
   add_class: PropTypes.string,

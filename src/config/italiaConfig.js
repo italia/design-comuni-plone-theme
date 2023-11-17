@@ -191,6 +191,8 @@ export default function applyConfig(voltoConfig) {
       //   sections: [
       //     //sections order for Venue content-type view. See components/ItaliaTheme/View/VenueView/VenueView.jsx for default VenueViewSectionsOrder
       //   ],
+      //   updateSideMenuOnLoadingBlocks:false, //serve se si vuole fare in modo che il sideMenu si aggiorni con i titli dei blocchi presenti nel testo
+      //   sideMenu:null // qui va messo il component da usare per fare il SideMenu, se non è impostato viene usato quello di default
       // },
     },
     siteProperties: {

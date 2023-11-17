@@ -28,6 +28,26 @@ const messages = defineMessages({
 
 const SearchSectionForm = ({ content }) => {
   const intl = useIntl();
+  const path = content['@id'];
+  const searchFilters = useSelector(
+    (state) => state?.searchFilters?.result?.sections,
+  );
+
+  const customPath = [];
+
+  const sections = searchFilters?.[0]?.items ?? [];
+
+  sections.forEach((section) => {
+    if (!section.items) {
+      return;
+    } else {
+      if (path === section['@id']) {
+        customPath.push(
+          section.items.map((item) => flattenToAppURL(item['@id'])),
+        );
+      }
+    }
+  });
 
   const subsite = useSelector((state) => state.subsite?.data);
   const [searchableText, setSearchableText] = useState('');
@@ -44,13 +64,14 @@ const SearchSectionForm = ({ content }) => {
             {},
             null,
             null,
-            null,
+            customPath.length > 0 ? customPath : null,
             subsite,
             intl.locale,
             false,
           ) +
-          '&custom_path=' +
-          flattenToAppURL(content['@id']);
+          (customPath.length === 0
+            ? `&custom_path=${flattenToAppURL(path)}`
+            : '');
     }
   };
   return (

@@ -7,7 +7,11 @@ import { fontAwesomeAliases } from 'design-comuni-plone-theme/helpers/index';
 
 const FontAwesomeIcon = (props) => {
   const { className, icon, prefix, title } = props;
-  const [loadedIcon, setLoadedIcon] = React.useState(null);
+  const [loadedIcon, setLoadedIcon] = React.useState({
+    module: null,
+    iconName: '',
+    family: 'solid',
+  });
 
   const getIconAlias = (icon, aliasList) => {
     if (icon in aliasList) {
@@ -17,40 +21,58 @@ const FontAwesomeIcon = (props) => {
     }
   };
 
-  let prefixKey = prefix;
-  let iconName = '';
+  const getIconInfo = (icon, prefix) => {
+    let prefixKey = prefix;
+    let iconName = '';
+    if (Array.isArray(icon)) {
+      prefixKey = icon[0];
+      iconName = getIconAlias(icon[1], fontAwesomeAliases);
+    } else {
+      iconName = getIconAlias(icon, fontAwesomeAliases);
+    }
 
-  if (Array.isArray(icon)) {
-    prefixKey = icon[0];
-    iconName = getIconAlias(icon[1], fontAwesomeAliases);
-  } else {
-    iconName = getIconAlias(icon, fontAwesomeAliases);
-  }
-
-  const prefixFolder =
-    prefixKey === 'fab' ? 'brands' : prefixKey === 'far' ? 'regular' : 'solid';
+    return [
+      prefixKey === 'fab'
+        ? 'brands'
+        : prefixKey === 'far'
+        ? 'regular'
+        : 'solid',
+      iconName,
+    ];
+  };
 
   React.useEffect(() => {
-    if (iconName && !loadedIcon) {
+    const [prefixFolder, iconName] = getIconInfo(icon, prefix);
+    if (
+      iconName &&
+      (iconName !== loadedIcon.iconName || prefixFolder !== loadedIcon.family)
+    ) {
       import(
         `design-comuni-plone-theme/icons/fontawesome-free-6.4.0-web/svgs/${prefixFolder}/${iconName}.svg`
       )
         .then((_loadedIcon) => {
-          setLoadedIcon(_loadedIcon);
+          setLoadedIcon({
+            module: _loadedIcon.default,
+            iconName,
+            family: prefixFolder,
+          });
         })
         .catch((error) => {});
     }
-  }, [iconName, loadedIcon, prefixFolder]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [icon, prefix, loadedIcon]);
 
-  return loadedIcon ? (
+  return loadedIcon.module ? (
     <svg
-      xmlns={loadedIcon.attributes && loadedIcon.attributes.xmlns}
-      viewBox={loadedIcon.attributes && loadedIcon.attributes.viewBox}
+      xmlns={loadedIcon.module.attributes && loadedIcon.module.attributes.xmlns}
+      viewBox={
+        loadedIcon.module.attributes && loadedIcon.module.attributes.viewBox
+      }
       className={`icon fa-icon ${className ?? ''}`}
       dangerouslySetInnerHTML={{
         __html: title
-          ? `<title>${title}</title>${loadedIcon.content}`
-          : loadedIcon.content,
+          ? `<title>${title}</title>${loadedIcon.module.content}`
+          : loadedIcon.module.content,
       }}
     />
   ) : icon ? (

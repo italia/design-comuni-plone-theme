@@ -377,6 +377,11 @@ body.cms-ui {
     .button.callout_note.active {
       background-color: $primary;
     }
+
+    .button.info,
+    .button.info.active {
+      background-color: $info;
+    }
   }
 
   .path-filter-widget {

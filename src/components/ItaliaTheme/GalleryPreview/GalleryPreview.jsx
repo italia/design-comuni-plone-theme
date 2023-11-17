@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { flattenToAppURL } from '@plone/volto/helpers';
-
 import PropTypes from 'prop-types';
 import { Modal, ModalBody, Button, ModalHeader } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 const messages = defineMessages({
   view_prev: {
@@ -31,11 +29,9 @@ const messages = defineMessages({
  */
 const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
   const intl = useIntl();
-  const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  const checkUrlImage =
-    items[viewIndex]?.image?.scales?.larger?.download ||
-    items[viewIndex]?.image_scales?.image[0]?.scales?.larger?.download;
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const image = items[viewIndex];
 
   const closeModal = () => {
     setViewIndex(null);
@@ -68,16 +64,13 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
       {viewIndex != null && (
         <>
           <ModalHeader
-            closeButton={true}
             closeAriaLabel={intl.formatMessage(messages.close_preview)}
             toggle={closeModal}
           >
-            {items[viewIndex].title}
+            {image.title}
           </ModalHeader>
           <ModalBody>
-            {items[viewIndex].description && (
-              <p className="pb-3">{items[viewIndex].description}</p>
-            )}
+            {image.description && <p className="pb-3">{image.description}</p>}
             <div className="item-preview">
               {items.length > 1 && (
                 <Button
@@ -94,17 +87,15 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
                   <Icon color="" icon="it-arrow-left" padding={false} />
                 </Button>
               )}
-              <div className="image">
-                {checkUrlImage ? (
-                  <img
-                    src={flattenToAppURL(checkUrlImage)}
-                    loading="lazy"
-                    alt={items[viewIndex].title}
-                  />
-                ) : (
-                  <img src={DefaultImageSVG} alt="" />
-                )}
-              </div>
+
+              {image && (
+                <Image
+                  key={image['@id']}
+                  itemUrl={image['@id']}
+                  image={image['@id']}
+                  alt={image.title}
+                />
+              )}
 
               {items.length > 1 && (
                 <Button

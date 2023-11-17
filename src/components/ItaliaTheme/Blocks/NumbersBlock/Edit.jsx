@@ -49,6 +49,7 @@ class Edit extends SubblocksEdit {
     super(props);
     this.state.selectedField = 'title';
   }
+
   UNSAFE_componentWillReceiveProps(newProps) {
     if (newProps.selected) {
       if (!this.props.selected) {

@@ -28,6 +28,7 @@ const DocumentoDocumenti = ({ content }) => {
         title={intl.formatMessage(messages.documenti)}
         id="elenco-documenti"
       />
+
       {richTextHasContent(content.formati_disponibili) && (
         <RichTextSection
           tag_id="formats"

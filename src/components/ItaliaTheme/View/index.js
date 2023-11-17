@@ -1,11 +1,16 @@
 /* --- Commons --- */
-export RichTextArticle from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichTextArticle';
 export RichTextSection from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichTextSection';
 export RichText from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichText';
 export {
   RichTextRender,
   richTextHasContent,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichTextRender';
+export {
+  useSideMenu,
+  useReadingTime,
+  readingTime,
+  getHTMLString,
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View/ViewUtils';
 
 export RenderBlocks from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RenderBlocks';
 export RelatedNewsArticles from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RelatedNewsArticles';
@@ -68,6 +73,7 @@ export Sponsors from 'design-comuni-plone-theme/components/ItaliaTheme/View/Comm
 export RelatedItems from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RelatedItems';
 export RelatedItemInEvidence from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/RelatedItemInEvidence';
 export DownloadFileFormat from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/DownloadFileFormat';
+export BandoStatus from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/BandoStatus';
 export BandoDates from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/BandoDates';
 
 /* --- View --- */
@@ -189,6 +195,10 @@ export VenueWhere from 'design-comuni-plone-theme/components/ItaliaTheme/View/Ve
 export VenuePublicTimetable from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenuePublicTimetable';
 export VenueContacts from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueContacts';
 export VenueMoreInfos from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueMoreInfos';
+export VenueTipologia from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueTipologia';
+export VenueElementiDiInteresse from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueElementiDiInteresse';
+export VenueLuoghiCorrelati from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueLuoghiCorrelati';
+export VenueMultimedia from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueMultimedia';
 
 export PuntoDiContattoView from 'design-comuni-plone-theme/components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView';
 export PuntoDiContattoPlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/PuntoDiContattoView/Placeholder/AfterContent';

@@ -41,6 +41,49 @@
 - ...
 -->
 
+## Versione 10.4.0 (14/11/2023)
+
+### Novità
+
+- Aggiunta la possibilità di selezionare la dimensione dell'immagine nel blocco Alert, inoltre è stato aggiornato anche il widget per la selezione del colore di sfondo.
+
+### Fix
+
+- Quando viene effettuata una ricerca dalla barra di ricerca nelle sezioni Amministrazione, Servizi, Novità, o Documenti e Dati, viene automaticamente impostato il filtro sulla sezione stessa così da mostrare solo i contenuti corrispondenti.
+- Le icone del Blocco Numeri, del Blocco Icone e della Sidebar si aggiornano istantaneamente quando vengono cambiate
+- Sistemato un bug nell'header dei sottositi che mostrava le voci del menu del sito padre anche se queste erano indicate come non visibili nella configurazione del menu.
+
+## Versione 10.3.0 (08/11/2023)
+
+### Fix
+
+- Sistemata la visualizzazione della tipologia del bando nel template del blocco elenco 'Bandi'
+- Rimosso titolo della pagina nei sottositi senza nessuno stile applicato
+
+## Versione 10.2.0 (06/11/2023)
+
+### Novità
+
+- Aggiunto data-element pager-link al paginatore per il blocco Cerca per i quali viene impostata l'opzione service-link.
+
+## Versione 9.0.1 (03/11/2023)
+
+### Migliorie
+
+- Migliorata l'accessibilità dei titoli dei contenuti
+
+## Versione 8.9.0 (03/11/2023)
+
+### Novità
+
+- Aggiunto data-element pager-link al paginatore per i blocchi Elenco per i quali viene impostata l'opzione service-link.
+
+## Versione 8.8.1 (03/11/2023)
+
+### Fix
+
+- Nei template dei feed RSS ora viene mostrata la sorgente se presente.
+
 ## Versione 8.7.12 (27/10/2023)
 
 ### Fix

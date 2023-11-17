@@ -32,7 +32,7 @@ const ItemInEvidence = ({ content }) => {
       <Card className="card-bg rounded " noWrapper={true} tag="div">
         <CardBody tag="div">
           <ArgumentIcon icon={correlato_in_evidenza.icona} />
-          <CardTitle tag="h3">{correlato_in_evidenza.title}</CardTitle>
+          <CardTitle className="h3">{correlato_in_evidenza.title}</CardTitle>
           <CardText tag="p">{correlato_in_evidenza.description}</CardText>
           <CardReadMore
             iconName="it-arrow-right"
