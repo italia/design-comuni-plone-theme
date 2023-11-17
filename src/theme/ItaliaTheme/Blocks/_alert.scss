@@ -1,17 +1,15 @@
-$alert-block-warning-orange: #eb973f;
-$alert-block-warning: #f0c250;
 .alert-colors-widget {
   .color-list-widget {
+    .ui.button.info {
+      &,
+      &.active {
+        background-color: $alert-info;
+      }
+    }
     .ui.button.warning {
       &,
       &.active {
-        background-color: $alert-block-warning;
-      }
-    }
-    .ui.button.warning-orange {
-      &,
-      &.active {
-        background-color: $alert-block-warning-orange;
+        background-color: $alert-warning;
       }
     }
     .ui.button.danger {
@@ -22,6 +20,7 @@ $alert-block-warning: #f0c250;
     }
   }
 }
+
 .public-ui {
   .block.alertblock,
   .alertblock {
@@ -29,7 +28,7 @@ $alert-block-warning: #f0c250;
       height: auto;
     }
 
-    .draftjs-buttons a {
+    a.btn.btn-primary.inline-link {
       background-color: $white;
       color: $body-color;
 
