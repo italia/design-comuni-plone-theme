@@ -11,11 +11,48 @@ import {
 import { SidebarPortal } from '@plone/volto/components';
 import Sidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar.jsx';
 import { ArgumentsInEvidenceBackground } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { handleKeyDownOwnFocusManagement } from 'design-comuni-plone-theme/helpers/blocks';
 
 class Edit extends SubblocksEdit {
+  handleEnter = (e) => {
+    if (this.props.selected) {
+      handleKeyDownOwnFocusManagement(e, this.props);
+    }
+  };
+
+  componentDidMount() {
+    const blockNode = this.props.blockNode;
+
+    if (this.props.selected && this.node) {
+      this.node.focus();
+    }
+    if (this.state.subblocks.length === 0) {
+      this.addSubblock();
+    }
+
+    if (blockNode && blockNode.current) {
+      blockNode.current.addEventListener('keydown', this.handleEnter, false);
+    }
+  }
+
+  /**
+   * Component will receive props
+   * @method componentWillUnmount
+   * @returns {undefined}
+   */
+  componentWillUnmount() {
+    if (this.props.selected && this.node) {
+      this.node.focus();
+    }
+    const blockNode = this.props.blockNode;
+    if (blockNode && blockNode.current) {
+      blockNode.current.removeEventListener('keydown', this.handleEnter, false);
+    }
+  }
+
   render() {
     return (
-      <div className="argumentInEvidence public-ui">
+      <div className="argumentInEvidence public-ui" tabIndex="-1">
         <ArgumentsInEvidenceBackground inEditMode={true} />
         <SubblocksWrapper node={this.node}>
           <BodyWrapper data={this.props.data} inEditMode={false}>

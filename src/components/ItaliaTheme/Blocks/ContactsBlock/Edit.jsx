@@ -10,7 +10,7 @@ import { Container, Row, Col } from 'design-react-kit';
 import { SidebarPortal } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
-
+import { handleKeyDownOwnFocusManagement } from 'design-comuni-plone-theme/helpers/blocks';
 import {
   withDNDContext,
   SubblocksEdit,
@@ -49,10 +49,46 @@ class Edit extends SubblocksEdit {
   UNSAFE_componentWillReceiveProps(newProps) {
     if (newProps.selected) {
       if (!this.props.selected) {
-        this.setState({ selectedField: 'title' });
+        this.setState({ selectedField: 'title', subIndexSelected: -1 });
       }
     } else {
       this.setState({ selectedField: null });
+    }
+  }
+
+  handleEnter = (e) => {
+    if (this.props.selected) {
+      handleKeyDownOwnFocusManagement(e, this.props);
+    }
+  };
+
+  componentDidMount() {
+    const blockNode = this.props.blockNode;
+
+    if (this.props.selected && this.node) {
+      this.node.focus();
+    }
+    if (this.state.subblocks.length === 0) {
+      this.addSubblock();
+    }
+
+    if (blockNode && blockNode.current) {
+      blockNode.current.addEventListener('keydown', this.handleEnter, false);
+    }
+  }
+
+  /**
+   * Component will receive props
+   * @method componentWillUnmount
+   * @returns {undefined}
+   */
+  componentWillUnmount() {
+    if (this.props.selected && this.node) {
+      this.node.focus();
+    }
+    const blockNode = this.props.blockNode;
+    if (blockNode && blockNode.current) {
+      blockNode.current.removeEventListener('keydown', this.handleEnter, false);
     }
   }
   /**
@@ -66,7 +102,7 @@ class Edit extends SubblocksEdit {
     }
 
     return (
-      <div className="public-ui">
+      <div className="public-ui" tabIndex="-1">
         <div
           className={`full-width section bg-${
             this.props.data.bg_color ?? 'primary'
@@ -84,8 +120,8 @@ class Edit extends SubblocksEdit {
                   selected={this.state.selectedField === 'title'}
                   placeholder={this.props.intl.formatMessage(messages.title)}
                   onSelectBlock={() => {}}
-                  setSelected={() => {
-                    this.setState({ selectedField: 'title' });
+                  setSelected={(f) => {
+                    this.setState({ selectedField: f, subIndexSelected: -1 });
                   }}
                   focusNextField={() => {
                     this.setState({ selectedField: 'description' });
@@ -104,8 +140,8 @@ class Edit extends SubblocksEdit {
                     messages.description,
                   )}
                   onSelectBlock={() => {}}
-                  setSelected={() => {
-                    this.setState({ selectedField: 'description' });
+                  setSelected={(f) => {
+                    this.setState({ selectedField: f, subIndexSelected: -1 });
                   }}
                   focusPrevField={() => {
                     this.setState({ selectedField: 'title' });

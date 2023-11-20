@@ -52,6 +52,7 @@ const SimpleTextEditorWidget = (props) => {
         getBlockProps: () => {
           return { ...props };
         },
+        getSavedSelection: () => null,
       };
       return handlers.find((handler) =>
         handler({ editor: handlerProps, event }),
@@ -72,6 +73,14 @@ const SimpleTextEditorWidget = (props) => {
       fieldRef.current.innerText = _value;
     }
   }, []);
+
+  const selectThis = () => {
+    if (setSelected) {
+      setSelected(fieldName ?? true);
+    } else if (onSelectBlock) {
+      onSelectBlock(block);
+    }
+  };
 
   return (
     <div className="simple-text-editor-widget" ref={ref}>
@@ -95,12 +104,11 @@ const SimpleTextEditorWidget = (props) => {
         }}
         onFocus={(e) => {
           if (!selected) {
-            if (onSelectBlock) {
-              onSelectBlock(block);
-            } else {
-              setSelected();
-            }
+            selectThis();
           }
+        }}
+        onBlur={(e) => {
+          setSelected(fieldName ? null : false);
         }}
         onKeyDown={handleKey}
         ref={fieldRef}

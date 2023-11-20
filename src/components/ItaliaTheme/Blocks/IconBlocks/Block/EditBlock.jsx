@@ -108,8 +108,8 @@ class EditBlock extends SubblockEdit {
                   selected={
                     this.props.selected && this.state.focusOn === 'title'
                   }
-                  setSelected={() => {
-                    this.setState({ focusOn: 'title' });
+                  setSelected={(f) => {
+                    this.setState({ focusOn: f });
                   }}
                   block={this.props.block}
                   onChangeBlock={(block, _data) => {
@@ -147,8 +147,8 @@ class EditBlock extends SubblockEdit {
                 key="text"
                 fieldName="text"
                 selected={this.props.selected && this.state.focusOn === 'text'}
-                setSelected={() => {
-                  this.setState({ focusOn: 'text' });
+                setSelected={(f) => {
+                  this.setState({ focusOn: f });
                 }}
                 onChangeBlock={(block, _data) => {
                   this.props.onChangeBlock(this.props.index, _data);

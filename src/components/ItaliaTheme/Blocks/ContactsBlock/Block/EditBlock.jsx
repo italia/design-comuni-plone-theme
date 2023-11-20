@@ -81,7 +81,7 @@ class EditBlock extends SubblockEdit {
     }
 
     return (
-      <Subblock subblock={this} className="subblock-edit">
+      <Subblock subblock={this} className="subblock-edit" tabIndex="-1">
         <Card
           className="card-bg rounded"
           noWrapper={false}
@@ -106,8 +106,8 @@ class EditBlock extends SubblockEdit {
                   messages.titlePlaceholder,
                 )}
                 selected={this.props.selected && this.state.focusOn === 'title'}
-                setSelected={() => {
-                  this.setState({ focusOn: 'title' });
+                setSelected={(f) => {
+                  this.setState({ focusOn: f });
                 }}
                 focusNextField={() => {
                   this.setState({ focusOn: 'text' });
@@ -135,7 +135,7 @@ class EditBlock extends SubblockEdit {
                   this.onChange({ ...this.props.data, text: _data.value });
                 }}
                 selected={this.props.selected && this.state.focusOn === 'text'}
-                setSelected={() => this.setState({ focusOn: 'text' })}
+                setSelected={(f) => this.setState({ focusOn: f })}
                 focusPrevField={() => {
                   this.setState({ focusOn: 'title' });
                 }}
@@ -162,7 +162,7 @@ class EditBlock extends SubblockEdit {
                 placeholder={this.props.intl.formatMessage(
                   messages.textPlaceholder,
                 )}
-                setSelected={() => this.setState({ focusOn: 'tel' })}
+                setSelected={(f) => this.setState({ focusOn: f })}
                 focusPrevField={() => {
                   this.setState({ focusOn: 'text' });
                 }}
@@ -188,7 +188,7 @@ class EditBlock extends SubblockEdit {
                 placeholder={this.props.intl.formatMessage(
                   messages.textPlaceholder,
                 )}
-                setSelected={() => this.setState({ focusOn: 'email' })}
+                setSelected={(f) => this.setState({ focusOn: f })}
                 focusPrevField={() => {
                   this.setState({ focusOn: 'tel' });
                 }}

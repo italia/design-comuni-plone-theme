@@ -390,6 +390,7 @@ export default function applyConfig(voltoConfig) {
     },
     hero: {
       ...config.blocks.blocksConfig.hero,
+      hasOwnFocusManagement: true,
       sidebarTab: 1,
     },
     html: {

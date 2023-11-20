@@ -3,12 +3,13 @@
  * @module components/Blocks/TitleVM/Edit
  */
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { Card, CardBody, CardTitle, CardText } from 'design-react-kit';
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import BodyWrapper from './BodyWrapper';
+import { useHandleDetachedBlockFocus } from 'design-comuni-plone-theme/helpers/blocks';
 
 const messages = defineMessages({
   simple_card_title: {
@@ -29,30 +30,21 @@ const messages = defineMessages({
  * @class Edit
  * @extends Component
  */
-const Edit = ({
-  data,
-  onChangeBlock,
-  block,
-  onSelectBlock,
-  selected,
-  ...otherProps
-}) => {
+const Edit = (props) => {
+  const {
+    data,
+    onChangeBlock,
+    block,
+    onSelectBlock,
+    selected,
+    ...otherProps
+  } = props;
   const intl = useIntl();
-  const [selectedField, setSelectedField] = useState('title');
 
-  useEffect(() => {
-    if (selected && !selectedField) {
-      setSelectedField('title');
-    } else if (!selected) {
-      setSelectedField(null);
-    }
-  }, [selected]);
-
-  useEffect(() => {
-    if (!selected && selectedField) {
-      onSelectBlock(block);
-    }
-  }, [selectedField]);
+  const { selectedField, setSelectedField } = useHandleDetachedBlockFocus(
+    props,
+    'simple_card_title',
+  );
 
   return __SERVER__ ? (
     <div />
@@ -75,15 +67,13 @@ const Edit = ({
                   data={data}
                   block={block}
                   fieldName="simple_card_title"
-                  selected={selectedField === 'title'}
+                  selected={selectedField === 'simple_card_title'}
                   onChangeBlock={onChangeBlock}
                   onSelectBlock={onSelectBlock}
                   placeholder={intl.formatMessage(messages.simple_card_title)}
-                  setSelected={() => {
-                    setSelectedField('title');
-                  }}
+                  setSelected={setSelectedField}
                   focusNextField={() => {
-                    setSelectedField('content');
+                    setSelectedField('simple_card_content');
                   }}
                 />
               </CardTitle>
@@ -94,10 +84,8 @@ const Edit = ({
                     showToolbar={true}
                     data={data}
                     fieldName="simple_card_content"
-                    selected={selectedField === 'content'}
-                    setSelected={() => {
-                      setSelectedField('content');
-                    }}
+                    selected={selectedField === 'simple_card_content'}
+                    setSelected={setSelectedField}
                     block={block}
                     onChangeBlock={onChangeBlock}
                     onSelectBlock={onSelectBlock}
@@ -105,7 +93,7 @@ const Edit = ({
                       messages.simple_card_content,
                     )}
                     focusPrevField={() => {
-                      setSelectedField('title');
+                      setSelectedField('simple_card_title');
                     }}
                   />
                 </CardText>

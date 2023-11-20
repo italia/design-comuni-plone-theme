@@ -89,7 +89,7 @@ class Edit extends Component {
       return <div />;
     }
     return (
-      <div>
+      <div tabIndex="-1">
         <BodyWrapper data={this.state.currentBlockData} inEditMode={true}>
           <Block
             {...this.props}

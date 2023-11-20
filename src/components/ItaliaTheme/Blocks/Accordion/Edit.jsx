@@ -14,6 +14,7 @@ import {
 } from 'volto-subblocks';
 
 import { SidebarPortal } from '@plone/volto/components';
+import { handleKeyDownOwnFocusManagement } from 'design-comuni-plone-theme/helpers/blocks';
 import Sidebar from './Sidebar.jsx';
 
 import { defineMessages } from 'react-intl';
@@ -39,6 +40,42 @@ class Edit extends SubblocksEdit {
       this.onSubblockChangeFocus(-1);
     }
   }
+
+  handleEnter = (e) => {
+    if (this.props.selected && this.state.subIndexSelected < 0) {
+      handleKeyDownOwnFocusManagement(e, this.props);
+    }
+  };
+
+  componentDidMount() {
+    const blockNode = this.props.blockNode;
+
+    if (this.props.selected && this.node) {
+      this.node.focus();
+    }
+    if (this.state.subblocks.length === 0) {
+      this.addSubblock();
+    }
+
+    if (blockNode && blockNode.current) {
+      blockNode.current.addEventListener('keydown', this.handleEnter, false);
+    }
+  }
+
+  /**
+   * Component will receive props
+   * @method componentWillUnmount
+   * @returns {undefined}
+   */
+  componentWillUnmount() {
+    if (this.props.selected && this.node) {
+      this.node.focus();
+    }
+    const blockNode = this.props.blockNode;
+    if (blockNode && blockNode.current) {
+      blockNode.current.removeEventListener('keydown', this.handleEnter, false);
+    }
+  }
   /**
    * Render method.
    * @method render
@@ -49,7 +86,7 @@ class Edit extends SubblocksEdit {
       return <div />;
     }
     return (
-      <div className="public-ui">
+      <div className="public-ui" tabIndex="-1">
         <div className="full-width section section-muted section-inset-shadow py-5 is-edit-mode">
           <Container className="px-md-4">
             <Card className="card-bg rounded" noWrapper={false} space tag="div">

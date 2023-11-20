@@ -38,90 +38,91 @@ const Image = ({
   sizes = '100vw',
   ...imageProps
 }) => {
-  const { src, srcSet, width, height, aspectRatio } = getImageAttributes(
-    image,
-    {
-      itemUrl,
-      imageField,
-      maxSize,
-      useOriginal,
-      minSize,
-    },
-  );
-  const imageRef = useRef();
-  const [actualSrcSet, setActualSrcSet] = useState(
-    critical && srcSet ? srcSet.join(', ') : null,
-  );
-  // TODO: serve a qualcuno questo?
-  const imageHasLoaded = imageRef?.current?.complete;
+  if (image) {
+    const { src, srcSet, width, height, aspectRatio } = getImageAttributes(
+      image,
+      {
+        itemUrl,
+        imageField,
+        maxSize,
+        useOriginal,
+        minSize,
+      },
+    );
+    const imageRef = useRef();
+    const [actualSrcSet, setActualSrcSet] = useState(
+      critical && srcSet ? srcSet.join(', ') : null,
+    );
+    // TODO: serve a qualcuno questo?
+    const imageHasLoaded = imageRef?.current?.complete;
 
-  //picture classname
-  let pictureClassName = `volto-image${
-    containerClassName ? ` ${containerClassName}` : ''
-  }`;
-  if (floated) {
-    pictureClassName = `${pictureClassName} floated ${floated}`;
-  }
-  if (size) {
-    pictureClassName = `${pictureClassName} ${size}`;
-  }
-
-  if (responsive) {
-    pictureClassName = `${pictureClassName} responsive`;
-  }
-
-  //intersection observer
-  useEffect(() => {
-    const applySrcSet = () => {
-      setActualSrcSet(srcSet.join(', '));
-    };
-
-    if (srcSet && !critical) {
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting && !actualSrcSet) {
-                applySrcSet();
-                if (imageRef.current instanceof Element) {
-                  observer.unobserve(imageRef.current);
-                }
-              }
-            });
-          },
-          { threshold: [0], rootMargin: '100px' },
-        );
-        observer.observe(imageRef.current);
-      } else {
-        applySrcSet();
-      }
+    //picture classname
+    let pictureClassName = `volto-image${
+      containerClassName ? ` ${containerClassName}` : ''
+    }`;
+    if (floated) {
+      pictureClassName = `${pictureClassName} floated ${floated}`;
     }
-  }, [imageHasLoaded, srcSet, actualSrcSet, critical]);
+    if (size) {
+      pictureClassName = `${pictureClassName} ${size}`;
+    }
 
-  return (
-    <>
-      <picture className={pictureClassName}>
-        {actualSrcSet?.length > 0 && (
-          <source srcSet={actualSrcSet} sizes={sizes} />
-        )}
-        <img
-          src={src}
-          alt={alt}
-          className={className}
-          role={role}
-          // removed because this is for the placeholder. Lazy loading is made using intersectionObserver
-          // loading={critical ? 'eager' : 'lazy'}
-          width={width}
-          height={height}
-          style={aspectRatio ? { aspectRatio } : null}
-          {...imageProps}
-          ref={imageRef}
-        />
-      </picture>
-      {!critical && (
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `
+    if (responsive) {
+      pictureClassName = `${pictureClassName} responsive`;
+    }
+
+    //intersection observer
+    useEffect(() => {
+      const applySrcSet = () => {
+        setActualSrcSet(srcSet.join(', '));
+      };
+
+      if (srcSet && !critical) {
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting && !actualSrcSet) {
+                  applySrcSet();
+                  if (imageRef.current instanceof Element) {
+                    observer.unobserve(imageRef.current);
+                  }
+                }
+              });
+            },
+            { threshold: [0], rootMargin: '100px' },
+          );
+          observer.observe(imageRef.current);
+        } else {
+          applySrcSet();
+        }
+      }
+    }, [imageHasLoaded, srcSet, actualSrcSet, critical]);
+
+    return (
+      <>
+        <picture className={pictureClassName}>
+          {actualSrcSet?.length > 0 && (
+            <source srcSet={actualSrcSet} sizes={sizes} />
+          )}
+          <img
+            src={src}
+            alt={alt}
+            className={className}
+            role={role}
+            // removed because this is for the placeholder. Lazy loading is made using intersectionObserver
+            // loading={critical ? 'eager' : 'lazy'}
+            width={width}
+            height={height}
+            style={aspectRatio ? { aspectRatio } : null}
+            {...imageProps}
+            ref={imageRef}
+          />
+        </picture>
+        {!critical && (
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `
               <img
                 src="${src}"
                 ${srcSet?.length && `srcset="${srcSet.join(', ')}"`}
@@ -132,11 +133,14 @@ const Image = ({
                 ${height ? `height="${height}` : ''}
                 loading="lazy"
             `,
-          }}
-        />
-      )}
-    </>
-  );
+            }}
+          />
+        )}
+      </>
+    );
+  } else {
+    return <></>;
+  }
 };
 
 Image.propTypes = {

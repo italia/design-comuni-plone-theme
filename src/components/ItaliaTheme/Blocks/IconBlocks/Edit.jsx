@@ -10,7 +10,7 @@ import { Container, Row, Col } from 'design-react-kit';
 import { SidebarPortal } from '@plone/volto/components';
 import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
-
+import { handleKeyDownOwnFocusManagement } from 'design-comuni-plone-theme/helpers/blocks';
 import {
   withDNDContext,
   SubblocksEdit,
@@ -55,6 +55,28 @@ class Edit extends SubblocksEdit {
       this.setState({ selectedField: null });
     }
   }
+
+  handleEnter = (e) => {
+    if (this.props.selected) {
+      handleKeyDownOwnFocusManagement(e, this.props);
+    }
+  };
+
+  componentDidMount() {
+    const blockNode = this.props.blockNode;
+
+    if (this.props.selected && this.node) {
+      this.node.focus();
+    }
+    if (this.state.subblocks.length === 0) {
+      this.addSubblock();
+    }
+
+    if (blockNode && blockNode.current) {
+      blockNode.current.addEventListener('keydown', this.handleEnter, false);
+    }
+  }
+
   /**
    * Render method.
    * @method render
@@ -66,7 +88,7 @@ class Edit extends SubblocksEdit {
     }
 
     return (
-      <div className="public-ui">
+      <div className="public-ui" tabIndex="-1">
         <div className="full-width section py-5">
           {this.props.data.background?.[0] ? (
             <div
@@ -93,9 +115,9 @@ class Edit extends SubblocksEdit {
                   key={'title'}
                   fieldName="title"
                   selected={this.state.selectedField === 'title'}
-                  setSelected={() => {
+                  setSelected={(f) => {
                     this.setState({
-                      selectedField: 'title',
+                      selectedField: f,
                       subIndexSelected: -1,
                     });
                   }}
@@ -113,9 +135,9 @@ class Edit extends SubblocksEdit {
                   data={this.props.data}
                   fieldName="description"
                   selected={this.state.selectedField === 'description'}
-                  setSelected={() => {
+                  setSelected={(f) => {
                     this.setState({
-                      selectedField: 'description',
+                      selectedField: f,
                       subIndexSelected: -1,
                     });
                   }}

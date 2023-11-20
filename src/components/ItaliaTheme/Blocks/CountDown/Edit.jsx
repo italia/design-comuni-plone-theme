@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit';
@@ -8,6 +8,7 @@ import cx from 'classnames';
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import Sidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/Sidebar';
 import CountDown from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/CountDown';
+import { useHandleDetachedBlockFocus } from 'design-comuni-plone-theme/helpers/blocks';
 
 const messages = defineMessages({
   text: {
@@ -19,24 +20,14 @@ const messages = defineMessages({
 const Edit = (props) => {
   const { data, block, selected, ...otherProps } = props;
   const intl = useIntl();
-  const [selectedField, setSelectedField] = useState('text');
-  useEffect(() => {
-    if (selected && !selectedField) {
-      setSelectedField('text');
-    } else if (!selected) {
-      setSelectedField(null);
-    }
-  }, [selected]);
-
-  useEffect(() => {
-    if (!selected && selectedField) {
-      props.onSelectBlock(block);
-    }
-  }, [selectedField]);
+  const { selectedField, setSelectedField } = useHandleDetachedBlockFocus(
+    props,
+    'text',
+  );
 
   return (
     <>
-      <div className="public-ui">
+      <div className="public-ui" tabIndex="-1">
         <div
           className={cx('block-content', { 'full-width': data.showFullWidth })}
         >
@@ -76,9 +67,7 @@ const Edit = (props) => {
                   selected={selectedField === 'text'}
                   block={block}
                   placeholder={intl.formatMessage(messages.text)}
-                  setSelected={() => {
-                    setSelectedField('text');
-                  }}
+                  setSelected={setSelectedField}
                   focusNextField={() => {
                     setSelectedField('countdown_text');
                   }}
@@ -109,9 +98,7 @@ const Edit = (props) => {
                   fieldName="countdown_text"
                   selected={selectedField === 'countdown_text'}
                   placeholder={intl.formatMessage(messages.text)}
-                  setSelected={() => {
-                    setSelectedField('countdown_text');
-                  }}
+                  setSelected={setSelectedField}
                   focusPrevField={() => {
                     setSelectedField('text');
                   }}

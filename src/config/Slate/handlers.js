@@ -1,7 +1,8 @@
+import { Node } from 'slate';
 import {
   goDown,
   goUp,
-  softBreak,
+  //softBreak,
   unwrapEmptyString,
 } from '@plone/volto-slate/blocks/Text/keyboard';
 
@@ -78,6 +79,7 @@ const goToNextVoltoBlock = (props) => {
     index,
     saveSlateBlockSelection,
   } = props.editor.getBlockProps();
+
   const next = getNextVoltoBlock(index, properties);
   if (!next || next[0]?.['@type'] !== 'slate')
     return onFocusNextBlock(block, blockNode.current);
@@ -101,33 +103,40 @@ const focusNext = (props) => {
     showToolbar,
     onFocusNextBlock,
   } = props.editor.getBlockProps();
-
+  props.event.preventDefault();
   props.event.stopPropagation();
   let isAtEnd = false;
 
   if (showToolbar) {
     isAtEnd = isCursorAtBlockEnd(props.editor);
   } else {
-    let _range = document.getSelection().getRangeAt(0);
-    let range = _range.cloneRange();
-    range.selectNodeContents(props.event.target);
-    range.setEnd(_range.endContainer, _range.endOffset);
-    isAtEnd = range.toString().length === props.event.target.innerText?.length;
-    // isAtEnd =
-    //   props.event.target.selectionEnd === props.event.target.value?.length;
+    let selection = document.getSelection();
+
+    if (selection && selection.rangeCount > 0) {
+      const _range = selection.getRangeAt(0);
+      let range = _range.cloneRange();
+      range.selectNodeContents(props.event.target);
+      range.setEnd(_range.endContainer, _range.endOffset);
+      isAtEnd =
+        range.toString().length === props.event.target.innerText?.length;
+      // isAtEnd =
+      //   props.event.target.selectionEnd === props.event.target.value?.length;
+    }
+  }
+
+  //move to next field
+  if (focusNextField) {
+    focusNextField();
+    return true;
   }
 
   if (isAtEnd) {
-    //move to next field
-    if (focusNextField) {
-      return focusNextField();
-    }
-
     //handle SimpleTextEditorWidget -> move to next block
     if (!showToolbar && onFocusNextBlock) {
-      goToNextVoltoBlock(props);
+      return goToNextVoltoBlock(props);
     }
   }
+
   //handle SlateEditor arrow-down key
   return goDown(props);
 };
@@ -146,10 +155,14 @@ const breakInSimpleTextEditor = (props) => {
   //disable break in SimpleTextEditorWidget
 
   const getBlockProps = props.editor.getBlockProps;
-  const { showToolbar } = getBlockProps
+  const { showToolbar, focusNextField } = getBlockProps
     ? getBlockProps()
     : { showToolbar: true };
   if (props.event.key === 'Enter' && !props.event.shiftKey && !showToolbar) {
+    if (focusNextField) {
+      focusNextField();
+      return false;
+    }
     props.event.preventDefault();
     goToNextVoltoBlock(props);
     return false;
@@ -166,6 +179,7 @@ export default function install(config) {
       breakInSimpleTextEditor,
       customSoftBreak,
       //focusNext,
+      focusNext,
     ],
     ArrowUp: [focusPrev],
     ArrowDown: [focusNext],

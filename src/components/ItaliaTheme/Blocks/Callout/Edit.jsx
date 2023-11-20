@@ -3,7 +3,7 @@
  * @module components/ItaliaTheme/Blocks/Callout/Edit
  */
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { SidebarPortal } from '@plone/volto/components';
@@ -12,6 +12,7 @@ import { Callout, CalloutTitle, CalloutText } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import Sidebar from './Sidebar.jsx';
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { useHandleDetachedBlockFocus } from 'design-comuni-plone-theme/helpers/blocks';
 
 const messages = defineMessages({
   title: {
@@ -28,35 +29,25 @@ const messages = defineMessages({
  * @class Edit
  * @extends Component
  */
-const Edit = ({
-  data,
-  onChangeBlock,
-  block,
-  onSelectBlock,
-  selected,
-  ...otherProps
-}) => {
+const Edit = (props) => {
+  const {
+    data,
+    onChangeBlock,
+    block,
+    onSelectBlock,
+    selected,
+    ...otherProps
+  } = props;
   const intl = useIntl();
-  const [selectedField, setSelectedField] = useState('title');
-
-  useEffect(() => {
-    if (selected && !selectedField) {
-      setSelectedField('title');
-    } else if (!selected) {
-      setSelectedField(null);
-    }
-  }, [selected]);
-
-  useEffect(() => {
-    if (!selected && selectedField) {
-      onSelectBlock(block);
-    }
-  }, [selectedField]);
+  const { selectedField, setSelectedField } = useHandleDetachedBlockFocus(
+    props,
+    'title',
+  );
 
   return __SERVER__ ? (
     <div />
   ) : (
-    <div className="public-ui" id={block}>
+    <div className="public-ui" id={block} tabIndex="-1" role="textbox">
       <Callout
         highlight={data.style === 'highlight'}
         color={data.color?.replace('callout_', '')}
@@ -73,9 +64,7 @@ const Edit = ({
             onChangeBlock={onChangeBlock}
             selected={selectedField === 'title'}
             placeholder={intl.formatMessage(messages.title)}
-            setSelected={() => {
-              setSelectedField('title');
-            }}
+            setSelected={setSelectedField}
             focusNextField={() => {
               setSelectedField('text');
             }}
@@ -92,7 +81,7 @@ const Edit = ({
             selected={selectedField === 'text'}
             placeholder={intl.formatMessage(messages.text)}
             onChangeBlock={onChangeBlock}
-            setSelected={() => setSelectedField('text')}
+            setSelected={setSelectedField}
             focusPrevField={() => {
               setSelectedField('title');
             }}

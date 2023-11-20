@@ -74,12 +74,12 @@ const TextEditorWidget = (props) => {
 
   const selectThis = () => {
     if (setSelected) {
-      setSelected();
+      setSelected(fieldName ?? true);
     } else if (onSelectBlock) {
       onSelectBlock(block);
     }
   };
-  console.log(textblockExtensions.map((f) => f.name));
+
   const extensions = [...textblockExtensions].map((f) => {
     if (f.name === 'breakList') {
       return customBreakList;
@@ -131,7 +131,12 @@ const TextEditorWidget = (props) => {
             selected={selected}
             placeholder={placeholder}
             onKeyDown={handleKeyDetached}
-            editableProps={{ 'aria-multiline': 'true' }}
+            editableProps={{
+              'aria-multiline': 'true',
+            }}
+            onBlur={(e) => {
+              setSelected(fieldName ? null : false);
+            }}
           />
         </div>
       ) : (

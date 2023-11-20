@@ -9,6 +9,8 @@ import PropTypes from 'prop-types';
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { UniversalLink } from '@plone/volto/components';
 import { TextBlockView } from '@plone/volto-slate/blocks/Text';
+import { useHandleDetachedBlockFocus } from 'design-comuni-plone-theme/helpers/blocks';
+
 import cx from 'classnames';
 
 const messages = defineMessages({
@@ -26,28 +28,18 @@ const messages = defineMessages({
   },
 });
 
-const Block = ({ data, block, inEditMode, selected, ...otherProps }) => {
+const Block = (props) => {
+  const { data, block, inEditMode, selected, ...otherProps } = props;
   const intl = useIntl();
   const title = data?.cta_title;
   const hasImage = data?.showImage && data?.ctaImage?.length > 0;
   const content = data?.cta_content;
   const showFullwidth = data?.showFullWidth;
 
-  const [selectedField, setSelectedField] = useState('title');
-
-  useEffect(() => {
-    if (selected) {
-      setSelectedField('title');
-    } else {
-      setSelectedField(null);
-    }
-  }, [selected]);
-
-  useEffect(() => {
-    if (!selected && selectedField && otherProps?.onSelectBlock) {
-      otherProps.onSelectBlock(block);
-    }
-  }, [selectedField]);
+  const { selectedField, setSelectedField } = useHandleDetachedBlockFocus(
+    props,
+    'cta_title',
+  );
 
   return (
     <div
@@ -81,12 +73,12 @@ const Block = ({ data, block, inEditMode, selected, ...otherProps }) => {
                 showToolbar={false}
                 data={data}
                 fieldName="cta_title"
-                selected={selectedField === 'title'}
-                setSelected={() => setSelectedField('title')}
+                selected={selectedField === 'cta_title'}
+                setSelected={setSelectedField}
                 block={block}
                 placeholder={intl.formatMessage(messages.cta_title)}
                 focusNextField={() => {
-                  setSelectedField('content');
+                  setSelectedField('cta_content');
                 }}
               />
             ) : (
@@ -101,11 +93,11 @@ const Block = ({ data, block, inEditMode, selected, ...otherProps }) => {
               data={data}
               fieldName="cta_content"
               block={block}
-              selected={selectedField === 'content'}
+              selected={selectedField === 'cta_content'}
               placeholder={intl.formatMessage(messages.cta_content)}
-              setSelected={() => setSelectedField('content')}
+              setSelected={setSelectedField}
               focusPrevField={() => {
-                setSelectedField('title');
+                setSelectedField('cta_title');
               }}
             />
           ) : (

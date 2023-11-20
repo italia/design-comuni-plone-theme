@@ -18,7 +18,7 @@ import { Button, Dimmer, Loader, Message } from 'semantic-ui-react';
 import { isEqual } from 'lodash';
 import { defineMessages, injectIntl } from 'react-intl';
 import cx from 'classnames';
-
+import { handleKeyDownOwnFocusManagement } from 'design-comuni-plone-theme/helpers/blocks';
 import {
   flattenToAppURL,
   getBaseUrl,
@@ -123,6 +123,12 @@ class EditComponent extends Component {
     }
   }
 
+  handleEnter = (e) => {
+    if (this.props.selected) {
+      handleKeyDownOwnFocusManagement(e, this.props);
+    }
+  };
+
   /**
    * Component did mount
    * @method componentDidMount
@@ -130,7 +136,17 @@ class EditComponent extends Component {
    */
   componentDidMount() {
     if (this.props.selected) {
-      this.titleEditor.focus();
+      this.setState(() => ({ currentFocused: 'title' }));
+    }
+
+    const blockNode = this.props.blockNode;
+
+    if (this.props.selected && this.node) {
+      this.node.focus();
+    }
+
+    if (blockNode && blockNode.current) {
+      blockNode.current.addEventListener('keydown', this.handleEnter, false);
     }
   }
 
@@ -154,8 +170,15 @@ class EditComponent extends Component {
         url: nextProps.content['@id'],
       });
     }
-  }
 
+    if (nextProps.selected) {
+      if (!this.props.selected) {
+        this.setState({ currentFocused: 'title' });
+      }
+    } else {
+      this.setState({ currentFocused: null });
+    }
+  }
   /**
    * @param {*} nextProps
    * @param {*} nextState
@@ -210,7 +233,7 @@ class EditComponent extends Component {
       this.props.intl.formatMessage(messages.placeholder);
 
     return (
-      <div className="public-ui">
+      <div className="public-ui" tabIndex="-1">
         <div
           className={cx('block hero', {
             selected: this.props.selected,
@@ -287,8 +310,8 @@ class EditComponent extends Component {
                     fieldName="title"
                     selected={this.state.currentFocused === 'title'}
                     placeholder={this.props.intl.formatMessage(messages.title)}
-                    setSelected={() => {
-                      this.setState(() => ({ currentFocused: 'title' }));
+                    setSelected={(f) => {
+                      this.setState(() => ({ currentFocused: f }));
                     }}
                     focusNextField={() => {
                       this.setState(() => ({ currentFocused: 'description' }));
@@ -307,8 +330,8 @@ class EditComponent extends Component {
                   placeholder={this.props.intl.formatMessage(
                     messages.description,
                   )}
-                  setSelected={() => {
-                    this.setState(() => ({ currentFocused: 'description' }));
+                  setSelected={(f) => {
+                    this.setState(() => ({ currentFocused: f }));
                   }}
                   focusPrevField={() => {
                     this.setState(() => ({ currentFocused: 'title' }));

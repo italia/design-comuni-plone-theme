@@ -86,7 +86,7 @@ iframe {
 .cms-ui {
   blockquote,
   .blockquote {
-    display: flex; //serve per quando i blockquote sono affiancati alle immagini allineate a dx o sx
+    display: flow-root; //serve per quando i blockquote sono affiancati alle immagini allineate a dx o sx
     border-color: $primary !important;
 
     ul:first-child,
@@ -125,7 +125,7 @@ iframe {
     font-weight: 600;
     text-align: center;
     text-decoration: none;
-    margin: 0 0.5rem;
+    margin: 0;
     &:hover,
     &:active {
       font-weight: 600;

@@ -3,18 +3,14 @@
  * @module components/manage/Blocks/Image/Edit
  */
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
+import React, { useEffect } from 'react';
 
 import cx from 'classnames';
 import { Container, Row, Col } from 'design-react-kit';
 
-import { createContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
-import { defineMessages, injectIntl } from 'react-intl';
-
+import { defineMessages, useIntl } from 'react-intl';
+import { useHandleDetachedBlockFocus } from 'design-comuni-plone-theme/helpers/blocks';
 import {
   AlertSidebar,
   TextEditorWidget,
@@ -26,108 +22,67 @@ const messages = defineMessages({
     defaultMessage: 'Digita il testo…',
   },
 });
-/**
- * Edit Alert block class.
- * @class Edit
- * @extends Component
- */
-class Edit extends Component {
-  /**
-   * Property types.
-   * @property {Object} propTypes Property types.
-   * @static
-   */
-  static propTypes = {
-    selected: PropTypes.bool.isRequired,
-    block: PropTypes.string.isRequired,
-    index: PropTypes.number.isRequired,
-    data: PropTypes.objectOf(PropTypes.any).isRequired,
-    content: PropTypes.objectOf(PropTypes.any).isRequired,
-    request: PropTypes.shape({
-      loading: PropTypes.bool,
-      loaded: PropTypes.bool,
-    }).isRequired,
-    pathname: PropTypes.string.isRequired,
-    onChangeBlock: PropTypes.func.isRequired,
-    onSelectBlock: PropTypes.func.isRequired,
-    onDeleteBlock: PropTypes.func.isRequired,
-    onFocusPreviousBlock: PropTypes.func.isRequired,
-    onFocusNextBlock: PropTypes.func.isRequired,
-    handleKeyDown: PropTypes.func.isRequired,
-    createContent: PropTypes.func.isRequired,
-  };
 
-  constructor(props) {
-    super(props);
-    if (!this.props.data.bg_color) {
-      this.props.data.bg_color = 'warning';
-    }
-    this.blockNode = React.createRef();
-  }
+const Edit = (props) => {
+  const { data, onChangeBlock, block, selected } = props;
+  const intl = useIntl();
+  const { selectedField, setSelectedField } = useHandleDetachedBlockFocus(
+    props,
+    'text',
+  );
 
-  render() {
-    if (__SERVER__) {
-      return <div />;
+  useEffect(() => {
+    if (!data.bg_color) {
+      onChangeBlock(block, {
+        ...data,
+        bg_color: 'warning',
+      });
     }
-    return (
-      <div className="public-ui">
-        <div
-          className={cx('alertblock', {
-            selected: this.props.selected,
-          })}
-        >
-          <Row
-            className={cx(
-              'full-width p-5',
-              'bg-alert-' + this.props.data.bg_color,
-            )}
-          >
-            <Container className="ui">
-              <Row className="align-items-start">
-                {this.props.data.image?.data && (
-                  <Col sm={2} className="pb-3 image-col">
-                    <img
-                      src={`data:${this.props.data.image['content-type']};${this.props.data.image.encoding},${this.props.data.image.data}`}
-                      alt=""
-                      className={cx('left-image', [
-                        this.props.data.sizeImage
-                          ? 'size-' + this.props.data.sizeImage
-                          : 'size-l',
-                      ])}
-                    />
-                  </Col>
-                )}
-                <Col>
-                  <TextEditorWidget
-                    {...this.props}
-                    data={this.props.data}
-                    fieldName="text"
-                    selected={this.props.selected}
-                    placeholder={this.props.intl.formatMessage(
-                      messages.content_placeholder,
-                    )}
-                    showToolbar={true}
+  }, []);
+
+  return __SERVER__ ? (
+    <div />
+  ) : (
+    <div className="public-ui" tabIndex="-1">
+      <div
+        className={cx('alertblock', {
+          selected: selected,
+        })}
+      >
+        <Row className={cx('full-width p-5', 'bg-alert-' + data.bg_color)}>
+          <Container className="ui">
+            <Row className="align-items-start">
+              {data.image?.data && (
+                <Col sm={2} className="pb-3 image-col">
+                  <img
+                    src={`data:${data.image['content-type']};${data.image.encoding},${data.image.data}`}
+                    alt=""
+                    className={cx('left-image', [
+                      data.sizeImage ? 'size-' + data.sizeImage : 'size-l',
+                    ])}
                   />
                 </Col>
-              </Row>
-            </Container>
-          </Row>
-        </div>
-        <SidebarPortal selected={this.props.selected}>
-          <AlertSidebar {...this.props} />
-        </SidebarPortal>
+              )}
+              <Col>
+                <TextEditorWidget
+                  {...props}
+                  data={data}
+                  fieldName="text"
+                  selected={selectedField === 'text'}
+                  setSelected={setSelectedField}
+                  placeholder={intl.formatMessage(messages.content_placeholder)}
+                  showToolbar={true}
+                />
+              </Col>
+            </Row>
+          </Container>
+        </Row>
       </div>
-    );
-  }
-}
+      <SidebarPortal selected={selected}>
+        <AlertSidebar {...props} />
+      </SidebarPortal>
+    </div>
+  );
+};
 
-export default compose(
-  injectIntl,
-  connect(
-    (state) => ({
-      request: state.content.create,
-      content: state.content.data,
-    }),
-    { createContent },
-  ),
-)(Edit);
+export default Edit;

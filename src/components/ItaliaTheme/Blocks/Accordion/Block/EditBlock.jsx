@@ -99,9 +99,9 @@ class EditBlock extends SubblockEdit {
                   messages.titlePlaceholder,
                 )}
                 selected={this.props.selected && this.state.focusOn === 'title'}
-                setSelected={() => {
+                setSelected={(f) => {
                   this.setState({
-                    focusOn: 'title',
+                    focusOn: f,
                   });
                 }}
                 focusNextField={() => {
@@ -139,7 +139,7 @@ class EditBlock extends SubblockEdit {
                   onChangeBlock={(block, _data) => {
                     this.onChange(_data);
                   }}
-                  setSelected={() => this.setState({ focusOn: 'text' })}
+                  setSelected={(f) => this.setState({ focusOn: f })}
                   focusNextField={
                     !this.props.isLast
                       ? () => {
