@@ -1,5 +1,24 @@
 
 
+## [10.4.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.4.0...v10.4.1) (2023-11-21)
+
+
+### Bug Fixes
+
+* BandiInEvidenceTemplate layout to space bando dati when titles have different lengths ([#410](https://github.com/RedTurtle/design-comuni-plone-theme/issues/410)) ([4780b12](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4780b127497e247df7dd59ffcba274537b2bc5a5))
+* class no-after added to simple card text block ([#413](https://github.com/RedTurtle/design-comuni-plone-theme/issues/413)) ([10073e8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/10073e8bdf50c9e4b8d4245c05ad38bdac8423e3))
+* search block column template + button text color ([#408](https://github.com/RedTurtle/design-comuni-plone-theme/issues/408)) ([72f7eae](https://github.com/RedTurtle/design-comuni-plone-theme/commit/72f7eae3bac35aaaa01e725a89a65de8a2b02b60))
+
+
+### Maintenance
+
+* how to customize the 503 file ([#405](https://github.com/RedTurtle/design-comuni-plone-theme/issues/405)) ([b444ba8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b444ba84de9a31edffb01f778b66677ac72971cb))
+
+
+### Documentation
+
+* updated publiccode and release log ([5be0543](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5be054313163816dd764149e8f7cb1717c52eab2))
+
 ## [10.4.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.3.0...v10.4.0) (2023-11-14)
 
 
