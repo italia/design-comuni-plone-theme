@@ -59,6 +59,7 @@
   .search-results .public-ui .template-wrapper {
     .container {
       padding: 0 !important;
+      max-width: 100%;
     }
   }
   .sideColumn {
@@ -214,4 +215,8 @@
       }
     }
   }
+}
+
+body.cms-ui .block.search.public-ui a {
+  color: $primary-text;
 }

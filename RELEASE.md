@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Nel blocco Cerca, quando viene selezionata la variazione "Colonna a destra" o "Colonna a sinistra" i blocchi si allineano correttamente, e i bottoni nella testata si vedono correttamente in modalità Edit.
+
 ## Versione 10.4.0 (14/11/2023)
 
 ### Novità
