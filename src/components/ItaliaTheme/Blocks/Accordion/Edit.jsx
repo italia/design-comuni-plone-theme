@@ -105,9 +105,6 @@ class Edit extends SubblocksEdit {
     return (
       <div className="public-ui" tabIndex="-1" ref={this.nodeF}>
         <div className="full-width section section-muted section-inset-shadow py-5 is-edit-mode">
-          selected: {this.props.selected ? 'true' : 'false'}
-          <br />
-          subindexselected: {this.state.subIndexSelected}
           <Container className="px-md-4">
             <Card className="card-bg rounded" noWrapper={false} space tag="div">
               <CardBody tag="div">
