@@ -1,3 +1,6 @@
+/*
+ * In evidenza
+ */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -83,7 +86,10 @@ const InEvidenceTemplate = (props) => {
             const listingText = show_description ? (
               <ListingText item={item} />
             ) : null;
-            const image = ListingImage({ item });
+            const image = ListingImage({
+              item,
+              sizes: '(max-width:320px) 200px, 300px',
+            });
             const category = getCategory(item, show_type, show_section, props);
             const topics = show_topics ? item.tassonomia_argomenti : null;
 

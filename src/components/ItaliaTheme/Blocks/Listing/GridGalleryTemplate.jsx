@@ -1,3 +1,6 @@
+/*
+ * Gallery a griglia
+ */
 import { Alert, Col, Container, Row } from 'design-react-kit';
 import {
   ListingImage,
@@ -55,7 +58,6 @@ const GridGalleryTemplate = ({
           {items.map((item, index) => {
             let image = ListingImage({
               item,
-              useOriginal: false,
               className: '',
             });
 

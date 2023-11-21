@@ -23,6 +23,7 @@
     margin-right: auto;
     margin-left: auto;
 
+    &.volto-image.responsive,
     picture.volto-image.responsive {
       height: 300px;
       max-height: 300px;

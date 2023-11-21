@@ -7,11 +7,10 @@ import {
   CardText,
   CardTitle,
 } from 'design-react-kit';
-
+import config from '@plone/volto/registry';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { RichTextSection } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
-import Image from '@plone/volto/components/theme/Image/Image';
 import { viewDate } from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
@@ -29,15 +28,9 @@ const messages = defineMessages({
   },
 });
 
-/**
- * Evento view component class.
- * @function Evento
- * @params {object} Evento: object.
- * @returns {string} Markup of the component.
- */
-const Evento = ({ event, show_image }) => {
+const SubEvent = ({ event, show_image }) => {
   const intl = useIntl();
-
+  const Image = config.getComponent({ name: 'Image' }).component;
   return event ? (
     <div className="card-wrapper card-teaser">
       <Card noWrapper className="card card-img no-after shadow rounded">
@@ -45,17 +38,14 @@ const Evento = ({ event, show_image }) => {
           (event.image_field || event.preview_image || event.image) && (
             <div className="img-responsive-wrapper">
               <div className="img-responsive">
-                <Image
-                  itemUrl={event.image_field ? event['@id'] : undefined}
-                  image={
-                    event.image_scales?.[event.image_field]?.[0] ||
-                    event.preview_image ||
-                    event.image ||
-                    event['@id']
-                  }
-                  alt={intl.formatMessage(messages.immagine)}
-                  containerClassName="img-wrapper"
-                />
+                <figure class="volto-image img-wrapper responsive">
+                  <Image
+                    item={event}
+                    alt={intl.formatMessage(messages.immagine)}
+                    loading="lazy"
+                    sizes="(max-width:320px) 300px, (max-width:425px) 400px, (max-width:768px) 600px, 300px"
+                  />
+                </figure>
                 {event.start && (
                   <div className="card-calendar d-flex flex-column justify-content-center">
                     {viewDate(intl.locale, event.start, 'DD MMM')}
@@ -87,6 +77,11 @@ const Evento = ({ event, show_image }) => {
   ) : null;
 };
 
+SubEvent.propTypes = {
+  event: PropTypes.object.isRequired,
+  show_image: PropTypes.bool,
+};
+
 /**
  * Events view component class.
  * @function Events
@@ -95,7 +90,6 @@ const Evento = ({ event, show_image }) => {
  */
 const Events = ({ content, title, show_image, folder_name, isChild }) => {
   const intl = useIntl();
-
   const events = isChild
     ? content?.parent
       ? [content.parent]
@@ -109,7 +103,7 @@ const Events = ({ content, title, show_image, folder_name, isChild }) => {
     >
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
         {events.map((item, i) => (
-          <Evento key={item['@id']} event={item} show_image={show_image} />
+          <SubEvent key={item['@id']} event={item} show_image={show_image} />
         ))}
       </div>
     </RichTextSection>
@@ -124,9 +118,4 @@ Events.propTypes = {
   isChild: PropTypes.bool,
   title: PropTypes.string,
   folder_name: PropTypes.string,
-};
-
-Evento.propTypes = {
-  event: PropTypes.object,
-  show_image: PropTypes.bool,
 };

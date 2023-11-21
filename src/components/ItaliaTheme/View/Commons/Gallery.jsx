@@ -9,11 +9,11 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import EmbeddedVideo from './EmbeddedVideo';
 import { GalleryPreview } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import Image from '@plone/volto/components/theme/Image/Image';
 import PropTypes from 'prop-types';
 import { contentFolderHasItems } from 'design-comuni-plone-theme/helpers';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   gallery: {
@@ -45,6 +45,7 @@ const Gallery = ({
   reactSlick,
 }) => {
   const Slider = reactSlick.default;
+  const Image = config.getComponent({ name: 'Image' }).component;
   const getSettings = (nItems, slideToScroll) => {
     return {
       dots: true,
@@ -114,9 +115,11 @@ const Gallery = ({
   }, [url]);
 
   const multimedia = searchResults?.[folder_name]?.items || [];
-  let images = multimedia.filter((item) => item['@type'] === 'Image');
-  let videos = multimedia.filter((item) => item['@type'] === 'Link');
-  let gallery_title = title || intl.formatMessage(messages.gallery);
+  const images = multimedia.filter((item) => item['@type'] === 'Image');
+  const videos = multimedia.filter((item) => item['@type'] === 'Link');
+  const gallery_title = title || intl.formatMessage(messages.gallery);
+  const default_width_image =
+    images.length > 3 ? '200px' : `${650 / images.length}px`;
 
   return !hasChildren ? null : (
     <>
@@ -166,13 +169,11 @@ const Gallery = ({
                         )} ${item.title}`}
                       >
                         <Image
-                          itemUrl={item['@id']}
-                          image={
-                            item.image_scales?.[item.image_field]?.[0] ||
-                            item['@id']
-                          }
+                          item={item}
                           alt={item.title}
                           className="img-fluid"
+                          loading="lazy"
+                          sizes={`(max-width:320px) 300px, (max-width:425px) 400px, ${default_width_image}`}
                         />
                       </a>
                       <figcaption className="figure-caption mt-2">

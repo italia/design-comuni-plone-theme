@@ -1,9 +1,9 @@
+/*
+ * Page Header Component used in most of the views
+ */
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-
-import Image from '@plone/volto/components/theme/Image/Image';
-
 import {
   Actions,
   ArgumentIcon,
@@ -19,13 +19,7 @@ import {
   PageHeaderDocumento,
   Sharing,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
-
-/**
- * PageHeader view component class.
- * @function PageHeader
- * @params {object} content: Content object.
- * @returns {string} Markup of the component.
- */
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   reading_time: {
@@ -38,79 +32,98 @@ const messages = defineMessages({
   },
 });
 
+/**
+ * PageHeader view component class.
+ * @function PageHeader
+ * @params content {object} content object
+ * @params imageinheader {boolean} if true, show image in header (eg. in PersonaView)
+ * @params imageinheader_field {string} field name of the image to show in header (eg. 'foto_persona')
+ * @params readingtime {number} reading time in minutes
+ * @params showreadingtime {boolean} show or hide reading time
+ * @params showdates {boolean} show or hide dates in header
+ * @params showtassonomiaargomenti {boolean} show or hide argomenti in header
+ * @returns {string} Markup of the component.
+ */
 const PageHeader = (props) => {
+  const {
+    content,
+    imageinheader,
+    imageinheader_field,
+    readingtime,
+    showdates,
+    showreadingtime,
+    showtassonomiaargomenti,
+  } = props;
   const intl = useIntl();
-
+  const Image = config.getComponent({ name: 'Image' }).component;
   return (
     <div className="PageHeaderWrapper mb-4">
       <div className="row mb-2 mb-lg-0 page-header">
         <div
           className={cx('py-lg-2 page-header-left', {
-            'col-lg-6': props.imageinheader,
-            'col-lg-8': !props.imageinheader,
+            'col-lg-6': imageinheader,
+            'col-lg-8': !imageinheader,
           })}
         >
-          {(props.content.icon || props.content.icona) && (
-            <ArgumentIcon icon={props.content.icon || props.content.icona} />
+          {(content.icon || content.icona) && (
+            <ArgumentIcon icon={content.icon || content.icona} />
           )}
           <h1
             data-element={
-              props.content['@type'] === 'Servizio'
-                ? 'service-title'
-                : 'page-name'
+              content['@type'] === 'Servizio' ? 'service-title' : 'page-name'
             }
           >
-            {props.content.title}
+            {content.title}
           </h1>
           <p className="h2">
-            {props.content.subtitle && `${props.content.subtitle}`}
-            {props.content.sottotitolo && `${props.content.sottotitolo}`}
+            {content.subtitle && `${content.subtitle}`}
+            {content.sottotitolo && `${content.sottotitolo}`}
           </p>
 
-          <PageHeaderEventDates content={props.content} />
+          <PageHeaderEventDates content={content} />
 
-          <PageHeaderStatoServizio content={props.content} />
+          <PageHeaderStatoServizio content={content} />
 
-          <PageHeaderDocumento content={props.content} />
+          <PageHeaderDocumento content={content} />
 
-          {props.content.description && (
+          {content.description && (
             <p
               className="documentDescription"
               data-element={
-                props.content['@type'] === 'Servizio'
+                content['@type'] === 'Servizio'
                   ? 'service-description'
                   : undefined
               }
             >
-              {props.content.description}
+              {content.description}
             </p>
           )}
 
-          <PageHeaderBando content={props.content} />
+          <PageHeaderBando content={content} />
 
-          <PageHeaderPersona content={props.content} />
+          <PageHeaderPersona content={content} />
 
-          <PageHeaderNewsItem content={props.content} />
+          <PageHeaderNewsItem content={content} />
 
-          <PageHeaderLinkServizio content={props.content} />
+          <PageHeaderLinkServizio content={content} />
 
           <PageHeaderExtend {...props} />
 
-          {(props.showreadingtime || props.showdates) && (
+          {(showreadingtime || showdates) && (
             <div className="row mt-5 mb-4 readingtime-dates">
-              {props.showdates ? (
-                <PageHeaderDates content={props.content} />
+              {showdates ? (
+                <PageHeaderDates content={content} />
               ) : (
                 <div className="col-6"></div>
               )}
 
-              {props.showreadingtime &&
-                props.readingtime > 0 &&
+              {showreadingtime &&
+                readingtime > 0 &&
                 ((
                   <div className="col-6">
                     <small>{intl.formatMessage(messages.reading_time)}:</small>
                     <p className="font-monospace">
-                      {props.readingtime} {intl.formatMessage(messages.minutes)}
+                      {readingtime} {intl.formatMessage(messages.minutes)}
                     </p>
                   </div>
                 ) || <div className="col-6" />)}
@@ -118,25 +131,26 @@ const PageHeader = (props) => {
           )}
         </div>
 
-        {props.imageinheader && props.content[props.imageinheader_field] ? (
+        {imageinheader && content[imageinheader_field] ? (
           <div className="col-lg-2 page-header-image">
             <figure>
               <Image
-                image={props.content[props.imageinheader_field]}
+                item={content}
+                imageField={imageinheader_field}
                 alt=""
                 className="img-fluid"
-                maxSize={300}
+                sizes="(max-width:768px) 300px, 200px"
               />
             </figure>
           </div>
         ) : null}
 
         <div className={'page-header-right py-lg-4 col-lg-3 offset-lg-1'}>
-          <Sharing url={props.content['@id']} title={props.content.title} />
-          <Actions url={props.content['@id']} title={props.content.title} />
+          <Sharing url={content['@id']} title={content.title} />
+          <Actions url={content['@id']} title={content.title} />
 
-          {props.showtassonomiaargomenti && (
-            <PageHeaderTassonomiaArgomenti content={props.content} />
+          {showtassonomiaargomenti && (
+            <PageHeaderTassonomiaArgomenti content={content} />
           )}
         </div>
       </div>
@@ -148,12 +162,12 @@ export default PageHeader;
 
 PageHeader.propTypes = {
   params: PropTypes.shape({
-    content: PropTypes.object,
-    readingtime: PropTypes.string,
-    showreadingtime: PropTypes.bool,
+    content: PropTypes.object.isRequired,
     imageinheader: PropTypes.bool,
     imageinheader_field: PropTypes.string,
+    readingtime: PropTypes.string,
     showdates: PropTypes.bool,
+    showreadingtime: PropTypes.bool,
     showtassonomiaargomenti: PropTypes.bool,
   }),
 };

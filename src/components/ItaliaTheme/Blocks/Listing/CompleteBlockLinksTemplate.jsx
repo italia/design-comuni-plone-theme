@@ -1,3 +1,6 @@
+/*
+ * Blocco link completo
+ */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { UniversalLink } from '@plone/volto/components';
@@ -50,8 +53,8 @@ const CompleteBlockLinksTemplate = ({
           </Row>
         )}
         <Row className="items">
-          {items.map((item, index) => {
-            const image = ListingImage({ item, className: '' });
+          {items.map((item) => {
+            const image = ListingImage({ item, className: '', sizes: '60px' });
 
             return (
               <Col md="6" lg="3" key={item['@id']} className="col-item">

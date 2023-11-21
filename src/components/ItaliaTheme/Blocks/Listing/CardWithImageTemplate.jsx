@@ -1,3 +1,6 @@
+/*
+ * componente per visulizzare un CT "Persona" nei Listing o in aclune pagine
+ */
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';

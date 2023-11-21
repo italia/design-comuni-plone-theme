@@ -6,7 +6,6 @@ import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import Image from '@plone/volto/components/theme/Image/Image';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { getCalendarDate } from 'design-comuni-plone-theme/helpers';
 import {
@@ -15,6 +14,7 @@ import {
   getItemIcon,
   ListingCategory,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import config from '@plone/volto/registry';
 
 /**
  * GenericCard view component class.
@@ -33,13 +33,8 @@ const GenericCard = ({
   size,
   rrule,
 }) => {
-  let item_fo = null;
-  const locationContent = useSelector((state) => state.content.subrequests);
-  const dispatch = useDispatch();
-  const url = flattenToAppURL(item['@id']);
-  const key = `generic_card_${url}`;
   const icon = getItemIcon(item);
-
+  const Image = config.getComponent({ name: 'Image' }).component;
   const infos = (
     <>
       {showInfos && (
@@ -55,43 +50,35 @@ const GenericCard = ({
       )}
     </>
   );
+  const cooked_image_field = image_field || item.image_field;
+  // (item.preview_image ? 'preview_image' : 'image');
+  const image =
+    showimage &&
+    item &&
+    Image({
+      item: item,
+      imageField: cooked_image_field,
+      alt: '',
+      title: item.title,
+    });
 
-  useEffect(() => {
-    if (showimage) {
-      dispatch(getContent(url, null, key));
-      return () => dispatch(resetContent(key));
-    }
-  }, [dispatch, key, showimage, url]);
-
-  item_fo = locationContent?.[key]?.data || item;
-
-  return item_fo ? (
-    showimage && (item_fo.image || item_fo.preview_image) ? (
-      <div
-        className={cx('genericcard card card-img shadow rounded mt-3 ', {
-          'card-teaser': !showimage,
-        })}
-      >
+  return item ? (
+    image ? (
+      <div className={cx('genericcard card card-img shadow rounded mt-3')}>
         <div className="img-responsive-wrapper">
           <div className="img-responsive img-responsive-panoramic">
-            <figure className="img-wrapper">
-              <Image
-                image={item_fo.preview_image || item_fo.image}
-                alt=""
-                title={item_fo.title}
-              />
-            </figure>
+            <figure className="img-wrapper">{image}</figure>
           </div>
         </div>
         <div className="card-body px-4">
           {infos}
           <div className="card-title h5">
             {show_icon && <Icon icon={show_icon} padding={false} />}
-            <UniversalLink item={item_fo}>{item_fo.title}</UniversalLink>
+            <UniversalLink item={item}>{item.title}</UniversalLink>
           </div>
           {(showDescription || children) && (
             <div className="card-text">
-              {item_fo.description} {children}
+              {item.description} {children}
             </div>
           )}
         </div>
@@ -107,11 +94,11 @@ const GenericCard = ({
           {infos}
           <div className="card-title h5">
             {show_icon && <Icon icon={show_icon} padding={false} />}
-            <UniversalLink item={item_fo}>{item_fo.title}</UniversalLink>
+            <UniversalLink item={item}>{item.title}</UniversalLink>
           </div>
           {(showDescription || children) && (
             <div className="card-text">
-              {item_fo.description} {children}
+              {item.description} {children}
             </div>
           )}
         </div>

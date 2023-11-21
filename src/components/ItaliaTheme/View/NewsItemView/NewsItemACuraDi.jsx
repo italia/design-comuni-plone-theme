@@ -1,3 +1,6 @@
+/*
+ * NewsItemACuraDi component class, used in `NewsItemView`.
+ */
 import React from 'react';
 import PropTypes from 'prop-types';
 

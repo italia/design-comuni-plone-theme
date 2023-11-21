@@ -1,10 +1,7 @@
 import { Button, Container } from 'design-react-kit';
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useRef, useState, useEffect } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
-import Image from '@plone/volto/components/theme/Image/Image';
 import PropTypes from 'prop-types';
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { UniversalLink } from '@plone/volto/components';
@@ -27,6 +24,7 @@ const messages = defineMessages({
   },
 });
 
+
 const Block = ({
   data,
   block,
@@ -40,6 +38,7 @@ const Block = ({
   selected,
 }) => {
   const intl = useIntl();
+  const Image = config.getComponent({ name: 'Image' }).component;
   const title = data?.cta_title?.blocks[0]?.text;
   const hasImage = data?.showImage && data?.ctaImage?.length > 0;
   const content = data?.cta_content;
@@ -78,20 +77,18 @@ const Block = ({
       }}
     >
       {hasImage && data?.ctaImage?.length > 0 && (
-        <Image
-          itemUrl={data.ctaImage[0]['@id']}
-          image={
-            data.ctaImage[0].image_scales?.[
-              data.ctaImage[0].image_field
-            ]?.[0] || data.ctaImage[0]['@id']
-          }
-          key={data.ctaImage[0]['@id']}
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          useOriginal={false}
-          role="presentation"
-        />
+        <figure className="img-wrapper">
+          <Image
+            item={data.ctaImage?.[0]}
+            sizes="100vw"
+            loading="lazy"
+            responsive={true}
+            alt=""
+            aria-hidden="true"
+            role="presentation"
+            key={data.ctaImage[0]['@id']}
+          />
+        </figure>
       )}
       <Container tag="div" className="px-3 px-md-4">
         <div className="cta-tile-text">

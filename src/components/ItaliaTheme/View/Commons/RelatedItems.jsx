@@ -127,33 +127,28 @@ const RelatedItems = ({
             )}
 
             {/*----------------vista per singoli elementi----------------*/}
-            {!view_sections && (
+            {!view_sections && related?.length > 0 && (
               <>
-                {related?.length > 0 && (
-                  <>
-                    <Row>
-                      <Col className="text-center">
-                        <h3>{intl.formatMessage(messages.related_items)}</h3>
-                      </Col>
-                    </Row>
-                    <Row className="mt-lg-4">
-                      {related.map((item, i) => (
-                        <Col md={4} key={item['@id'] + i} className="mb-3">
-                          <div className="card-wrapper">
-                            <GenericCard
-                              key={i}
-                              index={item['@id']}
-                              item={item}
-                              showimage={true}
-                              image_field="image"
-                              showInfos={true}
-                            />
-                          </div>
-                        </Col>
-                      ))}
-                    </Row>
-                  </>
-                )}
+                <Row>
+                  <Col className="text-center">
+                    <h3>{intl.formatMessage(messages.related_items)}</h3>
+                  </Col>
+                </Row>
+                <Row className="mt-lg-4">
+                  {related.map((item, i) => (
+                    <Col md={4} key={item['@id'] + i} className="mb-3">
+                      <div className="card-wrapper">
+                        <GenericCard
+                          key={i}
+                          index={item['@id']}
+                          item={item}
+                          showimage={true}
+                          showInfos={true}
+                        />
+                      </div>
+                    </Col>
+                  ))}
+                </Row>
               </>
             )}
             {children}
