@@ -52,13 +52,7 @@ const Block = ({
 
   return (
     <div className="simple-text-card-wrapper">
-      <Card
-        color="white"
-        className=" card-bg rounded"
-        noWrapper={false}
-        space
-        tag="div"
-      >
+      <Card color="white" className="no-after card-bg rounded" space tag="div">
         <CardBody>
           <div className={cx('simple-text-card', { 'cms-ui': inEditMode })}>
             {inEditMode ? (
