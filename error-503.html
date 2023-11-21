@@ -1,3 +1,18 @@
+<!-- 
+WHAT YOU NEED TO CHANGE IN THIS FILE:
+
+[ ] - Base64 favicon (~LINE 29)
+[ ] - Root variable colors (~LINE 110)
+[ ] - Slim header region (href and content) (~LINE 581)
+[ ] - Header brand Base64 image and alt title (~LINE 596)
+[ ] - Header brand title (~LINE 603)
+[ ] - Header brand tagline (~LINE 605)
+[ ] - Footer Base64 image and alt title (~LINE 635)
+[ ] - Footer brand title (~LINE 638)
+[ ] - Footer brand tagline (~LINE 640)
+[ ] - Footer column "Contatti" - one item per <p> - Pay attention to href links (~LINE 662)
+ -->
+
 <!DOCTYPE html>
 <html lang="it">
   <head>
@@ -207,11 +222,7 @@
         padding-right: 6px;
         padding-left: 6px;
       }
-      .icon {
-        width: 32px;
-        height: 32px;
-        vertical-align: middle;
-      }
+
       @media (min-width: 576px) {
         body,
         html {
@@ -335,8 +346,7 @@
 
       .it-header-center-wrapper
         .it-header-center-content-wrapper
-        .it-brand-wrapper
-        a {
+        .it-brand-wrapper {
         display: flex;
         color: var(--header-text);
         align-items: center;
@@ -347,7 +357,6 @@
       .it-header-center-wrapper
         .it-header-center-content-wrapper
         .it-brand-wrapper
-        a
         .icon {
         /********** if is a image, delete the "fill" prop above ***********/
         fill: #fff;
@@ -365,12 +374,10 @@
       .it-header-center-wrapper
         .it-header-center-content-wrapper
         .it-brand-wrapper
-        a
         .it-brand-title,
       .it-header-center-wrapper
         .it-header-center-content-wrapper
         .it-brand-wrapper
-        a
         h2 {
         font-size: 1.25em;
         margin-bottom: 0;
@@ -386,7 +393,6 @@
       .it-header-center-wrapper
         .it-header-center-content-wrapper
         .it-brand-wrapper
-        a
         h3 {
         font-size: 0.889em;
         font-weight: 400;
@@ -427,7 +433,6 @@
         .it-header-center-wrapper
           .it-header-center-content-wrapper
           .it-brand-wrapper
-          a
           .icon {
           width: auto;
           height: 82px;
@@ -436,12 +441,10 @@
         .it-header-center-wrapper
           .it-header-center-content-wrapper
           .it-brand-wrapper
-          a
           .it-brand-title,
         .it-header-center-wrapper
           .it-header-center-content-wrapper
           .it-brand-wrapper
-          a
           h2 {
           font-size: 1.778em;
           margin-bottom: 0;
@@ -450,12 +453,10 @@
         .it-header-center-wrapper
           .it-header-center-content-wrapper
           .it-brand-wrapper
-          a
           .it-brand-tagline,
         .it-header-center-wrapper
           .it-header-center-content-wrapper
           .it-brand-wrapper
-          a
           h3 {
           font-size: 0.889em;
           font-weight: 400;
@@ -502,7 +503,7 @@
       .it-footer-main .it-brand-wrapper {
         padding: 32px 0;
       }
-      .it-footer-main .it-brand-wrapper a {
+      .it-footer-main .it-brand-wrapper {
         display: flex;
         color: var(--footer-text);
         align-items: center;
@@ -510,7 +511,7 @@
       }
 
       /******** Logo footer ***********/
-      .it-footer-main .it-brand-wrapper a .icon {
+      .it-footer-main .it-brand-wrapper .icon {
         /* if is a image, delete the "fill" prop above */
         fill: var(--logo);
         width: auto;
@@ -518,14 +519,14 @@
         margin-right: 8px;
         flex-shrink: 0;
       }
-      .it-footer-main .it-brand-wrapper a h2 {
+      .it-footer-main .it-brand-wrapper h2 {
         font-size: 1.25em;
         margin-bottom: 0;
         font-weight: 600;
         letter-spacing: unset;
         line-height: 1.1;
       }
-      .it-footer-main .it-brand-wrapper a h3 {
+      .it-footer-main .it-brand-wrapper h3 {
         font-size: 0.889em;
         font-weight: 400;
         margin-bottom: 0;
@@ -547,7 +548,7 @@
         padding-bottom: 8px !important;
       }
 
-      .it-footer-main h4 a {
+      .it-footer-main h4 {
         color: var(--footer-text);
         text-decoration: none;
         text-transform: uppercase;
@@ -577,7 +578,9 @@
           <div class="row">
             <div class="col-12">
               <div class="it-header-slim-wrapper-content">
-                <a class="d-lg-block navbar-brand">Nome della Regione</a>
+                <a href="#" target="_blank" class="d-lg-block navbar-brand"
+                  >Nome della Regione</a
+                >
               </div>
             </div>
           </div>
@@ -590,20 +593,18 @@
               <div class="col-12">
                 <div class="it-header-center-content-wrapper">
                   <div class="it-brand-wrapper">
-                    <a>
-                      <img
-                        class="icon"
-                        alt=""
-                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIKICAgICB2aWV3Qm94PSIwIDAgMjQgMjQiPgogIDx0aXRsZT5QQTwvdGl0bGU+CiAgPGc+CiAgICA8cGF0aAogICAgZmlsbD0iI2ZmZiIKICAgICAgZD0iTTMsMjFIMjF2MUgzWm0wLTFIMjFWMTlIM1pNMjIsOUgyTDEyLDJaTTUuMiw4SDE4LjhMMTIsMy4yWk02LDE4VjEwSDV2OFptNCwwVjEwSDl2OFptNSwwVjEwSDE0djhabTQsMFYxMEgxOHY4WiIKICAgICAgLz4KICA8L2c+CiAgPGc+CiAgICA8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiLz4KICA8L2c+Cjwvc3ZnPgo="
-                      />
+                    <img
+                      class="icon"
+                      alt="Logo io-Comune"
+                      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIKICAgICB2aWV3Qm94PSIwIDAgMjQgMjQiPgogIDx0aXRsZT5QQTwvdGl0bGU+CiAgPGc+CiAgICA8cGF0aAogICAgZmlsbD0iI2ZmZiIKICAgICAgZD0iTTMsMjFIMjF2MUgzWm0wLTFIMjFWMTlIM1pNMjIsOUgyTDEyLDJaTTUuMiw4SDE4LjhMMTIsMy4yWk02LDE4VjEwSDV2OFptNCwwVjEwSDl2OFptNSwwVjEwSDE0djhabTQsMFYxMEgxOHY4WiIKICAgICAgLz4KICA8L2c+CiAgPGc+CiAgICA8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiLz4KICA8L2c+Cjwvc3ZnPgo="
+                    />
 
-                      <div class="it-brand-text">
-                        <div class="it-brand-title">Nome del Comune</div>
-                        <div class="it-brand-tagline d-none d-md-block">
-                          Uno dei tanti Comuni d'Italia
-                        </div>
+                    <div class="it-brand-text">
+                      <div class="it-brand-title">Nome del Comune</div>
+                      <div class="it-brand-tagline d-none d-md-block">
+                        Uno dei tanti Comuni d'Italia
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -628,19 +629,17 @@
             <div class="row clearfix">
               <div class="col-sm-12">
                 <div class="it-brand-wrapper">
-                  <a>
-                    <img
-                      class="icon"
-                      alt=""
-                      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIKICAgICB2aWV3Qm94PSIwIDAgMjQgMjQiPgogIDx0aXRsZT5QQTwvdGl0bGU+CiAgPGc+CiAgICA8cGF0aAogICAgZmlsbD0iI2ZmZiIKICAgICAgZD0iTTMsMjFIMjF2MUgzWm0wLTFIMjFWMTlIM1pNMjIsOUgyTDEyLDJaTTUuMiw4SDE4LjhMMTIsMy4yWk02LDE4VjEwSDV2OFptNCwwVjEwSDl2OFptNSwwVjEwSDE0djhabTQsMFYxMEgxOHY4WiIKICAgICAgLz4KICA8L2c+CiAgPGc+CiAgICA8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiLz4KICA8L2c+Cjwvc3ZnPgo="
-                    />
-                    <div class="it-brand-text">
-                      <h2 class="no_toc">Nome del Comune</h2>
-                      <h3 class="no_toc d-none d-md-block">
-                        Uno dei tanti Comuni d'Italia
-                      </h3>
-                    </div>
-                  </a>
+                  <img
+                    class="icon"
+                    alt="Logo io-Comune"
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIKICAgICB2aWV3Qm94PSIwIDAgMjQgMjQiPgogIDx0aXRsZT5QQTwvdGl0bGU+CiAgPGc+CiAgICA8cGF0aAogICAgZmlsbD0iI2ZmZiIKICAgICAgZD0iTTMsMjFIMjF2MUgzWm0wLTFIMjFWMTlIM1pNMjIsOUgyTDEyLDJaTTUuMiw4SDE4LjhMMTIsMy4yWk02LDE4VjEwSDV2OFptNCwwVjEwSDl2OFptNSwwVjEwSDE0djhabTQsMFYxMEgxOHY4WiIKICAgICAgLz4KICA8L2c+CiAgPGc+CiAgICA8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiLz4KICA8L2c+Cjwvc3ZnPgo="
+                  />
+                  <div class="it-brand-text">
+                    <h2 class="no_toc">Nome del Comune</h2>
+                    <h3 class="no_toc d-none d-md-block">
+                      Uno dei tanti Comuni d'Italia
+                    </h3>
+                  </div>
                 </div>
               </div>
             </div>
@@ -650,7 +649,7 @@
             <div class="row">
               <div class="col-lg-3 col-md-3 pb-2">
                 <h4>
-                  <a>Amministrazione trasparente</a>
+                  Amministrazione trasparente
                 </h4>
                 <p>
                   I dati personali pubblicati sono riutilizzabili solo alle
@@ -660,12 +659,15 @@
               </div>
               <div class="col-lg-3 col-md-3 pb-2">
                 <h4>
-                  <a>Contatti</a>
+                  Contatti
                 </h4>
                 <p>
                   <strong>Nome del Comune</strong><br />
                   Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA:
                   000000000
+                </p>
+                <p>
+                  <a href="#">info@io-comune.it</a>
                 </p>
               </div>
             </div>
