@@ -13,6 +13,7 @@ import {
   getPreviousVoltoBlock,
   createDefaultBlock,
 } from '@plone/volto-slate/utils';
+import config from '@plone/volto/registry';
 
 const focusPrev = (props) => {
   const {
@@ -102,6 +103,9 @@ const focusNext = (props) => {
     focusNextField,
     showToolbar,
     onFocusNextBlock,
+    onSelectBlock,
+    onAddBlock,
+    index,
   } = props.editor.getBlockProps();
   props.event.preventDefault();
   props.event.stopPropagation();
@@ -127,13 +131,20 @@ const focusNext = (props) => {
   //move to next field
   if (focusNextField) {
     focusNextField();
-    return true;
+    return false;
   }
 
   if (isAtEnd) {
-    //handle SimpleTextEditorWidget -> move to next block
-    if (!showToolbar && onFocusNextBlock) {
-      return goToNextVoltoBlock(props);
+    if (props.event.key === 'Enter' || props.event.keyCode === 13) {
+      console.log('eee');
+      onSelectBlock(onAddBlock(config.settings.defaultBlockType, index + 1));
+      return false;
+    } else {
+      //arrow-down key
+      //handle SimpleTextEditorWidget -> move to next block
+      if (!showToolbar && onFocusNextBlock) {
+        return goToNextVoltoBlock(props);
+      }
     }
   }
 
@@ -178,7 +189,6 @@ export default function install(config) {
       unwrapEmptyString,
       breakInSimpleTextEditor,
       customSoftBreak,
-      //focusNext,
       focusNext,
     ],
     ArrowUp: [focusPrev],

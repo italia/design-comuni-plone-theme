@@ -112,6 +112,7 @@ class EditBlock extends SubblockEdit {
                     this.setState({ focusOn: f });
                   }}
                   block={this.props.block}
+                  index={this.props.blockIndex}
                   onChangeBlock={(block, _data) => {
                     this.props.onChangeBlock(this.props.index, _data);
                   }}
@@ -153,6 +154,8 @@ class EditBlock extends SubblockEdit {
                 onChangeBlock={(block, _data) => {
                   this.props.onChangeBlock(this.props.index, _data);
                 }}
+                block={this.props.block}
+                index={this.props.blockIndex}
                 placeholder={this.props.intl.formatMessage(
                   messages.textPlaceholder,
                 )}

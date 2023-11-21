@@ -31,10 +31,17 @@ const messages = defineMessages({
  * @extends Component
  */
 class Edit extends SubblocksEdit {
+  constructor(props) {
+    super(props);
+    this.nodeF = React.createRef();
+  }
+
   UNSAFE_componentWillReceiveProps(newProps) {
     if (newProps.selected) {
-      if (this.state.subIndexSelected < 0) {
-        this.onSubblockChangeFocus(0);
+      if (!this.props.selected) {
+        if (this.state.subIndexSelected < 0) {
+          this.onSubblockChangeFocus(0);
+        }
       }
     } else {
       this.onSubblockChangeFocus(-1);
@@ -47,35 +54,45 @@ class Edit extends SubblocksEdit {
     }
   };
 
-  componentDidMount() {
-    const blockNode = this.props.blockNode;
+  handleClick = (e) => {
+    const hasParent = (element, className) => {
+      if (!element.parentNode) {
+        return false;
+      }
 
+      if (element.classList.contains(className)) {
+        return true;
+      }
+
+      return hasParent(element.parentNode, className);
+    };
+    const clickOutsideSubblocks =
+      !e.target.classList.contains('volto-subblocks-wrapper') &&
+      !hasParent(e.target, 'volto-subblocks-wrapper');
+
+    if (clickOutsideSubblocks) {
+      this.setState({ subIndexSelected: -1 });
+    }
+  };
+
+  componentDidMount() {
     if (this.props.selected && this.node) {
       this.node.focus();
     }
+    if (this.props.selected && this.nodeF.current) {
+      this.nodeF.current.focus();
+    }
+
     if (this.state.subblocks.length === 0) {
       this.addSubblock();
     }
 
-    if (blockNode && blockNode.current) {
-      blockNode.current.addEventListener('keydown', this.handleEnter, false);
+    if (this.nodeF && this.nodeF.current) {
+      this.nodeF.current.addEventListener('keydown', this.handleEnter, false);
+      this.nodeF.current.addEventListener('click', this.handleClick, false);
     }
   }
 
-  /**
-   * Component will receive props
-   * @method componentWillUnmount
-   * @returns {undefined}
-   */
-  componentWillUnmount() {
-    if (this.props.selected && this.node) {
-      this.node.focus();
-    }
-    const blockNode = this.props.blockNode;
-    if (blockNode && blockNode.current) {
-      blockNode.current.removeEventListener('keydown', this.handleEnter, false);
-    }
-  }
   /**
    * Render method.
    * @method render
@@ -86,8 +103,11 @@ class Edit extends SubblocksEdit {
       return <div />;
     }
     return (
-      <div className="public-ui" tabIndex="-1">
+      <div className="public-ui" tabIndex="-1" ref={this.nodeF}>
         <div className="full-width section section-muted section-inset-shadow py-5 is-edit-mode">
+          selected: {this.props.selected ? 'true' : 'false'}
+          <br />
+          subindexselected: {this.state.subIndexSelected}
           <Container className="px-md-4">
             <Card className="card-bg rounded" noWrapper={false} space tag="div">
               <CardBody tag="div">

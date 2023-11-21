@@ -51,6 +51,7 @@ class EditBlock extends SubblockEdit {
     //   }
     // });
   }
+
   /**
    * Render method.
    * @method render
@@ -79,8 +80,12 @@ class EditBlock extends SubblockEdit {
                 selected={this.props.selected && this.state.focusOn === 'title'}
                 setSelected={(f) => {
                   this.setState({ focusOn: f });
+                  if (!f) {
+                    this.props.onSubblockChangeFocus(-1);
+                  }
                 }}
                 block={this.props.block}
+                index={this.props.blockIndex}
                 onChangeBlock={(block, _data) => {
                   this.props.onChangeBlock(this.props.index, _data);
                 }}
@@ -101,7 +106,6 @@ class EditBlock extends SubblockEdit {
               />
             </div>
           </div>
-
           <div
             className="subblock-text"
             onClick={() => {
@@ -117,8 +121,12 @@ class EditBlock extends SubblockEdit {
               selected={this.props.selected && this.state.focusOn === 'text'}
               setSelected={(f) => {
                 this.setState({ focusOn: f });
+                if (!f) {
+                  this.props.onSubblockChangeFocus(-1);
+                }
               }}
               block={this.props.block}
+              index={this.props.blockIndex}
               onChangeBlock={(block, _data) => {
                 this.props.onChangeBlock(this.props.index, _data);
               }}

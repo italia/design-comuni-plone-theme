@@ -48,6 +48,7 @@ class Edit extends SubblocksEdit {
   constructor(props) {
     super(props);
     this.state.selectedField = 'title';
+    this.nodeF = React.createRef();
   }
 
   UNSAFE_componentWillReceiveProps(newProps) {
@@ -61,23 +62,51 @@ class Edit extends SubblocksEdit {
   }
 
   handleEnter = (e) => {
-    if (this.props.selected) {
+    if (
+      this.props.selected &&
+      this.state.subIndexSelected < 0 &&
+      !this.state.selectedField
+    ) {
       handleKeyDownOwnFocusManagement(e, this.props);
     }
   };
 
-  componentDidMount() {
-    const blockNode = this.props.blockNode;
+  handleClick = (e) => {
+    const hasParent = (element, className) => {
+      if (!element.parentNode) {
+        return false;
+      }
 
+      if (element.classList.contains(className)) {
+        return true;
+      }
+
+      return hasParent(element.parentNode, className);
+    };
+    const clickOutsideSubblocks =
+      !e.target.classList.contains('volto-subblocks-wrapper') &&
+      !hasParent(e.target, 'volto-subblocks-wrapper');
+
+    if (clickOutsideSubblocks) {
+      this.setState({ subIndexSelected: -1 });
+    }
+  };
+
+  componentDidMount() {
     if (this.props.selected && this.node) {
       this.node.focus();
     }
+    if (this.props.selected && this.nodeF.current) {
+      this.nodeF.current.focus();
+    }
+
     if (this.state.subblocks.length === 0) {
       this.addSubblock();
     }
 
-    if (blockNode && blockNode.current) {
-      blockNode.current.addEventListener('keydown', this.handleEnter, false);
+    if (this.nodeF && this.nodeF.current) {
+      this.nodeF.current.addEventListener('keydown', this.handleEnter, false);
+      this.nodeF.current.addEventListener('click', this.handleClick, false);
     }
   }
 
@@ -92,7 +121,7 @@ class Edit extends SubblocksEdit {
     }
 
     return (
-      <div className="public-ui" tabIndex="-1">
+      <div className="public-ui" tabIndex="-1" ref={this.nodeF}>
         <div className="full-width section py-5">
           {this.props.data?.background?.[0] ? (
             <div
@@ -177,6 +206,7 @@ class Edit extends SubblocksEdit {
                       {...this.props}
                       data={subblock}
                       index={subindex}
+                      blockIndex={this.props.index}
                       selected={this.isSubblockSelected(subindex)}
                       {...this.subblockProps}
                       onChangeFocus={this.onSubblockChangeFocus}
