@@ -38,7 +38,7 @@ export const blockTagDeserializer = (tagname) => (editor, el, options) => {
 export default function install(config) {
   config.settings.slate.htmlTagsToSlate.P = blockTagDeserializer('p');
   config.settings.slate.htmlTagsToSlate.OL = blockTagDeserializer('ol');
-  config.settings.slate.htmlTagsToSlate.UL = blockTagDeserializer('ol');
+  config.settings.slate.htmlTagsToSlate.UL = blockTagDeserializer('ul');
   config.settings.slate.htmlTagsToSlate.BLOCKQUOTE = blockTagDeserializer(
     'blockquote',
   );

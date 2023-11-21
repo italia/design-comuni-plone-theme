@@ -82,6 +82,24 @@ const SimpleTextEditorWidget = (props) => {
     }
   };
 
+  const pasteAsTextPlain = (e) => {
+    e.preventDefault();
+    var text = '';
+    if (e.clipboardData || e.originalEvent.clipboardData) {
+      text = (e.originalEvent || e).clipboardData.getData('text/plain');
+    } else if (window.clipboardData) {
+      text = window.clipboardData.getData('Text');
+    }
+
+    text = text.replaceAll('\n', ' ');
+
+    if (document.queryCommandSupported('insertText')) {
+      document.execCommand('insertText', false, text);
+    } else {
+      document.execCommand('paste', false, text);
+    }
+  };
+
   return (
     <div className="simple-text-editor-widget" ref={ref}>
       <span
@@ -109,6 +127,9 @@ const SimpleTextEditorWidget = (props) => {
         }}
         onBlur={(e) => {
           setSelected(fieldName ? null : false);
+        }}
+        onPaste={(e) => {
+          pasteAsTextPlain(e);
         }}
         onKeyDown={handleKey}
         ref={fieldRef}

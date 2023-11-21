@@ -2,7 +2,7 @@ import { Node } from 'slate';
 import {
   goDown,
   goUp,
-  //softBreak,
+  softBreak,
   unwrapEmptyString,
 } from '@plone/volto-slate/blocks/Text/keyboard';
 
@@ -136,7 +136,6 @@ const focusNext = (props) => {
 
   if (isAtEnd) {
     if (props.event.key === 'Enter' || props.event.keyCode === 13) {
-      console.log('eee');
       onSelectBlock(onAddBlock(config.settings.defaultBlockType, index + 1));
       return false;
     } else {
@@ -152,29 +151,18 @@ const focusNext = (props) => {
   return goDown(props);
 };
 
-const customSoftBreak = (props) => {
-  //handle SimpleTextEditorWidget softBreak
-  const { showToolbar } = props.editor.getBlockProps();
-  if (props.event.key === 'Enter' && props.event.shiftKey && !showToolbar) {
-    props.event.preventDefault();
-    goToNextVoltoBlock(props);
-    return false;
-  }
-};
-
 const breakInSimpleTextEditor = (props) => {
-  //disable break in SimpleTextEditorWidget
-
+  //disable break and softBreak (props.event.shiftKey) in SimpleTextEditorWidget
   const getBlockProps = props.editor.getBlockProps;
   const { showToolbar, focusNextField } = getBlockProps
     ? getBlockProps()
     : { showToolbar: true };
-  if (props.event.key === 'Enter' && !props.event.shiftKey && !showToolbar) {
+  if (props.event.key === 'Enter' && !showToolbar) {
+    props.event.preventDefault();
     if (focusNextField) {
       focusNextField();
       return false;
     }
-    props.event.preventDefault();
     goToNextVoltoBlock(props);
     return false;
   }
@@ -182,15 +170,19 @@ const breakInSimpleTextEditor = (props) => {
   return true;
 };
 
+const handleBreak = (props) => {
+  const { showToolbar } = props.editor.getBlockProps();
+  if (!showToolbar) {
+    return breakInSimpleTextEditor(props);
+  } else {
+    return softBreak(props);
+  }
+};
+
 export default function install(config) {
   config.settings.slate.textblockDetachedKeyboardHandlers = {
     ...config.settings.slate.textblockDetachedKeyboardHandlers,
-    Enter: [
-      unwrapEmptyString,
-      breakInSimpleTextEditor,
-      customSoftBreak,
-      focusNext,
-    ],
+    Enter: [unwrapEmptyString, handleBreak, focusNext],
     ArrowUp: [focusPrev],
     ArrowDown: [focusNext],
   };

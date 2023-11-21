@@ -89,6 +89,13 @@ body.cms-ui {
       }
     }
   }
+
+  .detached-slate-editor {
+    p:not(:last-child) {
+      margin-bottom: 1rem !important;
+    }
+  }
+
   .it-header-wrapper,
   .public-ui {
     font-size: 18px;
