@@ -132,7 +132,6 @@ const HtmlSlateWidget = (props) => {
         onClick={handleClick}
         onKeyDown={() => {}}
       >
-        html
         <ErrorBoundary name={intl.formatMessage(messages.error, { name: id })}>
           <SlateEditor
             className={className}
