@@ -16,6 +16,10 @@ const messages = defineMessages({
     id: 'Next page',
     defaultMessage: 'Pagina successiva',
   },
+  page: {
+    id: 'Page',
+    defaultMessage: 'Pagina',
+  },
 });
 
 /**
@@ -102,8 +106,14 @@ class PaginationItem extends Component {
               </span>
             </>
           )}
-          {['prevItem', 'nextItem', 'ellipsisItem'].indexOf(type) < 0 &&
-            children}
+          {['prevItem', 'nextItem', 'ellipsisItem'].indexOf(type) < 0 && (
+            <>
+              <span className="visually-hidden">
+                {intl.formatMessage(messages.page)}
+              </span>{' '}
+              {children}
+            </>
+          )}
         </PagerLink>
       </PagerItem>
     );

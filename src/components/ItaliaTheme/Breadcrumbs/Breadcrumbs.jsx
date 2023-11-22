@@ -24,6 +24,10 @@ const messages = defineMessages({
     id: 'Home',
     defaultMessage: 'Home',
   },
+  breadcrumb: {
+    id: 'breadcrumb',
+    defaultMessage: 'Percorso di navigazione',
+  },
 });
 
 const Breadcrumbs = ({ pathname }) => {
@@ -94,7 +98,10 @@ const Breadcrumbs = ({ pathname }) => {
       <GoogleBreadcrumbs items={items} />
       <Row>
         <Col>
-          <nav className="breadcrumb-container" aria-label="breadcrumb">
+          <nav
+            className="breadcrumb-container"
+            aria-label={intl.formatMessage(messages.breadcrumb)}
+          >
             <ol className="breadcrumb" data-element="breadcrumb">
               <BreadcrumbItem tag="li">
                 <UniversalLink href="/">

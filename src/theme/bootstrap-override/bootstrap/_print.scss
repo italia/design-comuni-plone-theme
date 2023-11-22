@@ -133,7 +133,8 @@
         }
       }
 
-      .table .thead-dark th {
+      .table .thead-dark th,
+      .table .table-dark th {
         border-color: $table-border-color;
         color: inherit;
       }

@@ -6,17 +6,16 @@ import { RichText } from 'design-comuni-plone-theme/components/ItaliaTheme/View'
 
 const HelpBox = ({ text }) => {
   return text ? (
-    <Callout color="" highlight={false} tag="div">
+    <Callout color="">
       <CalloutTitle tag="div">
         <Icon
           color=""
           icon="it-info-circle"
           padding={false}
           size=""
-          style={{
-            ariaHidden: true,
-          }}
+          aria-hidden
         />
+        <span className="text"></span>
       </CalloutTitle>
 
       <div>

@@ -63,6 +63,7 @@ const FaqFolderTree = ({ tree }) => {
                         }}
                         tag="button"
                         aria-controls={`faq-${r.UID}`}
+                        aria-expanded={isOpen}
                         id={`header-${r.UID}`}
                       >
                         {r.title}

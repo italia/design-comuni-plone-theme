@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-
+import { defineMessages, useIntl } from 'react-intl';
 import {
   Container,
   Nav,
@@ -17,8 +17,14 @@ import { Helmet } from '@plone/volto/helpers';
 import { marked } from 'marked';
 
 import './ReleaseLog.css';
-
+const messages = defineMessages({
+  current: {
+    id: 'currentActive',
+    defaultMessage: 'attivo',
+  },
+});
 const ReleaseLog = () => {
+  const intl = useIntl();
   let ReleaseDCPT = null;
   let ReleaseIoCittadino = null;
   let ReleaseIoPrenoto = null;
@@ -111,6 +117,11 @@ const ReleaseLog = () => {
                 onClick={() => viewTab(log.name)}
               >
                 <span>{log.name}</span>
+                {activeTab === log.name && (
+                  <span className="visually-hidden">
+                    {intl.formatMessage(messages.current)}
+                  </span>
+                )}
               </NavLink>
             </NavItem>
           ))}

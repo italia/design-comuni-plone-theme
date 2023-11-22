@@ -1,11 +1,8 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';
-import { getContent, resetContent } from '@plone/volto/actions';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { getCalendarDate } from 'design-comuni-plone-theme/helpers';
 import {

@@ -12,7 +12,8 @@
       }
 
       .modal-close-button {
-        button.close-button {
+        button.close-button,
+        button.btn-close {
           border: none;
           background-color: transparent;
 
@@ -40,8 +41,8 @@
         max-width: 100%;
         height: auto;
         max-height: 72vh;
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
       }
 
       button.btn {

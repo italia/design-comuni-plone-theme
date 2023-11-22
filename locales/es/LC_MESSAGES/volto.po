@@ -442,6 +442,11 @@ msgstr "- abrir en una nueva pestaña"
 msgid "Open in a new tab"
 msgstr "Abrir en un nueva pestaña"
 
+#: components/ItaliaTheme/Pagination/PaginationItem
+# defaultMessage: Pagina
+msgid "Page"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Filtro
@@ -1073,6 +1078,11 @@ msgstr "Biografía"
 msgid "block_bg_color"
 msgstr "Color de fondo"
 
+#: components/ItaliaTheme/Breadcrumbs/Breadcrumbs
+# defaultMessage: Percorso di navigazione
+msgid "breadcrumb"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 # defaultMessage: Calendario
 msgid "calendarBlockSidebarTitle"
@@ -1368,6 +1378,12 @@ msgstr "Editado por"
 # defaultMessage: Persone
 msgid "cured_by_people"
 msgstr "Gente"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ReleaseLog/ReleaseLog
+# defaultMessage: attivo
+msgid "currentActive"
+msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Curriculum vitae
