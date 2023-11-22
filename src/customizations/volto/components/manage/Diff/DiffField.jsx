@@ -19,13 +19,6 @@ import {
   blockIsNotEmptyPlaceholder,
   SSRRenderHtml,
 } from 'design-comuni-plone-theme/helpers';
-import {
-  getBaseUrl,
-  getBlocksFieldname,
-  getBlocksLayoutFieldname,
-  hasBlocksData,
-} from '@plone/volto/helpers';
-import content from '../../../../../../omelette/src/reducers/content/content';
 
 /**
  * Enhanced diff words utility
@@ -157,8 +150,8 @@ const DiffField = ({
                     schema?.type === 'boolean'
                       ? booleanMapping[!!one]
                       : schema?.widget === 'json'
-                      ? contentOne
-                      : one,
+                        ? contentOne
+                        : one,
                     schema?.widget ??
                       (schema?.type === 'object' && field.includes('image')
                         ? field

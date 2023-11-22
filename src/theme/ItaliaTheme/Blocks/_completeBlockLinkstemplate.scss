@@ -11,14 +11,14 @@
 
   .image-container {
     display: flex;
+    overflow: hidden;
     width: 40px;
     height: 40px;
     flex-shrink: 0;
+    border-radius: 50%;
     margin: 18px 0px 0px 18px;
 
     background-color: $white;
-    border-radius: 50%;
-    overflow: hidden;
 
     .volto-image {
       img {
@@ -45,6 +45,7 @@
     font-size: 1rem !important;
     font-weight: 700 !important;
     line-height: 1.44444rem;
+
     .external-link {
       fill: $external-link-fill-buttons !important;
     }
@@ -53,6 +54,7 @@
   .card:after {
     content: none;
   }
+
   .no-external-if-link > .external-link {
     display: none;
   }

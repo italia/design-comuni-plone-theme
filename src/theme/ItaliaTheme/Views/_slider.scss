@@ -29,10 +29,10 @@
 
     li {
       button:before {
-        background-size: 20px;
-        background-image: none;
         border-radius: 50%;
         background-color: $gray-700;
+        background-image: none;
+        background-size: 20px;
         opacity: 1;
       }
 
@@ -54,8 +54,8 @@
       .icon {
         width: 25px;
         height: 40px;
-        fill: $primary;
         color: $primary;
+        fill: $primary;
       }
 
       &:hover .icon {

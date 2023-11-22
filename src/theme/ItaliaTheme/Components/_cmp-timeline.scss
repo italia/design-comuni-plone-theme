@@ -25,14 +25,15 @@
 }
 
 .calendar-vertical {
-  color: $link-color;
   clear: both;
+  color: $link-color;
 
   &::after {
     display: block;
     clear: both;
     content: '';
   }
+
   .title-xxlarge-regular {
     font-size: 2.222222rem;
     @include media-breakpoint-down(md) {
@@ -41,6 +42,7 @@
     font-weight: 400;
     line-height: 1;
   }
+
   .title-medium-2 {
     font-size: 1.5rem;
     @include media-breakpoint-down(md) {
@@ -55,19 +57,19 @@
   display: flex;
 
   & .calendar-date-description {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
+    overflow: hidden;
     width: 100%;
     margin: 0 0 1.5rem 0.813rem;
-    overflow: hidden;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
 
     @include media-breakpoint-up(sm) {
       margin: 0 0 1.33rem 0.72rem;
     }
 
     & .calendar-date-description-content {
-      padding: 1.25rem 1rem 1.25rem 1.5rem;
       position: relative;
       z-index: 0;
+      padding: 1.25rem 1rem 1.25rem 1.5rem;
       border-left: 8px solid $primary-a0;
 
       @include media-breakpoint-up(sm) {
@@ -96,19 +98,19 @@
   }
 
   & .calendar-date-day {
-    width: 4.06rem;
-    flex-shrink: 0;
     position: relative;
     z-index: 0;
+    width: 4.06rem;
+    flex-shrink: 0;
     padding: 0.5rem 0;
     padding-right: 1rem;
 
     & p {
+      display: block;
+      margin: 0 0 5px 0;
       font-family: 'Roboto Mono', monospace !important;
       font-size: 2.5rem;
       line-height: 1;
-      margin: 0 0 5px 0;
-      display: block;
     }
 
     & small {
@@ -128,27 +130,27 @@
     }
 
     &:after {
-      content: '';
-      width: 0.625rem;
-      height: 0.625rem;
       position: absolute;
       z-index: 1;
       top: 1.875rem;
       right: 0.2px;
-      background-color: $link-color;
+      width: 0.625rem;
+      height: 0.625rem;
       border-radius: 5px;
+      background-color: $link-color;
+      content: '';
 
       @include media-breakpoint-down(md) {
+        top: 1.56rem;
         width: 0.56rem;
         height: 0.56rem;
-        top: 1.56rem;
       }
     }
 
     &__month {
-      font-weight: 600;
       display: flex;
       justify-content: center;
+      font-weight: 600;
     }
 
     &__year {

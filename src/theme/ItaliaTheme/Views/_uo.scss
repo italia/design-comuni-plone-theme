@@ -44,12 +44,14 @@ body.contenttype-unitaorganizzativa {
       }
     }
   }
+
   .card-wrapper.card-teaser-wrapper.row {
     // Enable vertical gap in rows
     --bs-gutter-y: 1.5rem;
+
     &.documenti-pubblici {
-      margin-left: 0;
       margin-right: 0;
+      margin-left: 0;
     }
   }
 }

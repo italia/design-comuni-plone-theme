@@ -6,22 +6,22 @@
   }
 
   .center-image-card {
+    position: relative;
     display: flex;
     overflow: hidden;
     height: 100px;
     align-items: center;
     justify-content: center;
-    border-right: none;
     border: 8px solid $white;
+    border-right: none;
     background: $white;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
-    position: relative;
 
     .img-link svg {
       position: absolute;
+      z-index: 2;
       top: 4px;
       right: 4px;
-      z-index: 2;
     }
 
     .volto-image.responsive img,

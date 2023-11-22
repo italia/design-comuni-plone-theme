@@ -1,9 +1,9 @@
 .contenttype-bando {
-	@media print {
-		.it-page-sections-container {
-			#allegati {
-				display: none;
-			}
-		}
-	}
+  @media print {
+    .it-page-sections-container {
+      #allegati {
+        display: none;
+      }
+    }
+  }
 }

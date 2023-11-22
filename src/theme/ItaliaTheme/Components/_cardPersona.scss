@@ -1,7 +1,7 @@
 .card-persona.card-flex {
   .card-image-wrapper {
-    flex: 1;
     display: flex;
+    flex: 1;
     align-items: flex-start;
   }
 
@@ -35,8 +35,8 @@
         width: 50%;
 
         svg {
-          height: 1.78rem;
           width: auto;
+          height: 1.78rem;
         }
 
         span.text {

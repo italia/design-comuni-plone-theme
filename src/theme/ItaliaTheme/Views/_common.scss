@@ -228,11 +228,12 @@ div.sticky-wrapper {
     .card-title {
       a {
         font-size: 1rem;
+        font-weight: 600;
         text-decoration: none;
         @include rem-size(line-height, 24);
-        font-weight: 600;
       }
     }
+
     svg {
       fill: $link-color;
     }
@@ -305,8 +306,8 @@ div.sticky-wrapper {
 }
 
 #view .it-carousel-wrapper .it-header-block .it-header-block-title h2.h4 {
-  border-bottom: none;
   padding-bottom: 0;
+  border-bottom: none;
 }
 
 form.ui.form.vertical-form fieldset.invisible {
@@ -332,8 +333,8 @@ dl.trasparenza-fields {
 }
 
 #metadata {
-  font-family: $font-family-serif;
   color: $gray-secondary;
+  font-family: $font-family-serif;
   @include rem-size(font-size, 16px);
   @include rem-size(line-height, 24px);
 }

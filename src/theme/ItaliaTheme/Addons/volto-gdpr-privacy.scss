@@ -48,6 +48,7 @@
           line-height: 17px;
           outline: none;
           vertical-align: baseline;
+
           input:focus ~ label::before {
             box-shadow: $gdpr-focus-shadow !important;
             outline: none !important;
@@ -63,8 +64,11 @@
               left: 0;
               border: 1px solid $gdpr-toggle-border;
               background-color: $gdpr-toggle;
-              transition: border 0.1s ease, opacity 0.1s ease,
-                transform 0.1s ease, box-shadow 0.1s ease;
+              transition:
+                border 0.1s ease,
+                opacity 0.1s ease,
+                transform 0.1s ease,
+                box-shadow 0.1s ease;
             }
 
             &:after {
@@ -151,12 +155,14 @@
                 width: 1.5rem;
                 height: 1.5rem;
                 border: 1.5px solid $gdpr-toggle-border;
+                border-radius: 500rem;
                 background: #ffffff
                   linear-gradient(transparent, rgba(0, 0, 0, 0.05));
-                border-radius: 500rem;
                 content: '' !important;
                 opacity: 1;
-                transition: background 0.3s ease, left 0.3s ease;
+                transition:
+                  background 0.3s ease,
+                  left 0.3s ease;
               }
             }
           }
@@ -197,8 +203,8 @@
 }
 
 button.gdpr-privacy-show-banner {
-  margin: 0;
   border-radius: 0;
+  margin: 0;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
@@ -233,6 +239,7 @@ body.has-toolbar-collapsed {
     }
   }
 }
+
 .gdpr-privacy-banner
   .gdpr-privacy-content-wrapper
   .gdpr-privacy-content

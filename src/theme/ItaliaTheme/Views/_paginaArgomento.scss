@@ -48,6 +48,7 @@ $header-image-argomento-height-mobile: 300px;
 
   .card {
     border-radius: 4px 0px 0px 4px;
+
     &::after {
       content: none;
     }

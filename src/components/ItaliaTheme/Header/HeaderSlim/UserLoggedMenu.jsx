@@ -26,7 +26,6 @@ import { useIntl } from 'react-intl';
 import { LinkListItem } from 'design-react-kit';
 import config from '@plone/volto/registry';
 
-
 const UserLoggedMenu = ({ userLogged }) => {
   const intl = useIntl();
   const items = config.settings.siteProperties.userLoggedMenu || [];

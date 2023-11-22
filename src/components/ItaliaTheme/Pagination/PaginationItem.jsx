@@ -62,14 +62,8 @@ class PaginationItem extends Component {
   };
 
   render() {
-    const {
-      active,
-      type,
-      children,
-      intl,
-      ellipsisItem,
-      isServiceLink,
-    } = this.props;
+    const { active, type, children, intl, ellipsisItem, isServiceLink } =
+      this.props;
     const disabled = this.props.disabled || type === 'ellipsisItem';
     return (
       <PagerItem disabled={disabled}>

@@ -56,8 +56,8 @@
         margin-left: 1.3em;
 
         &::after {
-          border-left: 10px solid transparent;
           border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
         }
       }
 
@@ -65,11 +65,12 @@
         padding: 1.3em;
       }
     }
+
     .etichetta.etichetta {
-      width: 50%;
+      top: 0.6em !important;
       right: 0em !important;
       left: auto;
-      top: 0.6em !important;
+      width: 50%;
       padding: 0em 0.5em;
       font-size: 0.6rem;
     }
@@ -77,9 +78,9 @@
 
   @include media-breakpoint-between(md, xxl) {
     .etichetta.etichetta {
-      width: 50%;
       right: 0.5em !important;
       left: auto;
+      width: 50%;
       padding: 0em 0.5em;
     }
   }

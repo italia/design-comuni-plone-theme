@@ -2,18 +2,19 @@ table.diffField {
   .previous-state,
   .current-state {
     display: flex;
-    white-space: break-spaces;
     width: 100% !important;
+    white-space: break-spaces;
     // padding: 2rem 1rem;
     .block.image img {
       max-width: calc(100% - $grid-gutter-width) !important;
       object-fit: contain;
     }
+
     .block.full-width,
     .full-width {
-      width: calc(100% - $grid-gutter-width) !important;
-      left: unset !important;
       right: unset !important;
+      left: unset !important;
+      width: calc(100% - $grid-gutter-width) !important;
       margin: 0 !important;
     }
     // calendar block
@@ -26,33 +27,37 @@ table.diffField {
         &.full-width {
           width: calc(100% - $grid-gutter-width) !important;
         }
-        margin: auto !important;
         left: 0 !important;
+        margin: auto !important;
+
         .icon-play {
           display: flex;
           align-items: center;
           justify-content: center;
+
           .icon.fa-icon.placeholder {
             position: relative;
             display: inline-flex;
             width: 2rem;
             height: 2rem;
+
             &:after,
             &:before {
-              content: '';
               position: absolute;
+              top: 7%;
+              right: 0;
               width: 0;
               height: 0;
               border-style: solid;
+              border-color: #333 transparent transparent transparent;
               border-top-width: 16px;
+              border-right-width: 10px;
               border-bottom-width: 16px;
               border-left-width: 10px;
-              border-right-width: 10px;
-              border-color: #333 transparent transparent transparent;
-              top: 7%;
+              content: '';
               rotate: -90deg;
-              right: 0;
             }
+
             &:after {
               border-color: white transparent transparent transparent;
             }
@@ -66,42 +71,48 @@ table.diffField {
       &:last-child {
         padding-top: 1rem !important;
       }
+
       &:first-child {
         padding-bottom: 1rem !important;
         border-bottom: 1px solid #ccc !important;
       }
     }
   }
+
   .current-state {
     ins {
+      display: inline-flex;
       background-color: lightgreen;
       text-decoration: none;
-      display: inline-flex;
     }
+
     .block.video .video-inner {
       ins {
+        position: relative;
         width: calc(100% + 12px);
         height: 300px;
 
-        position: relative;
         img {
-          width: calc(100% - 2 * $grid-gutter-width) !important;
           left: calc($grid-gutter-width/2);
+          width: calc(100% - 2 * $grid-gutter-width) !important;
         }
       }
     }
   }
+
   .current-state {
     picture ins {
       width: 100%;
+
       img {
         max-width: 100% !important;
-        object-fit: contain;
-        min-height: 200px;
         height: 200px;
+        min-height: 200px;
+        object-fit: contain;
       }
     }
   }
+
   .current-state {
     del {
       background: pink;

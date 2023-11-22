@@ -8,8 +8,10 @@
   button.rounded-right {
     &:focus {
       border-color: $focus-outline-color !important;
-      box-shadow: inset 0 1px 0 $focus-outline-color,
-        0 1px 1px $focus-outline-color, 0 0 0 0.2rem $focus-outline-color !important;
+      box-shadow:
+        inset 0 1px 0 $focus-outline-color,
+        0 1px 1px $focus-outline-color,
+        0 0 0 0.2rem $focus-outline-color !important;
       outline: none;
     }
   }
@@ -34,8 +36,10 @@
 
     &:focus {
       border-color: $focus-outline-color;
-      box-shadow: inset 0 1px 0 $focus-outline-color,
-        0 1px 1px $focus-outline-color, 0 0 0 0.2rem $focus-outline-color;
+      box-shadow:
+        inset 0 1px 0 $focus-outline-color,
+        0 1px 1px $focus-outline-color,
+        0 0 0 0.2rem $focus-outline-color;
       outline: none;
     }
   }
@@ -72,6 +76,7 @@
 
   .external-link {
     fill: $link-color !important;
+
     &.align-sub {
       vertical-align: sub;
     }

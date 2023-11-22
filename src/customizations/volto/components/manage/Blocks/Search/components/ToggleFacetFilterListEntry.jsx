@@ -18,15 +18,8 @@ const messages = defineMessages({
 });
 
 function ToggleFacetFilterListEntry(props) {
-  const {
-    facet,
-    isEditMode,
-    setFacets,
-    facets,
-    intl,
-    data,
-    facetSettings,
-  } = props;
+  const { facet, isEditMode, setFacets, facets, intl, data, facetSettings } =
+    props;
   const entrySettings = useMemo(() => {
     return data.facets?.find((f) => f?.field?.value === facet)?.field;
   }, [data, facet]);

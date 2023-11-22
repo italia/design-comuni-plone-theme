@@ -198,10 +198,10 @@ class TextEditorWidgetComponent extends Component {
               ) {
                 const selectionState = this.state.editorState.getSelection();
                 const anchorKey = selectionState.getAnchorKey();
-                const currentContent = this.state.editorState.getCurrentContent();
-                const currentContentBlock = currentContent.getBlockForKey(
-                  anchorKey,
-                );
+                const currentContent =
+                  this.state.editorState.getCurrentContent();
+                const currentContentBlock =
+                  currentContent.getBlockForKey(anchorKey);
                 const blockType = currentContentBlock.getType();
                 if (!includes(this.draftConfig.listBlockTypes, blockType)) {
                   this.props.onSelectBlock(
@@ -223,8 +223,10 @@ class TextEditorWidgetComponent extends Component {
                   e.stopPropagation();
                 } else {
                   if (this.props.onFocusPreviousBlock) {
-                    const selectionState = this.state.editorState.getSelection();
-                    const currentCursorPosition = selectionState.getStartOffset();
+                    const selectionState =
+                      this.state.editorState.getSelection();
+                    const currentCursorPosition =
+                      selectionState.getStartOffset();
 
                     if (currentCursorPosition === 0) {
                       this.props.onFocusPreviousBlock(
@@ -245,9 +247,11 @@ class TextEditorWidgetComponent extends Component {
                   e.stopPropagation();
                 } else {
                   if (this.props.onFocusNextBlock) {
-                    const selectionState = this.state.editorState.getSelection();
+                    const selectionState =
+                      this.state.editorState.getSelection();
                     const { editorState } = this.state;
-                    const currentCursorPosition = selectionState.getStartOffset();
+                    const currentCursorPosition =
+                      selectionState.getStartOffset();
                     const blockLength = editorState
                       .getCurrentContent()
                       .getFirstBlock()

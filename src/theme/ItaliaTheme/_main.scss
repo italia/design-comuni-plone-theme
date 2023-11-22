@@ -31,8 +31,8 @@
 .documentDescription {
   @include rem-size(font-size, 24);
   margin-top: 1.5rem;
-  line-height: 2rem;
   color: $body-color;
+  line-height: 2rem;
   white-space: pre-wrap;
 }
 
@@ -104,9 +104,9 @@ iframe {
   .callout {
     padding: 1.25rem;
     border: 1px solid $neutral-1-a2;
+    border-radius: 0.25rem;
     border-left-width: 0.4rem;
     margin: 1.25rem 0;
-    border-radius: 0.25rem;
 
     p,
     .public-DraftStyleDefault-block {
@@ -144,9 +144,9 @@ iframe {
     a {
       display: inline-block;
       padding: 1em 2em;
+      border-radius: $btn-border-radius;
       margin: 0.5em 1em 0.5em 0;
       background-color: $primary;
-      border-radius: $btn-border-radius;
       color: $primary-text;
       font-weight: 700;
       text-align: center;
@@ -287,6 +287,7 @@ iframe {
   .public-ui table.ui.table {
     display: block;
     overflow: auto;
+
     th {
       white-space: nowrap;
     }
@@ -308,23 +309,25 @@ iframe {
       border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
       @media (max-width: #{map-get($grid-breakpoints, md)}) {
         &:empty {
-          margin-bottom: 0 !important;
           padding-bottom: 0 !important;
+          margin-bottom: 0 !important;
         }
       }
     }
   }
+
   .row > div ~ div h4:empty {
     position: relative;
     border-bottom: none;
+
     &::after {
-      content: '';
       position: absolute;
-      width: calc(100% + $grid-gutter-width);
-      background: hsla(0, 0%, 100%, 0.5);
-      height: 1px;
       bottom: -1px;
       left: -$grid-gutter-width;
+      width: calc(100% + $grid-gutter-width);
+      height: 1px;
+      background: hsla(0, 0%, 100%, 0.5);
+      content: '';
       @media (max-width: #{map-get($grid-breakpoints, md)}) {
         content: none;
       }

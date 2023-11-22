@@ -177,8 +177,8 @@ const getSearchParamsURL = (
   let baseUrl = subsite
     ? flattenToAppURL(subsite['@id'])
     : config.settings.isMultilingual
-    ? '/' + currentLang
-    : '';
+      ? '/' + currentLang
+      : '';
   const b_start = currentPage
     ? (currentPage - 1) * config.settings.defaultPageSize
     : 0;
@@ -274,7 +274,7 @@ const getSearchParamsURL = (
   );
 };
 
-export default {
+const utils = {
   defaultOptions,
   isGroupChecked,
   isGroupIndeterminate,
@@ -287,3 +287,5 @@ export default {
   setSectionFilterChecked,
   setGroupChecked,
 };
+
+export default utils;

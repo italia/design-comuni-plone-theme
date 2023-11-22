@@ -36,9 +36,10 @@ $largeMonitorGutter: auto;
     margin-right: $gutter !important;
     margin-left: $gutter !important;
   }
+
   .public-ui .full-width > .px-4.container {
-    padding-left: 0 !important;
     padding-right: 0 !important;
+    padding-left: 0 !important;
   }
 }
 
@@ -58,7 +59,9 @@ $largeMonitorGutter: auto;
   }
 }
 
-body.cms-ui:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed) {
+body.cms-ui:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(
+    .has-sidebar-collapsed
+  ) {
   @include contentWidth(0);
 }
 
@@ -74,7 +77,9 @@ body.cms-ui.has-toolbar.has-sidebar-collapsed {
   @include contentWidth($toolbarWidth + $collapsedWidth);
 }
 
-body.cms-ui.has-toolbar-collapsed:not(.has-sidebar):not(.has-sidebar-collapsed) {
+body.cms-ui.has-toolbar-collapsed:not(.has-sidebar):not(
+    .has-sidebar-collapsed
+  ) {
   @include contentWidth($collapsedWidth);
 }
 

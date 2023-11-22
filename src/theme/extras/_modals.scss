@@ -5,8 +5,8 @@
   margin: 0;
 
   #search-button {
-    line-height: 2rem;
     border-bottom: 1px solid $neutral-1-a7;
+    line-height: 2rem;
   }
 
   .modal-content {
@@ -39,11 +39,13 @@
 .modal-dialog {
   .modal-header {
     align-items: flex-start;
+
     button.btn-close {
-      background: none;
       display: flex;
-      align-items: center;
       width: fit-content;
+      align-items: center;
+      background: none;
+
       span {
         font-size: 50px;
       }

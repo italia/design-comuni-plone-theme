@@ -38,6 +38,7 @@ $accordion-icon-color: #7fb2e5;
             top: -7px;
             right: 0;
             left: unset;
+
             &:focus {
               outline: 1px solid $focus-outline-color;
             }
@@ -63,6 +64,7 @@ $accordion-icon-color: #7fb2e5;
               padding: 0 0.4em;
               border: none;
               background: none;
+
               &:focus {
                 outline: 1px solid $focus-outline-color;
               }

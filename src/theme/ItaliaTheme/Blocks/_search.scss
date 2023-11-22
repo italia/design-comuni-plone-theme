@@ -2,10 +2,12 @@
   .full-width {
     height: 100% !important;
   }
+
   .search-wrapper {
     position: relative;
     margin-top: 1.75rem;
     background-color: #fff;
+
     .form-group {
       flex: 1;
       margin: 0;
@@ -14,62 +16,74 @@
         display: none;
       }
     }
+
     .input-group-append,
     .clear-icon,
     input {
       height: 45px;
     }
+
     label {
       color: var(--bs-gray-secondary);
     }
+
     label.inactive,
     input {
       padding-left: 2.5rem !important;
     }
+
     label.inactive {
       color: transparent;
     }
+
     label.active {
-      font-size: 1rem;
       top: -8px;
+      font-size: 1rem;
     }
+
     .autocomplete-icon {
       position: absolute;
-      left: 0;
-      right: auto;
-      top: 7px;
       z-index: 5;
+      top: 7px;
+      right: auto;
+      left: 0;
+
       .icon {
         fill: $link-color;
       }
     }
+
     .clear-icon {
-      z-index: 5;
-      border: none;
-      outline: none;
       position: absolute;
+      z-index: 5;
       right: 80px;
-      font-size: 1rem;
+      border: none;
       border-bottom: 1px solid hsl(210deg, 17.6470588235%, 43.35%);
+      font-size: 1rem;
+      outline: none;
     }
   }
+
   .search-details {
     color: var(--bs-gray-900);
   }
+
   .search-results .public-ui .template-wrapper {
     .container {
-      padding: 0 !important;
       max-width: 100%;
+      padding: 0 !important;
     }
   }
+
   .sideColumn {
     @media (max-width: #{map-get($grid-breakpoints, md)}) {
       padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
       padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
     }
+
     .columnTextTitle {
-      text-transform: uppercase;
       color: var(--bs-gray-900);
+      text-transform: uppercase;
     }
 
     .facets {
@@ -80,108 +94,123 @@
       .daterange-facet {
         .DateRangePickerInput {
           border-bottom: 1px solid hsl(210deg, 17.6470588235%, 43.35%);
+
           input[type='text'] {
             border-bottom: none;
           }
         }
       }
+
       .select-facet {
         // Same div, but for some reason when built, valuecontainer
         // class is not present in html, design-react-kit fault
         div[class*='-ValueContainer'],
         div[class*='-control'] > div:first-child {
-          flex-wrap: nowrap;
+          position: relative;
           display: flex;
-          -webkit-align-items: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
+          overflow: hidden;
+          height: 2.5rem;
+          box-sizing: border-box;
           -webkit-flex: 1 1 0%;
           -ms-flex: 1 1 0%;
           flex: 1 1 0%;
+          flex-wrap: nowrap;
+          -webkit-align-items: center;
+          align-items: center;
           padding: 2px 8px;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           -webkit-overflow-scrolling: touch;
-          position: relative;
-          overflow: hidden;
-          box-sizing: border-box;
-          height: 2.5rem;
         }
+
         div[class*='-placeholder'] {
           color: #484848;
         }
       }
     }
   }
+
   .search-results-count-sort {
     .accordion-wrapper {
-      min-width: 350px;
       position: relative;
+      min-width: 350px;
       @media (max-width: #{map-get($grid-breakpoints, md)}) {
         min-width: 100%;
       }
+
       .accordion-header {
-        padding: 0.5rem;
-        font-size: 1rem;
         display: flex;
         width: 100%;
         align-items: center;
         justify-content: space-between;
-        transition: border-color 0.3s ease-in,
-          background-color 0.2s cubic-bezier(0, 1, 0, 1) 0.2s;
+        padding: 0.5rem;
         border: none;
-        border-bottom: 1px solid;
         border-color: hsl(210deg, 17.6470588235%, 43.35%) !important;
+        border-bottom: 1px solid;
+        font-size: 1rem;
+        transition:
+          border-color 0.3s ease-in,
+          background-color 0.2s cubic-bezier(0, 1, 0, 1) 0.2s;
+
         &[aria-expanded='true'] {
           border-color: transparent !important;
-          transition: background-color 0.2s cubic-bezier(0, 1, 0, 1),
-            border-color 0.05s cubic-bezier(1, 0, 1, 0);
           box-shadow: 0 1rem 2rem -0.25rem rgba(0, 0, 0, 0.15) !important;
+          transition:
+            background-color 0.2s cubic-bezier(0, 1, 0, 1),
+            border-color 0.05s cubic-bezier(1, 0, 1, 0);
         }
+
         .filter-list-title {
           display: flex;
+
           .accordion-control {
             position: relative;
             margin-right: 28px;
+
             .indicator {
               position: absolute;
+              z-index: 10;
               right: -22px;
               bottom: -5px;
-              z-index: 10;
             }
           }
         }
       }
 
       .accordion-content {
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        left: 0;
         overflow: hidden;
         max-height: 0;
         padding: 0;
         transition: max-height 0.2s cubic-bezier(0, 1, 0, 1);
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 10;
+
         &[aria-expanded='true'] {
-          max-height: 1000vh;
           overflow: auto;
-          transition: max-height 0.25s cubic-bezier(1, 0, 1, 0);
+          max-height: 1000vh;
           box-shadow: 0 0.8rem 1rem -0.25rem rgba(0, 0, 0, 0.15) !important;
+          transition: max-height 0.25s cubic-bezier(1, 0, 1, 0);
         }
 
         .accordion-inner {
           padding: 0.75rem 1rem;
+
           .filter-list-group {
             display: flex;
             flex-direction: column;
+
             .label-title {
               color: var(--bs-gray-secondary);
-              text-transform: uppercase;
-              font-weight: 700;
               font-size: 0.875rem;
+              font-weight: 700;
+              text-transform: uppercase;
             }
+
             .form-label {
               align-items: center;
               justify-content: space-between;
@@ -201,12 +230,14 @@
             }
           }
         }
+
         .clear-filters {
-          margin-top: 1rem;
           width: 100%;
           align-items: center;
           justify-content: center;
+          margin-top: 1rem;
           font-size: 17px;
+
           svg {
             margin-right: 0.5rem !important;
             fill: var(--bs-danger);
