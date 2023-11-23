@@ -45,6 +45,7 @@
 
 ### Fix
 
+- Sistemato il layout della card nella variazione Bandi del Blocco Elenco per la modalità tablet
 - Sistemata accessibilità del read-more nel blocco elenco con variazione "Card con testo animato" quando si è in un sottosito con uno stile applicato.
 - Sistemato errore quando viene impostato "service-link" come ID lighthouse.
 

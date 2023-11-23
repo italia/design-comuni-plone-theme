@@ -51,9 +51,13 @@
   }
 
   // tablet
-  @media (max-width: 1367px) and (min-width: 586px) {
+  @media (min-width: 586px) and (max-width: 1367px) {
     .bandi-in-evidence-cards-wrapper {
       grid-template-columns: auto auto;
+
+      div.read-more a.read-more {
+        flex-direction: row;
+      }
     }
   }
 
