@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Sistemato errore quando viene impostato "service-link" come ID lighthouse.
+
 ## Versione 10.4.1 (21/11/2023)
 
 ### Migliorie
