@@ -33,7 +33,7 @@ const SubEvent = ({ event, show_image }) => {
   const Image = config.getComponent({ name: 'Image' }).component;
   return event ? (
     <div className="card-wrapper card-teaser">
-      <Card noWrapper className="card card-img no-after shadow rounded">
+      <Card noWrapper className="card no-after shadow rounded">
         {show_image &&
           (event.image_field || event.preview_image || event.image) && (
             <div className="img-responsive-wrapper">

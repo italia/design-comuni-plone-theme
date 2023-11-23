@@ -104,12 +104,7 @@ const InEvidenceTemplate = (props) => {
                 key={index}
               />
             ) : (
-              <Card
-                key={index}
-                className={cx('listing-item card-bg', {
-                  'card-img': index === 0 && image,
-                })}
-              >
+              <Card key={index} className={cx('listing-item card-bg')}>
                 {index === 0 && image && (
                   <div className="img-responsive-wrapper">
                     <div className="img-responsive">
