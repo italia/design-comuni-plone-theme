@@ -1,5 +1,25 @@
 
 
+## [10.4.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.4.1...v10.4.2) (2023-11-23)
+
+
+### Bug Fixes
+
+* a11y of listing block read-more with card-slide-text template ([#415](https://github.com/RedTurtle/design-comuni-plone-theme/issues/415)) ([6260983](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6260983016622af038d84d0f2efd3c9e13d2fbcf))
+* changed layout of readMore component to avoid overlapping ([#411](https://github.com/RedTurtle/design-comuni-plone-theme/issues/411)) ([a36a8b8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a36a8b8b1be250a27fa48316bf514d43f2aac9b7))
+* error in search blocks with service-link lighthouse id ([#417](https://github.com/RedTurtle/design-comuni-plone-theme/issues/417)) ([69f1a42](https://github.com/RedTurtle/design-comuni-plone-theme/commit/69f1a4243d13c077a0b0b469ce1de50a17527b95))
+
+
+### Maintenance
+
+* fix babel-eslint ([a7aa9a6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a7aa9a6dff9f420bceef34809c2f7e23da883bcd))
+* upgrade linters ([9d8f13a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9d8f13a34d82fb6cc9ce68f0881a46ffd8803eca))
+
+
+### Documentation
+
+* updated publiccode and release log ([603c65d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/603c65d1de43952d7a1936127ea043d8a631a8b3))
+
 ## [10.4.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.4.0...v10.4.1) (2023-11-21)
 
 
