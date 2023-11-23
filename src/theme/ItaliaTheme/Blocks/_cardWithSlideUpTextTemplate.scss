@@ -77,8 +77,9 @@
       }
     }
 
-    .read-more a,
-    .read-more a .icon {
+    a.read-more,
+    a.read-more .text + .icon,
+    a.read-more .text {
       color: #fff;
       fill: #fff;
       text-decoration: none;
