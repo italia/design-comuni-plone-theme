@@ -41,6 +41,13 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Migliorata l'accessibilità della form di valutazione del sito Customer Satisfaction
+
+
 ## Versione 10.4.2 (23/11/2023)
 
 ### Fix

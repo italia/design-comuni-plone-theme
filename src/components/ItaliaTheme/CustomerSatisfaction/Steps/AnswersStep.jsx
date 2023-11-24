@@ -82,12 +82,12 @@ const AnswersStep = ({
           {state?.map((s, i) => (
             <FormGroup
               check
-              key={s}
+              key={'positive-' + s}
               className="border-bottom border-light mb-4"
             >
               <Input
-                name={s}
-                id={s}
+                name="answer-input-positive"
+                id={'positive-' + s}
                 type="radio"
                 checked={s === selectedAnswer}
                 value={s}
@@ -95,7 +95,7 @@ const AnswersStep = ({
                 addon
               />
               <Label
-                for={s}
+                for={'positive-' + s}
                 check
                 className="mb-4"
                 data-element="feedback-rating-answer"
@@ -129,12 +129,12 @@ const AnswersStep = ({
           {state?.map((s, i) => (
             <FormGroup
               check
-              key={s}
+              key={'negative-' + s}
               className="border-bottom border-light mb-4"
             >
               <Input
-                name={s}
-                id={s}
+                name="answer-input-negative"
+                id={'negative-' + s}
                 type="radio"
                 checked={s === selectedAnswer}
                 value={s}
@@ -142,7 +142,7 @@ const AnswersStep = ({
                 addon
               />
               <Label
-                for={s}
+                for={'negative-' + s}
                 check
                 className="mb-4"
                 data-element="feedback-rating-answer"

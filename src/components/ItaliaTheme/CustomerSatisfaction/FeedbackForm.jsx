@@ -214,7 +214,7 @@ const FeedbackForm = ({ contentType, pathname }) => {
       <Container>
         <Row className="d-flex justify-content-center bg-primary">
           <Col className="col-12 col-lg-6">
-            <div className="feedback-form">
+            <div className="feedback-form" role="form">
               <Card
                 className="shadow card-wrapper py-4 px-4"
                 data-element="feedback"
