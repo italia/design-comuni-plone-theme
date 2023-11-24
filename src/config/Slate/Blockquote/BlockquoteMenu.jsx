@@ -126,6 +126,10 @@ const BlockquoteButton = (props) => {
           active={toSelect.length > 0}
         />
       }
+      onMouseDown={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+      }}
     >
       <Dropdown.Menu>
         {blockOpts.length &&

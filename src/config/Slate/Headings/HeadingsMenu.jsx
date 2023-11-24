@@ -114,6 +114,10 @@ const HeadingsButton = (props) => {
           active={toSelect.length > 0}
         />
       }
+      onMouseDown={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+      }}
     >
       <Dropdown.Menu>
         {OPTIONS.length > 0 &&

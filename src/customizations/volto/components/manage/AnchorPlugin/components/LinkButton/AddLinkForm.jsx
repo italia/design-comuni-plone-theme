@@ -96,7 +96,12 @@ class AddLinkForm extends Component {
    * @returns {undefined}
    */
   componentDidMount() {
-    setTimeout(() => this.input.focus(), 50);
+    setTimeout(() => {
+      if (this.input) {
+        return this.input.focus();
+      }
+      return null;
+    }, 50);
     document.addEventListener('mousedown', this.handleClickOutside, false);
   }
 

@@ -7,9 +7,10 @@
  * che serve per getire gli handler (le function di focusPrev e focusNext)
  */
 
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { useState } from 'react';
+import { connect, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+
 import { defineMessages, useIntl } from 'react-intl';
 import { useInView } from 'react-intersection-observer';
 import { SlateEditor } from '@plone/volto-slate/editor';
@@ -60,6 +61,16 @@ const TextEditorWidget = (props) => {
     },
     [props],
   );
+  const [uid, setUid] = useState();
+  const getEditor = React.useCallback((editor) => {
+    setUid(editor.uid);
+    return editor;
+  });
+
+  const link_pid = `${uid}-link`;
+  const show_sidebar_editor = useSelector((state) => {
+    return state['slate_plugins']?.[link_pid]?.show_sidebar_editor;
+  });
 
   const intl = useIntl();
   const placeholder =
@@ -105,7 +116,7 @@ const TextEditorWidget = (props) => {
             readOnly={!inView}
             properties={properties}
             extensions={extensions}
-            renderExtensions={[withBlockProperties]}
+            renderExtensions={[withBlockProperties, getEditor]}
             value={_value}
             block={block /* is this needed? */}
             slateSettings={otherProps.slateSettings}
@@ -135,7 +146,9 @@ const TextEditorWidget = (props) => {
               'aria-multiline': 'true',
             }}
             onBlur={(e) => {
-              setSelected(fieldName ? null : false);
+              if (!show_sidebar_editor) {
+                setSelected(fieldName ? null : false);
+              }
             }}
           />
         </div>

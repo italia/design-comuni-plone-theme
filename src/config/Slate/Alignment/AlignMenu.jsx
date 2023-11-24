@@ -66,9 +66,16 @@ const ALIGN_OPTIONS = [
   },
 ];
 
-const AlignMenuButton = ({ icon, active, ...props }) => (
-  <ToolbarButton {...props} icon={icon} active={active} />
-);
+const AlignMenuButton = ({ icon, active, ...props }) => {
+  return (
+    <ToolbarButton
+      {...props}
+      icon={icon}
+      active={active}
+      onMouseDown={() => {}}
+    />
+  );
+};
 
 const MenuOpts = ({ editor, toSelect, option, type }) => {
   const isActive = toSelect.includes(option);
@@ -139,6 +146,10 @@ const AlignButton = (props) => {
           active={toSelect.length > 0}
         />
       }
+      onMouseDown={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+      }}
     >
       <Dropdown.Menu>
         {blockOpts.length &&

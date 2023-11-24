@@ -25,9 +25,9 @@ const TextLargerButton = ({ icon, active, ...props }) => {
       {...props}
       icon={icon}
       active={isActive}
-      onClick={(event) =>
-        toggleStyle(editor, { cssClass: CLASSNAME, isBlock: false })
-      }
+      onMouseDown={(event) => {
+        return toggleStyle(editor, { cssClass: CLASSNAME, isBlock: false });
+      }}
     />
   );
 };

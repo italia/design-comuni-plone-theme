@@ -22,9 +22,11 @@ const LinkButtonButton = ({ icon, active, ...props }) => {
       {...props}
       icon={icon}
       active={isActive}
-      onClick={(event) =>
-        toggleStyle(editor, { cssClass: CLASSNAME, isBlock: false })
-      }
+      onMouseDown={(e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        toggleStyle(editor, { cssClass: CLASSNAME, isBlock: false });
+      }}
     />
   );
 };
