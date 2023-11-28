@@ -136,7 +136,6 @@ const TextEditorWidget = (props) => {
               onChangeBlock(block, {
                 ...data,
                 ...retVal,
-                // TODO: also add html serialized value
               });
             }}
             selected={selected}

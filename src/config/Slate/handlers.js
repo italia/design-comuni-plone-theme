@@ -1,4 +1,4 @@
-import { Node } from 'slate';
+import { Node, Editor } from 'slate';
 import {
   goDown,
   goUp,
@@ -175,7 +175,17 @@ const handleBreak = (props) => {
   if (!showToolbar) {
     return breakInSimpleTextEditor(props);
   } else {
-    return softBreak(props);
+    let ret = softBreak(props);
+    if (!ret) {
+      props.event.preventDefault();
+      props.event.stopPropagation();
+      Editor.insertNode(props.editor, {
+        type: 'paragraph',
+        children: [{ text: '' }],
+      });
+      ret = true;
+    }
+    return ret;
   }
 };
 
