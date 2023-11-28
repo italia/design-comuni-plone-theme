@@ -11,6 +11,7 @@ import EmbeddedVideo from './EmbeddedVideo';
 import { GalleryPreview } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import PropTypes from 'prop-types';
 import { contentFolderHasItems } from 'design-comuni-plone-theme/helpers';
+import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import config from '@plone/volto/registry';
@@ -150,8 +151,8 @@ const Gallery = ({
                 {images.map((item, i) => (
                   <div className="it-single-slide-wrapper" key={item['@id']}>
                     <figure>
-                      <a
-                        href={flattenToAppURL(item.image.scales.large.download)}
+                      <UniversalLink
+                        item={item}
                         onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
@@ -175,7 +176,7 @@ const Gallery = ({
                           loading="lazy"
                           sizes={`(max-width:320px) 300px, (max-width:425px) 400px, ${default_width_image}`}
                         />
-                      </a>
+                      </UniversalLink>
                       <figcaption className="figure-caption mt-2">
                         {item.title}
                       </figcaption>
