@@ -5,6 +5,10 @@
     gap: 1.3rem;
     -ms-grid-columns: 1fr 1.3rem 1fr 1.3rem 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+
+    .read-more a.read-more {
+      flex-direction: row;
+    }
   }
 
   .card-wrapper {
@@ -39,7 +43,7 @@
   }
 
   // smartphone
-  @media (max-width: 585px) {
+  @media (max-width: #{map-get($grid-breakpoints, sm)}) {
     .bandi-in-evidence-cards-wrapper {
       .card-wrapper {
         width: 100%;
@@ -51,13 +55,17 @@
   }
 
   // tablet
-  @media (min-width: 586px) and (max-width: 1367px) {
-    .bandi-in-evidence-cards-wrapper {
+  .bandi-in-evidence-cards-wrapper {
+    @media (min-width: #{map-get($grid-breakpoints, md)}) and  (max-width: #{map-get($grid-breakpoints, xxl)}) {
       grid-template-columns: auto auto;
+    }
 
-      div.read-more a.read-more {
-        flex-direction: row;
-      }
+    @media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)}) {
+      gap: 1rem;
+    }
+
+    @media (min-width: #{map-get($grid-breakpoints, sm)}) and (max-width: #{map-get($grid-breakpoints, md)}) {
+      display: block !important;
     }
   }
 
@@ -111,9 +119,8 @@
       bottom: 0;
       padding-top: 0.75rem;
 
-      @media (max-width: 585px) {
+      @media (max-width: #{map-get($grid-breakpoints, sm)}) {
         display: flex;
-        flex-direction: row;
         align-items: center;
         color: $analogue-1-a7;
         font-size: 0.77778rem;
@@ -122,7 +129,7 @@
         text-transform: uppercase;
       }
     }
-    @media (max-width: 585px) {
+    @media (max-width: #{map-get($grid-breakpoints, sm)}) {
       margin-top: 0;
     }
   }

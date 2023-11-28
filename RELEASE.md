@@ -50,6 +50,7 @@
 ### Fix
 
 - Migliorata l'accessibilità del modulo di valutazione del sito che si trova in fondo ad ogni pagina.
+- Il blocco Elenco con variazione Bandi viene visualizzato correttamente anche su tablet.
 
 ## Versione 10.4.2 (23/11/2023)
 
