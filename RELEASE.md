@@ -43,10 +43,13 @@
 
 ## Versione X.X.X (dd/mm/yyyy)
 
+### Migliorie
+
+- Ora nella pagina 404 "Questa pagina non esiste" viene suggerito il proseguimento della navigazione verso la homepage invece che verso la ricerca.
+
 ### Fix
 
-- Migliorata l'accessibilità della form di valutazione del sito Customer Satisfaction
-
+- Migliorata l'accessibilità del modulo di valutazione del sito che si trova in fondo ad ogni pagina.
 
 ## Versione 10.4.2 (23/11/2023)
 
