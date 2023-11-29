@@ -12,6 +12,7 @@ import {
   getNextVoltoBlock,
   getPreviousVoltoBlock,
   createDefaultBlock,
+  getCurrentListItem,
 } from '@plone/volto-slate/utils';
 import config from '@plone/volto/registry';
 
@@ -107,6 +108,13 @@ const focusNext = (props) => {
     onAddBlock,
     index,
   } = props.editor.getBlockProps();
+
+  const [listItem, listItemPath] = getCurrentListItem(props.editor);
+  if (listItem) {
+    //managed by breaklist extension
+    return true;
+  }
+
   props.event.preventDefault();
   props.event.stopPropagation();
   let isAtEnd = false;
@@ -177,13 +185,18 @@ const handleBreak = (props) => {
   } else {
     let ret = softBreak(props);
     if (!ret) {
-      props.event.preventDefault();
-      props.event.stopPropagation();
-      Editor.insertNode(props.editor, {
-        type: 'paragraph',
-        children: [{ text: '' }],
-      });
-      ret = true;
+      const [listItem, listItemPath] = getCurrentListItem(props.editor);
+      if (listItem) {
+        //managed by breaklist extension
+      } else {
+        props.event.preventDefault();
+        props.event.stopPropagation();
+        Editor.insertNode(props.editor, {
+          type: 'paragraph',
+          children: [{ text: '' }],
+        });
+        ret = true;
+      }
     }
     return ret;
   }

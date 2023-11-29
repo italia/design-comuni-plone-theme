@@ -12,7 +12,6 @@ export const breakList = (editor) => {
   editor.insertBreak = () => {
     // If the selection does not exist or is expanded, handle with the default
     // behavior.
-
     if (!(editor.selection && Range.isCollapsed(editor.selection))) {
       insertBreak();
       return false;
