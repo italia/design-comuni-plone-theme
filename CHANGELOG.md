@@ -1,5 +1,15 @@
 
 
+## [11.0.0-alpha.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.0.0-alpha.1...v11.0.0-alpha.2) (2023-11-29)
+
+
+### Bug Fixes
+
+* background image for NumbersBlock and Countdown block ([#423](https://github.com/RedTurtle/design-comuni-plone-theme/issues/423)) ([28ba7ea](https://github.com/RedTurtle/design-comuni-plone-theme/commit/28ba7ea39701eed8e65843b68c62a29797dd7d4f))
+* gallery component for ct views breaking with newer backend versions ([#422](https://github.com/RedTurtle/design-comuni-plone-theme/issues/422)) ([45a52f7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/45a52f7572cfc25b3adec897c089b848c215e359))
+* image size in listing ([397ba93](https://github.com/RedTurtle/design-comuni-plone-theme/commit/397ba932c0742690535c9dd6868cd0bda740f11b))
+* update volto-editablefooter to 5.0.3 ([8fcada1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8fcada1c5e36e67fd79f3fa99ec9077d0565a661))
+
 ## [11.0.0-alpha.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.0.0-alpha.0...v11.0.0-alpha.1) (2023-11-23)
 
 
