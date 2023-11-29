@@ -2,8 +2,7 @@
  * Search filters action
  * @module src/actions/getDettagliProcedimento
  */
-export const GET_DETTAGLI_PROCEDIMENTO =
-  'GET_DETTAGLI_PROCEDIMENTO';
+export const GET_DETTAGLI_PROCEDIMENTO = 'GET_DETTAGLI_PROCEDIMENTO';
 
 /**
  * Get search filters.

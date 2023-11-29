@@ -19,20 +19,21 @@
       margin-bottom: 0;
     }
   }
+
   .readingtime-dates {
     small {
+      color: $caption-text;
       font-size: 0.7rem;
       font-weight: 400;
       line-height: 0.8rem;
-      color: $caption-text;
     }
 
     p.font-monospace {
-      font-size: 1rem;
-      line-height: 1.16rem;
-      letter-spacing: 0.96px;
-      color: $body-color;
       margin-top: 0.2em;
+      color: $body-color;
+      font-size: 1rem;
+      letter-spacing: 0.96px;
+      line-height: 1.16rem;
     }
   }
 }

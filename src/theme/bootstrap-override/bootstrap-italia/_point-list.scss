@@ -3,9 +3,9 @@
     .point-list-aside {
       &.point-list-warning {
         width: 6.8rem;
-        color: $link-color;
         border-color: currentColor;
         border-right-width: 2px;
+        color: $link-color;
 
         .point-date {
           display: flex;
@@ -19,11 +19,12 @@
     }
 
     .point-list-aside.point-list-warning:after {
-      background-color: $primary;
+      right: -7px;
       width: 0.67em;
       height: 0.67em;
-      right: -7px;
+      background-color: $primary;
     }
+
     .point-list-content {
       .card-teaser {
         &.card {

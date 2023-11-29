@@ -88,10 +88,12 @@
       content: none;
     }
   }
+
   .flex-container {
     display: flex;
     align-items: center;
     column-gap: 0.56em;
+
     .day {
       font-size: 2.6rem;
       font-weight: 400;
@@ -103,10 +105,10 @@
       justify-content: center;
 
       .day-week {
+        color: $caption-text;
         font-family: $font-family-sans-serif;
         font-weight: 400;
         text-transform: uppercase;
-        color: $caption-text;
       }
 
       .month {
@@ -133,21 +135,21 @@
       align-items: center;
 
       .item-img {
-        flex: 0 0 3.11rem;
-        margin-right: 0.83em;
         position: relative;
         overflow: hidden;
         height: 3.11rem;
+        flex: 0 0 3.11rem;
+        margin-right: 0.83em;
 
         img {
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -50%);
           min-width: 100%;
           min-height: 100%;
-          object-fit: cover;
           border-radius: 4px;
+          object-fit: cover;
+          transform: translate(-50%, -50%);
         }
       }
     }
@@ -157,9 +159,9 @@
     margin-top: 6rem;
 
     .link-more-button-align-right {
+      display: flex;
       align-items: center;
       justify-content: right;
-      display: flex;
     }
   }
 

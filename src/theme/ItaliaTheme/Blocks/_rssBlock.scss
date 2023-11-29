@@ -2,10 +2,11 @@
   .card {
     .card-body {
       .source-title {
+        margin-bottom: $card-category-m-bottom;
+        color: $card-p-color;
         font-size: $card-category-size;
         text-transform: uppercase;
-        color: $card-p-color;
-        margin-bottom: $card-category-m-bottom;
+
         .source {
           font-weight: bold;
           letter-spacing: $card-category-l-spacing;

@@ -2,7 +2,7 @@
   "name": "design-comuni-plone-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "GPL-v3",
-  "version": "10.4.0",
+  "version": "10.4.3",
   "main": "src/index.js",
   "keywords": [
     "volto-addon",
@@ -55,11 +55,30 @@
   },
   "stylelint": {
     "extends": [
-      "stylelint-config-prettier",
       "stylelint-config-idiomatic-order"
     ],
     "plugins": [
       "stylelint-prettier"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.scss"
+        ],
+        "customSyntax": "postcss-scss"
+      },
+      {
+        "files": [
+          "**/*.less"
+        ],
+        "customSyntax": "postcss-less"
+      },
+      {
+        "files": [
+          "**/*.overrides"
+        ],
+        "customSyntax": "postcss-less"
+      }
     ],
     "rules": {
       "prettier/prettier": true,
@@ -85,20 +104,11 @@
       "yarn i18n",
       "git add locales"
     ],
-    "theme/**/*.{css,less}": [
-      "npx stylelint --fix"
-    ],
     "src/**/*.{css,less}": [
       "npx stylelint --fix"
     ],
-    "theme/**/*.scss": [
-      "npx stylelint --fix --customSyntax postcss-scss"
-    ],
     "src/**/*.scss": [
       "npx stylelint --fix --customSyntax postcss-scss"
-    ],
-    "theme/**/*.overrides": [
-      "npx stylelint --fix --syntax less"
     ],
     "src/**/*.overrides": [
       "npx stylelint --fix --syntax less"
@@ -150,28 +160,34 @@
   },
   "devDependencies": {
     "@babel/core": "7.19.6",
+    "@babel/eslint-parser": "7.23.3",
     "@commitlint/cli": "17.6.6",
     "@commitlint/config-conventional": "17.6.6",
     "@plone/scripts": "*",
     "@release-it/conventional-changelog": "5.1.1",
-    "babel-eslint": "10.1.0",
-    "eslint": "6.8.0",
-    "eslint-config-prettier": "6.11.0",
-    "eslint-config-react-app": "5.2.1",
+    "eslint": "8.54.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-config-react-app": "7.0.1",
     "eslint-plugin-flowtype": "4.7.0",
-    "eslint-plugin-import": "2.20.2",
-    "eslint-plugin-jsx-a11y": "6.2.3",
-    "eslint-plugin-prettier": "3.1.3",
-    "eslint-plugin-react": "7.20.0",
-    "eslint-plugin-react-hooks": "4.0.2",
+    "eslint-plugin-import": "2.29.0",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-prettier": "5.0.1",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.2",
     "lint-staged": "13.0.3",
-    "prettier": "2.0.5",
+    "postcss": "8.4.31",
+    "postcss-flexbugs-fixes": "5.0.2",
+    "postcss-less": "6.0.0",
+    "postcss-load-config": "4.0.2",
+    "postcss-loader": "7.3.3",
+    "postcss-overrides": "3.1.4",
+    "postcss-scss": "4.0.9",
+    "prettier": "3.1.0",
     "release-it": "16.1.3",
-    "stylelint": "15.10.2",
+    "stylelint": "15.11.0",
     "stylelint-config-idiomatic-order": "9.0.0",
-    "stylelint-config-prettier": "9.0.5",
-    "stylelint-prettier": "4.0.0"
+    "stylelint-prettier": "4.0.2"
   },
   "peerDependencies": {
     "@plone/volto": "17.0.0-alpha.19"

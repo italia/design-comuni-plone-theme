@@ -1,19 +1,19 @@
 .contenttype-news-item {
-	@media print {
-		.it-page-sections-container {
-			#documenti-allegati {
-				display: none;
-			}
+  @media print {
+    .it-page-sections-container {
+      #documenti-allegati {
+        display: none;
+      }
 
-			#luoghi {
-				.card-teaser {
-					.card-body {
-						.card-text {
-							display: none;
-						}
-					}
-				}
-			}
-		}
-	}
+      #luoghi {
+        .card-teaser {
+          .card-body {
+            .card-text {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }

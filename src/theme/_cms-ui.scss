@@ -1,4 +1,5 @@
 @import 'cms-ui_container';
+
 body.cms-ui {
   .block {
     font-family: $font-family-sans-serif;
@@ -137,8 +138,8 @@ body.cms-ui {
         .input-anchorlink-theme input:focus,
         .ui.icon.button:focus,
         .ui.basic.button:focus {
-          outline: solid 2px $focus-outline-color;
           border-radius: 0;
+          outline: solid 2px $focus-outline-color;
         }
 
         .cancel .icon {
@@ -147,6 +148,7 @@ body.cms-ui {
       }
 
       input#field-link {
+        height: auto;
         color: #444;
         font-weight: normal;
         height: auto;
@@ -154,18 +156,18 @@ body.cms-ui {
       }
 
       #field-data-element-select {
-        min-width: 220px;
-        width: 100%;
-        height: 34px;
-        font-family: 'Poppins', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-        font-size: 0.8rem;
         position: relative;
-        font-weight: normal;
-        font-style: normal;
+        width: 100%;
+        min-width: 220px;
+        height: 34px;
         padding: 0 7px 0 12px;
         margin-top: 0.2rem;
         background-color: transparent;
         color: #444;
+        font-family: 'Poppins', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-size: 0.8rem;
+        font-style: normal;
+        font-weight: normal;
 
         .react-select__control {
           min-height: 0;
@@ -188,8 +190,8 @@ body.cms-ui {
         padding-left: 0.8rem;
 
         .ui.basic.button:focus {
-          outline: solid 2px $focus-outline-color;
           border-radius: 0;
+          outline: solid 2px $focus-outline-color;
         }
       }
     }
@@ -227,6 +229,7 @@ body.cms-ui {
     /* FIX CT SELECT REACTVIRTUALIZED */
     .ReactVirtualized__Grid.ReactVirtualized__List {
       width: 100% !important;
+
       .ReactVirtualized__Grid__innerScrollContainer {
         max-width: none !important;
       }
@@ -263,71 +266,83 @@ body.cms-ui {
       fill: #999 !important;
     }
   }
+
   .sidebar-container {
     .numbers-block-sidebar-form-container {
       padding-bottom: 1rem;
     }
+
     .breadcrumbs {
       .breadcrumb {
         flex-wrap: wrap;
         row-gap: 0.5em;
+
         a.section {
           position: relative;
+
           &:not(:last-of-type) {
             max-width: 33.33%;
           }
+
           &:last-of-type {
             max-width: 100%;
+
             .tooltip {
-              white-space: normal;
               text-overflow: unset;
+              white-space: normal;
             }
           }
         }
+
         .tooltip {
           overflow: hidden;
-          white-space: nowrap;
           text-overflow: ellipsis;
+          white-space: nowrap;
+
           &:hover + .tooltip-text {
-            visibility: visible;
             opacity: 1;
+            visibility: visible;
           }
+
           &:last-child {
             max-width: none;
-            white-space: normal;
             text-overflow: unset;
+            white-space: normal;
           }
         }
+
         .tooltip-text {
           position: absolute;
-          visibility: hidden;
           z-index: 1;
           bottom: 125%;
           left: 50%;
-          margin-left: -60px;
           width: 8rem;
+          padding: 5px;
+          border-radius: 0.2em;
+          margin-left: -60px;
           background-color: $gray-200;
           color: $black;
           font-size: 0.8em;
-          text-align: center;
-          border-radius: 0.2em;
-          padding: 5px;
           opacity: 0;
+          text-align: center;
           transition: opacity 0.3s;
+          visibility: hidden;
+
           &::after {
-            content: '';
             position: absolute;
             top: 100%;
             left: 50%;
-            margin-left: -5px;
             border-width: 5px;
             border-style: solid;
             border-color: $gray-200 transparent transparent transparent;
+            margin-left: -5px;
+            content: '';
           }
         }
       }
     }
   }
+
   .icon-align-name {
     svg.icon {
       margin-right: 0.75rem !important;
@@ -367,10 +382,12 @@ body.cms-ui {
     .button.success.active {
       background-color: $success;
     }
+
     .button.warning,
     .button.success.warning {
       background-color: $warning;
     }
+
     .button.danger,
     .button.danger.active {
       background-color: $danger;
@@ -602,14 +619,16 @@ body.cms-ui {
       word-break: break-word;
     }
   }
+
   &.view-diffview,
   &.section-historyview {
     .ui.table,
     #toolbar .ui.table {
-      table-layout: fixed;
       width: 100%;
+      table-layout: fixed;
     }
   }
+
   &.view-diffview {
     @import 'bootstrap/scss/card';
     @import 'bootstrap-italia/src/scss/custom/card';
@@ -621,6 +640,7 @@ body.has-toolbar {
   #toolbar .toolbar-content.show {
     z-index: 9;
   }
+
   &.public-ui #toolbar {
     .toolbar {
       &:before {

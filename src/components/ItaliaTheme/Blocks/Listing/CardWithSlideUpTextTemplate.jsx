@@ -93,16 +93,14 @@ const CardWithSlideUpTextTemplate = (props) => {
                   {show_description && item.description && (
                     <p>{item.description}</p>
                   )}
-                  <div className="read-more">
-                    <CardReadMore
-                      iconName="it-arrow-right"
-                      tag={UniversalLink}
-                      item={!isEditMode ? item : null}
-                      href={isEditMode ? '#' : null}
-                      text={intl.formatMessage(messages.vedi)}
-                      className="justify-content-end"
-                    />
-                  </div>
+                  <CardReadMore
+                    iconName="it-arrow-right"
+                    tag={UniversalLink}
+                    item={!isEditMode ? item : null}
+                    href={isEditMode ? '#' : null}
+                    text={intl.formatMessage(messages.vedi)}
+                    className="justify-content-end"
+                  />
                 </div>
               </UniversalLink>
             );

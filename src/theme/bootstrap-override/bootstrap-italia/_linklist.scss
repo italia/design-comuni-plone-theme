@@ -2,10 +2,12 @@
   span {
     color: $link-color;
   }
+
   &:hover:not(.disabled) {
     span {
       color: $link-color;
     }
+
     .icon {
       fill: $link-color;
     }

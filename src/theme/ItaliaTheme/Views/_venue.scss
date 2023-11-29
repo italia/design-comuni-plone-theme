@@ -3,11 +3,12 @@
     p.h2 {
       @include rem-size(font-size, 28);
       @include rem-size(line-height, 32);
-      font-weight: 600;
       color: $text-color;
+      font-weight: 600;
       @include margin-size(margin-bottom, 16);
       @include margin-size(margin-top, 16);
     }
+
     p {
       color: $text-color;
     }
@@ -15,8 +16,8 @@
 
   section#metadata {
     h5 {
-      font-family: $font-family-base;
       color: $gray-secondary;
+      font-family: $font-family-base;
     }
   }
 }

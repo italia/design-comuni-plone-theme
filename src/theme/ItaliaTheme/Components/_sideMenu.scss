@@ -1,19 +1,22 @@
 .page-side-menu {
   .menu-wrapper {
     width: 100%;
+
     .accordion-wrapper {
       .accordion {
         border-bottom: none;
+
         .accordion-header {
-          width: 100%;
           display: block;
+          width: 100%;
+
           button.accordion-button {
-            border: none;
-            background: transparent;
-            width: 100%;
             display: flex;
+            width: 100%;
             align-items: center;
             justify-content: space-between;
+            border: none;
+            background: transparent;
 
             h3 {
               padding: 0px;
@@ -33,14 +36,15 @@
           .accordion-header {
             button.accordion-button {
               .accordion-title {
-                padding-bottom: 1.3em;
                 padding-top: 1.3em;
+                padding-bottom: 1.3em;
               }
             }
           }
         }
       }
     }
+
     .navbar.it-navscroll-wrapper {
       .menu-wrapper {
         padding: 0;

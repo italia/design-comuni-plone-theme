@@ -4,13 +4,16 @@ body.cms-ui {
       .toolbar {
         height: auto;
       }
+
       img {
         max-width: 100%;
       }
+
       .dropzone {
         .toolbar-inner {
           width: 100%;
           min-width: unset;
+
           input {
             height: auto;
             font-size: 0.8em;

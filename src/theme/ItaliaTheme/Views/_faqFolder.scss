@@ -60,6 +60,7 @@ body.contenttype-faqfolder {
           .accordion-button[data-bs-toggle='collapse'][aria-expanded='false'] {
             color: $primary;
           }
+
           .accordion-button[data-bs-toggle='collapse']:before {
             width: 2.5rem;
           }

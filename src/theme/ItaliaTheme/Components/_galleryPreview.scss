@@ -6,15 +6,15 @@
       padding-bottom: 10px;
 
       .modal-title {
-        text-transform: uppercase;
-        letter-spacing: 1.125px;
         font-weight: 600;
+        letter-spacing: 1.125px;
+        text-transform: uppercase;
       }
 
       .modal-close-button {
         button.close-button {
-          background-color: transparent;
           border: none;
+          background-color: transparent;
 
           svg {
             fill: $gray-400;
@@ -29,10 +29,10 @@
 
     .item-preview {
       position: relative;
-      margin-bottom: 1.25rem;
-      min-height: 72vh;
       display: flex;
+      min-height: 72vh;
       align-items: center;
+      margin-bottom: 1.25rem;
       text-align: center;
 
       img {
@@ -46,14 +46,14 @@
         position: absolute;
         z-index: 1;
         top: 50%;
-        border-radius: 100%;
-        transform: translateY(-50%);
-        height: 3.05rem;
-        width: 1.94rem;
         display: flex;
+        width: 1.94rem;
+        height: 3.05rem;
+        box-sizing: unset;
         align-items: center;
         justify-content: center;
-        box-sizing: unset;
+        border-radius: 100%;
+        transform: translateY(-50%);
 
         &.prev {
           left: -2.75rem;

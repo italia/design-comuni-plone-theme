@@ -1,12 +1,13 @@
 .contenttype-event {
-	@media print {
-		.it-page-sections-container {
-			#documenti {
-				display: none;
-			}
-			#appuntamenti {
-				display: none;
-			}
-		}
-	}
+  @media print {
+    .it-page-sections-container {
+      #documenti {
+        display: none;
+      }
+
+      #appuntamenti {
+        display: none;
+      }
+    }
+  }
 }

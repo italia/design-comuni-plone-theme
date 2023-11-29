@@ -30,23 +30,20 @@ const messages = defineMessages({
  */
 const FilterList = (props) => {
   const { data = {}, facets = {}, setFacets, isEditMode, intl } = props;
-  const definedFacets = data.facets || [];
   const [isOpened, setIsOpened] = React.useState(false);
-  const totalFilters = useMemo(
-    () =>
-      definedFacets.filter(
-        ({ field, type }) =>
-          field &&
-          Object.keys(facets).includes(field.value) &&
-          (type !== 'toggleFacet'
-            ? !isEmpty(facets[field.value])
-            : facets[field.value]),
-      ).length,
-    [definedFacets, facets],
-  );
-  const {
-    types: facetWidgetTypes,
-  } = config.blocks.blocksConfig.search.extensions.facetWidgets;
+  const totalFilters = useMemo(() => {
+    const definedFacets = data.facets || [];
+    return definedFacets.filter(
+      ({ field, type }) =>
+        field &&
+        Object.keys(facets).includes(field.value) &&
+        (type !== 'toggleFacet'
+          ? !isEmpty(facets[field.value])
+          : facets[field.value]),
+    ).length;
+  }, [data.facets, facets]);
+  const { types: facetWidgetTypes } =
+    config.blocks.blocksConfig.search.extensions.facetWidgets;
   const closeFilters = () => setIsOpened(false);
   const ref = useRef();
   useClickOutside(ref, closeFilters);
@@ -85,16 +82,14 @@ const FilterList = (props) => {
           'bg-white': isOpened,
           'bg-transparent': !isOpened,
         })}
-        role="region"
         aria-labelledby="headingAccordion"
         aria-expanded={isOpened}
         aria-hidden={!isOpened}
       >
         <div className="filter-list accordion-inner bg-white py-4">
           {data.facets?.map((facetSettings, i) => {
-            const {
-              filterListComponent: FilterListComponent,
-            } = resolveExtension('type', facetWidgetTypes, facetSettings);
+            const { filterListComponent: FilterListComponent } =
+              resolveExtension('type', facetWidgetTypes, facetSettings);
             const facet = facetSettings?.field?.value;
 
             if (!facet) return null;

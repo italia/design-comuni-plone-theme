@@ -37,6 +37,7 @@ $docs-section-margin: 3em;
         &.has-children {
           padding-bottom: 1em;
         }
+
         .description {
           font-size: 0.9rem;
         }
@@ -47,6 +48,7 @@ $docs-section-margin: 3em;
           justify-content: space-between;
           padding: 0.4em 0;
           gap: 4rem;
+
           .title-wrap {
             flex: 1;
 
@@ -54,6 +56,7 @@ $docs-section-margin: 3em;
               font-size: 1.2em;
               font-weight: 500;
             }
+
             p.description {
               margin: 0;
             }
@@ -84,26 +87,27 @@ $docs-section-margin: 3em;
           }
 
           a.modulistica-link {
-            display: flex;
             position: relative;
-            align-items: center;
-            justify-content: space-between;
+            display: flex;
             height: fit-content;
             flex-shrink: 0;
+            align-items: center;
+            justify-content: space-between;
 
             svg.icon.fa-icon {
               width: 1.6rem;
               height: 1.6rem;
-              font-size: 1.3rem;
               order: 2;
               margin-right: 1.15rem;
               margin-left: 0.25rem;
+              font-size: 1.3rem;
             }
+
             svg.external-link {
-              order: 1;
-              right: 0;
-              top: -2px;
               position: absolute;
+              top: -2px;
+              right: 0;
+              order: 1;
             }
           }
         }
@@ -118,6 +122,7 @@ $docs-section-margin: 3em;
             color: $primary;
             font-size: 1rem;
           }
+
           button {
             padding: 0 0.4em;
             border: none;
@@ -129,6 +134,7 @@ $docs-section-margin: 3em;
             }
           }
         }
+
         .accordion-content {
           overflow: hidden;
           height: auto;
@@ -181,18 +187,22 @@ $docs-section-margin: 3em;
             align-items: center;
             justify-content: unset;
             gap: 2rem;
+
             &.link-to-doc {
               align-items: unset;
               gap: 0.5rem;
+
               .title-wrap,
               a.modulistica-link {
                 flex-basis: 100%;
+
                 svg.icon.fa-icon {
-                  margin-left: 0;
                   margin-right: 1.25rem;
+                  margin-left: 0;
                 }
               }
             }
+
             .title-wrap {
               &.single-row {
                 max-width: none;
@@ -201,11 +211,13 @@ $docs-section-margin: 3em;
 
             &.modulo {
               justify-content: space-between;
+
               .title,
               .downloads {
                 flex-basis: unset;
               }
             }
+
             .title,
             .downloads {
               flex: 1 1 unset;

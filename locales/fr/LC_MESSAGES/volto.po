@@ -2155,6 +2155,11 @@ msgstr ""
 msgid "hide_dates"
 msgstr ""
 
+#: helpers/customizationsI18n
+# defaultMessage: Home page
+msgid "homepage"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/HTML/Sidebar
 # defaultMessage: Mostra lo sfondo a tutta larghezza
 msgid "htmlFullWidth"

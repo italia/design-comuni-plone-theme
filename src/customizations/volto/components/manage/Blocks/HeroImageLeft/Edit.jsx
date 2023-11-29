@@ -239,24 +239,26 @@ class EditComponent extends Component {
             selected: this.props.selected,
           })}
         >
-          {this.props.selected && this.props.editable && !!this.props.data.url && (
-            <div className="toolbar">
-              <Button.Group>
-                <Button
-                  icon
-                  basic
-                  onClick={() =>
-                    this.props.onChangeBlock(this.props.block, {
-                      ...this.props.data,
-                      url: '',
-                    })
-                  }
-                >
-                  <Icon name={clearSVG} size="24px" color="#e40166" />
-                </Button>
-              </Button.Group>
-            </div>
-          )}
+          {this.props.selected &&
+            this.props.editable &&
+            !!this.props.data.url && (
+              <div className="toolbar">
+                <Button.Group>
+                  <Button
+                    icon
+                    basic
+                    onClick={() =>
+                      this.props.onChangeBlock(this.props.block, {
+                        ...this.props.data,
+                        url: '',
+                      })
+                    }
+                  >
+                    <Icon name={clearSVG} size="24px" color="#e40166" />
+                  </Button>
+                </Button.Group>
+              </div>
+            )}
           <div className="block-inner-wrapper">
             {this.props.data.url ? (
               <div className="hero-image">

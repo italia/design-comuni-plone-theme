@@ -1,9 +1,9 @@
 .react-select__control {
+  border-radius: 0px !important;
   border-top: none !important;
   border-right: none !important;
   border-bottom: solid #435a70 1px !important;
   border-left: none !important;
-  border-radius: 0px !important;
 }
 
 .react-select__control:focus {

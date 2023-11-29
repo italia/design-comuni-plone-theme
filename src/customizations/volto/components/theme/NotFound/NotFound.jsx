@@ -1,6 +1,6 @@
 /*
 CUSTOMIZATIONS:
-- Removed the "Site Administration" link, added a link to the search page
+- Removed the "Site Administration" link, added a link to the home page
 */
 
 import { useEffect } from 'react';
@@ -22,14 +22,13 @@ const NotFound = () => {
   const dispatch = useDispatch();
   const lang = useSelector((state) => state.intl.locale);
 
+  const navigationRootPath = config.settings.isMultilingual
+    ? `/${toBackendLang(lang)}`
+    : '/';
+
   useEffect(() => {
-    dispatch(
-      getNavigation(
-        config.settings.isMultilingual ? `/${toBackendLang(lang)}` : '/',
-        config.settings.navDepth,
-      ),
-    );
-  }, [dispatch, lang]);
+    dispatch(getNavigation(navigationRootPath, config.settings.navDepth));
+  }, [dispatch, lang, navigationRootPath]);
 
   return (
     <Container className="view-wrapper">
@@ -47,8 +46,8 @@ const NotFound = () => {
         />
       </p>
       <p>
-        <Link to="/search">
-          <FormattedMessage id="Search Site" defaultMessage="Search Site" />
+        <Link to={navigationRootPath}>
+          <FormattedMessage id="Home page" defaultMessage="Home page" />
         </Link>
       </p>
       {/* <p>

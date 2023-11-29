@@ -2138,6 +2138,11 @@ msgstr "Per questo template il numero di risultati per pagina deve essere 7. Con
 msgid "hide_dates"
 msgstr "Nascondi le date"
 
+#: helpers/customizationsI18n
+# defaultMessage: Home page
+msgid "homepage"
+msgstr "Home page"
+
 #: components/ItaliaTheme/Blocks/HTML/Sidebar
 # defaultMessage: Mostra lo sfondo a tutta larghezza
 msgid "htmlFullWidth"

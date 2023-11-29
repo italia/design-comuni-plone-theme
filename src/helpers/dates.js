@@ -11,8 +11,8 @@ export const viewDate = (locale, value, format) => {
         ? // Since we assume UTC everywhere, then transform to local (momentjs default)
           moment(value)
         : value.match(/T(.)/g)
-        ? moment(`${value}Z`) // This might happen in old Plone versions dates
-        : moment(value); //This when date is like '2021-05-05'
+          ? moment(`${value}Z`) // This might happen in old Plone versions dates
+          : moment(value); //This when date is like '2021-05-05'
     } else {
       datetime = moment(value);
     }

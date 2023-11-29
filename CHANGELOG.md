@@ -1,5 +1,59 @@
 
 
+## [10.4.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.4.2...v10.4.3) (2023-11-28)
+
+
+### Bug Fixes
+
+* 404 page now sends user to homepage instead of search ([#419](https://github.com/RedTurtle/design-comuni-plone-theme/issues/419)) ([4331b59](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4331b5937dbcfad9fe6a22f3f8a0a53c1a17b838))
+* a11y of feedback form ([#418](https://github.com/RedTurtle/design-comuni-plone-theme/issues/418)) ([52da0c7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/52da0c73f67c8bb09b225e19a6535cd6a9613602))
+* changed styles for BandiInEvidenceTemplate for tablet size ([#412](https://github.com/RedTurtle/design-comuni-plone-theme/issues/412)) ([fd7688a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fd7688a80b6247243730ff01e55dd682ba2edbac))
+* removed pager-link data-element from prev item button in Pagination ([#420](https://github.com/RedTurtle/design-comuni-plone-theme/issues/420)) ([5812546](https://github.com/RedTurtle/design-comuni-plone-theme/commit/58125465349699396b2719a79bf70a339f4ac7e6))
+
+
+### Documentation
+
+* updated publiccode and release log ([33b267f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/33b267f2f20d68b521a1452d300f7288f1d01fb1))
+
+## [10.4.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.4.1...v10.4.2) (2023-11-23)
+
+
+### Bug Fixes
+
+* a11y of listing block read-more with card-slide-text template ([#415](https://github.com/RedTurtle/design-comuni-plone-theme/issues/415)) ([6260983](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6260983016622af038d84d0f2efd3c9e13d2fbcf))
+* changed layout of readMore component to avoid overlapping ([#411](https://github.com/RedTurtle/design-comuni-plone-theme/issues/411)) ([a36a8b8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a36a8b8b1be250a27fa48316bf514d43f2aac9b7))
+* error in search blocks with service-link lighthouse id ([#417](https://github.com/RedTurtle/design-comuni-plone-theme/issues/417)) ([69f1a42](https://github.com/RedTurtle/design-comuni-plone-theme/commit/69f1a4243d13c077a0b0b469ce1de50a17527b95))
+
+
+### Maintenance
+
+* fix babel-eslint ([a7aa9a6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a7aa9a6dff9f420bceef34809c2f7e23da883bcd))
+* upgrade linters ([9d8f13a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9d8f13a34d82fb6cc9ce68f0881a46ffd8803eca))
+
+
+### Documentation
+
+* updated publiccode and release log ([603c65d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/603c65d1de43952d7a1936127ea043d8a631a8b3))
+
+## [10.4.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.4.0...v10.4.1) (2023-11-21)
+
+
+### Bug Fixes
+
+* BandiInEvidenceTemplate layout to space bando dati when titles have different lengths ([#410](https://github.com/RedTurtle/design-comuni-plone-theme/issues/410)) ([4780b12](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4780b127497e247df7dd59ffcba274537b2bc5a5))
+* class no-after added to simple card text block ([#413](https://github.com/RedTurtle/design-comuni-plone-theme/issues/413)) ([10073e8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/10073e8bdf50c9e4b8d4245c05ad38bdac8423e3))
+* search block column template + button text color ([#408](https://github.com/RedTurtle/design-comuni-plone-theme/issues/408)) ([72f7eae](https://github.com/RedTurtle/design-comuni-plone-theme/commit/72f7eae3bac35aaaa01e725a89a65de8a2b02b60))
+
+
+### Maintenance
+
+* how to customize the 503 file ([#405](https://github.com/RedTurtle/design-comuni-plone-theme/issues/405)) ([b444ba8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b444ba84de9a31edffb01f778b66677ac72971cb))
+
+
+### Documentation
+
+* updated publiccode and release log ([5be0543](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5be054313163816dd764149e8f7cb1717c52eab2))
+
 ## [10.4.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.3.0...v10.4.0) (2023-11-14)
 
 

@@ -4,7 +4,7 @@
  *
  * https://github.com/plone/volto/blob/16.x.x/src/components/manage/Widgets/DatetimeWidget.jsx
  * https://github.com/plone/volto/blob/7ec45f7b4d46233236c651f39a951bad8e389184/src/components/manage/Widgets/DatetimeWidget.jsx
- * 
+ *
  * CUSTOMIZATIONS:
  * - accept calendar `openDirection` prop and use it in SingleDatePicker,
  *   default to down if no openDirection is given
@@ -190,14 +190,8 @@ export class DatetimeWidgetComponent extends Component {
   onFocusChange = ({ focused }) => this.setState({ focused });
 
   render() {
-    const {
-      id,
-      resettable,
-      intl,
-      reactDates,
-      widgetOptions,
-      lang,
-    } = this.props;
+    const { id, resettable, intl, reactDates, widgetOptions, lang } =
+      this.props;
     const noPastDates =
       this.props.noPastDates || widgetOptions?.pattern_options?.noPastDates;
     const moment = this.props.moment.default;

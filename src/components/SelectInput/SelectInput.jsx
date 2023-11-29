@@ -47,8 +47,7 @@ const messages = defineMessages({
       'premi la freccia a sinistra per evidenziare i valori selezionati',
   },
   ay11_toggle_values: {
-    id:
-      'ay11_select_Use left and right to toggle between focused values, press Backspace to remove the currently focused value',
+    id: 'ay11_select_Use left and right to toggle between focused values, press Backspace to remove the currently focused value',
     defaultMessage:
       'Usa le frecce destra e sinistra per attivare o disattivare i valori evidenziati, premi Backspace per rimuovere il valore corrente evidenziato',
   },
@@ -91,18 +90,19 @@ const messages = defineMessages({
   },
 });
 
-const SelectContainer = injectLazyLibs('reactSelect')(
-  ({ children, ...props }) => {
-    const components = props.reactSelect.components;
-    return (
-      <div>
-        <components.SelectContainer {...props}>
-          {children}
-        </components.SelectContainer>
-      </div>
-    );
-  },
-);
+const SelectContainer = injectLazyLibs('reactSelect')(({
+  children,
+  ...props
+}) => {
+  const components = props.reactSelect.components;
+  return (
+    <div>
+      <components.SelectContainer {...props}>
+        {children}
+      </components.SelectContainer>
+    </div>
+  );
+});
 
 SelectContainer.propTypes = {
   children: PropTypes.node,
@@ -179,13 +179,8 @@ ClearIndicator.propTypes = {
 const getSelectAriaLiveMessages = (intl) => {
   return {
     guidance: (props) => {
-      const {
-        isSearchable,
-        isMulti,
-        isDisabled,
-        tabSelectsValue,
-        context,
-      } = props;
+      const { isSearchable, isMulti, isDisabled, tabSelectsValue, context } =
+        props;
       switch (context) {
         case 'menu':
           return `${intl.formatMessage(messages.ay11_up_down)}${

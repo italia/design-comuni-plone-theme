@@ -32,8 +32,10 @@ $gdpr-toggle: #b22515 !default;
 $gdpr-toggle-border: #000 !default;
 $gdpr-focus-color: #ff9800 !default;
 $gdpr-link-color: #004285 !default;
-$gdpr-focus-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
-  0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem $gdpr-focus-color !default;
+$gdpr-focus-shadow:
+  inset 0 1px 0 rgba(255, 255, 255, 0.15),
+  0 1px 1px rgba(0, 0, 0, 0.075),
+  0 0 0 0.2rem $gdpr-focus-color !default;
 
 $caption-text: #455b71 !default;
 

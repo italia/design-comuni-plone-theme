@@ -97,8 +97,8 @@ const ListingBody = React.memo(
       // Need to know if data-element is "service-link"
       // to add data-element="pager-link" to pagination links
       const isServiceLink =
-        data.id_lighthouse === 'service-link' ||
-        variation.id_lighthouse === 'service-link';
+        data?.id_lighthouse === 'service-link' ||
+        variation?.id_lighthouse === 'service-link';
 
       return (
         <div className="public-ui">

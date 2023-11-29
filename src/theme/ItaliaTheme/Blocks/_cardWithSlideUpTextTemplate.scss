@@ -27,11 +27,11 @@
 
     .title {
       z-index: 2;
+      overflow: hidden;
+      max-height: calc(5em * 1.25); // 5 lines
       margin-bottom: 0.8rem;
       color: #fff;
       font-size: 1.7rem;
-      overflow: hidden;
-      max-height: calc(5em * 1.25); // 5 lines
 
       &.ellipsis::after {
         content: '…';
@@ -77,8 +77,9 @@
       }
     }
 
-    .read-more a,
-    .read-more a .icon {
+    a.read-more,
+    a.read-more .text + .icon,
+    a.read-more .text {
       color: #fff;
       fill: #fff;
       text-decoration: none;

@@ -120,8 +120,8 @@
         text-align: center;
 
         button.close-menu {
-          float: none;
           border-radius: 0;
+          float: none;
 
           &:focus {
             border-color: $focus-outline-color;
