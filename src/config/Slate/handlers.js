@@ -109,7 +109,7 @@ const focusNext = (props) => {
     index,
   } = props.editor.getBlockProps();
 
-  const [listItem, listItemPath] = getCurrentListItem(props.editor);
+  const [listItem] = getCurrentListItem(props.editor);
   if (listItem) {
     //managed by breaklist extension
     return true;
