@@ -2,6 +2,9 @@ import React from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
 import { isInternalURL, flattenToAppURL } from '@plone/volto/helpers';
+import { getFileViewFormat } from 'design-comuni-plone-theme/helpers';
+import { FontAwesomeIcon as IconFA } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { Icon } from '@plone/volto/components';
 
 const ViewLink = ({
   url,
@@ -31,6 +34,36 @@ const ViewLink = ({
   );
 };
 
+const getExtensionForFiles = (element) => {
+  const file = {
+    ...element.data.content_info,
+    filename: element.data.url,
+  };
+  const viewFormat = getFileViewFormat(file);
+  const icon = viewFormat?.icon ?? {
+    lib: 'far',
+    name: 'file',
+    svg_format: false,
+  };
+  return (
+    <span className="slate-inline-file-infos">
+      {' '}
+      (
+      {!icon.svg_format ? (
+        <IconFA
+          icon={[icon.lib, icon.name]}
+          alt={file.filename}
+          title={file.filename}
+          size={'1x'}
+        />
+      ) : (
+        <Icon className="icon-svg-custom" name={icon.name} />
+      )}{' '}
+      {element.data.content_info.size})
+    </span>
+  );
+};
+
 export const LinkElement = (props) => {
   const { attributes, children, element, mode = 'edit' } = props;
 
@@ -38,9 +71,16 @@ export const LinkElement = (props) => {
   if (element.data.dataElement) {
     dataElementAttr['data-element'] = element.data.dataElement;
   }
+
+  let extended_children = <></>;
+  if (element.data.content_info?.portal_type === 'File') {
+    extended_children = getExtensionForFiles(element);
+  }
+
   return mode === 'view' ? (
     <ViewLink {...(element.data || {})} {...attributes}>
       {children}
+      {extended_children}
     </ViewLink>
   ) : (
     <a
@@ -70,6 +110,7 @@ export const LinkElement = (props) => {
             return child;
           })
         : children}
+      {extended_children}
     </a>
   );
 };
