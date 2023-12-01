@@ -1,9 +1,14 @@
-.cms-ui .slate-inline-toolbar .ui.dropdown .menu > .item {
-  &.active {
-    color: #007eb1;
-    background-color: lighten(#007eb1, 60);
+.cms-ui .slate-inline-toolbar {
+  .ui.buttons {
+    flex-wrap: wrap;
   }
-  > .icon {
-    margin-right: 0;
+  .ui.dropdown .menu > .item {
+    &.active {
+      color: #007eb1;
+      background-color: lighten(#007eb1, 60);
+    }
+    > .icon {
+      margin-right: 0;
+    }
   }
 }

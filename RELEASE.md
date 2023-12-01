@@ -41,6 +41,20 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ... [`Istruzioni`](url della documentazione relativa alla novità)
+
+### Fix
+
+- Sistemata la visualizzazione per la barra di Slate, ora è possibile visualizzare tutti i pulsanti anche su schermi più piccoli
+
 ## Versione 10.4.3 (28/11/2023)
 
 ### Migliorie
