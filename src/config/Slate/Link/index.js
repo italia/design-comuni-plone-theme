@@ -43,8 +43,9 @@ const LinkEditor = (props) => {
         data={{ url: node?.data?.url || '', dataElement }}
         theme={{}}
         onChangeValue={(url, dataElement, item) => {
-          let enhanced_link_infos = {};
+          let enhanced_link_infos = null;
           if (item && item.getObjSize !== '0 KB') {
+            enhanced_link_infos = {};
             enhanced_link_infos['content-type'] = item.mime_type;
             enhanced_link_infos.size = item.getObjSize;
           }
