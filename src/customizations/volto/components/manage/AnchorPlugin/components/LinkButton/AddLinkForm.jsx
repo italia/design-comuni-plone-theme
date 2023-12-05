@@ -5,6 +5,7 @@
  * - Aggiunta gestione data-element
  * - Aggiunte opzioni per la select del data-element
  * - Modificate icone ed elementi per stilizzare il tooltip del link
+ * - passato l'item selezionato, oltre alla sua url, nella onchange
  */
 
 import React, { Component } from 'react';
@@ -71,6 +72,7 @@ class AddLinkForm extends Component {
       value: isInternalURL(props.data.url)
         ? flattenToAppURL(props.data.url)
         : props.data.url || '',
+      item: null,
       isInvalid: false,
     };
     this.onRef = this.onRef.bind(this);
@@ -138,8 +140,8 @@ class AddLinkForm extends Component {
    * @param {Object} value Value
    * @returns {undefined}
    */
-  onChange(value, clear) {
-    let nextState = { value };
+  onChange(value, clear, item) {
+    let nextState = { value, item };
     if (!clear) {
       if (
         this.state.isInvalid &&
@@ -149,29 +151,13 @@ class AddLinkForm extends Component {
       }
 
       if (isInternalURL(value)) {
-        nextState = { value: flattenToAppURL(value) };
+        nextState = { value: flattenToAppURL(value), item };
       }
     }
     this.setState(nextState);
 
-    if (clear) this.props.onClear();
+    if (clear) this.clear();
   }
-
-  /**
-   * Select item handler
-   * @method onSelectItem
-   * @param {string} e event
-   * @param {string} url Url
-   * @returns {undefined}
-   */
-  onSelectItem = (e, url) => {
-    e.preventDefault();
-    this.setState({
-      value: url,
-      isInvalid: false,
-    });
-    this.props.onChangeValue(addAppURL(url));
-  };
 
   /**
    * Clear handler
@@ -180,7 +166,7 @@ class AddLinkForm extends Component {
    * @returns {undefined}
    */
   clear() {
-    const nextState = { value: '' };
+    const nextState = { value: '', item: null };
     this.setState(nextState);
 
     this.props.onClear();
@@ -216,7 +202,7 @@ class AddLinkForm extends Component {
    * @returns {undefined}
    */
   onSubmit() {
-    let { value: url, dataElement } = this.state;
+    let { value: url, dataElement, item } = this.state;
 
     const checkedURL = URLUtils.checkAndNormalizeUrl(url);
     url = checkedURL.url;
@@ -227,7 +213,7 @@ class AddLinkForm extends Component {
 
     const editorStateUrl = isInternalURL(url) ? addAppURL(url) : url;
 
-    this.props.onChangeValue(editorStateUrl, dataElement);
+    this.props.onChangeValue(editorStateUrl, dataElement, item);
     this.onClose();
   }
 
@@ -305,8 +291,8 @@ class AddLinkForm extends Component {
                         this.props.openObjectBrowser({
                           mode: 'link',
                           overlay: true,
-                          onSelectItem: (url) => {
-                            this.onChange(url);
+                          onSelectItem: (url, item) => {
+                            this.onChange(url, null, item);
                             this.onSubmit();
                           },
                         });

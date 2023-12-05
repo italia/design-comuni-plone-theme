@@ -42,14 +42,19 @@ const LinkEditor = (props) => {
         placeholder={'Aggiungi un link'}
         data={{ url: node?.data?.url || '', dataElement }}
         theme={{}}
-        onChangeValue={(url, dataElement) => {
+        onChangeValue={(url, dataElement, item) => {
+          let enhanced_link_infos = {};
+          if (item && item.getObjSize !== '0 KB') {
+            enhanced_link_infos['content-type'] = item.mime_type;
+            enhanced_link_infos.size = item.getObjSize;
+          }
           if (!active) {
             if (!editor.selection) editor.selection = editor.savedSelection;
-            insertElement(editor, { url, dataElement });
+            insertElement(editor, { url, dataElement, enhanced_link_infos });
           } else {
             const selection = unwrapElement(editor);
             editor.selection = selection;
-            insertElement(editor, { url, dataElement });
+            insertElement(editor, { url, dataElement, enhanced_link_infos });
           }
           ReactEditor.focus(editor);
           dispatch(setPluginOptions(pid, { show_sidebar_editor: false }));

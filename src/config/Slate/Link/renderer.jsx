@@ -35,10 +35,11 @@ const ViewLink = ({
 };
 
 const getExtensionForFiles = (element) => {
-  const file = {
-    ...element.enhanced_link_infos,
+  let file = {
+    ...element.data.enhanced_link_infos, //{content-type: 'image/png', size: '1.3 MB'}
     filename: element.data.url,
   };
+
   const viewFormat = getFileViewFormat(file);
   const icon = viewFormat?.icon ?? {
     lib: 'far',
@@ -73,7 +74,8 @@ export const LinkElement = (props) => {
   }
 
   let extended_children = <></>;
-  if (element.enhanced_link_infos) {
+
+  if (element.data.enhanced_link_infos) {
     extended_children = getExtensionForFiles(element);
   }
 
