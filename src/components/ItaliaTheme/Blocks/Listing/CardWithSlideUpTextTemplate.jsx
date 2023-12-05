@@ -53,7 +53,7 @@ const CardWithSlideUpTextTemplate = (props) => {
         </div>
         <div className="grid mb-3 mt-5">
           {items.map((item, index) => {
-            const image = getListingImageBackground(item, 'teaser');
+            const image = getListingImageBackground(item, 'large');
             const category = getCategory(item, show_type, show_section, props);
             const date = hide_dates
               ? null

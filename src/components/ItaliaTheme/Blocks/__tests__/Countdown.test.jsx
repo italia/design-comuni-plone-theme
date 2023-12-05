@@ -59,90 +59,7 @@ const mock_fields = {
       has_children: false,
       head_title: null,
       icona: null,
-      id:
-        'business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp',
-      image: {
-        scales: {
-          gallery: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/gallery',
-            height: 65536,
-            width: 250,
-          },
-          great: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/great',
-            height: 65536,
-            width: 1200,
-          },
-          huge: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/huge',
-            height: 65536,
-            width: 1600,
-          },
-          icon: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/icon',
-            height: 32,
-            width: 32,
-          },
-          large: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/large',
-            height: 65536,
-            width: 800,
-          },
-          larger: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/larger',
-            height: 65536,
-            width: 1000,
-          },
-          listing: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/listing',
-            height: 16,
-            width: 16,
-          },
-          midi: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/midi',
-            height: 65536,
-            width: 300,
-          },
-          mini: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/mini',
-            height: 65536,
-            width: 200,
-          },
-          preview: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/preview',
-            height: 65536,
-            width: 400,
-          },
-          teaser: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/teaser',
-            height: 65536,
-            width: 600,
-          },
-          thumb: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/thumb',
-            height: 65536,
-            width: 128,
-          },
-          tile: {
-            download:
-              'http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/tile',
-            height: 64,
-            width: 64,
-          },
-        },
-      },
+      id: 'business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp',
       image_field: 'image',
       image_scales: {
         image: [
@@ -338,7 +255,7 @@ test('View renders all fields', async () => {
   //immagine background
   const background = document.querySelector('.background-image');
   expect(background).toHaveStyle(
-    `background-image: url(/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image);`,
+    `background-image: url(/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image-2000-7d300845b28c407363d6e0f57c615056.webp);`,
   );
 
   //countdown position

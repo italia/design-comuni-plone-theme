@@ -29,9 +29,13 @@ const NumbersView = ({ data, block }) => {
               className="background-image"
               style={{
                 backgroundImage: `url(${
-                  data.background[0]?.image
+                  data.background[0]?.image_field
                     ? flattenToAppURL(
-                        data.background[0]['@id'] + '/@@images/image',
+                        data.background[0]['@id'] +
+                          '/' +
+                          data.background[0].image_scales?.[
+                            data.background[0].image_field
+                          ][0].download,
                       )
                     : addAppURL(data.background[0]?.['@id'])
                 })`,

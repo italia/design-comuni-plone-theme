@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-11-24T12:06:19.839Z\n"
+"POT-Creation-Date: 2023-11-30T09:45:03.284Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -433,6 +433,11 @@ msgstr ""
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 # defaultMessage: Apri in un nuovo tab
 msgid "Open in a new tab"
+msgstr ""
+
+#: components/ItaliaTheme/Pagination/PaginationItem
+# defaultMessage: Pagina
+msgid "Page"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
@@ -1066,6 +1071,11 @@ msgstr ""
 msgid "block_bg_color"
 msgstr ""
 
+#: components/ItaliaTheme/Breadcrumbs/Breadcrumbs
+# defaultMessage: Percorso di navigazione
+msgid "breadcrumb"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 # defaultMessage: Calendario
 msgid "calendarBlockSidebarTitle"
@@ -1360,6 +1370,12 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/CuredBy
 # defaultMessage: Persone
 msgid "cured_by_people"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ReleaseLog/ReleaseLog
+# defaultMessage: attivo
+msgid "currentActive"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti

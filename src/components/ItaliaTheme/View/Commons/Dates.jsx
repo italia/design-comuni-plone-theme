@@ -101,7 +101,7 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
         {!openEnd && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
-              <span className="point-date text-monospace">
+              <span className="point-date font-monospace">
                 {end.format('DD')}
               </span>
               <span className="point-month">{end.format('MMMM')}</span>

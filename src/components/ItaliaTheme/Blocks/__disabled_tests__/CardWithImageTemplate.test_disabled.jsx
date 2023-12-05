@@ -1483,7 +1483,7 @@ test('View renders all fields', async () => {
   ).toBeInTheDocument();
 
   // mostra l'immagine per tutti gli elementi
-  const cardsWithImage = document.querySelectorAll('.card-img');
+  const cardsWithImage = document.querySelectorAll('.card');
   expect(cardsWithImage.length).toBe(mock_fields.items_total);
 
   // non alterare le dimensioni naturali dell'immagine

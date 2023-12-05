@@ -41,11 +41,7 @@ const CardWithImageTemplateSkeleton = ({
             {[0, 1, 2, 3, 4, 5].map((i) => {
               return (
                 <Col lg="4" key={i} className="col-item mb-3">
-                  <Card
-                    className={cx('listing-item card-bg', {
-                      'card-img': i < 3,
-                    })}
-                  >
+                  <Card className={cx('listing-item card-bg')}>
                     {/* wrapperClassName="card-overlapping" */}
                     {(i < 3 || always_show_image) && (
                       <div className="img-responsive-wrapper">
@@ -56,10 +52,8 @@ const CardWithImageTemplateSkeleton = ({
                     )}
                     <CardBody className="px-4">
                       <CardCategory></CardCategory>
-
                       <CardTitle tag="h4">-</CardTitle>
                       <CardText className="mb-3"></CardText>
-
                       <div>
                         {[0, 1].map((argument) => (
                           <Chip

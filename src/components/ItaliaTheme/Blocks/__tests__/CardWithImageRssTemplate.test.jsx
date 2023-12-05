@@ -151,7 +151,7 @@ test('View renders all fields', async () => {
     screen.getByRole('heading', { name: /Is this the real life/i }),
   ).toBeInTheDocument();
   //numero massimo elementi da mostrare
-  const cards = document.querySelectorAll('.card-img');
+  const cards = document.querySelectorAll('.card');
   expect(cards.length).toBe(mock_fields.limit);
 
   //data card --> cambia in base a rss

@@ -1,3 +1,6 @@
+/*
+ * componente per visulizzare un CT "Persona" nei Listing o in aclune pagine
+ */
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -115,7 +118,6 @@ const CardWithImageTemplate = (props) => {
                 ) : (
                   <Card
                     className={cx('listing-item card-bg', {
-                      'card-img': showImage,
                       'card-teaser-image card-flex no-after':
                         item['@type'] === 'Persona',
                     })}

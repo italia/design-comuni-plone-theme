@@ -2,7 +2,7 @@
   "name": "design-comuni-plone-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "GPL-v3",
-  "version": "10.4.3",
+  "version": "11.0.0-alpha.2",
   "main": "src/index.js",
   "keywords": [
     "volto-addon",
@@ -124,9 +124,9 @@
     "@eeacms/volto-taxonomy": "^1.0.0",
     "@loadable/babel-plugin": "5.13.2",
     "@plone-collective/volto-sentry": "0.3.0",
-    "bootstrap-italia": "2.2.0",
+    "bootstrap-italia": "2.6.1",
     "classnames": "^2.3.2",
-    "design-react-kit": "italia/design-react-kit#fc9b40257ba3cb613141faf217f1f5b806489740",
+    "design-react-kit": "5.0.0-1",
     "htmldiff-js": "1.0.5",
     "marked": "9.0.0",
     "react-dropzone": "11.0.1",
@@ -143,7 +143,7 @@
     "volto-blocks-widget": "3.1.0",
     "volto-data-grid-widget": "2.2.3",
     "volto-dropdownmenu": "4.1.0",
-    "volto-editablefooter": "5.0.2",
+    "volto-editablefooter": "5.0.3",
     "volto-feedback": "0.1.5",
     "volto-form-block": "3.1.0",
     "volto-gdpr-privacy": "2.1.0",
@@ -190,7 +190,7 @@
     "stylelint-prettier": "4.0.2"
   },
   "peerDependencies": {
-    "@plone/volto": "17.0.0-alpha.19"
+    "@plone/volto": "17.5.0"
   },
   "packageManager": "yarn@3.2.3"
 }

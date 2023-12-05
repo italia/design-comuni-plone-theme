@@ -11,7 +11,6 @@ import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';
 import { Card, CardBody, CardText } from 'design-react-kit';
-import Image from '@plone/volto/components/theme/Image/Image';
 import {
   BodyClass,
   flattenToAppURL,
@@ -33,6 +32,7 @@ import {
   RelatedItemInEvidence,
   richTextHasContent,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import config from '@plone/volto/registry';
 
 /**
  * PaginaArgomentoView view component class.
@@ -42,6 +42,7 @@ import {
  */
 
 const PaginaArgomentoView = ({ content }) => {
+  const Image = config.getComponent({ name: 'Image' }).component;
   const location = useLocation();
   const dispatch = useDispatch();
 
@@ -134,12 +135,11 @@ const PaginaArgomentoView = ({ content }) => {
                               (uo_object.preview_image || uo_object.image) && (
                                 <div className="image-container me-3">
                                   <Image
-                                    image={
-                                      uo_object.preview_image || uo_object.image
-                                    }
+                                    item={uo_object}
                                     alt=""
                                     title={alt}
                                     responsive={false}
+                                    sizes="100px"
                                   />
                                 </div>
                               )}
@@ -160,10 +160,12 @@ const PaginaArgomentoView = ({ content }) => {
               >
                 <div>
                   <Image
-                    image={content.image}
+                    item={content}
                     alt={content.caption ?? content.title}
                     title={content.caption ?? content.title}
                     key={content.image.download}
+                    responsive={true}
+                    sizes="100vw"
                   />
                 </div>
               </Portal>

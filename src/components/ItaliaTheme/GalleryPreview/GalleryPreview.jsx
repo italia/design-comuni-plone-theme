@@ -89,12 +89,7 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
               )}
 
               {image && (
-                <Image
-                  key={image['@id']}
-                  itemUrl={image['@id']}
-                  image={image['@id']}
-                  alt={image.title}
-                />
+                <Image key={image['@id']} item={image} alt={image.title} />
               )}
 
               {items.length > 1 && (

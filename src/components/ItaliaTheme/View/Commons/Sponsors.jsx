@@ -4,8 +4,8 @@ import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
-import Image from '@plone/volto/components/theme/Image/Image';
 import { UniversalLink } from '@plone/volto/components';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   sponsors: {
@@ -22,44 +22,27 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 const Sponsor = ({ item }) => {
+  const Image = config.getComponent({ name: 'Image' }).component;
+  const image =
+    item?.image &&
+    Image({
+      item: item,
+      sizes: '600px',
+      loading: 'lazy',
+      className: 'img-fluid',
+      alt: item.image.filename ?? item.title,
+    });
   return item ? (
-    <>
-      {!!item.image ? (
-        <div className="sponsor-item">
-          <a
-            href={item.remoteUrl}
-            alt=""
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              itemUrl={item['@id']}
-              image={item.image_scales?.[item.image_field]?.[0] || item['@id']}
-              alt={
-                item.image_scales?.[item.image_field]?.[0]?.filename ??
-                item.title
-              }
-              className="img-fluid"
-            />
-          </a>
-        </div>
-      ) : (
-        <div className="sponsor-item">
-          <UniversalLink
-            href={item.remoteUrl}
-            alt=""
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {item.title}
-          </UniversalLink>
-        </div>
-      )}
-    </>
+    <div className="sponsor-item">
+      <UniversalLink href={item.remoteUrl}>
+        {image ? image : item.title}
+      </UniversalLink>
+    </div>
   ) : null;
 };
+
 /**
- * Sponsors view component class.
+ * Sponsors view component class (used in EventSponsors)
  * @function Sponsors
  * @params {object} content Content object.
  * @params {string} folder name where to find images.

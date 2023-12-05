@@ -55,6 +55,9 @@
 
 - Sistemata la visualizzazione per la barra di Slate, ora è possibile visualizzare tutti i pulsanti anche su schermi più piccoli
 
+### Novità
+
+- Modificata l'altezza delle immagini delle card, per essere in linea con i template agid.
 ## Versione 10.4.3 (28/11/2023)
 
 ### Migliorie

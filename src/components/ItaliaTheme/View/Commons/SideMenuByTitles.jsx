@@ -150,6 +150,7 @@ const SideMenuByTitles = ({ data, content_uid, index_title }) => {
                   onToggle={() => {
                     setIsNavOpen(!isNavOpen);
                   }}
+                  aria-controls="side-menu-body"
                 >
                   <h3>{index_title ?? intl.formatMessage(messages.index)}</h3>
                 </AccordionHeader>
@@ -161,11 +162,8 @@ const SideMenuByTitles = ({ data, content_uid, index_title }) => {
                 </div>
                 <AccordionBody
                   active={isNavOpen}
-                  className={
-                    isNavOpen
-                      ? 'accordion-collapse show'
-                      : 'accordion-collapse collapse'
-                  }
+                  id="side-menu-body"
+                  role="region"
                 >
                   <ul className="link-list" data-element="page-index">
                     {headers.map((item, i) => {

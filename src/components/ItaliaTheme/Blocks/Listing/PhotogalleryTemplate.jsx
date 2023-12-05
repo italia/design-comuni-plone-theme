@@ -1,3 +1,6 @@
+/*
+ * Photogallery
+ */
 import 'slick-carousel/slick/slick.css';
 import 'design-comuni-plone-theme/components/slick-carousel/slick/slick-theme.css';
 
@@ -139,7 +142,7 @@ const PhotogalleryTemplate = ({
 
   const figure = (image, item) => {
     return (
-      <figure className="img-wrapper">
+      <figure className="img-wrapper volto-image responsive">
         {image}
         {getCaption(item) && <figcaption>{getCaption(item)}</figcaption>}
       </figure>
@@ -163,7 +166,6 @@ const PhotogalleryTemplate = ({
             <Slider {...settings} ref={slider}>
               {items.map((item, i) => {
                 const image = ListingImage({ item });
-
                 return (
                   <div
                     className={cx('it-single-slide-wrapper', {
