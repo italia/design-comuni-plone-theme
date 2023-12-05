@@ -36,7 +36,7 @@ const ViewLink = ({
 
 const getExtensionForFiles = (element) => {
   const file = {
-    ...element.data.content_info,
+    ...element.enhanced_link_infos,
     filename: element.data.url,
   };
   const viewFormat = getFileViewFormat(file);
@@ -59,7 +59,7 @@ const getExtensionForFiles = (element) => {
       ) : (
         <Icon className="icon-svg-custom" name={icon.name} />
       )}{' '}
-      {element.data.content_info.size})
+      {file?.size})
     </span>
   );
 };
@@ -73,7 +73,7 @@ export const LinkElement = (props) => {
   }
 
   let extended_children = <></>;
-  if (element.data.content_info?.portal_type === 'File') {
+  if (element.enhanced_link_infos) {
     extended_children = getExtensionForFiles(element);
   }
 

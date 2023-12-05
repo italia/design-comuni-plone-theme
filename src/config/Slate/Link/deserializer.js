@@ -10,7 +10,6 @@ export const simpleLinkDeserializer = (editor, el) => {
     .flat();
 
   if (!children.length) children = [{ text: '' }];
-
   const attrs = {
     type: SIMPLELINK,
     data: {
