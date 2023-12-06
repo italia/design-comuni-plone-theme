@@ -41,7 +41,7 @@
 - ...
 -->
 
-## Versione x.x.x (x/x/x)
+## Versione 10.5.0 (06/12/2023)
 
 ### Novità
 
