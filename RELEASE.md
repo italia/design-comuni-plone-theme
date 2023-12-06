@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Il feedback form ora richiede necessariamente una risposta oltre al voto in stelle.
+
 ## Versione 10.4.3 (28/11/2023)
 
 ### Migliorie
