@@ -49,6 +49,7 @@
 
 ### Fix
 
+- Le immagini nelle card dei contenuti correlati sono centrate verticalmente.
 - Il feedback form ora richiede necessariamente una risposta oltre al voto in stelle.
 - Dimensione del titolo del blocco calendario uniformata ai titoli degli altri blocchi elenco.
 
