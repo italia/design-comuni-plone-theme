@@ -50,6 +50,7 @@
 ### Fix
 
 - Il feedback form ora richiede necessariamente una risposta oltre al voto in stelle.
+- Dimensione del titolo del blocco calendario uniformata ai titoli degli altri blocchi elenco.
 
 ## Versione 10.4.3 (28/11/2023)
 
