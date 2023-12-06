@@ -1,5 +1,24 @@
 
 
+## [10.5.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.4.3...v10.5.0) (2023-12-06)
+
+
+### Features
+
+* added volto-querywidget-with-browser addon ([#426](https://github.com/RedTurtle/design-comuni-plone-theme/issues/426)) ([d1a6502](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d1a65021fe594eb15bc56b76207de7d74f8f1cca))
+
+
+### Bug Fixes
+
+* calendar block header size ([#425](https://github.com/RedTurtle/design-comuni-plone-theme/issues/425)) ([2ab1035](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2ab1035bb3bdc3da18726445009ddd37ef9c7288))
+* centered image in genericcard with image for related content ([#429](https://github.com/RedTurtle/design-comuni-plone-theme/issues/429)) ([38ffb45](https://github.com/RedTurtle/design-comuni-plone-theme/commit/38ffb452d903c2d39a9fe3d355f69cf9c220d2f2))
+* feedback form con risposta obbligatoria ([#430](https://github.com/RedTurtle/design-comuni-plone-theme/issues/430)) ([f653419](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f653419ae76e9cdf46edce1c9ad5b7d80e0506d7))
+
+
+### Documentation
+
+* updated publiccode and release log ([05312b4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/05312b4f8705bc4805beee9b6b2ba98e9f399e62))
+
 ## [10.4.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.4.2...v10.4.3) (2023-11-28)
 
 
