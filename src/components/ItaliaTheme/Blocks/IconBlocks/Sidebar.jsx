@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { FormattedMessage, injectIntl } from 'react-intl';
-import redraft from 'redraft';
-
 import { TextWidget, Icon, ObjectBrowserWidget } from '@plone/volto/components';
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
@@ -101,13 +99,7 @@ const Sidebar = ({
                   index={index}
                   onClick={() => setSelected(selected === index ? null : index)}
                 >
-                  {subblock.title
-                    ? redraft(
-                        subblock.title,
-                        config.settings.richtextViewSettings.ToHTMLRenderers,
-                        config.settings.richtextViewSettings.ToHTMLOptions,
-                      )
-                    : `Blocco ${index + 1}`}
+                  {subblock.title ?? `Blocco ${index + 1}`}
                   {selected === index ? (
                     <Icon name={upSVG} size="20px" />
                   ) : (
