@@ -97,6 +97,12 @@ iframe {
     ol:last-child {
       margin-bottom: 0;
     }
+
+    &.dark {
+      a {
+        color: $primary-text;
+      }
+    }
   }
 
   .callout {
