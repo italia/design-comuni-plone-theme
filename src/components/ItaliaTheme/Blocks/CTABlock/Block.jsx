@@ -7,7 +7,7 @@ import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaThe
 import { UniversalLink } from '@plone/volto/components';
 import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 import { useHandleDetachedBlockFocus } from 'design-comuni-plone-theme/helpers/blocks';
-
+import config from '@plone/volto/registry';
 import cx from 'classnames';
 
 const messages = defineMessages({
