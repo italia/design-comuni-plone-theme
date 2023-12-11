@@ -3108,6 +3108,11 @@ msgstr "Search site"
 msgid "search_adv_filters"
 msgstr "Advanced filters"
 
+#: config/italiaConfig
+# defaultMessage: Ricerca
+msgid "search_brdc"
+msgstr "Search"
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Tipologia
 msgid "search_content_types"

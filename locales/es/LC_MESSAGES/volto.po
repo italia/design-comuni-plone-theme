@@ -3117,6 +3117,11 @@ msgstr "Busca en el sitio"
 msgid "search_adv_filters"
 msgstr "Filtros avanzados"
 
+#: config/italiaConfig
+# defaultMessage: Ricerca
+msgid "search_brdc"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Tipologia
 msgid "search_content_types"

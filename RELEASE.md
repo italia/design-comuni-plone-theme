@@ -87,6 +87,7 @@
 ### Novità
 
 - Aggiunta la possibilità di selezionare la dimensione dell'immagine nel blocco Alert, inoltre è stato aggiornato anche il widget per la selezione del colore di sfondo.
+- Aggiunte le breadcrumbs nella pagina dei risultati della ricerca
 
 ### Fix
 

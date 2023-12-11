@@ -358,7 +358,7 @@ const Search = () => {
           <Row>
             <Col>
               <Row>
-                <Col className="py-3 py-lg-5">
+                <Col className="pb-3 pb-lg-5">
                   <h1>{intl.formatMessage(messages.searchResults)}</h1>
                 </Col>
               </Row>

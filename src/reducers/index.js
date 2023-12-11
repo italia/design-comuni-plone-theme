@@ -12,6 +12,7 @@ import { dettagliProcedimento } from './dettagliProcedimento';
 import { modulisticaItems } from './modulisticaItems';
 import { originalQueryReducer } from './originalQueryReducer';
 import { searchBandiFiltersReducer } from './searchBandiFiltersReducer';
+import { breadcrumbs } from './breadcrumbs';
 
 /**
  * Root reducer.
@@ -30,6 +31,7 @@ const reducers = {
   modulisticaItems,
   originalQuery: originalQueryReducer,
   searchBandiFilters: searchBandiFiltersReducer,
+  breadcrumbs: breadcrumbs,
 };
 
 export default reducers;
