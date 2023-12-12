@@ -41,6 +41,20 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...  [`Istruzioni`](url della documentazione relativa alla novità)
+
+### Fix
+
+- Rimosso pager-link automatico dal paginatore perché non riconosciuto dal validatore. È ora possibile inserire a mano il data-element pager-link nei blocchi di testo.
+
 ## Versione 10.5.0 (06/12/2023)
 
 ### Novità

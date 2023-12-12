@@ -165,7 +165,6 @@ export const addLighthouseField = (schema, intl, position = 0) => {
         ['service-category-link', 'service-category-link'],
         ['topic-element', 'topic-element'],
         ['service-link', 'service-link'],
-        ['administration-element', 'administration-element'],
         ['management-category-link', 'management-category-link'],
         ['news-category-link', 'news-category-link'],
         ['custom-category-link', 'custom-category-link'],

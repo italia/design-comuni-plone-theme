@@ -87,6 +87,7 @@ class AddLinkForm extends Component {
       ['accessibility-link', 'accessibility-link'],
       ['privacy-policy-link', 'privacy-policy-link'],
       ['legal-notes', 'legal-notes'],
+      ['pager-link', 'pager-link'],
     ];
   }
 
