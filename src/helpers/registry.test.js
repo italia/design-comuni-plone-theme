@@ -4,7 +4,7 @@ import config from '@plone/volto/registry';
 config.set('components', {
   Test: { component: 'test' },
   'Test|dep1': { component: 'test with dep1' },
-  'Test|dep1|dep2': { component: 'test with dep1 and dep2' },
+  'Test|dep1+dep2': { component: 'test with dep1 and dep2' },
 });
 
 describe('getComponentWithFallback', () => {
