@@ -44,7 +44,7 @@ const ServizioMetatag = ({ content }) => {
   if (richTextHasContent(content.a_chi_si_rivolge)) {
     schemaOrg.audience = {
       '@type': 'Audience',
-      name: fieldDataToPlainText(content.a_chi_si_rivolge),
+      audienceType: fieldDataToPlainText(content.a_chi_si_rivolge),
     };
   }
 
@@ -52,8 +52,6 @@ const ServizioMetatag = ({ content }) => {
     schemaOrg.availableChannel.serviceUrl = toPublicURL(
       content.canale_digitale_link,
     );
-  } else {
-    schemaOrg.availableChannel.serviceUrl = '';
   }
 
   if (content.ufficio_responsabile[0]) {
