@@ -491,6 +491,12 @@ export default function applyConfig(voltoConfig) {
       (v) => v.id !== 'horizontalMenu',
     );
 
+  // COMPONENTS
+  config.components = {
+    ...config.components,
+    BlockExtraTags: { component: () => null },
+  };
+
   // REDUCERS
   config.addonReducers = {
     ...config.addonReducers,

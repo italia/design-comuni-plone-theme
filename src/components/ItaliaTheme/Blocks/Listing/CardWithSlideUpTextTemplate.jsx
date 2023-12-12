@@ -5,7 +5,10 @@ import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-import { getCalendarDate } from 'design-comuni-plone-theme/helpers';
+import {
+  getCalendarDate,
+  getComponentWithFallback,
+} from 'design-comuni-plone-theme/helpers';
 import {
   ListingLinkMore,
   ListingCategory,
@@ -60,6 +63,11 @@ const CardWithSlideUpTextTemplate = (props) => {
               : getCalendarDate(item, rrule.rrulestr);
             const title = item?.title || '';
 
+            const BlockExtraTags = getComponentWithFallback({
+              name: 'BlockExtraTags',
+              dependencies: ['CardWithSlideUpTextTemplate', item['@type']],
+            }).component;
+
             return (
               <UniversalLink
                 item={!isEditMode ? item : null}
@@ -93,6 +101,7 @@ const CardWithSlideUpTextTemplate = (props) => {
                   {show_description && item.description && (
                     <p>{item.description}</p>
                   )}
+                  <BlockExtraTags {...props} item={item} itemIndex={index} />
                   <CardReadMore
                     iconName="it-arrow-right"
                     tag={UniversalLink}

@@ -23,6 +23,7 @@ import {
 import {
   getCalendarDate,
   getEventRecurrenceMore,
+  getComponentWithFallback,
 } from 'design-comuni-plone-theme/helpers';
 import { getCategory } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
@@ -95,6 +96,12 @@ const CardWithImageTemplate = (props) => {
               (index < imagesToShow || always_show_image) && image != null;
             const category = getCategory(item, show_type, show_section, props);
             const topics = show_topics ? item.tassonomia_argomenti : null;
+
+            const BlockExtraTags = getComponentWithFallback({
+              name: 'BlockExtraTags',
+              dependencies: ['CardWithImageTemplate', item['@type']],
+            }).component;
+
             return (
               <Col
                 lg={set_four_columns ? '3' : '4'}
@@ -163,7 +170,11 @@ const CardWithImageTemplate = (props) => {
                           {listingText}
                         </CardText>
                       )}
-
+                      <BlockExtraTags
+                        {...props}
+                        item={item}
+                        itemIndex={index}
+                      />
                       {topics?.length > 0 && (
                         <div
                           className={cx('', {

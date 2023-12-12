@@ -26,6 +26,7 @@ import {
 import {
   getCalendarDate,
   getEventRecurrenceMore,
+  getComponentWithFallback,
 } from 'design-comuni-plone-theme/helpers';
 import { getCategory } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
@@ -91,6 +92,11 @@ const RibbonCardTemplate = (props) => {
               <ListingText item={item} />
             ) : null;
 
+            const BlockExtraTags = getComponentWithFallback({
+              name: 'BlockExtraTags',
+              dependencies: ['RibbonCardTemplate', item['@type']],
+            }).component;
+
             return (
               <Col lg={4} sm={12} key={index}>
                 <Card
@@ -127,7 +133,7 @@ const RibbonCardTemplate = (props) => {
                       </UniversalLink>
                     </CardTitle>
                     {listingText && <CardText>{listingText}</CardText>}
-
+                    <BlockExtraTags {...props} item={item} itemIndex={index} />
                     {eventRecurrenceMore}
                     {show_detail_link && (
                       <CardReadMore
