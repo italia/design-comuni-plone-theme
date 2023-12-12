@@ -32,21 +32,10 @@
     }
 
     .row {
-      position: relative;
-      flex-direction: row;
-      flex-wrap: wrap;
-
       .column.field-column {
         width: unset !important ;
         flex-basis: 45%;
-
-        &:not(:nth-last-child(2)) {
-          flex-grow: 0;
-        }
-
-        &:nth-child(2n) {
-          flex-grow: 0;
-        }
+        flex-grow: 0;
 
         .ui.input {
           width: 100% !important;
