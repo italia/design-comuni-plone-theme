@@ -1,5 +1,26 @@
 
 
+## [10.6.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.5.0...v10.6.0) (2023-12-12)
+
+
+### Features
+
+* added breadcrumbs for static routes ([#392](https://github.com/RedTurtle/design-comuni-plone-theme/issues/392)) ([55f9512](https://github.com/RedTurtle/design-comuni-plone-theme/commit/55f95123bcc69b6c15a3faf0ffa530937fe746f7))
+* new data grid widget version with allow_reorder param ([#435](https://github.com/RedTurtle/design-comuni-plone-theme/issues/435)) ([560576c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/560576cdb2b1cb75a3c39e58192c3f78ad5969cd))
+
+
+### Bug Fixes
+
+* removed automatic pager-link and updated available manual data-elements ([2553322](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2553322f8e8e61d877546bc7303d3a1c460a70f6))
+* schema.org metadata per i servizi ([ee21c7d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ee21c7d4b0a4b4362f42239bb2ff7b4b7f6ac3b9))
+* traduzioni mancanti ([#432](https://github.com/RedTurtle/design-comuni-plone-theme/issues/432)) ([14ee678](https://github.com/RedTurtle/design-comuni-plone-theme/commit/14ee678fc710f15b0db8018ac508c5c5b13964ef))
+
+
+### Documentation
+
+* update publiccode.yml con nuovi comuni ([#157](https://github.com/RedTurtle/design-comuni-plone-theme/issues/157)) ([43afda6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/43afda6b780b5c6e5b1b86af49959108067d8b13))
+* updated publiccode and release log ([7e3dc2f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7e3dc2f915ae1b8d13753a3ff24b87a20cd9a7d2))
+
 ## [10.5.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.4.3...v10.5.0) (2023-12-06)
 
 
