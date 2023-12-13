@@ -227,9 +227,9 @@ maintenance:
 name: io-Comune - Il sito AgID per Comuni ed Enti Pubblici
 platforms:
   - web
-releaseDate: '2023-12-06'
+releaseDate: '2023-12-12'
 softwareType: standalone/web
-softwareVersion: 10.5.0
+softwareVersion: 10.6.0
 url: 'https://github.com/italia/design-comuni-plone-theme'
 usedBy:
   - ASP Comuni Modenesi Area Nord
@@ -246,8 +246,11 @@ usedBy:
   - Comune di Bibbiano
   - Comune di Camposanto
   - Comune di Cantagallo
+  - Comune di Cavezzo
   - Comune di Cavriago
+  - Comune di Concordia sul Secchia
   - Comune di Gattatico
+  - Comune di Finale Emilia
   - Comune di Imola
   - Comune di Medolla
   - Comune di Mirandola
@@ -257,9 +260,11 @@ usedBy:
   - Comune di Parma
   - Comune di Piacenza
   - Comune di Reggio Emilia
+  - Comune di San Felice sul Panaro
   - Comune di San Lazzaro di Savena
   - Comune di San Polo d'Enza
   - Comune di San Possidonio
+  - Comune di San Prospero
   - Comune di Santilario d'Enza
   - Comune di Vaiano
   - Comune di Vernio
