@@ -1,5 +1,17 @@
 
 
+## [10.6.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.6.0...v10.6.1) (2023-12-13)
+
+
+### Bug Fixes
+
+* patch data grid widget for allow_reorder ([41dd7ea](https://github.com/RedTurtle/design-comuni-plone-theme/commit/41dd7ea62d0af8557a61f558996fe076c9638d40))
+
+
+### Documentation
+
+* updated publiccode and release log ([055a8c8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/055a8c84e1d55974d59ca17ac7da6a3dbb6e101b))
+
 ## [10.6.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.5.0...v10.6.0) (2023-12-12)
 
 
