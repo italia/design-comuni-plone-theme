@@ -41,15 +41,11 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
+## Versione 10.6.1 (13/12/2023)
 
 ### Novità
 
-- ...  [`Istruzioni`](url della documentazione relativa alla novità)
+- I seguenti campi sono ora riordinabili liberamente: "Timeline tempi e scadenze" per il tipo di contenuto *Servizio* e "Valore punto di contatto" del tipo di contenuto *Punto di contatto*.
 
 ### Fix
 
