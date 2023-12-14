@@ -41,15 +41,7 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ... [`Istruzioni`](url della documentazione relativa alla novità)
+## Versione 10.6.2 (14/12/2023)
 
 ### Fix
 
