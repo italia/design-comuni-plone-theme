@@ -1,5 +1,18 @@
 
 
+## [10.6.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.6.1...v10.6.2) (2023-12-14)
+
+
+### Bug Fixes
+
+* custom inline styles rendering in wysiwygwidget ([17e1d10](https://github.com/redturtle/design-comuni-plone-theme/commit/17e1d10a2de1c8ba4d12a7364bc8858761b4b92e))
+
+
+### Documentation
+
+* aggiornamento lista dei comuni in publiccode.yml ([#158](https://github.com/redturtle/design-comuni-plone-theme/issues/158)) ([2abad9a](https://github.com/redturtle/design-comuni-plone-theme/commit/2abad9aecaa288ca87670183df13212bdb47fa66))
+* updated publiccode and release log ([38d8d00](https://github.com/redturtle/design-comuni-plone-theme/commit/38d8d00daf1b3c822d11a701ecc3a83657c865cb))
+
 ## [10.6.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v10.6.0...v10.6.1) (2023-12-13)
 
 
