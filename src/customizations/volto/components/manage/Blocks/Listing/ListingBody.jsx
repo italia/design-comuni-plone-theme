@@ -93,13 +93,6 @@ const ListingBody = React.memo(
       // Also need to purge title from searchblock schema, it's the name of the listing template used
       const listingBodyProps =
         variation?.['@type'] !== 'search' ? data : { ...variation, title: '' };
-
-      // Need to know if data-element is "service-link"
-      // to add data-element="pager-link" to pagination links
-      const isServiceLink =
-        data?.id_lighthouse === 'service-link' ||
-        variation?.id_lighthouse === 'service-link';
-
       return (
         <div className="public-ui">
           {loadingQuery && (
@@ -130,7 +123,6 @@ const ListingBody = React.memo(
                     activePage={currentPage}
                     totalPages={totalPages}
                     onPageChange={onPaginationChange}
-                    isServiceLink={isServiceLink}
                   />
                 </div>
               )}

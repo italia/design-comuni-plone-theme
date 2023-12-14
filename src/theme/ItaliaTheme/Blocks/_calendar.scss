@@ -6,6 +6,11 @@
   }
 
   .template-header {
+    h2 {
+      @include rem-size(font-size, 32);
+      @include rem-size(line-height, 32);
+    }
+
     &.with-filters {
       /* border-bottom: 1px solid $neutral-1-a2;*/
       margin-bottom: 1em;

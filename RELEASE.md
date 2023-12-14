@@ -58,6 +58,28 @@
 ### Novità
 
 - Modificata l'altezza delle immagini delle card, per essere in linea con i template agid.
+## Versione 10.6.1 (13/12/2023)
+
+### Novità
+
+- I seguenti campi sono ora riordinabili liberamente: "Timeline tempi e scadenze" per il tipo di contenuto *Servizio* e "Valore punto di contatto" del tipo di contenuto *Punto di contatto*.
+
+### Fix
+
+- Rimosso pager-link automatico dal paginatore perché non riconosciuto dal validatore. È ora possibile inserire a mano il data-element pager-link nei blocchi di testo.
+
+## Versione 10.5.0 (06/12/2023)
+
+### Novità
+
+- Nel blocco elenco, nel criterio di configurazione 'Posizione', è ora presente uno strumento per facilitare la ricerca dei contenuti nel sito, senza dover scrivere il percorso a mano.
+
+### Fix
+
+- Le immagini nelle card dei contenuti correlati sono centrate verticalmente.
+- Il feedback form ora richiede necessariamente una risposta oltre al voto in stelle.
+- Dimensione del titolo del blocco calendario uniformata ai titoli degli altri blocchi elenco.
+
 ## Versione 10.4.3 (28/11/2023)
 
 ### Migliorie
@@ -92,6 +114,7 @@
 ### Novità
 
 - Aggiunta la possibilità di selezionare la dimensione dell'immagine nel blocco Alert, inoltre è stato aggiornato anche il widget per la selezione del colore di sfondo.
+- Aggiunte le breadcrumbs nella pagina dei risultati della ricerca
 
 ### Fix
 
