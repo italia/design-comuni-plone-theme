@@ -136,33 +136,50 @@ const ItaliaFromHTMLCustomBlockFn = (element) => {
       ret = {
         type: 'buttons',
       };
-    } else if (element.className === 'draftjs-text-larger') {
+    } else if (element.className === 'text-center') {
       ret = {
-        type: 'TEXT_LARGER',
+        type: 'align-center',
+      };
+    } else if (element.className === 'text-end') {
+      ret = {
+        type: 'align-right',
+      };
+    } else if (element.className === 'text-justify') {
+      ret = {
+        type: 'align-justify',
       };
     }
   }
   return ret;
 };
 
+const ItaliaFromHTMLCustomInlineFn = (element, { Style }) => {
+  if (element.tagName === 'SPAN') {
+    if (element.className === 'draftjs-text-larger') {
+      return Style('TEXT_LARGER');
+    }
+  }
+};
+
 export default function applyConfig(config) {
   config.settings.richtextEditorSettings = (props) => {
     const { plugins /*, inlineToolbarButtons*/ } = Plugins(props); // volto plugins
-    const { extendedBlockRenderMap, blockStyleFn, listBlockTypes } =
-      Blocks(props);
+    const { extendedBlockRenderMap, blockStyleFn, listBlockTypes } = Blocks(
+      props,
+    );
 
     const { immutableLib } = props;
     const { Map } = immutableLib;
 
     const blockRenderMap = Map({
       'align-center': {
-        element: 'p',
+        element: (props) => <p {...props} style={{ textAlign: 'center' }} />,
       },
       'align-right': {
-        element: 'p',
+        element: (props) => <p {...props} style={{ textAlign: 'right' }} />,
       },
       'align-justify': {
-        element: 'p',
+        element: (props) => <p {...props} style={{ textAlign: 'justify' }} />,
       },
       'callout-bg': {
         element: 'p',
@@ -179,9 +196,6 @@ export default function applyConfig(config) {
       r = r.length > 0 ? ' ' : r;
 
       const styles = {
-        'align-center': 'text-center',
-        'align-right': 'text-end',
-        'align-justify': 'text-justify',
         callout: 'callout',
         'callout-bg': 'callout-bg',
         buttons: 'draftjs-buttons',
@@ -203,9 +217,12 @@ export default function applyConfig(config) {
         ...plugins,
         ...ItaliaRichTextEditorPlugins(props),
       ],
-      richTextEditorInlineToolbarButtons:
-        ItaliaRichTextEditorInlineToolbarButtons(props, plugins), //[inlineToolbarButtons,...ItaliaRichTextEditorInlineToolbarButtons(props)]
-      FromHTMLCustomBlockFn: ItaliaFromHTMLCustomBlockFn, //FromHTMLCustomBlockFn
+      richTextEditorInlineToolbarButtons: ItaliaRichTextEditorInlineToolbarButtons(
+        props,
+        plugins,
+      ), //[inlineToolbarButtons,...ItaliaRichTextEditorInlineToolbarButtons(props)]
+      FromHTMLCustomBlockFn: ItaliaFromHTMLCustomBlockFn,
+      FromHTMLCustomInlineFn: ItaliaFromHTMLCustomInlineFn,
       customStyleMap: {
         TEXT_LARGER: { fontSize: '1.75rem' },
       },
