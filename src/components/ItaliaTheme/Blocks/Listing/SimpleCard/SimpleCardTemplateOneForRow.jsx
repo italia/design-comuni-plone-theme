@@ -27,6 +27,7 @@ import {
 import {
   getCalendarDate,
   getEventRecurrenceMore,
+  getComponentWithFallback,
 } from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
@@ -189,6 +190,11 @@ const SimpleCardTemplateDefaultOneForRow = (props) => {
           ) : null;
           const category = getCategory(item, show_type, show_section, props);
           const type = item['@type'];
+          const BlockExtraTags = getComponentWithFallback({
+            name: 'BlockExtraTags',
+            dependencies: ['SimpleCardTemplateOneForRow', type],
+          }).component;
+
           return (
             <Card
               className={`align-items-top rounded shadow ${getItemClass(
@@ -239,6 +245,7 @@ const SimpleCardTemplateDefaultOneForRow = (props) => {
                     )}
                   </CardText>
                 )}
+                <BlockExtraTags {...props} item={item} itemIndex={index} />
                 {eventRecurrenceMore}
                 {show_detail_link && (
                   <CardReadMore

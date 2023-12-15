@@ -21,7 +21,10 @@ import {
   CardCategory,
   getItemIcon,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import { viewDate } from 'design-comuni-plone-theme/helpers';
+import {
+  viewDate,
+  getComponentWithFallback,
+} from 'design-comuni-plone-theme/helpers';
 import config from '@plone/volto/registry';
 
 const Body = (props) => {
@@ -32,6 +35,11 @@ const Body = (props) => {
 
   const { show_type = true, show_section } = block;
   const category = getCategory(content, show_type, show_section, props);
+
+  const BlockExtraTags = getComponentWithFallback({
+    name: 'BlockExtraTags',
+    dependencies: ['HighlightedContent', content['@type']],
+  }).component;
 
   return (
     <div className={`${block.bg_color ? 'bg-' + block.bg_color : ''}`}>
@@ -70,7 +78,7 @@ const Body = (props) => {
                 </ConditionalLink>
               </CardTitle>
               <CardText>{content.description}</CardText>
-
+              <BlockExtraTags {...props} item={content} itemIndex={0} />
               {content.tassonomia_argomenti &&
                 content.tassonomia_argomenti.length > 0 && (
                   <>
