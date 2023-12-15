@@ -1,5 +1,19 @@
 
 
+## [10.6.3](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.6.2...v10.6.3) (2023-12-15)
+
+
+### Bug Fixes
+
+* different styles and ui for all Search block listing templates when compared to default Listing template ([#437](https://github.com/redturtle/design-comuni-plone-theme/issues/437)) ([d6cf41d](https://github.com/redturtle/design-comuni-plone-theme/commit/d6cf41dd63e6d1b891ff045238d5d7d9d9df5ff0))
+* gdpr privacy conditional embed to work in diff view ([#438](https://github.com/redturtle/design-comuni-plone-theme/issues/438)) ([6a8c361](https://github.com/redturtle/design-comuni-plone-theme/commit/6a8c361feda654f0301b5026533234438469ff37))
+
+
+### Documentation
+
+* aggiornamento della lista dei comuni in publiccode.yml ([#159](https://github.com/redturtle/design-comuni-plone-theme/issues/159)) ([7e87e9f](https://github.com/redturtle/design-comuni-plone-theme/commit/7e87e9f2071adeced38eae57eb8d09cee6433fa1))
+* updated publiccode and release log ([f27a61a](https://github.com/redturtle/design-comuni-plone-theme/commit/f27a61aef3f41ac34bcbdf9e58e2a6ae0166d0f9))
+
 ## [10.6.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.6.1...v10.6.2) (2023-12-14)
 
 
