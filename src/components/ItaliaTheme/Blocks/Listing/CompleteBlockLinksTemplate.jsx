@@ -55,7 +55,7 @@ const CompleteBlockLinksTemplate = (props) => {
           </Row>
         )}
         <Row className="items">
-          {items.map((item) => {
+          {items.map((item, index) => {
             const image = ListingImage({ item, className: '', sizes: '60px' });
 
             const BlockExtraTags = getComponentWithFallback({
