@@ -19,23 +19,25 @@ import {
   ListingImage,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { getComponentWithFallback } from 'design-comuni-plone-theme/helpers';
 import { isInternalURL } from '@plone/volto/helpers/Url/Url';
 
 import config from '@plone/volto/registry';
 
-const CompleteBlockLinksTemplate = ({
-  items,
-  title,
-  isEditMode,
-  linkAlign,
-  linkTitle,
-  linkHref,
-  show_block_bg,
-  show_description = true,
-  id_lighthouse,
-  linkmore_id_lighthouse,
-  titleLine,
-}) => {
+const CompleteBlockLinksTemplate = (props) => {
+  const {
+    items,
+    title,
+    isEditMode,
+    linkAlign,
+    linkTitle,
+    linkHref,
+    // show_block_bg,
+    show_description = true,
+    id_lighthouse,
+    linkmore_id_lighthouse,
+    titleLine,
+  } = props;
   return (
     <div className="complete-block-links-template">
       <Container className="px-4">
@@ -53,8 +55,13 @@ const CompleteBlockLinksTemplate = ({
           </Row>
         )}
         <Row className="items">
-          {items.map((item) => {
+          {items.map((item, index) => {
             const image = ListingImage({ item, className: '', sizes: '60px' });
+
+            const BlockExtraTags = getComponentWithFallback({
+              name: 'BlockExtraTags',
+              dependencies: ['CompleteBlockLinksTemplate', item['@type']],
+            }).component;
 
             return (
               <Col md="6" lg="3" key={item['@id']} className="col-item">
@@ -95,6 +102,11 @@ const CompleteBlockLinksTemplate = ({
                               {item.description}
                             </CardText>
                           )}
+                          <BlockExtraTags
+                            {...props}
+                            item={item}
+                            itemIndex={index}
+                          />
                         </CardBody>
                       </div>
                     </div>
