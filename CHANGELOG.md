@@ -1,5 +1,21 @@
 
 
+## [10.6.4](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.6.3...v10.6.4) (2023-12-18)
+
+
+### Bug Fixes
+
+* external-link icon colors ([27ba53d](https://github.com/redturtle/design-comuni-plone-theme/commit/27ba53db1fb14b318f0d792545481903cd1dea4c))
+
+
+### Documentation
+
+* aggiornata lista dei comuni nel README.md ([#162](https://github.com/redturtle/design-comuni-plone-theme/issues/162)) ([23f9c50](https://github.com/redturtle/design-comuni-plone-theme/commit/23f9c501634795f0263e0c7bb66eb26768853e65))
+* aggiunti i comuni di nci a publiccode.yml ([#163](https://github.com/redturtle/design-comuni-plone-theme/issues/163)) ([3748bcd](https://github.com/redturtle/design-comuni-plone-theme/commit/3748bcddd93d86137f74bd4311ebe50600a04549))
+* aggiunto campegine a publiccode.yml ([#160](https://github.com/redturtle/design-comuni-plone-theme/issues/160)) ([f36c5c1](https://github.com/redturtle/design-comuni-plone-theme/commit/f36c5c103df04b8c5cca05885f1cf90a322129c7))
+* aggiunto canossa a publiccode.yml ([#161](https://github.com/redturtle/design-comuni-plone-theme/issues/161)) ([5172337](https://github.com/redturtle/design-comuni-plone-theme/commit/5172337fce80452311249c81b16397bd826aa7c0))
+* updated publiccode ([c962dc6](https://github.com/redturtle/design-comuni-plone-theme/commit/c962dc699f850ff9f5206afb01abe38d2577a3cf))
+
 ## [10.6.3](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.6.2...v10.6.3) (2023-12-15)
 
 
