@@ -1,5 +1,47 @@
 
 
+## [11.0.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.6.4...v11.0.0) (2023-12-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* a11y stili per i sottositi (#428)
+* card image height from newest bootstrap-italia version (#406)
+* upgrade to design-react-kit 5.0.0-1 and bootstrap-italia 2.6.1 (#407)
+* upgrade to volto 17.5.0 (#382)
+
+### Features
+
+* added block extra tags placeholders ([#436](https://github.com/redturtle/design-comuni-plone-theme/issues/436)) ([8085131](https://github.com/redturtle/design-comuni-plone-theme/commit/808513130fd6acb3b423978b27b69bd393ea8194))
+* card image height from newest bootstrap-italia version ([#406](https://github.com/redturtle/design-comuni-plone-theme/issues/406)) ([d2a0703](https://github.com/redturtle/design-comuni-plone-theme/commit/d2a070368f9e70acb11e6ba3c74d11e93278cefa))
+* update to volto 17.7.0 ([104aeea](https://github.com/redturtle/design-comuni-plone-theme/commit/104aeeae2009a8109fed7e8509dcdae1852b9c82))
+* upgrade to design-react-kit 5.0.0-1 and bootstrap-italia 2.6.1 ([#407](https://github.com/redturtle/design-comuni-plone-theme/issues/407)) ([11d783c](https://github.com/redturtle/design-comuni-plone-theme/commit/11d783cef89a95df12d7b948d1695ca5549c1357))
+* upgrade to volto 17.5.0 ([#382](https://github.com/redturtle/design-comuni-plone-theme/issues/382)) ([4f399dc](https://github.com/redturtle/design-comuni-plone-theme/commit/4f399dcdeb841fdd91d19d55dc87d0ad5e15dd2d))
+
+
+### Bug Fixes
+
+* a11y stili per i sottositi ([#428](https://github.com/redturtle/design-comuni-plone-theme/issues/428)) ([907e4dc](https://github.com/redturtle/design-comuni-plone-theme/commit/907e4dc6b8161db34ba57e02a234f069ed47efa0))
+* background image for NumbersBlock and Countdown block ([#423](https://github.com/redturtle/design-comuni-plone-theme/issues/423)) ([f5bf04a](https://github.com/redturtle/design-comuni-plone-theme/commit/f5bf04a53802062dee0c5eb584165aaa780a7522))
+* gallery component for ct views breaking with newer backend versions ([#422](https://github.com/redturtle/design-comuni-plone-theme/issues/422)) ([f28cfa4](https://github.com/redturtle/design-comuni-plone-theme/commit/f28cfa461a369329cfbbe7af2164110575fb5bad))
+* image size in listing ([15f974b](https://github.com/redturtle/design-comuni-plone-theme/commit/15f974b56fe63e43c8245059160d9a7a3cd5bb7d))
+* listing block card-slide-text-template read-more alignment ([#416](https://github.com/redturtle/design-comuni-plone-theme/issues/416)) ([49acda4](https://github.com/redturtle/design-comuni-plone-theme/commit/49acda41f212f742d4e13a9688bf37a4eedc8fba))
+* locales ([6910a8a](https://github.com/redturtle/design-comuni-plone-theme/commit/6910a8accf10286810ade09741fe8a6895e73383))
+* schema.org metatag default serviceUrl ([a455088](https://github.com/redturtle/design-comuni-plone-theme/commit/a4550880d7204a5ee8f316a08c99c38a7f71d219))
+* update volto-editablefooter to 5.0.3 ([a986dd9](https://github.com/redturtle/design-comuni-plone-theme/commit/a986dd9aa8f8593a1603d2c60b59de4343fc2f19))
+
+
+### Maintenance
+
+* release v11.0.0-alpha.0 ([12522b1](https://github.com/redturtle/design-comuni-plone-theme/commit/12522b1929aa053a7bc5a60c982e5cb9f60306d9))
+* release v11.0.0-alpha.1 ([9b90860](https://github.com/redturtle/design-comuni-plone-theme/commit/9b90860b69fa7b6968eaeaeafde930bf03fa3f43))
+* release v11.0.0-alpha.2 ([b1bb715](https://github.com/redturtle/design-comuni-plone-theme/commit/b1bb715e074178656bffc9583989ee42cd2fabd5))
+
+
+### Documentation
+
+* updated publiccode ([400c34b](https://github.com/redturtle/design-comuni-plone-theme/commit/400c34bd1860d252c12a12f21e1af18d8cb7049d))
+
 ## [11.0.0-alpha.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.0.0-alpha.1...v11.0.0-alpha.2) (2023-11-29)
 
 
