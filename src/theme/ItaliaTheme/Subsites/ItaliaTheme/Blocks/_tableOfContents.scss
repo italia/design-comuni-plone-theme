@@ -1,0 +1,17 @@
+@use '../../all_variables' as *;
+
+@mixin block($subsite-primary) {
+  .table-of-contents {
+    .ui.bulleted.list {
+      .item {
+        &.headline-2::before {
+          border-left: 0.5rem solid $subsite-primary;
+        }
+        &:not(.headline-2)::before {
+          border-top: 0.1rem solid $subsite-primary;
+          border-right: 0.1rem solid $subsite-primary;
+        }
+      }
+    }
+  }
+}

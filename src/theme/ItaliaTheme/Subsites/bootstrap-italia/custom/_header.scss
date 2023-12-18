@@ -1,6 +1,6 @@
 @use '../../all_variables' as *;
 
-@mixin header($subsite-light-theme, $subsite-primary, $subsite-primary-text) {
+@mixin header($subsite-primary, $subsite-primary-text) {
   //mobile
   .it-header-wrapper {
     &.it-header-sticky {
@@ -26,11 +26,7 @@
                 a {
                   &.rounded-icon {
                     svg {
-                      @if $subsite-light-theme {
-                        fill: $subsite-primary-text;
-                      } @else {
-                        fill: $subsite-primary;
-                      }
+                      fill: $subsite-primary-text;
                     }
                   }
                 }

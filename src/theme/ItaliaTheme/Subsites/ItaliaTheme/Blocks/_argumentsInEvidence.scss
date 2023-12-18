@@ -1,6 +1,11 @@
 @use '../../all_variables' as *;
 
-@mixin block($subsite-primary, $subsite-primary-text) {
+@mixin block(
+  $subsite-primary,
+  $subsite-primary-text,
+  $subsite-link-color,
+  $subsite-light-theme
+) {
   .argumentInEvidence {
     .argumentInEvidence-background {
       background-color: $subsite-primary;
@@ -11,7 +16,18 @@
     }
 
     h2 {
-      color: $subsite-primary-text;
+      color: $subsite-primary-text !important;
+    }
+
+    @if $subsite-light-theme {
+      .chip.chip-primary {
+        border-color: $subsite-link-color;
+        color: $subsite-link-color;
+
+        .chip-label {
+          color: $subsite-link-color;
+        }
+      }
     }
   }
 }

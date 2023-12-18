@@ -1,0 +1,12 @@
+@use '../../all_variables' as *;
+
+@mixin block($subsite-secondary, $subsite-secondary-text) {
+  .calendar {
+    .calendar-header {
+      background: $subsite-secondary;
+      h3 {
+        color: $subsite-secondary-text !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use '../../all_variables' as *;
+
+@mixin block($subsite-primary, $subsite-primary-text) {
+  .contacts {
+    .full-width.section {
+      &.bg-primary,
+      &.bg-secondary {
+        background-color: $subsite-primary !important;
+
+        .block-header {
+          .title {
+            color: $subsite-primary-text;
+          }
+
+          .description {
+            color: $subsite-primary-text;
+          }
+        }
+
+        .card {
+          .card-body {
+            color: #000;
+
+            .contact-info .icon-wrapper svg {
+              fill: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

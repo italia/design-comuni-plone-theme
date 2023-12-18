@@ -1,14 +1,19 @@
 @use '../../all_variables' as *;
 
-@mixin block($subsite-primary, $subsite-secondary, $subsite-secondary-text) {
+@mixin block(
+  $subsite-primary,
+  $subsite-primary-text,
+  $subsite-secondary,
+  $subsite-secondary-text,
+  $subsite-primary-a0
+) {
   .container .block {
     .searchSections {
+      .searchSections-background {
+        background-color: $subsite-primary-a0;
+      }
+      color: $subsite-primary-text;
       @if $subsite-secondary != $subsite-primary {
-        .searchSections-background {
-          background-color: $subsite-secondary;
-        }
-        color: $subsite-secondary-text;
-
         h2.text-secondary {
           color: $subsite-secondary-text !important;
         }
@@ -19,11 +24,82 @@
       .searchContainer {
         .searchbar {
           button {
-            background: $subsite-primary;
+            background: darken($subsite-primary, 10%);
 
             &:hover,
             &:active {
               background-color: darken($subsite-primary, 7.5);
+            }
+
+            svg {
+              fill: $subsite-primary-text;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .event-search,
+  .bandi-search {
+    .bg-primary {
+      .search-container {
+        .filter-wrapper.select-filter {
+          .react-select__control {
+            .react-select__placeholder {
+              color: $subsite-primary-text !important;
+            }
+
+            .react-select__indicators svg {
+              fill: $subsite-primary-text;
+            }
+          }
+        }
+        .date-filter {
+          .DateRangePickerInput {
+            .DateInput_input {
+              color: $subsite-primary-text;
+            }
+
+            .DateRangePickerInput_arrow .DateRangePickerInput_arrow_svg {
+              fill: $subsite-primary-text;
+            }
+
+            .DateRangePickerInput_clearDates svg {
+              fill: $subsite-primary-text;
+            }
+          }
+        }
+      }
+    }
+
+    .bg-secondary {
+      .search-container {
+        .filter-wrapper {
+          .select-filter {
+            .react-select__control {
+              .react-select__placeholder {
+                color: $subsite-secondary-text !important;
+              }
+
+              .react-select__indicators svg {
+                fill: $subsite-secondary-text;
+              }
+            }
+          }
+          .date-filter {
+            .DateRangePickerInput {
+              .DateInput_input {
+                color: $subsite-secondary-text;
+              }
+
+              .DateRangePickerInput_arrow .DateRangePickerInput_arrow_svg {
+                fill: $subsite-secondary-text;
+              }
+
+              .DateRangePickerInput_clearDates svg {
+                fill: $subsite-secondary-text;
+              }
             }
           }
         }

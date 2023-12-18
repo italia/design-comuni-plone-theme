@@ -15,26 +15,25 @@
           a.nav-link {
             @if $subsite-light-theme {
               color: $subsite-primary-text;
-            } @else {
-              color: $subsite-primary;
-            }
 
-            &.active {
-              @if $subsite-light-theme {
+              &.active {
                 border-left-color: $subsite-primary-text;
-              } @else {
-                border-left-color: $subsite-primary;
+              }
+
+              svg {
+                fill: $subsite-primary-text !important;
+              }
+            } @else {
+              color: $subsite-link-color;
+
+              &.active {
+                border-left-color: $subsite-link-color;
+              }
+
+              svg {
+                fill: $subsite-link-color !important;
               }
             }
-          }
-        }
-      }
-
-      .menu-wrapper {
-        .it-brand-wrapper {
-          @if $subsite-light-theme {
-          } @else {
-            //background-color: $subsite-primary;
           }
         }
       }
@@ -83,11 +82,6 @@
 
       // navbar mobile
       .navbar-collapsable {
-        /*menu vrapper
-      .menu-wrapper {
-        background: $navigation-bg-color-desktop;
-      }*/
-
         /*lista menu*/
         .navbar-nav {
           li {

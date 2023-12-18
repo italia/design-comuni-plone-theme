@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 @use 'bootstrap-italia/custom/header' as bs-header;
 @use 'bootstrap-italia/custom/headercenter' as bs-headercenter;
 @use 'bootstrap-italia/brand-text' as bs-brandtext;
@@ -13,14 +15,34 @@
 @use 'bootstrap-italia/custom/linklist' as bs-linklist;
 @use 'bootstrap-italia/custom/navscroll' as bs-navscroll;
 @use 'ItaliaTheme/Components/subsiteFooter' as it-footer;
+@use 'ItaliaTheme/Components/subsiteHeader' as it-header;
+@use 'ItaliaTheme/Blocks/accordion' as it-accordion;
+@use 'ItaliaTheme/Blocks/calendar' as it-calendar;
 @use 'ItaliaTheme/Blocks/cardWithImageAndInEvidence' as it-card-image-evidence;
 @use 'ItaliaTheme/Blocks/completeBlockLinktemplate' as it-complete-link;
+@use 'ItaliaTheme/Blocks/contacts' as it-contacts;
+@use 'ItaliaTheme/Blocks/cta' as it-cta;
+@use 'ItaliaTheme/Blocks/form' as it-form;
+@use 'ItaliaTheme/Blocks/iconBlock' as it-icon-block;
+@use 'ItaliaTheme/Blocks/squaresImageTemplateAndSlideUp' as it-squares;
 @use 'ItaliaTheme/Blocks/ribbonCardTemplate' as it-ribbon-card;
 @use 'ItaliaTheme/Blocks/highlitedContent' as it-highlight;
 @use 'ItaliaTheme/Blocks/argumentsInEvidence' as it-args-evidence;
 @use 'ItaliaTheme/Blocks/searchSections' as it-search-sections;
+@use 'ItaliaTheme/Blocks/tableOfContents' as it-table-contents;
 @use 'ItaliaTheme/Views/common' as it-views;
 @use 'ItaliaTheme/common' as it-common;
+
+@function create-primary-a0($color) {
+  @return hsl(color.hue($color), 62%, 97%);
+}
+@function create-primary-c1($color) {
+  @return hsl(
+    color.hue($color),
+    calc(color.saturation($color) / 2),
+    calc(color.lightness($color) * 1.8)
+  );
+}
 
 @mixin define-subsite(
   $subsite-style,
@@ -33,18 +55,18 @@
   $subsite-link-color: $link-color,
   $subsite-light-theme: false
 ) {
+  $subsite-primary-a0: create-primary-a0($subsite-primary);
+  $subsite-primary-c1: create-primary-c1($subsite-primary);
+
   body.subsite-#{$subsite-style} {
     &,
-    .public-ui {
-      @include bs-header.header(
-        $subsite-light-theme,
-        $subsite-primary,
-        $subsite-primary-text
-      );
+    .public-ui,
+    .cms-ui {
+      @include bs-header.header($subsite-primary, $subsite-primary-text);
       @include bs-headercenter.headercenter(
-        $subsite-light-theme,
         $subsite-primary,
-        $subsite-primary-text
+        $subsite-primary-text,
+        $subsite-light-theme
       );
       @include bs-brandtext.text($subsite-primary, $subsite-primary-text);
       @include bs-headernavbar.navbar($subsite-primary);
@@ -75,33 +97,103 @@
         $subsite-primary,
         $subsite-primary-text,
         $subsite-secondary,
-        $subsite-secondary-text
+        $subsite-secondary-text,
+        $subsite-link-color
       );
       @include bs-card.card($subsite-primary, $subsite-link-color);
       @include bs-dropdown.dropdown($subsite-link-color);
       @include bs-linklist.linklist($subsite-primary, $subsite-link-color);
       @include bs-navscroll.navscroll($subsite-link-color);
-      @include it-footer.footer($subsite-primary, $subsite-primary-text);
+      @include it-footer.footer(
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-secondary,
+        $subsite-secondary-text,
+        $subsite-light-theme
+      );
+      @include it-header.header(
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-secondary,
+        $subsite-secondary-text
+      );
+      @include it-accordion.block(
+        $subsite-primary,
+        $subsite-link-color,
+        $subsite-light-theme
+      );
+      @include it-calendar.block($subsite-secondary, $subsite-secondary-text);
       @include it-card-image-evidence.card($subsite-link-color);
       @include it-complete-link.block(
         $subsite-secondary,
         $subsite-secondary-text
       );
-      @include it-ribbon-card.card($subsite-link-color);
-      @include it-highlight.block($subsite-link-color);
-      @include it-args-evidence.block($subsite-primary, $subsite-primary-text);
-      @include it-search-sections.block(
+      @include it-contacts.block($subsite-primary, $subsite-primary-text);
+      @include it-cta.block($subsite-secondary);
+      @include it-form.block(
         $subsite-primary,
+        $subsite-primary-text,
+        $subsite-secondary,
+        $subsite-light-theme
+      );
+      @include it-icon-block.block(
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-secondary,
+        $subsite-light-theme
+      );
+
+      @include it-squares.block(
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-secondary,
+        $subsite-secondary-text,
+        $subsite-light-theme
+      );
+
+      @include it-ribbon-card.card($subsite-link-color);
+      @include it-highlight.block(
+        $subsite-link-color,
+        $subsite-primary-text,
         $subsite-secondary,
         $subsite-secondary-text
       );
-      @include it-views.common(
+      @include it-args-evidence.block(
         $subsite-primary,
-        $subsite-secondary,
-        $subsite-tertiary,
-        $subsite-link-color
+        $subsite-primary-text,
+        $subsite-link-color,
+        $subsite-light-theme
       );
-      @include it-common.common($subsite-tertiary, $subsite-tertiary-text);
+      @include it-search-sections.block(
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-secondary,
+        $subsite-secondary-text,
+        $subsite-primary-a0
+      );
+      @include it-table-contents.block($subsite-primary);
+      @include it-views.common(
+        $subsite-primary-a0,
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-secondary,
+        $subsite-secondary-text,
+        $subsite-tertiary,
+        $subsite-link-color,
+        $subsite-light-theme
+      );
+      @include it-common.common(
+        $subsite-primary-a0,
+        $subsite-primary-c1,
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-secondary,
+        $subsite-secondary-text,
+        $subsite-tertiary,
+        $subsite-tertiary-text,
+        $subsite-link-color,
+        $subsite-light-theme
+      );
 
       a,
       &.cms-ui .public-ui a {
@@ -112,8 +204,16 @@
         }
       }
 
-      .icon-primary {
-        fill: $subsite-primary !important;
+      #categoryCollapse .btn-icon.btn.btn-outline-secondary {
+        border-color: $subsite-primary;
+        box-shadow: inset 0 0 0 1px $subsite-primary,
+          0 0 0 0.2rem rgba(var($subsite-primary), 0.2);
+        color: $subsite-primary;
+      }
+
+      //listing
+      .block.listing.simple-list-template ul li {
+        color: $subsite-primary;
       }
     }
   }

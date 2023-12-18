@@ -1,0 +1,37 @@
+@use '../../all_variables' as *;
+
+@mixin header(
+  $subsite-primary,
+  $subsite-primary-text,
+  $subsite-secondary,
+  $subsite-secondary-text
+) {
+  &,
+  &.cms-ui,
+  &.public-ui {
+    .subsite-header {
+      background-color: $subsite-secondary;
+
+      .text {
+        color: $subsite-secondary-text;
+        a {
+          @if $subsite-primary != $subsite-secondary {
+            background-color: $subsite-primary !important;
+            color: $subsite-primary-text !important;
+
+            &:hover {
+              background-color: darken($subsite-primary, 5%) !important;
+            }
+          } @else {
+            background-color: $subsite-primary-text !important;
+            color: $subsite-primary !important;
+
+            &:hover {
+              background-color: darken($subsite-primary-text, 5%) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

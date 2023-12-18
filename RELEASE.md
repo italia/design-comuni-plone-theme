@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Sistemati gli stili per i sottositi per l'accessibilità.
+
 ## Versione 10.6.4 (18/12/2023)
 
 ### Fix

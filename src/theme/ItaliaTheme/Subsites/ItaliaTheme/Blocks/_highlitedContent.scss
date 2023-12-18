@@ -1,13 +1,104 @@
 @use '../../all_variables' as *;
 
-@mixin block($subsite-link-color) {
+@mixin block(
+  $subsite-link-color,
+  $subsite-primary-text,
+  $subsite-secondary,
+  $subsite-secondary-text
+) {
   .block.highlitedContent {
-    .card-title {
-      a {
-        &:hover,
-        &:focus {
-          color: $subsite-link-color;
+    .bg-primary {
+      .card .card-body {
+        .categoryicon-top {
+          .text {
+            color: $subsite-primary-text;
+          }
+
+          .icon {
+            color: $subsite-primary-text;
+            fill: $subsite-primary-text;
+          }
         }
+
+        .card-title a {
+          color: $subsite-primary-text;
+        }
+
+        .card-text {
+          color: $subsite-primary-text;
+        }
+
+        .read-more {
+          color: $subsite-primary-text;
+
+          .icon {
+            fill: $subsite-primary-text;
+          }
+        }
+
+        .chip.chip-primary {
+          border-color: $subsite-link-color;
+
+          & > .chip-label {
+            color: $subsite-link-color;
+          }
+
+          &:hover,
+          &:active {
+            > .chip-label {
+              color: $subsite-primary-text;
+            }
+          }
+        }
+      }
+    }
+
+    .bg-secondary {
+      .card .card-body {
+        .categoryicon-top {
+          .text {
+            color: $subsite-secondary-text;
+          }
+
+          .icon {
+            color: $subsite-secondary-text;
+            fill: $subsite-secondary-text;
+          }
+        }
+
+        .card-title a {
+          color: $subsite-secondary-text;
+        }
+
+        .card-text {
+          color: $subsite-secondary-text;
+        }
+
+        .read-more {
+          color: $subsite-secondary-text;
+
+          .icon {
+            fill: $subsite-secondary-text;
+          }
+        }
+
+        .chip.chip-primary {
+          &:hover,
+          &:active {
+            > .chip-label {
+              color: $subsite-secondary;
+            }
+          }
+        }
+      }
+    }
+
+    div.card h2.card-title a {
+      color: $subsite-link-color;
+
+      &:hover,
+      &:focus {
+        color: $subsite-link-color;
       }
     }
   }

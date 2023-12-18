@@ -10,3 +10,10 @@
 @import '~bootstrap/scss/mixins';
 
 @import 'mixin';
+
+.subsite-footer .text a {
+  &:hover,
+  &:active {
+    text-decoration: none !important;
+  }
+}

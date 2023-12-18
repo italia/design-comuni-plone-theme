@@ -1,14 +1,22 @@
 @use '../../all_variables' as *;
 
 @mixin card($subsite-link-color) {
-  .block.listing .card-with-image-template,
-  .block.listing .in-evidence {
-    .listing-item {
-      .card-title {
-        a {
-          &:hover,
-          &:focus {
-            color: $subsite-link-color;
+  .block.listing,
+  & {
+    .card-with-image-template,
+    .in-evidence {
+      .listing-item.card {
+        &.card {
+          .card-body {
+            .card-title {
+              a {
+                color: $subsite-link-color;
+                &:hover,
+                &:focus {
+                  color: $subsite-link-color;
+                }
+              }
+            }
           }
         }
       }

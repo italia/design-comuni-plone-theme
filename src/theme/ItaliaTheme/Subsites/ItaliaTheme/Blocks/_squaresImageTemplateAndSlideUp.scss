@@ -1,0 +1,52 @@
+@use '../../all_variables' as *;
+
+@mixin block(
+  $subsite-primary,
+  $subsite-primary-text,
+  $subsite-secondary,
+  $subsite-secondary-text,
+  $subsite-light-theme
+) {
+  .listing {
+    .squares-image-template .box {
+      &:before {
+        @if $subsite-light-theme {
+          background-color: $subsite-secondary;
+        } @else {
+          background-color: $subsite-primary;
+        }
+      }
+      .title {
+        @if $subsite-light-theme {
+          color: $subsite-secondary-text;
+        } @else {
+          color: $subsite-primary-text;
+        }
+      }
+    }
+
+    .card-slide-text-template .grid {
+      .box {
+        &.bg-img {
+          background-color: $subsite-primary;
+        }
+
+        .category {
+          background-color: $subsite-secondary;
+          color: $subsite-secondary-text;
+
+          &::after {
+            border-top-color: $subsite-secondary;
+          }
+        }
+
+        a.read-more {
+          color: color-contrast($subsite-primary-text);
+          svg.icon {
+            fill: color-contrast($subsite-primary-text);
+          }
+        }
+      }
+    }
+  }
+}
