@@ -65,34 +65,17 @@
     }
   }
 
-  .btn-primary,
-  .btn-secondary,
-  .btn-tertiary,
-  .draftjs-buttons {
-    .external-link {
-      fill: $external-link-fill-buttons !important;
-    }
-  }
-
   .external-link {
-    fill: $link-color !important;
+    fill: currentColor;
 
     &.align-sub {
       vertical-align: sub;
     }
-
-    &:hover {
-      fill: #004080 !important;
-    }
-  }
-
-  .it-footer-small-prints-list .external-link {
-    fill: $external-link-fill-subfooter !important;
   }
 }
 
 .icon.external-link.icon-xs {
-  height: 1rem;
+  height: 1rem !important;
 }
 
 section.it-page-section,

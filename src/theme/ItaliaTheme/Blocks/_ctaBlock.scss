@@ -42,17 +42,12 @@
         &:focus {
           background: $secondary-text;
           color: $secondary;
-
-          .external-link {
-            fill: #004080 !important;
-          }
         }
 
         .external-link {
           position: absolute;
           top: 3px;
           right: 3px;
-          fill: $external-link-fill-buttons !important;
         }
       }
 

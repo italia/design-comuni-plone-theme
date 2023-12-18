@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione 10.6.4 (18/12/2023)
+
+### Fix
+
+- Colori delle icone che specificano che un link è esterno che in alcuni casi erano errati.
+
 ## Versione 10.6.3 (15/12/2023)
 
 ### Fix
