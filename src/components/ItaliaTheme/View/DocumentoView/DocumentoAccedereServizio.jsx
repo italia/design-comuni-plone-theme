@@ -24,12 +24,7 @@ const DocumentoAccedereServizio = ({ content }) => {
     >
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
         {content.servizi_collegati?.map((servizio, i) => (
-          <GenericCard
-            key={servizio['@id']}
-            item={servizio}
-            showimage={false}
-            image_field={'immagine'}
-          >
+          <GenericCard key={servizio['@id']} item={servizio} showimage={false}>
             <RichText
               serif={false}
               data={servizio.canale_digitale}

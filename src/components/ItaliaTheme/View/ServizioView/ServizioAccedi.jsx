@@ -44,7 +44,6 @@ const ServizioAccedi = ({ content }) => {
               <OfficeCard
                 key={canale['@id']}
                 office={canale}
-                load_data={false}
                 data-element="service-generic-access"
               />
             </div>
@@ -62,11 +61,7 @@ const ServizioAccedi = ({ content }) => {
               key={dove['@id']}
               className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal"
             >
-              <OfficeCard
-                office={dove}
-                load_data={false}
-                data-element="service-generic-access"
-              />
+              <OfficeCard office={dove} data-element="service-generic-access" />
             </div>
           ))}
           <RichText

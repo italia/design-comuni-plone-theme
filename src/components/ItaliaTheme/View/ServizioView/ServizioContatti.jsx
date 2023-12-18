@@ -37,7 +37,6 @@ const ServizioContatti = ({ content }) => {
               <OfficeCard
                 key={item['@id']}
                 office={item}
-                load_data={false}
                 data-element="service-area"
               />
             ))}
@@ -49,7 +48,6 @@ const ServizioContatti = ({ content }) => {
               <OfficeCard
                 key={item['@id']}
                 office={item}
-                load_data={false}
                 data-element="service-area"
               />
             ))}

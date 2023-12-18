@@ -70,7 +70,6 @@ const UOStructure = ({ content }) => {
                 <OfficeCard
                   key={content.uo_parent['@id']}
                   office={content.uo_parent}
-                  load_data={false}
                   show_contacts={false}
                 />
               </div>
@@ -88,7 +87,6 @@ const UOStructure = ({ content }) => {
                     <OfficeCard
                       key={uo['@id']}
                       office={uo}
-                      load_data={false}
                       show_contacts={false}
                     />
                   );
@@ -104,11 +102,7 @@ const UOStructure = ({ content }) => {
               </h3>
               <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
                 {content.legami_con_altre_strutture.map((item, _i) => (
-                  <OfficeCard
-                    key={item['@id']}
-                    office={item}
-                    load_data={false}
-                  />
+                  <OfficeCard key={item['@id']} office={item} />
                 ))}
               </div>
             </div>

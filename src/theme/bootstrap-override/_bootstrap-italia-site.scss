@@ -16,7 +16,7 @@
 // BS5 Configuration
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
-//@import 'node_modules/bootstrap/scss/maps';
+@import 'bootstrap/scss/maps';
 @import 'bootstrap/scss/mixins';
 // mixins custom
 @import 'bootstrap-italia/src/scss/custom/mixins/buttons';
@@ -141,6 +141,7 @@
   @import 'bootstrap-italia/src/scss/custom/avatar';
   @import 'bootstrap-italia/src/scss/custom/thumbnav';
   @import 'bootstrap-italia/src/scss/custom/steppers';
+  @import './bootstrap-italia/steppers';
   @import 'bootstrap-italia/src/scss/custom/card';
   @import './bootstrap-italia/card';
   @import 'bootstrap-italia/src/scss/custom/imgresponsive';

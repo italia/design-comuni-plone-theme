@@ -160,7 +160,7 @@ const VenueContacts = ({ content }) => {
             //STRUTTURE RESPONSABILI CORRELATE
             <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
               {content?.struttura_responsabile_correlati?.map((item, i) => (
-                <OfficeCard key={item['@id']} office={item} load_data={false} />
+                <OfficeCard key={item['@id']} office={item} />
               ))}
             </div>
           ) : (

@@ -22,17 +22,7 @@ import {
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
 import { getLayoutFieldname } from '@plone/volto/helpers';
-// eslint-disable-next-line import/no-unresolved
-import Image from '@plone/volto/components/theme/Image/Image';
-
 import config from '@plone/volto/registry';
-
-/**
- * PageView view component class.
- * @function PageView
- * @params {object} content Content object.
- * @returns {string} Markup of the component.
- */
 
 const messages = defineMessages({
   unknownBlock: {
@@ -49,10 +39,16 @@ const messages = defineMessages({
   },
 });
 
+/**
+ * PageView view component class.
+ * @function PageView
+ * @params {object} content Content object.
+ * @returns {string} Markup of the component.
+ */
 const PageView = ({ content, token, location, history }) => {
   const intl = useIntl();
+  const Image = config.getComponent({ name: 'Image' }).component;
   const layout = content[getLayoutFieldname(content)];
-
   if (layout === 'document_view') {
     const rightHeaderHasContent =
       content.image?.scales ||
@@ -92,13 +88,13 @@ const PageView = ({ content, token, location, history }) => {
                       <Actions url={content['@id']} title={content.title} />
                     </div>
                   )}
-                  {content.image?.scales && (
+                  {content.image && (
                     <div className="header-image px-4 mb-3">
                       <Image
-                        image={content.image}
+                        item={content}
                         alt=""
-                        maxSize={300}
-                        key={content.image?.download}
+                        sizes="250px"
+                        responsive={true}
                       />
                     </div>
                   )}

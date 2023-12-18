@@ -161,6 +161,10 @@ const messages = defineMessages({
     id: 'optionDatePlaceholder',
     defaultMessage: 'inserisci la data in formato gg/mm/aaaa',
   },
+  current: {
+    id: 'currentActive',
+    defaultMessage: 'attivo',
+  },
 });
 
 const SearchModal = ({ closeModal, show }) => {
@@ -667,6 +671,12 @@ const SearchModal = ({ closeModal, show }) => {
                       id={'sections'}
                     >
                       <span>{intl.formatMessage(messages.sections)}</span>
+                      {advancedTab === 'sections' && (
+                        <span className="visually-hidden">
+                          {' '}
+                          {intl.formatMessage(messages.current)}
+                        </span>
+                      )}
                     </NavLink>
                   </NavItem>
                 )}
@@ -682,6 +692,12 @@ const SearchModal = ({ closeModal, show }) => {
                     id={'topics'}
                   >
                     <span>{intl.formatMessage(messages.topics)}</span>
+                    {advancedTab === 'topics' && (
+                      <span className="visually-hidden">
+                        {' '}
+                        {intl.formatMessage(messages.current)}
+                      </span>
+                    )}
                   </NavLink>
                 </NavItem>
                 <NavItem
@@ -696,6 +712,12 @@ const SearchModal = ({ closeModal, show }) => {
                     id={'options'}
                   >
                     <span>{intl.formatMessage(messages.options)}</span>
+                    {advancedTab === 'options' && (
+                      <span className="visually-hidden">
+                        {' '}
+                        {intl.formatMessage(messages.current)}
+                      </span>
+                    )}
                   </NavLink>
                 </NavItem>
               </Nav>

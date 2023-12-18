@@ -55,7 +55,7 @@ export const VenueViewSectionsOrder = [
  * @returns {string} Markup of the component.
  */
 const VenueView = ({ content }) => {
-  let documentBody = createRef();
+  const documentBody = createRef();
   const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   useEffect(() => {

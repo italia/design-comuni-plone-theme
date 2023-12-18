@@ -1,3 +1,6 @@
+/*
+ * Slider
+ */
 import 'slick-carousel/slick/slick.css';
 import 'design-comuni-plone-theme/components/slick-carousel/slick/slick-theme.css';
 import { Col, Container, Row } from 'design-react-kit';
@@ -350,7 +353,7 @@ const SliderTemplate = ({
                 const image = ListingImage({
                   item,
                   loading: index === 0 ? 'eager' : 'lazy',
-                  maxSize: 1600,
+                  sizes: `max-width(980px) 600px, ${1200 / nSlidesToShow}px`,
                   critical: true,
                 });
                 return (

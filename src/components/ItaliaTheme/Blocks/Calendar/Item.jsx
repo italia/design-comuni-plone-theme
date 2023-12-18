@@ -1,6 +1,7 @@
+/*
+ * Component Item of Calendar block
+ */
 import React from 'react';
-import moment from 'moment';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import { Spinner } from 'design-react-kit';
@@ -9,9 +10,8 @@ import useDeepCompareEffect from 'use-deep-compare-effect';
 import { getCalendarDayResults } from 'design-comuni-plone-theme/actions';
 import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import Image from '@plone/volto/components/theme/Image/Image';
-
 import { viewDate } from 'design-comuni-plone-theme/helpers';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   scadenza_bando: {
@@ -30,7 +30,7 @@ const messages = defineMessages({
 
 const Item = ({ day, path, query, inEditMode, data }) => {
   const intl = useIntl();
-
+  const Image = config.getComponent({ name: 'Image' }).component;
   const calendarDayResults = useSelector(
     (state) => state.calendarDaySearch.subrequests,
   );
@@ -79,6 +79,13 @@ const Item = ({ day, path, query, inEditMode, data }) => {
         {calendarDayResults[day] ? (
           calendarDayResults[day].items[day]?.map((item, index) => {
             const eventHasImage = Object.keys(item.image_scales).length > 0;
+            const item_start = new Date(item.start);
+            const item_start_time = item_start
+              ? `${item_start.getHours()}:${item_start
+                  .getMinutes()
+                  .toString()
+                  .padStart(2, '0')}`
+              : null;
 
             return (
               <div key={index} className="calendar-item">
@@ -86,19 +93,16 @@ const Item = ({ day, path, query, inEditMode, data }) => {
                   {show_preview_img && eventHasImage && (
                     <div className="item-img">
                       <Image
-                        image={
-                          item.image_scales?.preview_image?.[0] ||
-                          item.image_scales?.image?.[0]
-                        }
-                        itemUrl={item['@id']}
+                        item={item}
                         alt=""
-                        containerClassName="img-wrapper"
+                        className="img-fluid"
+                        sizes="80px"
                       />
                     </div>
                   )}
                   <div className="item-info">
                     <div>{item?.type}</div>
-                    <div>{moment(item.start).format('HH:mm')}</div>
+                    {item_start_time && <div>{item_start_time}</div>}
                     <div className="calendar-type">
                       <ConditionalLink
                         condition={!inEditMode}

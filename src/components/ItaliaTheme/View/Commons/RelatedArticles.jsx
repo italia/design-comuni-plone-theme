@@ -2,12 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { OfficeCard } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
-/**
- * RelateedArticles view component class.
- * @function RelatedArticles
- * @params {object} content: Content object.
- * @returns {string} Markup of the component.
- */
+
 const RelatedArticles = ({
   id = 'related-articles',
   items,
@@ -36,8 +31,8 @@ const RelatedArticles = ({
           <OfficeCard
             key={item['@id']}
             office={item}
-            load_data={false}
             show_contacts={false}
+            showimage={showimage}
           />
         ))}
       </div>

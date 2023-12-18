@@ -435,6 +435,11 @@ msgstr ""
 msgid "Open in a new tab"
 msgstr ""
 
+#: components/ItaliaTheme/Pagination/PaginationItem
+# defaultMessage: Pagina
+msgid "Page"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Filtro
@@ -1066,6 +1071,11 @@ msgstr ""
 msgid "block_bg_color"
 msgstr ""
 
+#: components/ItaliaTheme/Breadcrumbs/Breadcrumbs
+# defaultMessage: Percorso di navigazione
+msgid "breadcrumb"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 # defaultMessage: Calendario
 msgid "calendarBlockSidebarTitle"
@@ -1360,6 +1370,12 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/CuredBy
 # defaultMessage: Persone
 msgid "cured_by_people"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ReleaseLog/ReleaseLog
+# defaultMessage: attivo
+msgid "currentActive"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
@@ -3151,7 +3167,7 @@ msgid "search_startDate"
 msgstr ""
 
 #: helpers/Translations/searchBlockExtendedTranslations
-# defaultMessage: Ricerca per: <em>{searchedtext}</em>. 
+# defaultMessage: Ricerca per: <em>{searchedtext}</em>.
 msgid "searchedFor"
 msgstr ""
 

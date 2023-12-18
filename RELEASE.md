@@ -99,6 +99,11 @@
 - Sistemato il layout della card nella variazione Bandi del Blocco Elenco per la modalità tablet
 - Sistemata accessibilità del read-more nel blocco elenco con variazione "Card con testo animato" quando si è in un sottosito con uno stile applicato.
 - Sistemato errore quando viene impostato "service-link" come ID lighthouse.
+## Versione X.X.X (dd/mm/yyyy)
+
+### Novità
+
+- Modificata l'altezza delle immagini delle card, per essere in linea con i template agid.
 
 ## Versione 10.4.1 (21/11/2023)
 

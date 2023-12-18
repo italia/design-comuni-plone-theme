@@ -11,18 +11,21 @@ import config from '@plone/volto/registry';
  */
 const ContentImage = ({ content, position }) => {
   const view =
-    (content?.image || content?.image_caption || content?.foto_persona) &&
+    (content?.image || content?.foto_persona) &&
     config.settings.italiaThemeViewsConfig.imagePosition === position;
+  const fullWidth =
+    config.settings.italiaThemeViewsConfig.imagePosition === 'afterHeader';
+  const field_name = content.image ? 'image' : 'foto_persona';
 
   return view ? (
     <div className="content-image">
       <WideImage
         title={content.title}
-        image={content.image || content.foto_persona}
+        image={content}
+        fieldName={field_name}
         caption={content.image_caption}
-        fullWidth={
-          config.settings.italiaThemeViewsConfig.imagePosition === 'afterHeader'
-        }
+        sizes={fullWidth ? '100vw' : '(max-width: 768px) 90vw, 800px'}
+        fullWidth={fullWidth}
       />
     </div>
   ) : null;

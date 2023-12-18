@@ -1,14 +1,9 @@
-import React, { useEffect } from 'react';
-
-import { useDispatch, useSelector } from 'react-redux';
 import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { getContent, resetContent } from '@plone/volto/actions';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import Image from '@plone/volto/components/theme/Image/Image';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { ContactLink } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import config from '@plone/volto/registry';
 
 /**
  * OfficeCard view component class.
@@ -18,31 +13,20 @@ import { ContactLink } from 'design-comuni-plone-theme/components/ItaliaTheme/Vi
  */
 const OfficeCard = ({
   office,
-  load_data = true,
   icon,
   children,
   margin_bottom = false,
   show_contacts = true,
+  showimage = true,
   size,
   no_details = false,
   ...rest
 }) => {
-  const url = flattenToAppURL(office['@id']);
-  const key = `${url}_office`;
+  const Image = config.getComponent({ name: 'Image' }).component;
+  const image =
+    showimage && Image({ item: office, sizes: '80px', loading: 'lazy' });
 
-  const officeContent = useSelector((state) => state.content.subrequests);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (load_data) {
-      dispatch(getContent(url, null, key));
-      return () => dispatch(resetContent(key));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [url]);
-
-  let office_fo = load_data ? officeContent?.[key]?.data : office;
-  return office_fo ? (
+  return (
     <div
       className={cx(
         'card card-teaser preview-image-card border-left-card rounded shadow p-3 ',
@@ -57,18 +41,18 @@ const OfficeCard = ({
       <div className="card-body pe-3">
         <div className="card-title h5">
           <UniversalLink
-            item={office_fo}
-            title={office_fo.title}
+            item={office}
+            title={office.title}
             data-element="service-area"
           >
-            {office_fo.title}
+            {office.title}
           </UniversalLink>
         </div>
-        <p className="card-text">{office_fo.description}</p>
-        {show_contacts && office_fo?.sede?.length > 0 && (
+        <p className="card-text">{office.description}</p>
+        {show_contacts && office?.sede?.length > 0 && (
           <div>
             {' '}
-            {office_fo?.sede?.map((sede, i) => {
+            {office?.sede?.map((sede, i) => {
               return (
                 <div className="card-text" key={i}>
                   {sede.street && <p>{sede.street}</p>}
@@ -77,7 +61,7 @@ const OfficeCard = ({
                       {sede.zip_code} {sede.city}
                     </p>
                   )}
-                  {office_fo?.contact_info?.map((el) =>
+                  {office?.contact_info?.map((el) =>
                     el?.value_punto_contatto?.map((pdc, i) => {
                       if (pdc.pdc_type === 'telefono') {
                         return (
@@ -105,18 +89,9 @@ const OfficeCard = ({
 
         {children && <div className="card-text">{children}</div>}
       </div>
-      <div className="image-container">
-        {office_fo?.image_scales?.[office_fo?.image_field]?.[0] && (
-          <Image
-            itemUrl={office_fo['@id']}
-            image={office_fo.image_scales[office_fo.image_field][0]}
-            alt=""
-            responsive={false}
-          />
-        )}
-      </div>
+      {image && <div className="image-container">{image}</div>}
     </div>
-  ) : null;
+  );
 };
 export default OfficeCard;
 

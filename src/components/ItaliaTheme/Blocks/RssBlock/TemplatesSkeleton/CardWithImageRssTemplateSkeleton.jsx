@@ -25,7 +25,7 @@ const CardWithImageRssTemplateSkeleton = ({ isEditMode, data = {} }) => {
         <Row>
           {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
             <Col lg={3} className="mb-3" key={i}>
-              <Card className="card-img" noWrapper={false} tag="div">
+              <Card noWrapper={false} tag="div">
                 <div className="img-responsive-wrapper">
                   <div className="img-responsive img-responsive-panoramic">
                     <figure className="img-wrapper"></figure>
