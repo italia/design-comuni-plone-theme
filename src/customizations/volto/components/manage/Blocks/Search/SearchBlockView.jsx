@@ -1,5 +1,7 @@
 /* CUSTOMIZATIONS:
   - Agid styling
+  - Add class .block.listing in listing body container div to use
+    existing listing template styles
 */
 
 import React from 'react';
@@ -99,7 +101,8 @@ const SearchBlockView = (props) => {
         selectedView={selectedView}
         setSelectedView={setSelectedView}
       >
-        <div className="search-results">
+        {/* Add class .block.listing to benefit from existing listing template styles */}
+        <div className="block listing search-results">
           <ListingBody
             variation={{ ...data, ...listingBodyVariation }}
             data={listingBodyData}

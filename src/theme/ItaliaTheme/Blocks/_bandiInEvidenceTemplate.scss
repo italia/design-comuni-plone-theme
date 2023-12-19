@@ -56,8 +56,8 @@
 
   // tablet
   .bandi-in-evidence-cards-wrapper {
-    @media (min-width: #{map-get($grid-breakpoints, md)}) and  (max-width: #{map-get($grid-breakpoints, xxl)}) {
-      grid-template-columns: auto auto;
+    @media (min-width: #{map-get($grid-breakpoints, md)}) and  (max-width: #{map-get($grid-breakpoints, xl)}) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 
     @media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)}) {
