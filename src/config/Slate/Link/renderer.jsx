@@ -47,7 +47,7 @@ const getExtensionForFiles = (element) => {
     svg_format: false,
   };
   return (
-    <span className="slate-inline-file-infos">
+    <span className="slate-inline-file-infos" contentEditable={false}>
       {' '}
       (
       {!icon.svg_format ? (
