@@ -1,5 +1,18 @@
 
 
+## [11.0.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.0.0...v11.0.1) (2023-12-19)
+
+
+### Bug Fixes
+
+* schema.org serviceUrl construction ([93f0f39](https://github.com/redturtle/design-comuni-plone-theme/commit/93f0f39bc817cf40ad506e7dd4b6d8f2ada41e18))
+* youtube preview image ([#441](https://github.com/redturtle/design-comuni-plone-theme/issues/441)) ([93af45c](https://github.com/redturtle/design-comuni-plone-theme/commit/93af45cd2dce0cd6de83174660b665399096e481))
+
+
+### Documentation
+
+* updated publiccode and release log ([13befcb](https://github.com/redturtle/design-comuni-plone-theme/commit/13befcb56bf3a7d527b552369f253efeb5f5cd5a))
+
 ## [11.0.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v10.6.4...v11.0.0) (2023-12-18)
 
 
