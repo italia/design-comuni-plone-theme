@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione 11.0.1 (19/12/2023)
+
+### Fix
+
+- Risolto un problema con le anteprime dei video embeddati da youtube.
+
 ## Versione 11.0.0 (18/12/2023)
 
 ### Novità
