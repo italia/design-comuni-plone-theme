@@ -47,7 +47,7 @@ const ViewBlock = ({ data, index, isEditMode = false }) => {
       const videoID = data.url.match(/.be\//)
         ? data.url.match(/^.*\.be\/(.*)/)?.[1]
         : data.url.match(/^.*\?v=(.*)$/)?.[1];
-      placeholder = 'https://img.youtube.com/vi/' + videoID + '/sddefault.jpg';
+      placeholder = 'https://img.youtube.com/vi/' + videoID + '/hqdefault.jpg';
     } else if (data.url.match('vimeo')) {
       const videoID = data.url.match(/^.*\.com\/(.*)/)[1];
       placeholder = 'https://vumbnail.com/' + videoID + '.jpg';
