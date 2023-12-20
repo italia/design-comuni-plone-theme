@@ -2343,6 +2343,21 @@ msgstr "Altre utenze"
 msgid "login_agid_other_description"
 msgstr "In alternativa puoi utilizzare le seguenti modalità."
 
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: CIE
+msgid "login_cie"
+msgstr ""
+
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: Log in with CIE.
+msgid "login_cie_description"
+msgstr "Entra con CIE"
+
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: How to activate CIE
+msgid "login_cie_help"
+msgstr "Maggiori informazioni sulla CIE"
+
 #: components/ItaliaTheme/LoginAgid/LoginAgid
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 # defaultMessage: Log in as employee
@@ -2363,6 +2378,11 @@ msgstr "Accedi con SPID, il sistema Pubblico di Identità Digitale."
 # defaultMessage: How to activate SPID
 msgid "login_spid_help"
 msgstr "Come attivare SPID"
+
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: Login with CIE
+msgid "login_with_cie"
+msgstr "Entra con CIE"
 
 #: components/ItaliaTheme/LoginAgid/LoginAgidButtons
 # defaultMessage: Login with SPID
