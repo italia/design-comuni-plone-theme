@@ -26,13 +26,13 @@
 
         //right zone
         .it-right-zone {
-          color: $subsite-primary-text;
+          color: $subsite-primary-text !important;
 
           .it-socials {
             ul {
               .icon {
-                color: $subsite-primary-text;
-                fill: $subsite-primary-text;
+                color: $subsite-primary-text !important;
+                fill: $subsite-primary-text !important;
               }
             }
           }

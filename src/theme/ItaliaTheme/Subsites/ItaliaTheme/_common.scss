@@ -27,11 +27,6 @@
     }
   }
 
-  // TO DO: questo serve?
-  // a.btn-tertiary {
-  //   color: $subsite-tertiary-text;
-  // }
-
   .btn-outline-tertiary {
     @include button-outline-variant($subsite-tertiary);
   }
@@ -45,9 +40,32 @@
     background-color: $subsite-primary !important;
   }
 
+  //fix per bg-primary in CT servizio
+  // .contenttype-servizio {
+  .it-page-section.bg-primary {
+    background-color: $subsite-primary-a0 !important;
+  }
+  // }
+
   .bg-secondary {
     background-color: $subsite-secondary !important;
     color: $subsite-secondary-text;
+  }
+
+  //text
+  .text-primary {
+    color: $subsite-primary-text !important;
+  }
+  .select-pill.text-primary {
+    color: $subsite-primary !important;
+
+    div {
+      color: inherit;
+    }
+  }
+
+  .text-secondary {
+    color: $subsite-secondary-text !important;
   }
 
   //btn mini
@@ -293,12 +311,22 @@
 
   // date picker - general
   .DateRangePicker {
+    td.CalendarDay_default {
+      color: #484848;
+    }
+
     td.CalendarDay__selected {
       color: $subsite-link-color;
 
       &:before {
         border: 2px solid $subsite-link-color;
       }
+    }
+
+    td.CalendarDay__hovered_span {
+      background: $subsite-primary-a0;
+      border: $subsite-primary-a0;
+      color: $subsite-link-color;
     }
 
     @if $subsite-light-theme {
@@ -312,10 +340,27 @@
     } @else {
       td.CalendarDay__selected_span {
         background: $subsite-primary-a0;
+        color: #484848;
 
         &:hover {
           border: 1px double $subsite-primary-a0;
         }
+      }
+    }
+  }
+
+  .DayPickerKeyboardShortcuts_show__bottomRight::before {
+    border-right-color: $subsite-primary;
+  }
+
+  .DayPickerKeyboardShortcuts_showSpan {
+    color: $subsite-primary-text;
+  }
+
+  .react-select__menu-list {
+    .select-list {
+      .react-select__option--is-focused {
+        background-color: $subsite-primary-a0 !important;
       }
     }
   }

@@ -38,6 +38,12 @@
         }
       }
     }
+
+    &.search {
+      .search-wrapper .autocomplete-icon .icon {
+        fill: $subsite-primary;
+      }
+    }
   }
 
   .event-search,
