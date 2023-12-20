@@ -1,5 +1,17 @@
 
 
+## [11.0.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.0.1...v11.0.2) (2023-12-20)
+
+
+### Bug Fixes
+
+* subsite mixin styles ([#442](https://github.com/redturtle/design-comuni-plone-theme/issues/442)) ([84719fe](https://github.com/redturtle/design-comuni-plone-theme/commit/84719fe08521076c62e09c2ad1fd840fb65e6f45))
+
+
+### Documentation
+
+* updated publiccode ([aed0730](https://github.com/redturtle/design-comuni-plone-theme/commit/aed073008414c8ca7f4b726410ec20f9333ff297))
+
 ## [11.0.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.0.0...v11.0.1) (2023-12-19)
 
 
