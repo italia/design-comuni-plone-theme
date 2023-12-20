@@ -1,5 +1,17 @@
 
 
+## [11.1.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.0.2...v11.1.0) (2023-12-20)
+
+
+### Features
+
+* login with cie ([#443](https://github.com/redturtle/design-comuni-plone-theme/issues/443)) ([21dae70](https://github.com/redturtle/design-comuni-plone-theme/commit/21dae707b3207a0fed69ea6b4b39289ee0b1d90e))
+
+
+### Documentation
+
+* updated publiccode ([5d169c7](https://github.com/redturtle/design-comuni-plone-theme/commit/5d169c78920a25f5765ae281400bea3aa0e6be1a))
+
 ## [11.0.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.0.1...v11.0.2) (2023-12-20)
 
 
