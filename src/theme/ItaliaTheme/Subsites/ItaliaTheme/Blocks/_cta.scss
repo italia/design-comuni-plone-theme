@@ -1,0 +1,13 @@
+@use '../../all_variables' as *;
+
+@mixin block($subsite-secondary) {
+  .cta-block {
+    .cta-block-wrapper {
+      background-color: $subsite-secondary;
+
+      &.has-image {
+        background: none;
+      }
+    }
+  }
+}

@@ -5,11 +5,13 @@
   .link-list-wrapper {
     ul {
       li {
-        a {
+        a,
+        button.btn-link {
           // hover state
           &:hover:not(.disabled) {
             span {
               color: $subsite-link-color;
+              text-decoration: underline;
             }
 
             p {

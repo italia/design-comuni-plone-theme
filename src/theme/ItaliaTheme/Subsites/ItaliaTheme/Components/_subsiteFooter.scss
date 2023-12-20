@@ -1,6 +1,12 @@
 @use '../../all_variables' as *;
 
-@mixin footer($subsite-primary, $subsite-primary-text) {
+@mixin footer(
+  $subsite-primary,
+  $subsite-primary-text,
+  $subsite-secondary,
+  $subsite-secondary-text,
+  $subsite-light-theme
+) {
   &,
   &.cms-ui {
     .subsite-footer {
@@ -9,17 +15,41 @@
       .text {
         color: $subsite-primary-text;
 
+        .draftjs-buttons a {
+          @if $subsite-primary != $subsite-secondary {
+            background-color: $subsite-secondary !important;
+            color: $subsite-secondary-text !important;
+            text-decoration: none;
+
+            &:hover {
+              background-color: darken($subsite-secondary, 5%) !important;
+            }
+          } @else {
+            background-color: $subsite-secondary-text !important;
+            color: $subsite-secondary !important;
+            text-decoration: none;
+
+            &:hover {
+              background-color: darken($subsite-secondary-text, 5%) !important;
+            }
+          }
+        }
+
         h1,
         h2,
         h3,
         h4,
         a {
           color: $subsite-primary-text;
+        }
 
-          &:hover,
-          &:active {
-            color: $subsite-primary-text;
-          }
+        a {
+          text-decoration: underline;
+
+          // &:hover,
+          // &:active {
+          //   text-decoration: none;
+          // }
         }
       }
     }

@@ -58,6 +58,22 @@
 ### Novità
 
 - Modificata l'altezza delle immagini delle card, per essere in linea con i template agid.
+## Versione 11.0.1 (19/12/2023)
+
+### Fix
+
+- Risolto un problema con le anteprime dei video embeddati da youtube.
+
+## Versione 11.0.0 (18/12/2023)
+
+### Novità
+
+- Modificata l'altezza delle immagini delle card, per essere in linea con i template agid.
+
+### Fix
+
+- Sistemati gli stili per i sottositi per l'accessibilità.
+
 ## Versione 10.6.4 (18/12/2023)
 
 ### Fix
@@ -116,11 +132,6 @@
 - Sistemato il layout della card nella variazione Bandi del Blocco Elenco per la modalità tablet
 - Sistemata accessibilità del read-more nel blocco elenco con variazione "Card con testo animato" quando si è in un sottosito con uno stile applicato.
 - Sistemato errore quando viene impostato "service-link" come ID lighthouse.
-## Versione X.X.X (dd/mm/yyyy)
-
-### Novità
-
-- Modificata l'altezza delle immagini delle card, per essere in linea con i template agid.
 
 ## Versione 10.4.1 (21/11/2023)
 

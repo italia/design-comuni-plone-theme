@@ -1,0 +1,49 @@
+@use '../../all_variables' as *;
+
+@mixin block(
+  $subsite-primary,
+  $subsite-primary-text,
+  $subsite-secondary,
+  $subsite-light-theme
+) {
+  .form,
+  & {
+    .form-check {
+      [type='checkbox'],
+      [type='radio'] {
+        &:checked + label {
+          &::after {
+            @if $subsite-light-theme {
+              border-color: $subsite-secondary;
+              background-color: $subsite-secondary;
+            } @else {
+              border-color: $subsite-primary;
+              background-color: $subsite-primary;
+            }
+          }
+        }
+      }
+    }
+    .delete-button {
+      .icon {
+        @if $subsite-light-theme {
+          color: $subsite-secondary;
+        }
+      }
+    }
+  }
+
+  .form {
+    .form-check [type='radio'] {
+      &:checked + label {
+        &::before {
+          @if $subsite-light-theme {
+            border-color: $subsite-secondary;
+          } @else {
+            border-color: $subsite-primary;
+          }
+        }
+      }
+    }
+  }
+}

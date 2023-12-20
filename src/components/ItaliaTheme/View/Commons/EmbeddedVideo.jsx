@@ -56,7 +56,7 @@ const EmbeddedVideo = ({ video_url, title, id }) => {
     defaultActive: false,
     autoplay: false,
     aspectRatio: '16:9',
-    placeholder: 'https://img.youtube.com/vi/' + video_id + '/sddefault.jpg',
+    placeholder: 'https://img.youtube.com/vi/' + video_id + '/hqdefault.jpg',
     tabIndex: 0,
     onKeyPress: onKeyDown,
     ref: ref,

@@ -1,6 +1,17 @@
 @use '../all_variables' as *;
 
-@mixin common($subsite-tertiary, $subsite-tertiary-text) {
+@mixin common(
+  $subsite-primary-a0,
+  $subsite-primary-c1,
+  $subsite-primary,
+  $subsite-primary-text,
+  $subsite-secondary,
+  $subsite-secondary-text,
+  $subsite-tertiary,
+  $subsite-tertiary-text,
+  $subsite-link-color,
+  $subsite-light-theme
+) {
   .btn-tertiary {
     @include button-variant($subsite-tertiary, $subsite-tertiary-text);
 
@@ -16,11 +27,296 @@
     }
   }
 
-  a.btn-tertiary {
-    color: $subsite-tertiary-text;
-  }
+  // TO DO: questo serve?
+  // a.btn-tertiary {
+  //   color: $subsite-tertiary-text;
+  // }
 
   .btn-outline-tertiary {
     @include button-outline-variant($subsite-tertiary);
+  }
+
+  // background colors
+  .bg-light {
+    background-color: $subsite-primary-a0 !important;
+  }
+
+  .bg-primary {
+    background-color: $subsite-primary !important;
+  }
+
+  .bg-secondary {
+    background-color: $subsite-secondary !important;
+    color: $subsite-secondary-text;
+  }
+
+  //btn mini
+  .select-all-cts.btn.btn-link.btn-mini,
+  .subsite-header .text a.select-all-cts.btn-link.btn-mini {
+    color: $subsite-primary !important;
+  }
+
+  //icons - general
+  .icon-primary {
+    @if $subsite-light-theme {
+      fill: $subsite-secondary !important;
+    } @else {
+      fill: $subsite-primary !important;
+    }
+  }
+
+  // icon external link
+  .external-link {
+    @if $subsite-light-theme {
+      fill: $subsite-link-color !important;
+    } @else {
+      fill: $subsite-primary !important;
+    }
+  }
+
+  .flag-icon {
+    background: $subsite-secondary;
+  }
+
+  // color button widget - sidebar
+
+  .color-list-widget .button.primary,
+  .color-list-widget .button.primary.active {
+    background-color: $subsite-primary;
+  }
+
+  .color-list-widget .button.secondary,
+  .color-list-widget .button.secondary.active {
+    background-color: $subsite-secondary;
+  }
+
+  .color-list-widget .button.active {
+    border: 2px solid $subsite-primary;
+  }
+
+  //pagination - no background
+  @if $subsite-light-theme {
+    .page-link {
+      color: $subsite-link-color !important;
+
+      svg.icon-primary {
+        fill: $subsite-link-color !important;
+      }
+    }
+
+    .page-link[aria-current] {
+      border-color: $subsite-link-color !important;
+      color: $subsite-link-color !important;
+    }
+  } @else {
+    .page-link {
+      color: $subsite-primary !important;
+    }
+
+    .page-link[aria-current] {
+      border-color: $subsite-primary !important;
+      color: $subsite-primary !important;
+    }
+  }
+
+  // darken pagination when used on listing block with .background-image
+  .bg-light {
+    @if $subsite-light-theme {
+      .page-link {
+        color: darken($subsite-link-color, 5%) !important;
+
+        svg.icon-primary {
+          fill: darken($subsite-link-color, 5%) !important;
+        }
+      }
+
+      .page-link[aria-current] {
+        border-color: darken($subsite-link-color, 5%) !important;
+        color: darken($subsite-link-color, 5%) !important;
+      }
+    } @else {
+      .page-link {
+        color: darken($subsite-primary, 5%) !important;
+      }
+
+      .page-link[aria-current] {
+        border-color: darken($subsite-primary, 5%) !important;
+        color: darken($subsite-primary, 5%) !important;
+      }
+    }
+  }
+
+  // text - callout style
+  .callout-bg {
+    @if $subsite-light-theme {
+      background-color: $subsite-primary-a0;
+      color: color-contrast($subsite-primary-a0);
+    } @else {
+      background-color: $subsite-primary-c1;
+      color: color-contrast($subsite-primary-c1);
+    }
+  }
+
+  // text - quote style for view and edit
+  .block,
+  & {
+    blockquote {
+      border-left: 4px solid $subsite-secondary;
+    }
+  }
+
+  // titles and link colors - general
+  .card-title a,
+  .accordion-header button {
+    color: $subsite-link-color;
+  }
+
+  // accordion vista faq
+  .faq-tree {
+    .faq-folder
+      .accordion
+      .accordion-header
+      .accordion-button[data-bs-toggle='collapse'][aria-expanded='false'] {
+      color: $subsite-link-color;
+    }
+  }
+
+  .accordion-header .accordion-button {
+    color: $subsite-link-color;
+  }
+
+  &,
+  .simple-card-default .card.card-teaser .card-body {
+    .category-top span.text span.text.fw-bold {
+      color: $subsite-link-color;
+    }
+  }
+
+  // simple list bullet color
+  .simple-list-template ul li {
+    color: $subsite-link-color;
+  }
+
+  // slider controller icons
+  @if $subsite-light-theme {
+    .slick-slider .slick-arrow.slick-prev .icon,
+    .slick-slider .slick-arrow.slick-next .icon {
+      color: $subsite-secondary;
+      fill: $subsite-secondary;
+    }
+
+    .slick-slider ul.slick-dots li.slick-active button:before {
+      background-color: $subsite-secondary !important;
+    }
+  } @else {
+    .slick-slider .slick-arrow.slick-prev .icon,
+    .slick-slider .slick-arrow.slick-next .icon {
+      color: $subsite-primary;
+      fill: $subsite-primary;
+    }
+
+    .slick-slider ul.slick-dots li.slick-active button:before {
+      background-color: $subsite-primary !important;
+    }
+  }
+
+  //customer satisfaction buttons
+
+  .feedback-form .form-step-actions .next-action {
+    background-color: $subsite-primary;
+    color: $subsite-primary-text;
+
+    &:hover {
+      background-color: darken($subsite-primary, 5%);
+    }
+  }
+
+  // customer satisfaction star colors
+  .rating > input:checked ~ label, // show primary color star when clicked
+.rating:not(:checked) > label:hover, // hover current star
+.rating:not(:checked) > label:hover ~ label {
+    svg {
+      @if $subsite-light-theme {
+        fill: $subsite-secondary;
+      } @else {
+        fill: $subsite-primary;
+      }
+    }
+  }
+
+  .rating > input:checked + label:hover, // hover current star when changing rating
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, // lighten current selection
+.rating > input:checked ~ label:hover ~ label {
+    + svg {
+      @if $subsite-light-theme {
+        fill: $subsite-secondary;
+      } @else {
+        fill: $subsite-primary;
+      }
+    }
+  }
+
+  .rating > input:checked ~ label svg,
+  .rating:not(:checked) > label:hover svg,
+  .rating:not(:checked) > label:hover ~ label svg {
+    @if $subsite-light-theme {
+      fill: $subsite-secondary;
+    } @else {
+      fill: $subsite-primary;
+    }
+  }
+
+  .bg-primary.customer-satisfaction,
+  .bg-primary.customer-satisfaction .bg-primary {
+    background-color: lighten($subsite-primary, 5%) !important;
+  }
+
+  //draftjs buttons - general
+  .draftjs-buttons a {
+    @if $subsite-light-theme {
+      background-color: $subsite-secondary !important;
+      color: $subsite-secondary-text !important;
+
+      &:hover {
+        background-color: darken($subsite-secondary, 5%) !important;
+      }
+    } @else {
+      background-color: $subsite-primary !important;
+      color: $subsite-primary-text !important;
+
+      &:hover {
+        background-color: darken($subsite-primary, 5%) !important;
+      }
+    }
+  }
+
+  // date picker - general
+  .DateRangePicker {
+    td.CalendarDay__selected {
+      color: $subsite-link-color;
+
+      &:before {
+        border: 2px solid $subsite-link-color;
+      }
+    }
+
+    @if $subsite-light-theme {
+      td.CalendarDay__selected_span {
+        background: darken($subsite-primary, 10%);
+
+        &:hover {
+          border: 1px double darken($subsite-primary, 10%);
+        }
+      }
+    } @else {
+      td.CalendarDay__selected_span {
+        background: $subsite-primary-a0;
+
+        &:hover {
+          border: 1px double $subsite-primary-a0;
+        }
+      }
+    }
   }
 }

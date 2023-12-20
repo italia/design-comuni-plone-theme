@@ -1,9 +1,9 @@
 @use '../../all_variables' as *;
 
 @mixin headercenter(
-  $subsite-light-theme,
   $subsite-primary,
-  $subsite-primary-text
+  $subsite-primary-text,
+  $subsite-light-theme
 ) {
   .it-header-wrapper {
     .it-header-center-wrapper {
@@ -49,8 +49,10 @@
             &.rounded-icon {
               svg {
                 @if $subsite-light-theme {
+                  color: $subsite-primary-text;
                   fill: $subsite-primary-text;
                 } @else {
+                  color: $subsite-primary;
                   fill: $subsite-primary;
                 }
               }
@@ -84,10 +86,13 @@
           .it-search-wrapper {
             a {
               &.rounded-icon {
+                background-color: $subsite-primary-text;
                 svg {
                   @if $subsite-light-theme {
-                    fill: $subsite-primary-text;
+                    color: color-contrast($subsite-primary-text);
+                    fill: color-contrast($subsite-primary-text);
                   } @else {
+                    color: $subsite-primary;
                     fill: $subsite-primary;
                   }
                 }

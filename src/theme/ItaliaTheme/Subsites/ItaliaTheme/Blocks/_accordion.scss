@@ -1,0 +1,26 @@
+@use '../../all_variables' as *;
+
+@mixin block($subsite-primary, $subsite-link-color, $subsite-light-theme) {
+  .block.accordion {
+    .section.full-width .card .card-body {
+      .accordion-item {
+        .subblock-edit .accordion-header {
+          .title {
+            @if $subsite-light-theme {
+              color: $subsite-link-color;
+            } @else {
+              color: $subsite-primary;
+            }
+          }
+        }
+
+        .accordion-content .link-more a svg {
+          fill: $subsite-link-color;
+        }
+      }
+      .accordion-item.subblock-view .accordion-header button {
+        color: $subsite-link-color;
+      }
+    }
+  }
+}

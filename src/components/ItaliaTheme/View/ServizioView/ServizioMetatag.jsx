@@ -1,19 +1,19 @@
-import { Helmet, toPublicURL } from '@plone/volto/helpers';
+import { Helmet, toPublicURL, isInternalURL } from '@plone/volto/helpers';
 import { getSiteProperty } from 'design-comuni-plone-theme/helpers';
 import { richTextHasContent } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
+const fieldDataToPlainText = (field) => {
+  return field.blocks_layout.items.reduce((accumulator, item, index) => {
+    if (field.blocks[item]['@type'] === 'text') {
+      if (index > 0) accumulator += ' ';
+      accumulator += field.blocks[item].text?.blocks[0].text ?? '';
+    }
+    return accumulator;
+  }, '');
+};
+
 const ServizioMetatag = ({ content }) => {
   const siteTitle = getSiteProperty('siteTitle');
-
-  const fieldDataToPlainText = (field) => {
-    return field.blocks_layout.items.reduce((accumulator, item, index) => {
-      if (field.blocks[item]['@type'] === 'text') {
-        if (index > 0) accumulator += ' ';
-        accumulator += field.blocks[item].text?.blocks[0].text ?? '';
-      }
-      return accumulator;
-    }, '');
-  };
 
   const schemaOrg = {
     '@context': 'https://schema.org',
@@ -49,9 +49,13 @@ const ServizioMetatag = ({ content }) => {
   }
 
   if (content.canale_digitale_link) {
-    schemaOrg.availableChannel.serviceUrl = toPublicURL(
+    schemaOrg.availableChannel.serviceUrl = isInternalURL(
       content.canale_digitale_link,
-    );
+    )
+      ? toPublicURL(content.canale_digitale_link)
+      : content.canale_digitale_link;
+  } else {
+    schemaOrg.availableChannel.serviceUrl = toPublicURL(content['@id']);
   }
 
   if (content.ufficio_responsabile[0]) {

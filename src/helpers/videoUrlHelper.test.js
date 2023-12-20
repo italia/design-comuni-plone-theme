@@ -294,7 +294,7 @@ describe('videoUrlHelper', () => {
     );
 
     expect(placeholder).toBe(
-      'https://img.youtube.com/vi/' + YT_TEST_ID + '/sddefault.jpg',
+      'https://img.youtube.com/vi/' + YT_TEST_ID + '/hqdefault.jpg',
     );
   });
   it('generates vimeo placeholder correctly', async () => {

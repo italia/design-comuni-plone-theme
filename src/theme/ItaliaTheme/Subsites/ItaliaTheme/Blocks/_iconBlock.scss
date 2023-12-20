@@ -1,0 +1,34 @@
+@use '../../all_variables' as *;
+
+@mixin block(
+  $subsite-primary,
+  $subsite-primary-text,
+  $subsite-secondary,
+  $subsite-light-theme
+) {
+  .iconBlocks {
+    .background-image:after {
+      background-color: transparentize($subsite-primary, 0.5);
+    }
+    .block-header {
+      @if $subsite-light-theme {
+        .title {
+          color: $subsite-primary-text;
+        }
+        .description {
+          color: $subsite-primary-text;
+        }
+      } @else {
+        .title {
+          color: color-contrast($subsite-primary-text);
+        }
+        .description {
+          color: color-contrast($subsite-primary-text);
+        }
+      }
+    }
+    .iconblock-icon svg {
+      fill: $subsite-secondary;
+    }
+  }
+}

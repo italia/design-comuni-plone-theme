@@ -18,5 +18,6 @@ jobs:
           curl --fail --request POST \
           --form token=${{ secrets.TOKEN }} \
           --form ref=master \
-          --form "variables[GITHUB_TAG]=${{ steps.get_version.outputs.VERSION }}" \
+          --form "variables[ADDON_NAME]=design-comuni-plone-theme" \
+          --form "variables[ADDON_TAG]=${{ steps.get_version.outputs.VERSION }}" \
           "https://gitlab.com/api/v4/projects/${{ secrets.PROJECT_ID }}/trigger/pipeline"
