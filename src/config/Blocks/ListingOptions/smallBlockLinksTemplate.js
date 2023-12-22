@@ -14,7 +14,7 @@ export const addSmallBlockLinksTemplateOptions = (
   schema,
   formData,
   intl,
-  position = 0,
+  position = 1,
 ) => {
   let pos = position;
 

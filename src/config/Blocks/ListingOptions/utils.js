@@ -66,7 +66,7 @@ export const addSchemaField = (
   title,
   description,
   properties = {},
-  position = 0,
+  position = 1,
   fieldset = 'default',
 ) => {
   let fieldsetIndex = schema.fieldsets.findIndex((x) => x.id === fieldset);
@@ -85,7 +85,7 @@ export const templatesOptions = (
   intl,
   fields,
   fieldsConfig,
-  position = 0,
+  position = 1,
 ) => {
   let pos = position;
 
@@ -150,7 +150,7 @@ export const templatesOptions = (
   return pos;
 };
 
-export const addLighthouseField = (schema, intl, position = 0) => {
+export const addLighthouseField = (schema, intl, position = 1) => {
   let pos = position;
   const fieldset =
     schema.id === 'search' ? 'listingTemplateOptions' : undefined;
