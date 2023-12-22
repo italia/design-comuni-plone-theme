@@ -1,5 +1,23 @@
 
 
+## [11.1.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.1.0...v11.1.1) (2023-12-22)
+
+
+### Bug Fixes
+
+* image sizes too small ([b83e3da](https://github.com/redturtle/design-comuni-plone-theme/commit/b83e3da3dffdac76ec8b67f9b9333d840e380762))
+* recurrence widget ([#445](https://github.com/redturtle/design-comuni-plone-theme/issues/445)) ([201a3ac](https://github.com/redturtle/design-comuni-plone-theme/commit/201a3acf5934ff727bcef9053e46c478e339b8f1))
+
+
+### Maintenance
+
+* update customizations ([bf8c37f](https://github.com/redturtle/design-comuni-plone-theme/commit/bf8c37fec68811eab25c7777f04320be1bee046a))
+
+
+### Documentation
+
+* updated publiccode ([5f7a4eb](https://github.com/redturtle/design-comuni-plone-theme/commit/5f7a4eb48a26f96a6653f7cd755ac486782277f8))
+
 ## [11.1.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.0.2...v11.1.0) (2023-12-20)
 
 
