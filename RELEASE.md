@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione 11.1.1 (22/12/2023)
+
+### Fix
+
+- Risolto un problema con la dimensione delle immagini, che risultava in alcuni casi troppo piccola causando immagini sgranate
+
 ## Versione 11.0.1 (19/12/2023)
 
 ### Fix

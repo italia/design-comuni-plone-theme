@@ -22,8 +22,7 @@ export const CardPersona = ({
 }) => {
   const image = ListingImage({
     item,
-    maxSize: 300,
-    useOriginal: false,
+    sizes: '130px',
   });
 
   const hasImage = image !== null && showImage;
