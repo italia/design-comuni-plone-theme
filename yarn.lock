@@ -6577,7 +6577,7 @@ __metadata:
     volto-editablefooter: 5.0.3
     volto-feedback: 0.1.5
     volto-form-block: 3.1.0
-    volto-gdpr-privacy: "collective/volto-gdpr-privacy#dfc41daebd4e9821121f6725afd0f04e4c9fdcdc"
+    volto-gdpr-privacy: "collective/volto-gdpr-privacy#a8a060a244581918812485daa08d969268642701"
     volto-google-analytics: 2.0.0
     volto-multilingual-widget: 3.0.0
     volto-querywidget-with-browser: 0.4.0
@@ -14443,15 +14443,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-gdpr-privacy@collective/volto-gdpr-privacy#dfc41daebd4e9821121f6725afd0f04e4c9fdcdc":
+"volto-gdpr-privacy@collective/volto-gdpr-privacy#a8a060a244581918812485daa08d969268642701":
   version: 2.1.1
-  resolution: "volto-gdpr-privacy@https://github.com/collective/volto-gdpr-privacy.git#commit=dfc41daebd4e9821121f6725afd0f04e4c9fdcdc"
+  resolution: "volto-gdpr-privacy@https://github.com/collective/volto-gdpr-privacy.git#commit=a8a060a244581918812485daa08d969268642701"
   dependencies:
     react-focus-lock: 2.9.4
     volto-multilingual-widget: 3.0.0
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: e890d9930c8e6784b37e04e1b8a54f93041a6ce0bcdcf77f56ca6a00dcb13dd3b43ec11b98fd58aebf46e246cb84abafe01177d61e8a2a2b6e057ae3ec92e6fb
+  checksum: 1b67b13987fae008cc6e6a3d5ccc6458f2253cfb800356028ba9103127b66939ae96b93e86bbaec660745217d8d3e9c926ca96446744c3199aaaf3b65643a85c
   languageName: node
   linkType: hard
 
