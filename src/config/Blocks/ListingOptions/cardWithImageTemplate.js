@@ -30,7 +30,7 @@ export const addCardWithImageTemplateOptions = (
   schema,
   formData,
   intl,
-  position = 0,
+  position = 1,
 ) => {
   let pos = position;
 
