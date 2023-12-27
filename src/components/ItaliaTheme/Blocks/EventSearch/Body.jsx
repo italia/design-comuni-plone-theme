@@ -159,54 +159,60 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
           'public-ui': inEditMode,
         })}
       >
-        <div className="d-flex justify-content-center">
-          <div className="d-flex search-container align-items-center justify-content-center flex-wrap">
-            {filterOne && (
-              <>
-                {React.createElement(filterOne.widget.component, {
-                  ...filterOne.widget?.props,
-                  id: 'filterOne',
-                  onChange: (filter, value) => {
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            doRequest(1);
+          }}
+        >
+          <div className="d-flex justify-content-center">
+            <div className="d-flex search-container align-items-center justify-content-center flex-wrap">
+              {filterOne && (
+                <>
+                  {React.createElement(filterOne.widget.component, {
+                    ...filterOne.widget?.props,
+                    id: 'filterOne',
+                    onChange: (filter, value) => {
+                      dispatchFilter({
+                        filter: filter,
+                        value: value,
+                      });
+                    },
+                  })}
+                </>
+              )}
+              {filterTwo &&
+                React.createElement(filterTwo.widget?.component, {
+                  ...filterTwo.widget?.props,
+                  id: 'filterTwo',
+                  onChange: (filter, value) =>
                     dispatchFilter({
                       filter: filter,
                       value: value,
-                    });
-                  },
+                    }),
                 })}
-              </>
-            )}
-            {filterTwo &&
-              React.createElement(filterTwo.widget?.component, {
-                ...filterTwo.widget?.props,
-                id: 'filterTwo',
-                onChange: (filter, value) =>
-                  dispatchFilter({
-                    filter: filter,
-                    value: value,
-                  }),
-              })}
-            {filterThree &&
-              React.createElement(filterThree.widget?.component, {
-                ...filterThree.widget?.props,
-                id: 'filterThree',
-                onChange: (filter, value) =>
-                  dispatchFilter({
-                    filter: filter,
-                    value: value,
-                  }),
-              })}
+              {filterThree &&
+                React.createElement(filterThree.widget?.component, {
+                  ...filterThree.widget?.props,
+                  id: 'filterThree',
+                  onChange: (filter, value) =>
+                    dispatchFilter({
+                      filter: filter,
+                      value: value,
+                    }),
+                })}
 
-            <Button
-              color={data.button_color || 'tertiary'}
-              icon={false}
-              tag="button"
-              onClick={() => doRequest(1)}
-              className="my-2 my-lg-1"
-            >
-              {intl.formatMessage(messages.find)}
-            </Button>
+              <Button
+                color={data.button_color || 'tertiary'}
+                icon={false}
+                tag="button"
+                className="my-2 my-lg-1"
+              >
+                {intl.formatMessage(messages.find)}
+              </Button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
 
       {!loading ? (
