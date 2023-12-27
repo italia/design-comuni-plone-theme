@@ -36,7 +36,7 @@ export const addSimpleCardTemplateOptions = (
   schema,
   formData,
   intl,
-  position = 0,
+  position = 1,
 ) => {
   let pos = position;
   pos = addLighthouseField(schema, intl, pos);

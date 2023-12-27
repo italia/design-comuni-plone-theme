@@ -31,7 +31,7 @@ const messages = defineMessages({
 
 /** DEFAULT **/
 
-const addDefaultOptions = (schema, formData = {}, intl, position = 0) => {
+const addDefaultOptions = (schema, formData = {}, intl, position = 1) => {
   let listing_items_colors =
     config.blocks.blocksConfig.listing?.listing_items_colors || [];
   let listing_bg_colors =
