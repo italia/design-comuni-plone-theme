@@ -1,0 +1,53 @@
+@use '../../all_variables' as *;
+
+@mixin megamenu($subsite-light-theme, $subsite-primary, $subsite-primary-text) {
+  // external link stule
+  .navbar {
+    &.has-megamenu {
+      li.nav-item {
+        &.active {
+          .dropdown {
+            a.nav-link {
+              border-color: $subsite-primary-text;
+            }
+          }
+        }
+      }
+    }
+
+    .dropdown-menu {
+      .link-list-wrapper {
+        .link-list {
+          &.bordered {
+            li {
+              border-bottom-color: rgba($subsite-primary, 0.2);
+
+              &:hover,
+              &:active,
+              a.active {
+                background-color: rgba($subsite-primary, 0.06);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .megamenu {
+    .megamenu-toggle-icon {
+      fill: $subsite-primary-text;
+    }
+  }
+
+  @if $subsite-light-theme {
+  } @else {
+    @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+      .megamenu {
+        .megamenu-toggle-icon {
+          fill: $subsite-primary;
+        }
+      }
+    }
+  }
+}

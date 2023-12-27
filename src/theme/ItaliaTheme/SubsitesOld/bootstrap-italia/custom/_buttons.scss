@@ -1,0 +1,109 @@
+@use '../../all_variables' as *;
+
+@mixin buttons(
+  $subsite-light-theme,
+  $subsite-primary,
+  $subsite-primary-text,
+  $subsite-secondary,
+  $subsite-secondary-text,
+  $subsite-tertiary,
+  $subsite-tertiary-text
+) {
+  //button primary
+  $subsite-button-primary: $subsite-primary;
+  @if $subsite-light-theme {
+    $subsite-button-primary: darken($subsite-primary, 10);
+  }
+  $subsite-button-primary-text: $subsite-primary-text;
+
+  //button secondary
+  $subsite-button-secondary: $subsite-secondary;
+  $subsite-button-secondary-text: $subsite-secondary-text;
+
+  //button tertiary
+  $subsite-button-tertiary: $subsite-tertiary;
+  $subsite-button-tertiary-text: $subsite-tertiary-text;
+
+  a.btn-primary,
+  .btn-primary {
+    @include button-variant(
+      $background: $subsite-button-primary,
+      $border: $subsite-button-primary-text,
+      $hover-background: lighten($subsite-button-primary, 7.5%),
+      $hover-border: darken($subsite-button-primary-text, 10%),
+      $active-background: lighten($subsite-button-primary, 10%),
+      $active-border: darken($subsite-button-primary-text, 12.5%)
+    );
+    color: $subsite-button-primary-text !important;
+
+    .icon {
+      color: $subsite-button-primary-text;
+      fill: $subsite-button-primary-text;
+    }
+
+    &:hover {
+      color: darken($subsite-button-primary-text, 10%) !important;
+
+      .icon {
+        color: darken($subsite-button-primary-text, 10%);
+        fill: darken($subsite-button-primary-text, 10%);
+      }
+    }
+
+    &.disabled,
+    &:disabled {
+      color: darken($subsite-button-primary-text, 10%);
+    }
+  }
+
+  a.btn-secondary,
+  .btn-secondary {
+    @include button-variant(
+      $background: $subsite-button-secondary,
+      $border: $subsite-button-secondary-text,
+      $hover-background: lighten($subsite-button-secondary, 7.5%),
+      $hover-border: darken($subsite-button-secondary-text, 10%),
+      $active-background: lighten($subsite-button-secondary, 10%),
+      $active-border: darken($subsite-button-secondary-text, 12.5%)
+    );
+    color: $subsite-button-secondary-text;
+
+    .icon {
+      color: $subsite-button-secondary-text;
+      fill: $subsite-button-secondary-text;
+    }
+
+    &:hover {
+      color: darken($subsite-button-secondary-text, 10%);
+
+      .icon {
+        color: darken($subsite-button-secondary-text, 10%);
+        fill: darken($subsite-button-secondary-text, 10%);
+      }
+    }
+
+    &.disabled,
+    &:disabled {
+      color: darken($subsite-button-secondary-text, 10%);
+    }
+  }
+
+  a.btn-outline-primary,
+  .btn-outline-primary {
+    @if $subsite-light-theme {
+      @include button-outline-variant(darken($subsite-button-primary, 40));
+    } @else {
+      @include button-outline-variant($subsite-button-primary);
+    }
+  }
+
+  a.btn-outline-secondary,
+  .btn-outline-secondary {
+    @include button-outline-variant($subsite-button-secondary);
+  }
+
+  a.btn-outline-tertiary,
+  .btn-outline-tertiary {
+    @include button-outline-variant($subsite-button-tertiary);
+  }
+}

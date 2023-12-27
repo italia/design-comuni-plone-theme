@@ -1,0 +1,7 @@
+@use '../../all_variables' as *;
+
+@mixin dropdown($subsite-link-color) {
+  .btn-dropdown {
+    color: $subsite-link-color;
+  }
+}

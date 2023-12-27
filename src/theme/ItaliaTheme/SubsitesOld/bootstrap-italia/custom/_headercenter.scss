@@ -1,0 +1,101 @@
+@use '../../all_variables' as *;
+
+@mixin headercenter(
+  $subsite-light-theme,
+  $subsite-primary,
+  $subsite-primary-text
+) {
+  .it-header-wrapper {
+    .it-header-center-wrapper {
+      background-color: $subsite-primary;
+
+      .it-header-center-content-wrapper {
+        .it-brand-wrapper {
+          a {
+            color: $subsite-primary-text;
+
+            .icon {
+              display: flex;
+              align-items: center;
+              margin-bottom: 0;
+              color: $subsite-primary-text;
+              fill: $subsite-primary-text;
+            }
+          }
+        }
+
+        //right zone
+        .it-right-zone {
+          color: $subsite-primary-text;
+
+          .it-socials {
+            ul {
+              .icon {
+                color: $subsite-primary-text;
+                fill: $subsite-primary-text;
+              }
+            }
+          }
+        }
+
+        //-search
+
+        .it-search-wrapper {
+          a {
+            &.search-link {
+              outline: $subsite-primary 2px solid !important;
+            }
+
+            &.rounded-icon {
+              svg {
+                @if $subsite-light-theme {
+                  fill: $subsite-primary-text;
+                } @else {
+                  fill: $subsite-primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //Tablet horizontal / small desktop
+    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+      .it-header-center-wrapper {
+        .it-header-center-content-wrapper {
+          //right zone
+          .it-right-zone {
+            .it-socials {
+              ul {
+                a {
+                  &:hover {
+                    svg {
+                      color: darken($subsite-primary-text, 5%);
+                      fill: darken($subsite-primary-text, 5%);
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          //-search
+          .it-search-wrapper {
+            a {
+              &.rounded-icon {
+                svg {
+                  @if $subsite-light-theme {
+                    fill: $subsite-primary-text;
+                  } @else {
+                    fill: $subsite-primary;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

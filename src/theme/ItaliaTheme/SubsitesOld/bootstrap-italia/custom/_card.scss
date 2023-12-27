@@ -1,0 +1,23 @@
+@use '../../all_variables' as *;
+
+@mixin card($subsite-primary, $subsite-link-color) {
+  // flag
+  .flag-icon {
+    background: $subsite-primary;
+  }
+
+  // read more text
+  a.read-more {
+    color: $subsite-link-color;
+
+    .icon {
+      fill: $subsite-link-color;
+    }
+  }
+
+  a {
+    .card .card-body .card-title a:hover {
+      color: darken($subsite-link-color, 10%);
+    }
+  }
+}

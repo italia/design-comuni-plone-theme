@@ -1,0 +1,25 @@
+@use '../../all_variables' as *;
+
+@mixin navbar($subsite-primary) {
+  .it-header-wrapper {
+    //Tablet horizontal / small desktop
+    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+      .it-header-navbar-wrapper {
+        background: $subsite-primary;
+      }
+    }
+
+    //Mobile - Hamburger Menu
+    @media (max-width: #{map-get($grid-breakpoints, sm)}) {
+      .it-nav-wrapper .it-header-navbar-wrapper {
+        margin-right: 0.8rem;
+        margin-left: 0.8rem;
+
+        nav {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

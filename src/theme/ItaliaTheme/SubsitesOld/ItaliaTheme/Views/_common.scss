@@ -1,0 +1,65 @@
+@use '../../all_variables' as *;
+
+@mixin common(
+  $subsite-primary,
+  $subsite-secondary,
+  $subsite-tertiary,
+  $subsite-link-color
+) {
+  .card-title {
+    a {
+      color: $subsite-link-color;
+    }
+  }
+
+  .genericcard {
+    .card-title {
+      a {
+        color: $subsite-link-color;
+      }
+    }
+  }
+
+  .link-list-wrapper {
+    ul {
+      li {
+        button.btn-link {
+          color: $subsite-link-color;
+
+          &:hover {
+            color: $subsite-link-color;
+
+            .icon {
+              fill: $subsite-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .style_ol_list {
+    ol {
+      li {
+        &:before {
+          color: $subsite-secondary;
+        }
+
+        &:after {
+          background-color: $subsite-secondary;
+        }
+      }
+    }
+  }
+
+  .icon-argument-container {
+    .show-icon {
+      color: $subsite-tertiary;
+    }
+
+    svg {
+      color: $subsite-tertiary;
+      fill: $subsite-tertiary;
+    }
+  }
+}
