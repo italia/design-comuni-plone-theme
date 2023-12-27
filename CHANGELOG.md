@@ -1,5 +1,23 @@
 
 
+## [11.1.3](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.1.1...v11.1.3) (2023-12-27)
+
+
+### Bug Fixes
+
+* listing options order ([#449](https://github.com/redturtle/design-comuni-plone-theme/issues/449)) ([226c67e](https://github.com/redturtle/design-comuni-plone-theme/commit/226c67ee53d2d982b33ad214458b82ec892ddd2b))
+* restored old mixin to avoid compulsory update of all subsites ([#450](https://github.com/redturtle/design-comuni-plone-theme/issues/450)) ([99fe070](https://github.com/redturtle/design-comuni-plone-theme/commit/99fe070a381e7c459e1a53e84b25cb8792219c56))
+
+
+### Documentation
+
+* updated publiccode ([0abde1f](https://github.com/redturtle/design-comuni-plone-theme/commit/0abde1f6cb9182e8595000eee193e4fa05ddf1e6))
+
+
+### Maintenance
+
+* release 11.1.2 ([08b3f2e](https://github.com/redturtle/design-comuni-plone-theme/commit/08b3f2e03aba8a76d8e5b7db68fa3575492548c2))
+
 ## [11.1.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.1.0...v11.1.1) (2023-12-22)
 
 
