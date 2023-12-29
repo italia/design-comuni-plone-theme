@@ -35,20 +35,3 @@
     cursor: pointer;
   }
 }
-
-.modal-dialog {
-  .modal-header {
-    align-items: flex-start;
-
-    button.btn-close {
-      display: flex;
-      width: fit-content;
-      align-items: center;
-      background: none;
-
-      span {
-        font-size: 50px;
-      }
-    }
-  }
-}
