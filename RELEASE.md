@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Risolto il problema di layout nelle card che indicano dei luoghi.
+
 ## Versione 11.1.1 (22/12/2023)
 
 ### Fix
