@@ -1,5 +1,20 @@
 
 
+## [11.1.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.1.3...v11.1.4) (2024-01-05)
+
+
+### Bug Fixes
+
+* allow submit when pressing enter key in search blocks ([#451](https://github.com/RedTurtle/design-comuni-plone-theme/issues/451)) ([947f983](https://github.com/RedTurtle/design-comuni-plone-theme/commit/947f9837d532017f5dcb3f25826ea56d6bb2e93b))
+* backwards compatibility for background color var of Alert block ([#459](https://github.com/RedTurtle/design-comuni-plone-theme/issues/459)) ([7cf6626](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7cf6626131276a79b765fc6f9a102522d7d9ed56))
+* changed max width of card-body to fit image ([#453](https://github.com/RedTurtle/design-comuni-plone-theme/issues/453)) ([d836021](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d83602136fa6800758184e1b6b403f363062654b))
+* removed style that hides modal close icon ([#455](https://github.com/RedTurtle/design-comuni-plone-theme/issues/455)) ([59dd922](https://github.com/RedTurtle/design-comuni-plone-theme/commit/59dd922b1120a87febaca51a1fb337c85cb4b9c8))
+
+
+### Maintenance
+
+* preparing relase 11.1.4 ([2edb3c7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2edb3c7e7c840c63f00c2fadac0781c5e33b35c0))
+
 ## [11.1.3](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.1.1...v11.1.3) (2023-12-27)
 
 
