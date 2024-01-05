@@ -41,7 +41,7 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.1.4 (dd/mm/yyyy)
 
 ### Fix
 
