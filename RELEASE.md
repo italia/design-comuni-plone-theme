@@ -58,6 +58,18 @@
 ### Novità
 
 - Modificata l'altezza delle immagini delle card, per essere in linea con i template agid.
+## Versione 11.1.4 (dd/mm/yyyy)
+
+### Fix
+
+- Risolto il problema di layout nelle card che indicano dei luoghi.
+
+## Versione 11.1.1 (22/12/2023)
+
+### Fix
+
+- Risolto un problema con la dimensione delle immagini, che risultava in alcuni casi troppo piccola causando immagini sgranate
+
 ## Versione 11.0.1 (19/12/2023)
 
 ### Fix

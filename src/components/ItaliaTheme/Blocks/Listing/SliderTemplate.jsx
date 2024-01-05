@@ -353,7 +353,7 @@ const SliderTemplate = ({
                 const image = ListingImage({
                   item,
                   loading: index === 0 ? 'eager' : 'lazy',
-                  sizes: `max-width(980px) 600px, ${1200 / nSlidesToShow}px`,
+                  sizes: `max-width(991px) 620px, ${1300 / nSlidesToShow}px`,
                   critical: true,
                 });
                 return (

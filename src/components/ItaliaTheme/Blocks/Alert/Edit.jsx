@@ -35,10 +35,10 @@ const Edit = (props) => {
     if (!data.bg_color) {
       onChangeBlock(block, {
         ...data,
-        bg_color: 'warning',
+        bg_color: data.color ?? 'warning',
       });
     }
-  }, []);
+  }, [data, onChangeBlock, block]);
 
   return __SERVER__ ? (
     <div />

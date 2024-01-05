@@ -1,0 +1,120 @@
+@use 'bootstrap-italia/custom/header' as bs-header;
+@use 'bootstrap-italia/custom/headercenter' as bs-headercenter;
+@use 'bootstrap-italia/brand-text' as bs-brandtext;
+@use 'bootstrap-italia/custom/headernavbar' as bs-headernavbar;
+@use 'bootstrap-italia/custom/headerslim' as bs-headerslim;
+@use 'bootstrap-italia/custom/navigation' as bs-navigation;
+@use 'bootstrap-italia/custom/nav' as bs-nav;
+@use 'bootstrap-italia/custom/megamenu' as bs-megamenu;
+@use 'bootstrap-italia/custom/buttons' as bs-buttons;
+@use 'bootstrap-italia/custom/chips' as bs-chips;
+@use 'bootstrap-italia/custom/card' as bs-card;
+@use 'bootstrap-italia/custom/dropdown' as bs-dropdown;
+@use 'bootstrap-italia/custom/linklist' as bs-linklist;
+@use 'bootstrap-italia/custom/navscroll' as bs-navscroll;
+@use 'ItaliaTheme/Components/subsiteFooter' as it-footer;
+@use 'ItaliaTheme/Blocks/cardWithImageAndInEvidence' as it-card-image-evidence;
+@use 'ItaliaTheme/Blocks/completeBlockLinktemplate' as it-complete-link;
+@use 'ItaliaTheme/Blocks/ribbonCardTemplate' as it-ribbon-card;
+@use 'ItaliaTheme/Blocks/highlitedContent' as it-highlight;
+@use 'ItaliaTheme/Blocks/argumentsInEvidence' as it-args-evidence;
+@use 'ItaliaTheme/Blocks/searchSections' as it-search-sections;
+@use 'ItaliaTheme/Views/common' as it-views;
+@use 'ItaliaTheme/common' as it-common;
+
+@mixin old-define-subsite(
+  $subsite-style,
+  $subsite-primary: $primary,
+  $subsite-primary-text: $primary-text,
+  $subsite-secondary: $secondary,
+  $subsite-secondary-text: $secondary-text,
+  $subsite-tertiary: $tertiary,
+  $subsite-tertiary-text: $tertiary-text,
+  $subsite-link-color: $link-color,
+  $subsite-light-theme: false
+) {
+  body.subsite-#{$subsite-style} {
+    &,
+    .public-ui {
+      @include bs-header.header(
+        $subsite-light-theme,
+        $subsite-primary,
+        $subsite-primary-text
+      );
+      @include bs-headercenter.headercenter(
+        $subsite-light-theme,
+        $subsite-primary,
+        $subsite-primary-text
+      );
+      @include bs-brandtext.text($subsite-primary, $subsite-primary-text);
+      @include bs-headernavbar.navbar($subsite-primary);
+      @include bs-headerslim.header($subsite-primary-text);
+      @include bs-navigation.nav(
+        $subsite-light-theme,
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-link-color
+      );
+      @include bs-nav.nav($subsite-link-color);
+      @include bs-megamenu.megamenu(
+        $subsite-light-theme,
+        $subsite-primary,
+        $subsite-primary-text
+      );
+      @include bs-buttons.buttons(
+        $subsite-light-theme,
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-secondary,
+        $subsite-secondary-text,
+        $subsite-tertiary,
+        $subsite-tertiary-text
+      );
+      @include bs-chips.chips(
+        $subsite-light-theme,
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-secondary,
+        $subsite-secondary-text
+      );
+      @include bs-card.card($subsite-primary, $subsite-link-color);
+      @include bs-dropdown.dropdown($subsite-link-color);
+      @include bs-linklist.linklist($subsite-primary, $subsite-link-color);
+      @include bs-navscroll.navscroll($subsite-link-color);
+      @include it-footer.footer($subsite-primary, $subsite-primary-text);
+      @include it-card-image-evidence.card($subsite-link-color);
+      @include it-complete-link.block(
+        $subsite-secondary,
+        $subsite-secondary-text
+      );
+      @include it-ribbon-card.card($subsite-link-color);
+      @include it-highlight.block($subsite-link-color);
+      @include it-args-evidence.block($subsite-primary, $subsite-primary-text);
+      @include it-search-sections.block(
+        $subsite-primary,
+        $subsite-secondary,
+        $subsite-secondary-text
+      );
+      @include it-views.common(
+        $subsite-primary,
+        $subsite-secondary,
+        $subsite-tertiary,
+        $subsite-link-color
+      );
+      @include it-common.common($subsite-tertiary, $subsite-tertiary-text);
+
+      a,
+      &.cms-ui .public-ui a {
+        color: $subsite-link-color;
+
+        &:hover {
+          color: color-hover($subsite-link-color);
+        }
+      }
+
+      .icon-primary {
+        fill: $subsite-primary !important;
+      }
+    }
+  }
+}

@@ -38,6 +38,12 @@
         }
       }
     }
+
+    &.search {
+      .search-wrapper .autocomplete-icon .icon {
+        fill: $subsite-primary;
+      }
+    }
   }
 
   .event-search,
@@ -55,6 +61,7 @@
             }
           }
         }
+
         .date-filter {
           .DateRangePickerInput {
             .DateInput_input {
@@ -87,6 +94,7 @@
               }
             }
           }
+
           .date-filter {
             .DateRangePickerInput {
               .DateInput_input {

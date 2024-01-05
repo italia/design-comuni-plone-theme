@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-12-18T16:06:10.430Z\n"
+"POT-Creation-Date: 2024-01-05T13:41:34.010Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -32,9 +32,40 @@ msgstr ""
 msgid "Alert"
 msgstr ""
 
+#: config/Slate/Alignment/AlignMenu
+# defaultMessage: Allinea a destra
+msgid "Allinea a destra"
+msgstr ""
+
+#: config/Slate/Alignment/AlignMenu
+# defaultMessage: Allinea a sinistra
+msgid "Allinea a sinistra"
+msgstr ""
+
+#: config/Slate/Alignment/AlignMenu
+# defaultMessage: Allinea al centro
+msgid "Allinea al centro"
+msgstr ""
+
+#: config/Slate/Alignment/AlignMenu
+# defaultMessage: Allinea il testo giustificato
+msgid "Allinea il testo giustificato"
+msgstr ""
+
+#: config/Slate/Alignment/AlignMenu
+#: config/Slate/Alignment/index
+# defaultMessage: Allineamento
+msgid "Allineamento"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Allow Externals
 msgid "Allow Externals"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/HtmlSlateWidget
+# defaultMessage: An error has occurred while editing "{name}" field. We have been notified and we are looking into it. Please save your work and retry. If the issue persists please contact the site administrator.
+msgid "An error has occurred while editing "{name}" field. We have been notified and we are looking into it. Please save your work and retry. If the issue persists please contact the site administrator."
 msgstr ""
 
 #: config/Blocks/ListingOptions/simpleCardTemplate
@@ -60,6 +91,16 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 # defaultMessage: Block style
 msgid "Block style"
+msgstr ""
+
+#: config/Slate/Blockquote/BlockquoteMenu
+# defaultMessage: Blockquote
+msgid "Blockquote"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Callout/Sidebar
+# defaultMessage: Callout
+msgid "Callout"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
@@ -191,11 +232,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 # defaultMessage: Download
 msgid "Download"
-msgstr ""
-
-#: config/RichTextEditor/Plugins/AnchorPlugin/components/LinkButton/AddLinkForm
-# defaultMessage: Enter URL or select an item
-msgid "Enter URL or select an item"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
@@ -520,11 +556,6 @@ msgstr ""
 msgid "Seguici su"
 msgstr ""
 
-#: config/RichTextEditor/Plugins/AnchorPlugin/components/LinkButton/AddLinkForm
-# defaultMessage: Seleziona un data-element ID
-msgid "Select a data-element ID"
-msgstr ""
-
 #: components/ItaliaTheme/Search/SearchCTs
 # defaultMessage: Seleziona tutti i tipi di contenuti o nessuno
 msgid "Select all content types or none"
@@ -594,6 +625,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: config/Blocks/ListingOptions/defaultOptions
+#: config/Slate/Headings/HeadingsMenu
 # defaultMessage: Titolo
 msgid "Titolo"
 msgstr ""
@@ -620,23 +652,26 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
-#: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
+#: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Edit
 # defaultMessage: Digita la descrizione…
 msgid "Type description…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Alert/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
+#: components/ItaliaTheme/Blocks/Callout/Edit
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
-#: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
+#: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Edit
+#: components/ItaliaTheme/manage/Widgets/SimpleTextEditorWidget
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
 # defaultMessage: Digita il testo…
 msgid "Type text…"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Callout/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
-#: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
+#: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Edit
 # defaultMessage: Type the title…
 msgid "Type the title…"
 msgstr ""
@@ -1096,6 +1131,21 @@ msgstr ""
 msgid "calendar_prev_arrow"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Callout/Sidebar
+# defaultMessage: Stile
+msgid "callout_style"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Callout/Sidebar
+# defaultMessage: Base
+msgid "callout_style_basic"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Callout/Sidebar
+# defaultMessage: In evidenza
+msgid "callout_style_highlight"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/CanaleDigitaleWidget
 # defaultMessage: Accedere al servizio
 msgid "canale_digitale_widget_title"
@@ -1200,9 +1250,25 @@ msgstr ""
 msgid "codice_ipa"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Callout/Sidebar
+# defaultMessage: Colore
+msgid "color"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
+#: components/ItaliaTheme/Blocks/Callout/Sidebar
 # defaultMessage: Rosso
 msgid "color_danger"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Callout/Sidebar
+# defaultMessage: Default
+msgid "color_default"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Callout/Sidebar
+# defaultMessage: Note
+msgid "color_note"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
@@ -1216,12 +1282,18 @@ msgstr ""
 msgid "color_primary"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Callout/Sidebar
+# defaultMessage: Success
+msgid "color_success"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Trasparente
 msgid "color_transparent"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
+#: components/ItaliaTheme/Blocks/Callout/Sidebar
 # defaultMessage: Giallo
 msgid "color_warning"
 msgstr ""
@@ -2171,6 +2243,7 @@ msgstr ""
 msgid "html_block"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Callout/Sidebar
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 # defaultMessage: Icona
 msgid "icon"
@@ -2345,6 +2418,21 @@ msgstr ""
 msgid "login_agid_other_description"
 msgstr ""
 
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: CIE
+msgid "login_cie"
+msgstr ""
+
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: Log in with CIE.
+msgid "login_cie_description"
+msgstr ""
+
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: How to activate CIE
+msgid "login_cie_help"
+msgstr ""
+
 #: components/ItaliaTheme/LoginAgid/LoginAgid
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 # defaultMessage: Log in as employee
@@ -2364,6 +2452,11 @@ msgstr ""
 #: components/ItaliaTheme/LoginAgid/LoginAgidButtons
 # defaultMessage: How to activate SPID
 msgid "login_spid_help"
+msgstr ""
+
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: Login with CIE
+msgid "login_with_cie"
 msgstr ""
 
 #: components/ItaliaTheme/LoginAgid/LoginAgidButtons
@@ -3167,7 +3260,7 @@ msgid "search_startDate"
 msgstr ""
 
 #: helpers/Translations/searchBlockExtendedTranslations
-# defaultMessage: Ricerca per: <em>{searchedtext}</em>.
+# defaultMessage: Ricerca per: <em>{searchedtext}</em>. 
 msgid "searchedFor"
 msgstr ""
 
@@ -3746,11 +3839,6 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Termini del procedimento
 msgid "termini_del_procedimento"
-msgstr ""
-
-#: config/RichTextEditor/ToolbarButtons/TextSizeButton
-# defaultMessage: Dimensione del testo
-msgid "text-size-button"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/TextFilter

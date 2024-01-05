@@ -1,5 +1,80 @@
 ## [11.0.0-alpha.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.0.0-alpha.1...v11.0.0-alpha.2) (2023-11-29)
 
+## [11.1.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.1.3...v11.1.4) (2024-01-05)
+
+
+### Bug Fixes
+
+* allow submit when pressing enter key in search blocks ([#451](https://github.com/RedTurtle/design-comuni-plone-theme/issues/451)) ([947f983](https://github.com/RedTurtle/design-comuni-plone-theme/commit/947f9837d532017f5dcb3f25826ea56d6bb2e93b))
+* backwards compatibility for background color var of Alert block ([#459](https://github.com/RedTurtle/design-comuni-plone-theme/issues/459)) ([7cf6626](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7cf6626131276a79b765fc6f9a102522d7d9ed56))
+* changed max width of card-body to fit image ([#453](https://github.com/RedTurtle/design-comuni-plone-theme/issues/453)) ([d836021](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d83602136fa6800758184e1b6b403f363062654b))
+* removed style that hides modal close icon ([#455](https://github.com/RedTurtle/design-comuni-plone-theme/issues/455)) ([59dd922](https://github.com/RedTurtle/design-comuni-plone-theme/commit/59dd922b1120a87febaca51a1fb337c85cb4b9c8))
+
+
+### Maintenance
+
+* preparing relase 11.1.4 ([2edb3c7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2edb3c7e7c840c63f00c2fadac0781c5e33b35c0))
+
+## [11.1.3](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.1.1...v11.1.3) (2023-12-27)
+
+
+### Bug Fixes
+
+* listing options order ([#449](https://github.com/redturtle/design-comuni-plone-theme/issues/449)) ([226c67e](https://github.com/redturtle/design-comuni-plone-theme/commit/226c67ee53d2d982b33ad214458b82ec892ddd2b))
+* restored old mixin to avoid compulsory update of all subsites ([#450](https://github.com/redturtle/design-comuni-plone-theme/issues/450)) ([99fe070](https://github.com/redturtle/design-comuni-plone-theme/commit/99fe070a381e7c459e1a53e84b25cb8792219c56))
+
+
+### Documentation
+
+* updated publiccode ([0abde1f](https://github.com/redturtle/design-comuni-plone-theme/commit/0abde1f6cb9182e8595000eee193e4fa05ddf1e6))
+
+
+### Maintenance
+
+* release 11.1.2 ([08b3f2e](https://github.com/redturtle/design-comuni-plone-theme/commit/08b3f2e03aba8a76d8e5b7db68fa3575492548c2))
+
+## [11.1.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.1.0...v11.1.1) (2023-12-22)
+
+
+### Bug Fixes
+
+* image sizes too small ([b83e3da](https://github.com/redturtle/design-comuni-plone-theme/commit/b83e3da3dffdac76ec8b67f9b9333d840e380762))
+* recurrence widget ([#445](https://github.com/redturtle/design-comuni-plone-theme/issues/445)) ([201a3ac](https://github.com/redturtle/design-comuni-plone-theme/commit/201a3acf5934ff727bcef9053e46c478e339b8f1))
+
+
+### Maintenance
+
+* update customizations ([bf8c37f](https://github.com/redturtle/design-comuni-plone-theme/commit/bf8c37fec68811eab25c7777f04320be1bee046a))
+
+
+### Documentation
+
+* updated publiccode ([5f7a4eb](https://github.com/redturtle/design-comuni-plone-theme/commit/5f7a4eb48a26f96a6653f7cd755ac486782277f8))
+
+## [11.1.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.0.2...v11.1.0) (2023-12-20)
+
+
+### Features
+
+* login with cie ([#443](https://github.com/redturtle/design-comuni-plone-theme/issues/443)) ([21dae70](https://github.com/redturtle/design-comuni-plone-theme/commit/21dae707b3207a0fed69ea6b4b39289ee0b1d90e))
+
+
+### Documentation
+
+* updated publiccode ([5d169c7](https://github.com/redturtle/design-comuni-plone-theme/commit/5d169c78920a25f5765ae281400bea3aa0e6be1a))
+
+## [11.0.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.0.1...v11.0.2) (2023-12-20)
+
+
+### Bug Fixes
+
+* subsite mixin styles ([#442](https://github.com/redturtle/design-comuni-plone-theme/issues/442)) ([84719fe](https://github.com/redturtle/design-comuni-plone-theme/commit/84719fe08521076c62e09c2ad1fd840fb65e6f45))
+
+
+### Documentation
+
+* updated publiccode ([aed0730](https://github.com/redturtle/design-comuni-plone-theme/commit/aed073008414c8ca7f4b726410ec20f9333ff297))
+
 ## [11.0.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.0.0...v11.0.1) (2023-12-19)
 
 

@@ -1,0 +1,44 @@
+@use '../../all_variables' as *;
+
+@mixin header($subsite-light-theme, $subsite-primary, $subsite-primary-text) {
+  //mobile
+  .it-header-wrapper {
+    &.it-header-sticky {
+      &.is-sticky {
+        @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+          .it-header-navbar-wrapper {
+            .menu-wrapper {
+              .it-brand-wrapper {
+                &.cloned {
+                  a {
+                    color: $subsite-primary-text;
+
+                    .icon {
+                      fill: $subsite-primary-text;
+                    }
+                  }
+                }
+              }
+
+              .it-search-wrapper {
+                color: $subsite-primary-text;
+
+                a {
+                  &.rounded-icon {
+                    svg {
+                      @if $subsite-light-theme {
+                        fill: $subsite-primary-text;
+                      } @else {
+                        fill: $subsite-primary;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

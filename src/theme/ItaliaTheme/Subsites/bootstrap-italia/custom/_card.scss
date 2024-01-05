@@ -1,6 +1,11 @@
 @use '../../all_variables' as *;
 
 @mixin card($subsite-primary, $subsite-link-color) {
+  //card category
+  .card .card-body .category-top a.category {
+    color: $subsite-link-color;
+  }
+
   // flag
   .flag-icon {
     background: $subsite-primary;

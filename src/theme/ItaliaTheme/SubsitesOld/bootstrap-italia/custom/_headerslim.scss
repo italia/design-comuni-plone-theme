@@ -1,0 +1,42 @@
+@use '../../all_variables' as *;
+
+@mixin header($subsite-primary-text) {
+  &.cms-ui .public-ui {
+    .it-header-slim-wrapper {
+      .it-header-slim-wrapper-content {
+        a {
+          color: $primary-text;
+
+          &:hover {
+            color: $primary-text;
+          }
+        }
+      }
+    }
+  }
+
+  //tablet and desktop
+  @media (min-width: #{map-get($grid-breakpoints, md)}) {
+    .parent-site-menu {
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+
+      li.nav-item {
+        display: flex;
+        max-width: 10rem;
+        align-items: center;
+      }
+    }
+  }
+
+  //mobile
+  @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+    .parent-site-menu {
+      li.nav-item {
+        a.nav-link {
+          color: $subsite-primary-text;
+        }
+      }
+    }
+  }
+}

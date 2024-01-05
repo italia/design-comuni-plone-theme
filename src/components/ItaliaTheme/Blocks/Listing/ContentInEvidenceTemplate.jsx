@@ -65,7 +65,12 @@ const ContentInEvidenceTemplate = (props) => {
           const date = getCalendarDate(item, rrule.rrulestr);
           const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);
           const listingText = <ListingText item={item} />;
-          const image = ListingImage({ item, className: 'item-image' });
+          const image = ListingImage({
+            item,
+            className: 'item-image',
+            loading: 'eager',
+            sizes: '(max-width:425px) 400px, (max-width:767px) 520px, 650px',
+          });
           const icon = getItemIcon(item);
           const BlockExtraTags = getComponentWithFallback({
             name: 'BlockExtraTags',
