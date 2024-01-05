@@ -60,7 +60,7 @@ class Edit extends Component {
   constructor(props) {
     super(props);
     if (!this.props.data.bg_color) {
-      this.props.data.bg_color = 'warning';
+      this.props.data.bg_color = this.props.data.color ?? 'warning'; // backwards compatibility with previous background-color variable name 'color'
     }
     this.blockNode = React.createRef();
   }

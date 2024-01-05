@@ -27,9 +27,11 @@ const View = ({ data, pathname }) => {
       )
     : '';
 
+  const background_color = data.bg_color ?? data.color; // backwards compatibility with previous background-color variable name 'color'
+
   return (
     <section role="alert" className="block alertblock">
-      <div className={cx('full-width', 'bg-alert-' + data.bg_color)}>
+      <div className={cx('full-width', 'bg-alert-' + background_color)}>
         <Container className="p-4 pt-5 pb-5">
           <Row className="align-items-start">
             {data.image?.data && (
