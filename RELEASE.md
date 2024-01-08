@@ -63,6 +63,7 @@
 ### Fix
 
 - Risolto il problema di layout nelle card che indicano dei luoghi.
+- Risolto un problema nel blocco Video Gallery, per cui alcuni video di youtube non erano riproducibili.
 
 ## Versione 11.1.1 (22/12/2023)
 
