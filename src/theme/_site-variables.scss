@@ -42,9 +42,12 @@ $caption-text: #455b71 !default;
 $primary-a0: hsl($primary-h, 62%, 97%) !default;
 
 // ALERT-BLOCK CUSTOM COLORS
-$alert-danger: #a32219;
-$alert-warning: #eb973f;
-$alert-info: #f0c250;
+$alert-danger: #a32219 !default;
+$alert-danger-text: $white !default;
+$alert-warning: #eb973f !default;
+$alert-warning-text: $body-color !default;
+$alert-info: #f0c250 !default;
+$alert-info-text: $body-color !default;
 
 $argument-icon-color: $tertiary !default;
 $argument-icon-bg: #f5f6f7 !default;

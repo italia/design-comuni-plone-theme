@@ -17,26 +17,28 @@
 
     .bg-alert-danger {
       background-color: $alert-danger;
-      color: $white;
+      color: $alert-danger-text;
 
       a {
-        color: $white;
+        color: $alert-danger-text;
       }
     }
 
     .bg-alert-warning {
       background-color: $alert-warning;
+      color: $alert-warning-text;
 
       a {
-        color: $body-color;
+        color: $alert-warning-text;
       }
     }
 
     .bg-alert-info {
       background-color: $alert-info;
+      color: $alert-info-text;
 
       a {
-        color: $body-color;
+        color: $alert-info-text;
       }
     }
 
