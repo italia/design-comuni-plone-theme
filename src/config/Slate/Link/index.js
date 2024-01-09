@@ -79,7 +79,7 @@ const LinkEditor = (props) => {
             editor.selection = newSelection;
             editor.savedSelection = newSelection;
           } catch (e) {
-            //when no link was setted yet, and you clear the select item to link
+            //do nothing when no link was setted yet, and you clear the select item to link
           }
         }}
         onOverrideContent={(c) => {
