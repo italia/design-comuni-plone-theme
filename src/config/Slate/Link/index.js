@@ -1,7 +1,11 @@
-/*Customized LinkEditor to handle data-element*/
+/*Customized LinkEditor to:
+- handle data-element
+- enhance link (enhanced_link_infos)
+*/
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ReactEditor } from 'slate-react';
+import { Transforms } from 'slate';
 import {
   _insertElement,
   _unwrapElement,
@@ -57,17 +61,26 @@ const LinkEditor = (props) => {
             editor.selection = selection;
             insertElement(editor, { url, dataElement, enhanced_link_infos });
           }
-          ReactEditor.focus(editor);
+          // ReactEditor.focus(editor);
+
           dispatch(setPluginOptions(pid, { show_sidebar_editor: false }));
           savedPosition.current = null;
+
+          ReactEditor.deselect(editor);
+          Transforms.collapse(editor, { edge: 'end' });
+          Transforms.insertText(editor, ' ');
         }}
         onClear={() => {
           // clear button was pressed in the link edit popup
-          const newSelection = JSON.parse(
-            JSON.stringify(unwrapElement(editor)),
-          );
-          editor.selection = newSelection;
-          editor.savedSelection = newSelection;
+          try {
+            const newSelection = JSON.parse(
+              JSON.stringify(unwrapElement(editor)),
+            );
+            editor.selection = newSelection;
+            editor.savedSelection = newSelection;
+          } catch (e) {
+            //when no link was setted yet, and you clear the select item to link
+          }
         }}
         onOverrideContent={(c) => {
           dispatch(setPluginOptions(pid, { show_sidebar_editor: false }));
