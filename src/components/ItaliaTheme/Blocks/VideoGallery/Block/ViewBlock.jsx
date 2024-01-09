@@ -6,13 +6,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Embed } from 'semantic-ui-react';
-import {
-  isInternalURL,
-  getParentUrl,
-  flattenToAppURL,
-} from '@plone/volto/helpers';
+import { isInternalURL, getParentUrl } from '@plone/volto/helpers';
 import { ConditionalEmbed } from 'volto-gdpr-privacy';
 import { FontAwesomeIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { videoUrlHelper } from 'design-comuni-plone-theme/helpers';
 import { useIntl, defineMessages } from 'react-intl';
 import config from '@plone/volto/registry';
 
@@ -34,23 +31,36 @@ const messages = defineMessages({
  */
 const ViewBlock = ({ data, index, isEditMode = false }) => {
   const intl = useIntl();
-  let placeholder = data.preview_image
-    ? isInternalURL(data.preview_image)
-      ? `${flattenToAppURL(data.preview_image)}/@@images/image`
-      : data.preview_image
-    : null;
 
-  if (!placeholder && data.url) {
-    if (data.url.match('youtu')) {
-      //load video preview image from youtube
+  let placeholder = null;
+  let videoID = null;
+  let listID = null;
 
-      const videoID = data.url.match(/.be\//)
-        ? data.url.match(/^.*\.be\/(.*)/)?.[1]
-        : data.url.match(/^.*\?v=(.*)$/)?.[1];
-      placeholder = 'https://img.youtube.com/vi/' + videoID + '/hqdefault.jpg';
-    } else if (data.url.match('vimeo')) {
-      const videoID = data.url.match(/^.*\.com\/(.*)/)[1];
-      placeholder = 'https://vumbnail.com/' + videoID + '.jpg';
+  if (data.url) {
+    const [computedID, computedPlaceholder] = videoUrlHelper(
+      data.url,
+      data?.preview_image,
+    );
+    if (computedID) {
+      videoID = computedID;
+    }
+    if (computedPlaceholder) {
+      placeholder = computedPlaceholder;
+    }
+
+    if (data.url.match('list')) {
+      const matches = data.url.match(/^.*\?list=(.*)|^.*&list=(.*)$/);
+      listID = matches[1] || matches[2];
+
+      let thumbnailID = null;
+      if (data.url.match(/\?v=(.*)&list/)) {
+        thumbnailID = data.url.match(/^.*\?v=(.*)&list(.*)/)[1];
+      }
+      if (data.url.match(/\?v=(.*)\?list/)) {
+        thumbnailID = data.url.match(/^.*\?v=(.*)\?list(.*)/)[1];
+      }
+      placeholder =
+        'https://img.youtube.com/vi/' + thumbnailID + '/hqdefault.jpg';
     }
   }
 
@@ -90,31 +100,17 @@ const ViewBlock = ({ data, index, isEditMode = false }) => {
           <>
             {data.url.match('list') ? (
               <Embed
-                url={`https://www.youtube.com/embed/videoseries?list=${
-                  data.url.match(/^.*\?list=(.*)$/)[1]
-                }`}
+                url={`https://www.youtube.com/embed/videoseries?list=${listID}`}
                 {...embedSettings}
               />
             ) : (
-              <Embed
-                id={
-                  data.url.match(/.be\//)
-                    ? data.url.match(/^.*\.be\/(.*)/)?.[1]
-                    : data.url.match(/^.*\?v=(.*)$/)?.[1]
-                }
-                source="youtube"
-                {...embedSettings}
-              />
+              <Embed id={videoID} source="youtube" {...embedSettings} />
             )}
           </>
         ) : (
           <>
             {data.url.match('vimeo') ? (
-              <Embed
-                id={data.url.match(/^.*\.com\/(.*)/)[1]}
-                source="vimeo"
-                {...embedSettings}
-              />
+              <Embed id={videoID} source="vimeo" {...embedSettings} />
             ) : (
               <>
                 {data.url.match('.mp4') ? (
