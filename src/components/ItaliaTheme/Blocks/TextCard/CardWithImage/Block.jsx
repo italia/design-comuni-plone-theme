@@ -1,14 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState, useRef, useEffect } from 'react';
-import {
-  Card,
-  CardBody,
-  CardText,
-  Container,
-  Row,
-  Col,
-} from 'design-react-kit';
+import React, { useState, useEffect } from 'react';
+import { Card, CardBody, Container, Row, Col } from 'design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
@@ -113,7 +106,7 @@ const Block = ({
         )}
       </h2>
       <Card color="white" className="card-bg rounded" noWrapper={false}>
-        <CardBody className="pb-0">
+        <CardBody>
           {inEditMode ? (
             <Container>
               <Row
@@ -123,19 +116,20 @@ const Block = ({
                 })}
               >
                 {hasImage && (
-                  <Col className="py-4 px-0" key={'col-0'}>
+                  <Col className="my-1 px-0" key={'col-0'}>
                     {renderImage(data?.image, hasImage, data?.sizeNatural)}
                   </Col>
                 )}
                 <div
                   key={'col-1'}
-                  className={cx('p-4 mb-2', {
+                  className={cx('px-4 mb-2', {
                     'col-12': !hasImage,
                     'col-8':
                       (hasImage && data?.sizeImage === 's') ||
                       (hasImage && !data?.sizeImage),
                     'col-6': hasImage && data?.sizeImage === 'm',
                     'col-4': hasImage && data?.sizeImage === 'l',
+                    'ps-0': data?.rightImage,
                   })}
                 >
                   <div
@@ -146,29 +140,24 @@ const Block = ({
                       setSelectedField('content');
                     }}
                   >
-                    <CardText
-                      className="simple-text-card text"
-                      style={{ padding: 0 }}
-                    >
-                      <TextEditorWidget
-                        data={data}
-                        fieldName="image_card_content"
-                        selected={selectedField === 'content'}
-                        block={block}
-                        onChangeBlock={(data) => onChange(data)}
-                        placeholder={intl.formatMessage(
-                          messages.image_card_content,
-                        )}
-                        showToolbar={true}
-                        onSelectBlock={onSelectBlock}
-                        onAddBlock={onAddBlock}
-                        index={index}
-                        onFocusNextBlock={onFocusNextBlock}
-                        onFocusPreviousBlock={() => {
-                          setSelectedField('title');
-                        }}
-                      />
-                    </CardText>
+                    <TextEditorWidget
+                      data={data}
+                      fieldName="image_card_content"
+                      selected={selectedField === 'content'}
+                      block={block}
+                      onChangeBlock={(data) => onChange(data)}
+                      placeholder={intl.formatMessage(
+                        messages.image_card_content,
+                      )}
+                      showToolbar={true}
+                      onSelectBlock={onSelectBlock}
+                      onAddBlock={onAddBlock}
+                      index={index}
+                      onFocusNextBlock={onFocusNextBlock}
+                      onFocusPreviousBlock={() => {
+                        setSelectedField('title');
+                      }}
+                    />
                   </div>
                 </div>
               </Row>
@@ -180,28 +169,27 @@ const Block = ({
                   'revert-row': data?.rightImage,
                 })}
               >
-                <Col className="py-4 px-0" key={'col-0'} data-testid={'col-0'}>
+                <Col className="my-1 p-0" key={'col-0'} data-testid={'col-0'}>
                   {renderImage(data?.image, hasImage, data?.sizeNatural)}
                 </Col>
                 <div
                   key={'col-1'}
                   data-testid={'col-1'}
-                  className={cx('p-4', {
+                  className={cx('px-4', {
                     'col-12': !hasImage,
                     'col-8':
                       (hasImage && data?.sizeImage === 's') ||
                       (hasImage && !data?.sizeImage),
                     'col-6': hasImage && data?.sizeImage === 'm',
                     'col-4': hasImage && data?.sizeImage === 'l',
+                    'ps-0': data?.rightImage,
                   })}
                 >
-                  <CardText>
-                    {redraft(
-                      content,
-                      config.settings.richtextViewSettings.ToHTMLRenderers,
-                      config.settings.richtextViewSettings.ToHTMLOptions,
-                    )}
-                  </CardText>
+                  {redraft(
+                    content,
+                    config.settings.richtextViewSettings.ToHTMLRenderers,
+                    config.settings.richtextViewSettings.ToHTMLOptions,
+                  )}
                 </div>
               </Row>
             </Container>
