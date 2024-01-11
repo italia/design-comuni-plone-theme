@@ -1,5 +1,42 @@
 
 
+## [11.2.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.1.4...v11.2.0) (2024-01-11)
+
+
+### Features
+
+* customizable Alert block colors and text color ([#470](https://github.com/redturtle/design-comuni-plone-theme/issues/470)) ([4aa6f76](https://github.com/redturtle/design-comuni-plone-theme/commit/4aa6f7607be0ac8a76f1d519eee82483d9320a05))
+
+
+### Bug Fixes
+
+* a11y for navigation in megamenu and mobile menu ([#456](https://github.com/redturtle/design-comuni-plone-theme/issues/456)) ([6e4c1ef](https://github.com/redturtle/design-comuni-plone-theme/commit/6e4c1efbf96c372bf78a67ecf86ade64b7b2bb6a))
+* **a11y:** a11y - colore sfondo opzione con focus in tendina "ordina per"  ([#457](https://github.com/redturtle/design-comuni-plone-theme/issues/457)) ([d81b3a9](https://github.com/redturtle/design-comuni-plone-theme/commit/d81b3a9f34822242e10942a4acccb5978996a06b))
+* added aria-live and aria-labels for filters in Search page ([#462](https://github.com/redturtle/design-comuni-plone-theme/issues/462)) ([13cf7da](https://github.com/redturtle/design-comuni-plone-theme/commit/13cf7dac5f8aaf5deaee5720ccd2e9a54c6326db))
+* added focus style for skiplinks for a11y ([#458](https://github.com/redturtle/design-comuni-plone-theme/issues/458)) ([94e5cca](https://github.com/redturtle/design-comuni-plone-theme/commit/94e5cca0b671aa5bfc1febf4f51b306f71de43be))
+* aria tags to avoid double feedback on SR ([#468](https://github.com/redturtle/design-comuni-plone-theme/issues/468)) ([867df42](https://github.com/redturtle/design-comuni-plone-theme/commit/867df42a8ae96f0546afb43e12490553648128f7))
+* background color contrast for blocks number, countdown and gallery grid ([#433](https://github.com/redturtle/design-comuni-plone-theme/issues/433)) ([d005222](https://github.com/redturtle/design-comuni-plone-theme/commit/d005222a994d0117f41fcf7d9e93ead1c8e71f1f))
+* broken videos in Video Gallery block ([#461](https://github.com/redturtle/design-comuni-plone-theme/issues/461)) ([e977673](https://github.com/redturtle/design-comuni-plone-theme/commit/e9776738df702dd915e1dab45f3cdbb227fa4a6a))
+* default in white header scss variable ([3194ab8](https://github.com/redturtle/design-comuni-plone-theme/commit/3194ab8139edfadff747494c9609e7b2fa79b057))
+* font and spaces of Card blocks ([#476](https://github.com/redturtle/design-comuni-plone-theme/issues/476)) ([3b45cc8](https://github.com/redturtle/design-comuni-plone-theme/commit/3b45cc890f769ab839f9abd30968ff9ca4ef82e7))
+* listing bg color ([#475](https://github.com/redturtle/design-comuni-plone-theme/issues/475)) ([544be04](https://github.com/redturtle/design-comuni-plone-theme/commit/544be046ddca345f1b0c9073a4a57c876281031b))
+* lowered flex basis of card-body in LocationItem cards ([#460](https://github.com/redturtle/design-comuni-plone-theme/issues/460)) ([697f54c](https://github.com/redturtle/design-comuni-plone-theme/commit/697f54c9f81947898caa27f4aa76dee0b16d0616))
+* toolbar buttons for html block ([#477](https://github.com/redturtle/design-comuni-plone-theme/issues/477)) ([ed41904](https://github.com/redturtle/design-comuni-plone-theme/commit/ed419046c9184387e4daac4de86f8b0cd09924b4))
+
+
+### Maintenance
+
+* **deps:** bump http-cache-semantics from 4.1.0 to 4.1.1 ([#464](https://github.com/redturtle/design-comuni-plone-theme/issues/464)) ([88d5d2c](https://github.com/redturtle/design-comuni-plone-theme/commit/88d5d2c8423ea3052ad2a4ea54623e072a86e0e8))
+* **deps:** bump json5 from 1.0.1 to 1.0.2 ([#467](https://github.com/redturtle/design-comuni-plone-theme/issues/467)) ([1dbc958](https://github.com/redturtle/design-comuni-plone-theme/commit/1dbc9582e49866edc74ff65ce4b96c8218e713d9))
+* **deps:** bump semver from 5.7.1 to 5.7.2 ([#446](https://github.com/redturtle/design-comuni-plone-theme/issues/446)) ([49a6e2f](https://github.com/redturtle/design-comuni-plone-theme/commit/49a6e2f217b779ba4f57ca030335af12b91b7337))
+* **deps:** bump simple-git from 3.14.1 to 3.22.0 ([#465](https://github.com/redturtle/design-comuni-plone-theme/issues/465)) ([6d956dd](https://github.com/redturtle/design-comuni-plone-theme/commit/6d956dda6575f6acd5321b223b67c593db27d1e1))
+* replace react-highlight-words with simple custom code ([#463](https://github.com/redturtle/design-comuni-plone-theme/issues/463)) ([809e92e](https://github.com/redturtle/design-comuni-plone-theme/commit/809e92e647a23dfcfb2d3c15616e17fc32388984))
+
+
+### Documentation
+
+* updated publiccode and release log ([285b7ce](https://github.com/redturtle/design-comuni-plone-theme/commit/285b7ced0dc20b0e6e35d9849ded449913279a83))
+
 ## [11.1.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.1.3...v11.1.4) (2024-01-05)
 
 
