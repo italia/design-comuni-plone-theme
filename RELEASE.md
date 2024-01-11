@@ -51,6 +51,7 @@
 ### Fix
 
 - Risolto un problema nel blocco Video Gallery, per cui alcuni video di youtube non erano riproducibili.
+- È stato migliorato il contrasto minimo necessario tra sfondo e testo nei blocchi numeri, countdown e galleria a griglia.
 
 ## Versione 11.1.4 (05/01/2024)
 
