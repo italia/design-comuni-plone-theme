@@ -65,8 +65,8 @@ import { schemaListing } from 'design-comuni-plone-theme/components/ItaliaTheme/
 
 import reducers from 'design-comuni-plone-theme/reducers';
 
-const ReleaseLog = loadable(
-  () => import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
+const ReleaseLog = loadable(() =>
+  import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
 );
 
 const messages = defineMessages({
@@ -486,10 +486,9 @@ export default function applyConfig(voltoConfig) {
     },
   };
   // Remove Horizontal Menu variation of TOC Block
-  config.blocks.blocksConfig.toc.variations =
-    config.blocks.blocksConfig.toc.variations.filter(
-      (v) => v.id !== 'horizontalMenu',
-    );
+  config.blocks.blocksConfig.toc.variations = config.blocks.blocksConfig.toc.variations.filter(
+    (v) => v.id !== 'horizontalMenu',
+  );
 
   // COMPONENTS
   config.components = {
