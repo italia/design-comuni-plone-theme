@@ -613,7 +613,6 @@ const Search = () => {
             <Col lg={9} tag="section" className="py-lg-5">
               <div
                 className="search-results-wrapper"
-                role="region"
                 id="search-results-region"
                 aria-live="polite"
               >
