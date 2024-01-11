@@ -21,7 +21,7 @@ $font-family-monospace-light: Roboto Mono Light !default;
 
 // Per abilitare l'header bianco impostare a true
 // e impostare "$header-center-bg-color: white" come qui sotto
-$enable-header-white-background: false;
+$enable-header-white-background: false !default;
 // $header-center-bg-color: white;
 // $header-slim-bg-color: #3f3f3f;
 

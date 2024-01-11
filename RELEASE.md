@@ -59,6 +59,14 @@
 
 - Modificata l'altezza delle immagini delle card, per essere in linea con i template agid.
 ## Versione 11.1.4 (dd/mm/yyyy)
+## Versione x.x.x (dd/mm/yyyy)
+
+### Fix
+
+- Diminuita la larghezza del testo nelle card che indicano i luoghi.
+- Risolto un problema nel blocco Video Gallery, per cui alcuni video di youtube non erano riproducibili.
+
+## Versione 11.1.4 (05/01/2024)
 
 ### Fix
 
