@@ -39,10 +39,10 @@ const Collapse = ({
   children,
   isOpen,
   onOverlayClick,
+  showCloseButton = true, // deprecato da v12.0.0
   ...attributes
 }) => {
   const intl = useIntl();
-
   if (navbar && header) {
     const classes = classNames(className, 'navbar-collapse', {
       expanded: isOpen,
@@ -60,16 +60,21 @@ const Collapse = ({
           style={{ display: isOpen ? 'block' : 'none' }}
           onClick={onOverlayClick}
         ></div>
-        <div className="close-div">
-          <button
-            className="btn close-menu"
-            type="button"
-            title={intl.formatMessage(messages.CloseMenu)}
-            onClick={onOverlayClick}
-          >
-            <Icon color="white" icon="it-close-big" padding={false} />
-          </button>
-        </div>
+        {/* Deprecato - non viene più utilizzato da v12.0.0 per ragioni di accessibilità
+          Close button ora presente in Navigation.jsx
+        */}
+        {showCloseButton && (
+          <div className="close-div">
+            <button
+              className="btn close-menu"
+              type="button"
+              title={intl.formatMessage(messages.CloseMenu)}
+              onClick={onOverlayClick}
+            >
+              <Icon color="white" icon="it-close-big" padding={false} />
+            </button>
+          </div>
+        )}
         {children}
       </CollapseBase>
     );
