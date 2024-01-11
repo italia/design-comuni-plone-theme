@@ -151,6 +151,10 @@ const messages = defineMessages({
     id: 'search_skip_to_search_results',
     defaultMessage: 'Vai ai risultati di ricerca',
   },
+  active_filters: {
+    id: 'active_filters',
+    defaultMessage: '{filterNumber} filtri attivati',
+  },
 });
 
 const searchOrderDict = {
@@ -444,11 +448,21 @@ const Search = () => {
                   <div className="pt-4 pt-lg-0">
                     <h6 className="text-uppercase">
                       {intl.formatMessage(messages.sections)}
-                      {activeSections > 0 && (
-                        <span className="badge bg-secondary ms-3">
-                          {activeSections}
-                        </span>
-                      )}
+
+                      <span
+                        className={cx('badge bg-secondary ms-3', {
+                          'visually-hidden': activeSections === 0,
+                        })}
+                        aria-live="polite"
+                        aria-label={intl.formatMessage(
+                          messages.active_filters,
+                          {
+                            filterNumber: activeSections,
+                          },
+                        )}
+                      >
+                        {activeSections}
+                      </span>
                     </h6>
                     <div className="mt-4">
                       <SearchSections
@@ -470,11 +484,21 @@ const Search = () => {
                   >
                     <h6 className="text-uppercase">
                       {intl.formatMessage(messages.topics)}
-                      {activeTopics > 0 && (
-                        <span className="badge bg-secondary ms-3">
-                          {activeTopics}
-                        </span>
-                      )}
+
+                      <span
+                        className={cx('badge bg-secondary ms-3', {
+                          'visually-hidden': activeTopics === 0,
+                        })}
+                        aria-live="polite"
+                        aria-label={intl.formatMessage(
+                          messages.active_filters,
+                          {
+                            filterNumber: activeTopics,
+                          },
+                        )}
+                      >
+                        {activeTopics}
+                      </span>
                     </h6>
                     <div className="form-check mt-4">
                       <SearchTopics
@@ -507,14 +531,21 @@ const Search = () => {
                       <div className="p-3 shadow-sm bg-white">
                         <h6 className="text-uppercase">
                           {intl.formatMessage(messages.content_types)}
-                          {activePortalTypes > 0 && (
-                            <span
-                              className="badge bg-secondary ms-3"
-                              aria-live="polite"
-                            >
-                              {activePortalTypes}
-                            </span>
-                          )}
+
+                          <span
+                            className={cx('badge bg-secondary ms-3', {
+                              'visually-hidden': activePortalTypes === 0,
+                            })}
+                            aria-live="polite"
+                            aria-label={intl.formatMessage(
+                              messages.active_filters,
+                              {
+                                filterNumber: activePortalTypes,
+                              },
+                            )}
+                          >
+                            {activePortalTypes}
+                          </span>
                         </h6>
                         <div className="form-checck mt-4">
                           <SearchCTs

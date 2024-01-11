@@ -43,9 +43,13 @@
 
 ## Versione x.x.x (dd/mm/yyyy)
 
+### Migliorie
+
+- Migliorata l'accessibilità nella pagina di Ricerca.
+- Diminuita la larghezza del testo nelle card che indicano i luoghi.
+
 ### Fix
 
-- Diminuita la larghezza del testo nelle card che indicano i luoghi.
 - Risolto un problema nel blocco Video Gallery, per cui alcuni video di youtube non erano riproducibili.
 
 ## Versione 11.1.4 (05/01/2024)
