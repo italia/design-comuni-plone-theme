@@ -1,5 +1,18 @@
 
 
+## [11.2.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.2.0...v11.2.1) (2024-01-15)
+
+
+### Bug Fixes
+
+* callout style in draftJs ([#481](https://github.com/redturtle/design-comuni-plone-theme/issues/481)) ([34b8de7](https://github.com/redturtle/design-comuni-plone-theme/commit/34b8de7ead0c2639ddd131f2cbb530833546101e))
+* recurrence string and edit recurrence ([#482](https://github.com/redturtle/design-comuni-plone-theme/issues/482)) ([276cbef](https://github.com/redturtle/design-comuni-plone-theme/commit/276cbef5fea86942173e5ba556bbae2cc47bd7a1))
+
+
+### Documentation
+
+* updated publiccode and release log ([01eb885](https://github.com/redturtle/design-comuni-plone-theme/commit/01eb885524bcd54c21edfcdaf56a1a156bfea54a))
+
 ## [11.2.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.1.4...v11.2.0) (2024-01-11)
 
 
