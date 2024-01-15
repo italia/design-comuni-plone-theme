@@ -105,8 +105,16 @@ iframe {
     }
   }
 
-  .callout {
-    box-shadow: none; //override pastanaga styles
+  p.callout {
+    max-width: none;
+    border-left-width: 0.4rem;
+
+    p,
+    .public-DraftStyleDefault-block {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .text-larger {

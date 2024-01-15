@@ -60,6 +60,7 @@
 - Modificata l'altezza delle immagini delle card, per essere in linea con i template agid.
 ## Versione 11.1.4 (dd/mm/yyyy)
 ## Versione x.x.x (dd/mm/yyyy)
+## Versione 11.2.1 (15/01/2024)
 
 ### Migliorie
 
@@ -68,8 +69,9 @@
 ### Fix
 
 - Risolto un problema nell'edit della ricorrenza di un evento.
+- Risolto problema con lo stile "callout", icona megafono dell'editor di testo con sfondo bianco e bordo grigio
 
-## Versione 11.2.0 (11/01/2023)
+## Versione 11.2.0 (11/01/2024)
 
 ### Migliorie
 
