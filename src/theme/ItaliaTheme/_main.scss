@@ -101,7 +101,10 @@ iframe {
     }
   }
 
-  .callout {
+  p.callout {
+    max-width: none;
+    border-left-width: 0.4rem;
+
     p,
     .public-DraftStyleDefault-block {
       &:last-of-type {

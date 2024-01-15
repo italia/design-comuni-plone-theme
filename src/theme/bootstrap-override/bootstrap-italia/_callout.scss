@@ -1,8 +1,8 @@
-.callout {
+div.callout {
+  max-width: none;
   padding: 0; //override volto's style
   border: none;
   border-radius: unset;
   margin: 0;
   box-shadow: none;
-  max-width: none;
 }
