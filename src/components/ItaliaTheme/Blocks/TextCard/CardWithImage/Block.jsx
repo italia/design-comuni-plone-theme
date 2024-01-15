@@ -1,14 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
-import {
-  Card,
-  CardBody,
-  CardText,
-  Container,
-  Row,
-  Col,
-} from 'design-react-kit';
+import { Card, CardBody, Container, Row, Col } from 'design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
@@ -85,7 +78,7 @@ const Block = (props) => {
         )}
       </h2>
       <Card color="white" className="card-bg rounded" noWrapper={false}>
-        <CardBody className="pb-0">
+        <CardBody>
           {inEditMode ? (
             <Container>
               <Row
@@ -95,24 +88,29 @@ const Block = (props) => {
                 })}
               >
                 {hasImage && (
-                  <Col className="py-4 px-0" key={'col-0'}>
+                  <Col className="my-1 px-0" key={'col-0'}>
                     {renderImage(data?.image, hasImage, data?.sizeNatural)}
                   </Col>
                 )}
                 <div
                   key={'col-1'}
-                  className={cx('p-4 mb-2', {
+                  className={cx('px-4 mb-2', {
                     'col-12': !hasImage,
                     'col-8':
                       (hasImage && data?.sizeImage === 's') ||
                       (hasImage && !data?.sizeImage),
                     'col-6': hasImage && data?.sizeImage === 'm',
                     'col-4': hasImage && data?.sizeImage === 'l',
+                    'ps-0': data?.rightImage,
                   })}
                 >
-                  <CardText
-                    className="simple-text-card text"
-                    style={{ padding: 0 }}
+                  <div
+                    onClick={() => {
+                      setSelectedField('image_card_content');
+                    }}
+                    onFocus={() => {
+                      setSelectedField('image_card_content');
+                    }}
                   >
                     <TextEditorWidget
                       {...otherProps}
@@ -130,7 +128,7 @@ const Block = (props) => {
                         setSelectedField('image_card_title');
                       }}
                     />
-                  </CardText>
+                  </div>
                 </div>
               </Row>
             </Container>
@@ -141,24 +139,23 @@ const Block = (props) => {
                   'revert-row': data?.rightImage,
                 })}
               >
-                <Col className="py-4 px-0" key={'col-0'} data-testid={'col-0'}>
+                <Col className="my-1 p-0" key={'col-0'} data-testid={'col-0'}>
                   {renderImage(data?.image, hasImage, data?.sizeNatural)}
                 </Col>
                 <div
                   key={'col-1'}
                   data-testid={'col-1'}
-                  className={cx('p-4', {
+                  className={cx('px-4', {
                     'col-12': !hasImage,
                     'col-8':
                       (hasImage && data?.sizeImage === 's') ||
                       (hasImage && !data?.sizeImage),
                     'col-6': hasImage && data?.sizeImage === 'm',
                     'col-4': hasImage && data?.sizeImage === 'l',
+                    'ps-0': data?.rightImage,
                   })}
                 >
-                  <CardText>
-                    <TextBlockView data={{ value: content }} />
-                  </CardText>
+                  <TextBlockView data={{ value: content }} />
                 </div>
               </Row>
             </Container>

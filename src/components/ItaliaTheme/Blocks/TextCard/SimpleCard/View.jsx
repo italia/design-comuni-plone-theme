@@ -30,11 +30,8 @@ const TextCardView = ({ data, id, block }) => {
             <CardTitle tag="h4" id={id + '-title'}>
               {data.simple_card_title}
             </CardTitle>
-            <div>
-              <CardText>
-                <TextBlockView data={{ value: data.simple_card_content }} />
-              </CardText>
-            </div>
+            <hr />
+            <TextBlockView data={{ value: data.simple_card_content }} />
           </CardBody>
         </Card>
       </div>

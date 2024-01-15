@@ -61,10 +61,27 @@
 ## Versione 11.1.4 (dd/mm/yyyy)
 ## Versione x.x.x (dd/mm/yyyy)
 
+### Migliorie
+
+- Migliorata il testo della ricorrenza di un evento.
+
 ### Fix
 
+- Risolto un problema nell'edit della ricorrenza di un evento.
+
+## Versione 11.2.0 (11/01/2023)
+
+### Migliorie
+
+- Migliorata l'accessibilità nella pagina di Ricerca.
 - Diminuita la larghezza del testo nelle card che indicano i luoghi.
+
+### Fix
+
 - Risolto un problema nel blocco Video Gallery, per cui alcuni video di youtube non erano riproducibili.
+- Risolto problema nel funzionamento della toolbar per il blocco HTML.
+- Sistemate spaziature e font su mobile del blocco Card con Immagine e Card Semplice, migliorato il layout di quest'ultimo.
+- È stato migliorato il contrasto minimo necessario tra sfondo e testo nei blocchi numeri, countdown e galleria a griglia.
 
 ## Versione 11.1.4 (05/01/2024)
 

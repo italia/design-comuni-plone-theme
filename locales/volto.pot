@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-01-05T13:41:34.010Z\n"
+"POT-Creation-Date: 2024-01-11T13:44:40.490Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -762,6 +762,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Actions
 # defaultMessage: Vedi azioni
 msgid "actions"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: {filterNumber} filtri attivati
+msgid "active_filters"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
@@ -2974,6 +2979,36 @@ msgstr ""
 msgid "risultati_indagini_customer_satisfaction"
 msgstr ""
 
+#: overrideTranslations
+# defaultMessage: il giorno
+msgid "rrule_in"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: _
+msgid "rrule_nd"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: il
+msgid "rrule_on the"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: _
+msgid "rrule_rd"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: _
+msgid "rrule_st"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: _
+msgid "rrule_th"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 # defaultMessage: No results from RSS feed.
@@ -3260,7 +3295,7 @@ msgid "search_startDate"
 msgstr ""
 
 #: helpers/Translations/searchBlockExtendedTranslations
-# defaultMessage: Ricerca per: <em>{searchedtext}</em>. 
+# defaultMessage: Ricerca per: <em>{searchedtext}</em>.
 msgid "searchedFor"
 msgstr ""
 

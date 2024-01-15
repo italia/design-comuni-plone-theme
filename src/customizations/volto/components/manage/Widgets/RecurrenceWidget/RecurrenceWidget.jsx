@@ -436,17 +436,17 @@ class RecurrenceWidget extends Component {
         case 'until':
           let mDate = null;
           if (value) {
-            mDate = this.moment(new Date(value));
+            mDate = moment(new Date(value));
             if (typeof value === 'string') {
-              mDate = this.moment(new Date(value));
+              mDate = moment(new Date(value));
             } else {
               //object-->Date()
-              mDate = this.moment(value);
+              mDate = moment(value);
             }
 
             if (this.props.formData.end) {
               //set time from formData.end
-              const mEnd = this.moment(new Date(this.props.formData.end));
+              const mEnd = moment(new Date(this.props.formData.end));
               mDate.set('hour', mEnd.get('hour'));
               mDate.set('minute', mEnd.get('minute'));
             }

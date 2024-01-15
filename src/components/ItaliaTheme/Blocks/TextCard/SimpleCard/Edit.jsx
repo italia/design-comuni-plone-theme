@@ -6,10 +6,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { Card, CardBody, CardTitle, CardText } from 'design-react-kit';
+import { Card, CardBody, CardTitle } from 'design-react-kit';
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import BodyWrapper from './BodyWrapper';
 import { useHandleDetachedBlockFocus } from 'design-comuni-plone-theme/helpers/blocks';
+import { Divider } from 'semantic-ui-react';
 
 const messages = defineMessages({
   simple_card_title: {
@@ -31,14 +32,8 @@ const messages = defineMessages({
  * @extends Component
  */
 const Edit = (props) => {
-  const {
-    data,
-    onChangeBlock,
-    block,
-    onSelectBlock,
-    selected,
-    ...otherProps
-  } = props;
+  const { data, onChangeBlock, block, onSelectBlock, selected, ...otherProps } =
+    props;
   const intl = useIntl();
 
   const { selectedField, setSelectedField } = useHandleDetachedBlockFocus(
@@ -59,7 +54,7 @@ const Edit = (props) => {
           tag="div"
         >
           <CardBody>
-            <div className="cms-ui">
+            <div className="simple-text-card cms-ui">
               <CardTitle tag="h4">
                 <TextEditorWidget
                   {...otherProps}
@@ -77,26 +72,23 @@ const Edit = (props) => {
                   }}
                 />
               </CardTitle>
+              <Divider />
               <div>
-                <CardText>
-                  <TextEditorWidget
-                    {...otherProps}
-                    showToolbar={true}
-                    data={data}
-                    fieldName="simple_card_content"
-                    selected={selectedField === 'simple_card_content'}
-                    setSelected={setSelectedField}
-                    block={block}
-                    onChangeBlock={onChangeBlock}
-                    onSelectBlock={onSelectBlock}
-                    placeholder={intl.formatMessage(
-                      messages.simple_card_content,
-                    )}
-                    focusPrevField={() => {
-                      setSelectedField('simple_card_title');
-                    }}
-                  />
-                </CardText>
+                <TextEditorWidget
+                  {...otherProps}
+                  showToolbar={true}
+                  data={data}
+                  fieldName="simple_card_content"
+                  selected={selectedField === 'simple_card_content'}
+                  setSelected={setSelectedField}
+                  block={block}
+                  onChangeBlock={onChangeBlock}
+                  onSelectBlock={onSelectBlock}
+                  placeholder={intl.formatMessage(messages.simple_card_content)}
+                  focusPrevField={() => {
+                    setSelectedField('simple_card_title');
+                  }}
+                />
               </div>
             </div>
           </CardBody>

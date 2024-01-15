@@ -771,6 +771,11 @@ msgstr ""
 msgid "actions"
 msgstr "Ver acciones"
 
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: {filterNumber} filtri attivati
+msgid "active_filters"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Vai alla ricerca per sezioni avanzata
 msgid "advandedSectionsFilters"
@@ -2980,6 +2985,36 @@ msgstr "Derechos"
 # defaultMessage: Risultati indagini di customer satisfaction
 msgid "risultati_indagini_customer_satisfaction"
 msgstr "Resultados de la encuesta de satisfacción del cliente"
+
+#: overrideTranslations
+# defaultMessage: il giorno
+msgid "rrule_in"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: _
+msgid "rrule_nd"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: il
+msgid "rrule_on the"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: _
+msgid "rrule_rd"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: _
+msgid "rrule_st"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: _
+msgid "rrule_th"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
