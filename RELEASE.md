@@ -41,6 +41,16 @@
 - ...
 -->
 
+## Versione x.x.x (dd/mm/yyyy)
+
+### Migliorie
+
+- Migliorata il testo della ricorrenza di un evento.
+
+### Fix
+
+- Risolto un problema nell'edit della ricorrenza di un evento.
+
 ## Versione 11.2.0 (11/01/2023)
 
 ### Migliorie
