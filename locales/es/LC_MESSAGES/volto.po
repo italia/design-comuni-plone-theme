@@ -2245,11 +2245,6 @@ msgstr "Inserta un filtro del menú lateral para ver los resultados relacionados
 msgid "iter_del_procedimento"
 msgstr "Procedimiento"
 
-#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
-# defaultMessage: {value}:
-msgid "label"
-msgstr ""
-
 #: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Servizi o uffici di riferimento
 msgid "legami_altre_strutture"

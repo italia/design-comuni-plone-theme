@@ -45,6 +45,7 @@
 
 ### Novità
 
+- Aggiunto un campo descrizione nei punti di contatto per aiutare nella disambiguazione.
 - Ora per gli eventi è obbligatorio inserire il campo "Luoghi correlati" oppure compilare i campi dell'indirizzo.
 
 ### Fix

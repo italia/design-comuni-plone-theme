@@ -61,6 +61,7 @@
             }
           }
         }
+
         .date-filter {
           .DateRangePickerInput {
             .DateInput_input {
@@ -93,6 +94,7 @@
               }
             }
           }
+
           &.date-filter {
             .DateRangePickerInput {
               .DateInput_input {
@@ -108,6 +110,7 @@
               }
             }
           }
+
           &.date-filter .DateRangePickerInput {
             .DateInput_input {
               color: $subsite-secondary-text !important;
