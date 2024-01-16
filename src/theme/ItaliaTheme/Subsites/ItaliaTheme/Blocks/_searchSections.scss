@@ -81,7 +81,7 @@
 
     .bg-secondary {
       .search-container {
-        .filter-wrapper {
+        &.filter-wrapper {
           .select-filter {
             .react-select__control {
               .react-select__placeholder {
@@ -93,7 +93,7 @@
               }
             }
           }
-          .date-filter {
+          &.date-filter {
             .DateRangePickerInput {
               .DateInput_input {
                 color: $subsite-secondary-text;
@@ -106,6 +106,16 @@
               .DateRangePickerInput_clearDates svg {
                 fill: $subsite-secondary-text;
               }
+            }
+          }
+          &.date-filter .DateRangePickerInput {
+            .DateInput_input {
+              color: $subsite-secondary-text !important;
+            }
+
+            .DateRangePickerInput_arrow .DateRangePickerInput_arrow_svg,
+            .DateRangePickerInput_clearDates svg {
+              fill: $subsite-secondary-text !important;
             }
           }
         }

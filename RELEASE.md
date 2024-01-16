@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Migliorati gli stili per i sottositi.
+
 ## Versione 11.2.1 (15/01/2024)
 
 ### Migliorie
