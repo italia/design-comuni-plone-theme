@@ -43,6 +43,10 @@
 
 ## Versione X.X.X (dd/mm/yyyy)
 
+### Novità
+
+- Ora per gli eventi è obbligatorio inserire il campo "Luoghi correlati" oppure compilare i campi dell'indirizzo.
+
 ### Fix
 
 - Migliorati gli stili per i sottositi.

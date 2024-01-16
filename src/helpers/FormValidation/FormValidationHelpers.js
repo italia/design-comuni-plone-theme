@@ -254,4 +254,102 @@ export const eventFormValidationHelper = (
       errors['end'].push(formatMessage(customValidationMessages.event_end));
     }
   }
+
+  // Validazione dei campi obbligatori per il luogo
+  const fullMandatoryList = [
+    'luoghi_correlati',
+    'nome_sede',
+    'street',
+    'zip_code',
+    'city',
+    'country',
+  ];
+
+  // Luoghi correlati è stato modificato
+  if ('luoghi_correlati' in touchedField) {
+    if (
+      isEmpty(touchedField.luoghi_correlati) &&
+      // Se siamo qui vuol dire che luoghi correlati è stato svuotato.
+      (isEmpty(formData.nome_sede) ||
+        isEmpty(formData.street) ||
+        isEmpty(formData.zip_code) ||
+        isEmpty(formData.city) ||
+        isEmpty(formData.country))
+    ) {
+      // Se gli altri non sono tutti compilati, li metto tutti obbligatori
+      fields.push(...fullMandatoryList);
+    }
+  }
+  // Uno dei campi dell'indirizzo viene compilato.
+  // Per ciascuno controllo se luoghi_correlati è compilato.
+  // Se non lo è e ne manca almeno uno degli altri, metto tutto obbligatorio.
+  // Per ciascuno uso il touchedField quando è stato modificato lui stesso,
+  // mentre controllo da formData per gli altri.
+  else if ('nome_sede' in touchedField) {
+    if (
+      isEmpty(formData.luoghi_correlati) &&
+      (isEmpty(touchedField.nome_sede) ||
+        isEmpty(formData.street) ||
+        isEmpty(formData.zip_code) ||
+        isEmpty(formData.city) ||
+        isEmpty(formData.country))
+    ) {
+      fields.push(...fullMandatoryList);
+    }
+  } else if ('street' in touchedField) {
+    if (
+      isEmpty(formData.luoghi_correlati) &&
+      (isEmpty(formData.nome_sede) ||
+        isEmpty(touchedField.street) ||
+        isEmpty(formData.zip_code) ||
+        isEmpty(formData.city) ||
+        isEmpty(formData.country))
+    ) {
+      fields.push(...fullMandatoryList);
+    }
+  } else if ('zip_code' in touchedField) {
+    if (
+      isEmpty(formData.luoghi_correlati) &&
+      (isEmpty(formData.nome_sede) ||
+        isEmpty(formData.street) ||
+        isEmpty(touchedField.zip_code) ||
+        isEmpty(formData.city) ||
+        isEmpty(formData.country))
+    ) {
+      fields.push(...fullMandatoryList);
+    }
+  } else if ('city' in touchedField) {
+    if (
+      isEmpty(formData.luoghi_correlati) &&
+      (isEmpty(formData.nome_sede) ||
+        isEmpty(formData.street) ||
+        isEmpty(formData.zip_code) ||
+        isEmpty(touchedField.city) ||
+        isEmpty(formData.country))
+    ) {
+      fields.push(...fullMandatoryList);
+    }
+  } else if ('country' in touchedField) {
+    if (
+      isEmpty(formData.luoghi_correlati) &&
+      (isEmpty(formData.nome_sede) ||
+        isEmpty(formData.street) ||
+        isEmpty(formData.zip_code) ||
+        isEmpty(formData.city) ||
+        isEmpty(touchedField.country))
+    ) {
+      fields.push(...fullMandatoryList);
+    }
+  }
+  // Il campo modificato è un altro, faccio un check base su tutti i campi
+  else if (
+    isEmpty(formData.luoghi_correlati) &&
+    (isEmpty(formData.nome_sede) ||
+      isEmpty(formData.street) ||
+      isEmpty(formData.zip_code) ||
+      isEmpty(formData.city) ||
+      isEmpty(formData.country))
+  ) {
+    fields.push(...fullMandatoryList);
+  }
 };

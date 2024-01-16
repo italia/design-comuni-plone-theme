@@ -2405,6 +2405,11 @@ msgstr "Logo"
 msgid "luoghi_correlati"
 msgstr "Luoghi correlati"
 
+#: components/ItaliaTheme/manage/Widgets/LuoghiCorrelatiEventoWidget
+# defaultMessage: Luogo dell'evento
+msgid "luoghi_correlati_evento_widget_title"
+msgstr "Luogo dell'evento"
+
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
 # defaultMessage: Luoghi
 msgid "luoghi_notizia"
