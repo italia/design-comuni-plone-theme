@@ -1,5 +1,25 @@
 
 
+## [11.3.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.2.1...v11.3.0) (2024-01-16)
+
+
+### Features
+
+* add new widget for event luoghi_correlati with custom form validation ([#485](https://github.com/redturtle/design-comuni-plone-theme/issues/485)) ([bea6407](https://github.com/redturtle/design-comuni-plone-theme/commit/bea64070b1cfe86781fd99c15cb492f34f95e4ff))
+* aggiunta descrizione nei punti di contatto ([#483](https://github.com/redturtle/design-comuni-plone-theme/issues/483)) ([3528f15](https://github.com/redturtle/design-comuni-plone-theme/commit/3528f15e902dfa58239be7ad309817e6c16556f7))
+
+
+### Bug Fixes
+
+* removed date filters previously set with getCalendarResults ([#487](https://github.com/redturtle/design-comuni-plone-theme/issues/487)) ([42aa789](https://github.com/redturtle/design-comuni-plone-theme/commit/42aa7898d5dfdee8017df5ec408cff326bba4d1f))
+* selectors for search block styles and added styles for dates ([#486](https://github.com/redturtle/design-comuni-plone-theme/issues/486)) ([b46fc68](https://github.com/redturtle/design-comuni-plone-theme/commit/b46fc6895dfddb9f6bd8d9a37569b8b56f3ccde5))
+* upgraded volto-dropdownmenu to 4.1.1 ([d3918e6](https://github.com/redturtle/design-comuni-plone-theme/commit/d3918e63c820ebe73835a7fdd335cd44d0e82f9f))
+
+
+### Documentation
+
+* updated publiccode and release log ([e6ea0d5](https://github.com/redturtle/design-comuni-plone-theme/commit/e6ea0d57cf6b9780989a01bfb87974ad34eceee6))
+
 ## [11.2.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.2.0...v11.2.1) (2024-01-15)
 
 
