@@ -51,6 +51,7 @@
 ### Fix
 
 - Migliorati gli stili per i sottositi.
+- Risolto un problema con i filtri per data nel blocco Calendario.
 
 ## Versione 11.2.1 (15/01/2024)
 
