@@ -40,6 +40,11 @@ const Item = ({ day, path, query, inEditMode, data }) => {
   const dayStart = _day.startOf('day').format('YYYY/MM/DD HH:mm');
   const dayEnd = _day.endOf('day').format('YYYY/MM/DD HH:mm');
 
+  // remove date filters previously set for getCalendarResults in Body
+  const filtersWithoutDate = query.query.filter(
+    (el) => !el.o.includes('.date.'),
+  );
+
   useDeepCompareEffect(() => {
     dispatch(
       getCalendarDayResults(
@@ -47,7 +52,7 @@ const Item = ({ day, path, query, inEditMode, data }) => {
         {
           ...query,
           query: [
-            ...query.query,
+            ...filtersWithoutDate,
             {
               i: 'start',
               o: 'plone.app.querystring.operation.date.between',
