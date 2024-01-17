@@ -60,6 +60,18 @@
 - Modificata l'altezza delle immagini delle card, per essere in linea con i template agid.
 ## Versione 11.1.4 (dd/mm/yyyy)
 ## Versione x.x.x (dd/mm/yyyy)
+## Versione 11.3.0 (16/01/2024)
+
+### Novità
+
+- Aggiunto un campo descrizione nei punti di contatto per aiutare nella disambiguazione.
+- Ora per gli eventi è obbligatorio inserire il campo "Luoghi correlati" oppure compilare i campi dell'indirizzo.
+
+### Fix
+
+- Migliorati gli stili per i sottositi.
+- Risolto un problema con i filtri per data nel blocco Calendario.
+
 ## Versione 11.2.1 (15/01/2024)
 
 ### Migliorie

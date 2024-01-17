@@ -69,10 +69,6 @@ const messages = defineMessages({
     id: 'twitter',
     defaultMessage: 'Twitter',
   },
-  label: {
-    id: 'label',
-    defaultMessage: '{value}:',
-  },
   contatti: {
     id: 'contatti',
     defaultMessage: 'Contatti',
@@ -112,9 +108,8 @@ const PuntoDiContattoView = (props) => {
                   <h5 className="h6">
                     {messages[pdc?.pdc_type] === undefined
                       ? pdc?.pdc_type
-                      : intl.formatMessage(messages.label, {
-                          value: intl.formatMessage(messages[pdc?.pdc_type]),
-                        })}
+                      : intl.formatMessage(messages[pdc.pdc_type])}
+                    {pdc?.pdc_desc && ` - ${pdc.pdc_desc}`}:
                     <span className="ms-1">{renderPDCItemValue(pdc)}</span>
                   </h5>
                 </div>

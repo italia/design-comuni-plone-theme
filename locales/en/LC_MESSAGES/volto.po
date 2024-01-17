@@ -2309,11 +2309,6 @@ msgstr ""
 msgid "iter_del_procedimento"
 msgstr "Procedure of the procedure"
 
-#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
-# defaultMessage: {value}:
-msgid "label"
-msgstr ""
-
 #: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Servizi o uffici di riferimento
 msgid "legami_altre_strutture"
@@ -2477,6 +2472,11 @@ msgstr ""
 # defaultMessage: Luoghi correlati
 msgid "luoghi_correlati"
 msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/LuoghiCorrelatiEventoWidget
+# defaultMessage: Luogo dell'evento
+msgid "luoghi_correlati_evento_widget_title"
+msgstr "Event location"
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
 # defaultMessage: Luoghi

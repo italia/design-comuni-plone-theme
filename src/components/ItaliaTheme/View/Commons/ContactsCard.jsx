@@ -55,7 +55,10 @@ const ContactsCard = ({ contact = {}, show_title = false, ...rest }) => {
         <CardText>
           {data?.value_punto_contatto.map((pdc, index) => (
             <span key={index}>
-              <strong>{pdc.pdc_type}: </strong>
+              <strong>
+                {pdc.pdc_type}
+                {pdc.pdc_desc ? ` - ${pdc.pdc_desc}` : ''}:{' '}
+              </strong>
               {renderPDCItemValue(pdc)}
             </span>
           )) ?? null}

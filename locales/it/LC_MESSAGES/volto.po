@@ -2309,11 +2309,6 @@ msgstr "Inserire un filtro dal menù laterale per visualizzare i relativi risult
 msgid "iter_del_procedimento"
 msgstr "Iter del procedimento"
 
-#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
-# defaultMessage: {value}:
-msgid "label"
-msgstr "{value}:"
-
 #: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Servizi o uffici di riferimento
 msgid "legami_altre_strutture"
@@ -2477,6 +2472,11 @@ msgstr "Logo"
 # defaultMessage: Luoghi correlati
 msgid "luoghi_correlati"
 msgstr "Luoghi correlati"
+
+#: components/ItaliaTheme/manage/Widgets/LuoghiCorrelatiEventoWidget
+# defaultMessage: Luogo dell'evento
+msgid "luoghi_correlati_evento_widget_title"
+msgstr "Luogo dell'evento"
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
 # defaultMessage: Luoghi
