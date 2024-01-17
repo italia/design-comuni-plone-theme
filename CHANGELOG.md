@@ -1,5 +1,22 @@
 
 
+## [11.3.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.3.0...v11.3.1) (2024-01-17)
+
+
+### Bug Fixes
+
+* override of footer variables, applied fullwidth image styles to image block ([#488](https://github.com/redturtle/design-comuni-plone-theme/issues/488)) ([365984c](https://github.com/redturtle/design-comuni-plone-theme/commit/365984cf9adc417695ba9361e160602f688015e9))
+
+
+### Documentation
+
+* updated publiccode ([92235e6](https://github.com/redturtle/design-comuni-plone-theme/commit/92235e6061f0f8dc92dbc349daf81b1450c99c84))
+
+
+### Maintenance
+
+* added .npmignore ([2946367](https://github.com/redturtle/design-comuni-plone-theme/commit/29463671ae4329db253380bbcbf4c15e001ab85b))
+
 ## [11.3.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.2.1...v11.3.0) (2024-01-16)
 
 
