@@ -63,6 +63,7 @@ const modify = (webpackConfig, { target, dev }, webpackObject) => {
               params: { removeUselessStrokeAndFill: true },
             },
             { name: 'removeViewBox', params: { removeViewBox: false } },
+            'removeDimensions',
           ],
         },
       },

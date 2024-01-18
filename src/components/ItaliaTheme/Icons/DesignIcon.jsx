@@ -41,8 +41,10 @@ const Icon = ({ icon, title, className, size }) => {
     const { current: name } = ImportedIconRef;
     return (
       <svg
-        xmlns={name.attributes && name.attributes.xmlns}
-        viewBox={name.attributes && name.attributes.viewBox}
+        xmlns={name.attributes?.xmlns}
+        viewBox={name.attributes?.viewBox}
+        width={name.attributes?.width}
+        height={name.attributes?.height}
         style={{ height: size, width: 'auto' }}
         className={className}
         aria-hidden="true"

@@ -41,6 +41,20 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ... [`Istruzioni`](url della documentazione relativa alla novità)
+
+### Fix
+
+- Risolto un problema di visualizzazione di alcune icone social.
+
 ## Versione 11.3.0 (16/01/2024)
 
 ### Novità
