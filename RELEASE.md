@@ -41,15 +41,7 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ... [`Istruzioni`](url della documentazione relativa alla novità)
+## Versione 11.3.2 (19/01/2023)
 
 ### Fix
 
