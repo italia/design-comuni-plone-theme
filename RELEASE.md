@@ -55,6 +55,7 @@
 
 - Risolto un problema di visualizzazione di alcune icone social.
 - Risolto un problema con il menù di navigazione del footer, in cui a volte scomparivano le voci di secondo livello.
+- Risolto problema di sovrapposizione del bottone "Chiudi" del menu laterale su mobile quando il menu è chiuso.
 
 ## Versione 11.3.0 (16/01/2024)
 
