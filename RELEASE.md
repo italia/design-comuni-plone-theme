@@ -54,6 +54,7 @@
 ### Fix
 
 - Risolto un problema di visualizzazione di alcune icone social.
+- Risolto un problema con il menù di navigazione del footer, in cui a volte scomparivano le voci di secondo livello.
 
 ## Versione 11.3.0 (16/01/2024)
 
