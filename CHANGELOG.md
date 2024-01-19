@@ -1,5 +1,19 @@
 
 
+## [11.3.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.3.1...v11.3.2) (2024-01-19)
+
+
+### Bug Fixes
+
+* bug when importing svg icons without viewBox ([#489](https://github.com/redturtle/design-comuni-plone-theme/issues/489)) ([8b2cd7d](https://github.com/redturtle/design-comuni-plone-theme/commit/8b2cd7da5e22ffe1ac279f226a872586ac43bc74))
+* close button of menu in mobile showing when menu is closed ([#491](https://github.com/redturtle/design-comuni-plone-theme/issues/491)) ([e398437](https://github.com/redturtle/design-comuni-plone-theme/commit/e3984374d1f6e096dc089f1fb11263d4b372211b))
+* footer second level navigation disappearing ([#490](https://github.com/redturtle/design-comuni-plone-theme/issues/490)) ([39a54be](https://github.com/redturtle/design-comuni-plone-theme/commit/39a54beeae2571d0f9187582a4ab1e4307a9fb0c))
+
+
+### Documentation
+
+* updated publiccode and release log ([b9893ff](https://github.com/redturtle/design-comuni-plone-theme/commit/b9893ff17fc2bc4a0088594e00184dff7ad579b2))
+
 ## [11.3.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.3.0...v11.3.1) (2024-01-17)
 
 
