@@ -41,15 +41,13 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 12.0.0 (dd/mm/yyyy)
 
 ### Migliorie
 
-- ...
-
 ### Novità
 
-- ... [`Istruzioni`](url della documentazione relativa alla novità)
+- Introdotto nuovo editor Slate, al posto di DratJS, per i blocchi di contenuto con formattazione
 
 ### Fix
 
@@ -58,8 +56,7 @@
 ### Novità
 
 - Modificata l'altezza delle immagini delle card, per essere in linea con i template agid.
-## Versione 11.1.4 (dd/mm/yyyy)
-## Versione x.x.x (dd/mm/yyyy)
+
 ## Versione 11.3.2 (19/01/2023)
 
 ### Fix
