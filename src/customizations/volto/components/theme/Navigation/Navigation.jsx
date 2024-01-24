@@ -87,6 +87,12 @@ const Navigation = ({ pathname }) => {
       document.body.removeEventListener('click', blocksClickListener);
   }, []);
 
+  const closeButtonStyle = collapseOpen
+    ? {
+        display: 'block',
+      }
+    : { display: 'none' };
+
   return (
     <Header theme="" type="navbar">
       {menu?.length > 0 ? (
@@ -148,7 +154,7 @@ const Navigation = ({ pathname }) => {
                 {/* Headerslim Menu - parent site (if subsite) */}
                 {subsite && <ParentSiteMenu />}
               </div>
-              <div className="close-div">
+              <div className="close-div" style={closeButtonStyle}>
                 <button
                   className="btn close-menu"
                   type="button"
