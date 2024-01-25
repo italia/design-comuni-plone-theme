@@ -19,8 +19,13 @@ import { PositionedToolbar } from '@plone/volto-slate/editor/ui';
 import AddLinkForm from '@plone/volto/components/manage/AnchorPlugin/components/LinkButton/AddLinkForm';
 import { simpleLinkDeserializer } from 'design-comuni-plone-theme/config/Slate/Link/deserializer';
 const LinkEditor = (props) => {
-  const { editor, pluginId, getActiveElement, unwrapElement, insertElement } =
-    props;
+  const {
+    editor,
+    pluginId,
+    getActiveElement,
+    unwrapElement,
+    insertElement,
+  } = props;
   const pid = `${editor.uid}-${pluginId}`;
   const showEditor = useSelector((state) => {
     return state['slate_plugins']?.[pid]?.show_sidebar_editor;

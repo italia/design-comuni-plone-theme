@@ -43,12 +43,17 @@ const Module = ({ item }) => {
       <CardBody tag="div">
         <CardTitle className="h5">
           {modulo.file_principale ? (
-            <a
-              href={flattenToAppURL(modulo.file_principale.download)}
+            <UniversalLink
+              item={{
+                ...modulo.file_principale,
+                ['@id']: modulo.file_principale.download,
+                ['mime_type']: modulo.file_principale['content-type'],
+                ['getObjSize']: modulo.file_principale.size,
+              }}
               title={modulo.title ?? modulo.file_principale.filename}
             >
               {modulo.title ?? modulo.file_principale.filename}
-            </a>
+            </UniversalLink>
           ) : modulo['@type'] === 'Link' ? (
             <UniversalLink item={modulo} title={modulo.title}>
               {modulo.title}

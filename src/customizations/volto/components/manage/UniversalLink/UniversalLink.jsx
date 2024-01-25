@@ -5,6 +5,7 @@
  * CUSTOMIZATIONS:
  * - aggiunto icona per link esterni
  * - aggiunto title informativo per link esterni
+ * - aggiunta la dimensione del file se il link punta a un file (enhanced_link_infos)
  */
 
 import React from 'react';
@@ -19,7 +20,7 @@ import {
 } from '@plone/volto/helpers/Url/Url';
 import { matchPath } from 'react-router';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-
+import { getFileViewFormat } from 'design-comuni-plone-theme/helpers';
 import config from '@plone/volto/registry';
 const messages = defineMessages({
   opensInNewTab: {
@@ -55,6 +56,8 @@ const UniversalLink = ({
   const token = useSelector((state) => state.userSession?.token);
 
   let url = href;
+  let enhanced_link_infos = null;
+
   if (!href && item) {
     if (!item['@id']) {
       // eslint-disable-next-line no-console
@@ -89,6 +92,21 @@ const UniversalLink = ({
       ) {
         url = `${url}/@@display-file/file`;
       }
+
+      /*enhance link*/
+      if (
+        item &&
+        item.enhanced_links_enabled
+        /*
+        //serve per test
+        item.mime_type &&
+        item.getObjSize */
+      ) {
+        enhanced_link_infos = {};
+        enhanced_link_infos['content-type'] = item.mime_type;
+        enhanced_link_infos.size = item.getObjSize;
+        enhanced_link_infos.filename = item['@id'];
+      }
     }
   }
 
@@ -103,6 +121,19 @@ const UniversalLink = ({
 
   const checkedURL = URLUtils.checkAndNormalizeUrl(url);
   url = checkedURL.url;
+
+  let extended_children = <></>;
+  if (enhanced_link_infos) {
+    const viewFormat = getFileViewFormat(enhanced_link_infos);
+    extended_children = (
+      <span className="enhance-link">
+        {' '}
+        ( <span className="file-format">{viewFormat.label}</span> -{' '}
+        <span className="file-size">{enhanced_link_infos.size}</span>)
+      </span>
+    );
+  }
+
   let tag = (
     <Link
       to={flattenToAppURL(url)}
@@ -113,6 +144,7 @@ const UniversalLink = ({
       {...props}
     >
       {children}
+      {extended_children}
     </Link>
   );
 
@@ -157,6 +189,7 @@ const UniversalLink = ({
         {...props}
       >
         {children}
+        {extended_children}
       </a>
     );
   } else if (isDisplayFile) {
@@ -170,6 +203,7 @@ const UniversalLink = ({
         {...props}
       >
         {children}
+        {extended_children}
       </a>
     );
   }
