@@ -41,25 +41,27 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 12.0.0 (dd/mm/yyyy)
 
 ### Migliorie
 
-- ...
-
 ### Novità
 
-- ... [`Istruzioni`](url della documentazione relativa alla novità)
+- Introdotto nuovo editor Slate, al posto di DratJS, per i blocchi di contenuto con formattazione
 
 ### Fix
 
 - Sistemata la visualizzazione per la barra di Slate, ora è possibile visualizzare tutti i pulsanti anche su schermi più piccoli
 
-### Novità
 
-- Modificata l'altezza delle immagini delle card, per essere in linea con i template agid.
-## Versione 11.1.4 (dd/mm/yyyy)
-## Versione x.x.x (dd/mm/yyyy)
+## Versione 11.3.2 (19/01/2023)
+
+### Fix
+
+- Risolto un problema di visualizzazione di alcune icone social.
+- Risolto un problema con il menù di navigazione del footer, in cui a volte scomparivano le voci di secondo livello.
+- Risolto problema di sovrapposizione del bottone "Chiudi" del menu laterale su mobile quando il menu è chiuso.
+
 ## Versione 11.3.0 (16/01/2024)
 
 ### Novità

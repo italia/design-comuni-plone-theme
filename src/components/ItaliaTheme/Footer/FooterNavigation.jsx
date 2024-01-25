@@ -3,14 +3,11 @@
  * @module components/ItaliaTheme/Footer/FooterNavigation
  */
 
-import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { defineMessages, useIntl } from 'react-intl';
 import { isEqual } from 'lodash';
-import { getBaseUrl } from '@plone/volto/helpers';
-import { getNavigation } from '@plone/volto/actions';
 import { UniversalLink } from '@plone/volto/components';
 import { Row, Col, LinkList, LinkListItem } from 'design-react-kit';
 import { SectionIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
@@ -25,23 +22,15 @@ const messages = defineMessages({
 
 const FooterNavigation = () => {
   const intl = useIntl();
-  const currentLang = useSelector((state) => state.intl.locale);
-  const dispatch = useDispatch();
   const items = useSelector((state) => state.navigation.items, isEqual);
 
-  let path = '';
-  if (config.settings.isMultilingual) {
-    path = '/' + currentLang;
-  }
-
-  useEffect(() => {
-    dispatch(
-      getNavigation(
-        getBaseUrl(path),
-        config.settings.siteProperties.footerNavigationDepth,
-      ),
+  // DEPRECATED: isFooterCollapsed to be removed in version 12
+  if (config.settings.isFooterCollapsed) {
+    // eslint-disable-next-line no-console
+    console.warn(
+      'DEPRECATED: config.settings.isFooterCollapsed will be removed in version 12. Use config.settings.siteProperties.footerNavigationDepth instead.',
     );
-  }, [path, dispatch]);
+  }
 
   return (
     <>
@@ -70,26 +59,29 @@ const FooterNavigation = () => {
                   {item.title}
                 </Link>
               </h4>
-              {!config.settings.isFooterCollapsed && item.items && (
-                <LinkList className="footer-list clearfix" tag="div">
-                  {item.items.map((subitem) => {
-                    return (
-                      <LinkListItem
-                        key={subitem.url}
-                        href={subitem.url}
-                        tag={UniversalLink}
-                        title={
-                          intl.formatMessage(messages.goToPage) +
-                          ': ' +
-                          subitem.title
-                        }
-                      >
-                        {subitem.title}
-                      </LinkListItem>
-                    );
-                  })}
-                </LinkList>
-              )}
+              {/* DEPRECATED: isFooterCollapsed to be removed in version 12 */}
+              {!config.settings.isFooterCollapsed &&
+                config.settings.siteProperties.footerNavigationDepth > 1 &&
+                item.items && (
+                  <LinkList className="footer-list clearfix" tag="div">
+                    {item.items.map((subitem) => {
+                      return (
+                        <LinkListItem
+                          key={subitem.url}
+                          href={subitem.url}
+                          tag={UniversalLink}
+                          title={
+                            intl.formatMessage(messages.goToPage) +
+                            ': ' +
+                            subitem.title
+                          }
+                        >
+                          {subitem.title}
+                        </LinkListItem>
+                      );
+                    })}
+                  </LinkList>
+                )}
             </Col>
           ))}
         </Row>
