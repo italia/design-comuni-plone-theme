@@ -100,7 +100,7 @@ class EditBlock extends SubblockEdit {
                 data={this.props.data}
                 fieldName="title"
                 onChangeBlock={(block, _data) => {
-                  this.onChange({ ...this.props.data, title: _data.value });
+                  this.props.onChangeBlock(this.props.index, _data);
                 }}
                 placeholder={this.props.intl.formatMessage(
                   messages.titlePlaceholder,
@@ -132,7 +132,7 @@ class EditBlock extends SubblockEdit {
                   messages.textPlaceholder,
                 )}
                 onChangeBlock={(block, _data) => {
-                  this.onChange({ ...this.props.data, text: _data.value });
+                  this.props.onChangeBlock(this.props.index, _data);
                 }}
                 selected={this.props.selected && this.state.focusOn === 'text'}
                 setSelected={(f) => this.setState({ focusOn: f })}
@@ -157,7 +157,7 @@ class EditBlock extends SubblockEdit {
                 wrapClass="tel"
                 selected={this.props.selected && this.state.focusOn === 'tel'}
                 onChangeBlock={(block, _data) => {
-                  this.onChange({ ...this.props.data, tel: _data.value });
+                  this.props.onChangeBlock(this.props.index, _data);
                 }}
                 placeholder={this.props.intl.formatMessage(
                   messages.textPlaceholder,
@@ -183,7 +183,7 @@ class EditBlock extends SubblockEdit {
                 fieldName="email"
                 selected={this.props.selected && this.state.focusOn === 'email'}
                 onChangeBlock={(block, _data) => {
-                  this.onChange({ ...this.props.data, email: _data.value });
+                  this.props.onChangeBlock(this.props.index, _data);
                 }}
                 placeholder={this.props.intl.formatMessage(
                   messages.textPlaceholder,
