@@ -6,6 +6,7 @@
  * - aggiunto icona per link esterni
  * - aggiunto title informativo per link esterni
  * - aggiunta la dimensione del file se il link punta a un file (enhanced_link_infos)
+ * - aggiunto il parametro hideFileFormat per nascondere il formato del file dall'enhance link
  */
 
 import React from 'react';
@@ -37,6 +38,7 @@ const UniversalLink = ({
   className = null,
   title = null,
   overrideMarkSpecialLinks = false,
+  hideFileFormat = false,
   ...props
 }) => {
   let translations = {
@@ -94,16 +96,10 @@ const UniversalLink = ({
       }
 
       /*enhance link*/
-      if (
-        item &&
-        item.enhanced_links_enabled
-        /*
-        //serve per test
-        item.mime_type &&
-        item.getObjSize */
-      ) {
+      if (item && item.enhanced_links_enabled) {
         enhanced_link_infos = {};
-        enhanced_link_infos['content-type'] = item.mime_type;
+        enhanced_link_infos['content-type'] =
+          item.mime_type ?? item['content-type'];
         enhanced_link_infos.size = item.getObjSize;
         enhanced_link_infos.filename = item['@id'];
       }
@@ -123,15 +119,28 @@ const UniversalLink = ({
   url = checkedURL.url;
 
   let extended_children = <></>;
+  let aria_label = props['aria-label'];
   if (enhanced_link_infos) {
     const viewFormat = getFileViewFormat(enhanced_link_infos);
     extended_children = (
       <span className="enhance-link">
-        {' '}
-        ( <span className="file-format">{viewFormat.label}</span> -{' '}
-        <span className="file-size">{enhanced_link_infos.size}</span>)
+        {' ('}
+        {!hideFileFormat && (
+          <>
+            <span className="file-format">{viewFormat.label}</span> -{' '}
+          </>
+        )}
+        <span className="file-size">{enhanced_link_infos.size}</span>
+        {')'}
       </span>
     );
+
+    aria_label =
+      (aria_label ? aria_label + ' ' : '') +
+      '(' +
+      viewFormat.label +
+      ') ' +
+      enhanced_link_infos.size;
   }
 
   let tag = (
@@ -142,6 +151,7 @@ const UniversalLink = ({
       className={className}
       smooth={config.settings.hashLinkSmoothScroll}
       {...props}
+      aria-label={aria_label}
     >
       {children}
       {extended_children}
@@ -166,6 +176,7 @@ const UniversalLink = ({
         rel="noopener noreferrer"
         className={className}
         {...props}
+        aria-label={aria_label}
       >
         {children}
         {!overrideMarkSpecialLinks &&
@@ -187,6 +198,7 @@ const UniversalLink = ({
         title={title}
         className={className}
         {...props}
+        aria-label={aria_label}
       >
         {children}
         {extended_children}
@@ -201,6 +213,7 @@ const UniversalLink = ({
         rel="noopener noreferrer"
         className={className}
         {...props}
+        aria-label={aria_label}
       >
         {children}
         {extended_children}

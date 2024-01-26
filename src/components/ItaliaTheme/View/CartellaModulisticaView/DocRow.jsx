@@ -27,9 +27,15 @@ const Downloads = ({ item, titleDoc }) => {
         titleDoc !== item.title && <div className="title">{item.title}</div>
       )}
       <div className="downloads">
-        <DownloadFileFormat file={item?.file_principale} />
-        <DownloadFileFormat file={item?.formato_alternativo_1} />
-        <DownloadFileFormat file={item?.formato_alternativo_2} />
+        <DownloadFileFormat file={item?.file_principale} title={item.title} />
+        <DownloadFileFormat
+          file={item?.formato_alternativo_1}
+          title={item.title}
+        />
+        <DownloadFileFormat
+          file={item?.formato_alternativo_2}
+          title={item.title}
+        />
       </div>
     </React.Fragment>
   ) : (

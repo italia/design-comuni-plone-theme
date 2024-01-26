@@ -75,13 +75,17 @@ $docs-section-margin: 3em;
             justify-content: center;
 
             a {
-              width: 2.4em;
+              // width: 2.4em;
+              margin-left: 0.5rem;
               text-align: center;
 
               svg {
                 width: 1.4rem !important;
                 height: 1.4rem !important;
                 font-size: 1.3em;
+              }
+              .enhance-link {
+                font-size: 0.8rem;
               }
             }
           }

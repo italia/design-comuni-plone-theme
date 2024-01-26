@@ -8,56 +8,56 @@ export const FILE_FORMATS = {
   'text/rtf': { icon: { lib: 'far', name: 'file-alt' }, format_name: 'rtf' },
   'application/rtf': {
     icon: { lib: 'far', name: 'file-alt' },
-    format_name: 'rtf',
+    format_name: 'RTF',
   },
   'application/pdf': {
     icon: { lib: 'far', name: 'file-pdf' },
-    format_name: 'pdf',
+    format_name: 'PDF',
   },
   'application/zip': {
     icon: { lib: 'far', name: 'file-archive' },
-    format_name: 'zip',
+    format_name: 'ZIP',
   },
   'application/x-zip-compressed': {
     icon: { lib: 'far', name: 'file-archive' },
-    format_name: 'zip',
+    format_name: 'ZIP',
   },
   'application/gzip': {
     icon: { lib: 'far', name: 'file-archive' },
-    format_name: 'gzip',
+    format_name: 'GZIP',
   },
   'application/vnd.rar': {
     icon: { lib: 'far', name: 'file-archive' },
-    format_name: 'rar',
+    format_name: 'RAR',
   },
   'application/x-tar': {
     icon: { lib: 'far', name: 'file-archive' },
-    format_name: 'tar',
+    format_name: 'TAR',
   },
   'application/json': {
     icon: { lib: 'fas', name: 'code' },
-    format_name: 'json',
+    format_name: 'JSON',
   },
   'text/javascript': {
     icon: { lib: 'fas', name: 'code' },
-    format_name: 'js',
+    format_name: 'JS',
   },
   'text/html': { icon: { lib: 'fas', name: 'code' }, format_name: 'html' },
   'image/jpg': {
     icon: { lib: 'far', name: 'file-image' },
-    format_name: 'jpg',
+    format_name: 'JPG',
   },
   'image/jpeg': {
     icon: { lib: 'far', name: 'file-image' },
-    format_name: 'jpeg',
+    format_name: 'JPEG',
   },
   'image/png': {
     icon: { lib: 'far', name: 'file-image' },
-    format_name: 'png',
+    format_name: 'PNG',
   },
   'image/svg': {
     icon: { lib: 'far', name: 'file-image' },
-    format_name: 'svg',
+    format_name: 'SVG',
   },
   'application/msword': {
     icon: { lib: 'far', name: 'file-word' },

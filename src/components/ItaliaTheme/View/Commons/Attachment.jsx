@@ -36,10 +36,9 @@ const Attachment = ({ title, description, download_url, item = {} }) => {
             item={{
               ..._item,
               ['@id']: download_url,
-              ['mime_type']: _item['content-type'], //compatibility
-              ['getObjSize']: _item.size, //compatibility
             }}
             title={title}
+            aria-label={title}
           >
             {title}
           </UniversalLink>

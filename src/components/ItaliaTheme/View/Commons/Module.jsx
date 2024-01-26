@@ -43,17 +43,7 @@ const Module = ({ item }) => {
       <CardBody tag="div">
         <CardTitle className="h5">
           {modulo.file_principale ? (
-            <UniversalLink
-              item={{
-                ...modulo.file_principale,
-                ['@id']: modulo.file_principale.download,
-                ['mime_type']: modulo.file_principale['content-type'],
-                ['getObjSize']: modulo.file_principale.size,
-              }}
-              title={modulo.title ?? modulo.file_principale.filename}
-            >
-              {modulo.title ?? modulo.file_principale.filename}
-            </UniversalLink>
+            modulo.title ?? modulo.file_principale.filename
           ) : modulo['@type'] === 'Link' ? (
             <UniversalLink item={modulo} title={modulo.title}>
               {modulo.title}
@@ -68,16 +58,22 @@ const Module = ({ item }) => {
           <DownloadFileFormat
             file={modulo.file_principale}
             showLabel={true}
+            title={modulo.title ?? modulo.file_principale.filename}
+            hideFileFormatLabel={true}
             className="mb-4"
           />
           <DownloadFileFormat
             file={modulo.formato_alternativo_1}
             showLabel={true}
+            title={modulo.title ?? modulo.formato_alternativo_1.filename}
+            hideFileFormatLabel={true}
             className="mb-4"
           />
           <DownloadFileFormat
             file={modulo.formato_alternativo_2}
             showLabel={true}
+            title={modulo.title ?? modulo.formato_alternativo_2.filename}
+            hideFileFormatLabel={true}
           />
         </div>
       </CardBody>

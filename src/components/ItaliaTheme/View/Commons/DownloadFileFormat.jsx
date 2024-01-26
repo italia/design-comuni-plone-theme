@@ -23,6 +23,8 @@ const DownloadFileFormat = ({
   formatsize = '2x',
   className,
   showLabel = false,
+  title,
+  hideFileFormatLabel = false,
 }) => {
   const intl = useIntl();
   const defaultIcon = { lib: 'far', name: 'file', svg_format: false };
@@ -46,11 +48,11 @@ const DownloadFileFormat = ({
       item={{
         ...file,
         ['@id']: file.download,
-        ['mime_type']: file['content-type'],
-        ['getObjSize']: file.size,
       }}
       title={file.filename}
       className={className}
+      aria-label={(title ?? file.filename) + ': ' + label}
+      hideFileFormat={hideFileFormatLabel}
     >
       {!icon.svg_format ? (
         <IconFA
