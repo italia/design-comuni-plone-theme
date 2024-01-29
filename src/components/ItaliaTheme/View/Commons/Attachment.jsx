@@ -13,11 +13,13 @@ const messages = defineMessages({
 });
 
 const Attachment = ({ title, description, download_url, item = {} }) => {
-  console.log(item);
   const intl = useIntl();
   let _item = { ...item };
   if (item['@type'] === 'File') {
     _item = item.file;
+  }
+  if (item['@type'] === 'Image') {
+    _item = item.image;
   }
   return (
     <Card
@@ -35,7 +37,7 @@ const Attachment = ({ title, description, download_url, item = {} }) => {
           <UniversalLink
             item={{
               ..._item,
-              ['@id']: download_url,
+              '@id': download_url,
             }}
             title={title}
             aria-label={title}
