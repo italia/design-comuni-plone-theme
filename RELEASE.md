@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Sistemato il layout del blocco elenco per i Bandi
+
 ## Versione 11.3.2 (19/01/2023)
 
 ### Fix
