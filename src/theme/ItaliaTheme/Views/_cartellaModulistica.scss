@@ -48,7 +48,9 @@ $docs-section-margin: 3em;
           justify-content: space-between;
           padding: 0.4em 0;
           gap: 4rem;
-
+          .title {
+            flex: 1;
+          }
           .title-wrap {
             flex: 1;
 
@@ -182,6 +184,14 @@ $docs-section-margin: 3em;
       .documents-section,
       .document-row-section {
         .doc-row {
+          .doc:not(.modulo) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            .downloads {
+              width: 100%;
+            }
+          }
           .doc {
             flex-wrap: wrap;
             align-items: center;
@@ -211,6 +221,7 @@ $docs-section-margin: 3em;
 
             &.modulo {
               justify-content: space-between;
+              flex-wrap: nowrap;
 
               .title,
               .downloads {
