@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Risolto un problema di visualizzazione degli argomenti indicati come altri argomenti nel blocco Argomenti quando il loro numero è esiguo
+
 ## Versione 11.3.2 (19/01/2023)
 
 ### Fix
