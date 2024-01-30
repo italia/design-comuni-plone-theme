@@ -104,17 +104,19 @@ const CardWithImageTemplate = (props) => {
               name: 'BlockExtraTags',
               dependencies: ['CardWithImageTemplate', item['@type']],
             }).component;
+            const layoutSelected = set_four_columns ? '3' : '4';
 
             return (
               <Col
-                lg={set_four_columns ? '3' : '4'}
+                xl={layoutSelected}
+                lg={item['@type'] === 'Persona' ? 6 : layoutSelected}
                 key={item['@id']}
                 className="col-item mb-3"
               >
                 {item['@type'] === 'Persona' ? (
                   <CardPersona
                     item={item}
-                    className="listing-item card-bg shadow-sm"
+                    className="card-bg shadow-sm"
                     showImage={showImage}
                     natural_image_size={natural_image_size}
                     show_description={show_description}
