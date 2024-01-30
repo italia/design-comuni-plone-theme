@@ -41,7 +41,7 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.3.3 (30/01/2024)
 
 ### Fix
 
@@ -57,7 +57,7 @@
 - Risolto un problema di visualizzazione e allineamento delle immagini per le card dei blocchi elenco che rappresentano Persone,
   migliorata la visualizzazione e il layout su dispositivi tablet (intervallo dimensioni: 992px-1199px)
 
-## Versione 11.3.2 (19/01/2023)
+## Versione 11.3.2 (19/01/2024)
 
 ### Fix
 
