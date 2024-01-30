@@ -5,7 +5,8 @@
   $subsite-primary-text,
   $subsite-secondary,
   $subsite-secondary-text,
-  $subsite-primary-a0
+  $subsite-primary-a0,
+  $subsite-light-theme
 ) {
   .container .block {
     .searchSections {
@@ -41,7 +42,11 @@
 
     &.search {
       .search-wrapper .autocomplete-icon .icon {
-        fill: $subsite-primary;
+        @if $subsite-light-theme {
+          fill: $subsite-secondary;
+        } @else {
+          fill: $subsite-primary;
+        }
       }
     }
   }
