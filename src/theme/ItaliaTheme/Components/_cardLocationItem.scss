@@ -1,0 +1,5 @@
+@media (min-width: #{map-get($grid-breakpoints, lg)}) and (max-width: #{map-get($grid-breakpoints, xl)}) {
+  .card-wrapper.card-teaser-wrapper .card-teaser.location-item {
+    flex: 0 0 100%;
+  }
+}
