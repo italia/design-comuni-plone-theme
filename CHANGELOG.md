@@ -1,5 +1,29 @@
 
 
+## [11.3.3](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.3.2...v11.3.3) (2024-01-30)
+
+
+### Bug Fixes
+
+* alignment of CardPersona images and better layout for tablets, 2 cards max per row at this screen size ([#501](https://github.com/redturtle/design-comuni-plone-theme/issues/501)) ([8a8fe7a](https://github.com/redturtle/design-comuni-plone-theme/commit/8a8fe7af3f4c93036579ff200a69b65dfe19b478))
+* color contrast in icons block ([#498](https://github.com/redturtle/design-comuni-plone-theme/issues/498)) ([2099b12](https://github.com/redturtle/design-comuni-plone-theme/commit/2099b12b535610eee1b5be0382e7e6d58582a91b))
+* ct Cartella Modulistica layout fixes, handle long text and fix mobile layout ([#497](https://github.com/redturtle/design-comuni-plone-theme/issues/497)) ([40ca2c9](https://github.com/redturtle/design-comuni-plone-theme/commit/40ca2c98645f28bafaf65b67929fbf8d67c649d5))
+* gallery grid block scale for index 3 ([#492](https://github.com/redturtle/design-comuni-plone-theme/issues/492)) ([2800f1d](https://github.com/redturtle/design-comuni-plone-theme/commit/2800f1d50f3f158af19b817d6403cee88bba173b))
+* layout and link color for BandiInEvidence ([e064d22](https://github.com/redturtle/design-comuni-plone-theme/commit/e064d22ea57561dcaa92f4a58bd249ad1337ceec))
+* layout for LocationItem and VenuesSmall fixed for tablet ([#505](https://github.com/redturtle/design-comuni-plone-theme/issues/505)) ([656238a](https://github.com/redturtle/design-comuni-plone-theme/commit/656238a82ec88ea9cab6dfc92171fd9b92690655))
+* layout of OfficeCard component in tablet resolutions, fix wrapper of Office cards in all views that can have multiple OfficeCards ([#506](https://github.com/redturtle/design-comuni-plone-theme/issues/506)) ([aa7a1e9](https://github.com/redturtle/design-comuni-plone-theme/commit/aa7a1e9baa71fe1d63b4b28ab734cf0c7d89202a))
+* removed unnecessary link color variable ([a60599a](https://github.com/redturtle/design-comuni-plone-theme/commit/a60599a873992e0a7254e261540fd63cc83ce042))
+* removed width style from card-body, added align-items style to overwrite listing-item style ([aad1c80](https://github.com/redturtle/design-comuni-plone-theme/commit/aad1c800705e0e3d3bc1ad3abdc0a369bba42b3b))
+* styles for highlitedContent block for subsites ([#503](https://github.com/redturtle/design-comuni-plone-theme/issues/503)) ([d51135e](https://github.com/redturtle/design-comuni-plone-theme/commit/d51135e356a7a1203e706f48781fb3ff11392ee9))
+* **subsites:** changed select pill text color when theme is light ([#494](https://github.com/redturtle/design-comuni-plone-theme/issues/494)) ([2421e20](https://github.com/redturtle/design-comuni-plone-theme/commit/2421e202274b0376b1e12ca16f586502a3d2830a))
+* the default maximum b_size allowed in redturtle.volto is 500, this fix remove annoying log warning ([#499](https://github.com/redturtle/design-comuni-plone-theme/issues/499)) ([970e4f4](https://github.com/redturtle/design-comuni-plone-theme/commit/970e4f401f16c4b1fda7cbe2b0ed9a158445ffa9))
+* visualizzazione altri argomenti in blocco argomenti quando il loro numero è esiguo ([#493](https://github.com/redturtle/design-comuni-plone-theme/issues/493)) ([9644292](https://github.com/redturtle/design-comuni-plone-theme/commit/96442927aa9ac3cc85fcf90c8aa64e204231f61b))
+
+
+### Maintenance
+
+* preparing release v11.3.3 ([4ccd4e2](https://github.com/redturtle/design-comuni-plone-theme/commit/4ccd4e26bd61f84df4d90059862f510b40d44913))
+
 ## [11.3.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.3.1...v11.3.2) (2024-01-19)
 
 
