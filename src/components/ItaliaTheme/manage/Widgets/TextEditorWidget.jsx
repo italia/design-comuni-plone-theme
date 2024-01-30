@@ -7,8 +7,8 @@
  * che serve per getire gli handler (le function di focusPrev e focusNext)
  */
 
-import React, { useState } from 'react';
-import { connect, useSelector } from 'react-redux';
+import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { defineMessages, useIntl } from 'react-intl';
@@ -59,18 +59,18 @@ const TextEditorWidget = (props) => {
       editor.getBlockProps = () => p;
       return editor;
     },
-    [props],
+    [props, showToolbar],
   );
-  const [uid, setUid] = useState();
-  const getEditor = React.useCallback((editor) => {
-    setUid(editor.uid);
-    return editor;
-  });
+  //const [uid, setUid] = useState();
+  // const getEditor = React.useCallback((editor) => {
+  //   setUid(editor.uid);
+  //   return editor;
+  // });
 
-  const link_pid = `${uid}-link`;
-  const show_sidebar_editor = useSelector((state) => {
-    return state['slate_plugins']?.[link_pid]?.show_sidebar_editor;
-  });
+  //const link_pid = `${uid}-link`;
+  // const show_sidebar_editor = useSelector((state) => {
+  //   return state['slate_plugins']?.[link_pid]?.show_sidebar_editor;
+  // });
 
   const intl = useIntl();
   const placeholder =
@@ -116,7 +116,7 @@ const TextEditorWidget = (props) => {
             readOnly={!inView}
             properties={properties}
             extensions={extensions}
-            renderExtensions={[withBlockProperties, getEditor]}
+            renderExtensions={[withBlockProperties /*, getEditor*/]}
             value={_value}
             block={block /* is this needed? */}
             slateSettings={otherProps.slateSettings}
@@ -144,10 +144,11 @@ const TextEditorWidget = (props) => {
             editableProps={{
               'aria-multiline': 'true',
             }}
-            onBlur={(e) => {
-              if (!show_sidebar_editor) {
-                setSelected(fieldName ? null : false);
-              }
+            onBlur={() => {
+              // //fix: click on toolbar dropdown items. But you cannot reselect h2 text for example if you go out of the block
+              // if (!show_sidebar_editor) {
+              //   setSelected(fieldName ? null : false);
+              // }
             }}
           />
         </div>
