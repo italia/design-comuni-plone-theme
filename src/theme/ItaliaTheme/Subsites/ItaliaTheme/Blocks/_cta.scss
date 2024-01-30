@@ -1,6 +1,6 @@
 @use '../../all_variables' as *;
 
-@mixin block($subsite-secondary) {
+@mixin block($subsite-secondary, $subsite-secondary-text) {
   .cta-block {
     .cta-block-wrapper {
       background-color: $subsite-secondary;
@@ -8,6 +8,13 @@
       &.has-image {
         background: none;
       }
+
+      a {
+        color: $subsite-secondary-text;
+      }
     }
+  }
+  .cms-ui .cta-block a {
+    color: $subsite-secondary-text;
   }
 }

@@ -35,7 +35,6 @@ const GridGalleryTemplate = ({
   linkmore_id_lighthouse,
 }) => {
   const intl = useIntl();
-
   return (
     <div className="grid-gallery-template">
       <Container className="px-4">
@@ -60,7 +59,6 @@ const GridGalleryTemplate = ({
               item,
               className: '',
             });
-
             let scale = null;
             if (index % 7 === 0 || index % 7 === 6 || index % 7 === 3) {
               scale = 'great';
@@ -73,18 +71,16 @@ const GridGalleryTemplate = ({
             }
             if (scale && item?.image?.scales?.[scale]) {
               image = (
-                <picture className="volto-image responsive">
-                  <img
-                    src={flattenToAppURL(item.image.scales[scale].download)}
-                    width={item.image.scales[scale].width}
-                    height={item.image.scales[scale].height}
-                    alt=""
-                    role="presentation"
-                    aria-hidden="true"
-                    title={item.title}
-                    loading={critical ? 'eager' : 'lazy'}
-                  />
-                </picture>
+                <img
+                  src={flattenToAppURL(item.image.scales[scale].download)}
+                  width={item.image.scales[scale].width}
+                  height={item.image.scales[scale].height}
+                  alt=""
+                  role="presentation"
+                  aria-hidden="true"
+                  title={item.title}
+                  loading={critical ? 'eager' : 'lazy'}
+                />
               );
             }
 
@@ -97,7 +93,11 @@ const GridGalleryTemplate = ({
                   item={!isEditMode ? item : null}
                   href={isEditMode ? '#' : null}
                 >
-                  {image && image}
+                  {image && (
+                    <picture className="volto-image responsive">
+                      {image}
+                    </picture>
+                  )}
                   <h3>{item.title}</h3>
                 </UniversalLink>
               </div>
