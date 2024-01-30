@@ -10,7 +10,7 @@
     .bg-primary {
       .card .card-body {
         .categoryicon-top {
-          .text {
+          span {
             color: $subsite-primary-text;
           }
 
@@ -37,10 +37,9 @@
         }
 
         .chip.chip-primary {
-          border-color: $subsite-link-color;
-
+          border-color: $subsite-primary-text;
           & > .chip-label {
-            color: $subsite-link-color;
+            color: $subsite-primary-text;
           }
 
           &:hover,
@@ -83,8 +82,14 @@
         }
 
         .chip.chip-primary {
+          border-color: $subsite-secondary-text;
+          > .chip-label {
+            color: $subsite-secondary-text;
+          }
           &:hover,
           &:active {
+            border-color: $subsite-secondary;
+            background-color: $subsite-secondary-text;
             > .chip-label {
               color: $subsite-secondary;
             }
