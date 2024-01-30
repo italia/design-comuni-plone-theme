@@ -56,14 +56,15 @@ const ServizioAccedi = ({ content }) => {
           title={intl.formatMessage(messages.dove_rivolgersi)}
           lighthouseId="service-generic-access"
         >
-          {content.dove_rivolgersi?.map?.((dove) => (
-            <div
-              key={dove['@id']}
-              className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal"
-            >
-              <OfficeCard office={dove} data-element="service-generic-access" />
-            </div>
-          ))}
+          <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+            {content.dove_rivolgersi?.map?.((dove) => (
+              <OfficeCard
+                office={dove}
+                data-element="service-generic-access"
+                key={dove['@id']}
+              />
+            ))}
+          </div>
           <RichText
             data={content.dove_rivolgersi_extra}
             lighthouseId="service-generic-access"
