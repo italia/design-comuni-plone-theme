@@ -19,13 +19,15 @@
       grid-row: 1;
     }
 
-    .card-body {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 2.5rem;
-      padding-bottom: 0rem;
-      width: 100%;
+    .listing-item {
+      align-items: normal;
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2.5rem;
+        padding-bottom: 0rem;
+      }
     }
   }
 
