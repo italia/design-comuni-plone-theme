@@ -150,7 +150,7 @@
     "volto-gdpr-privacy": "collective/volto-gdpr-privacy#a8a060a244581918812485daa08d969268642701",
     "volto-google-analytics": "2.0.0",
     "volto-multilingual-widget": "3.0.0",
-    "volto-querywidget-with-browser": "0.4.0",
+    "volto-querywidget-with-browser": "0.4.1",
     "volto-rss-block": "3.0.0",
     "volto-secondarymenu": "4.0.0",
     "volto-social-settings": "3.0.0",
