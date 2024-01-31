@@ -2,9 +2,7 @@ import React from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
 import { isInternalURL, flattenToAppURL } from '@plone/volto/helpers';
-import { getFileViewFormat } from 'design-comuni-plone-theme/helpers';
-import { FontAwesomeIcon as IconFA } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import { Icon } from '@plone/volto/components';
+import { EnhanceLink } from 'design-comuni-plone-theme/helpers';
 
 const ViewLink = ({
   url,
@@ -34,37 +32,6 @@ const ViewLink = ({
   );
 };
 
-const getExtensionForFiles = (element) => {
-  let file = {
-    ...element.data.enhanced_link_infos, //{content-type: 'image/png', size: '1.3 MB'}
-    filename: element.data.url,
-  };
-
-  const viewFormat = getFileViewFormat(file);
-  const icon = viewFormat?.icon ?? {
-    lib: 'far',
-    name: 'file',
-    svg_format: false,
-  };
-  return (
-    <span className="slate-inline-file-infos" contentEditable={false}>
-      {' '}
-      (
-      {!icon.svg_format ? (
-        <IconFA
-          icon={[icon.lib, icon.name]}
-          alt={file.filename}
-          title={file.filename}
-          size={'1x'}
-        />
-      ) : (
-        <Icon className="icon-svg-custom" name={icon.name} />
-      )}{' '}
-      {file?.size})
-    </span>
-  );
-};
-
 export const LinkElement = (props) => {
   const { attributes, children, element, mode = 'edit' } = props;
 
@@ -73,11 +40,16 @@ export const LinkElement = (props) => {
     dataElementAttr['data-element'] = element.data.dataElement;
   }
 
-  let extended_children = <></>;
+  let enhanced_link = element.data.enhanced_link_infos
+    ? EnhanceLink({
+        enhanced_link_infos: {
+          ...element.data.enhanced_link_infos, //{mime_type: 'image/png', getObjSize: '1.3 MB'}
+          filename: element.data.url,
+        },
+      })
+    : null;
 
-  if (element.data.enhanced_link_infos) {
-    extended_children = getExtensionForFiles(element);
-  }
+  const extended_children = enhanced_link?.children ?? <></>;
 
   return mode === 'view' ? (
     <ViewLink {...(element.data || {})} {...attributes}>

@@ -119,7 +119,7 @@ export const FILE_EXTENSIONS = {
 export const getFileViewFormat = (file) => {
   const regexEx = /(?:\.([^.]+))?$/;
   const fileExtension = regexEx.exec(file.filename)[1];
-  const typeOfContent = file['content-type'];
+  const typeOfContent = file['content-type'] ?? file['mime_type'];
 
   const viewFormat = {
     icon: null,

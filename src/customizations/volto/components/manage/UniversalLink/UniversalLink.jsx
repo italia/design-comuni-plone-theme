@@ -21,8 +21,9 @@ import {
 } from '@plone/volto/helpers/Url/Url';
 import { matchPath } from 'react-router';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import { getFileViewFormat } from 'design-comuni-plone-theme/helpers';
+import { EnhanceLink } from 'design-comuni-plone-theme/helpers';
 import config from '@plone/volto/registry';
+
 const messages = defineMessages({
   opensInNewTab: {
     id: 'opensInNewTab',
@@ -53,6 +54,7 @@ const UniversalLink = ({
       (k) => (translations[k].message = intl.formatMessage(messages[k])),
     );
   } catch (e) {
+    // eslint-disable-next-line no-console
     console.log('Cannot use intl here. View default messages.', e);
   }
   const token = useSelector((state) => state.userSession?.token);
@@ -97,10 +99,7 @@ const UniversalLink = ({
 
       /*enhance link*/
       if (item && item.enhanced_links_enabled) {
-        enhanced_link_infos = {};
-        enhanced_link_infos['content-type'] =
-          item.mime_type ?? item['content-type'];
-        enhanced_link_infos.size = item.getObjSize;
+        enhanced_link_infos = { ...item };
         enhanced_link_infos.filename = item['@id'];
       }
     }
@@ -118,29 +117,14 @@ const UniversalLink = ({
   const checkedURL = URLUtils.checkAndNormalizeUrl(url);
   url = checkedURL.url;
 
-  let extended_children = <></>;
   let aria_label = props['aria-label'];
-  if (enhanced_link_infos) {
-    const viewFormat = getFileViewFormat(enhanced_link_infos);
-    extended_children = (
-      <span className="enhance-link">
-        {' ('}
-        {!hideFileFormat && (
-          <>
-            <span className="file-format">{viewFormat.label}</span> -{' '}
-          </>
-        )}
-        <span className="file-size">{enhanced_link_infos.size}</span>
-        {')'}
-      </span>
-    );
+  let enhanced_link = null;
+  let extended_children = <></>;
 
-    aria_label =
-      (aria_label ? aria_label + ' ' : '') +
-      '(' +
-      viewFormat.label +
-      ') ' +
-      enhanced_link_infos.size;
+  if (enhanced_link_infos) {
+    enhanced_link = EnhanceLink({ enhanced_link_infos, aria_label });
+    extended_children = enhanced_link.children;
+    aria_label = enhanced_link.aria_label;
   }
 
   let tag = (

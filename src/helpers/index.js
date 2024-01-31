@@ -5,6 +5,8 @@
  * export { Api } from './Api/Api';
  */
 
+import EnhanceLink from 'design-comuni-plone-theme/helpers/EnhanceLink';
+
 export { defaultIconWidgetOptions } from 'design-comuni-plone-theme/helpers/IconWidget/IconWidgetHelper';
 export { fontAwesomeAliases } from 'design-comuni-plone-theme/helpers/IconWidget/IconAliasHelper';
 export {
@@ -48,7 +50,6 @@ export {
   realWidgetType,
   CUSTOM_DGFIELD_VALIDATION,
 } from 'design-comuni-plone-theme/helpers/FormValidation/DataGridFormValidationHelpers';
-
 export { commonSearchBlockMessages } from 'design-comuni-plone-theme/helpers/Translations/searchBlockExtendedTranslations';
-
 export { getComponentWithFallback } from 'design-comuni-plone-theme/helpers/registry';
+export { EnhanceLink };
