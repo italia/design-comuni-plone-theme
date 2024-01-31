@@ -31,6 +31,7 @@ const WideImage = ({
             critical
             loading="eager"
             sizes={sizes}
+            responsive={!fullWidth}
           />
         )}
         {caption && (
