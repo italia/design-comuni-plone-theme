@@ -96,12 +96,14 @@ const UniversalLink = ({
       ) {
         url = `${url}/@@display-file/file`;
       }
+    }
+  }
 
-      /*enhance link*/
-      if (item && item.enhanced_links_enabled) {
-        enhanced_link_infos = { ...item };
-        enhanced_link_infos.filename = item['@id'];
-      }
+  if (item && item['@id']) {
+    /*enhance link*/
+    if (item && item.enhanced_links_enabled) {
+      enhanced_link_infos = { ...item };
+      enhanced_link_infos.filename = item['@id'];
     }
   }
 
@@ -117,7 +119,7 @@ const UniversalLink = ({
   const checkedURL = URLUtils.checkAndNormalizeUrl(url);
   url = checkedURL.url;
 
-  let aria_label = props['aria-label'];
+  let aria_label = props['aria-label'] ?? item?.title ?? null;
   let enhanced_link = null;
   let extended_children = <></>;
 

@@ -30,9 +30,8 @@ const BandoApprofondimenti = ({ content }) => {
           title={item.title}
           description={item.description}
           download_url={item.url}
-          item={item}
+          item={item} //viene utilizzato nelle customizzazioni per ottenere altre proprietà
         />
-        // item={item} viene utilizzato nelle customizzazioni per ottenere altre proprietà
       );
     } else if (item.type === 'Link') {
       return (

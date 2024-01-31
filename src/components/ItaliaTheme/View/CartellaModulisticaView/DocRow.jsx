@@ -43,6 +43,7 @@ const Downloads = ({ item, titleDoc }) => {
       href={item.remoteUrl || flattenToAppURL(item['@id'])}
       title={item.title}
       className="modulistica-link"
+      item={item}
     >
       <div className="title">{item.title}</div>
       <FontAwesomeIcon
@@ -57,7 +58,6 @@ const Downloads = ({ item, titleDoc }) => {
 
 const DocRow = ({ doc }) => {
   const [itemOpen, setItemOpen] = useState(false);
-
   const titleWrapper = (
     <div
       className={cx('title-wrap', {
@@ -65,7 +65,10 @@ const DocRow = ({ doc }) => {
       })}
     >
       <div id={`title-${doc.id}`} className="title">
-        <UniversalLink href={doc.remoteUrl || flattenToAppURL(doc['@id'])}>
+        <UniversalLink
+          href={doc.remoteUrl || flattenToAppURL(doc['@id'])}
+          item={doc}
+        >
           {doc.title}
         </UniversalLink>
         {doc?.description && (
