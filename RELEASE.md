@@ -55,6 +55,26 @@
 
 
 ## Versione 11.3.2 (19/01/2023)
+## Versione 11.3.3 (30/01/2024)
+
+### Migliorie
+
+- Migliorato il focus sulle immagini in edit del blocco Immagine quando queste sono allineate a sinistra o a destra.
+### Fix
+
+- Sistemato il layout del blocco elenco per i Bandi
+- Sistemato il layout del template Galliery a griglia per il blocco elenco, le immagini più piccole ora sono correttamente contenute dentro il loro riquadro e il titolo non fuoriesce più
+- Sistemati problemi negli stili per i sottositi
+- Risolto un problema di visualizzazione degli argomenti indicati come altri argomenti nel blocco Argomenti quando il loro numero è esiguo
+- Sistemato il layout e la visualizzazione della vista del CT Cartella Modulistica per gestire al meglio gli elementi
+  titolo, titolo del modulo e link al download in caso di testi lunghi, specialmente su mobile
+- Colore di sfondo per il blocco icone impostato sul colore primario. Sistemato il contrasto tra descrizione e lo sfondo
+- Sistemata la visualizzazione delle card Uffici (card Unità Organizzativa) nelle risoluzioni tablet più comuni
+- Layout delle card per i luoghi migliorato per dispositivi tablet
+- Risolto un problema di visualizzazione e allineamento delle immagini per le card dei blocchi elenco che rappresentano Persone,
+  migliorata la visualizzazione e il layout su dispositivi tablet (intervallo dimensioni: 992px-1199px)
+
+## Versione 11.3.2 (19/01/2024)
 
 ### Fix
 

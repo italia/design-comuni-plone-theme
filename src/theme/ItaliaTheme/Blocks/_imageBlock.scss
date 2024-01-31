@@ -13,12 +13,105 @@
     }
   }
 
-  &.left,
-  &.right {
-    margin-bottom: 0;
-  }
-
   .external-link {
     display: none;
+  }
+
+  &.align.left,
+  &.align.right {
+    img {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.cms-ui {
+  .block.image:has(.align.left),
+  .block.image:has(.align.right) {
+    img.small,
+    img.medium,
+    img.large {
+      max-width: 100%;
+    }
+  }
+
+  .block-editor-image {
+    &.right,
+    &.left {
+      .ui.drag.block.image {
+        z-index: 99;
+        max-width: 50%;
+        margin-top: 0.2rem;
+        margin-bottom: 0.3rem;
+
+        .block.image,
+        .block.image img {
+          margin-bottom: 0;
+        }
+      }
+
+      &:has(img.small) {
+        .ui.drag.block.image {
+          max-width: 15%;
+        }
+      }
+
+      &:has(img.medium) {
+        .ui.drag.block.image {
+          max-width: 25%;
+        }
+      }
+
+      &:has(img.large) {
+        .ui.drag.block.image {
+          max-width: 50%;
+        }
+      }
+    }
+
+    /* Image right */
+    &.right {
+      .block.image {
+        float: right;
+      }
+
+      .ui.drag.block.image {
+        margin-left: 1rem;
+      }
+
+      .drag.handle.wrapper {
+        left: 50%;
+      }
+
+      /* Drag and drop icon position */
+      &:has(img.large) {
+        .drag.handle.wrapper {
+          left: 50%;
+        }
+      }
+
+      &:has(img.medium) {
+        .drag.handle.wrapper {
+          left: 75%;
+        }
+      }
+
+      &:has(img.small) {
+        .drag.handle.wrapper {
+          left: 85%;
+        }
+      }
+    }
+
+    /* Image left */
+    &.left {
+      .block.image {
+        float: left;
+      }
+
+      .ui.drag.block.image {
+        margin-right: 1.7rem;
+      }
+    }
   }
 }

@@ -17,13 +17,13 @@ const messages = defineMessages({
 const BottomBody = ({ data, intl }) => {
   return data?.arguments?.length > 0 ? (
     <Container className="text-center">
-      <div className="row d-lg-inline-flex pt-5">
-        <div className="col-lg-3">
+      <div className="row d-lg-inline-flex align-items-center pt-5">
+        <div className="col-lg-auto">
           <h6 className="text-uppercase text-center mt-1">
             {intl?.formatMessage(messages.otherArguments)}
           </h6>
         </div>
-        <div className="col-lg-9 text-start">
+        <div className="col-lg-auto">
           {data?.arguments?.map((argument, index) => (
             <Chip
               color="primary"
