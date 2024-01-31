@@ -69,6 +69,8 @@ export default function navigation(state = initialState, action = {}) {
         return {
           ...state,
           error: null,
+          show_in_footer:
+            action.result['@components'].navigation.show_in_footer,
           items: getRecursiveItems(
             action.result['@components'].navigation.items,
           ),
@@ -86,6 +88,8 @@ export default function navigation(state = initialState, action = {}) {
         return {
           ...state,
           error: null,
+          show_in_footer:
+            action.result['@components'].navigation.show_in_footer,
           items: getRecursiveItems(action.result.items),
           loaded: true,
           loading: false,
@@ -97,6 +101,7 @@ export default function navigation(state = initialState, action = {}) {
         ...state,
         error: action.error,
         items: [],
+        show_in_footer: null,
         loaded: false,
         loading: false,
       };
