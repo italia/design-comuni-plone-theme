@@ -1,5 +1,19 @@
 
 
+## [11.3.4](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.3.3...v11.3.4) (2024-01-31)
+
+
+### Bug Fixes
+
+* focus when editing image blocks ([#500](https://github.com/redturtle/design-comuni-plone-theme/issues/500)) ([bdb53b9](https://github.com/redturtle/design-comuni-plone-theme/commit/bdb53b95b89a9f42a88b942434fce8d01cf45af0))
+* set height for DocumentBody images ([#507](https://github.com/redturtle/design-comuni-plone-theme/issues/507)) ([80479ce](https://github.com/redturtle/design-comuni-plone-theme/commit/80479ce919da07bf6147fe2bd3038c875a5ff63f))
+* updated volto-querywidget-with-browser ([#508](https://github.com/redturtle/design-comuni-plone-theme/issues/508)) ([a4285a9](https://github.com/redturtle/design-comuni-plone-theme/commit/a4285a9aef4cb832a17af1c906efb79caf129425))
+
+
+### Documentation
+
+* updated publiccode ([c427aa4](https://github.com/redturtle/design-comuni-plone-theme/commit/c427aa42fed453e60cdd422b4d7f7ac1358834cf))
+
 ## [11.3.3](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.3.2...v11.3.3) (2024-01-30)
 
 
