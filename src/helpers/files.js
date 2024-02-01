@@ -3,6 +3,7 @@ import faFileXsd from 'design-comuni-plone-theme/icons/file-xsd.svg';
 import faFileOdp from 'design-comuni-plone-theme/icons/file-odp.svg';
 import faFileOds from 'design-comuni-plone-theme/icons/file-ods.svg';
 import faFileOdt from 'design-comuni-plone-theme/icons/file-odt.svg';
+import faFileCSV from 'design-comuni-plone-theme/icons/file-csv.svg';
 
 export const FILE_FORMATS = {
   'text/rtf': { icon: { lib: 'far', name: 'file-alt' }, format_name: 'rtf' },
@@ -86,6 +87,10 @@ export const FILE_FORMATS = {
   'text/xml': {
     icon: { lib: '', name: faFileXml, svg_format: true },
     format_name: 'XML',
+  },
+  'text/csv': {
+    icon: { lib: '', name: faFileCSV, svg_format: true },
+    format_name: 'CSV',
   },
   'application/xml': {
     icon: { lib: '', name: faFileXml, svg_format: true },

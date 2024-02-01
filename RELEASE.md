@@ -40,6 +40,12 @@
 
 - ...
 -->
+## Versione x.x.x (xx/xx/xxxx)
+
+### Novità
+
+- Aggiunta l'icona per il formato di file CSV
+
 
 ## Versione 12.0.0 (dd/mm/yyyy)
 
