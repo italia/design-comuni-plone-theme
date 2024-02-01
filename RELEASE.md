@@ -40,6 +40,12 @@
 
 - ...
 -->
+## Versione x.x.x (xx/xx/xxxx)
+
+### Novità
+
+- Aggiunta l'icona per il formato di file CSV
+
 
 ## Versione 11.3.3 (30/01/2024)
 
