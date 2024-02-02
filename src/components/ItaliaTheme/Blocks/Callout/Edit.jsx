@@ -30,14 +30,8 @@ const messages = defineMessages({
  * @extends Component
  */
 const Edit = (props) => {
-  const {
-    data,
-    onChangeBlock,
-    block,
-    onSelectBlock,
-    selected,
-    ...otherProps
-  } = props;
+  const { data, onChangeBlock, block, onSelectBlock, selected, ...otherProps } =
+    props;
   const intl = useIntl();
   const { selectedField, setSelectedField } = useHandleDetachedBlockFocus(
     props,
@@ -55,21 +49,23 @@ const Edit = (props) => {
         <CalloutTitle tag="h4">
           {data.icon && <Icon icon={data.icon} padding={false} aria-hidden />}
 
-          <TextEditorWidget
-            {...otherProps}
-            showToolbar={false}
-            data={data}
-            block={block}
-            fieldName="title"
-            onChangeBlock={onChangeBlock}
-            selected={selectedField === 'title'}
-            placeholder={intl.formatMessage(messages.title)}
-            setSelected={setSelectedField}
-            focusNextField={() => {
-              setSelectedField('text');
-            }}
-            onSelectBlock={onSelectBlock}
-          />
+          <div className="text">
+            <TextEditorWidget
+              {...otherProps}
+              showToolbar={false}
+              data={data}
+              block={block}
+              fieldName="title"
+              onChangeBlock={onChangeBlock}
+              selected={selectedField === 'title'}
+              placeholder={intl.formatMessage(messages.title)}
+              setSelected={setSelectedField}
+              focusNextField={() => {
+                setSelectedField('text');
+              }}
+              onSelectBlock={onSelectBlock}
+            />
+          </div>
         </CalloutTitle>
         <CalloutText>
           <TextEditorWidget

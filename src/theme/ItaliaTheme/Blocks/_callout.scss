@@ -4,9 +4,14 @@ body.cms-ui {
       .callout {
         .callout-title {
           display: flex;
+
           .icon {
-            flex: 1 0 100%;
             max-width: 32px;
+            flex: 1 0 100%;
+          }
+
+          .text:after {
+            z-index: -1;
           }
         }
 
