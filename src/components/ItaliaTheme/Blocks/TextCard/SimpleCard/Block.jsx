@@ -57,7 +57,7 @@ const Block = ({
           <div className={cx('simple-text-card', { 'cms-ui': inEditMode })}>
             {inEditMode ? (
               <>
-                <CardTitle tag="h4">
+                <CardTitle tag="h3" className="h4">
                   <div
                     onClick={() => {
                       setSelectedField('title');
@@ -122,7 +122,7 @@ const Block = ({
               </>
             ) : (
               <>
-                <CardTitle tag="h4" id={block.id + '-title'}>
+                <CardTitle tag="h3" id={block.id + '-title'} className="h4">
                   {title}
                 </CardTitle>
                 <hr />
