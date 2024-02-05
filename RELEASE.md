@@ -53,6 +53,13 @@
 
 - Sistemata la gerarchia per i titoli dentro al blocco semplice
 
+
+## Versione x.x.x (xx/xx/xxxx)
+
+### Novità
+- Nel pannello di controllo di 'Design plone' è stata aggiunta la possibilità di mostrare o meno il footer autogenerato.
+
+
 ## Versione 11.3.3 (30/01/2024)
 
 ### Migliorie

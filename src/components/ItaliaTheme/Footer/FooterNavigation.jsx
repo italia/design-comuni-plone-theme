@@ -23,6 +23,9 @@ const messages = defineMessages({
 const FooterNavigation = () => {
   const intl = useIntl();
   const items = useSelector((state) => state.navigation.items, isEqual);
+  const show_navigation = useSelector(
+    (state) => state.navigation.show_in_footer,
+  );
 
   // DEPRECATED: isFooterCollapsed to be removed in version 12
   if (config.settings.isFooterCollapsed) {
@@ -32,7 +35,7 @@ const FooterNavigation = () => {
     );
   }
 
-  return (
+  return show_navigation ? (
     <>
       {items && (
         <Row tag="div">
@@ -87,6 +90,8 @@ const FooterNavigation = () => {
         </Row>
       )}
     </>
+  ) : (
+    <></>
   );
 };
 
