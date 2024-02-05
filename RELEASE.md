@@ -47,25 +47,6 @@
 - Aggiunta l'icona per il formato di file CSV
 
 
-### Novità
-
-- Aggiunta l'icona per il formato di file CSV
-
-
-## Versione 12.0.0 (dd/mm/yyyy)
-
-### Migliorie
-
-### Novità
-
-- Introdotto nuovo editor Slate, al posto di DratJS, per i blocchi di contenuto con formattazione
-
-### Fix
-
-- Sistemata la visualizzazione per la barra di Slate, ora è possibile visualizzare tutti i pulsanti anche su schermi più piccoli
-
-
-## Versione 11.3.2 (19/01/2023)
 ## Versione 11.3.3 (30/01/2024)
 
 ### Migliorie
@@ -135,7 +116,6 @@
 ### Fix
 
 - Risolto il problema di layout nelle card che indicano dei luoghi.
-- Risolto un problema nel blocco Video Gallery, per cui alcuni video di youtube non erano riproducibili.
 
 ## Versione 11.1.1 (22/12/2023)
 
