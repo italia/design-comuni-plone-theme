@@ -1,5 +1,24 @@
 
 
+## [11.4.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.3.4...v11.4.0) (2024-02-06)
+
+
+### Features
+
+* added csv icon for files ([#511](https://github.com/redturtle/design-comuni-plone-theme/issues/511)) ([1c2e689](https://github.com/redturtle/design-comuni-plone-theme/commit/1c2e6893de549bb1358db84b8023470901c597ab))
+* enable dynamic footer generation from control panel ([#509](https://github.com/redturtle/design-comuni-plone-theme/issues/509)) ([6d3ed52](https://github.com/redturtle/design-comuni-plone-theme/commit/6d3ed5289ae441333ee65843d51a507490cc992c))
+
+
+### Bug Fixes
+
+* removed extra top spacing from image block in view ([#510](https://github.com/redturtle/design-comuni-plone-theme/issues/510)) ([f6fa6bd](https://github.com/redturtle/design-comuni-plone-theme/commit/f6fa6bd76d007ecf9a9bb484e6d130fac6441139))
+* simple card title changed from h4 to h3 ([#514](https://github.com/redturtle/design-comuni-plone-theme/issues/514)) ([c03f4cd](https://github.com/redturtle/design-comuni-plone-theme/commit/c03f4cd60a0d3b5753c8ce563ea73c26db60f7f0))
+
+
+### Maintenance
+
+* preparing release v11.4.0 ([642e22e](https://github.com/redturtle/design-comuni-plone-theme/commit/642e22e81ec24ebf38629a9badd32b98b4706294))
+
 ## [11.3.4](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.3.3...v11.3.4) (2024-01-31)
 
 
