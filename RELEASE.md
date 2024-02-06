@@ -40,25 +40,24 @@
 
 - ...
 -->
-## Versione x.x.x (xx/xx/xxxx)
+
+## Versione 11.4.0 (06/02/2024)
 
 ### Novità
 
 - Aggiunta l'icona per il formato di file CSV
-
-
-## Versione X.X.X (dd/mm/yyyy)
+- Nel pannello di controllo di 'Design plone' è stata aggiunta la possibilità di mostrare o meno il footer autogenerato.
 
 ### Fix
 
 - Sistemata la gerarchia per i titoli dentro al blocco semplice
 
+## Versione 11.3.4 (31/01/2024)
 
-## Versione x.x.x (xx/xx/xxxx)
+### Migliorie
 
-### Novità
-- Nel pannello di controllo di 'Design plone' è stata aggiunta la possibilità di mostrare o meno il footer autogenerato.
-
+- Migliorata l'esperienza redattore per il blocco Immagine con allineamenti laterali rispetto al corpo del testo nell'editor a blocchi
+- Migliorata la resa e la responsività di alcune immagini nel corpo della pagina per diversi content type
 
 ## Versione 11.3.3 (30/01/2024)
 
