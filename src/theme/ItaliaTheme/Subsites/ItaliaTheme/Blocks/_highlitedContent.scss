@@ -10,7 +10,8 @@
     .bg-primary {
       .card .card-body {
         .categoryicon-top {
-          span {
+          .text,
+          .data {
             color: $subsite-primary-text;
           }
 
@@ -55,7 +56,8 @@
     .bg-secondary {
       .card .card-body {
         .categoryicon-top {
-          .text {
+          .text,
+          .data {
             color: $subsite-secondary-text;
           }
 

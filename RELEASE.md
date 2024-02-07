@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Migliorata l'accessibilità per il blocco Contenuti in Evidenza e per i bottoni nei sottositi
+
 ## Versione 11.4.0 (06/02/2024)
 
 ### Novità
