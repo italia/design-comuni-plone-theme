@@ -5,7 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardBody, CardTitle, CardText } from 'design-react-kit';
+import { Card, CardBody, CardTitle } from 'design-react-kit';
 import BodyWrapper from './BodyWrapper';
 import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 
@@ -27,7 +27,7 @@ const TextCardView = ({ data, id, block }) => {
           tag="div"
         >
           <CardBody>
-            <CardTitle tag="h4" id={id + '-title'}>
+            <CardTitle tag="h3" className="h4" id={id + '-title'}>
               {data.simple_card_title}
             </CardTitle>
             <hr />
