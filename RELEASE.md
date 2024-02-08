@@ -54,6 +54,9 @@
 - Sistemato l'html semantico degli heading per i template del Blocco Listing variazione RSS, migliorata l'esperienza d'uso per gli utenti che utilizzano screen reader
 - Migliorata l'accessibilità per i contatti, lo screen reader ora legge anche il tipo di contatto oltre al testo (ad es. Telefono: numero di telefono)
 
+### Novità
+- Ora la fascia del footer contenente il logo e il nome del sito è configurabile da pannello di controllo
+
 ## Versione 11.4.0 (06/02/2024)
 
 ### Novità
