@@ -45,8 +45,9 @@
 
 ### Fix
 
-- [ Accessibilità ] Reso il link ai diversi social elencati parlante, ora viene riportato "Seguici su nome_del_social"
-- [ Accessibilità ] Rimossi gli heading per alcuni blocchi nel caso il titolo non sia presente al fine di migliorare l'esperienza con l'uso di screen reader
+- Risolto un problema relativo alla navigazione da tastiera e di gestione del focus nei menu a tendina "Condividi" e "Azioni" nelle testate delle viste dei Content Type che le implementano.
+- Reso il link ai diversi social elencati parlante, ora viene riportato "Seguici su nome_del_social"
+- Rimossi gli heading per alcuni blocchi nel caso il titolo non sia presente al fine di migliorare l'esperienza con l'uso di screen reader
 - Migliorata l'accessibilità per il blocco Contenuti in Evidenza e per i bottoni nei sottositi
 
 ## Versione 11.4.0 (06/02/2024)

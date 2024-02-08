@@ -8,9 +8,11 @@
     ul {
       li {
         a.list-item,
+        a.list-item a,
         button.btn-link {
           display: flex;
           align-items: center;
+          font-size: var(--bs-dropdown-font-size);
 
           .icon {
             width: 28px;
