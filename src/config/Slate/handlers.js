@@ -17,6 +17,7 @@ import {
 import config from '@plone/volto/registry';
 
 const focusPrev = (props) => {
+  const getBlockProps = props.editor.getBlockProps;
   const {
     focusPrevField,
     showToolbar,
@@ -26,7 +27,18 @@ const focusPrev = (props) => {
     properties,
     index,
     saveSlateBlockSelection,
-  } = props.editor.getBlockProps();
+  } = getBlockProps
+    ? getBlockProps()
+    : {
+        focusPrevField: null,
+        showToolbar: true,
+        onFocusPreviousBlock: null,
+        block: null,
+        blockNode: null,
+        properties: null,
+        index: null,
+        saveSlateBlockSelection: null,
+      };
 
   let isAtStart = false;
 
@@ -100,6 +112,7 @@ const goToNextVoltoBlock = (props) => {
   return onFocusNextBlock(block, blockNode.current);
 };
 const focusNext = (props) => {
+  const getBlockProps = props.editor.getBlockProps;
   const {
     focusNextField,
     showToolbar,
@@ -107,7 +120,15 @@ const focusNext = (props) => {
     onSelectBlock,
     onAddBlock,
     index,
-  } = props.editor.getBlockProps();
+  } = getBlockProps
+    ? getBlockProps()
+    : {
+        showToolbar: true,
+        focusNextField: null,
+        onFocusNextBlock: null,
+        onSelectBlock: null,
+        onAddBlock: null,
+      };
 
   const [listItem] = getCurrentListItem(props.editor);
   if (listItem) {
