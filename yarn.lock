@@ -6571,7 +6571,7 @@ __metadata:
     typeface-lora: 0.0.72
     typeface-roboto-mono: 0.0.75
     typeface-titillium-web: 0.0.72
-    volto-blocks-widget: 3.1.0
+    volto-blocks-widget: 3.4.0
     volto-data-grid-widget: 2.3.1
     volto-dropdownmenu: 4.1.1
     volto-editablefooter: 5.0.3
@@ -14302,12 +14302,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-blocks-widget@npm:3.1.0":
-  version: 3.1.0
-  resolution: "volto-blocks-widget@npm:3.1.0"
+"volto-blocks-widget@npm:3.4.0":
+  version: 3.4.0
+  resolution: "volto-blocks-widget@npm:3.4.0"
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 91fc5fc102acdf17f8a8f733aef4331622246fc6b008a1c486dd21b08b71583332b53d32bb4a2b75529edaa5f740421c913e04a9565c09d03fbab41c5d700978
+  checksum: 355675359cc64b23c0357de8b952195a9693543a7e95c2c1f463b65fc7bd081d64aca8f2086e95775d5771f7071d681276f18a968e666dbead40e2c48ee9843a
   languageName: node
   linkType: hard
 
