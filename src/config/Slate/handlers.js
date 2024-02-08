@@ -179,13 +179,17 @@ const breakInSimpleTextEditor = (props) => {
 };
 
 const handleBreak = (props) => {
-  const { showToolbar } = props.editor.getBlockProps();
+  const getBlockProps = props.editor.getBlockProps;
+  const { showToolbar } = getBlockProps
+    ? getBlockProps()
+    : { showToolbar: true };
+
   if (!showToolbar) {
     return breakInSimpleTextEditor(props);
   } else {
     let ret = softBreak(props);
     if (!ret) {
-      const [listItem, listItemPath] = getCurrentListItem(props.editor);
+      const [listItem] = getCurrentListItem(props.editor);
       if (listItem) {
         //managed by breaklist extension
       } else {
