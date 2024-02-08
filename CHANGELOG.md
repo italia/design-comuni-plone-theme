@@ -1,5 +1,24 @@
 
 
+## [11.4.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.4.0...v11.4.1) (2024-02-08)
+
+
+### Bug Fixes
+
+* a11y use of Sharing and Actions menus ([#519](https://github.com/redturtle/design-comuni-plone-theme/issues/519)) ([67474cc](https://github.com/redturtle/design-comuni-plone-theme/commit/67474ccafcad1e3ac7e447a10c3b923e42b68206))
+* accessibility for subsites ([#527](https://github.com/redturtle/design-comuni-plone-theme/issues/527)) ([f1fbea7](https://github.com/redturtle/design-comuni-plone-theme/commit/f1fbea765646d2af081e54772c33843283fc741a))
+* better a11y for social links ([#518](https://github.com/redturtle/design-comuni-plone-theme/issues/518)) ([49ea781](https://github.com/redturtle/design-comuni-plone-theme/commit/49ea7812e624da5b7d09485d0ad528478a716f90))
+* better screen reader user experience in contacts, contact type is read now alongside value ([#516](https://github.com/redturtle/design-comuni-plone-theme/issues/516)) ([bdd96f2](https://github.com/redturtle/design-comuni-plone-theme/commit/bdd96f26f85c616c77fb4a34cdd2b3dc15210bfb))
+* do not show empty headings if title in block is not configured ([#517](https://github.com/redturtle/design-comuni-plone-theme/issues/517)) ([2152118](https://github.com/redturtle/design-comuni-plone-theme/commit/21521183e875118b793beccbcb964dc97f1ad982))
+* in FAQFolderView aria controls and live attributes correctly now and place regions accordingly ([#515](https://github.com/redturtle/design-comuni-plone-theme/issues/515)) ([49fd553](https://github.com/redturtle/design-comuni-plone-theme/commit/49fd553eb49144bd5374cae081cfccf27e139471))
+* semantic headings levels in rss templates, all h3 now ([#521](https://github.com/redturtle/design-comuni-plone-theme/issues/521)) ([b6b13fd](https://github.com/redturtle/design-comuni-plone-theme/commit/b6b13fd79fe417f15a97df4fadfc58bd6e66031e))
+* skip link go to content in site search page ([#520](https://github.com/redturtle/design-comuni-plone-theme/issues/520)) ([b78b47f](https://github.com/redturtle/design-comuni-plone-theme/commit/b78b47f4fb8424ff2a1e6c663edb72ded32f3fe4))
+
+
+### Documentation
+
+* updated publiccode and release log ([afc5083](https://github.com/redturtle/design-comuni-plone-theme/commit/afc50835eea3413f770ea8db4b9bfaad46dd1d5c))
+
 ## [11.4.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.3.4...v11.4.0) (2024-02-06)
 
 
