@@ -56,6 +56,7 @@
 
 ### Fix
 
+- [ Accessibilità ] Rimossi gli heading per alcuni blocchi nel caso il titolo non sia presente al fine di migliorare l'esperienza con l'uso di screen reader
 - Sistemata la gerarchia per i titoli dentro al blocco semplice
 
 ## Versione 11.3.4 (31/01/2024)

@@ -50,7 +50,9 @@ const Body = ({ block, sections, data }) => {
       <SearchSectionsBackground />
       <div className="container">
         <div className="searchContainer d-flex w-100">
-          <h2 className="text-secondary mb-4">{block.title}</h2>
+          {block.title && (
+            <h2 className="text-secondary mb-4">{block.title}</h2>
+          )}
           <div className="searchbar lightgrey-bg-c2 shadow-sm rounded d-flex w-100">
             <input
               className="inputSearch lightgrey-bg-c2"
