@@ -735,6 +735,7 @@ msgid "accordion_block"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Account
 msgid "account"
 msgstr ""
@@ -1842,6 +1843,7 @@ msgid "elementi_di_interesse"
 msgstr "Objets d'intérêt"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Email
 msgid "email"
 msgstr ""
@@ -1945,6 +1947,7 @@ msgstr "Tapez un mot-clé pour trouver des réponses"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Fax
 msgid "fax"
 msgstr ""
@@ -2302,6 +2305,7 @@ msgid "link_siti_esterni"
 msgstr "Liens utiles"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: LinkedIn
 msgid "linkedin"
 msgstr ""
@@ -2712,6 +2716,7 @@ msgstr "Sponsorisé par"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 #: components/ItaliaTheme/View/VenueView/VenueContacts
+#: helpers/contentHelper
 # defaultMessage: PEC
 msgid "pec"
 msgstr "PEC"
@@ -3621,6 +3626,7 @@ msgid "skiplink-navigation"
 msgstr "Aller à la navigation"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Skype
 msgid "skype"
 msgstr ""
@@ -3636,6 +3642,7 @@ msgid "slidesToShow"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Social
 msgid "social"
 msgstr ""
@@ -3782,6 +3789,7 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/ContactLink
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Tel
 msgid "telefono"
 msgstr "Tél."
@@ -3792,6 +3800,7 @@ msgid "telefono_sede"
 msgstr "Téléphone"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Telegram
 msgid "telegram"
 msgstr ""
@@ -3902,6 +3911,7 @@ msgid "trasparenza"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Twitter
 msgid "twitter"
 msgstr ""
@@ -3971,6 +3981,7 @@ msgid "update_date"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Sito web
 msgid "url"
 msgstr ""
@@ -4030,6 +4041,7 @@ msgid "vincoli"
 msgstr "Contraintes"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Whatsapp
 msgid "whatsapp"
 msgstr ""

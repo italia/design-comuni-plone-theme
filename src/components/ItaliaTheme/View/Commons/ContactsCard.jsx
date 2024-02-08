@@ -5,10 +5,11 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { renderPDCItemValue } from 'design-comuni-plone-theme/helpers';
+import { useIntl } from 'react-intl';
 
 const ContactsCard = ({ contact = {}, show_title = false, ...rest }) => {
   const dispatch = useDispatch();
-
+  const intl = useIntl();
   const contactUrl = contact['@id'];
 
   const { loading, loaded, error, data } = useSelector(
@@ -59,7 +60,7 @@ const ContactsCard = ({ contact = {}, show_title = false, ...rest }) => {
                 {pdc.pdc_type}
                 {pdc.pdc_desc ? ` - ${pdc.pdc_desc}` : ''}:{' '}
               </strong>
-              {renderPDCItemValue(pdc)}
+              {renderPDCItemValue(pdc, intl)}
             </span>
           )) ?? null}
         </CardText>

@@ -39,6 +39,7 @@
 
         .chip.chip-primary {
           border-color: $subsite-primary-text;
+
           & > .chip-label {
             color: $subsite-primary-text;
           }
@@ -85,13 +86,16 @@
 
         .chip.chip-primary {
           border-color: $subsite-secondary-text;
+
           > .chip-label {
             color: $subsite-secondary-text;
           }
+
           &:hover,
           &:active {
             border-color: $subsite-secondary;
             background-color: $subsite-secondary-text;
+
             > .chip-label {
               color: $subsite-secondary;
             }

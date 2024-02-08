@@ -52,6 +52,7 @@
 - Rimossi gli heading per alcuni blocchi nel caso il titolo non sia presente al fine di migliorare l'esperienza con l'uso di screen reader
 - Migliorata l'accessibilità per il blocco Contenuti in Evidenza e per i bottoni nei sottositi
 - Sistemato l'html semantico degli heading per i template del Blocco Listing variazione RSS, migliorata l'esperienza d'uso per gli utenti che utilizzano screen reader
+- Migliorata l'accessibilità per i contatti, lo screen reader ora legge anche il tipo di contatto oltre al testo (ad es. Telefono: numero di telefono)
 
 ## Versione 11.4.0 (06/02/2024)
 

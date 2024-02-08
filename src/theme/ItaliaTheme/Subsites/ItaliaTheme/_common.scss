@@ -57,6 +57,7 @@
   .text-primary {
     color: $subsite-primary-text !important;
   }
+
   .select-pill.text-primary {
     @if ($subsite-light-theme) {
       color: $subsite-link-color !important;
@@ -320,8 +321,8 @@
     }
 
     td.CalendarDay__hovered_span {
-      background: $subsite-primary-a0;
       border: $subsite-primary-a0;
+      background: $subsite-primary-a0;
       color: $subsite-link-color;
     }
 

@@ -727,6 +727,7 @@ msgid "accordion_block"
 msgstr "Acordeón"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Account
 msgid "account"
 msgstr ""
@@ -1834,6 +1835,7 @@ msgid "elementi_di_interesse"
 msgstr "Elementos de interés"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Email
 msgid "email"
 msgstr ""
@@ -1937,6 +1939,7 @@ msgstr "Escriba una palabra clave para encontrar respuestas"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Fax
 msgid "fax"
 msgstr "Fax"
@@ -2294,6 +2297,7 @@ msgid "link_siti_esterni"
 msgstr "Enlaces útiles"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: LinkedIn
 msgid "linkedin"
 msgstr ""
@@ -2704,6 +2708,7 @@ msgstr "Patrocinado por"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 #: components/ItaliaTheme/View/VenueView/VenueContacts
+#: helpers/contentHelper
 # defaultMessage: PEC
 msgid "pec"
 msgstr "PEC"
@@ -3613,6 +3618,7 @@ msgid "skiplink-navigation"
 msgstr "Ir a navegación"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Skype
 msgid "skype"
 msgstr ""
@@ -3628,6 +3634,7 @@ msgid "slidesToShow"
 msgstr "N° diapositivas para mostrar"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Social
 msgid "social"
 msgstr ""
@@ -3774,6 +3781,7 @@ msgstr "Con el apoyo de"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Tel
 msgid "telefono"
 msgstr "Teléfono"
@@ -3784,6 +3792,7 @@ msgid "telefono_sede"
 msgstr "Teléfono"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Telegram
 msgid "telegram"
 msgstr ""
@@ -3894,6 +3903,7 @@ msgid "trasparenza"
 msgstr "Transparencia"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Twitter
 msgid "twitter"
 msgstr ""
@@ -3963,6 +3973,7 @@ msgid "update_date"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Sito web
 msgid "url"
 msgstr ""
@@ -4022,6 +4033,7 @@ msgid "vincoli"
 msgstr "Restricciones"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+#: helpers/contentHelper
 # defaultMessage: Whatsapp
 msgid "whatsapp"
 msgstr ""
