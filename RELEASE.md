@@ -45,6 +45,7 @@
 
 ### Fix
 
+- Migliorata l'accessibilità e aggiunto elementi per migliorare l'esperienza d'uso degli utenti che utilizzano screen reader nella vista Cartella FAQ
 - Sistemato lo skiplink "Vai al contenuto" nella pagina principale di ricerca del sito
 - Risolto un problema relativo alla navigazione da tastiera e di gestione del focus nei menu a tendina "Condividi" e "Azioni" nelle testate delle viste dei Content Type che le implementano.
 - Reso il link ai diversi social elencati parlante, ora viene riportato "Seguici su nome_del_social"

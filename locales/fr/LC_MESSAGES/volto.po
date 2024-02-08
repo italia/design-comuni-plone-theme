@@ -2115,6 +2115,7 @@ msgid "foto_attivita_politica"
 msgstr "Photo d'activité politique"
 
 #: components/ItaliaTheme/Search/Search
+#: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView
 # defaultMessage: Trovati {total} risultati.
 msgid "found_n_results"
 msgstr "{total} résultats trouvés"

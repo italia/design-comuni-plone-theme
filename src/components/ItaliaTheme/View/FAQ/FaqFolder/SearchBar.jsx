@@ -66,6 +66,7 @@ const SearchBar = ({ searchableText, setSearchableText }) => {
                 setSearchableText(e?.target?.value || '');
               }}
               type="text"
+              aria-controls="faq-search-results-region"
             />
           </div>
         </div>
