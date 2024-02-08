@@ -50,9 +50,9 @@ const SocialHeader = () => {
           {socials?.map((social, idx) => (
             <li key={idx}>
               <a
-                title={
-                  social.title + ' ' + intl.formatMessage(messages.socialOpen)
-                }
+                title={`${intl.formatMessage(messages.followUs)} ${
+                  social.title
+                } ${intl.formatMessage(messages.socialOpen)}`}
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -45,6 +45,8 @@
 
 ### Fix
 
+- [ Accessibilità ] Reso il link ai diversi social elencati parlante, ora viene riportato "Seguici su nome_del_social"
+- [ Accessibilità ] Rimossi gli heading per alcuni blocchi nel caso il titolo non sia presente al fine di migliorare l'esperienza con l'uso di screen reader
 - Migliorata l'accessibilità per il blocco Contenuti in Evidenza e per i bottoni nei sottositi
 
 ## Versione 11.4.0 (06/02/2024)
@@ -56,7 +58,6 @@
 
 ### Fix
 
-- [ Accessibilità ] Rimossi gli heading per alcuni blocchi nel caso il titolo non sia presente al fine di migliorare l'esperienza con l'uso di screen reader
 - Sistemata la gerarchia per i titoli dentro al blocco semplice
 
 ## Versione 11.3.4 (31/01/2024)
