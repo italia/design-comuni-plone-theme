@@ -11,7 +11,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { Row, Col } from 'design-react-kit';
 import { ConditionalLink } from '@plone/volto/components';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
-import { getEditableFooterColumns, getItemsByPath } from 'volto-editablefooter';
+import { getEditableFooterData, getItemsByPath } from 'volto-editablefooter';
 import {
   FooterNewsletterSubscribe,
   FooterSocials,
@@ -35,7 +35,7 @@ const FooterInfos = () => {
   );
 
   useEffect(() => {
-    dispatch(getEditableFooterColumns());
+    dispatch(getEditableFooterData());
   }, [dispatch, location]);
 
   //filter rootpaths
