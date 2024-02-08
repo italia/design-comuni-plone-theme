@@ -49,6 +49,7 @@
 - Reso il link ai diversi social elencati parlante, ora viene riportato "Seguici su nome_del_social"
 - Rimossi gli heading per alcuni blocchi nel caso il titolo non sia presente al fine di migliorare l'esperienza con l'uso di screen reader
 - Migliorata l'accessibilità per il blocco Contenuti in Evidenza e per i bottoni nei sottositi
+- Sistemato l'html semantico degli heading per i template del Blocco Listing variazione RSS, migliorata l'esperienza d'uso per gli utenti che utilizzano screen reader
 
 ## Versione 11.4.0 (06/02/2024)
 
