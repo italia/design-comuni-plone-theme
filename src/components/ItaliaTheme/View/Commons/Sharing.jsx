@@ -85,7 +85,13 @@ const Sharing = ({ url, title }) => {
       <DropdownMenu>
         <LinkList>
           {socials.map((item, i) => (
-            <LinkListItem href={item.url} key={item.id} target="_target">
+            <LinkListItem
+              href={item.url}
+              key={item.id}
+              target="_target"
+              role="menuitem"
+              tabIndex={-1}
+            >
               <Icon
                 className={undefined}
                 color=""

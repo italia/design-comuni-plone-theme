@@ -6,6 +6,7 @@
 /*
  CUSTOMIZATIONS:
  - customized getRecursiveItems to use remoteUrl property for plone types 'Link' objects
+ - added show_in_footer
  */
 
 import { map } from 'lodash';
@@ -89,8 +90,7 @@ export default function navigation(state = initialState, action = {}) {
         return {
           ...state,
           error: null,
-          show_in_footer:
-            action.result['@components'].navigation.show_in_footer,
+          show_in_footer: action.result.show_in_footer,
           items: getRecursiveItems(action.result.items),
           loaded: true,
           loading: false,

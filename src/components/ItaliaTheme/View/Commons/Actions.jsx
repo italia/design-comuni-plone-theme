@@ -9,7 +9,6 @@ import {
   LinkListItem,
   Button,
 } from 'design-react-kit';
-
 import { toPublicURL } from '@plone/volto/helpers';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
@@ -42,7 +41,7 @@ const messages = defineMessages({
 const Actions = (props) => {
   const intl = useIntl();
   const publicUrl = toPublicURL(props.url);
-  let socials = [
+  const socials = [
     {
       id: 'print',
       attributes: null,
@@ -58,8 +57,25 @@ const Actions = (props) => {
       icon: 'it-mail',
     },
   ];
+  const handlePrint = (e) => {
+    e.preventDefault();
+    return window.print();
+  };
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.code === 'Space') {
+      const childElement = e.target.firstChild;
+      if (childElement.tagName === 'BUTTON' || childElement.tagName === 'A') {
+        // La libreria del dropdown ha dei problemi nel suo focus manager interno.
+        // Enter e spazio chiudono il menu, quindi fermiamo il bubbling (per chiudere si usa esc,
+        // come correttamente dichiarato dallo screen reader), poi simuliamo il click
+        e.stopPropagation();
+        childElement.click();
+      }
+    }
+  };
+
   return (
-    <UncontrolledDropdown className="d-inline page-actions">
+    <UncontrolledDropdown className="d-inline page-actions" id="page-actions">
       <DropdownToggle
         className={`btn btn-dropdown ps-0`}
         color=""
@@ -81,6 +97,14 @@ const Actions = (props) => {
       <DropdownMenu>
         <LinkList>
           {socials.map((item, i) => {
+            const commonButtonProps = {
+              icon: false,
+              title: item.title,
+              alt: item.title,
+              'aria-label': item.title,
+              id: item.id,
+            };
+
             const icon = (
               <>
                 <Icon
@@ -95,23 +119,32 @@ const Actions = (props) => {
                 <span>{item.title}</span>
               </>
             );
-            return item.id === 'print' ? (
-              <li key={item.id}>
-                <Button
-                  color="link"
-                  icon={false}
-                  tag="button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    return window.print();
-                  }}
-                >
-                  {icon}
-                </Button>
-              </li>
-            ) : (
-              <LinkListItem href={item.url} key={item.id}>
-                {icon}
+
+            let buttonProps = { ...commonButtonProps };
+            if (item.id === 'print')
+              buttonProps = {
+                ...commonButtonProps,
+                tag: 'button',
+                onClick: handlePrint,
+                color: 'link',
+              };
+            else if (item.id === 'mailto')
+              buttonProps = {
+                ...commonButtonProps,
+                href: item.url,
+              };
+            return (
+              // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role#:~:text=within%20the%20menu-,tabindex,-attribute
+              <LinkListItem
+                key={item.id}
+                role="menuitem"
+                tabIndex={-1}
+                onKeyDown={handleKeyDown}
+              >
+                {item.id === 'print' && (
+                  <Button {...buttonProps}>{icon}</Button>
+                )}
+                {item.id === 'mailto' && <a {...buttonProps}>{icon}</a>}
               </LinkListItem>
             );
           })}

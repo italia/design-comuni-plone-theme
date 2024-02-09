@@ -31,6 +31,10 @@ const messages = defineMessages({
     id: 'Faq Folder: Nessun risultato trovato',
     defaultMessage: 'Non ho trovato la risposta che cercavi',
   },
+  foundNResults: {
+    id: 'found_n_results',
+    defaultMessage: 'Trovati {total} risultati.',
+  },
 });
 
 /**
@@ -46,7 +50,6 @@ const FaqFolderView = ({ content }) => {
   const FAQ_FOLDER_KEY = 'FAQ_FOLDER';
   const structure_url = content?.['@components']?.['faq-structure']?.['@id'];
   const dispatch = useDispatch();
-  //const intl = useIntl();
 
   const faq_structure = useSelector(
     (state) => state.content.subrequests?.[FAQ_FOLDER_KEY],
@@ -79,7 +82,7 @@ const FaqFolderView = ({ content }) => {
 
   useDebouncedEffect(
     () => {
-      return doSearch();
+      doSearch();
     }, // eslint-disable-next-line react-hooks/exhaustive-deps
     600,
     [searchableText],
@@ -106,25 +109,39 @@ const FaqFolderView = ({ content }) => {
       <Container className="px-4">
         <TextOrBlocks content={content} />
 
-        {faq_structure && (
-          <>
-            {faq_structure?.loaded &&
-              searchableText?.length > 0 &&
-              faq_structure.data?.items?.length === 0 && (
-                <>{intl.formatMessage(messages.no_results)}</>
+        <div
+          className="faq-search-results-wrapper"
+          id="faq-search-results-region"
+          aria-live="polite"
+        >
+          {faq_structure && (
+            <>
+              {faq_structure.loaded && (
+                <p className="visually-hidden d-lg-block" aria-live="polite">
+                  {intl.formatMessage(messages.foundNResults, {
+                    total: faq_structure?.data?.items?.[0]?.items?.length || 0,
+                  })}
+                </p>
+              )}
+              {faq_structure?.loaded &&
+                searchableText?.length > 0 &&
+                faq_structure.data?.items?.[0]?.items?.length === 0 && (
+                  <p>{intl.formatMessage(messages.no_results)}</p>
+                )}
+
+              {faq_structure?.loading && (
+                <div className="mt-5 mb-5 loading">
+                  <Spinner active double={false} small={false} tag="div" />
+                </div>
               )}
 
-            {faq_structure?.loading && (
-              <div className="mt-5 mb-5 loading">
-                <Spinner active double={false} small={false} tag="div" />
-              </div>
-            )}
-
-            {!faq_structure?.loading && faq_structure.data?.items?.[0] && (
-              <FaqFolderTree tree={faq_structure.data.items[0]} />
-            )}
-          </>
-        )}
+              {!faq_structure?.loading &&
+                faq_structure.data?.items?.length > 0 && (
+                  <FaqFolderTree tree={faq_structure.data.items[0]} />
+                )}
+            </>
+          )}
+        </div>
 
         <PageMetadata content={content} />
       </Container>

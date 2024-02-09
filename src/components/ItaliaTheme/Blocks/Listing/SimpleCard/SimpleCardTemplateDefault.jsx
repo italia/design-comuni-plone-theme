@@ -163,7 +163,7 @@ const SimpleCardTemplateDefault = (props) => {
                     tag="button"
                     className="ms-3"
                     onClick={(e) => {
-                      addPathFilter(button.path['@id']);
+                      addPathFilter(button.path['UID']);
                     }}
                   >
                     {button.label}

@@ -41,6 +41,27 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Risolto un problema riguardante la visualizzazione delle date nelle card che rappresentano uun CT Evento nei vari listati nel caso in cui l'evento si sviluppi su anni diversi
+
+- Nel blocco elenco, sono stati sistemati i filtri per percorso quando si clicca sul bottone configurato.
+
+## Versione 11.4.1 (08/02/2024)
+
+### Fix
+
+- Migliorata l'accessibilità e aggiunto elementi per migliorare l'esperienza d'uso degli utenti che utilizzano screen reader nella vista Cartella FAQ
+- Sistemato lo skiplink "Vai al contenuto" nella pagina principale di ricerca del sito
+- Risolto un problema relativo alla navigazione da tastiera e di gestione del focus nei menu a tendina "Condividi" e "Azioni" nelle testate delle viste dei Content Type che le implementano.
+- Reso il link ai diversi social elencati parlante, ora viene riportato "Seguici su nome_del_social"
+- Rimossi gli heading per alcuni blocchi nel caso il titolo non sia presente al fine di migliorare l'esperienza con l'uso di screen reader
+- Migliorata l'accessibilità per il blocco Contenuti in Evidenza e per i bottoni nei sottositi
+- Sistemato l'html semantico degli heading per i template del Blocco Listing variazione RSS, migliorata l'esperienza d'uso per gli utenti che utilizzano screen reader
+- Migliorata l'accessibilità per i contatti, lo screen reader ora legge anche il tipo di contatto oltre al testo (ad es. Telefono: numero di telefono)
+
 ## Versione 11.4.0 (06/02/2024)
 
 ### Novità

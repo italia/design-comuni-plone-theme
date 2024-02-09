@@ -34,7 +34,7 @@ const CardWithImageRssTemplateSkeleton = ({ isEditMode, data = {} }) => {
 
                 <CardBody tag="div" className="px-4">
                   <div className="category-top"></div>
-                  <CardTitle tag="h6"></CardTitle>
+                  <CardTitle tag="h3" className="h6"></CardTitle>
                 </CardBody>
                 <CardReadMore
                   iconName="it-arrow-right"
