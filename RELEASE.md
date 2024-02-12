@@ -47,6 +47,8 @@
 
 - Risolto un problema riguardante la visualizzazione delle date nelle card che rappresentano uun CT Evento nei vari listati nel caso in cui l'evento si sviluppi su anni diversi
 
+- Nel blocco elenco, sono stati sistemati i filtri per percorso quando si clicca sul bottone configurato.
+
 ## Versione 11.4.1 (08/02/2024)
 
 ### Fix
