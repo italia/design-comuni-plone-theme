@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment';
+import { v4 as uuid } from 'uuid';
 import cx from 'classnames';
 import {
   Card,
@@ -71,6 +72,8 @@ const SimpleCardTemplateDefault = (props) => {
     linkmore_id_lighthouse,
     rrule,
   } = props;
+
+  const resultsUID = uuid();
 
   let currentPathFilter = additionalFilters
     ?.filter((f) => {
@@ -157,7 +160,7 @@ const SimpleCardTemplateDefault = (props) => {
                   <Button
                     key={i}
                     color="primary"
-                    outline={button.path['@id'] !== pathFilter}
+                    outline={button.path['UID'] !== pathFilter}
                     size="xs"
                     icon={false}
                     tag="button"
@@ -165,6 +168,9 @@ const SimpleCardTemplateDefault = (props) => {
                     onClick={(e) => {
                       addPathFilter(button.path['UID']);
                     }}
+                    role="switch"
+                    aria-checked={button.path['UID'] === pathFilter}
+                    aria-controls={resultsUID + '_results'}
                   >
                     {button.label}
                   </Button>
@@ -175,7 +181,10 @@ const SimpleCardTemplateDefault = (props) => {
         </Row>
       )}
 
-      <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3">
+      <div
+        className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3"
+        id={resultsUID + '_results'}
+      >
         {items.map((item, index) => {
           const icon = show_icon ? getItemIcon(item) : null;
           const itemTitle = item.title || item.id;
