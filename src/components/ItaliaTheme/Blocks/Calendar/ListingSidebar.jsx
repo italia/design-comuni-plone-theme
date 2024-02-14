@@ -127,7 +127,10 @@ const ListingSidebar = (props) => {
             <Icon name={downSVG} size="20px" />
           )}
         </Accordion.Title>
-        <Accordion.Content active={activeAccIndex === 1}>
+        <Accordion.Content
+          active={activeAccIndex === 1}
+          className="listing-calendar-props"
+        >
           <ListingData
             blocksConfig={{ listing: config.blocks.blocksConfig.listing }}
             {...props}

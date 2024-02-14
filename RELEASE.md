@@ -43,6 +43,10 @@
 
 ## Versione X.X.X (dd/mm/yyyy)
 
+### Migliorie
+
+- Rimosso il campo "Risultati per pagina" che non agiva sulle impostazioni del blocco Calendario.
+
 ### Fix
 
 - Risolto un problema riguardante la visualizzazione delle date nelle card che rappresentano uun CT Evento nei vari listati nel caso in cui l'evento si sviluppi su anni diversi
