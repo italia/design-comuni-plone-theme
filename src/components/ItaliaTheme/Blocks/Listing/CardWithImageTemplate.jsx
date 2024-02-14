@@ -152,7 +152,13 @@ const CardWithImageTemplate = (props) => {
                     )}
                     <CardBody className="px-4">
                       {(icon || category || date) && (
-                        <CardCategory iconName={icon} date={date}>
+                        <CardCategory
+                          iconName={icon}
+                          date={date}
+                          className={cx('category-top categoryicon-top', {
+                            'wrap-dates-four-columns': set_four_columns,
+                          })}
+                        >
                           <ListingCategory category={category} item={item} />
                         </CardCategory>
                       )}
