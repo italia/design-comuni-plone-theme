@@ -37,7 +37,6 @@
 }
 
 a {
-  display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
   cursor: pointer;
 
   &[href^='mailto'],

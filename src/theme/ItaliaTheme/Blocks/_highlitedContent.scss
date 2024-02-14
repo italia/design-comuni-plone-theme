@@ -17,6 +17,8 @@
 
   .card-title {
     a {
+      display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
+      color: $link-color;
       font-size: 1.7rem;
       line-height: 2.3rem;
       text-decoration: none;

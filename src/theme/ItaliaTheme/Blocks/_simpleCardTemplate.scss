@@ -36,13 +36,12 @@
 
     .card-body {
       a {
+        display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
         &:link,
         &:visited {
           text-decoration: none;
         }
-      }
 
-      a {
         &:hover,
         &:active {
           text-decoration: underline;
@@ -56,6 +55,7 @@
           @include rem-size(font-size, 24);
           @include rem-size(line-height, 26);
           font-weight: 700;
+          display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
 
           &:hover,
           &:active {
@@ -130,6 +130,7 @@
         @include rem-size(line-height, 32);
         font-weight: 700;
         text-decoration: none;
+        display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
 
         &:hover,
         &:active {
