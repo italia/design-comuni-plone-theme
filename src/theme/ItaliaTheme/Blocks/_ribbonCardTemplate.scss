@@ -26,6 +26,7 @@
 
       a {
         text-decoration: none;
+        display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
 
         &:hover {
           text-decoration: underline;

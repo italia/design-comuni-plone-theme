@@ -14,6 +14,12 @@
   border-left: 8px solid $primary-a0;
   box-shadow: 0px 4px 4px 0px #00000026;
 
+  .card-title {
+    a {
+      display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
+    }
+  }
+
   &.card-small {
     @include rem-size(line-height, 24);
 
@@ -82,6 +88,10 @@
       margin-bottom: 0.3em !important;
       font-weight: 600;
 
+      a {
+        display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
+      }
+
       a,
       &.venue-card-title.venue-card-title {
         @include rem-size(font-size, 24);
@@ -108,6 +118,7 @@
     h5.card-title {
       a {
         @include rem-size(font-size, 18);
+        display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
         text-decoration: none;
         text-transform: none;
       }
@@ -141,6 +152,7 @@
         @include rem-size(line-height, 24);
         font-weight: 600;
         text-decoration: none;
+        display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
       }
 
       a:hover {
@@ -149,17 +161,6 @@
 
       svg {
         fill: $link-color;
-      }
-    }
-  }
-}
-
-.block.highlitedContent {
-  div.card {
-    h2.card-title {
-      a {
-        color: $link-color;
-        font-size: 1.7rem;
       }
     }
   }
