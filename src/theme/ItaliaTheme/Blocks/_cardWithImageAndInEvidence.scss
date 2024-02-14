@@ -107,6 +107,16 @@
           font-weight: 400;
           letter-spacing: 1.1px;
         }
+        &.wrap-dates-four-columns {
+          flex-wrap: wrap;
+          .data {
+            margin-top: 0.5rem;
+          }
+
+          ::before {
+            display: none;
+          }
+        }
       }
 
       .card-title {

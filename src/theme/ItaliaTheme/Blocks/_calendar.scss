@@ -200,3 +200,8 @@
     }
   }
 }
+
+/* Hidden pagination size from calendar props */
+.listing-calendar-props [class*='field-wrapper-b_size'] {
+  display: none;
+}
