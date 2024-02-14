@@ -61,16 +61,12 @@ a {
 
 .public-ui {
   a.btn.btn-primary {
-    color: $primary-text;
-
     svg {
       fill: $primary-text;
     }
   }
 
   a.btn.btn-secondary {
-    color: $secondary-text;
-
     svg {
       fill: $secondary-text;
     }
