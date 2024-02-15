@@ -109,7 +109,7 @@ body.cms-ui {
   }
 
   .public-ui {
-    a {
+    a:not(.btn) {
       color: $link-color;
     }
   }
