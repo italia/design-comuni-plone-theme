@@ -1981,6 +1981,11 @@ msgid "feedback_complete_instructions"
 msgstr ""
 
 #: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: Error
+msgid "feedback_error"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
 # defaultMessage: Next
 msgid "feedback_form_button_next"
 msgstr ""
