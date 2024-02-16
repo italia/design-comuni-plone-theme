@@ -1,5 +1,31 @@
 
 
+## [11.5.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.4.1...v11.5.0) (2024-02-16)
+
+
+### Features
+
+* upgrade to volto-feedback 0.2.0 ([#541](https://github.com/redturtle/design-comuni-plone-theme/issues/541)) ([8f53eb9](https://github.com/redturtle/design-comuni-plone-theme/commit/8f53eb9fd8c85f3228a9d2fce129a3896b6c188d))
+
+
+### Bug Fixes
+
+* button keyboard focus color ([#535](https://github.com/redturtle/design-comuni-plone-theme/issues/535)) ([f3bb7a4](https://github.com/redturtle/design-comuni-plone-theme/commit/f3bb7a4a5252f826bce8c94abeb60ebef82e2d1a))
+* dates layout in CardWithImage template and 4 columns layout ([#532](https://github.com/redturtle/design-comuni-plone-theme/issues/532)) ([af9dfc7](https://github.com/redturtle/design-comuni-plone-theme/commit/af9dfc79f69e67969c4a7894e16ccd343dee76b1))
+* display error in feedback form ([#538](https://github.com/redturtle/design-comuni-plone-theme/issues/538)) ([51a2f8b](https://github.com/redturtle/design-comuni-plone-theme/commit/51a2f8b4d49d8490c5cf493712b981c208cc2341))
+* focus on link and card title links ([#536](https://github.com/redturtle/design-comuni-plone-theme/issues/536)) ([707b6ca](https://github.com/redturtle/design-comuni-plone-theme/commit/707b6ca599dbc430dc8ea2a1a9e3efc4d12f906c))
+* hidden pagination size field from calendar block props ([#531](https://github.com/redturtle/design-comuni-plone-theme/issues/531)) ([92d734e](https://github.com/redturtle/design-comuni-plone-theme/commit/92d734ec7a3b625498658d5d12b1681677d3da87))
+* navigation reducer bug happening in 404 pages ([a6837d0](https://github.com/redturtle/design-comuni-plone-theme/commit/a6837d0d8277ac8a5ae8b149651ce65039405471))
+* query for listing path filters ([#530](https://github.com/redturtle/design-comuni-plone-theme/issues/530)) ([34739ea](https://github.com/redturtle/design-comuni-plone-theme/commit/34739eac771ef385a9ad2d12ee1f64d0fe9490d7))
+* query listing path filter color status and a11y ([#534](https://github.com/redturtle/design-comuni-plone-theme/issues/534)) ([f51dbad](https://github.com/redturtle/design-comuni-plone-theme/commit/f51dbad4dd8beb7fbb8ab3e5fd4593cab194b992))
+* Timeline now also shows year if event spans multiple years in Event view ([#533](https://github.com/redturtle/design-comuni-plone-theme/issues/533)) ([30cf623](https://github.com/redturtle/design-comuni-plone-theme/commit/30cf6236522f9533144b3ad1c5e4788174c4f60b))
+* wrong date display for events that  span on multiple years ([#529](https://github.com/redturtle/design-comuni-plone-theme/issues/529)) ([e579fc4](https://github.com/redturtle/design-comuni-plone-theme/commit/e579fc4c05cac04f9f998916a2ea8285ff942311))
+
+
+### Documentation
+
+* updated publiccode and release log ([6209b62](https://github.com/redturtle/design-comuni-plone-theme/commit/6209b62ae5808972998b7bd0d6c8c1683018c469))
+
 ## [11.4.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.4.0...v11.4.1) (2024-02-08)
 
 
