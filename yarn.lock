@@ -6575,7 +6575,7 @@ __metadata:
     volto-data-grid-widget: 2.3.1
     volto-dropdownmenu: 4.1.1
     volto-editablefooter: 5.0.3
-    volto-feedback: 0.1.5
+    volto-feedback: 0.2.0
     volto-form-block: 3.1.0
     volto-gdpr-privacy: 2.1.1
     volto-google-analytics: 2.0.0
@@ -14342,15 +14342,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-feedback@npm:0.1.5":
-  version: 0.1.5
-  resolution: "volto-feedback@npm:0.1.5"
+"volto-feedback@npm:0.2.0":
+  version: 0.2.0
+  resolution: "volto-feedback@npm:0.2.0"
   dependencies:
     react-google-recaptcha-v3: 1.9.5
     semantic-ui-css: 2.5.0
   peerDependencies:
     "@plone/volto": ">=16.0.0"
-  checksum: 1674a91100f8410e6f0851b58febcfd21fbe0cb9a2daa8f6ce73f30b1dd57cc533b8612cf6af5fab89cf68583239dd6c0933d607f5c56027264834c913dd3780
+  checksum: ada1f08b987352d5856c2ade2aea4c26cf13a7d19f5e132fcb3213231b7f8e4b7d64fda981931a010c271002d3e76eb09759065274498a594c2dc0d0772e98b1
   languageName: node
   linkType: hard
 
