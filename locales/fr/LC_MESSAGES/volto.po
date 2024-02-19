@@ -2566,6 +2566,11 @@ msgstr ""
 msgid "nominativo"
 msgstr "nominatif"
 
+#: components/ItaliaTheme/View/BandoView/BandoNoteAggiornamento
+# defaultMessage: Note di aggiornamento
+msgid "note_aggiornamento"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Novità
 msgid "novita"

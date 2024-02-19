@@ -2549,6 +2549,11 @@ msgstr "Nessun video selezionato. Aggiungi un elemento per mostrare un video"
 msgid "nominativo"
 msgstr "nominativo"
 
+#: components/ItaliaTheme/View/BandoView/BandoNoteAggiornamento
+# defaultMessage: Note di aggiornamento
+msgid "note_aggiornamento"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Novità
 msgid "novita"

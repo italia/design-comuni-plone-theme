@@ -17,6 +17,7 @@ import {
   BandoServizi,
   BandoDate,
   BandoApprofondimenti,
+  BandoNoteAggiornamento,
   BandoUlterioriInformazioni,
   RelatedItemInEvidence,
   SkipToMainContent,
@@ -34,6 +35,7 @@ export const BandoViewSectionsOrder = [
   {
     /* ALLEGATI (CARTELLE APPROFONDIMENTI)  */ component: BandoApprofondimenti,
   },
+  { /* NOTE AGGIORNAMENTO  */ component: BandoNoteAggiornamento },
   { /* ULTERIORI INFORMAZIONI  */ component: BandoUlterioriInformazioni },
 ];
 /**
