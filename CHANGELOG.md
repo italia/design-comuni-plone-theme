@@ -1,5 +1,17 @@
 
 
+## [11.5.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.5.0...v11.5.1) (2024-02-19)
+
+
+### Bug Fixes
+
+* added component to show update_note field on Bandi view ([#543](https://github.com/redturtle/design-comuni-plone-theme/issues/543)) ([a9e33fe](https://github.com/redturtle/design-comuni-plone-theme/commit/a9e33fe6765f5635afc6f856d778495cbe815350))
+
+
+### Documentation
+
+* updated publiccode and release log ([0f2200e](https://github.com/redturtle/design-comuni-plone-theme/commit/0f2200e7a433c7721f8521f5f79b617d1b8c6910))
+
 ## [11.5.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.4.1...v11.5.0) (2024-02-16)
 
 
