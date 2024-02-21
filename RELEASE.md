@@ -41,7 +41,13 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.5.1 (19/02/2024)
+
+### Migliorie
+
+- Il campo "Note aggiornamento" nel Tipo di Contenuto Bandi viene ora mostrato in pagina, se compilato.
+
+## Versione 11.5.0 (16/02/2024)
 
 ### Migliorie
 

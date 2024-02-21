@@ -85,6 +85,7 @@ export BandoAreaResponsabile from 'design-comuni-plone-theme/components/ItaliaTh
 export BandoServizi from 'design-comuni-plone-theme/components/ItaliaTheme/View/BandoView/BandoServizi';
 export BandoDate from 'design-comuni-plone-theme/components/ItaliaTheme/View/BandoView/BandoDate';
 export BandoApprofondimenti from 'design-comuni-plone-theme/components/ItaliaTheme/View/BandoView/BandoApprofondimenti';
+export BandoNoteAggiornamento from 'design-comuni-plone-theme/components/ItaliaTheme/View/BandoView/BandoNoteAggiornamento';
 export BandoUlterioriInformazioni from 'design-comuni-plone-theme/components/ItaliaTheme/View/BandoView/BandoUlterioriInformazioni';
 
 export CartellaModulisticaAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/CartellaModulisticaView/Placeholder/AfterContent';

@@ -11,6 +11,7 @@ import {
   Card,
   Button,
   CardHeader,
+  CardBody,
 } from 'design-react-kit';
 import {
   getNumberOfSteps,
@@ -109,6 +110,10 @@ const messages = defineMessages({
   other_positive: {
     id: 'feedback_other_positive',
     defaultMessage: 'Other',
+  },
+  error: {
+    id: 'feedback_error',
+    defaultMessage: 'Error',
   },
 });
 
@@ -213,6 +218,7 @@ const FeedbackForm = ({ contentType, pathname }) => {
   if (isCmsUi(path)) {
     return null;
   }
+
   return (
     <div className="bg-primary customer-satisfaction">
       <Container>
@@ -354,6 +360,26 @@ const FeedbackForm = ({ contentType, pathname }) => {
                     </h4>
                   </CardHeader>
                 )}
+                {step === 2 &&
+                  !submitResults?.loaded &&
+                  !submitResults.loading &&
+                  submitResults.error?.response?.body?.message && (
+                    <>
+                      <CardHeader className="border-0 mb-0 px-0">
+                        <h4
+                          id="rating-feedback"
+                          className="title-medium-2-semi-bold mb-0"
+                        >
+                          {intl.formatMessage(messages.error)}{' '}
+                          {submitResults.error?.response.status}:{' '}
+                          {submitResults.error?.response.statusText}
+                        </h4>
+                      </CardHeader>
+                      <CardBody>
+                        {submitResults.error?.response?.body?.message}
+                      </CardBody>
+                    </>
+                  )}
               </Card>
             </div>
           </Col>

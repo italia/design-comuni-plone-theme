@@ -2068,6 +2068,11 @@ msgid "feedback_complete_instructions"
 msgstr ""
 
 #: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: Error
+msgid "feedback_error"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
 # defaultMessage: Next
 msgid "feedback_form_button_next"
 msgstr ""
@@ -2630,6 +2635,11 @@ msgstr ""
 #: helpers/amministrazioneTrasparenteHelper
 # defaultMessage: nominativo
 msgid "nominativo"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoNoteAggiornamento
+# defaultMessage: Note di aggiornamento
+msgid "note_aggiornamento"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RelatedItems

@@ -2062,6 +2062,11 @@ msgid "feedback_complete_instructions"
 msgstr ""
 
 #: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: Error
+msgid "feedback_error"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
 # defaultMessage: Next
 msgid "feedback_form_button_next"
 msgstr ""
@@ -2625,6 +2630,11 @@ msgstr "No hay vídeos seleccionados. Agregar un elemento para mostrar un vídeo
 # defaultMessage: nominativo
 msgid "nominativo"
 msgstr "nominativa"
+
+#: components/ItaliaTheme/View/BandoView/BandoNoteAggiornamento
+# defaultMessage: Note di aggiornamento
+msgid "note_aggiornamento"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Novità
