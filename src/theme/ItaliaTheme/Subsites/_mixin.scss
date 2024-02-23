@@ -70,7 +70,7 @@
       );
       @include bs-brandtext.text($subsite-primary, $subsite-primary-text);
       @include bs-headernavbar.navbar($subsite-primary);
-      @include bs-headerslim.header($subsite-primary-text);
+      @include bs-headerslim.header($subsite-primary-text, $subsite-link-color);
       @include bs-navigation.nav(
         $subsite-light-theme,
         $subsite-primary,
