@@ -1,6 +1,6 @@
 @use '../../all_variables' as *;
 
-@mixin header($subsite-primary-text) {
+@mixin header($subsite-primary-text, $subsite-link-color) {
   &.cms-ui .public-ui {
     .it-header-slim-wrapper {
       .it-header-slim-wrapper-content {
@@ -34,7 +34,7 @@
     .parent-site-menu {
       li.nav-item {
         a.nav-link {
-          color: $subsite-primary-text;
+          color: $subsite-link-color;
         }
       }
     }
