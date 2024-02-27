@@ -1,8 +1,17 @@
 @import 'cms-ui_container';
 
 body.cms-ui {
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 18px;
+    line-height: 1.555;
+  }
   .block {
     font-family: $font-family-sans-serif;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
 
     %heading {
       margin-top: 0; /* 1*/
