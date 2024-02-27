@@ -42,8 +42,8 @@ export const blockTagDeserializer = (tagname) => (editor, el, options) => {
 */
 export const bodyTagDeserializer = () => (editor, el, options) => {
   if (
-    el.firstElementChild.nodeName === 'LI' &&
-    el.lastElementChild.nodeName === 'LI'
+    el?.firstElementChild?.nodeName === 'LI' &&
+    el?.lastElementChild?.nodeName === 'LI'
   ) {
     return jsx(
       'element',
