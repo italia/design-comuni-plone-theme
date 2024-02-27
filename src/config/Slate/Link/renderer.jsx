@@ -3,6 +3,7 @@ import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
 import { isInternalURL, flattenToAppURL } from '@plone/volto/helpers';
 import { EnhanceLink } from 'design-comuni-plone-theme/helpers';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const ViewLink = ({
   url,
@@ -85,6 +86,14 @@ export const LinkElement = (props) => {
           })
         : children}
       {extended_children}
+      {!isInternalURL(element.data?.url) &&
+        config.settings.siteProperties.markSpecialLinks && (
+          <Icon
+            icon="it-external-link"
+            size="xs"
+            className="ms-1 align-sub external-link"
+          />
+        )}
     </a>
   );
 };
