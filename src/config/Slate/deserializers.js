@@ -2,7 +2,9 @@ import { jsx } from 'slate-hyperscript';
 import { deserializeChildren } from '@plone/volto-slate/editor/deserialize';
 import { TD, TH } from '@plone/volto-slate/constants';
 
-/*rispetto a quello di volto-slate, aggiunge anche la classe (styleName) se era stata impostata*/
+/*rispetto a quello di volto-slate:
+- aggiunge anche la classe (styleName) se era stata impostata
+*/
 export const blockTagDeserializer = (tagname) => (editor, el, options) => {
   // if (tagname === 'h2') debugger;
   let children = deserializeChildren(el, editor, options).filter(
@@ -35,13 +37,30 @@ export const blockTagDeserializer = (tagname) => (editor, el, options) => {
   );
 };
 
+/*rispetto a quello di volto-slate:
+- se il tag body contiene direttamente dei children <li> allora crea un <ul> wrapper
+*/
+export const bodyTagDeserializer = () => (editor, el, options) => {
+  if (
+    el.firstElementChild.nodeName === 'LI' &&
+    el.lastElementChild.nodeName === 'LI'
+  ) {
+    return jsx(
+      'element',
+      { type: 'ul' },
+      deserializeChildren(el, editor, options),
+    );
+  }
+  return jsx('fragment', {}, deserializeChildren(el, editor, options));
+};
+
 export default function install(config) {
+  config.settings.slate.htmlTagsToSlate.BODY = bodyTagDeserializer();
   config.settings.slate.htmlTagsToSlate.P = blockTagDeserializer('p');
   config.settings.slate.htmlTagsToSlate.OL = blockTagDeserializer('ol');
   config.settings.slate.htmlTagsToSlate.UL = blockTagDeserializer('ul');
-  config.settings.slate.htmlTagsToSlate.BLOCKQUOTE = blockTagDeserializer(
-    'blockquote',
-  );
+  config.settings.slate.htmlTagsToSlate.BLOCKQUOTE =
+    blockTagDeserializer('blockquote');
 
   //A (link) deserializer is defined in ./Link/deserializer.js
 }
