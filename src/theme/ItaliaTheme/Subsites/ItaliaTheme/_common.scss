@@ -77,7 +77,11 @@
   //btn mini
   .select-all-cts.btn.btn-link.btn-mini,
   .subsite-header .text a.select-all-cts.btn-link.btn-mini {
-    color: $subsite-primary !important;
+    @if $subsite-light-theme {
+      color: $subsite-link-color !important;
+    } @else {
+      color: $subsite-primary !important;
+    }
   }
 
   //icons - general
@@ -352,13 +356,5 @@
 
   .DayPickerKeyboardShortcuts_showSpan {
     color: $subsite-primary-text;
-  }
-
-  .react-select__menu-list {
-    .select-list {
-      .react-select__option--is-focused {
-        background-color: $subsite-primary-a0 !important;
-      }
-    }
   }
 }

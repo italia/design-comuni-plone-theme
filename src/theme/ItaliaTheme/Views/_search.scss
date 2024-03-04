@@ -1,0 +1,6 @@
+.search-view {
+  /* nasconde la label "Cerca nel sito" nell'input di ricerca */
+  label.has-prepend {
+    z-index: unset;
+  }
+}

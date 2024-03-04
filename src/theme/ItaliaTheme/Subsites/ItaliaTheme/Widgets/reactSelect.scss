@@ -1,0 +1,19 @@
+@use '../../all_variables' as *;
+
+@mixin common($subsite-primary-a0, $subsite-secondary) {
+  .react-select__menu {
+    .react-select__option {
+      color: color-contrast($subsite-primary-a0);
+
+      &.react-select__option--is-focused {
+        background-color: $subsite-primary-a0;
+        color: color-contrast($subsite-primary-a0);
+      }
+      &.react-select__option--is-focused.react-select__option--is-selected,
+      &.react-select__option--is-selected {
+        background-color: $subsite-secondary;
+        color: color-contrast($subsite-secondary);
+      }
+    }
+  }
+}
