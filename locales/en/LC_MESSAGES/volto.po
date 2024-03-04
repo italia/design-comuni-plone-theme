@@ -2100,6 +2100,16 @@ msgstr "Search"
 msgid "fine_termine"
 msgstr "End of term"
 
+#: overrideTranslations
+# defaultMessage: Annulla
+msgid "form_default_cancel_label"
+msgstr "Cancel"
+
+#: overrideTranslations
+# defaultMessage: Ricomincia
+msgid "form_reset"
+msgstr "Restart"
+
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Foto dell'attività politica
 msgid "foto_attivita_politica"
@@ -2259,6 +2269,11 @@ msgstr "Association service or office"
 # defaultMessage: Servizi o uffici interni
 msgid "legami_strutture_figlie"
 msgstr "Internal services or offices"
+
+#: overrideTranslations
+# defaultMessage: I campi contrassegnati da (*) sono obbligatori.
+msgid "legend_required"
+msgstr "Fields marked with (*) are required."
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Collegamento

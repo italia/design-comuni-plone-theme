@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-02-19T11:08:36.048Z\n"
+"POT-Creation-Date: 2024-02-29T16:36:05.160Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -2102,6 +2102,16 @@ msgstr ""
 msgid "fine_termine"
 msgstr ""
 
+#: overrideTranslations
+# defaultMessage: Annulla
+msgid "form_default_cancel_label"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: Ricomincia
+msgid "form_reset"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Foto dell'attività politica
 msgid "foto_attivita_politica"
@@ -2260,6 +2270,11 @@ msgstr ""
 #: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Servizi o uffici interni
 msgid "legami_strutture_figlie"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: I campi contrassegnati da (*) sono obbligatori.
+msgid "legend_required"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar

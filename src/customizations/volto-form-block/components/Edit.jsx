@@ -32,6 +32,10 @@ const messages = defineMessages({
     id: 'form_default_submit_label',
     defaultMessage: 'Invia',
   },
+  default_cancel_label: {
+    id: 'form_default_cancel_label',
+    defaultMessage: 'Annulla',
+  },
   warning: {
     id: 'form_edit_warning',
     defaultMessage: 'Attenzione!',
@@ -116,6 +120,14 @@ class Edit extends SubblocksEdit {
 
                 <Row>
                   <Col align="center">
+                    {this.props.data?.show_cancel && (
+                      <Button color="secondary" className="me-2">
+                        {this.props.data.cancel_label ||
+                          this.props.intl.formatMessage(
+                            messages.default_cancel_label,
+                          )}
+                      </Button>
+                    )}
                     <Button color="primary">
                       {this.props.data.submit_label ||
                         this.props.intl.formatMessage(

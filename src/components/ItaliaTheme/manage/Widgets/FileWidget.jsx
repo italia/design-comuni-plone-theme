@@ -56,7 +56,8 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 const FileWidget = (props) => {
-  const { id, value, onChange, label, onEdit, infoText } = props;
+  const { id, value, onChange, label, onEdit, infoText, required, invalid } =
+    props;
   const [isImage, setIsImage] = React.useState(false);
   const intl = useIntl();
 
@@ -98,8 +99,18 @@ const FileWidget = (props) => {
     reader.readAsDataURL(files[0]);
   };
 
+  let attributes = {};
+  if (required) {
+    attributes.required = true;
+    attributes['aria-required'] = true;
+  }
+
+  const isInvalid = invalid === true || invalid === 'true';
+  if (isInvalid) {
+    attributes['aria-invalid'] = true;
+  }
   return (
-    <div className="form-group ">
+    <div className="form-group">
       <label htmlFor={`field-${id}`} className="active">
         {label}
       </label>
@@ -154,6 +165,7 @@ const FileWidget = (props) => {
                   name={id}
                   type="file"
                   disabled={props.disabled || null}
+                  {...attributes}
                 />
               )}
             </div>

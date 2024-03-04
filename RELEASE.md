@@ -43,11 +43,22 @@
 
 ## Versione X.X.X (dd/mm/yyyy)
 
+### Migliorie
+
+- Nel blocco form è stata aggiunta una legenda per i campi obbligatori.
+
+### Novità
+
+- Aggiornato il plugin del blocco Form, adesso si ha la possibilità di aggiungere un pulsante per resettare i campi e nella sidebar è presente un nuovo campo per creare un messaggio personalizzato dopo l'invio della form, i campi di tipo: testo, email, data e textarea hanno un identificativo che può essere utilizzato per restituire il valore di quei campi nel messaggio personalizzato.
+
 ### Fix
 
 - L'icona per aprire il menu in mobile è ora visibile anche quando l'header del sito è bianca.
 - La descrizione nelle card per i punti di contatto non mostrano più tutte le iniziali in maiuscolo.
 - Il colore dei link nel menu mobile è ora accessibile per tutti i temi.
+- Il layout dei campi di input "in errore" del blocco Form è stato uniformato.
+- La tendina delle select nel blocco Form non si sovrappone più ai campi sottostanti.
+- Sistemato alert di errore nel blocco Form che nascondeva il form quando un campo non era valido, ora continua a visualizzarsi anche la form.
 - Migliorato il testo alternativo per il logo NextGenerationEU nel footer.
 
 ## Versione 11.5.1 (19/02/2024)
@@ -65,7 +76,6 @@
 ### Fix
 
 - Risolto un problema riguardante la visualizzazione delle date nelle card che rappresentano un CT Evento nei vari listati nel caso in cui l'evento si sviluppi su anni diversi
-
 - Risolto un problema di visualizzazione per la sezione Date e Orari nel CT Evento quando l'evento si sviluppa su anni diversi, ora viene mostrato anche l'anno se si rientra in questa casistica
 - Nel blocco elenco, sono stati sistemati i filtri per percorso quando si clicca sul bottone configurato.
 

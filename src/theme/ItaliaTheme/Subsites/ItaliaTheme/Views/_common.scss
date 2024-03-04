@@ -32,11 +32,11 @@
   .navbar.it-navscroll-wrapper .link-list-wrapper ul li {
     a.active {
       @if $subsite-light-theme {
-        border-left: 2px solid $subsite-link-color;
         border-color: $subsite-link-color;
+        border-left: 2px solid $subsite-link-color;
       } @else {
-        border-left: 2px solid $subsite-primary;
         border-color: $subsite-primary;
+        border-left: 2px solid $subsite-primary;
       }
     }
     .nav-link {

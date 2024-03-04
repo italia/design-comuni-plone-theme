@@ -58,6 +58,12 @@ $sidebarFormBg: #fafafa;
         background-color: transparent;
       }
     }
+
+    .ui.segments {
+      .accordion .ui.tertiary.segment {
+        font-size: 0.8rem;
+      }
+    }
   }
 }
 
