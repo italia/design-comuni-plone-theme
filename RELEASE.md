@@ -56,6 +56,7 @@
 - L'icona per aprire il menu in mobile è ora visibile anche quando l'header del sito è bianca.
 - La descrizione nelle card per i punti di contatto non mostrano più tutte le iniziali in maiuscolo.
 - Il colore dei link nel menu mobile è ora accessibile per tutti i temi.
+- Migliorata l'accessibilità del menu in versione mobile.
 - Il layout dei campi di input "in errore" del blocco Form è stato uniformato.
 - La tendina delle select nel blocco Form non si sovrappone più ai campi sottostanti.
 - Sistemato alert di errore nel blocco Form che nascondeva il form quando un campo non era valido, ora continua a visualizzarsi anche la form.
