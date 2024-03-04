@@ -1,5 +1,6 @@
 /* CUSTOMIZATIONS:
   - Agid styling
+  - added id to searchInput label to match aria-describedby tag
 */
 import React, { useState } from 'react';
 import { Button, Icon, Input, Label } from 'design-react-kit';
@@ -29,6 +30,7 @@ const SearchInput = (props) => {
       <Label
         htmlFor={`${props.id}-searchtext`}
         className={focused ? 'active' : 'inactive'}
+        id={`${props.id}-searchtextDescription`}
       >
         {intl.formatMessage(commonSearchBlockMessages.search)}
       </Label>

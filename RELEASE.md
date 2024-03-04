@@ -64,6 +64,7 @@
 - La tendina delle select nel blocco Form non si sovrappone più ai campi sottostanti.
 - Sistemato alert di errore nel blocco Form che nascondeva il form quando un campo non era valido, ora continua a visualizzarsi anche la form.
 - Migliorato il testo alternativo per il logo NextGenerationEU nel footer.
+- Migliorata l'accessibilità del blocco Cerca.
 - Sistemato il contrasto delle icone nei pulsanti "primary" quando si attiva il focus col tab da tastiera
 
 ## Versione 11.5.1 (19/02/2024)
