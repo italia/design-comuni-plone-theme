@@ -58,6 +58,7 @@ const GridGalleryTemplate = ({
             let image = ListingImage({
               item,
               className: '',
+              showTitleAttr: false,
             });
             let scale = null;
             if (index % 7 === 0 || index % 7 === 6 || index % 7 === 3) {
