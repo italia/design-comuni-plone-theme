@@ -1,48 +1,10 @@
-import React, { Fragment, FC, ReactNode } from 'react';
+import React, { Fragment } from 'react';
 import classNames from 'classnames';
-import { Input, InputProps, Icon } from 'design-react-kit';
+import { Icon } from 'design-react-kit';
 import { FormGroup, Label } from 'reactstrap';
+import cx from 'classnames';
 
-type UnusedProps =
-  | 'bsSize'
-  | 'size'
-  | 'static'
-  | 'plaintext'
-  | 'normalized'
-  | 'addon'
-  | 'placeholder'
-  | 'label'
-  | 'value'
-  | 'type';
-export interface RatingProps extends Omit<InputProps, UnusedProps> {
-  /** La lista di 5 id, per ciascun elemento intero del Rating. La lista deve essere ordinata dal rating 1 al rating 5.  */
-  inputs: string[];
-  /** Il campo "label" è impostato di default su "Valuta ${n} stelle su 5", ma può essere personalizzato con questa funzione che riceve il numero input come argomento `function (n: number) => string`. */
-  labelTemplate?: (value: 1 | 2 | 3 | 4 | 5) => string;
-  /** Da utilizzare in caso legenda principale del Rating. Passare una componente React da mostrare come legenda (all'interno del tag `<legend>`). È possibile mostrare la leggenda solo ai dispositivi screen reader */
-  legend?: ReactNode | { content: ReactNode; srOnly: boolean };
-  /** Parametro name da dare all'input */
-  name: string;
-  /** Classi aggiuntive da usare per il componente wrapper del Rating */
-  wrapperClassName?: string;
-  /** Classi aggiuntive da usare per ciascun elemento all'interno del componente Rating */
-  className?: string;
-  /** Callback chiamata ad ogni cambio di valore di rating. Il nuovo valore ed il name verranno passati: `function (n, name) => void` */
-  onChangeRating?: (value: 1 | 2 | 3 | 4 | 5 | number, name: string) => void;
-  /** Rende il componente read-only */
-  readOnly?: boolean;
-  /** Il valore corrente del componente: deve essere compreso tra 1 e 5 */
-  value?: 1 | 2 | 3 | 4 | 5 | number;
-  testId?: string;
-}
-
-export const isCustomLegendObject = (
-  legend: ReactNode | { content: ReactNode; srOnly: boolean }
-): legend is { content: ReactNode; srOnly: boolean } => {
-  return legend != null && typeof legend === 'object' && 'content' in legend;
-};
-
-export const Rating: FC<RatingProps> = ({
+const RTRating = ({
   className,
   inputs,
   legend,
@@ -51,76 +13,93 @@ export const Rating: FC<RatingProps> = ({
   value,
   wrapperClassName,
   testId,
-  labelTemplate = (value: 1 | 2 | 3 | 4 | 5) => `Valuta ${value} stelle su 5`,
+  labelTemplate = (value) => `Valuta ${value} stelle su 5`,
   onChangeRating = () => {},
   ...attributes
 }) => {
-  // Input data
-  // On the DOM we have to go from 5 to 1
-  const safeInputs = (inputs || []).reverse();
-
   // Fields
   const labelFn = labelTemplate;
 
-  const onChange = readOnly ? noop : onChangeRating;
+  const onChange = readOnly ? () => null : onChangeRating;
 
   const wrapperClasses = classNames(wrapperClassName, {
     'rating-read-only': readOnly,
-    'rating-label': legend
+    'rating-label': legend,
   });
   const fieldClasses = classNames(className);
   const extraFieldAttrs = readOnly ? { 'aria-hidden': true } : {};
 
-  // Legend
-  const isLegendString = typeof legend === 'string';
+  const legendContent = legend || '';
 
-  let legendClass: string = '';
-  let legendText: ReactNode = legend as string;
+  const handleChange = (e) => {
+    onChange(parseInt(e.target.value), name);
+  };
 
-  if (isCustomLegendObject(legend)) {
-    legendClass = classNames({
-      'visually-hidden': legend.srOnly
-    });
-    legendText = legend.content;
+  function getAllPrevSiblings(element, parent) {
+    const children = [...parent.children];
+    const elIndex = children.findIndex((child) => child === element);
+    return children
+      .slice(0, elIndex)
+      .filter((c) => c.nodeName.toUpperCase() === 'LABEL');
   }
-
-  const legendContent =
-    isCustomLegendObject(legend) || isLegendString ? (
-      <legend className={legendClass}>{legendText}</legend>
-    ) : (
-      legend
-    );
-
   return (
     <FormGroup
+      {...attributes}
       cssModule={{ 'form-group': 'rating' }}
-      tag='fieldset'
+      tag="fieldset"
       className={wrapperClasses}
       data-testid={testId}
-      {...attributes}
     >
-      {legend && legendContent}
-      {safeInputs.map((id, i) => {
-        const currentValue = (5 - i) as 1 | 2 | 3 | 4 | 5;
-
+      <legend className="visually-hidden">{legendContent}</legend>
+      {inputs.map((input, i) => {
         return (
-          <Fragment key={id}>
-            <Input
-              type='radio'
-              id={id}
-              name={name}
-              value={String(currentValue)}
-              cssModule={{ 'form-control': '' }}
-              className={fieldClasses}
-              onChange={() => onChange(currentValue, name)}
-              checked={value === currentValue}
-              disabled={readOnly}
-              data-element={'feedback-rate-' + currentValue}
+          <Fragment key={input.name}>
+            <input
               {...extraFieldAttrs}
+              type="radio"
+              id={input.name}
+              name={name}
+              value={input.value}
+              className={cx(extraFieldAttrs.className, fieldClasses)}
+              onChange={handleChange}
+              checked={value === input.value}
+              disabled={readOnly}
+              data-element={'feedback-rate-' + input.value}
+              aria-label={labelFn(input.value)}
             />
-            <Label className='full' for={id}>
-              <Icon icon='it-star-full' size='sm' />
-              <span className='visually-hidden'>{labelFn(currentValue)}</span>
+            <Label
+              for={input.name}
+              // aria-label={labelFn(input.value)}
+              onMouseEnter={(e) => {
+                const parentNode = e.currentTarget.parentElement;
+                const toBeHovered = getAllPrevSiblings(
+                  e.currentTarget,
+                  parentNode,
+                );
+                [...toBeHovered, e.currentTarget].forEach((tbh) => {
+                  tbh.children[0].classList.add('starFilled');
+                });
+              }}
+              onMouseLeave={(e) => {
+                const allHoveredStars = Array.from(
+                  document.getElementsByClassName('starFilled'),
+                );
+                allHoveredStars?.forEach((ahs) => {
+                  const associatedInput = document.getElementById(
+                    ahs.parentElement.htmlFor,
+                  );
+                  if (value < associatedInput.value)
+                    ahs.classList.remove('starFilled');
+                });
+              }}
+            >
+              <Icon
+                icon="it-star-full"
+                size="sm"
+                className={cx('rating-star', {
+                  starFilled: value >= input.value,
+                })}
+              />
             </Label>
           </Fragment>
         );
@@ -129,4 +108,4 @@ export const Rating: FC<RatingProps> = ({
   );
 };
 
-export default Rating;
+export default RTRating;

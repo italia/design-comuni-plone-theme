@@ -19,6 +19,10 @@
     padding: 2rem 0;
     margin: 0;
 
+    .card {
+      display: block;
+    }
+
     .title-medium-2-semi-bold {
       font-size: 1.25rem;
       font-weight: 600;
@@ -34,12 +38,47 @@
     .rating-container {
       padding-bottom: 0;
 
-      input.volto-feedback-rating:focus + label {
-        border: 0;
-        box-shadow:
-          0 0 0.2rem $focus-outline-color,
-          0 0 0 0.2rem $focus-outline-color !important;
-        outline: none;
+      .ratingOptionContainer {
+        position: relative;
+      }
+
+      .rating.rating-label {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+
+        label {
+          position: relative;
+          width: 26px;
+          max-width: 26px;
+          height: 26px;
+          max-height: 26px;
+        }
+
+        input.volto-feedback-rating {
+          position: relative;
+          left: 26px;
+          width: 26px;
+          margin-left: -24px;
+          opacity: 0;
+        }
+
+        input.volto-feedback-rating ~ label svg.rating-star {
+          fill: #c3cfdb;
+          pointer-events: none;
+        }
+
+        input.volto-feedback-rating ~ label svg.rating-star.starFilled {
+          fill: $primary;
+        }
+
+        input.volto-feedback-rating:focus + label {
+          border: 0;
+          box-shadow:
+            0 0 0.2rem $focus-outline-color,
+            0 0 0 0.2rem $focus-outline-color !important;
+          outline: none;
+        }
       }
     }
 

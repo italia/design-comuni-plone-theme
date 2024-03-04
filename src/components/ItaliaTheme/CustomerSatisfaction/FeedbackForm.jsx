@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useCallback,
+  useMemo,
+} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { useIntl, defineMessages } from 'react-intl';
@@ -9,7 +15,6 @@ import {
   Col,
   Spinner,
   Card,
-  Button,
   CardHeader,
   CardBody,
 } from 'design-react-kit';
@@ -25,7 +30,7 @@ import {
 import cx from 'classnames';
 import AnswersStep from './Steps/AnswersStep';
 import CommentsStep from './Steps/CommentsStep';
-import Rating from './Steps/Commons/Rating';
+import RTRating from './Steps/Commons/Rating';
 import { PropTypes } from 'prop-types';
 
 const messages = defineMessages({
@@ -111,6 +116,10 @@ const messages = defineMessages({
     id: 'feedback_other_positive',
     defaultMessage: 'Other',
   },
+  feedback: {
+    id: 'feedback_stars',
+    defaultMessage: 'Valuta da 1 a 5 stelle',
+  },
   error: {
     id: 'feedback_error',
     defaultMessage: 'Error',
@@ -134,12 +143,11 @@ const FeedbackForm = ({ contentType, pathname }) => {
     ? window.env.RAZZLE_HONEYPOT_FIELD
     : process.env.RAZZLE_HONEYPOT_FIELD;
 
-  const numberOfSteps = useMemo(() => getNumberOfSteps(), []);
+  const numberOfSteps = getNumberOfSteps();
 
   const changeSatisfaction = (e) => {
     setSatisfaction(e);
   };
-
   const updateFormData = (field, value) => {
     if (field === 'comment') {
       if (value?.length > 200) setInvalidForm(true);
@@ -154,12 +162,17 @@ const FeedbackForm = ({ contentType, pathname }) => {
       [field]: value,
     });
   };
-
   const getFormFieldValue = (field) => formData?.[field] ?? undefined;
 
-  const nextStep = () => setStep(step + 1);
+  const nextStep = () => {
+    if (!invalidForm) setStep(step + 1);
+  };
 
-  const prevStep = () => setStep(step - 1);
+  const prevStep = () => {
+    if (!invalidForm && step !== 0) {
+      setStep(step - 1);
+    }
+  };
 
   useEffect(() => {
     setValidToken(null);
@@ -171,6 +184,12 @@ const FeedbackForm = ({ contentType, pathname }) => {
   }, [path]);
 
   useEffect(() => {
+    const currentVote = getFormFieldValue('vote');
+    if (
+      (currentVote > threshold && satisfaction < threshold) ||
+      (currentVote < threshold && satisfaction > threshold)
+    )
+      updateFormData('answer', null);
     updateFormData('vote', satisfaction ?? null);
     setStep(0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -181,6 +200,25 @@ const FeedbackForm = ({ contentType, pathname }) => {
     updateFormData(fieldHoney, '');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fieldHoney]);
+
+  // Motivazioni del focus programmatico
+  //  - su alcuni browser viene dichiarato "object replacement character" ai rerender di react
+  //    che sono inevitabili mentre il focus rimane sul bottone ma non viene detto
+  //  - replichiamo 1:1 il comportamento del secondo step, quando vai avanti hai autofocus sulla
+  //    textarea per i commenti
+  //  - essendo annunciato ora il titolo dello step, l'utente sr sa comunque benissimo dove si trova,
+  //    anzi, il flow di compilazione del form kb+sr e' molto piu' agevole
+  useEffect(() => {
+    if (step === 0 && getFormFieldValue('answer')) {
+      const selectedAnswer = document.getElementById(
+        `${
+          satisfaction > threshold ? 'positive' : 'negative'
+        }-${getFormFieldValue('answer')}`,
+      );
+      selectedAnswer.focus();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step]);
 
   const onVerifyCaptcha = useCallback(
     (token) => {
@@ -198,6 +236,7 @@ const FeedbackForm = ({ contentType, pathname }) => {
   };
 
   const sendFormData = () => {
+    if (invalidForm) return;
     setStep(2);
     const data = {
       ...formData,
@@ -220,7 +259,7 @@ const FeedbackForm = ({ contentType, pathname }) => {
   }
 
   return (
-    <div className="bg-primary customer-satisfaction">
+    <section className="bg-primary customer-satisfaction">
       <Container>
         <Row className="d-flex justify-content-center bg-primary">
           <Col className="col-12 col-lg-6">
@@ -252,15 +291,31 @@ const FeedbackForm = ({ contentType, pathname }) => {
                           : intl.formatMessage(messages.title)}
                       </h2>
                       <div className="rating-container mb-0">
-                        <Rating
+                        <RTRating
                           name="satisfaction"
                           value={satisfaction}
+                          // Qui l'implementazione di design react kit sta su con gli stecchini, rifatta
                           inputs={[
-                            'star1b',
-                            'star2b',
-                            'star3b',
-                            'star4b',
-                            'star5b',
+                            {
+                              name: 'star1b',
+                              value: 1,
+                            },
+                            {
+                              name: 'star2b',
+                              value: 2,
+                            },
+                            {
+                              name: 'star3b',
+                              value: 3,
+                            },
+                            {
+                              name: 'star4b',
+                              value: 4,
+                            },
+                            {
+                              name: 'star5b',
+                              value: 5,
+                            },
                           ]}
                           aria-controls={
                             satisfaction > threshold
@@ -269,7 +324,7 @@ const FeedbackForm = ({ contentType, pathname }) => {
                           }
                           className="volto-feedback-rating mb-0"
                           onChangeRating={changeSatisfaction}
-                          legend=" "
+                          legend={intl.formatMessage(messages.feedback)}
                           wrapperClassName={'rating'}
                         />
                       </div>
@@ -300,47 +355,61 @@ const FeedbackForm = ({ contentType, pathname }) => {
                       />
                       <div
                         className={cx(
-                          'form-step-actions d-flex flex-nowrap w100 justify-content-center button-shadow',
+                          'form-step-actions flex-nowrap w100 justify-content-center button-shadow',
                           {
-                            'pt-4': satisfaction !== null,
+                            'pt-4 d-flex': satisfaction,
+                            'd-none': !satisfaction,
                           },
                         )}
-                        aria-hidden={satisfaction === null}
+                        aria-hidden={!satisfaction}
                       >
-                        <Button
-                          className="prev-action"
-                          disabled={!!(step - 1)}
-                          onClick={prevStep}
+                        {/* Bug bottoni del kit. Disabled e' settato anche se compare la prop aria-disabled,
+                        quando lo scopo sarebbe continuare a poter usufruire dei focus anche in screen reader.
+                        Per i vedenti, la classe dimmed fa il suo lavoro e disabilita i click/input utente */}
+                        <button
                           type="button"
-                          outline
-                          color="primary"
+                          onClick={prevStep}
+                          disabled={false}
+                          className={cx(
+                            'me-4 fw-bold btn btn-outline-primary',
+                            {
+                              disabled: step === 0,
+                            },
+                          )}
+                          aria-disabled={!(!invalidForm && step !== 0)}
                         >
                           {intl.formatMessage(messages.prev)}
-                        </Button>
+                        </button>
+
                         {step !== numberOfSteps - 1 && (
-                          <Button
-                            color="primary"
-                            onClick={nextStep}
-                            className="next-action fw-bold"
-                            disabled={invalidForm}
+                          <button
                             type="button"
+                            onClick={nextStep}
+                            disabled={false}
+                            aria-disabled={invalidForm}
+                            className={cx('fw-bold btn btn-primary', {
+                              disabled: invalidForm,
+                            })}
                           >
                             {intl.formatMessage(messages.next)}
-                          </Button>
+                          </button>
                         )}
                         {step === numberOfSteps - 1 && (
-                          <Button
-                            className="next-action fw-bold"
-                            color="primary"
-                            disabled={invalidForm}
-                            type={'button'}
+                          <button
+                            className={cx('fw-bold btn btn-primary', {
+                              disabled: invalidForm,
+                            })}
+                            type="submit"
+                            disabled={false}
+                            aria-disabled={invalidForm}
                             onClick={sendFormData}
                             onKeyDown={(e) => {
-                              if (e.key === 'Enter') sendFormData();
+                              if (e.key === 'Enter' && !invalidForm)
+                                sendFormData();
                             }}
                           >
                             {intl.formatMessage(messages.next)}
-                          </Button>
+                          </button>
                         )}
                       </div>
                     </>
@@ -385,7 +454,7 @@ const FeedbackForm = ({ contentType, pathname }) => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   );
 };
 
