@@ -34,7 +34,7 @@ const CuredBy = ({ office, people }) => {
     <RichTextSection
       tag_id="a-cura-di"
       title={intl.formatMessage(messages.cured_by)}
-      className="it-page-section anchor-offset mt-5"
+      className="it-page-section anchor-offset mb-5"
     >
       <div className="row">
         {office && (

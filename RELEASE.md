@@ -49,6 +49,8 @@
 
 ### Novità
 
+- Rimosso i contatti dalle card che rappresentano Unità Organizzative nelle varie viste dei diversi content type in cui sono implementate.
+  La lista delle viste comprende i CT: Persona, Unità Organizzativa, Documento, Bando, Servizio, Notizia, Evento, Incarico, Luogo, Argomento
 - Aggiornato il plugin del blocco Form, adesso si ha la possibilità di aggiungere un pulsante per resettare i campi e nella sidebar è presente un nuovo campo per creare un messaggio personalizzato dopo l'invio della form, i campi di tipo: testo, email, data e textarea hanno un identificativo che può essere utilizzato per restituire il valore di quei campi nel messaggio personalizzato.
 
 ### Fix
