@@ -11,6 +11,7 @@ import { Container, Row, Col } from 'design-react-kit';
 import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
+import { checkRedraftHasContent } from 'design-comuni-plone-theme/helpers';
 
 /**
  * View Accordion block class.
@@ -39,7 +40,7 @@ const AccordionView = ({ data, block }) => {
           )}
           <Container className="px-md-4">
             <div className="block-header">
-              {data.title && (
+              {checkRedraftHasContent(data.title) && (
                 <div className="title">
                   {redraft(
                     data.title,
@@ -48,7 +49,7 @@ const AccordionView = ({ data, block }) => {
                   )}
                 </div>
               )}
-              {data.description && (
+              {checkRedraftHasContent(data.description) && (
                 <div className="description">
                   {redraft(
                     data.description,
