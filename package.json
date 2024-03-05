@@ -147,7 +147,7 @@
     "volto-editablefooter": "5.0.3",
     "volto-feedback": "0.2.0",
     "volto-form-block": "3.1.0",
-    "volto-gdpr-privacy": "collective/volto-gdpr-privacy#a8a060a244581918812485daa08d969268642701",
+    "volto-gdpr-privacy": "collective/volto-gdpr-privacy#f91d3e6bcea028d3cbd4994cae25d72878112588",
     "volto-google-analytics": "2.0.0",
     "volto-multilingual-widget": "3.0.0",
     "volto-querywidget-with-browser": "0.4.1",
