@@ -1,5 +1,39 @@
 
 
+## [11.6.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.5.1...v11.6.0) (2024-03-05)
+
+
+### Features
+
+* updated volto-form-block v3.3.1 and added new features in custom components, fixed layout and invalid field messages and select from drop-down menu ([#556](https://github.com/redturtle/design-comuni-plone-theme/issues/556)) ([4a1d0ac](https://github.com/redturtle/design-comuni-plone-theme/commit/4a1d0ac708c06d1945b76f56673c3c8b89755825)), closes [#382](https://github.com/redturtle/design-comuni-plone-theme/issues/382)
+
+
+### Bug Fixes
+
+* a11y for feedback section ([#560](https://github.com/redturtle/design-comuni-plone-theme/issues/560)) ([f5f907a](https://github.com/redturtle/design-comuni-plone-theme/commit/f5f907a8834ce67fd17c6444a14bb99d3772c292))
+* added id to SearchInput template label to match aria-describedby attr ([#566](https://github.com/redturtle/design-comuni-plone-theme/issues/566)) ([49940f7](https://github.com/redturtle/design-comuni-plone-theme/commit/49940f7fc27f4f065f28b5345dd283f93ba79374))
+* better alt text for nexGenerationEU logo ([#552](https://github.com/redturtle/design-comuni-plone-theme/issues/552)) ([62aa71b](https://github.com/redturtle/design-comuni-plone-theme/commit/62aa71bac27cc141417e8b8901ec5ed27db58e1c))
+* changed color of icon on primary background ([#550](https://github.com/redturtle/design-comuni-plone-theme/issues/550)) ([aa04c9d](https://github.com/redturtle/design-comuni-plone-theme/commit/aa04c9da2feb4d04e9fdb279dab87394ac69663a))
+* condition for showing the title and description for iconBlock ([#567](https://github.com/redturtle/design-comuni-plone-theme/issues/567)) ([c7c1456](https://github.com/redturtle/design-comuni-plone-theme/commit/c7c145626e8125751accaa566eb968034c2cb459))
+* fixed btn-primary icon with focus-visible ([#565](https://github.com/redturtle/design-comuni-plone-theme/issues/565)) ([0bbb6b5](https://github.com/redturtle/design-comuni-plone-theme/commit/0bbb6b500a15f223b46e0ec5cfba39fce9745d23))
+* link styles for mobile menu in subsites ([#551](https://github.com/redturtle/design-comuni-plone-theme/issues/551)) ([a4af563](https://github.com/redturtle/design-comuni-plone-theme/commit/a4af563d75790bfba332b1c70285d414db6dfa68))
+* reactSelect widget layout and subsite search buttons ([#564](https://github.com/redturtle/design-comuni-plone-theme/issues/564)) ([6b25ba2](https://github.com/redturtle/design-comuni-plone-theme/commit/6b25ba22653e40e844a08ae4f6377c9a7eed3807))
+* remove contacts from OfficeCard component, minor margin fixes of CuredBy section ([#504](https://github.com/redturtle/design-comuni-plone-theme/issues/504)) ([688dceb](https://github.com/redturtle/design-comuni-plone-theme/commit/688dcebb63c17d747752586d814c23505da45545))
+* remove title attr from some cards through prop in ListingImage to remove title attr where needed ([#558](https://github.com/redturtle/design-comuni-plone-theme/issues/558)) ([8459177](https://github.com/redturtle/design-comuni-plone-theme/commit/845917713dfff50bca54ea79f77d13e6ac57603b))
+* remove title attribute in WideImage component ([#559](https://github.com/redturtle/design-comuni-plone-theme/issues/559)) ([da10eaa](https://github.com/redturtle/design-comuni-plone-theme/commit/da10eaabad1f50fc5aa5958bae235fda2c151449))
+* removed capitalized style from pdc description ([#549](https://github.com/redturtle/design-comuni-plone-theme/issues/549)) ([77ff653](https://github.com/redturtle/design-comuni-plone-theme/commit/77ff653c0f9ed5af3a87748da75bb7cb7481fecb))
+* removed unnecessary special character from HeaderToggler aria-controls attribute ([#553](https://github.com/redturtle/design-comuni-plone-theme/issues/553)) ([900e4da](https://github.com/redturtle/design-comuni-plone-theme/commit/900e4da5ff4b6c1fd11cdd73625e4482b57e2001))
+
+
+### Maintenance
+
+* **deps:** bump ip from 1.1.8 to 1.1.9 ([#548](https://github.com/redturtle/design-comuni-plone-theme/issues/548)) ([01ed12b](https://github.com/redturtle/design-comuni-plone-theme/commit/01ed12b577e6e30e5d5b8cae60bb38ef2708156c))
+
+
+### Documentation
+
+* updated publiccode and release log ([b8e8ba5](https://github.com/redturtle/design-comuni-plone-theme/commit/b8e8ba5cae3b51317b9d998fd61258d52f4c6fd1))
+
 ## [11.5.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.5.0...v11.5.1) (2024-02-19)
 
 
