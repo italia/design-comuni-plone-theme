@@ -41,7 +41,7 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.6.0 (05/03/2024)
 
 ### Migliorie
 
@@ -50,7 +50,7 @@
 ### Novità
 
 - Rimosso i contatti dalle card che rappresentano Unità Organizzative nelle varie viste dei diversi content type in cui sono implementate.
-  La lista delle viste comprende i CT: Persona, Unità Organizzativa, Documento, Bando, Servizio, Notizia, Evento, Incarico, Luogo, Argomento
+  La lista delle viste comprende i CT: Persona, Unità Organizzativa, Documento, Bando, Servizio, Notizia, Evento, Incarico, Luogo, Argomento.
 - Aggiornato il plugin del blocco Form, adesso si ha la possibilità di aggiungere un pulsante per resettare i campi e nella sidebar è presente un nuovo campo per creare un messaggio personalizzato dopo l'invio della form, i campi di tipo: testo, email, data e textarea hanno un identificativo che può essere utilizzato per restituire il valore di quei campi nel messaggio personalizzato.
 
 ### Fix
@@ -59,16 +59,16 @@
 - La descrizione nelle card per i punti di contatto non mostrano più tutte le iniziali in maiuscolo.
 - Il colore dei link nel menu mobile è ora accessibile per tutti i temi.
 - Titolo e descrizione sistemati su blocco icone. Adesso quando il loro contenuto è cancellato non resta lo spazio vuoto sopra le icone.
-- Migliorata l'accessibilità della sezione dedicata al feedback utente per tutti i contenuti del sito
-- Rimosso il title dall'immagine di apertura dei contenuti
-- Rimosso attributo title dall'immagine delle card: card con immagine, persona, blocco link completo, contenuto in evidenza, gallery a griglia, in evidenza
+- Migliorata l'accessibilità della sezione dedicata al feedback utente per tutti i contenuti del sito.
+- Rimosso il title dall'immagine di apertura dei contenuti.
+- Rimosso attributo title dall'immagine delle card: card con immagine, persona, blocco link completo, contenuto in evidenza, gallery a griglia, in evidenza.
 - Migliorata l'accessibilità del menu in versione mobile.
 - Il layout dei campi di input "in errore" del blocco Form è stato uniformato.
 - La tendina delle select nel blocco Form non si sovrappone più ai campi sottostanti.
 - Sistemato alert di errore nel blocco Form che nascondeva il form quando un campo non era valido, ora continua a visualizzarsi anche la form.
 - Migliorato il testo alternativo per il logo NextGenerationEU nel footer.
 - Migliorata l'accessibilità del blocco Cerca.
-- Sistemato il contrasto delle icone nei pulsanti "primary" quando si attiva il focus col tab da tastiera
+- Sistemato il contrasto delle icone nei pulsanti "primary" quando si attiva il focus col tab da tastiera.
 
 ## Versione 11.5.1 (19/02/2024)
 
