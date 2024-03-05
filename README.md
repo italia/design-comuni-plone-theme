@@ -77,6 +77,7 @@ Si veda ad esempio:
 - [Comune di Cantagallo](https://www.comune.cantagallo.po.it/)
 - [Comune di Casalfiumanese](https://www.comune.casalfiumanese.bo.it/)
 - [Comune di Castel del Rio](https://www.comune.casteldelrio.bo.it/)
+- [Comune di Castel Guelfo di Bologna](https://www.comune.castelguelfo.bo.it/)
 - [Comune di Cavezzo](https://www.comune.cavezzo.mo.it/)
 - [Comune di Cavriago](https://www.comune.cavriago.re.it/)
 - [Comune di Concordia sul Secchia](https://www.comune.concordia.mo.it/)
