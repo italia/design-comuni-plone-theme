@@ -25,6 +25,14 @@ defineMessages({
     id: 'rrule_on the',
     defaultMessage: 'il',
   },
+  weekdays: {
+    id: 'rrule_weekdays',
+    defaultMessage: 'giorni feriali',
+  },
+  weekday: {
+    id: 'rrule_weekday',
+    defaultMessage: 'giorno feriale',
+  },
   reset: {
     //volto-form-block
     id: 'form_reset',

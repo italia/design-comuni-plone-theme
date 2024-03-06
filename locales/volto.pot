@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-02-29T16:36:05.160Z\n"
+"POT-Creation-Date: 2024-03-06T10:48:38.114Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -2970,6 +2970,16 @@ msgstr ""
 #: overrideTranslations
 # defaultMessage: _
 msgid "rrule_th"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: giorno feriale
+msgid "rrule_weekday"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: giorni feriali
+msgid "rrule_weekdays"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate

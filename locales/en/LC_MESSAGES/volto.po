@@ -2970,6 +2970,16 @@ msgstr "st"
 msgid "rrule_th"
 msgstr "th"
 
+#: overrideTranslations
+# defaultMessage: giorno feriale
+msgid "rrule_weekday"
+msgstr "weekday"
+
+#: overrideTranslations
+# defaultMessage: giorni feriali
+msgid "rrule_weekdays"
+msgstr "weekdays"
+
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 # defaultMessage: No results from RSS feed.
