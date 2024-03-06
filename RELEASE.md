@@ -41,11 +41,11 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.6.1 (06/03/2024)
 
 ### Fix
 
-- Quando si imposta una ricorrenza per giorni feriali negli Eventi, viene visualizzato il testo corretto "ogni giorno feriale"
+- Quando si imposta una ricorrenza per giorni feriali negli Eventi, viene visualizzato il testo corretto "ogni giorno feriale".
 
 ## Versione 11.6.0 (05/03/2024)
 
