@@ -1,5 +1,17 @@
 
 
+## [11.6.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.6.0...v11.6.1) (2024-03-06)
+
+
+### Bug Fixes
+
+* changed translations for weekdays in recurrence widget ([#569](https://github.com/redturtle/design-comuni-plone-theme/issues/569)) ([54868c5](https://github.com/redturtle/design-comuni-plone-theme/commit/54868c58571768408cf374dac6c790c7cfa5e61f))
+
+
+### Documentation
+
+* updated publiccode and release log ([aa2ffcb](https://github.com/redturtle/design-comuni-plone-theme/commit/aa2ffcb09478362163255e85a99fd41161aafb62))
+
 ## [11.6.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.5.1...v11.6.0) (2024-03-05)
 
 
