@@ -7,7 +7,7 @@ const FooterPNRRLogo = () => {
       src={logoPNRR}
       width="167"
       height="41"
-      alt="NextGenerationEU"
+      alt="Finanziato dall'Unione Europea - Next Generation EU"
       loading="lazy"
       decoding="async"
       className="nextGenerationEULogo"

@@ -31,6 +31,7 @@
 @use 'ItaliaTheme/Blocks/searchSections' as it-search-sections;
 @use 'ItaliaTheme/Blocks/tableOfContents' as it-table-contents;
 @use 'ItaliaTheme/Views/common' as it-views;
+@use 'ItaliaTheme/Widgets/reactSelect' as it-select-widget;
 @use 'ItaliaTheme/common' as it-common;
 
 @function create-primary-a0($color) {
@@ -183,6 +184,7 @@
         $subsite-link-color,
         $subsite-light-theme
       );
+      @include it-select-widget.common($subsite-primary-a0, $subsite-secondary);
       @include it-common.common(
         $subsite-primary-a0,
         $subsite-primary-c1,
@@ -210,7 +212,7 @@
         box-shadow:
           inset 0 0 0 1px $subsite-primary,
           0 0 0 0.2rem rgba(var($subsite-primary), 0.2);
-        color: $subsite-primary;
+        color: color-contrast($subsite-primary);
       }
 
       //listing

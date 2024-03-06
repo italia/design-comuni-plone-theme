@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { TextArea, Form, FormGroup } from 'design-react-kit';
 import { defineMessages } from 'react-intl';
 import { FormHeader } from 'volto-feedback';
@@ -47,14 +47,18 @@ const CommentsStep = ({
       className={cx('comments-step', {
         'd-none': step !== 1,
       })}
+      data-step={step}
+      aria-expanded={step === 1}
+      aria-hidden={step !== 1}
     >
       <FormHeader
         title={intl.formatMessage(messages.header_comments)}
         step={step + 1}
         totalSteps={totalSteps}
         className="comments-header"
+        hidden={step !== 1}
       />
-      <div className="comment">
+      <div className="comment w-100">
         <Form>
           <FormGroup key={`step-${step}-comment`}>
             <TextArea
@@ -69,7 +73,7 @@ const CommentsStep = ({
               }
               tabIndex="0"
               // eslint-disable-next-line jsx-a11y/no-autofocus
-              autoFocus={true}
+              autoFocus={step === 1}
               id="comment"
               label={intl.formatMessage(messages.label_comment)}
               aria-invalid={invalid}

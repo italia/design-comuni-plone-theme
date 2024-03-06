@@ -1,3 +1,25 @@
-.react-select__control--is-focused {
-  box-shadow: 0 0 0 2px $focus-outline-color !important;
+.public-ui {
+  .react-select__menu {
+    .react-select__option {
+      color: color-contrast($primary-a0);
+
+      &.react-select__option--is-focused {
+        background-color: $primary-a0;
+        color: color-contrast($primary-a0);
+      }
+
+      &.react-select__option--is-focused.react-select__option--is-selected,
+      &.react-select__option--is-selected {
+        background-color: $primary;
+        color: color-contrast($primary);
+      }
+    }
+  }
+}
+
+.react-select__control,
+.react-select__control:hover {
+  &.react-select__control--is-focused {
+    box-shadow: 0 0 0 2px $focus-outline-color !important;
+  }
 }

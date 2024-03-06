@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { usePrevious } from '@plone/volto/helpers';
-import { Form, FormGroup, Input, Label } from 'design-react-kit';
+import { Form, FormGroup, Label } from 'design-react-kit';
 import { defineMessages } from 'react-intl';
 import {
   FormHeader,
@@ -76,6 +76,9 @@ const AnswersStep = ({
           step={step + 1}
           totalSteps={totalSteps}
           className={'answers-header'}
+          hidden={
+            userFeedback === null || userFeedback < threshold || step !== 0
+          }
         />
 
         <Form className="answers-form">
@@ -85,14 +88,13 @@ const AnswersStep = ({
               key={'positive-' + s}
               className="border-bottom border-light mb-4"
             >
-              <Input
+              <input
                 name="answer-input-positive"
                 id={'positive-' + s}
                 type="radio"
                 checked={s === selectedAnswer}
                 value={s}
                 onChange={handleAnswerChange}
-                addon
               />
               <Label
                 for={'positive-' + s}
@@ -123,6 +125,9 @@ const AnswersStep = ({
           step={step + 1}
           totalSteps={totalSteps}
           className={'answers-header'}
+          hidden={
+            userFeedback === null || userFeedback > threshold || step !== 0
+          }
         />
 
         <Form className="answers-form">
@@ -132,14 +137,13 @@ const AnswersStep = ({
               key={'negative-' + s}
               className="border-bottom border-light mb-4"
             >
-              <Input
+              <input
                 name="answer-input-negative"
                 id={'negative-' + s}
                 type="radio"
                 checked={s === selectedAnswer}
                 value={s}
                 onChange={handleAnswerChange}
-                addon
               />
               <Label
                 for={'negative-' + s}

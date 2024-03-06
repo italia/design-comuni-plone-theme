@@ -98,7 +98,7 @@ const Navigation = ({ pathname }) => {
       {menu?.length > 0 ? (
         <HeaderContent expand="lg" megamenu id="navigation">
           <HeaderToggler
-            aria-controls="#it-navigation-collapse"
+            aria-controls="it-navigation-collapse"
             aria-expanded={collapseOpen}
             aria-label="Toggle navigation"
             onClick={() => {

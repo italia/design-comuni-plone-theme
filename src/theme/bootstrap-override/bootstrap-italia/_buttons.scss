@@ -1,0 +1,8 @@
+button.btn.btn-primary:focus-visible,
+.btn.btn-primary:focus-visible {
+  &:not(:hover) {
+    svg.icon {
+      fill: var(--bs-btn-hover-color);
+    }
+  }
+}

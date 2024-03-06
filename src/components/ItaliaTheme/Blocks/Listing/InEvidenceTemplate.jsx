@@ -89,6 +89,7 @@ const InEvidenceTemplate = (props) => {
             const image = ListingImage({
               item,
               sizes: '(max-width:320px) 200px, 300px',
+              showTitleAttr: false,
             });
             const category = getCategory(item, show_type, show_section, props);
             const topics = show_topics ? item.tassonomia_argomenti : null;

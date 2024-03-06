@@ -13,6 +13,7 @@
   .progress {
     background-color: $subsite-primary-a0;
   }
+
   .progress-bar {
     @if $subsite-light-theme {
       background-color: $subsite-link-color;
@@ -32,13 +33,14 @@
   .navbar.it-navscroll-wrapper .link-list-wrapper ul li {
     a.active {
       @if $subsite-light-theme {
-        border-left: 2px solid $subsite-link-color;
         border-color: $subsite-link-color;
+        border-left: 2px solid $subsite-link-color;
       } @else {
-        border-left: 2px solid $subsite-primary;
         border-color: $subsite-primary;
+        border-left: 2px solid $subsite-primary;
       }
     }
+
     .nav-link {
       // evita che il bordo a sinistra mostri il primary nel momento in cui si scorre
       @if $subsite-light-theme {
@@ -54,6 +56,7 @@
     h5 {
       color: $subsite-primary-text;
     }
+
     .chip {
       @if $subsite-light-theme {
         border-color: $subsite-link-color;
@@ -61,16 +64,20 @@
         .chip-label {
           color: $subsite-link-color;
         }
+
         &:hover {
           background-color: #fff;
         }
       } @else {
         border-color: $subsite-primary-text;
+
         .chip-label {
           color: $subsite-primary-text;
         }
+
         &:hover {
           background-color: #fff;
+
           .chip-label {
             color: $subsite-primary;
           }
@@ -118,6 +125,7 @@
     .draftjs-buttons a {
       background-color: $subsite-secondary !important;
       color: $subsite-secondary-text !important;
+
       &:hover {
         background-color: darken($subsite-secondary, 5%) !important;
       }
@@ -138,6 +146,7 @@
           &:before {
             background-color: $subsite-link-color;
           }
+
           &:after {
             background-color: $subsite-link-color;
           }
@@ -145,11 +154,13 @@
           &:before {
             background-color: $subsite-primary;
           }
+
           &:after {
             background-color: $subsite-primary;
           }
         }
       }
+
       .calendar-date-description .calendar-date-description-content {
         border-left: 8px solid $subsite-primary-a0;
       }
@@ -160,11 +171,13 @@
   .point-list-wrapper .point-list .point-list-aside.point-list-warning {
     @if $subsite-light-theme {
       color: $subsite-link-color;
+
       &:after {
         background-color: $subsite-link-color;
       }
     } @else {
       color: $subsite-primary;
+
       &:after {
         background-color: $subsite-primary;
       }

@@ -8,24 +8,27 @@ const ListingImage = ({
   showDefault = false,
   className = 'listing-image',
   responsive = true,
+  showTitleAttr = true,
   sizes = '(max-width:320px) 200px, (max-width:425px) 300px, (max-width:767px) 500px, 410px',
   ...imageProps
 }) => {
   const Image = config.getComponent({ name: 'Image' }).component;
-  // photogallery needs to check for null image
-  // https://stackoverflow.com/questions/33136399/is-there-a-way-to-tell-if-reactelement-renders-null
-  const image = Image({
+  let commonImageProps = {
     item,
     'aria-hidden': true,
     alt: '',
     role: 'presentation',
     className,
     loading,
-    title: item.title,
     responsive,
     sizes,
     ...imageProps,
-  });
+  };
+  if (showTitleAttr)
+    commonImageProps = { ...commonImageProps, title: item.title };
+  // photogallery needs to check for null image
+  // https://stackoverflow.com/questions/33136399/is-there-a-way-to-tell-if-reactelement-renders-null
+  const image = Image(commonImageProps);
 
   if (image === null)
     return showDefault ? <img src={DefaultImageSVG} alt="" /> : null;

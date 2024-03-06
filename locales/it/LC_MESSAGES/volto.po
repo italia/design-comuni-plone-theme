@@ -2129,6 +2129,11 @@ msgid "feedback_sent"
 msgstr "Il tuo feedback è stato inviato!"
 
 #: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: Valuta da 1 a 5 stelle
+msgid "feedback_stars"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
 # defaultMessage: I ran into technical problems
 msgid "feedback_technical_problems"
 msgstr "Ho avuto problemi tecnici"
@@ -2171,6 +2176,16 @@ msgstr "Cerca"
 # defaultMessage: Fine termine
 msgid "fine_termine"
 msgstr "Fine termine"
+
+#: overrideTranslations
+# defaultMessage: Annulla
+msgid "form_default_cancel_label"
+msgstr "Annulla"
+
+#: overrideTranslations
+# defaultMessage: Ricomincia
+msgid "form_reset"
+msgstr "Ricomincia"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Foto dell'attività politica
@@ -2332,6 +2347,11 @@ msgstr "Unità organizzativa genitore"
 # defaultMessage: Servizi o uffici interni
 msgid "legami_strutture_figlie"
 msgstr "Servizi o uffici interni"
+
+#: overrideTranslations
+# defaultMessage: I campi contrassegnati da (*) sono obbligatori.
+msgid "legend_required"
+msgstr "I campi contrassegnati da (*) sono obbligatori."
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Collegamento
@@ -3022,6 +3042,16 @@ msgstr " "
 # defaultMessage: _
 msgid "rrule_th"
 msgstr " "
+
+#: overrideTranslations
+# defaultMessage: giorno feriale
+msgid "rrule_weekday"
+msgstr "giorno feriale"
+
+#: overrideTranslations
+# defaultMessage: giorni feriali
+msgid "rrule_weekdays"
+msgstr "giorni feriali"
 
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
