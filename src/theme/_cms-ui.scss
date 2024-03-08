@@ -109,8 +109,10 @@ body.cms-ui {
   }
 
   .public-ui {
-    a:not(.btn) {
-      color: $link-color;
+    :not(.it-header-wrapper) {
+      a:not(.btn) {
+        color: $link-color;
+      }
     }
   }
 
