@@ -1,5 +1,18 @@
 
 
+## [11.6.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.6.1...v11.6.2) (2024-03-08)
+
+
+### Bug Fixes
+
+* added class to apply color style to all icons ([#542](https://github.com/redturtle/design-comuni-plone-theme/issues/542)) ([3431318](https://github.com/redturtle/design-comuni-plone-theme/commit/3431318e48df0ba389f37598f5be16c8179b4337))
+* layout feedback form per validatore pa ([#575](https://github.com/redturtle/design-comuni-plone-theme/issues/575)) ([c31a61e](https://github.com/redturtle/design-comuni-plone-theme/commit/c31a61e8e6f4b666dc75a4ff1a076e560ec49a77))
+
+
+### Documentation
+
+* updated publiccode ([d4a177b](https://github.com/redturtle/design-comuni-plone-theme/commit/d4a177b293293e2764e4742d330381ad162cbf69))
+
 ## [11.6.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.6.0...v11.6.1) (2024-03-06)
 
 
