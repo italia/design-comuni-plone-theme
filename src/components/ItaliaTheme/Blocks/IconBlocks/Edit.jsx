@@ -70,7 +70,7 @@ class Edit extends SubblocksEdit {
               }}
             ></div>
           ) : (
-            <div className="background-image"></div>
+            <div className="background-image no-image"></div>
           )}
 
           <Container className="px-md-4">

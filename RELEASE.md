@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione x.x.x (xx/xx/xxxx)
+
+### Fix
+
+- Nel blocco con icone, se era impostata una immagine di sfondo non si vedeva.
+
 ## Versione 11.6.1 (06/03/2024)
 
 ### Fix
@@ -52,6 +58,7 @@
 ### Fix
 
 - Le icone social nel menu laterale mobile sono tutte dello stesso colore.
+
 ### Migliorie
 
 - Nel blocco form è stata aggiunta una legenda per i campi obbligatori.
