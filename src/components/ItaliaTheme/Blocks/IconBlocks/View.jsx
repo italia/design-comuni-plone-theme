@@ -34,7 +34,7 @@ const AccordionView = ({ data, block }) => {
               }}
             ></div>
           ) : (
-            <div className="background-image"></div>
+            <div className="background-image no-image"></div>
           )}
           <Container className="px-md-4">
             <div className="block-header">
