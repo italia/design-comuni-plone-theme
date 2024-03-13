@@ -48,16 +48,22 @@
 - Nel blocco con icone, se era impostata una immagine di sfondo non si vedeva.
 
 ## Versione 11.6.1 (06/03/2024)
+### Migliorie
+
+- Nel blocco form, se in fase di compilazione ci sono degli errori, viene mostrato un messaggio di errore specifico per ogni campo con errori.
+
+### Fix
+
+- Il bordo destro della variazione Link solo immagine del blocco Elenco è stato ripristinato.
+
+## Versione 11.6.1 (06/03/2024)
 
 ### Fix
 
 - Quando si imposta una ricorrenza per giorni feriali negli Eventi, viene visualizzato il testo corretto "ogni giorno feriale".
+- Le icone social nel menu laterale mobile sono tutte dello stesso colore.
 
 ## Versione 11.6.0 (05/03/2024)
-
-### Fix
-
-- Le icone social nel menu laterale mobile sono tutte dello stesso colore.
 
 ### Migliorie
 
