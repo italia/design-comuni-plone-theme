@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { TextArea, Form, FormGroup } from 'design-react-kit';
 import { defineMessages } from 'react-intl';
 import { FormHeader } from 'volto-feedback';

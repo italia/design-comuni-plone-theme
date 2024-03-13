@@ -328,6 +328,36 @@ iframe {
   }
 }
 
+//fix footer styles for volto-editablefooter footerTop field
+.it-footer .it-footer-main .it-brand-wrapper .footerTop,
+.footer-configuration-widget .footer-top-segment .block.gridBlock .grid-items {
+  h2 {
+    margin-bottom: 0;
+    font-size: 1.777778rem;
+    font-weight: 600;
+    letter-spacing: unset;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+
+  .block.image img {
+    width: auto;
+    height: 75px;
+  }
+
+  .block.gridBlock {
+    .col {
+      &:has(.block.image) {
+        width: auto;
+        flex: 0 0 auto;
+      }
+    }
+  }
+}
+
 .bg-light {
   --bs-light-rgb: #{red($primary-a0)}, #{green($primary-a0)},
     #{blue($primary-a0)};

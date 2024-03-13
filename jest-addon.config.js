@@ -39,6 +39,8 @@ module.exports = {
     '^volto-dropdownmenu/(.*)$':
       '<rootDir>/node_modules/volto-dropdownmenu/src/$1',
     '^volto-feedback/(.*)$': '<rootDir>/node_modules/volto-feedback/src/$1',
+    '^volto-blocks-widget/(.*)$':
+      '<rootDir>/node_modules/volto-blocks-widget/src/$1',
   },
   collectCoverage: false,
   collectCoverageFrom: [

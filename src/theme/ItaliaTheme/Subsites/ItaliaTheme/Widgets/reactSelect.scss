@@ -9,6 +9,7 @@
         background-color: $subsite-primary-a0;
         color: color-contrast($subsite-primary-a0);
       }
+
       &.react-select__option--is-focused.react-select__option--is-selected,
       &.react-select__option--is-selected {
         background-color: $subsite-secondary;
