@@ -10,6 +10,7 @@ import { Container, Row, Col } from 'design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { TextBlockView } from '@plone/volto-slate/blocks/Text';
+import config from '@plone/volto/registry';
 
 /**
  * View IconsBlock block class.
