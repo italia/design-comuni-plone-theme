@@ -7,7 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ViewBlock from './Block/ViewBlock';
 import { Container, Row, Col } from 'design-react-kit';
-import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 
