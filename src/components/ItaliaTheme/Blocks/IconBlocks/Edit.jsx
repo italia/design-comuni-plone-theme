@@ -8,7 +8,7 @@ import { defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit';
 
 import { SidebarPortal } from '@plone/volto/components';
-import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { handleKeyDownOwnFocusManagement } from 'design-comuni-plone-theme/helpers/blocks';
 import {
@@ -20,6 +20,8 @@ import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaThe
 
 import EditBlock from './Block/EditBlock';
 import Sidebar from './Sidebar.jsx';
+
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   addItem: {
@@ -115,21 +117,21 @@ class Edit extends SubblocksEdit {
     if (__SERVER__) {
       return <div />;
     }
+    const Image = config.getComponent({ name: 'Image' }).component;
 
     return (
       <div className="public-ui" tabIndex="-1" ref={this.nodeF}>
         <div className="full-width section py-5">
           {this.props.data.background?.[0] ? (
-            <div
-              className="background-image"
-              style={{
-                backgroundImage: `url(${
-                  this.props.data.background[0]?.image?.scales?.huge
-                    ?.download ??
-                  addAppURL(this.props.data.background[0]?.['@id'])
-                })`,
-              }}
-            ></div>
+            <div className="background-image">
+              <Image
+                item={this.props.data.background[0]}
+                alt=""
+                role={null}
+                responsive={true}
+                sizes="100vw"
+              />
+            </div>
           ) : (
             <div className="background-image no-image"></div>
           )}

@@ -1,5 +1,5 @@
 /**
- * View Accordion block.
+ * View IconsBlock block.
  * @module components/ItaliaTheme/Blocks/Accordion/View
  */
 
@@ -12,27 +12,28 @@ import { UniversalLink } from '@plone/volto/components';
 import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 
 /**
- * View Accordion block class.
+ * View IconsBlock block class.
  * @class View
  * @extends Component
  */
-const AccordionView = ({ data, block }) => {
+const IconsBlockView = ({ data, block }) => {
   const id = new Date().getTime();
+  const Image = config.getComponent({ name: 'Image' }).component;
 
   return (
     <div className="block iconBlocks">
       <div className="public-ui">
         <div className="full-width section py-5">
           {data.background?.[0] ? (
-            <div
-              className="background-image"
-              style={{
-                backgroundImage: `url(${
-                  data.background[0]?.image?.scales?.huge?.download ??
-                  addAppURL(data.background[0]?.['@id'])
-                })`,
-              }}
-            ></div>
+            <div className="background-image">
+              <Image
+                item={data.background[0]}
+                alt=""
+                role={null}
+                responsive={true}
+                sizes="100vw"
+              />
+            </div>
           ) : (
             <div className="background-image no-image"></div>
           )}
@@ -80,8 +81,8 @@ const AccordionView = ({ data, block }) => {
  * @property {Object} propTypes Property types.
  * @static
  */
-AccordionView.propTypes = {
+IconsBlockView.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default AccordionView;
+export default IconsBlockView;
