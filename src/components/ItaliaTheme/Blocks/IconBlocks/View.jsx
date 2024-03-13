@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import ViewBlock from './Block/ViewBlock';
 import { Container, Row, Col } from 'design-react-kit';
-import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
 import { checkRedraftHasContent } from 'design-comuni-plone-theme/helpers';
