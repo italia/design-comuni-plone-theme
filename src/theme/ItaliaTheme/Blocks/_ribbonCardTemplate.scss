@@ -25,8 +25,8 @@
       line-height: 1.44444rem;
 
       a {
-        text-decoration: none;
         display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
+        text-decoration: none;
 
         &:hover {
           text-decoration: underline;

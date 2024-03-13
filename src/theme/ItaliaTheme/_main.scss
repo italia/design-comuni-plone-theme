@@ -89,6 +89,7 @@ iframe {
     ol:first-child {
       margin-top: 0;
     }
+
     ul:last-child,
     ol:last-child {
       margin-bottom: 0;
@@ -132,10 +133,11 @@ iframe {
     display: inline-block;
     padding: 12px 24px;
     border-radius: $btn-border-radius;
+    margin: 0;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
-    margin: 0;
+
     &:hover,
     &:active {
       font-weight: 600;
@@ -144,6 +146,7 @@ iframe {
     &.btn-primary {
       background-color: $primary;
       color: $primary-text;
+
       &:hover,
       &:active {
         background-color: darken($primary, 8);
@@ -308,6 +311,36 @@ iframe {
       content: '';
       @media (max-width: #{map-get($grid-breakpoints, md)}) {
         content: none;
+      }
+    }
+  }
+}
+
+//fix footer styles for volto-editablefooter footerTop field
+.it-footer .it-footer-main .it-brand-wrapper .footerTop,
+.footer-configuration-widget .footer-top-segment .block.gridBlock .grid-items {
+  h2 {
+    margin-bottom: 0;
+    font-size: 1.777778rem;
+    font-weight: 600;
+    letter-spacing: unset;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+
+  .block.image img {
+    width: auto;
+    height: 75px;
+  }
+
+  .block.gridBlock {
+    .col {
+      &:has(.block.image) {
+        width: auto;
+        flex: 0 0 auto;
       }
     }
   }

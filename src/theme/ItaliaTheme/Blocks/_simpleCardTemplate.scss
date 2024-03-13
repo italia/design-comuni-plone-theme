@@ -54,8 +54,8 @@
         a {
           @include rem-size(font-size, 24);
           @include rem-size(line-height, 26);
-          font-weight: 700;
           display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
+          font-weight: 700;
 
           &:hover,
           &:active {
@@ -128,9 +128,9 @@
       a {
         @include rem-size(font-size, 32);
         @include rem-size(line-height, 32);
+        display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
         font-weight: 700;
         text-decoration: none;
-        display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
 
         &:hover,
         &:active {

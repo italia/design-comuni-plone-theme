@@ -15,12 +15,16 @@ import {
   FooterPNRRLogo,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/';
 
+import { FooterTop } from 'volto-editablefooter';
+
 /**
  * FooterMain component class.
  * @class FooterMain
  * @extends Component
  */
 const FooterMain = () => {
+  const footerTopContent = FooterTop();
+
   return (
     <div className="it-footer-main">
       <Container tag="div">
@@ -28,11 +32,15 @@ const FooterMain = () => {
           <Row className="clearfix" tag="div">
             <Col sm={12} tag="div" widths={['xs', 'sm', 'md', 'lg', 'xl']}>
               <div className="it-brand-wrapper">
-                <FooterPNRRLogo />
-                <UniversalLink href="/">
-                  <LogoFooter />
-                  <BrandTextFooter />
-                </UniversalLink>
+                {footerTopContent ?? (
+                  <>
+                    <FooterPNRRLogo />
+                    <UniversalLink href="/">
+                      <LogoFooter />
+                      <BrandTextFooter />
+                    </UniversalLink>
+                  </>
+                )}
               </div>
             </Col>
           </Row>

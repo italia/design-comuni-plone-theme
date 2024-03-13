@@ -150,9 +150,9 @@
       a {
         @include rem-size(font-size, 18);
         @include rem-size(line-height, 24);
+        display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
         font-weight: 600;
         text-decoration: none;
-        display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
       }
 
       a:hover {
