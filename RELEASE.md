@@ -46,6 +46,7 @@
 ### Novità
 
 - Ora la fascia del footer contenente il logo e il nome del sito è configurabile da pannello di controllo
+- Nel pannello di controllo dei Feedback, ora gli utenti con permesso di eliminare elementi da questa sezione, possono eliminare i feedback.
 
 ### Migliorie
 
