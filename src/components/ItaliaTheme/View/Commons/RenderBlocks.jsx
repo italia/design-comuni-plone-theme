@@ -48,6 +48,9 @@ const RenderBlocks = ({
     if (block['@type'] === 'text' && !block.text) {
       return null;
     }
+    if (block['@type'] === 'slate' && block.plaintext?.length === 0) {
+      return null;
+    }
   }
   return items?.length > 0 ? (
     <>
