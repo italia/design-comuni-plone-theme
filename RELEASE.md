@@ -55,6 +55,7 @@
 ### Fix
 
 - Il bordo destro della variazione Link solo immagine del blocco Elenco è stato ripristinato.
+- Se si mettono due blocchi Form nella stessa pagina, ora funzionano correttamente.
 
 ## Versione 11.6.1 (06/03/2024)
 
