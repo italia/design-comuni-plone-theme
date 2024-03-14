@@ -262,7 +262,7 @@ const FormView = ({
                       {data?.show_cancel && (
                         <Button
                           color="secondary"
-                          type="clear"
+                          type="button"
                           onClick={resetFormState}
                           className="me-2"
                         >
