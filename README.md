@@ -102,6 +102,7 @@ Si veda ad esempio:
 - [Comune di Piacenza](https://www.comune.piacenza.it/)
 - [Comune di Prignano sulla Secchia](https://www.comune.prignano.mo.it/)
 - [Comune di Reggio Emilia](https://www.comune.re.it/)
+- [Comune di Rolo](https://www.comune.rolo.re.it/)
 - [Comune di San Felice sul Panaro](https://www.comune.sanfelice.mo.it/)
 - [Comune di San Lazzaro di Savena](https://www.comune.sanlazzaro.bo.it)
 - [Comune di San Polo d'Enza](https://www.comune.sanpolodenza.re.it/)
