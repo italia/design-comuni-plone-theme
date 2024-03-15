@@ -227,9 +227,9 @@ maintenance:
 name: io-Comune - Il sito AgID per Comuni ed Enti Pubblici
 platforms:
   - web
-releaseDate: '2024-03-08'
+releaseDate: '2024-03-15'
 softwareType: standalone/web
-softwareVersion: 11.6.2
+softwareVersion: 11.7.0
 url: 'https://github.com/italia/design-comuni-plone-theme'
 usedBy:
   - ASP Comuni Modenesi Area Nord
@@ -277,6 +277,7 @@ usedBy:
   - Comune di Piacenza
   - Comune di Prignano
   - Comune di Reggio Emilia
+  - Comune di Rolo
   - Comune di San Felice sul Panaro
   - Comune di San Lazzaro di Savena
   - Comune di San Polo d'Enza
