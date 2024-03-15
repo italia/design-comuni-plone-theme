@@ -56,6 +56,7 @@
 
 - Il bordo destro della variazione Link solo immagine del blocco Elenco è stato ripristinato.
 - Se si mettono due blocchi Form nella stessa pagina, ora funzionano correttamente.
+- Aggiustato il blocco della Customer Satisfaction quando si cambia valutazione dopo averne già selezionata un'altra.
 
 ## Versione 11.6.1 (06/03/2024)
 
