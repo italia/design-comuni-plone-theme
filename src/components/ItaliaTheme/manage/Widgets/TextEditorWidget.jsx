@@ -44,9 +44,10 @@ const TextEditorWidget = (props) => {
     selected,
     onSelectBlock,
     onChangeBlock,
-    data,
+    data = {},
     ...otherProps
   } = props;
+
   const { slate } = config.settings;
   const { textblockExtensions } = slate;
   const withBlockProperties = React.useCallback(
@@ -81,7 +82,7 @@ const TextEditorWidget = (props) => {
     rootMargin: '0px 0px 200px 0px',
   });
 
-  const _value = value ?? data[fieldName];
+  const _value = fieldName ? data[fieldName] : value;
 
   const selectThis = () => {
     if (setSelected) {
@@ -126,12 +127,15 @@ const TextEditorWidget = (props) => {
               }
             }}
             onChange={(value, selection, editor) => {
+              let v = value;
+
               let retVal = {
-                value,
+                value: v,
                 plaintext: serializeNodesToText(value || []),
               };
+
               if (fieldName) {
-                retVal = { [fieldName]: value };
+                retVal = { [fieldName]: v };
               }
               onChangeBlock(block, {
                 ...data,

@@ -6,21 +6,27 @@
  * - customized to use design-react-kit elements instead semantic-ui elements
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
 import { Input, FormGroup, Label } from 'design-react-kit';
 
 import FileWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/FileWidget';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-import WysiwygWidget from '@plone/volto/components/manage/Widgets/WysiwygWidget';
-
+import { TextBlockView } from '@plone/volto-slate/blocks/Text';
+import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
+
+import { fromHtml } from 'design-comuni-plone-theme/config/Slate/utils';
 
 const messages = defineMessages({
   select_a_value: {
     id: 'form_select_a_value',
     defaultMessage: 'Seleziona un valore',
+  },
+  static_field_placeholder: {
+    id: 'form_static_field_placeholder',
+    defaultMessage: 'Inserisci qui il testo statico da mostrare.',
   },
 });
 
@@ -49,6 +55,8 @@ const Field = ({
   const intl = useIntl();
   const Select = reactSelect.default;
 
+  const [selected, setSelected] = useState(false);
+
   const getLabel = () => {
     return required ? label + ' *' : label;
   };
@@ -65,6 +73,13 @@ const Field = ({
   ) : (
     description
   );
+
+  let static_text_value = value;
+  if (field_type === 'static_text') {
+    if (value.data) {
+      static_text_value = fromHtml(value);
+    } //per retrocompatibilità con il vecchio widget che usava draftjs
+  }
 
   return (
     <div className="field">
@@ -302,25 +317,33 @@ const Field = ({
           value={value ?? ''}
         />
       )}
-      {field_type === 'static_text' &&
-        (isOnEdit ? (
-          <WysiwygWidget
-            wrapped={false}
-            id={name}
-            name={name}
-            title={label}
-            description={description}
-            onChange={onChange}
-            value={value}
-          />
-        ) : value?.data ? (
-          <div
-            className="static-text"
-            dangerouslySetInnerHTML={{ __html: value.data }}
-          />
-        ) : (
-          <br />
-        ))}
+
+      {field_type === 'static_text' && (
+        <>
+          {isOnEdit ? (
+            <div className="mb-2">
+              <TextEditorWidget
+                value={static_text_value}
+                selected={selected}
+                setSelected={setSelected}
+                placeholder={intl.formatMessage(
+                  messages.static_field_placeholder,
+                )}
+                showToolbar={true}
+                onChangeBlock={(block, data) => {
+                  onChange(name, data.value);
+                }}
+              />
+            </div>
+          ) : value ? (
+            <div className="static-text">
+              <TextBlockView id={name} data={{ value: static_text_value }} />
+            </div>
+          ) : (
+            <br />
+          )}
+        </>
+      )}
       {config.blocks.blocksConfig.form.additionalFields?.reduce((acc, val) => {
         if (val.id === field_type)
           return [
