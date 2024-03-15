@@ -41,11 +41,11 @@
 - ...
 -->
 
-## Versione X.X.X (xx/xx/xxxx)
+## Versione 11.7.0 (15/03/2024)
 
 ### Novità
 
-- Ora la fascia del footer contenente il logo e il nome del sito è configurabile da pannello di controllo
+- Ora la fascia del footer contenente il logo e il nome del sito è configurabile da pannello di controllo.
 - Nel pannello di controllo dei Feedback, ora gli utenti con permesso di eliminare elementi da questa sezione, possono eliminare i feedback.
 
 ### Migliorie
@@ -56,7 +56,7 @@
 
 - Il bordo destro della variazione Link solo immagine del blocco Elenco è stato ripristinato.
 - Se si mettono due blocchi Form nella stessa pagina, ora funzionano correttamente.
-- Aggiustato il blocco della Customer Satisfaction quando si cambia valutazione dopo averne già selezionata un'altra.
+- Aggiustato il modulo di Feedback quando si cambia valutazione dopo averne già selezionata un'altra.
 
 ## Versione 11.6.1 (06/03/2024)
 
