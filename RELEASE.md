@@ -43,6 +43,10 @@
 
 ## Versione X.X.X (dd/mm/yyyy)
 
+### Migliorie
+
+- Gli stili del tipo di contenuto Unità Organizzativa sono stati ottimizzati per la stampa.
+
 ### Novità
 
 - E' possibile scaricare il file o l'immagine caricata dal widget di upload file cliccando sul nome del file stesso.
