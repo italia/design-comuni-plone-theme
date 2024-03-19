@@ -1,0 +1,88 @@
+.contenttype-unitaorganizzativa {
+  @media print {
+    .documentDescription {
+      font-size: 1rem;
+    }
+
+    .card-wrapper {
+      padding-bottom: 0px;
+      &.card-teaser-wrapper {
+        margin: 0px;
+        &.row,
+        & {
+          --bs-gutter-y: 0px !important;
+
+          .card {
+            border: none !important;
+            &.card-big-io-comune .card-body {
+              padding: 0px !important;
+
+              .category-top {
+                display: none;
+              }
+
+              .card-title a {
+                font-size: 16px;
+                display: flex;
+
+                &::before {
+                  content: '•';
+                  display: block;
+                  margin-right: 5px;
+                }
+              }
+            }
+
+            .avatar {
+              display: none;
+            }
+
+            &.p-3,
+            &.p-4 {
+              padding: 0px !important;
+            }
+
+            &.my-3 {
+              margin-top: 0px !important;
+              margin-bottom: 0px !important;
+            }
+
+            &:after {
+              display: none;
+            }
+
+            &.shadow-sm {
+              box-shadow: none !important;
+            }
+          }
+        }
+      }
+    }
+
+    .ruolo-persone-struttura {
+      .card .card-body {
+        .card-title {
+          margin-bottom: 0px !important;
+        }
+        .card-text {
+          padding-top: 0px;
+        }
+
+        h4 {
+          &.card-title {
+            & + .card-text {
+              padding-top: 0px;
+            }
+          }
+        }
+      }
+      .mb-3 {
+        margin-bottom: 6px !important;
+      }
+    }
+
+    .anchor-offset:before {
+      display: none;
+    }
+  }
+}

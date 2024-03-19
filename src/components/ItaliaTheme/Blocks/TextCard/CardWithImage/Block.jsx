@@ -24,7 +24,7 @@ const messages = defineMessages({
   },
 });
 
-const renderImage = (image, showImage, sizeNatural) =>
+const renderImage = (image, showImage, sizeNatural, altText = '') =>
   showImage && image ? (
     <div className="img-responsive-wrapper">
       <div
@@ -35,7 +35,7 @@ const renderImage = (image, showImage, sizeNatural) =>
         <figure className="img-wrapper">
           <img
             src={`data:${image['content-type']};${image.encoding},${image.data}`}
-            alt=""
+            alt={altText}
             aria-hidden="true"
             loading="lazy"
           />
@@ -89,7 +89,12 @@ const Block = (props) => {
               >
                 {hasImage && (
                   <Col className="my-1 px-0" key={'col-0'}>
-                    {renderImage(data?.image, hasImage, data?.sizeNatural)}
+                    {renderImage(
+                      data?.image,
+                      hasImage,
+                      data?.sizeNatural,
+                      data?.altText,
+                    )}
                   </Col>
                 )}
                 <div
@@ -140,7 +145,12 @@ const Block = (props) => {
                 })}
               >
                 <Col className="my-1 p-0" key={'col-0'} data-testid={'col-0'}>
-                  {renderImage(data?.image, hasImage, data?.sizeNatural)}
+                  {renderImage(
+                    data?.image,
+                    hasImage,
+                    data?.sizeNatural,
+                    data?.altText,
+                  )}
                 </Col>
                 <div
                   key={'col-1'}

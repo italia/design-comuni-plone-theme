@@ -8,6 +8,7 @@ import {
   FileWidget,
   CheckboxWidget,
   FormFieldWrapper,
+  TextWidget,
 } from '@plone/volto/components';
 import ImageSizeWidget from '@plone/volto/components/manage/Widgets/ImageSizeWidget';
 
@@ -43,6 +44,10 @@ const messages = defineMessages({
   large: {
     id: 'Grande',
     defaultMessage: 'Grande',
+  },
+  altText: {
+    id: 'altText',
+    defaultMessage: "Testo alternativo per l'immagine",
   },
 });
 
@@ -105,6 +110,14 @@ const Sidebar = ({ data, block, onChangeBlock }) => {
               value={data.sizeImage || 's'}
             />
           </FormFieldWrapper>
+          <TextWidget
+            id="altText"
+            title={intl.formatMessage(messages.altText)}
+            value={data.altText}
+            onChange={(name, value) => {
+              onChangeBlock({ ...data, altText: value });
+            }}
+          />
         </Accordion.Content>
       </Accordion>
     </Segment.Group>
