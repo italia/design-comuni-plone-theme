@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Novità
+
+- E' possibile scaricare il file o l'immagine caricata dal widget di upload file cliccando sul nome del file stesso.
+
 ## Versione 11.7.0 (15/03/2024)
 
 ### Novità
