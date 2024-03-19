@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-03-06T10:48:38.114Z\n"
+"POT-Creation-Date: 2024-03-07T15:23:38.346Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -763,6 +763,11 @@ msgstr ""
 #: components/ItaliaTheme/View/BandoView/BandoApprofondimenti
 # defaultMessage: Documenti allegati
 msgid "allegati"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
+# defaultMessage: Testo alternativo per l'immagine
+msgid "altText"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti

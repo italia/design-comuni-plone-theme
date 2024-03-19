@@ -772,6 +772,11 @@ msgstr "Todos los temas"
 msgid "allegati"
 msgstr "Documentos adjuntos"
 
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
+# defaultMessage: Testo alternativo per l'immagine
+msgid "altText"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Altre cariche
 msgid "altre_cariche"

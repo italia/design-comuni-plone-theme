@@ -49,7 +49,8 @@
 
 ### Novità
 
-- E' possibile scaricare il file o l'immagine caricata dal widget di upload file cliccando sul nome del file stesso.
+- È possibile scaricare il file o l'immagine caricata dal widget di upload file cliccando sul nome del file stesso.
+- È possibile aggiungere un testo alternativo per l'immagine del blocco Card con Immagine.
 
 ## Versione 11.7.0 (15/03/2024)
 
