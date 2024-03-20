@@ -1,6 +1,6 @@
 /**
  * HeaderSlim component.
- * @module components/ItaliaTheme/Header/HeaderSlim
+ * @module components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone
  */
 
 import React from 'react';
