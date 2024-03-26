@@ -1,5 +1,19 @@
 
 
+## [11.8.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.8.0...v11.8.1) (2024-03-26)
+
+
+### Bug Fixes
+
+* moved HeaderSlim compoonent inside his folder to enable customizations ([#602](https://github.com/redturtle/design-comuni-plone-theme/issues/602)) ([38c6f3d](https://github.com/redturtle/design-comuni-plone-theme/commit/38c6f3d1312f3b7dbd2e73875cc51af0811adabd))
+* view background image in icons block ([#580](https://github.com/redturtle/design-comuni-plone-theme/issues/580)) ([fee11d1](https://github.com/redturtle/design-comuni-plone-theme/commit/fee11d1126f764d1cb4b3cde720714a1f2934b75))
+* volto-form-block ([#600](https://github.com/redturtle/design-comuni-plone-theme/issues/600)) ([9ac3cac](https://github.com/redturtle/design-comuni-plone-theme/commit/9ac3cac30ff846ae716b73fd1db2019e01760adc))
+
+
+### Documentation
+
+* updated publiccode ([ac87cf3](https://github.com/redturtle/design-comuni-plone-theme/commit/ac87cf398b789b1cd9dcd3c4cfed3030e8809499))
+
 ## [11.8.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.7.0...v11.8.0) (2024-03-19)
 
 
