@@ -34,12 +34,26 @@
 
 ### Novità
 
-- ...  [`Istruzioni`](url della documentazione relativa alla novità)
+- ...
 
 ### Fix
 
 - ...
 -->
+
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- ...
 
 ## Versione 11.8.0 (19/03/2024)
 
