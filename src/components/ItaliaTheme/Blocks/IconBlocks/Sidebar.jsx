@@ -58,7 +58,10 @@ const Sidebar = ({
             description=""
             required={false}
             widgetOptions={{
-              pattern_options: { selectableTypes: ['Image'] },
+              pattern_options: {
+                selectableTypes: ['Image'],
+                maximumSelectionSize: 1,
+              },
             }}
             value={data.background ?? []}
             onChange={(id, value) =>

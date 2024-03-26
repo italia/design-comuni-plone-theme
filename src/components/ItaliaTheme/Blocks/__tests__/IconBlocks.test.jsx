@@ -378,10 +378,8 @@ test('View renders all fields', async () => {
     screen.getByText(/With his brim pulled way down low/i),
   ).toBeInTheDocument();
   //immagine di background
-  const backgroundImage = document.querySelector('.background-image');
-  expect(backgroundImage).toHaveStyle(
-    `background-image: url(http://localhost:3000/is-this-the-real-life/business-teamwork-join-hands-together-business-teamwork-concept_1150-1804.webp/@@images/image/huge);`,
-  );
+  const backgroundImage = document.querySelector('.background-image img');
+  expect(backgroundImage).toBeInTheDocument();
   //link ad altro
   expect(
     screen.getByRole('link', {

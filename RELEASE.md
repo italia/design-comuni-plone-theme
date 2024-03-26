@@ -52,6 +52,10 @@
 - È possibile scaricare il file o l'immagine caricata dal widget di upload file cliccando sul nome del file stesso.
 - È possibile aggiungere un testo alternativo per l'immagine del blocco Card con Immagine.
 
+### Fix
+
+- Nel blocco con icone, se era impostata una immagine di sfondo non si vedeva.
+
 ## Versione 11.7.0 (15/03/2024)
 
 ### Novità
