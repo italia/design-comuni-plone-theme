@@ -45,6 +45,7 @@
 
 ### Migliorie
 
+- Migliorata l'accessibilità del blocco Icone.
 - ...
 
 ### Novità

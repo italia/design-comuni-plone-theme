@@ -37,7 +37,7 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
       <CardBody tag="div">
         {data.icon?.length > 0 && (
           <div className="iconblock-icon">
-            <Icon icon={data.icon} />
+            <Icon icon={data.icon} aria-hidden={true} />
           </div>
         )}
 
