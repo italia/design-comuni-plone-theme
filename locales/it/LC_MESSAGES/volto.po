@@ -844,6 +844,7 @@ msgstr "Assessore di"
 msgid "assessore_riferimento"
 msgstr "Assessore di riferimento"
 
+#: components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate
 #: components/ItaliaTheme/View/Commons/Attachment
 # defaultMessage: Allegato
 msgid "attachment"
@@ -2285,6 +2286,7 @@ msgstr "Servizi o uffici interni"
 msgid "legend_required"
 msgstr "I campi contrassegnati da (*) sono obbligatori."
 
+#: components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Collegamento
 msgid "link"
@@ -3583,6 +3585,16 @@ msgstr "Mostra la mappa a tutta larghezza"
 # defaultMessage: Mostra il nastro solo sulla prima card
 msgid "show_only_first_ribbon"
 msgstr "Mostra il nastro solo sulla prima card"
+
+#: config/Blocks/ListingOptions/attachmentCardTemplate
+# defaultMessage: Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata altrimenti vengono scaricati.
+msgid "show_pdf_desc"
+msgstr "Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata altrimenti vengono scaricati."
+
+#: config/Blocks/ListingOptions/attachmentCardTemplate
+# defaultMessage: Mostra i PDF in anteprima
+msgid "show_pdf_preview"
+msgstr "Mostra i PDF in anteprima"
 
 #: config/Blocks/ListingOptions/simpleListTemplate
 # defaultMessage: Mostra elenco puntato

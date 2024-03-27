@@ -861,6 +861,7 @@ msgstr "Conseiller de"
 msgid "assessore_riferimento"
 msgstr "Référence du conseiller"
 
+#: components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate
 #: components/ItaliaTheme/View/Commons/Attachment
 # defaultMessage: Allegato
 msgid "attachment"
@@ -2302,6 +2303,7 @@ msgstr ""
 msgid "legend_required"
 msgstr "Les champs marqués d'une (*) sont obligatoires."
 
+#: components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Collegamento
 msgid "link"
@@ -3600,6 +3602,16 @@ msgstr ""
 # defaultMessage: Mostra il nastro solo sulla prima card
 msgid "show_only_first_ribbon"
 msgstr ""
+
+#: config/Blocks/ListingOptions/attachmentCardTemplate
+# defaultMessage: Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata altrimenti vengono scaricati.
+msgid "show_pdf_desc"
+msgstr "Permet d'ouvrir l'aperçu de tous les PDF de cette liste dans un onglet séparé sinon ils seront téléchargés."
+
+#: config/Blocks/ListingOptions/attachmentCardTemplate
+# defaultMessage: Mostra i PDF in anteprima
+msgid "show_pdf_preview"
+msgstr "Afficher les PDF en aperçu"
 
 #: config/Blocks/ListingOptions/simpleListTemplate
 # defaultMessage: Mostra elenco puntato

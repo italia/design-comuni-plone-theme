@@ -853,6 +853,7 @@ msgstr "Concejal de"
 msgid "assessore_riferimento"
 msgstr "Concejal de referencia"
 
+#: components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate
 #: components/ItaliaTheme/View/Commons/Attachment
 # defaultMessage: Allegato
 msgid "attachment"
@@ -2294,6 +2295,7 @@ msgstr "Servicios internos u oficinas"
 msgid "legend_required"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Collegamento
 msgid "link"
@@ -3592,6 +3594,16 @@ msgstr "Mostrar el mapa en ancho completo"
 # defaultMessage: Mostra il nastro solo sulla prima card
 msgid "show_only_first_ribbon"
 msgstr "Mostrar la cinta solo en la primera tarjeta"
+
+#: config/Blocks/ListingOptions/attachmentCardTemplate
+# defaultMessage: Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata altrimenti vengono scaricati.
+msgid "show_pdf_desc"
+msgstr "Le permite abrir la vista previa de todos los archivos PDF en esta lista en una pestaña separada, de lo contrario, se descargarán."
+
+#: config/Blocks/ListingOptions/attachmentCardTemplate
+# defaultMessage: Mostra i PDF in anteprima
+msgid "show_pdf_preview"
+msgstr "Mostrar archivos PDF en vista previa"
 
 #: config/Blocks/ListingOptions/simpleListTemplate
 # defaultMessage: Mostra elenco puntato

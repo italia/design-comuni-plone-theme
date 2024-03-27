@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-03-07T15:23:38.346Z\n"
+"POT-Creation-Date: 2024-03-27T08:54:22.652Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -846,6 +846,7 @@ msgstr ""
 msgid "assessore_riferimento"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate
 #: components/ItaliaTheme/View/Commons/Attachment
 # defaultMessage: Allegato
 msgid "attachment"
@@ -2287,6 +2288,7 @@ msgstr ""
 msgid "legend_required"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Collegamento
 msgid "link"
@@ -3584,6 +3586,16 @@ msgstr ""
 #: config/Blocks/ListingOptions/ribbonCardTemplate
 # defaultMessage: Mostra il nastro solo sulla prima card
 msgid "show_only_first_ribbon"
+msgstr ""
+
+#: config/Blocks/ListingOptions/attachmentCardTemplate
+# defaultMessage: Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata altrimenti vengono scaricati.
+msgid "show_pdf_desc"
+msgstr ""
+
+#: config/Blocks/ListingOptions/attachmentCardTemplate
+# defaultMessage: Mostra i PDF in anteprima
+msgid "show_pdf_preview"
 msgstr ""
 
 #: config/Blocks/ListingOptions/simpleListTemplate

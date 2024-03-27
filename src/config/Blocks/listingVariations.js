@@ -42,6 +42,8 @@ import SimpleListTemplateSkeleton from 'design-comuni-plone-theme/components/Ita
 import CardWithSlideUpTextTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/CardWithSlideUpTextTemplate';
 import CardWithSlideUpTextTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithSlideUpTextTemplateSkeleton';
 
+import AttachmentCardTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate';
+
 // import AmministrazioneTrasparenteTablesTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
 // import AmministrazioneTrasparenteTablesTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
 
@@ -60,6 +62,7 @@ import {
   addPhotogalleryTemplateOptions,
   addLinkMoreOptions,
   addSmallBlockLinksTemplateOptions,
+  addAttachmentCardTemplateOptions,
   cloneBlock,
 } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
@@ -263,6 +266,20 @@ const italiaListingVariations = [
     schemaEnhancer: ({ schema, formData, intl }) => {
       let pos = addDefaultOptions(schema, formData, intl);
       addSimpleListTemplateOptions(schema, formData, intl, pos);
+      addLinkMoreOptions(schema, formData, intl);
+      return schema;
+    },
+    cloneData: cloneBlock,
+  },
+  {
+    id: 'attachmentCardTemplate',
+    isDefault: false,
+    title: 'Allegati',
+    template: AttachmentCardTemplate,
+    // used default skeleton
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      let pos = addDefaultOptions(schema, formData, intl);
+      addAttachmentCardTemplateOptions(schema, formData, intl, pos);
       addLinkMoreOptions(schema, formData, intl);
       return schema;
     },

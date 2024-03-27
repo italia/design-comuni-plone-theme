@@ -50,7 +50,7 @@
 
 ### Novità
 
-- ...
+- Aggiunto una nuova variazione del blocco elenco "Allegati" che permette di scaricare oggetti di tipo File o aprire l'anteprima di file PDF.
 
 ### Fix
 
