@@ -27,6 +27,10 @@ const messages = defineMessages({
     id: 'circoscrizione',
     defaultMessage: 'Circoscrizione',
   },
+  icona_luoghi: {
+    id: 'icona_luoghi',
+    defaultMessage: 'Icona luoghi',
+  },
 });
 
 const LocationItem = ({
@@ -45,7 +49,12 @@ const LocationItem = ({
 
   return location ? (
     <div className="card card-teaser shadow mt-3 border-left-card card-big-io-comune p-4 rounded location-item">
-      {show_icon && <Icon icon={'it-pin'} />}
+      {show_icon && (
+        <Icon
+          icon={'it-pin'}
+          title={intl.formatMessage(messages.icona_luoghi)}
+        />
+      )}
       <div className="card-body">
         <div className="card-title h5 venue-card-title">
           {(location.nome_sede || location.title) && (

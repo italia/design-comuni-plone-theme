@@ -1,4 +1,5 @@
 import React from 'react';
+import { useIntl, defineMessages } from 'react-intl';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
@@ -9,6 +10,13 @@ import {
   getItemIcon,
   ListingLinkMore,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
+
+const messages = defineMessages({
+  argumentIcon: {
+    id: 'argument_icon',
+    defaultMessage: 'Icona {type}',
+  },
+});
 
 const SimpleCardTemplateCompact = ({
   items,
@@ -23,6 +31,7 @@ const SimpleCardTemplateCompact = ({
   titleLine,
   linkmore_id_lighthouse,
 }) => {
+  const intl = useIntl();
   return (
     <div className="simple-card-compact-template">
       {title && (
@@ -49,7 +58,12 @@ const SimpleCardTemplateCompact = ({
           >
             {show_icon && (
               <div className="icon-argument-container">
-                <Icon icon={getItemIcon(item)} />
+                <Icon
+                  icon={getItemIcon(item)}
+                  title={intl.formatMessage(messages.argumentIcon, {
+                    type: item.design_italia_meta_type,
+                  })}
+                />
               </div>
             )}
             <CardBody>

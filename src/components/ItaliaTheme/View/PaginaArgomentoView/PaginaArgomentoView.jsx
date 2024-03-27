@@ -87,7 +87,7 @@ const PaginaArgomentoView = ({ content }) => {
           >
             <Breadcrumbs pathname={location.pathname} />
 
-            <ArgumentIcon icon={content.icona} />
+            <ArgumentIcon icon={content.icona} title={content.title} />
             <h1 className="mb-3" data-element="page-name">
               {content?.title}
             </h1>

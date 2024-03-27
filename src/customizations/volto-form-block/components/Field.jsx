@@ -10,6 +10,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
 import { Input, FormGroup, Label } from 'design-react-kit';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 import FileWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/FileWidget';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -22,6 +23,24 @@ const messages = defineMessages({
     id: 'form_select_a_value',
     defaultMessage: 'Seleziona un valore',
   },
+  open_menu: {
+    id: 'open_menu',
+    defaultMessage: 'Apri il menu',
+  },
+});
+
+const DropdownIndicator = injectLazyLibs('reactSelect')((props) => {
+  const intl = useIntl();
+  const components = props.reactSelect.components;
+  return (
+    <components.DropdownIndicator {...props}>
+      <Icon
+        icon="chevron-down"
+        style={{ ariaHidden: true }}
+        title={intl.formatMessage(messages.open_menu)}
+      />
+    </components.DropdownIndicator>
+  );
 });
 
 /**
@@ -114,6 +133,7 @@ const Field = ({
             <Select
               components={{
                 IndicatorSeparator: null,
+                DropdownIndicator,
               }}
               id={name}
               name={name}

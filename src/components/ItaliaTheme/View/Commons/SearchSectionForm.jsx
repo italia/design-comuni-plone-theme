@@ -99,7 +99,12 @@ const SearchSectionForm = ({ content }) => {
           id="search-page-button"
           className="pe-2 py-0 rounded-0"
         >
-          <Icon icon="it-search" aria-hidden={true} size="sm" />
+          <Icon
+            icon="it-search"
+            aria-hidden={true}
+            size="sm"
+            title={intl.formatMessage(messages.search)}
+          />
         </Button>
       </div>
     </div>

@@ -50,6 +50,10 @@ const messages = defineMessages({
     id: 'slideDot',
     defaultMessage: 'Vai alla slide {index}',
   },
+  openLink: {
+    id: 'openLink',
+    defaultMessage: 'Apri il link',
+  },
 });
 
 function NextArrow(props) {
@@ -81,7 +85,11 @@ function NextArrow(props) {
       onKeyDown={handleKeyboardUsers}
       id="sliderNextArrow"
     >
-      <Icon icon="chevron-right" key="chevron-right" />
+      <Icon
+        icon="chevron-right"
+        key="chevron-right"
+        title={intl.formatMessage(messages.successivo)}
+      />
       <span class="visually-hidden">
         {intl.formatMessage(messages.successivo)}
       </span>
@@ -126,7 +134,11 @@ function PrevArrow(props) {
       id="sliderPrevArrow"
       onKeyDown={handleKeyboardUsers}
     >
-      <Icon icon="chevron-left" key="chevron-left-prev" />
+      <Icon
+        icon="chevron-left"
+        key="chevron-left-prev"
+        title={intl.formatMessage(messages.precedente)}
+      />
       <span class="visually-hidden">
         {intl.formatMessage(messages.precedente)}
       </span>
@@ -185,11 +197,21 @@ const Slide = ({
             >
               {full_width ? (
                 <Container>
-                  {item.title} <Icon icon="arrow-right" key="arrow-right-fw" />
+                  {item.title}{' '}
+                  <Icon
+                    icon="arrow-right"
+                    key="arrow-right-fw"
+                    title={intl.formatMessage(messages.openLink)}
+                  />
                 </Container>
               ) : (
                 <>
-                  {item.title} <Icon icon="arrow-right" key="arrow-right" />
+                  {item.title}{' '}
+                  <Icon
+                    icon="arrow-right"
+                    key="arrow-right"
+                    title={intl.formatMessage(messages.openLink)}
+                  />
                 </>
               )}
             </UniversalLink>
@@ -342,6 +364,11 @@ const SliderTemplate = ({
                   <Icon
                     key={userAutoplay ? 'pause' : 'play'}
                     icon={userAutoplay ? 'pause' : 'play'}
+                    title={
+                      userAutoplay
+                        ? intl.formatMessage(messages.pause)
+                        : intl.formatMessage(messages.play)
+                    }
                   />
                   <span>{userAutoplay ? 'pause' : 'play'}</span>
                 </button>

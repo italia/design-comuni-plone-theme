@@ -1,3 +1,4 @@
+import { useIntl, defineMessages } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -21,6 +22,7 @@ const OfficeCard = ({
   no_details = false,
   ...rest
 }) => {
+  const intl = useIntl();
   const Image = config.getComponent({ name: 'Image' }).component;
   const image =
     showimage && Image({ item: office, sizes: '80px', loading: 'lazy' });
@@ -36,7 +38,12 @@ const OfficeCard = ({
       )}
       {...rest}
     >
-      {icon && <Icon icon={icon}></Icon>}
+      {icon && (
+        <Icon
+          icon={icon}
+          title={intl.formatMessage(messages.icona_ufficio)}
+        ></Icon>
+      )}
       <div className="card-body pe-3">
         <div className="card-title h5">
           <UniversalLink
@@ -83,3 +90,10 @@ OfficeCard.propTypes = {
   }),
   icon: PropTypes.string,
 };
+
+const messages = defineMessages({
+  icona_ufficio: {
+    id: 'icona_ufficio',
+    defaultMessage: 'Icona ufficio',
+  },
+});

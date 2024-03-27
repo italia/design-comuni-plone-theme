@@ -88,6 +88,10 @@ const messages = defineMessages({
     id: 'ay11_select cancel',
     defaultMessage: 'Annulla',
   },
+  dropwdown_indicator: {
+    id: 'dropdown_indicator',
+    defaultMessage: 'Apri il menu',
+  },
 });
 
 const SelectContainer = injectLazyLibs('reactSelect')(({
@@ -131,10 +135,15 @@ MenuList.propTypes = {
 };
 
 const DropdownIndicator = injectLazyLibs('reactSelect')((props) => {
+  const intl = useIntl();
   const components = props.reactSelect.components;
   return (
     <components.DropdownIndicator {...props}>
-      <Icon icon="it-arrow-down-triangle" style={{ ariaHidden: true }} />
+      <Icon
+        icon="it-arrow-down-triangle"
+        style={{ ariaHidden: true }}
+        title={intl.formatMessage(messages.dropwdown_indicator)}
+      />
     </components.DropdownIndicator>
   );
 });
@@ -165,7 +174,11 @@ const ClearIndicator = (props) => {
         style={{ padding: '0px 5px' }}
         title={intl.formatMessage(messages.ay11_for_cancel)}
       >
-        <Icon icon="it-close" style={{ ariaHidden: true }} />
+        <Icon
+          icon="it-close"
+          style={{ ariaHidden: true }}
+          title={intl.formatMessage(messages.ay11_for_cancel)}
+        />
       </div>
     </div>
   );

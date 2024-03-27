@@ -35,6 +35,10 @@ const messages = defineMessages({
     id: 'Vedi',
     defaultMessage: 'Vedi',
   },
+  argumentIcon: {
+    id: 'argument_icon',
+    defaultMessage: 'Icona {type}',
+  },
 });
 
 const RibbonCardTemplate = (props) => {
@@ -96,7 +100,6 @@ const RibbonCardTemplate = (props) => {
               name: 'BlockExtraTags',
               dependencies: ['RibbonCardTemplate', item['@type']],
             }).component;
-
             return (
               <Col lg={4} sm={12} key={index}>
                 <Card
@@ -113,7 +116,14 @@ const RibbonCardTemplate = (props) => {
 
                   {(category || icon) && (
                     <div className="etichetta">
-                      {icon && <Icon icon={icon} />}
+                      {icon && (
+                        <Icon
+                          icon={icon}
+                          title={intl.formatMessage(messages.argumentIcon, {
+                            type: category || item.design_italia_meta_type,
+                          })}
+                        />
+                      )}
                       {category && <span>{category}</span>}
                     </div>
                   )}
