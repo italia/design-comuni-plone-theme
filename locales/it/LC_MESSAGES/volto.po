@@ -1092,9 +1092,9 @@ msgid "calendarBlockSidebarTitle"
 msgstr "Calendario"
 
 #: components/ItaliaTheme/Blocks/Calendar/Body
-# defaultMessage: Prossimo
+# defaultMessage: Prossimi eventi
 msgid "calendar_next_arrow"
-msgstr "Prossimo"
+msgstr "Prossimi eventi"
 
 #: components/ItaliaTheme/Blocks/Calendar/Body
 # defaultMessage: Nessun evento disponibile al momento
@@ -1102,9 +1102,9 @@ msgid "calendar_no_results"
 msgstr "Nessun evento disponibile al momento"
 
 #: components/ItaliaTheme/Blocks/Calendar/Body
-# defaultMessage: Precedente
+# defaultMessage: Eventi precedenti
 msgid "calendar_prev_arrow"
-msgstr "Precedente"
+msgstr "Eventi precedenti"
 
 #: components/ItaliaTheme/manage/Widgets/CanaleDigitaleWidget
 # defaultMessage: Accedere al servizio

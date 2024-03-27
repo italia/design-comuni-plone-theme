@@ -30,11 +30,11 @@ const messages = defineMessages({
   },
   calendar_next_arrow: {
     id: 'calendar_next_arrow',
-    defaultMessage: 'Prossimo',
+    defaultMessage: 'Prossimi eventi',
   },
   calendar_prev_arrow: {
     id: 'calendar_prev_arrow',
-    defaultMessage: 'Precedente',
+    defaultMessage: 'Eventi precedenti',
   },
 });
 
@@ -172,10 +172,17 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
   const NextArrow = (props) => {
     const { onClick, className } = props;
     return (
-      <Button outline color={'unset'} className={className} onClick={onClick}>
+      <Button
+        outline
+        color={'unset'}
+        className={className}
+        onClick={onClick}
+        aria-label={intl.formatMessage(messages.calendar_next_arrow)}
+      >
         <FontAwesomeIcon
-          title={intl.formatMessage(messages.calendar_next_arrow)}
+          aria-hidden={true}
           icon={['fas', 'chevron-right']}
+          title={intl.formatMessage(messages.calendar_next_arrow)}
         />
       </Button>
     );
@@ -183,10 +190,17 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
   const PrevArrow = (props) => {
     const { onClick, className } = props;
     return (
-      <Button outline color={'unset'} className={className} onClick={onClick}>
+      <Button
+        outline
+        color={'unset'}
+        className={className}
+        onClick={onClick}
+        aria-label={intl.formatMessage(messages.calendar_prev_arrow)}
+      >
         <FontAwesomeIcon
-          title={intl.formatMessage(messages.calendar_prev_arrow)}
+          aria-hidden={true}
           icon={['fas', 'chevron-left']}
+          title={intl.formatMessage(messages.calendar_next_arrow)}
         />
       </Button>
     );
