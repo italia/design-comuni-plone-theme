@@ -7,12 +7,12 @@ const BrandText = ({ mobile = false, subsite }) => {
   const intl = useIntl();
   return (
     <div className="it-brand-text">
-      <h2 className="no_toc">
+      <p className="no_toc h2">
         {subsite?.title || getSiteProperty('siteTitle', intl.locale)}
-      </h2>
-      <h3 className={cx('no_toc', { 'd-none d-md-block': !mobile })}>
+      </p>
+      <p className={cx('no_toc h3', { 'd-none d-md-block': !mobile })}>
         {subsite?.description || getSiteProperty('siteSubtitle', intl.locale)}
-      </h3>
+      </p>
     </div>
   );
 };
