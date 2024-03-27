@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from 'design-comuni-plone-theme/components/ItaliaThem
 
 const Icon = (props) => {
   const { icon, className, color, size, padding, ...rest } = props;
+
   if (icon) {
     const classes = classNames(
       'icon',
