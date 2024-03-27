@@ -218,6 +218,7 @@ export const fontAwesomeAliases = {
   'field-hockey': 'field-hockey-stick-ball',
   'fighter-jet': 'jet-fighter',
   'file-alt': 'file-lines',
+  'file-ppt': 'file-powerpoint',
   'file-archive': 'file-zipper',
   'file-chart-line': 'file-chart-column',
   'file-download': 'file-arrow-down',
