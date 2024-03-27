@@ -1,5 +1,9 @@
 .ribbon-card-template {
   .card {
+    .flag-icon {
+      width: $ribbon-width;
+    }
+
     .dates {
       font-size: 0.8em;
       text-transform: uppercase;
@@ -8,11 +12,10 @@
     .etichetta {
       position: absolute;
       top: 3rem;
-      right: 0;
-      left: 0;
-      width: 100%;
+      right: 0px;
+      left: auto;
+      max-width: calc(100% - $ribbon-spacing-h * 3 - $ribbon-width);
       justify-content: inherit;
-      padding: 0 3rem;
 
       .icon {
         margin-left: auto;

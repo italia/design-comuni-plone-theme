@@ -54,6 +54,7 @@
 
 ### Fix
 
+- L'etichetta della Card con Nastro (Blocco Elenco) non si sovrappone più all'immagine del nastro.
 - Aggiustato il layout della card per il CT persone quando è impostata un'immagine.
 
 ## Versione 11.8.0 (19/03/2024)

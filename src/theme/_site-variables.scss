@@ -59,3 +59,7 @@ $external-link-fill-subfooter: $tertiary-text !default;
 
 $dvt-navigation-v-padding: 15px !default;
 // $navigation-h-padding: 24px;
+
+$spacer: 16px;
+$ribbon-spacing-h: calc($spacer * 3);
+$ribbon-width: calc($spacer * 2);
