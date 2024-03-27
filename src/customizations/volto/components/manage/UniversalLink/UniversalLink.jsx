@@ -103,7 +103,9 @@ const UniversalLink = ({
     /*enhance link*/
     if (item && item.enhanced_links_enabled) {
       enhanced_link_infos = { ...item };
-      enhanced_link_infos.filename = item['@id'];
+      if (!enhanced_link_infos.filename) {
+        enhanced_link_infos.filename = item['@id'];
+      }
     }
   }
 

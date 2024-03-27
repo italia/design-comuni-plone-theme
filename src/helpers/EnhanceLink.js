@@ -1,6 +1,7 @@
 import React from 'react';
-import { getFileViewFormat } from 'design-comuni-plone-theme/helpers';
+import prettybytes from 'pretty-bytes';
 import cx from 'classnames';
+import { getFileViewFormat } from 'design-comuni-plone-theme/helpers';
 
 const EnhanceLink = ({
   enhanced_link_infos,
@@ -10,7 +11,9 @@ const EnhanceLink = ({
 }) => {
   let children = <></>;
   let aria_label_extended = null;
-  let size = enhanced_link_infos.getObjSize ?? enhanced_link_infos.size;
+  let size =
+    enhanced_link_infos.getObjSize ??
+    prettybytes(enhanced_link_infos.size)?.toUpperCase();
 
   if (enhanced_link_infos) {
     const viewFormat = getFileViewFormat(enhanced_link_infos);
