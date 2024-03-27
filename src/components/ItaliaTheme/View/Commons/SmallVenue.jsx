@@ -1,3 +1,4 @@
+// TODO REMOVEME Sembra non più usato, rimuovere
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getContent } from '@plone/volto/actions';

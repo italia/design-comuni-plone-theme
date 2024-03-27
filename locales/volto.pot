@@ -2737,7 +2737,6 @@ msgid "patrocinato_da"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
-#: components/ItaliaTheme/View/VenueView/VenueContacts
 #: helpers/contentHelper
 # defaultMessage: PEC
 msgid "pec"
@@ -2897,46 +2896,6 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Riferimenti normativi
 msgid "riferimenti_normativi"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Fax
-msgid "riferimento_fax_luogo"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Fax
-msgid "riferimento_fax_struttura"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: E-mail
-msgid "riferimento_mail_luogo"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: E-mail
-msgid "riferimento_mail_struttura"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: PEC
-msgid "riferimento_pec_luogo"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Telefono
-msgid "riferimento_telefonico_luogo"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Telefono
-msgid "riferimento_telefonico_struttura"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Web
-msgid "riferimento_web"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Metadata
