@@ -345,7 +345,7 @@ iframe {
 
   .block.image img {
     width: auto;
-    height: 75px;
+    max-height: 75px;
   }
 
   .block.gridBlock {
