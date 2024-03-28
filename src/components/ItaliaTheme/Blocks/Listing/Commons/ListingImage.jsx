@@ -16,7 +16,7 @@ const ListingImage = ({
   let commonImageProps = {
     item,
     'aria-hidden': true,
-    alt: '',
+    alt: imageProps.alt ?? '',
     role: 'presentation',
     className,
     loading,
@@ -29,7 +29,6 @@ const ListingImage = ({
   // photogallery needs to check for null image
   // https://stackoverflow.com/questions/33136399/is-there-a-way-to-tell-if-reactelement-renders-null
   const image = Image(commonImageProps);
-
   if (image === null)
     return showDefault ? <img src={DefaultImageSVG} alt="" /> : null;
 

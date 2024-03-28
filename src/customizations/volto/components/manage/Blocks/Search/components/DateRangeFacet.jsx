@@ -3,7 +3,7 @@
   - Use with more plone.app.querystring.date operations
 */
 import React, { useState } from 'react';
-import { Icon } from 'design-react-kit';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { defineMessages, injectIntl } from 'react-intl';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { compose } from 'redux';
@@ -57,6 +57,13 @@ const NextIcon = () => (
   </div>
 );
 
+const customArrowIcon = (props) => {
+  const { intl } = props;
+  return (
+    <Icon icon="it-arrow-right" title={intl.formatMessage(messages.endDate)} />
+  );
+};
+
 const CloseIcon = () => <Icon icon="it-close" size="24px" className="close" />;
 
 const DateRangeFacet = (props) => {
@@ -95,6 +102,7 @@ const DateRangeFacet = (props) => {
             isOutsideRange={() => false}
             navPrev={<PrevIcon />}
             navNext={<NextIcon />}
+            customArrowIcon={customArrowIcon(props)}
           />
         </div>
       </div>

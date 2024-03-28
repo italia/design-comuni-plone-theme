@@ -30,58 +30,58 @@ const messages = defineMessages({
   },
 });
 
+const phoneRegex = /(\+?[0-9](?: ?[0-9/-]+)+.?[0-9]*)/gm;
+const phoneCleanRegex = /-|\/|\s/gm;
+const emailRegex = /([a-zA-Z0-9+._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi;
+const emailCleanRegex = /|\/|\s/gm;
+
 const ContactLink = ({ tel, fax, email, label = true, strong = false }) => {
   const intl = useIntl();
   let ret_label = null;
   let ret = null;
 
-  function ReplacePhoneNumbers(str, type) {
-    // eslint-disable-next-line no-useless-escape
-    let newhtml = str.replace(/\+?[0-9]( ?[0-9\/-]+)+.?[0-9]*/gm, function (v) {
-      let r =
-        "<a href='" +
-        type +
-        ':' +
-        v.trim().replace(/-|\/|\s/gm, '') +
-        "' title='" +
-        (type === 'tel'
-          ? intl.formatMessage(messages.call)
-          : intl.formatMessage(messages.call_fax)) +
-        "' >" +
-        v +
-        '</a>';
-      return r;
-    });
-    return newhtml;
-  }
+  const titles = {
+    tel: intl.formatMessage(messages.call),
+    fax: intl.formatMessage(messages.call_fax),
+    mailto: intl.formatMessage(messages.write_to),
+  };
 
-  function ReplaceEmails(str) {
-    let newhtml = str.replace(
-      /([a-zA-Z0-9+._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi,
-      function (v) {
-        let r =
-          "<a href='mailto:" +
-          v.trim().replace(/|\/|\s/gm, '') +
-          "' title='" +
-          intl.formatMessage(messages.write_to) +
-          "' >" +
-          v +
-          '</a>';
-        return r;
-      },
-    );
-    return newhtml;
+  function replaceString(str, type) {
+    const regex = type === 'mailto' ? emailRegex : phoneRegex;
+    return str.split(regex).reduce((acc, substr, i) => {
+      if (substr.trim() !== '') return acc;
+      return [
+        ...acc,
+        acc.length === 0 ? '' : ' ',
+        substr.test(regex) ? (
+          <a
+            key={`${type}-${i}`}
+            href={`${type}:${substr
+              .trim()
+              .replace(
+                type === 'mailto' ? emailCleanRegex : phoneCleanRegex,
+                '',
+              )}`}
+            title={titles[type]}
+          >
+            {substr}
+          </a>
+        ) : (
+          substr
+        ),
+      ];
+    }, []);
   }
 
   if (tel) {
     ret_label = intl.formatMessage(messages.telefono);
-    ret = ReplacePhoneNumbers(tel, 'tel');
+    ret = replaceString(tel, 'tel');
   } else if (fax) {
     ret_label = intl.formatMessage(messages.fax);
-    ret = ReplacePhoneNumbers(fax, 'fax');
+    ret = replaceString(fax, 'fax');
   } else if (email) {
     ret_label = intl.formatMessage(messages.email_label);
-    ret = ReplaceEmails(email);
+    ret = replaceString(email, 'mailto');
   }
   ret_label = label ? <>{ret_label}: </> : null;
   ret_label = label ? strong ? <strong>{ret_label}</strong> : ret_label : null;
@@ -89,7 +89,7 @@ const ContactLink = ({ tel, fax, email, label = true, strong = false }) => {
   return ret ? (
     <>
       {ret_label}
-      <span dangerouslySetInnerHTML={{ __html: ret }} />
+      <span>{ret}</span>
     </>
   ) : null;
 };

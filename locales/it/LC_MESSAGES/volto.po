@@ -859,6 +859,12 @@ msgstr "Area responsabile"
 msgid "argoment"
 msgstr "Argomento"
 
+#: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
+#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
+# defaultMessage: Icona {type}
+msgid "argument_icon"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 # defaultMessage: Argomenti in evidenza
 msgid "arguments_in_evidence_block"
@@ -879,6 +885,7 @@ msgstr "Assessore di"
 msgid "assessore_riferimento"
 msgstr "Assessore di riferimento"
 
+#: components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate
 #: components/ItaliaTheme/View/Commons/Attachment
 # defaultMessage: Allegato
 msgid "attachment"
@@ -1126,9 +1133,9 @@ msgid "calendarBlockSidebarTitle"
 msgstr "Calendario"
 
 #: components/ItaliaTheme/Blocks/Calendar/Body
-# defaultMessage: Prossimo
+# defaultMessage: Prossimi eventi
 msgid "calendar_next_arrow"
-msgstr "Prossimo"
+msgstr "Prossimi eventi"
 
 #: components/ItaliaTheme/Blocks/Calendar/Body
 # defaultMessage: Nessun evento disponibile al momento
@@ -1136,9 +1143,9 @@ msgid "calendar_no_results"
 msgstr "Nessun evento disponibile al momento"
 
 #: components/ItaliaTheme/Blocks/Calendar/Body
-# defaultMessage: Precedente
+# defaultMessage: Eventi precedenti
 msgid "calendar_prev_arrow"
-msgstr "Precedente"
+msgstr "Eventi precedenti"
 
 #: components/ItaliaTheme/Blocks/Callout/Sidebar
 # defaultMessage: Stile
@@ -1190,6 +1197,11 @@ msgstr "Formati scaricabili"
 # defaultMessage: Casi particolari
 msgid "casi_particolari"
 msgstr "Casi particolari"
+
+#: components/ItaliaTheme/Cards/CardCategory
+# defaultMessage: Icona categoria
+msgid "category_icon"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Link al canale
@@ -1248,6 +1260,11 @@ msgstr "Rimuovi ricerca testuale"
 # defaultMessage: Chiudi menu
 msgid "close-menu"
 msgstr "Chiudi menu"
+
+#: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
+# defaultMessage: Chiudi l'accordion
+msgid "closeAccordion"
+msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Chiudi cerca
@@ -1812,6 +1829,11 @@ msgstr "Scarica"
 msgid "downloadPlayVideo"
 msgstr "Scarica e riproduci video"
 
+#: components/SelectInput/SelectInput
+# defaultMessage: Apri il menu
+msgid "dropdown_indicator"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
 # defaultMessage: Additional classes
 msgid "dropdownmenu-additionalClasses"
@@ -2286,6 +2308,26 @@ msgstr "Icona"
 msgid "iconDescription"
 msgstr "Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawesome 6"
 
+#: components/ItaliaTheme/View/Commons/Argument/ArgumentIcon
+# defaultMessage: Icona per l'argomento {topic_title}
+msgid "icon_title"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/LocationItem
+# defaultMessage: Icona luoghi
+msgid "icona_luoghi"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno
+# defaultMessage: Icona telefono
+msgid "icona_telefono"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/OfficeCard
+# defaultMessage: Icona ufficio
+msgid "icona_ufficio"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 # defaultMessage: Blocco con icone
 msgid "iconss_blocks"
@@ -2358,6 +2400,7 @@ msgstr "Servizi o uffici interni"
 msgid "legend_required"
 msgstr "I campi contrassegnati da (*) sono obbligatori."
 
+#: components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Collegamento
 msgid "link"
@@ -2667,6 +2710,16 @@ msgstr "Blocco numeri"
 msgid "numero_progressivo_cs"
 msgstr "Numero del comunicato stampa"
 
+#: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
+# defaultMessage: Apri l'accordion
+msgid "openAccordion"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
+# defaultMessage: Apri il link
+msgid "openLink"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 # defaultMessage: Apri link in una nuova scheda
 msgid "openLinkInNewTab"
@@ -2806,7 +2859,6 @@ msgid "patrocinato_da"
 msgstr "Patrocinato da"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
-#: components/ItaliaTheme/View/VenueView/VenueContacts
 #: helpers/contentHelper
 # defaultMessage: PEC
 msgid "pec"
@@ -2967,46 +3019,6 @@ msgstr "Responsabile del procedimento"
 # defaultMessage: Riferimenti normativi
 msgid "riferimenti_normativi"
 msgstr "Riferimenti normativi"
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Fax
-msgid "riferimento_fax_luogo"
-msgstr "Fax"
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Fax
-msgid "riferimento_fax_struttura"
-msgstr "Fax"
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: E-mail
-msgid "riferimento_mail_luogo"
-msgstr "E-mail"
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: E-mail
-msgid "riferimento_mail_struttura"
-msgstr "E-mail"
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: PEC
-msgid "riferimento_pec_luogo"
-msgstr "PEC"
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Telefono
-msgid "riferimento_telefonico_luogo"
-msgstr "Telefono"
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Telefono
-msgid "riferimento_telefonico_struttura"
-msgstr "Telefono"
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Web
-msgid "riferimento_web"
-msgstr "Web"
 
 #: components/ItaliaTheme/View/Commons/Metadata
 # defaultMessage: Diritti
@@ -3657,6 +3669,16 @@ msgstr "Mostra la mappa a tutta larghezza"
 msgid "show_only_first_ribbon"
 msgstr "Mostra il nastro solo sulla prima card"
 
+#: config/Blocks/ListingOptions/attachmentCardTemplate
+# defaultMessage: Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata altrimenti vengono scaricati.
+msgid "show_pdf_desc"
+msgstr "Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata altrimenti vengono scaricati."
+
+#: config/Blocks/ListingOptions/attachmentCardTemplate
+# defaultMessage: Mostra i PDF in anteprima
+msgid "show_pdf_preview"
+msgstr "Mostra i PDF in anteprima"
+
 #: config/Blocks/ListingOptions/simpleListTemplate
 # defaultMessage: Mostra elenco puntato
 msgid "show_pointer_list"
@@ -4021,6 +4043,11 @@ msgstr "Unità organizzativa"
 # defaultMessage: Ufficio responsabile
 msgid "ufficio_responsabile"
 msgstr "Ufficio responsabile"
+
+#: components/ItaliaTheme/View/Commons/HelpBox
+# defaultMessage: Icona ulteriori informazioni
+msgid "ulteriori_info"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks

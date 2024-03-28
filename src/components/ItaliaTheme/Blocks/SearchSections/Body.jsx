@@ -61,7 +61,12 @@ const Body = ({ block, sections }) => {
               onClick={(e) => navigate(inputText, searchFilters())}
               aria-label={intl.formatMessage(messages.doSearch)}
             >
-              <Icon icon="it-search" padding={false} size="sm" />
+              <Icon
+                icon="it-search"
+                padding={false}
+                size="sm"
+                title={intl.formatMessage(messages.doSearch)}
+              />
             </button>
             <input
               className="inputSearch"

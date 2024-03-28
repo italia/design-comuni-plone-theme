@@ -1,3 +1,4 @@
+// TODO REMOVEME Sembra non più usato, rimuovere
 import React from 'react';
 import PropTypes from 'prop-types';
 

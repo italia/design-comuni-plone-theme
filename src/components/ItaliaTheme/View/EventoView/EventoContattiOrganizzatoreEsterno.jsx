@@ -1,3 +1,4 @@
+import { useIntl, defineMessages } from 'react-intl';
 import PropTypes from 'prop-types';
 import { Card, CardBody } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
@@ -8,6 +9,7 @@ import {
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const EventoContattiOrganizzatoreEsterno = ({ content }) => {
+  const intl = useIntl();
   return richTextHasContent(content?.organizzato_da_esterno) ||
     content?.telefono ||
     content?.email ||
@@ -18,7 +20,10 @@ const EventoContattiOrganizzatoreEsterno = ({ content }) => {
         noWrapper={true}
         tag="div"
       >
-        <Icon icon="it-telephone" />
+        <Icon
+          icon="it-telephone"
+          title={intl.formatMessage(messages.icona_telefono)}
+        />
 
         <CardBody tag="div" className={'card-body pe-3'}>
           <RichText data={content.organizzato_da_esterno} />
@@ -51,5 +56,12 @@ const EventoContattiOrganizzatoreEsterno = ({ content }) => {
 EventoContattiOrganizzatoreEsterno.propTypes = {
   content: PropTypes.object.isRequired,
 };
+
+const messages = defineMessages({
+  icona_telefono: {
+    id: 'icona_telefono',
+    defaultMessage: 'Icona telefono',
+  },
+});
 
 export default EventoContattiOrganizzatoreEsterno;

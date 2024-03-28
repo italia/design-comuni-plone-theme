@@ -2,17 +2,18 @@
  * Icon component.
  * @module components/ItaliaTheme/Icons/SectionIcon
  */
-import React from 'react';
+import React, { useMemo } from 'react';
+import { v4 as uuid } from 'uuid';
 import { fontAwesomeAliases } from 'design-comuni-plone-theme/helpers/index';
 
 const FontAwesomeIcon = (props) => {
   const { className, icon, prefix, title } = props;
+  const iconID = useMemo(() => uuid(), []);
   const [loadedIcon, setLoadedIcon] = React.useState({
     module: null,
     iconName: '',
     family: 'solid',
   });
-
   const getIconAlias = (icon, aliasList) => {
     if (icon in aliasList) {
       return aliasList[icon];
@@ -71,9 +72,10 @@ const FontAwesomeIcon = (props) => {
       className={`icon fa-icon ${className ?? ''}`}
       dangerouslySetInnerHTML={{
         __html: title
-          ? `<title>${title}</title>${loadedIcon.module.content}`
+          ? `<title id="${iconID}">${title}</title>${loadedIcon.module.content}`
           : loadedIcon.module.content,
       }}
+      aria-labelledby={iconID}
       aria-hidden={props['aria-hidden']}
     />
   ) : icon ? (

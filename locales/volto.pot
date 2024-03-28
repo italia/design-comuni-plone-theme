@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-03-27T09:29:55.500Z\n"
+"POT-Creation-Date: 2024-03-28T08:25:47.725Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -861,6 +861,12 @@ msgstr ""
 msgid "argoment"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
+#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
+# defaultMessage: Icona {type}
+msgid "argument_icon"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 # defaultMessage: Argomenti in evidenza
 msgid "arguments_in_evidence_block"
@@ -881,6 +887,7 @@ msgstr ""
 msgid "assessore_riferimento"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate
 #: components/ItaliaTheme/View/Commons/Attachment
 # defaultMessage: Allegato
 msgid "attachment"
@@ -1128,7 +1135,7 @@ msgid "calendarBlockSidebarTitle"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/Body
-# defaultMessage: Prossimo
+# defaultMessage: Prossimi eventi
 msgid "calendar_next_arrow"
 msgstr ""
 
@@ -1138,7 +1145,7 @@ msgid "calendar_no_results"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/Body
-# defaultMessage: Precedente
+# defaultMessage: Eventi precedenti
 msgid "calendar_prev_arrow"
 msgstr ""
 
@@ -1191,6 +1198,11 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView/ServizioCasiParticolari
 # defaultMessage: Casi particolari
 msgid "casi_particolari"
+msgstr ""
+
+#: components/ItaliaTheme/Cards/CardCategory
+# defaultMessage: Icona categoria
+msgid "category_icon"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
@@ -1249,6 +1261,11 @@ msgstr ""
 #: components/Collapse
 # defaultMessage: Chiudi menu
 msgid "close-menu"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
+# defaultMessage: Chiudi l'accordion
+msgid "closeAccordion"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
@@ -1814,6 +1831,11 @@ msgstr ""
 msgid "downloadPlayVideo"
 msgstr ""
 
+#: components/SelectInput/SelectInput
+# defaultMessage: Apri il menu
+msgid "dropdown_indicator"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
 # defaultMessage: Additional classes
 msgid "dropdownmenu-additionalClasses"
@@ -2288,6 +2310,26 @@ msgstr ""
 msgid "iconDescription"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/Argument/ArgumentIcon
+# defaultMessage: Icona per l'argomento {topic_title}
+msgid "icon_title"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/LocationItem
+# defaultMessage: Icona luoghi
+msgid "icona_luoghi"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno
+# defaultMessage: Icona telefono
+msgid "icona_telefono"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/OfficeCard
+# defaultMessage: Icona ufficio
+msgid "icona_ufficio"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 # defaultMessage: Blocco con icone
 msgid "iconss_blocks"
@@ -2360,6 +2402,7 @@ msgstr ""
 msgid "legend_required"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Collegamento
 msgid "link"
@@ -2669,6 +2712,16 @@ msgstr ""
 msgid "numero_progressivo_cs"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
+# defaultMessage: Apri l'accordion
+msgid "openAccordion"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
+# defaultMessage: Apri il link
+msgid "openLink"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 # defaultMessage: Apri link in una nuova scheda
 msgid "openLinkInNewTab"
@@ -2808,7 +2861,6 @@ msgid "patrocinato_da"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
-#: components/ItaliaTheme/View/VenueView/VenueContacts
 #: helpers/contentHelper
 # defaultMessage: PEC
 msgid "pec"
@@ -2968,46 +3020,6 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Riferimenti normativi
 msgid "riferimenti_normativi"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Fax
-msgid "riferimento_fax_luogo"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Fax
-msgid "riferimento_fax_struttura"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: E-mail
-msgid "riferimento_mail_luogo"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: E-mail
-msgid "riferimento_mail_struttura"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: PEC
-msgid "riferimento_pec_luogo"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Telefono
-msgid "riferimento_telefonico_luogo"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Telefono
-msgid "riferimento_telefonico_struttura"
-msgstr ""
-
-#: components/ItaliaTheme/View/VenueView/VenueContacts
-# defaultMessage: Web
-msgid "riferimento_web"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Metadata
@@ -3659,6 +3671,16 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
+#: config/Blocks/ListingOptions/attachmentCardTemplate
+# defaultMessage: Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata altrimenti vengono scaricati.
+msgid "show_pdf_desc"
+msgstr ""
+
+#: config/Blocks/ListingOptions/attachmentCardTemplate
+# defaultMessage: Mostra i PDF in anteprima
+msgid "show_pdf_preview"
+msgstr ""
+
 #: config/Blocks/ListingOptions/simpleListTemplate
 # defaultMessage: Mostra elenco puntato
 msgid "show_pointer_list"
@@ -4022,6 +4044,11 @@ msgstr ""
 #: components/ItaliaTheme/View/BandoView/BandoUfficioResponsabile
 # defaultMessage: Ufficio responsabile
 msgid "ufficio_responsabile"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/HelpBox
+# defaultMessage: Icona ulteriori informazioni
+msgid "ulteriori_info"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
