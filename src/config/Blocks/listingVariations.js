@@ -63,8 +63,8 @@ import {
   addLinkMoreOptions,
   addSmallBlockLinksTemplateOptions,
   addAttachmentCardTemplateOptions,
-  cloneBlock,
 } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
+import { cloneBlock } from 'design-comuni-plone-theme/helpers/blocks';
 
 import { addLighthouseField } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
