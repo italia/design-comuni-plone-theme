@@ -95,7 +95,7 @@ const Field = ({
 
   let static_text_value = value;
   if (field_type === 'static_text') {
-    if (value.data) {
+    if (value?.data) {
       static_text_value = fromHtml(value);
     } //per retrocompatibilità con il vecchio widget che usava draftjs
   }
