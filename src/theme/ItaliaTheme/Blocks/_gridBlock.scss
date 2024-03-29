@@ -5,6 +5,56 @@
     height: unset !important;
   }
 
+  .block {
+    .full-width,
+    &.full-width {
+      right: unset;
+      left: unset;
+      width: auto !important;
+      margin-right: unset !important;
+      margin-left: unset !important;
+    }
+
+    .container {
+      width: auto !important;
+    }
+
+    &.listing {
+      &.simpleCard,
+      &.attachmentCardTemplate {
+        .card-teaser-block-3 {
+          > .card-teaser {
+            flex: 0 0 49%; //invece di 3 elementi per riga, ne mostro due perchè c'è poco spazio
+          }
+        }
+      }
+
+      &.cardWithImageTemplate,
+      &.ribbonCardTemplate,
+      &.completeBlockLinksTemplate {
+        .col-lg-4,
+        .col-xl-4,
+        .col-lg-3 {
+          width: 50%; //invece di 3 elementi per riga, ne mostro due perchè c'è poco spazio
+        }
+      }
+
+      &.cardSlideUpTextTemplate,
+      &.quaresImageTemplate {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      &.bandiInEvidenceTemplate {
+        .bandi-in-evidence-cards-wrapper {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
+
+  //in edit (cms-ui)
   .gridBlock-container {
     position: relative;
     max-width: 1320px;
@@ -13,6 +63,11 @@
 
     .toolbar {
       left: 16px !important;
+    }
+
+    .block-editor-listing {
+      padding-right: 0;
+      padding-left: 0;
     }
 
     .block {
@@ -26,6 +81,21 @@
           margin-left: 16px;
           font-size: 14px;
         }
+      }
+    }
+  }
+}
+
+body.cms-ui.has-toolbar.has-sidebar {
+  .block.gridBlock {
+    .public-ui {
+      .container {
+        width: auto !important;
+      }
+
+      .full-width > .px-4.container {
+        padding-right: 24px !important;
+        padding-left: 24px !important;
       }
     }
   }
