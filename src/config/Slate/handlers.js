@@ -130,10 +130,12 @@ const focusNext = (props) => {
         onAddBlock: null,
       };
 
-  const [listItem] = getCurrentListItem(props.editor);
-  if (listItem) {
-    //managed by breaklist extension
-    return true;
+  if (showToolbar) {
+    const [listItem] = getCurrentListItem(props.editor);
+    if (listItem) {
+      //managed by breaklist extension
+      return true;
+    }
   }
 
   props.event.preventDefault();
@@ -210,7 +212,9 @@ const handleBreak = (props) => {
   } else {
     let ret = softBreak(props);
     if (!ret) {
-      const [listItem] = getCurrentListItem(props.editor);
+      const [listItem] = props.editor.selection
+        ? getCurrentListItem(props.editor)
+        : [];
       if (listItem) {
         //managed by breaklist extension
       } else {

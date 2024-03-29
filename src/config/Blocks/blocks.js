@@ -213,7 +213,6 @@ const italiaBlocks = {
       view: [],
     },
     sidebarTab: 1,
-    blockHasOwnFocusManagement: true,
   },
 
   testo_riquadro_semplice: {
@@ -226,7 +225,6 @@ const italiaBlocks = {
     restricted: false,
     mostUsed: false,
     cloneData: cloneBlock,
-    blockHasOwnFocusManagement: true,
     security: {
       addPermission: [],
       view: [],
@@ -242,7 +240,6 @@ const italiaBlocks = {
     restricted: false,
     mostUsed: false,
     cloneData: cloneBlock,
-    blockHasOwnFocusManagement: true,
     security: {
       addPermission: [],
       view: [],
@@ -388,9 +385,10 @@ const italiaBlocks = {
 
 const getItaliaBlocks = (config) => {
   delete config.blocks.blocksConfig.teaser;
-  config.blocks.blocksConfig.gridBlock.allowedBlocks = config.blocks.blocksConfig.gridBlock.allowedBlocks.filter(
-    (item) => !['teaser'].includes(item),
-  );
+  config.blocks.blocksConfig.gridBlock.allowedBlocks =
+    config.blocks.blocksConfig.gridBlock.allowedBlocks.filter(
+      (item) => !['teaser'].includes(item),
+    );
   return italiaBlocks;
 };
 export default getItaliaBlocks;

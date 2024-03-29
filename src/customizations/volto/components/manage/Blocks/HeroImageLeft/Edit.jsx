@@ -122,6 +122,7 @@ class EditComponent extends Component {
       };
     }
   }
+  blockRef = React.createRef();
 
   handleEnter = (e) => {
     if (this.props.selected) {
@@ -144,9 +145,14 @@ class EditComponent extends Component {
     if (this.props.selected && this.node) {
       this.node.focus();
     }
-
     if (blockNode && blockNode.current) {
       blockNode.current.addEventListener('keydown', this.handleEnter, false);
+    } else if (this.blockRef && this.blockRef.current) {
+      this.blockRef.current.addEventListener(
+        'keydown',
+        this.handleEnter,
+        false,
+      );
     }
   }
 
@@ -233,7 +239,15 @@ class EditComponent extends Component {
       this.props.intl.formatMessage(messages.placeholder);
 
     return (
-      <div className="public-ui" tabIndex="-1">
+      <div
+        className="public-ui"
+        tabIndex="-1"
+        ref={(node) => {
+          if (node) {
+            this.blockRef.current = node;
+          }
+        }}
+      >
         <div
           className={cx('block hero', {
             selected: this.props.selected,
