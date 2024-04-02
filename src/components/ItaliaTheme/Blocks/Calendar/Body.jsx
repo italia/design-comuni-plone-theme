@@ -200,7 +200,7 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
         <FontAwesomeIcon
           aria-hidden={true}
           icon={['fas', 'chevron-left']}
-          title={intl.formatMessage(messages.calendar_next_arrow)}
+          title={intl.formatMessage(messages.calendar_prev_arrow)}
         />
       </Button>
     );
