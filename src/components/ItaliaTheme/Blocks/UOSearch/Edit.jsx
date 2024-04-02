@@ -14,7 +14,7 @@ const messages = defineMessages({
   },
 });
 
-const Edit = ({ data, block, onChangeBlock, selected, pathname }) => {
+const Edit = ({ data, id, block, onChangeBlock, selected, pathname }) => {
   const intl = useIntl();
 
   return (
@@ -24,6 +24,7 @@ const Edit = ({ data, block, onChangeBlock, selected, pathname }) => {
       )}
       <Body
         data={data}
+        id={id}
         path={getBaseUrl(pathname)}
         inEditMode={true}
         onChangeBlock={onChangeBlock}

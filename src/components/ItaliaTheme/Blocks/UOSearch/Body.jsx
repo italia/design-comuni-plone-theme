@@ -8,6 +8,7 @@ import { getQueryStringResults } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import CardWithImageTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import { Pagination } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { resetQuerystringResults } from 'design-comuni-plone-theme/actions';
 import FiltersConfig from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/UOSearch/FiltersConfig';
 
 const messages = defineMessages({
@@ -30,7 +31,7 @@ const messages = defineMessages({
   },
 });
 
-const Body = ({ data, inEditMode, path, onChangeBlock }) => {
+const Body = ({ data, id, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
   const b_size = 6;
 
@@ -40,14 +41,19 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const dispatch = useDispatch();
 
   const querystringResults = useSelector((state) => {
-    return state.querystringsearch?.subrequests?.uo_search;
+    return state.querystringsearch?.subrequests?.[id + '_uo_search'];
   });
   const items = useSelector((state) => {
-    return state.querystringsearch?.subrequests?.uo_search?.items ?? [];
+    return (
+      state.querystringsearch?.subrequests?.[id + '_uo_search']?.items ?? []
+    );
   });
 
   const loading = useSelector((state) => {
-    return state.querystringsearch?.subrequests?.uo_search?.loading || false;
+    return (
+      state.querystringsearch?.subrequests?.[id + '_uo_search']?.loading ||
+      false
+    );
   });
 
   const resultsRef = createRef();
@@ -86,7 +92,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
           query: query,
           b_size: b_size,
         },
-        'uo_search',
+        id + '_uo_search',
         page,
       ),
     );
@@ -106,6 +112,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       newState = {
         ...getInitialState(),
       };
+      dispatch(resetQuerystringResults(id + '_uo_search'));
     } else {
       const f = newState[action.filter];
       const defaultReducer = (value, state) => value;

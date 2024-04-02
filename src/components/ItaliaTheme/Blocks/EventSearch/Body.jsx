@@ -9,7 +9,7 @@ import { getQueryStringResults } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import CardWithImageTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import { Pagination } from 'design-comuni-plone-theme/components/ItaliaTheme';
-
+import { resetQuerystringResults } from 'design-comuni-plone-theme/actions';
 import FiltersConfig from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/EventSearch/FiltersConfig';
 
 const messages = defineMessages({
@@ -32,7 +32,7 @@ const messages = defineMessages({
   },
 });
 
-const Body = ({ data, inEditMode, path, onChangeBlock }) => {
+const Body = ({ data, id, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
   const b_size = 6;
 
@@ -44,22 +44,25 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const dispatch = useDispatch();
 
   const querystringResults = useSelector((state) => {
-    return state.querystringsearch?.subrequests?.events_search;
+    return state.querystringsearch?.subrequests?.[id + '_events_search'];
   });
   const items = useSelector((state) => {
-    return state.querystringsearch?.subrequests?.events_search?.items ?? [];
+    return (
+      state.querystringsearch?.subrequests?.[id + '_events_search']?.items ?? []
+    );
   });
 
   const loading = useSelector((state) => {
     return (
-      state.querystringsearch?.subrequests?.events_search?.loading || false
+      state.querystringsearch?.subrequests?.[id + '_events_search']?.loading ||
+      false
     );
   });
 
   const firstLoading = useSelector((state) => {
     return (
-      !state.querystringsearch?.subrequests?.events_search?.loading &&
-      !state.querystringsearch?.subrequests?.events_search?.loaded
+      !state.querystringsearch?.subrequests?.[id + '_events_search']?.loading &&
+      !state.querystringsearch?.subrequests?.[id + '_events_search']?.loaded
     );
   });
 
@@ -99,7 +102,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
           query: query,
           b_size: b_size,
         },
-        'events_search',
+        id + '_events_search',
         page,
       ),
     );
@@ -123,6 +126,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       newState = {
         ...getInitialState(),
       };
+      dispatch(resetQuerystringResults(id + '_events_search'));
     } else {
       const f = newState[action.filter];
       const defaultReducer = (value, state) => value;
