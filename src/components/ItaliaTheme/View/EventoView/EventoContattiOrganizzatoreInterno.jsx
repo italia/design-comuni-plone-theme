@@ -23,7 +23,6 @@ const EventoContattiOrganizzatoreInterno = ({ content }) => {
           margin_bottom={index < content?.organizzato_da_interno?.length - 1}
           key={item['@id']}
           office={item}
-          icon={'it-telephone'}
         >
           {richTextHasContent(content?.contatto_reperibilita) && (
             <p className="card-text mt-3">
