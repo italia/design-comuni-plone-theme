@@ -384,6 +384,7 @@ export default function applyConfig(voltoConfig) {
 
   const customBlocks = {
     ...getItaliaBlocks(config),
+
     listing: {
       ...config.blocks.blocksConfig.listing,
       showLinkMore: true,
@@ -451,6 +452,12 @@ export default function applyConfig(voltoConfig) {
     initialBlocks: { ...config.blocks.initialBlocks, ...customInitialBlocks },
     requiredBlocks: [...config.blocks.requiredBlocks, ...customRequiredBlocks],
     showEditBlocksInBabelView: true,
+  };
+
+  //per avere la conf dei blocchi anche nel blocco grid, altrimenti nel blocco grid prende la conf base di volto.
+  config.blocks.blocksConfig.gridBlock = {
+    ...config.blocks.blocksConfig.gridBlock,
+    blocksConfig: config.blocks.blocksConfig,
   };
 
   removeListingVariation(config, 'default'); // removes default volto template, because it will be overrided
