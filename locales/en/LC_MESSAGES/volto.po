@@ -2245,11 +2245,6 @@ msgstr "Icon for {topic_title} topic"
 msgid "icona_luoghi"
 msgstr "Venues icon"
 
-#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno
-# defaultMessage: Icona telefono
-msgid "icona_telefono"
-msgstr "Phone icon"
-
 #: components/ItaliaTheme/View/Commons/OfficeCard
 # defaultMessage: Icona ufficio
 msgid "icona_ufficio"
