@@ -12,13 +12,15 @@ import loadable from '@loadable/component';
  */
 
 /********* WIDGETS ********* */
-export TextEditorWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
-export LinkToWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/LinkToWidget';
-export ColorListWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/ColorListWidget';
-export FileWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/FileWidget';
-export PathFiltersWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/PathFiltersWidget';
-export LocationFiltersWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/LocationFiltersWidget';
-export CanaleDigitaleWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/CanaleDigitaleWidget';
+export {
+  FileWidget,
+  TextEditorWidget,
+  LinkToWidget,
+  ColorListWidget,
+  PathFiltersWidget,
+  LocationFiltersWidget,
+  CanaleDigitaleWidget,
+} from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets';
 
 /********* ICONS ********* */
 export getItemIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/common/common';
