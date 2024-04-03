@@ -15,10 +15,8 @@ import { createContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
 import { defineMessages, injectIntl } from 'react-intl';
 
-import {
-  AlertSidebar,
-  TextEditorWidget,
-} from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { Sidebar as AlertSidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert';
 
 const messages = defineMessages({
   content_placeholder: {

@@ -5,8 +5,8 @@
 
 import React from 'react';
 import { SidebarPortal } from '@plone/volto/components';
-import Sidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CTABlock/Sidebar.jsx';
-import BodyWrapper from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CTABlock/BodyWrapper.jsx';
+import { Sidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CTABlock';
+import BodyWrapper from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CTABlock/BodyWrapper';
 import Block from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CTABlock/Block';
 
 class Edit extends React.Component {

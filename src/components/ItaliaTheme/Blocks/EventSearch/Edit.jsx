@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Body from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/EventSearch/Body';
 import { SidebarPortal } from '@plone/volto/components';
 import { getBaseUrl } from '@plone/volto/helpers';
-import Sidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/EventSearch/Sidebar';
+import { Sidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/EventSearch';
 import { useIntl, defineMessages } from 'react-intl';
 
 const messages = defineMessages({

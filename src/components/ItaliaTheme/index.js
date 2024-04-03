@@ -108,8 +108,8 @@ export AnswersStep from 'design-comuni-plone-theme/components/ItaliaTheme/Custom
 export CommentsStep from 'design-comuni-plone-theme/components/ItaliaTheme/CustomerSatisfaction/Steps/CommentsStep';
 
 /********* BLOCKS ********* */
-export AlertSidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert/Sidebar';
-export BlockSearchSectionsSidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/SideBar';
+export { Sidebar as AlertSidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert'; //serve?? secondo me è inutile, è sufficiente quello che c'è dentro index.js della cartella
+export { Sidebar as BlockSearchSectionsSidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections'; //serve?? secondo me è inutile, è sufficiente quello che c'è dentro index.js della cartella
 export BlockSearchSectionsBody from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/Body';
 export ArgumentsInEvidenceBackground from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Background';
 export SearchSectionsBackground from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/Background';
