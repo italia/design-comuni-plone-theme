@@ -59,10 +59,26 @@ export SubsiteHeader from 'design-comuni-plone-theme/components/ItaliaTheme/Head
 export ParentSiteMenu from 'design-comuni-plone-theme/components/ItaliaTheme/Header/ParentSiteMenu';
 export HeaderSearch from 'design-comuni-plone-theme/components/ItaliaTheme/Header/HeaderSearch/HeaderSearch';
 export SearchModal from 'design-comuni-plone-theme/components/ItaliaTheme/Header/HeaderSearch/SearchModal';
-export SearchSections from 'design-comuni-plone-theme/components/ItaliaTheme/Search/SearchSections';
-export SearchTopics from 'design-comuni-plone-theme/components/ItaliaTheme/Search/SearchTopics';
-export SearchCTs from 'design-comuni-plone-theme/components/ItaliaTheme/Search/SearchCTs';
-export SearchResultItem from 'design-comuni-plone-theme/components/ItaliaTheme/Search/ResultItem';
+export const SearchTopics = loadable(() =>
+  import(
+    /* webpackChunkName: "DCPTSearch" */ 'design-comuni-plone-theme/components/ItaliaTheme/Search/SearchTopics'
+  ),
+);
+export const SearchCTs = loadable(() =>
+  import(
+    /* webpackChunkName: "DCPTSearch" */ 'design-comuni-plone-theme/components/ItaliaTheme/Search/SearchCTs'
+  ),
+);
+export const SearchResultItem = loadable(() =>
+  import(
+    /* webpackChunkName: "DCPTSearch" */ 'design-comuni-plone-theme/components/ItaliaTheme/Search/ResultItem'
+  ),
+);
+export const SearchSections = loadable(() =>
+  import(
+    /* webpackChunkName: "DCPTSearch" */ 'design-comuni-plone-theme/components/ItaliaTheme/Search/SearchSections'
+  ),
+);
 export MegaMenu from 'design-comuni-plone-theme/components/ItaliaTheme/MegaMenu/MegaMenu';
 export MenuSecondary from 'design-comuni-plone-theme/components/ItaliaTheme/MenuSecondary/MenuSecondary';
 export LoginAgid from 'design-comuni-plone-theme/components/ItaliaTheme/LoginAgid/LoginAgid';
