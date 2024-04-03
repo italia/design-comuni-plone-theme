@@ -21,22 +21,12 @@ export LocationFiltersWidget from 'design-comuni-plone-theme/components/ItaliaTh
 export CanaleDigitaleWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/CanaleDigitaleWidget';
 
 /********* ICONS ********* */
-/*--------------------------------
---- BOUNDLE DCPTIcons ---
----------------------------------*/
-// export const getItemIcon = loadable(() =>
-//   import(
-//     /* webpackChunkName: "DCPTIcons" */ 'design-comuni-plone-theme/components/ItaliaTheme/Icons/common/common'
-//   ),
-// );
 export getItemIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/common/common';
-
 export const Icon = loadable(() =>
   import(
     /* webpackChunkName: "DCPTIcons" */ 'design-comuni-plone-theme/components/ItaliaTheme/Icons/Icon'
   ),
 );
-
 export SectionIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/SectionIcon';
 export const FontAwesomeIcon = loadable(() =>
   import(
@@ -108,8 +98,8 @@ export AnswersStep from 'design-comuni-plone-theme/components/ItaliaTheme/Custom
 export CommentsStep from 'design-comuni-plone-theme/components/ItaliaTheme/CustomerSatisfaction/Steps/CommentsStep';
 
 /********* BLOCKS ********* */
-export { Sidebar as AlertSidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert'; //serve?? secondo me è inutile, è sufficiente quello che c'è dentro index.js della cartella
-export { Sidebar as BlockSearchSectionsSidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections'; //serve?? secondo me è inutile, è sufficiente quello che c'è dentro index.js della cartella
+export { Sidebar as AlertSidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert'; //serve per retrocompatibilità di eventuali customizzazioni del componente di edit
+export { Sidebar as BlockSearchSectionsSidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections'; //serve per retrocompatibilità di eventuali customizzazioni del componente di edit
 export BlockSearchSectionsBody from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/Body';
 export ArgumentsInEvidenceBackground from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Background';
 export SearchSectionsBackground from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/Background';
