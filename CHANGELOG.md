@@ -1,5 +1,17 @@
 
 
+## [11.9.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.9.0...v11.9.1) (2024-04-03)
+
+
+### Bug Fixes
+
+* missing message id in navigation customization ([7183f75](https://github.com/redturtle/design-comuni-plone-theme/commit/7183f75f812b387469f8cd15037811d907c0181d))
+
+
+### Documentation
+
+* updated publiccode and release log ([c05ece3](https://github.com/redturtle/design-comuni-plone-theme/commit/c05ece3acec39bcc0f43f116ff3b994666f344d5))
+
 ## [11.9.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.8.1...v11.9.0) (2024-04-03)
 
 
