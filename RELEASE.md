@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione 11.9.1 (03/04/2024)
+
+### Fix
+
+- Risolto un problema dovuto all'assenza di una id specifico nelle traduzioni.
+
 ## Versione 11.9.0 (03/04/2024)
 
 ### Migliorie

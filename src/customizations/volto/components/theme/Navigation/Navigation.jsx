@@ -112,7 +112,11 @@ const Navigation = ({ pathname }) => {
           >
             <Icon
               icon="it-burger"
-              title={intl.formatMessage(messages.toggleNavigation)}
+              title={intl.formatMessage(messages.toggleMenu, {
+                action: collapseOpen
+                  ? intl.formatMessage(messages.toggleMenu_close)
+                  : intl.formatMessage(messages.toggleMenu_open),
+              })}
             />
           </HeaderToggler>
           <Collapse
