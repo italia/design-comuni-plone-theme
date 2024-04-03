@@ -30,7 +30,12 @@ export CanaleDigitaleWidget from 'design-comuni-plone-theme/components/ItaliaThe
 //   ),
 // );
 export getItemIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/common/common';
-export Icon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/Icon';
+
+export const Icon = loadable(() =>
+  import(
+    /* webpackChunkName: "DCPTIcons" */ 'design-comuni-plone-theme/components/ItaliaTheme/Icons/Icon'
+  ),
+);
 
 export SectionIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/SectionIcon';
 export const FontAwesomeIcon = loadable(() =>
