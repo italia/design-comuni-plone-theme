@@ -2333,11 +2333,6 @@ msgstr ""
 msgid "icona_luoghi"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno
-# defaultMessage: Icona telefono
-msgid "icona_telefono"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/OfficeCard
 # defaultMessage: Icona ufficio
 msgid "icona_ufficio"
@@ -4029,6 +4024,21 @@ msgstr ""
 #: helpers/ListingHelper
 # defaultMessage: al
 msgid "to"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: {action} il menu
+msgid "toggle-menu"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: Chiudi
+msgid "toggleMenu_close"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: Apri
+msgid "toggleMenu_open"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal

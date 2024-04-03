@@ -9,6 +9,7 @@ const View = ({ data, id, path, properties, block }) => {
       <div className="event-search">
         <Body
           data={data}
+          id={id}
           path={getBaseUrl(path)}
           properties={properties}
           block={block}

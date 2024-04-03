@@ -14,7 +14,7 @@
 import { getSearchFilters, GET_SEARCH_FILTERS } from './getSearchFilters';
 import { getSearchResults, GET_SEARCH_RESULTS } from './getSearchResults';
 import { getCalendarResults, GET_CALENDAR_RESULTS } from './calendarSearch';
-
+import { resetQuerystringResults } from './resetQuerystringResults';
 import { setOriginalQuery, ORIGINAL_QUERY } from './setOriginalQuery';
 
 import {
@@ -61,4 +61,5 @@ export {
   ORIGINAL_QUERY,
   getSearchBandiFilters,
   GET_SEARCH_BANDI_FILTERS,
+  resetQuerystringResults,
 };

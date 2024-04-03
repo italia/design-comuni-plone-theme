@@ -8,6 +8,7 @@ const View = ({ data, id, path, properties, block }) => {
     <div className="bandi-search">
       <Body
         data={data}
+        id={id}
         path={getBaseUrl(path)}
         properties={properties}
         block={block}
