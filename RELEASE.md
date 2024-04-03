@@ -43,9 +43,6 @@
 
 ## Versione 11.9.0 (03/04/2024)
 
-### Fix
-
-- Tradotto il messaggio per Screen Reader del bottone per aprire e chiudere il menu in mobile.
 ### Migliorie
 
 - Effettuate diverse migliorie di accessibilità.
@@ -60,6 +57,7 @@
 - L'etichetta della Card con Nastro (Blocco Elenco) non si sovrappone più all'icona del nastro.
 - Aggiustato il layout della card per le persone quando è impostata un'immagine.
 - Sistemato bug su blocchi di ricerca Bandi, Eventi e UO nei quali rimanevano memorizzati i risultati di ricerca anche abbandonando la pagina.
+- Tradotto il messaggio per Screen Reader del bottone per aprire e chiudere il menu in mobile.
 
 ## Versione 11.8.0 (19/03/2024)
 
