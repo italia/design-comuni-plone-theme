@@ -43,6 +43,9 @@
 
 ## Versione 11.9.0 (03/04/2024)
 
+### Fix
+
+- Tradotto il messaggio per Screen Reader del bottone per aprire e chiudere il menu in mobile.
 ### Migliorie
 
 - Effettuate diverse migliorie di accessibilità.
