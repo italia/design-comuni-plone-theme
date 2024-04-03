@@ -2,8 +2,6 @@ import loadable from '@loadable/component';
 
 export RenderBlocks from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RenderBlocks';
 
-//export RichTextSection from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichTextSection';
-//export RichText from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichText';
 export {
   RichTextRender,
   richTextHasContent,
