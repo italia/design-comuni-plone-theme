@@ -15,7 +15,7 @@ export {
 export RenderBlocks from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RenderBlocks';
 export RelatedNewsArticles from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RelatedNewsArticles';
 export RelatedArticles from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RelatedArticles';
-export Icon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/Icon';
+export { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 export ArgumentIcon from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/Argument/ArgumentIcon';
 export ContactLink from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/ContactLink';
 

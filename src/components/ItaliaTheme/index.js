@@ -1,3 +1,5 @@
+import loadable from '@loadable/component';
+
 /**
  * Add your components here.
  * @module components
@@ -19,10 +21,23 @@ export LocationFiltersWidget from 'design-comuni-plone-theme/components/ItaliaTh
 export CanaleDigitaleWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/CanaleDigitaleWidget';
 
 /********* ICONS ********* */
+/*--------------------------------
+--- BOUNDLE DCPTIcons ---
+---------------------------------*/
+// export const getItemIcon = loadable(() =>
+//   import(
+//     /* webpackChunkName: "DCPTIcons" */ 'design-comuni-plone-theme/components/ItaliaTheme/Icons/common/common'
+//   ),
+// );
 export getItemIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/common/common';
 export Icon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/Icon';
-export FontAwesomeIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/FontAwesomeIcon';
+
 export SectionIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/SectionIcon';
+export const FontAwesomeIcon = loadable(() =>
+  import(
+    /* webpackChunkName: "DCPTIcons" */ 'design-comuni-plone-theme/components/ItaliaTheme/Icons/FontAwesomeIcon'
+  ),
+);
 
 /********* COMMONS ********* */
 export CardCategory from 'design-comuni-plone-theme/components/ItaliaTheme/Cards/CardCategory';

@@ -24,10 +24,10 @@ import CalendarEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Block
 import EventSearchView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/EventSearch/View';
 import EventSearchEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/EventSearch/Edit';
 
-import simpleTextCardSVG from 'design-comuni-plone-theme/icons/card-semplice.svg';
+import { simpleTextCardSVG } from 'design-comuni-plone-theme/icons';
 import TextCardView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard/SimpleCard/View';
 import TextCardEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard/SimpleCard/Edit';
-import imageTextCardSVG from 'design-comuni-plone-theme/icons/card-immagine.svg';
+import { imageTextCardSVG } from 'design-comuni-plone-theme/icons';
 import TextCardWithImageView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard/CardWithImage/View';
 import TextCardWithImageEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard/CardWithImage/Edit';
 
@@ -39,7 +39,7 @@ import videoSVG from '@plone/volto/icons/video.svg';
 import VideoGalleryView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery/View';
 import VideoGalleryEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery/Edit';
 
-import iconBlocksSVG from 'design-comuni-plone-theme/icons/blocco-icone.svg';
+import { iconBlocksSVG } from 'design-comuni-plone-theme/icons';
 import IconBlocksView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/IconBlocks/View';
 import IconBlocksEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/IconBlocks/Edit';
 
@@ -47,7 +47,7 @@ import emailSVG from '@plone/volto/icons/email.svg';
 import ContactsBlockView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ContactsBlock/View';
 import ContactsBlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ContactsBlock/Edit';
 
-import numbersBlockSVG from 'design-comuni-plone-theme/icons/numeri.svg';
+import { numbersBlockSVG } from 'design-comuni-plone-theme/icons';
 import NumbersBlockView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/NumbersBlock/View';
 import NumbersBlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/NumbersBlock/Edit';
 
@@ -61,7 +61,7 @@ import flashSVG from '@plone/volto/icons/flash.svg';
 import CTABlockView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CTABlock/View';
 import CTABlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CTABlock/Edit';
 
-import countDownSVG from 'design-comuni-plone-theme/icons/count-down.svg';
+import { countDownSVG } from 'design-comuni-plone-theme/icons';
 import CountDownBlockView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/View';
 import CountDownBlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/Edit';
 
