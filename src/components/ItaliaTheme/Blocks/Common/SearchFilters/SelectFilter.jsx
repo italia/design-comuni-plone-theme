@@ -4,7 +4,14 @@ import { SelectInput } from 'design-comuni-plone-theme/components';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchContent, getVocabulary } from '@plone/volto/actions';
 
-const SelectFilter = ({ options, value, id, onChange, placeholder }) => {
+const SelectFilter = ({
+  options,
+  value,
+  id,
+  onChange,
+  placeholder,
+  isSearchable = false,
+}) => {
   const dispatch = useDispatch();
 
   const state = useSelector((state) => {
@@ -64,6 +71,7 @@ const SelectFilter = ({ options, value, id, onChange, placeholder }) => {
         }}
         options={select_options?.filter((opt) => !!opt.value?.toString()) ?? []}
         isClearable={true}
+        isSearchable={isSearchable}
         // components={{
         //   ClearIndicator: (props) => {
         //     const {

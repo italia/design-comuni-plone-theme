@@ -110,6 +110,18 @@
     }
   }
 
+  .bg-primary {
+    .search-container {
+      .filter-wrapper {
+        &.select-filter {
+          .react-select__input {
+            color: color-contrast($primary);
+          }
+        }
+      }
+    }
+  }
+
   .bg-secondary {
     .search-container {
       .filter-wrapper {
@@ -139,6 +151,10 @@
 
           .react-select__single-value {
             color: $secondary-text !important;
+          }
+
+          .react-select__input {
+            color: color-contrast($secondary);
           }
         }
 
