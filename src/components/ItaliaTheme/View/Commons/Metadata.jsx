@@ -50,7 +50,7 @@ const Metadata = ({
       {children}
       <p className="font-serif mb-0 mt-4 last-modified">
         <strong>{intl.formatMessage(messages.modified)}:</strong>{' '}
-        {viewDate(intl.locale, content.modified, 'DD-MM-Y, HH:MM')}
+        {viewDate(intl.locale, content.modified, 'DD-MM-Y, HH:mm')}
       </p>
       {content.rights && (
         <>

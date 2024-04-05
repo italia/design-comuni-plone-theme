@@ -2235,7 +2235,7 @@ test('expect to render fields in page', async () => {
   );
 
   expect(screen.getByText(/Ultimo aggiornamento/i)).toBeInTheDocument();
-  expect(screen.getByText(/15-03-2023, 15:03/i)).toBeInTheDocument();
+  expect(screen.getByText(/15-03-2023, 15:56/i)).toBeInTheDocument();
 });
 
 test('todo', () => {
