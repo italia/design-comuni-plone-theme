@@ -65,6 +65,7 @@ const DefaultFilters = () => {
         component: SelectFilter,
         props: {
           value: null,
+          isSearchable: true,
           options: {
             dispatch: {
               path: subsite ? flattenToAppURL(subsite['@id']) : '/',
@@ -72,6 +73,10 @@ const DefaultFilters = () => {
               fullobjects: 0,
               b_size: 10000,
               subrequests_name: 'venues',
+              additionalParams: {
+                sort_on: 'sortable_title',
+                sort_order: 'ascending',
+              },
             },
             placeholder: intl.formatMessage(messages.venues),
           },
