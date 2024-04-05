@@ -1,3 +1,5 @@
+import loadable from '@loadable/component';
+
 /**
  * Add your components here.
  * @module components
@@ -10,19 +12,29 @@
  */
 
 /********* WIDGETS ********* */
-export TextEditorWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
-export LinkToWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/LinkToWidget';
-export ColorListWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/ColorListWidget';
-export FileWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/FileWidget';
-export PathFiltersWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/PathFiltersWidget';
-export LocationFiltersWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/LocationFiltersWidget';
-export CanaleDigitaleWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/CanaleDigitaleWidget';
+export {
+  FileWidget,
+  TextEditorWidget,
+  LinkToWidget,
+  ColorListWidget,
+  PathFiltersWidget,
+  LocationFiltersWidget,
+  CanaleDigitaleWidget,
+} from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets';
 
 /********* ICONS ********* */
 export getItemIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/common/common';
-export Icon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/Icon';
-export FontAwesomeIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/FontAwesomeIcon';
+export const Icon = loadable(() =>
+  import(
+    /* webpackChunkName: "DCPTIcons" */ 'design-comuni-plone-theme/components/ItaliaTheme/Icons/Icon'
+  ),
+);
 export SectionIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/SectionIcon';
+export const FontAwesomeIcon = loadable(() =>
+  import(
+    /* webpackChunkName: "DCPTIcons" */ 'design-comuni-plone-theme/components/ItaliaTheme/Icons/FontAwesomeIcon'
+  ),
+);
 
 /********* COMMONS ********* */
 export CardCategory from 'design-comuni-plone-theme/components/ItaliaTheme/Cards/CardCategory';
@@ -44,10 +56,26 @@ export SubsiteHeader from 'design-comuni-plone-theme/components/ItaliaTheme/Head
 export ParentSiteMenu from 'design-comuni-plone-theme/components/ItaliaTheme/Header/ParentSiteMenu';
 export HeaderSearch from 'design-comuni-plone-theme/components/ItaliaTheme/Header/HeaderSearch/HeaderSearch';
 export SearchModal from 'design-comuni-plone-theme/components/ItaliaTheme/Header/HeaderSearch/SearchModal';
-export SearchSections from 'design-comuni-plone-theme/components/ItaliaTheme/Search/SearchSections';
-export SearchTopics from 'design-comuni-plone-theme/components/ItaliaTheme/Search/SearchTopics';
-export SearchCTs from 'design-comuni-plone-theme/components/ItaliaTheme/Search/SearchCTs';
-export SearchResultItem from 'design-comuni-plone-theme/components/ItaliaTheme/Search/ResultItem';
+export const SearchTopics = loadable(() =>
+  import(
+    /* webpackChunkName: "DCPTSearch" */ 'design-comuni-plone-theme/components/ItaliaTheme/Search/SearchTopics'
+  ),
+);
+export const SearchCTs = loadable(() =>
+  import(
+    /* webpackChunkName: "DCPTSearch" */ 'design-comuni-plone-theme/components/ItaliaTheme/Search/SearchCTs'
+  ),
+);
+export const SearchResultItem = loadable(() =>
+  import(
+    /* webpackChunkName: "DCPTSearch" */ 'design-comuni-plone-theme/components/ItaliaTheme/Search/ResultItem'
+  ),
+);
+export const SearchSections = loadable(() =>
+  import(
+    /* webpackChunkName: "DCPTSearch" */ 'design-comuni-plone-theme/components/ItaliaTheme/Search/SearchSections'
+  ),
+);
 export MegaMenu from 'design-comuni-plone-theme/components/ItaliaTheme/MegaMenu/MegaMenu';
 export MenuSecondary from 'design-comuni-plone-theme/components/ItaliaTheme/MenuSecondary/MenuSecondary';
 export LoginAgid from 'design-comuni-plone-theme/components/ItaliaTheme/LoginAgid/LoginAgid';
@@ -72,8 +100,8 @@ export AnswersStep from 'design-comuni-plone-theme/components/ItaliaTheme/Custom
 export CommentsStep from 'design-comuni-plone-theme/components/ItaliaTheme/CustomerSatisfaction/Steps/CommentsStep';
 
 /********* BLOCKS ********* */
-export AlertSidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert/Sidebar';
-export BlockSearchSectionsSidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/SideBar';
+export { Sidebar as AlertSidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert'; //serve per retrocompatibilità di eventuali customizzazioni del componente di edit
+export { Sidebar as BlockSearchSectionsSidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections'; //serve per retrocompatibilità di eventuali customizzazioni del componente di edit
 export BlockSearchSectionsBody from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/Body';
 export ArgumentsInEvidenceBackground from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Background';
 export SearchSectionsBackground from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/Background';

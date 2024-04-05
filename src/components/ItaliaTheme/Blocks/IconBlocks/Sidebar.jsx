@@ -10,7 +10,7 @@ import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
 
 import { LinkToWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import IconWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/IconWidget';
+import { IconWidget } from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets';
 import { defaultIconWidgetOptions } from 'design-comuni-plone-theme/helpers/index';
 import config from '@plone/volto/registry';
 

@@ -1,23 +1,25 @@
 import React from 'react';
-import CharCounterTextareaWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/CharCounterTextareaWidget';
-import CharCounterTextWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/CharCounterTextWidget';
+
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
 import { ArrayWidget, WysiwygWidget } from '@plone/volto/components';
 import { MultilingualWidget } from 'volto-multilingual-widget';
-import IconWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/IconWidget';
-import SubsiteSocialLinksWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget';
-import MenuConfigurationForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/MenuConfigurationForm';
-import SecondaryMenuConfigurationForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm';
-import SubFooterConfigurationForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm';
-import SearchSectionsConfigurationWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget';
+
 import { defaultIconWidgetOptions } from 'design-comuni-plone-theme/helpers';
 import {
+  CharCounterTextareaWidget,
+  SearchSectionsConfigurationWidget,
+  CharCounterTextWidget,
+  IconWidget,
+  SubsiteSocialLinksWidget,
+  MenuConfigurationForm,
+  SecondaryMenuConfigurationForm,
+  SubFooterConfigurationForm,
   ColorListWidget,
   PathFiltersWidget,
   LocationFiltersWidget,
   CanaleDigitaleWidget,
-} from 'design-comuni-plone-theme/components/ItaliaTheme';
-import LuoghiCorrelatiEventoWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/LuoghiCorrelatiEventoWidget';
+  LuoghiCorrelatiEventoWidget,
+} from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets';
 
 const getItaliaWidgets = (config) => {
   config.registerComponent({

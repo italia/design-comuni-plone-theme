@@ -18,8 +18,8 @@ import {
 } from 'volto-subblocks';
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
-import EditBlock from './Block/EditBlock';
-import Sidebar from './Sidebar.jsx';
+import EditBlock from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock';
+import { Sidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/NumbersBlock';
 
 const messages = defineMessages({
   addItem: {

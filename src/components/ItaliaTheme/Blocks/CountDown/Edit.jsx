@@ -6,7 +6,7 @@ import { SidebarPortal } from '@plone/volto/components';
 import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import Sidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/Sidebar';
+import { Sidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown';
 import CountDown from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/CountDown';
 
 const messages = defineMessages({
