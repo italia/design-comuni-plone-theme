@@ -1,9 +1,9 @@
 .card-persona.card-flex {
   .card-image-wrapper {
     display: flex;
+    width: 100%;
     flex: 1;
     align-items: flex-start;
-    width: 100%;
   }
 
   .card-body {

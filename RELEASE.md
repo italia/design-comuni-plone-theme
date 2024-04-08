@@ -41,6 +41,10 @@
 - ...
 -->
 
+## Versione x.x.x (xx/xx/xxxx)
+
+### Novità
+- Nel template Slider del blocco elenco, ora è possibile scegliere l'aspetto degli elementi dello slider (default: slide semplice con immagine e titolo cliccabile, Card semplice, Card con immagine).
 ## Versione X.X.X (dd/mm/yyyy)
 
 ### Migliorie

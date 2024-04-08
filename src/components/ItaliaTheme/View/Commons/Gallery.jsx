@@ -8,7 +8,11 @@ import { resetSearchContent, searchContent } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 import EmbeddedVideo from './EmbeddedVideo';
-import { GalleryPreview } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import {
+  GalleryPreview,
+  SingleSlideWrapper,
+  CarouselWrapper,
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 import PropTypes from 'prop-types';
 import { contentFolderHasItems } from 'design-comuni-plone-theme/helpers';
 import { UniversalLink } from '@plone/volto/components';
@@ -146,10 +150,10 @@ const Gallery = ({
                 {title_type === 'h5' && <h5 id={title_id}>{gallery_title}</h5>}
               </div>
             </div>
-            <div className="it-carousel-all it-card-bg">
+            <CarouselWrapper className="it-card-bg">
               <Slider {...getSettings(images.length)}>
                 {images.map((item, i) => (
-                  <div className="it-single-slide-wrapper" key={item['@id']}>
+                  <SingleSlideWrapper key={item['@id']} index={i}>
                     <figure>
                       <UniversalLink
                         item={item}
@@ -181,7 +185,7 @@ const Gallery = ({
                         {item.title}
                       </figcaption>
                     </figure>
-                  </div>
+                  </SingleSlideWrapper>
                 ))}
               </Slider>
 
@@ -191,7 +195,7 @@ const Gallery = ({
                 setViewIndex={setViewImageIndex}
                 items={images}
               />
-            </div>
+            </CarouselWrapper>
           </div>
         </div>
       ) : null}
@@ -219,20 +223,20 @@ const Gallery = ({
                 </div>
               </div>
             )}
-            <div className="it-carousel-all it-card-bg">
+            <CarouselWrapper className="it-card-bg">
               <Slider {...video_settings}>
                 {videos.map((item, i) => (
-                  <div className="it-single-slide-wrapper" key={item['@id']}>
+                  <SingleSlideWrapper key={item['@id']} index={i}>
                     <EmbeddedVideo
                       title={item.title}
                       key={item['@id'] ?? i}
                       id={item['@id'] ?? i}
                       video_url={item?.remoteUrl || item}
                     />
-                  </div>
+                  </SingleSlideWrapper>
                 ))}
               </Slider>
-            </div>
+            </CarouselWrapper>
           </div>
         </div>
       ) : null}

@@ -36,8 +36,8 @@ const FontAwesomeIcon = (props) => {
       prefixKey === 'fab'
         ? 'brands'
         : prefixKey === 'far'
-        ? 'regular'
-        : 'solid',
+          ? 'regular'
+          : 'solid',
       iconName,
     ];
   };
