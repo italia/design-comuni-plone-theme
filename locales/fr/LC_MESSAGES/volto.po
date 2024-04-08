@@ -1123,6 +1123,11 @@ msgstr ""
 msgid "canale_digitale_widget_title"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Aggiungi un argomento da visualizzare sulla card.
+msgid "cardDescription"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Seleziona l'immagine da mostrare
 msgid "cardImage"
@@ -1173,6 +1178,11 @@ msgstr "Cas spéciaux"
 # defaultMessage: Icona categoria
 msgid "category_icon"
 msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Allinea gli argomenti al centro
+msgid "centerAlignment"
+msgstr "Aligner les sujets au centre"
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Link al canale
@@ -2225,6 +2235,11 @@ msgstr "Voir l'image précédente"
 # defaultMessage: Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni.
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Nascondi pulsante "Vedi tutti"
+msgid "hideButtonShowAll"
+msgstr "Masquer le bouton "Tout voir""
 
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Nascondi le date
@@ -3423,7 +3438,7 @@ msgstr "Siège de"
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 # defaultMessage: Seleziona gli altri argomenti
 msgid "selectOtherArguments"
-msgstr ""
+msgstr "Sélectionnez d'autres sujets"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Seleziona gli argomenti che vuoi cercare

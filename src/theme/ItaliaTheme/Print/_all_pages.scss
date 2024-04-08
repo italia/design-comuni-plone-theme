@@ -217,11 +217,11 @@
   .public-ui {
     p.callout-bg,
     p.callout {
-      margin: 0.5rem 0rem;
       padding: 0rem 1.25rem;
-      font-size: 1rem;
       border: none;
+      margin: 0.5rem 0rem;
       box-shadow: none;
+      font-size: 1rem;
     }
   }
 
@@ -230,9 +230,9 @@
   }
 
   .public-ui .draftjs-buttons a {
+    padding: 0rem;
     background-color: white;
     color: $link-color;
-    padding: 0rem;
   }
 
   //external link icon

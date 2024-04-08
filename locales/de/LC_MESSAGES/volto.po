@@ -1121,6 +1121,11 @@ msgstr ""
 msgid "canale_digitale_widget_title"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Aggiungi un argomento da visualizzare sulla card.
+msgid "cardDescription"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Seleziona l'immagine da mostrare
 msgid "cardImage"
@@ -1170,6 +1175,11 @@ msgstr ""
 #: components/ItaliaTheme/Cards/CardCategory
 # defaultMessage: Icona categoria
 msgid "category_icon"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Allinea gli argomenti al centro
+msgid "centerAlignment"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
@@ -2222,6 +2232,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 # defaultMessage: Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni.
 msgid "grid-gallery-max-items-exceeded"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Nascondi pulsante "Vedi tutti"
+msgid "hideButtonShowAll"
 msgstr ""
 
 #: config/Blocks/ListingOptions/utils

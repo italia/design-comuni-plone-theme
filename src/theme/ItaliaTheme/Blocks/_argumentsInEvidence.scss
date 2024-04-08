@@ -10,10 +10,10 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  h2 {
-    color: $primary-text !important;
+    + .volto-subblocks-wrapper .argumentsCardsWrapper h2,
+    + .argumentsCardsWrapper h2 {
+      color: $primary-text !important;
+    }
   }
 
   .grid {

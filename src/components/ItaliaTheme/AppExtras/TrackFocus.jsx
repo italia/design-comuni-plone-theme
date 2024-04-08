@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const DATA_FOCUS_MOUSE = 'data-focus-mouse';
 const CLASS_NAME_MOUSE_FOCUS = 'focus--mouse';

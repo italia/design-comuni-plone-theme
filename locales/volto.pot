@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-04-03T13:54:10.953Z\n"
+"POT-Creation-Date: 2024-04-08T09:52:56.295Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1108,6 +1108,11 @@ msgstr ""
 msgid "canale_digitale_widget_title"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Aggiungi un argomento da visualizzare sulla card.
+msgid "cardDescription"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Seleziona l'immagine da mostrare
 msgid "cardImage"
@@ -1157,6 +1162,11 @@ msgstr ""
 #: components/ItaliaTheme/Cards/CardCategory
 # defaultMessage: Icona categoria
 msgid "category_icon"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Allinea gli argomenti al centro
+msgid "centerAlignment"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
@@ -2209,6 +2219,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 # defaultMessage: Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni.
 msgid "grid-gallery-max-items-exceeded"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Nascondi pulsante "Vedi tutti"
+msgid "hideButtonShowAll"
 msgstr ""
 
 #: config/Blocks/ListingOptions/utils

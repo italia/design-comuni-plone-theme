@@ -1106,6 +1106,11 @@ msgstr "Nessun evento disponibile al momento"
 msgid "canale_digitale_widget_title"
 msgstr "Accedere al servizio"
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Aggiungi un argomento da visualizzare sulla card.
+msgid "cardDescription"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Seleziona l'immagine da mostrare
 msgid "cardImage"
@@ -1156,6 +1161,11 @@ msgstr "Casi particolari"
 # defaultMessage: Icona categoria
 msgid "category_icon"
 msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Allinea gli argomenti al centro
+msgid "centerAlignment"
+msgstr "Allinea gli argomenti al centro"
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Link al canale
@@ -2208,6 +2218,11 @@ msgstr "Immagine precedente"
 # defaultMessage: Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni.
 msgid "grid-gallery-max-items-exceeded"
 msgstr "Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni."
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Nascondi pulsante "Vedi tutti"
+msgid "hideButtonShowAll"
+msgstr "Nascondi pulsante "Vedi tutti""
 
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Nascondi le date
