@@ -10,6 +10,7 @@ import { useIntl, defineMessages } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
 
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { RichTextRender } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import { Card, CardBody, CardReadMore } from 'design-react-kit';
 import config from '@plone/volto/registry';
 
@@ -26,6 +27,19 @@ const messages = defineMessages({
  * @extends Component
  */
 const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
+  const rawStringRenderer = {
+    blocks: {
+      unstyled: (children) => {
+        const text = children.map((child) => child[1]).join(''); // Join the text elements
+        return text.trim(); // Remove leading/trailing whitespace
+      },
+    },
+  };
+
+  const cardTitle = redraft(data.title, rawStringRenderer, {
+    cleanup: false,
+  });
+
   const intl = useIntl();
   return (
     <Card
@@ -65,6 +79,9 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
             tag={UniversalLink}
             href={data.href ?? '#'}
             text={data.linkMoreTitle || intl.formatMessage(messages.vedi)}
+            aria-label={`${
+              data.linkMoreTitle || intl.formatMessage(messages.vedi)
+            } ${data.title ? cardTitle[0] : ''}`}
           />
         )}
       </CardBody>

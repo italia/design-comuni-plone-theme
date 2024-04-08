@@ -26,6 +26,9 @@ import PhotogalleryTemplateSkeleton from 'design-comuni-plone-theme/components/I
 
 import SliderTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/SliderTemplate';
 import SliderTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SliderTemplateSkeleton';
+import SlideItemDefault from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Slider/SlideItemDefault';
+import SlideItemSimpleCard from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/SimpleCard/Card/SimpleCardDefault';
+import SlideItemImageCard from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/CardWithImage/CardWithImageDefault';
 
 import GridGalleryTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
 import GridGalleryTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton';
@@ -229,6 +232,11 @@ const italiaListingVariations = [
       return schema;
     },
     cloneData: cloneBlock,
+    appearance: {
+      default: SlideItemDefault,
+      simple_card: SlideItemSimpleCard,
+      image_card: SlideItemImageCard,
+    },
   },
   {
     id: 'gridGalleryTemplate',

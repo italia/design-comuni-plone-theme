@@ -3,8 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
 import useDeepCompareEffect from 'use-deep-compare-effect';
 import {
-  FontAwesomeIcon,
   ListingLinkMore,
+  CarouselWrapper,
+  SingleSlideWrapper,
+  NextArrow,
+  PrevArrow,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { Card, Row, Col, Container, Button } from 'design-react-kit';
 import cx from 'classnames';
@@ -27,14 +30,6 @@ const messages = defineMessages({
   calendar_no_results: {
     id: 'calendar_no_results',
     defaultMessage: 'Nessun evento disponibile al momento',
-  },
-  calendar_next_arrow: {
-    id: 'calendar_next_arrow',
-    defaultMessage: 'Prossimi eventi',
-  },
-  calendar_prev_arrow: {
-    id: 'calendar_prev_arrow',
-    defaultMessage: 'Eventi precedenti',
   },
 });
 
@@ -169,43 +164,6 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
     setAdditionalFilters(filters);
   };
 
-  const NextArrow = (props) => {
-    const { onClick, className } = props;
-    return (
-      <Button
-        outline
-        color={'unset'}
-        className={className}
-        onClick={onClick}
-        aria-label={intl.formatMessage(messages.calendar_next_arrow)}
-      >
-        <FontAwesomeIcon
-          aria-hidden={true}
-          icon={['fas', 'chevron-right']}
-          title={intl.formatMessage(messages.calendar_next_arrow)}
-        />
-      </Button>
-    );
-  };
-  const PrevArrow = (props) => {
-    const { onClick, className } = props;
-    return (
-      <Button
-        outline
-        color={'unset'}
-        className={className}
-        onClick={onClick}
-        aria-label={intl.formatMessage(messages.calendar_prev_arrow)}
-      >
-        <FontAwesomeIcon
-          aria-hidden={true}
-          icon={['fas', 'chevron-left']}
-          title={intl.formatMessage(messages.calendar_prev_arrow)}
-        />
-      </Button>
-    );
-  };
-
   const settings = {
     dots: true,
     arrows: true,
@@ -330,19 +288,25 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
           </div>
           <div className="calendar-body">
             {calendarResults[block]?.items?.length > 0 ? (
-              <Slider {...settings}>
-                {calendarResults[block].items.map((day, index) => (
-                  <div key={index} className="body">
-                    <Item
-                      data={data}
-                      day={day}
-                      query={adaptedQuery}
-                      path={path}
-                      inEditMode={inEditMode}
-                    />
-                  </div>
-                ))}
-              </Slider>
+              <CarouselWrapper>
+                <Slider {...settings}>
+                  {calendarResults[block].items.map((day, index) => (
+                    <SingleSlideWrapper
+                      index={index}
+                      key={index}
+                      className="body"
+                    >
+                      <Item
+                        data={data}
+                        day={day}
+                        query={adaptedQuery}
+                        path={path}
+                        inEditMode={inEditMode}
+                      />
+                    </SingleSlideWrapper>
+                  ))}
+                </Slider>
+              </CarouselWrapper>
             ) : inEditMode ? (
               <span className="no-results">
                 {intl.formatMessage(messages.insert_filter)}

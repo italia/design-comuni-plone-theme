@@ -5,42 +5,25 @@ import 'slick-carousel/slick/slick.css';
 import 'design-comuni-plone-theme/components/slick-carousel/slick/slick-theme.css';
 import { Col, Container, Row } from 'design-react-kit';
 import {
-  Icon,
   ListingImage,
   ListingLinkMore,
+  SingleSlideWrapper,
+  CarouselWrapper,
+  ButtonPlayPause,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import {
-  useSlider,
-  visibleSlideTitle,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+import { useSlider } from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/slider';
 import React, { useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
-  viewImage: {
-    id: 'viewImage',
+  carouselItemAriaLabel: {
+    id: 'carousel-item-aria-label',
     defaultMessage:
       'Sei attualmente in un carosello, per navigare usa le frecce sinistra e destra',
-  },
-  play: {
-    id: 'Play slider',
-    defaultMessage: 'Seleziona per riprodurre',
-  },
-  pause: {
-    id: 'Pause slider',
-    defaultMessage: 'Seleziona per mettere in pausa',
-  },
-  precedente: {
-    id: 'precedente',
-    defaultMessage: 'Precedente',
-  },
-  successivo: {
-    id: 'successivo',
-    defaultMessage: 'Successivo',
   },
   dots: {
     id: 'dots',
@@ -56,169 +39,29 @@ const messages = defineMessages({
   },
 });
 
-function NextArrow(props) {
-  // Custom handling of focus for a11y
-  const { className, style, onClick, intl, currentSlide } = props;
-  const handleClick = (options) => {
-    onClick(options, false);
-  };
-  const handleKeyboardUsers = (e) => {
-    if (e.key === 'Tab' && e.shiftKey) {
-      e.stopPropagation();
-      e.preventDefault();
+const Slide = (props) => {
+  const intl = useIntl();
+  const { item, index, appearance, appearanceProp, onKeyDown } = props;
 
-      const link = visibleSlideTitle(
-        `a.slide-link[data-slide="${currentSlide}"]`,
-      );
-      link && link.focus();
-    }
-  };
+  const appearances = config.blocks.blocksConfig.listing.variations.filter(
+    (v) => v.id === 'slider',
+  )[0]?.appearance;
+  const SlideItemAppearance = appearances[appearance] ?? appearances['default'];
 
   return (
-    <button
-      className={className}
-      style={{ ...style }}
-      onClick={handleClick}
-      title={intl.formatMessage(messages.successivo)}
-      aria-label={intl.formatMessage(messages.successivo)}
-      aria-hidden={true}
-      onKeyDown={handleKeyboardUsers}
-      id="sliderNextArrow"
-    >
-      <Icon
-        icon="chevron-right"
-        key="chevron-right"
-        title={intl.formatMessage(messages.successivo)}
-      />
-      <span class="visually-hidden">
-        {intl.formatMessage(messages.successivo)}
-      </span>
-    </button>
-  );
-}
-
-function PrevArrow(props) {
-  // Custom handling of focus for a11y
-  const {
-    className,
-    style,
-    onClick,
-    intl,
-    focusNext,
-    currentSlide,
-    slideCount,
-  } = props;
-  const handleClick = (options) => {
-    onClick(options, false);
-  };
-  const handleKeyboardUsers = (e) => {
-    if (e.key === 'Tab' && !e.shiftKey) {
-      e.stopPropagation();
-      e.preventDefault();
-      if (currentSlide < slideCount) {
-        const link = visibleSlideTitle(
-          `a.slide-link[data-slide="${currentSlide}"]`,
-        );
-        link && link.focus();
-      } else focusNext(0);
-    }
-  };
-  return (
-    <button
-      className={className}
-      style={{ ...style }}
-      onClick={handleClick}
-      title={intl.formatMessage(messages.precedente)}
-      aria-label={intl.formatMessage(messages.precedente)}
-      aria-hidden={true}
-      id="sliderPrevArrow"
-      onKeyDown={handleKeyboardUsers}
-    >
-      <Icon
-        icon="chevron-left"
-        key="chevron-left-prev"
-        title={intl.formatMessage(messages.precedente)}
-      />
-      <span class="visually-hidden">
-        {intl.formatMessage(messages.precedente)}
-      </span>
-    </button>
-  );
-}
-
-const Slide = ({
-  item,
-  index,
-  image,
-  show_image_title,
-  full_width,
-  intl,
-  setUserAutoplay,
-  userAutoplay,
-  slider,
-}) => {
-  const handleKeyboardUsers = (e) => {
-    const { key, shiftKey } = e;
-    if (key === 'Tab') {
-      e.stopPropagation();
-      e.preventDefault();
-      // Keeping auto pause off for now
-      // if (userAutoplay) setUserAutoplay(false);
-      // slider.current.slickPause();
-      let elementToFocus;
-      if (shiftKey) {
-        elementToFocus = document.getElementById('sliderPrevArrow');
-      } else elementToFocus = document.getElementById('sliderNextArrow');
-      elementToFocus.focus();
-    }
-  };
-
-  return (
-    <div
-      className="it-single-slide-wrapper"
+    <SingleSlideWrapper
       key={item['@id'] + index}
-      data-slide={index}
+      index={index}
+      onKeyDown={onKeyDown}
+      aria-label={
+        (props['aria-label'] ? props['aria-label'] + ' - ' : '') +
+        intl.formatMessage(messages.carouselItemAriaLabel)
+      }
     >
-      <div className="slide-wrapper">
-        {image ? (
-          <figure className="img-wrapper">{image}</figure>
-        ) : (
-          <div className="img-placeholder"></div>
-        )}
-        {show_image_title && (
-          <div className="slide-title">
-            <UniversalLink
-              item={item}
-              title={intl.formatMessage(messages.viewImage)}
-              tabIndex={0}
-              data-slide={index}
-              className={'slide-link no-external-if-link'}
-              onKeyDown={handleKeyboardUsers}
-            >
-              {full_width ? (
-                <Container>
-                  {item.title}{' '}
-                  <Icon
-                    icon="arrow-right"
-                    key="arrow-right-fw"
-                    title={intl.formatMessage(messages.openLink)}
-                  />
-                </Container>
-              ) : (
-                <>
-                  {item.title}{' '}
-                  <Icon
-                    icon="arrow-right"
-                    key="arrow-right"
-                    title={intl.formatMessage(messages.openLink)}
-                  />
-                </>
-              )}
-            </UniversalLink>
-          </div>
-        )}
+      <div className={'slide-wrapper'} role="presentation">
+        <SlideItemAppearance {...props} {...appearanceProp} />
       </div>
-    </div>
+    </SingleSlideWrapper>
   );
 };
 
@@ -235,13 +78,28 @@ const SliderTemplate = ({
   show_dots = true,
   autoplay = false,
   autoplay_speed = 2, //seconds
+  slide_appearance = 'default',
   reactSlick,
+  block,
+  ...otherProps
 }) => {
+  const block_id = block;
   const intl = useIntl();
+
   const [userAutoplay, setUserAutoplay] = useState(autoplay);
-  const nSlidesToShow = parseInt(slidesToShow);
+  const nSlidesToShow =
+    items.length < parseInt(slidesToShow)
+      ? items.length
+      : parseInt(slidesToShow);
   const Slider = reactSlick.default;
-  const { slider, focusNext } = useSlider(userAutoplay);
+  const {
+    slider,
+    focusSlide,
+    SliderNextArrow,
+    SliderPrevArrow,
+    handleSlideKeydown,
+  } = useSlider(userAutoplay, setUserAutoplay, block_id);
+
   const toggleAutoplay = () => {
     if (!slider?.current) return;
     if (userAutoplay) {
@@ -313,11 +171,11 @@ const SliderTemplate = ({
     focusOnSelect: false,
     draggable: true,
     accessibility: true,
-    nextArrow: <NextArrow intl={intl} focusNext={focusNext} />,
-    prevArrow: <PrevArrow intl={intl} focusNext={focusNext} />,
+    nextArrow: <SliderNextArrow intl={intl} />,
+    prevArrow: <SliderPrevArrow intl={intl} />,
     appendDots: renderCustomDots,
     // Custom handling of focus for a11y
-    afterChange: focusNext,
+    afterChange: focusSlide,
     responsive: [
       {
         breakpoint: 980,
@@ -333,7 +191,9 @@ const SliderTemplate = ({
     <div
       className={cx(`sliderTemplate slidesToShow-${nSlidesToShow || 1}`, {
         'no-margin': full_width,
+        ['appearance_' + slide_appearance]: slide_appearance,
       })}
+      id={'slider_' + block_id}
     >
       <Container className="px-4">
         {title && (
@@ -349,30 +209,11 @@ const SliderTemplate = ({
             'full-width': full_width,
           })}
         >
-          <div className="it-carousel-all it-card-bg">
+          <CarouselWrapper className="it-card-bg">
             {items?.length > nSlidesToShow && (
-              <div className="play-pause-wrapper">
-                <button
-                  onClick={toggleAutoplay}
-                  title={
-                    userAutoplay
-                      ? intl.formatMessage(messages.pause)
-                      : intl.formatMessage(messages.play)
-                  }
-                  tabIndex={0}
-                >
-                  <Icon
-                    key={userAutoplay ? 'pause' : 'play'}
-                    icon={userAutoplay ? 'pause' : 'play'}
-                    title={
-                      userAutoplay
-                        ? intl.formatMessage(messages.pause)
-                        : intl.formatMessage(messages.play)
-                    }
-                  />
-                  <span>{userAutoplay ? 'pause' : 'play'}</span>
-                </button>
-              </div>
+              <ButtonPlayPause onClick={toggleAutoplay} autoplay={userAutoplay}>
+                <span>{userAutoplay ? 'pause' : 'play'}</span>
+              </ButtonPlayPause>
             )}
 
             <Slider {...settings} ref={slider}>
@@ -383,6 +224,8 @@ const SliderTemplate = ({
                   sizes: `max-width(991px) 620px, ${1300 / nSlidesToShow}px`,
                   critical: true,
                 });
+                const nextIndex = index < items.length - 1 ? index + 1 : null;
+                const prevIndex = index > 0 ? index - 1 : null;
                 return (
                   <Slide
                     image={image}
@@ -390,15 +233,22 @@ const SliderTemplate = ({
                     full_width={full_width}
                     item={item}
                     show_image_title={show_image_title}
-                    intl={intl}
-                    setUserAutoplay={setUserAutoplay}
                     userAutoplay={userAutoplay}
                     slider={slider}
+                    appearance={slide_appearance}
+                    appearanceProp={otherProps}
+                    block_id={block_id}
+                    aria-label={
+                      !show_image_title && slide_appearance === 'default'
+                        ? item.title
+                        : null
+                    }
+                    onKeyDown={handleSlideKeydown(index, prevIndex, nextIndex)}
                   />
                 );
               })}
             </Slider>
-          </div>
+          </CarouselWrapper>
         </div>
         <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
       </Container>

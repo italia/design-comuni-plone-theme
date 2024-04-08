@@ -1,0 +1,123 @@
+.block.listing .in-evidence {
+  .col-item {
+    margin-bottom: 22px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .listing-item {
+    a {
+      display: inline;
+    }
+
+    .img-responsive-wrapper {
+      width: inherit;
+
+      .img-responsive {
+        .img-wrapper {
+          display: flex;
+          align-items: center;
+
+          picture {
+            display: flex;
+            width: 100%;
+            height: 100%;
+          }
+
+          img {
+            margin-right: 0;
+          }
+        }
+      }
+
+      &.natural-image-size {
+        .img-responsive {
+          position: static;
+          height: auto;
+          padding: 0;
+
+          figure.img-wrapper {
+            position: static;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .img-link {
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparentize($color: white, $amount: 1);
+        content: '';
+        transition: 0.2s background-color ease;
+      }
+
+      &:hover,
+      &:focus {
+        &:after {
+          background-color: transparentize($color: white, $amount: 0.9);
+        }
+      }
+    }
+
+    .card-title {
+      a {
+        display: inline;
+        width: initial;
+        color: $body-color;
+        text-decoration: none;
+        transition: 0.2s color ease;
+
+        &:hover,
+        &:focus {
+          color: $link-color;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .event-recurrences-more {
+      bottom: $v-gap * 3;
+    }
+  }
+
+  .in-evidence-cards-wrapper {
+    display: -ms-grid;
+    display: grid;
+    gap: 1.3rem;
+    -ms-grid-columns: 1fr 1.3rem 1fr 1.3rem 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card-wrapper {
+    &:first-child {
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
+  }
+
+  // smartphone
+  @media (max-width: 585px) {
+    .in-evidence-cards-wrapper {
+      .card-wrapper {
+        width: 100%;
+        margin: 0px;
+      }
+      display: block;
+      height: 100%;
+    }
+  }
+  // tablet
+  @media (max-width: 1367px) and (min-width: 586px) {
+    .in-evidence-cards-wrapper {
+      grid-template-columns: auto auto;
+    }
+  }
+}

@@ -16,6 +16,13 @@ const messages = defineMessages({
     defaultMessage: 'Blocco sconosciuto',
   },
 });
+const Wrapper = ({ block, id, children }) => {
+  return block['@type'] === 'listing' && block.variation === 'slider' ? (
+    <div id={`outside-slider-${id}`}>{children}</div>
+  ) : (
+    <>{children}</>
+  );
+};
 /**
  * RenderBlocks view component class.
  * @function RenderBlocks
@@ -57,15 +64,21 @@ const RenderBlocks = ({
       {map(items, (block) => {
         const blockType = blockContent[blocksFieldname]?.[block]?.['@type'];
         const Block = config.blocks.blocksConfig[blockType]?.['view'] || null;
+
         if (Block != null) {
           return (
-            <Block
-              key={block}
-              id={block}
-              properties={content ?? data}
-              data={blockContent[blocksFieldname][block]}
-              path={getBaseUrl(location?.pathname || '')}
-            />
+            <Wrapper block={blockContent[blocksFieldname]?.[block]} id={block}>
+              <Block
+                key={block}
+                id={block}
+                properties={content ?? data}
+                data={{
+                  ...blockContent[blocksFieldname][block],
+                  block: block,
+                }}
+                path={getBaseUrl(location?.pathname || '')}
+              />
+            </Wrapper>
           );
         } else {
           return (

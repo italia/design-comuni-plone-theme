@@ -41,6 +41,7 @@
 @import 'ItaliaTheme/Components/sideMenu';
 @import 'ItaliaTheme/Components/loginAgid';
 @import 'ItaliaTheme/Components/pager';
+@import 'ItaliaTheme/Components/navigation';
 @import 'ItaliaTheme/Blocks/subblocks-edit';
 @import 'ItaliaTheme/Blocks/listing';
 @import 'ItaliaTheme/Blocks/tableOfContents';
@@ -53,7 +54,7 @@
 @import 'ItaliaTheme/Blocks/iconBlocks';
 @import 'ItaliaTheme/Blocks/imageBlock';
 @import 'ItaliaTheme/Blocks/searchSections';
-@import 'ItaliaTheme/Blocks/cardWithImageAndInEvidence';
+@import 'ItaliaTheme/Blocks/cardWithImage';
 @import 'ItaliaTheme/Blocks/cardWithImageTextBlock';
 @import 'ItaliaTheme/Blocks/cardWithSlideUpTextTemplate';
 @import 'ItaliaTheme/Blocks/smallblockLinkstemplate';
@@ -61,7 +62,7 @@
 @import 'ItaliaTheme/Blocks/squaresImageTemplate';
 @import 'ItaliaTheme/Blocks/photogallerytemplate';
 @import 'ItaliaTheme/Blocks/sliderTemplate';
-@import 'ItaliaTheme/Blocks/inevidencetemplate';
+@import 'ItaliaTheme/Blocks/inEvidenceTemplate';
 @import 'ItaliaTheme/Blocks/contentInEvidenceTemplate';
 @import 'ItaliaTheme/Blocks/mapTemplate';
 @import 'ItaliaTheme/Blocks/bandiInEvidenceTemplate';
@@ -134,6 +135,7 @@
 @import 'ItaliaTheme/Components/navscroll';
 @import 'ItaliaTheme/Components/customerSatisfaction';
 @import 'ItaliaTheme/Print/all_pages';
+@import 'ItaliaTheme/Print/page';
 @import 'ItaliaTheme/Print/news_items';
 @import 'ItaliaTheme/Print/bandi';
 @import 'ItaliaTheme/Print/persona';

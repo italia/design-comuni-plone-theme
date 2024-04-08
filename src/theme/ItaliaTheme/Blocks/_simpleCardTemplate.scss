@@ -21,98 +21,96 @@
     content: none;
   }
 
-  .card.card-teaser {
-    &:after {
-      content: none;
-    }
-
-    .categoryicon-top .icon {
-      width: 32px;
-      height: 32px;
-      color: $gray-secondary;
-      fill: $gray-secondary;
-      font-weight: 600;
-    }
-
-    .card-body {
-      a {
-        display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
-        &:link,
-        &:visited {
-          text-decoration: none;
-        }
-
-        &:hover,
-        &:active {
-          text-decoration: underline;
-        }
-      }
-
-      .card-title {
-        margin-bottom: 10px;
-
-        a {
-          @include rem-size(font-size, 24);
-          @include rem-size(line-height, 26);
-          display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
-          font-weight: 700;
-
-          &:hover,
-          &:active {
-            text-decoration: underline;
-          }
-        }
-      }
-
-      .category-top {
-        span.text {
-          span.text.fw-bold {
-            color: $link-color;
-            font-size: 0.875rem;
-            font-weight: 600 !important;
-            letter-spacing: 1px;
-            line-height: 1.313rem;
-          }
-        }
-      }
-
-      p.card-text {
-        font-size: 1rem;
-        line-height: 1.5rem;
-
-        div.document-date {
-          @include rem-size(font-size, 14);
-        }
-      }
-    }
-
-    .it-card-footer {
-      flex: 1 1 100%;
-      align-self: flex-end;
-
-      a {
-        &:hover,
-        &:active {
-          text-decoration: underline;
-        }
-
-        &:link,
-        &:visited {
-          text-decoration: none;
-        }
-      }
-
-      .icon {
-        min-width: unset;
-      }
-    }
-  }
-
   .link-button {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 30px 0;
+  }
+}
+
+/*item is reusable in other components*/
+
+.card.card-teaser.simple-card-default-item {
+  .categoryicon-top .icon {
+    width: 32px;
+    height: 32px;
+    color: $gray-secondary;
+    fill: $gray-secondary;
+    font-weight: 600;
+  }
+
+  .card-body {
+    a {
+      display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
+      &:link,
+      &:visited {
+        text-decoration: none;
+      }
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+
+    .card-title {
+      margin-bottom: 10px;
+
+      a {
+        @include rem-size(font-size, 24);
+        @include rem-size(line-height, 26);
+        display: inline-block; //per avere il bordo tutto unito al focus di un link, ad esempio nelle card
+        font-weight: 700;
+
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .category-top {
+      span.text {
+        span.text.fw-bold {
+          color: $link-color;
+          font-size: 0.875rem;
+          font-weight: 600 !important;
+          letter-spacing: 1px;
+          line-height: 1.313rem;
+        }
+      }
+    }
+
+    p.card-text {
+      font-size: 1rem;
+      line-height: 1.5rem;
+
+      div.document-date {
+        @include rem-size(font-size, 14);
+      }
+    }
+  }
+
+  .it-card-footer {
+    flex: 1 1 100%;
+    align-self: flex-end;
+
+    a {
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+
+      &:link,
+      &:visited {
+        text-decoration: none;
+      }
+    }
+
+    .icon {
+      min-width: unset;
+    }
   }
 }
 
