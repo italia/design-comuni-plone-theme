@@ -45,8 +45,9 @@
 
 ### Migliorie
 
-- Aggiunta la possibilità di inserire testo nel filtro luogo nel blocco Ricerca Eventi
-- Le opzioni del menu a tendina per il filtro luogo nel blocco Ricerca Eventi sono ordinate alfabeticamente
+- Aggiunta la possibilità di inserire testo nel filtro luogo nel blocco Ricerca Eventi.
+- Le opzioni del menu a tendina per il filtro luogo nel blocco Ricerca Eventi sono ordinate alfabeticamente.
+- Il focus quando un elemento (link o pulsante) è cliccato con il mouse non ha più il bordo giallo/arancione.
 - Migliorati gli stili per la stampa del CT pagina.
 
 ### Novità

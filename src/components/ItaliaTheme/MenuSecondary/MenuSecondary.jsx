@@ -53,6 +53,9 @@ const MenuSecondary = ({ pathname }) => {
               <NavLink
                 href={url === '' ? '/' : flattenToAppURL(url)}
                 tag={UniversalLink}
+                className={
+                  isMenuActive(url) ? 'focus--mouse megamenu' : 'megamenu'
+                }
                 active={isMenuActive(url)}
                 data-element={item.id_lighthouse}
                 role="menuitem"
