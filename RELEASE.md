@@ -43,10 +43,6 @@
 
 ## Versione x.x.x (xx/xx/xxxx)
 
-### Novità
-- Nel template Slider del blocco elenco, ora è possibile scegliere l'aspetto degli elementi dello slider (default: slide semplice con immagine e titolo cliccabile, Card semplice, Card con immagine).
-## Versione X.X.X (dd/mm/yyyy)
-
 ### Migliorie
 
 - Nel blocco Argomenti in Evidenza, è stata rimossa l'obbligatorietà di aggiungere una card argomento, ora si possono inserire anche solo le etichette.
@@ -57,6 +53,8 @@
 
 ### Novità
 
+- Ora i link in testata nell'header slim sono configurabili da pannello di controllo.
+- Nel template Slider del blocco elenco, ora è possibile scegliere l'aspetto degli elementi dello slider (default: slide semplice con immagine e titolo cliccabile, Card semplice, Card con immagine).
 - Nel blocco Argomenti in Evidenza sono state aggiunte due nuove proprietà, una permette di allineare gli "Altri argomenti" al centro e la seconda serve a nascondere o meno il bottone "Vedi tutti" che punta alla pagina argomenti.
 
 ### Fix

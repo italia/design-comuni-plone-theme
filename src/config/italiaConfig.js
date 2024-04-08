@@ -217,6 +217,10 @@ export default function applyConfig(voltoConfig) {
       // arLogoutUrl: '/logout?e=1',
       // spidLogin: true, //se true, nella pagina di errore Unauthorized, mostra il pulsante per il login a Spid.
       headerslimTertiaryMenu: {
+        default: [
+          //{ title: 'Contatti', url: '/it/contatti' },
+          //{ title: 'Novità', url: '/it/novita' },
+        ],
         it: [
           //{ title: 'Contatti', url: '/it/contatti' },
           //{ title: 'Novità', url: '/it/novita' },
