@@ -2743,6 +2743,11 @@ msgstr ""
 msgid "organizzato_da"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno
+# defaultMessage: Organizzatore
+msgid "organizzatore"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Organo competente adozione provvedimento finale

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-04-03T08:27:02.322Z\n"
+"POT-Creation-Date: 2024-04-03T13:54:10.953Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -2728,6 +2728,11 @@ msgstr ""
 #: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreInterno
 # defaultMessage: Organizzato da
 msgid "organizzato_da"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno
+# defaultMessage: Organizzatore
+msgid "organizzatore"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields

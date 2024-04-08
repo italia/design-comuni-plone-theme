@@ -2726,7 +2726,12 @@ msgstr "Order by"
 #: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreInterno
 # defaultMessage: Organizzato da
 msgid "organizzato_da"
-msgstr ""
+msgstr "Organized by"
+
+#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno
+# defaultMessage: Organizzatore
+msgid "organizzatore"
+msgstr "Organizer"
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView

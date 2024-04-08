@@ -2728,6 +2728,11 @@ msgstr "Ordina per"
 msgid "organizzato_da"
 msgstr "Organizzato da"
 
+#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno
+# defaultMessage: Organizzatore
+msgid "organizzatore"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Organo competente adozione provvedimento finale

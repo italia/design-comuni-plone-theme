@@ -49,6 +49,14 @@
 - Le opzioni del menu a tendina per il filtro luogo nel blocco Ricerca Eventi sono ordinate alfabeticamente
 - Migliorati gli stili per la stampa del CT pagina.
 
+### Novità
+
+- ...
+
+### Fix
+
+- Aggiunto il titolo per la sezione "Organizzatore esterno" quando il campo è compilato nel tipo di contenuto Evento.
+
 ## Versione 11.9.1 (03/04/2024)
 
 ### Fix
