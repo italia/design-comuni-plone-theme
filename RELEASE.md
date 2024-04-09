@@ -61,8 +61,7 @@
 
 - Nel blocco Argomenti in Evidenza se non ci sono card ma etichette argomento, il blocco non renderizza più lo sfondo per un maggiore contrasto con le etichette, di conseguenza il titolo del blocco rimane nero e non bianco.
 - Aggiunto il titolo per la sezione "Organizzatore esterno" quando il campo è compilato nel tipo di contenuto Evento.
-
-
+- Migliorata l'accessibilità dei link nel footer.
 
 ## Versione 11.9.1 (03/04/2024)
 
