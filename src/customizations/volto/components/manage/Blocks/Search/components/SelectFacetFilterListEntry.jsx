@@ -72,41 +72,32 @@ function SelectFacetFilterListEntry(props) {
     </>
   ) : (
     <>
-      {facets[facet]?.length > 0 && (
+      {((Array.isArray(facets?.[facet]) && facets?.[facet]?.length > 0) ||
+        (!Array.isArray(facets?.[facet]) && Boolean(facets?.[facet]))) && (
         <span className="label-title mb-2">
           {facetSettings.title ?? facetSettings?.field?.label}
         </span>
       )}
-      {facets[facet].map((entry, i) => {
-        const label = Array.isArray(selectedValue)
-          ? selectedValue?.find((sv) => sv.value === entry)?.label ?? ''
-          : '';
-        return (
-          <Label key={i} className="d-flex w-100 py-1">
-            <span>{label}</span>
-            <Button
-              className="p-0"
-              onClick={() => {
-                const entries = facets[facet].filter((item) => item !== entry);
-                !isEditMode &&
-                  setFacets({
-                    ...facets,
-                    [facet]: entries,
-                  });
-              }}
-              aria-label={intl.formatMessage(
-                commonSearchBlockMessages.clearFilter,
-                {
-                  filterName: label,
-                },
-              )}
-              title={intl.formatMessage(commonSearchBlockMessages.clearFilter, {
-                filterName: label,
-              })}
-            >
-              <Icon
-                icon="it-close"
-                size="md"
+      {Array.isArray(facets?.[facet]) &&
+        facets?.[facet]?.map((entry, i) => {
+          const label = Array.isArray(selectedValue)
+            ? selectedValue?.find((sv) => sv.value === entry)?.label ?? ''
+            : '';
+          return (
+            <Label key={i} className="d-flex w-100 py-1">
+              <span>{label}</span>
+              <Button
+                className="p-0"
+                onClick={() => {
+                  const entries = facets?.[facet]?.filter(
+                    (item) => item !== entry,
+                  );
+                  !isEditMode &&
+                    setFacets({
+                      ...facets,
+                      [facet]: entries,
+                    });
+                }}
                 aria-label={intl.formatMessage(
                   commonSearchBlockMessages.clearFilter,
                   {
@@ -119,11 +110,27 @@ function SelectFacetFilterListEntry(props) {
                     filterName: label,
                   },
                 )}
-              />
-            </Button>
-          </Label>
-        );
-      })}
+              >
+                <Icon
+                  icon="it-close"
+                  size="md"
+                  aria-label={intl.formatMessage(
+                    commonSearchBlockMessages.clearFilter,
+                    {
+                      filterName: label,
+                    },
+                  )}
+                  title={intl.formatMessage(
+                    commonSearchBlockMessages.clearFilter,
+                    {
+                      filterName: label,
+                    },
+                  )}
+                />
+              </Button>
+            </Label>
+          );
+        })}
     </>
   );
 }
