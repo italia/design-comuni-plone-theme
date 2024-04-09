@@ -31,7 +31,8 @@
     "volto-data-grid-widget",
     "volto-querywidget-with-browser",
     "@eeacms/volto-taxonomy",
-    "volto-feedback"
+    "volto-feedback",
+    "volto-slimheader"
   ],
   "scripts": {
     "prepare": "husky install",
@@ -153,6 +154,7 @@
     "volto-querywidget-with-browser": "0.4.2",
     "volto-rss-block": "3.0.0",
     "volto-secondarymenu": "4.0.0",
+    "volto-slimheader": "0.1.0",
     "volto-social-settings": "3.0.0",
     "volto-subblocks": "2.0.0",
     "volto-subfooter": "3.0.0",
@@ -163,10 +165,12 @@
   "devDependencies": {
     "@babel/core": "7.19.6",
     "@babel/eslint-parser": "7.23.3",
+    "@babel/plugin-syntax-export-namespace-from": "^7.8.3",
     "@commitlint/cli": "17.6.6",
     "@commitlint/config-conventional": "17.6.6",
     "@plone/scripts": "*",
     "@release-it/conventional-changelog": "5.1.1",
+    "babel-plugin-lodash": "^3.3.4",
     "eslint": "8.54.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-config-react-app": "7.0.1",

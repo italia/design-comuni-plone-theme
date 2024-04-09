@@ -1,0 +1,15 @@
+.public-ui {
+  .navbar {
+    .navbar-collapsable {
+      .navbar-nav {
+        li {
+          a.nav-link {
+            &.focus--mouse {
+              border-color: unset !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

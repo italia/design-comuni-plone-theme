@@ -51,9 +51,13 @@ class Edit extends SubblocksEdit {
   }
 
   render() {
+    const hasArguments = this.props.data.subblocks?.some((subblock) => {
+      return subblock.argument?.length > 0;
+    });
+
     return (
       <div className="argumentInEvidence public-ui" tabIndex="-1">
-        <ArgumentsInEvidenceBackground inEditMode={true} />
+        {hasArguments && <ArgumentsInEvidenceBackground inEditMode={true} />}
         <SubblocksWrapper node={this.node}>
           <BodyWrapper data={this.props.data} inEditMode={false}>
             {this.state.subblocks.map((subblock, subindex) => (
@@ -86,7 +90,11 @@ class Edit extends SubblocksEdit {
           />
         </SidebarPortal>
 
-        <BottomBody data={this.props.data} intl={this.props.intl} />
+        <BottomBody
+          hasArguments={true}
+          data={this.props.data}
+          intl={this.props.intl}
+        />
       </div>
     );
   }

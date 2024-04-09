@@ -42,11 +42,15 @@ const DocumentoDescrizione = ({ content }) => {
   return richTextHasContent(content.descrizione_estesa) ||
     contentFolderHasItems(content, 'multimedia') ||
     content.autori?.length > 0 ||
-    content.licenza_distribuzione?.length > 0 ? (
+    content.identificativo ||
+    content.licenza_distribuzione?.length > 0 ||
+    content.tipologia_licenze?.title ||
+    content.tipologia_documento?.length > 0 ||
+    content.tipologia_documenti_albopretorio?.title ? (
     <RichTextSection
       tag_id={'text-body'}
       title={intl.formatMessage(messages.descrizione)}
-      show_title={true}
+      show_title={richTextHasContent(content.descrizione_estesa)}
       data={content.descrizione_estesa}
     >
       {contentFolderHasItems(content, 'multimedia') && (
@@ -61,7 +65,7 @@ const DocumentoDescrizione = ({ content }) => {
       )}
       {content.identificativo && (
         <div className="mt-5">
-          <h4>{intl.formatMessage(messages.identificativo)}</h4>
+          <h3 className="h4">{intl.formatMessage(messages.identificativo)}</h3>
           <p className="font-serif">{content.identificativo}</p>
         </div>
       )}
@@ -71,7 +75,9 @@ const DocumentoDescrizione = ({ content }) => {
       {(content.licenza_distribuzione?.length > 0 ||
         content.tipologia_licenze?.title) && (
         <div className="mt-5">
-          <h4>{intl.formatMessage(messages.licenza_distribuzione)}</h4>
+          <h3 className="h4">
+            {intl.formatMessage(messages.licenza_distribuzione)}
+          </h3>
           {content.licenza_distribuzione?.length > 0 && (
             <p className="font-serif">{content.licenza_distribuzione}</p>
           )}
@@ -82,7 +88,9 @@ const DocumentoDescrizione = ({ content }) => {
       )}
       {content.tipologia_documento?.length > 0 && (
         <div className="mt-5">
-          <h4>{intl.formatMessage(messages.tipologia_documento)}</h4>
+          <h3 className="h4">
+            {intl.formatMessage(messages.tipologia_documento)}
+          </h3>
           {content.tipologia_documento.map((tipo) => (
             <p key={tipo.token} className="font-serif">
               {tipo.title}
@@ -92,9 +100,9 @@ const DocumentoDescrizione = ({ content }) => {
       )}
       {content.tipologia_documenti_albopretorio?.title && (
         <div className="mt-5">
-          <h4>
+          <h3 className="h4">
             {intl.formatMessage(messages.tipologia_documenti_albopretorio)}
-          </h4>
+          </h3>
           <p className="font-serif">
             {content.tipologia_documenti_albopretorio?.title}
           </p>

@@ -14,6 +14,7 @@ import {
 import Sidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery/Sidebar';
 import Body from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery/Body';
 import EditBlock from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery/Block/EditBlock';
+import { SingleSlideWrapper } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   addItem: {
@@ -51,14 +52,14 @@ class Edit extends SubblocksEdit {
         <SubblocksWrapper node={this.node}>
           <Body {...this.props} nItems={this.state.subblocks?.length}>
             {this.state.subblocks.map((subblock, subindex) => (
-              <div className="it-single-slide-wrapper" key={subblock.id}>
+              <SingleSlideWrapper key={subblock.id} index={subindex}>
                 <EditBlock
                   data={subblock}
                   index={subindex}
                   selected={this.isSubblockSelected(subindex)}
                   {...this.subblockProps}
                 />
-              </div>
+              </SingleSlideWrapper>
             ))}
             {this.state.subblocks.length === 0 && (
               <div>{this.props.intl.formatMessage(messages.noVideos)}</div>

@@ -443,6 +443,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-module-imports@npm:^7.0.0-beta.49":
+  version: 7.24.3
+  resolution: "@babel/helper-module-imports@npm:7.24.3"
+  dependencies:
+    "@babel/types": ^7.24.0
+  checksum: c23492189ba97a1ec7d37012336a5661174e8b88194836b6bbf90d13c3b72c1db4626263c654454986f924c6da8be7ba7f9447876d709cd00bd6ffde6ec00796
+  languageName: node
+  linkType: hard
+
 "@babel/helper-module-imports@npm:^7.16.7, @babel/helper-module-imports@npm:^7.18.6":
   version: 7.18.6
   resolution: "@babel/helper-module-imports@npm:7.18.6"
@@ -3011,6 +3020,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/types@npm:^7.0.0-beta.49, @babel/types@npm:^7.24.0":
+  version: 7.24.0
+  resolution: "@babel/types@npm:7.24.0"
+  dependencies:
+    "@babel/helper-string-parser": ^7.23.4
+    "@babel/helper-validator-identifier": ^7.22.20
+    to-fast-properties: ^2.0.0
+  checksum: 4b574a37d490f621470ff36a5afaac6deca5546edcb9b5e316d39acbb20998e9c2be42f3fc0bf2b55906fc49ff2a5a6a097e8f5a726ee3f708a0b0ca93aed807
+  languageName: node
+  linkType: hard
+
 "@babel/types@npm:^7.19.4, @babel/types@npm:^7.20.0, @babel/types@npm:^7.20.2":
   version: 7.20.2
   resolution: "@babel/types@npm:7.20.2"
@@ -5032,6 +5052,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-plugin-lodash@npm:^3.3.4":
+  version: 3.3.4
+  resolution: "babel-plugin-lodash@npm:3.3.4"
+  dependencies:
+    "@babel/helper-module-imports": ^7.0.0-beta.49
+    "@babel/types": ^7.0.0-beta.49
+    glob: ^7.1.1
+    lodash: ^4.17.10
+    require-package-name: ^2.0.1
+  checksum: 044a4261e689b7058cdcbd4a37e5229797e652534a889a553e7d3cff87cf72283e4a68d3be4c3c305c96214f77f2e09ca376c68c45923aeb0de14514b0fb27d3
+  languageName: node
+  linkType: hard
+
 "babel-plugin-macros@npm:^3.1.0":
   version: 3.1.0
   resolution: "babel-plugin-macros@npm:3.1.0"
@@ -6525,6 +6558,7 @@ __metadata:
     "@babel/plugin-proposal-export-default-from": 7.18.9
     "@babel/plugin-proposal-nullish-coalescing-operator": 7.18.6
     "@babel/plugin-proposal-throw-expressions": 7.18.6
+    "@babel/plugin-syntax-export-namespace-from": ^7.8.3
     "@commitlint/cli": 17.6.6
     "@commitlint/config-conventional": 17.6.6
     "@eeacms/volto-taxonomy": ^1.0.0
@@ -6532,6 +6566,7 @@ __metadata:
     "@plone-collective/volto-sentry": 0.3.0
     "@plone/scripts": "*"
     "@release-it/conventional-changelog": 5.1.1
+    babel-plugin-lodash: ^3.3.4
     bootstrap-italia: 2.6.1
     classnames: ^2.3.2
     design-react-kit: 5.0.0-1
@@ -6583,6 +6618,7 @@ __metadata:
     volto-querywidget-with-browser: 0.4.2
     volto-rss-block: 3.0.0
     volto-secondarymenu: 4.0.0
+    volto-slimheader: 0.1.0
     volto-social-settings: 3.0.0
     volto-subblocks: 2.0.0
     volto-subfooter: 3.0.0
@@ -8145,7 +8181,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.0.0, glob@npm:^7.1.3, glob@npm:^7.1.4":
+"glob@npm:^7.0.0, glob@npm:^7.1.1, glob@npm:^7.1.3, glob@npm:^7.1.4":
   version: 7.2.3
   resolution: "glob@npm:7.2.3"
   dependencies:
@@ -12369,6 +12405,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"require-package-name@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "require-package-name@npm:2.0.1"
+  checksum: 00f4e9e467ebe2bbced2b4198a165de11c83b5ee9f4c20b05a8782659b92bcb544dbd50be9a3eed746d05ecd875453e258c079eb3a79604b50a27cf8ab0798b5
+  languageName: node
+  linkType: hard
+
 "resize-observer-polyfill@npm:^1.5.0":
   version: 1.5.1
   resolution: "resize-observer-polyfill@npm:1.5.1"
@@ -14429,6 +14472,15 @@ __metadata:
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
   checksum: cec270574025c0fdf66f050261d018738fb3784ff6d90524d6e034722aaa5e62216f286b720c45829e2de7fdc20cf694c49f5aeae37f6cad65dce88da1a03ade
+  languageName: node
+  linkType: hard
+
+"volto-slimheader@npm:0.1.0":
+  version: 0.1.0
+  resolution: "volto-slimheader@npm:0.1.0"
+  peerDependencies:
+    "@plone/volto": ">=16.0.0-alpha.38"
+  checksum: 2cdd3f53cb6ce20571fa1f58a2658f2b0d6694dab37d06be8784338500bca2227f45471be1b7980583d666719eb7a9c80c9a8013a93ef354cd8f697608161d25
   languageName: node
   linkType: hard
 

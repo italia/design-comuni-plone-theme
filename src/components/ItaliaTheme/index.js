@@ -83,11 +83,16 @@ export CardCalendar from 'design-comuni-plone-theme/components/ItaliaTheme/Block
 export ListingCategory from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/ListingCategory';
 export ListingText from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/ListingText';
 export ListingLinkMore from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore';
-export NextArrow from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/NextArrow';
-export PrevArrow from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/PrevArrow';
+
 export ListingImage, {
   getListingImageBackground,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/ListingImage';
 
+/*Slider*/
+export SingleSlideWrapper from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/SingleSlideWrapper';
+export CarouselWrapper from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/CarouselWrapper';
+export ButtonPlayPause from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/ButtonPlayPause';
+export NextArrow from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/NextArrow';
+export PrevArrow from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/PrevArrow';
 /********* ERROR PAGES ********* */
 export Unauthorized from 'design-comuni-plone-theme/components/ItaliaTheme/Unauthorized/Unauthorized';
