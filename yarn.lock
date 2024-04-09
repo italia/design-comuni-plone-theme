@@ -6583,7 +6583,7 @@ __metadata:
     volto-querywidget-with-browser: 0.4.2
     volto-rss-block: 3.0.0
     volto-secondarymenu: 4.0.0
-    volto-slimheader: 0.1.0
+    volto-slimheader: 0.1.1
     volto-social-settings: 3.0.0
     volto-subblocks: 2.0.0
     volto-subfooter: 3.0.0
@@ -14433,12 +14433,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-slimheader@npm:0.1.0":
-  version: 0.1.0
-  resolution: "volto-slimheader@npm:0.1.0"
+"volto-slimheader@npm:0.1.1":
+  version: 0.1.1
+  resolution: "volto-slimheader@npm:0.1.1"
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 2cdd3f53cb6ce20571fa1f58a2658f2b0d6694dab37d06be8784338500bca2227f45471be1b7980583d666719eb7a9c80c9a8013a93ef354cd8f697608161d25
+  checksum: 94bafa197c4ef2c8cbb15333df102fa189220cac5e24a95d330ebf1544a0203d4ec33fdbd7aafcc006d0bdbd529c87aa88f827ea7a8d9ef7ecb361291cab90af
   languageName: node
   linkType: hard
 
