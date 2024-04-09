@@ -61,6 +61,7 @@
 
 - Nel blocco Argomenti in Evidenza se non ci sono card ma etichette argomento, il blocco non renderizza più lo sfondo per un maggiore contrasto con le etichette, di conseguenza il titolo del blocco rimane nero e non bianco.
 - Aggiunto il titolo per la sezione "Organizzatore esterno" quando il campo è compilato nel tipo di contenuto Evento.
+- Sistemato un problema nella vista del CT Evento, che mostrava tra le date aggiuntive della ricorrenza anche le date escluse.
 - Sistemato un problema per cui la visualizzazione della sitemap in presenza di un sito multilingua generava errore.
 - Migliorata l'accessibilità dei link nel footer.
 
