@@ -59,7 +59,7 @@ const Slide = (props) => {
       }
     >
       <div className={'slide-wrapper'} role="presentation">
-        <SlideItemAppearance {...props} {...appearanceProp} />
+        <SlideItemAppearance {...props} {...appearanceProp} intl={intl} />
       </div>
     </SingleSlideWrapper>
   );
