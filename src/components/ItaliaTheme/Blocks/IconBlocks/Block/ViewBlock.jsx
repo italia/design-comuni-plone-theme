@@ -36,10 +36,6 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
     },
   };
 
-  const cardTitle = redraft(data.title, rawStringRenderer, {
-    cleanup: false,
-  });
-
   const intl = useIntl();
 
   return (
@@ -70,7 +66,7 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
             text={data.linkMoreTitle || intl.formatMessage(messages.vedi)}
             aria-label={`${
               data.linkMoreTitle || intl.formatMessage(messages.vedi)
-            } ${data.title ? cardTitle[0] : ''}`}
+            } ${data.title ?? ''}`}
           />
         )}
       </CardBody>
