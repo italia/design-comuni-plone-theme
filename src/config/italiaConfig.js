@@ -86,6 +86,7 @@ export default function applyConfig(voltoConfig) {
 
   config.settings = {
     ...config.settings,
+    openExternalLinkInNewTab: true,
     sentryOptions: (libraries) => ({
       ...voltoSentryOptions(libraries),
       ignoreErrors: [

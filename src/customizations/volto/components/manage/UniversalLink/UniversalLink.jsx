@@ -42,6 +42,7 @@ const UniversalLink = ({
   hideFileFormat = false,
   ...props
 }) => {
+  const { openExternalLinkInNewTab } = config.settings;
   let translations = {
     opensInNewTab: {
       defaultMessage: messages.opensInNewTab.defaultMessage,
@@ -147,6 +148,8 @@ const UniversalLink = ({
   );
 
   if (isExternal) {
+    const openInNewTab =
+      openLinkInNewTab === null ? openExternalLinkInNewTab : openLinkInNewTab;
     tag = (
       <a
         href={url}
@@ -155,9 +158,7 @@ const UniversalLink = ({
           translations.opensInNewTab.defaultMessage
         }`}
         target={
-          !checkedURL.isMail &&
-          !checkedURL.isTelephone &&
-          !(openLinkInNewTab === false)
+          !checkedURL.isMail && !checkedURL.isTelephone && openInNewTab
             ? '_blank'
             : null
         }
