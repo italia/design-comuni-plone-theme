@@ -8,6 +8,10 @@ const fieldDataToPlainText = (field) => {
       if (index > 0) accumulator += ' ';
       accumulator += field.blocks[item].text?.blocks[0].text ?? '';
     }
+    if (field.blocks[item]['@type'] === 'slate') {
+      if (index > 0) accumulator += ' ';
+      accumulator += field.blocks[item].plaintext ?? '';
+    }
     return accumulator;
   }, '');
 };
