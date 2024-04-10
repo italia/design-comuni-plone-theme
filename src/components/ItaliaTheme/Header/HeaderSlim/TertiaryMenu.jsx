@@ -26,6 +26,7 @@ const TertiaryMenu = () => {
       return {
         url: item.href || flattenToAppURL(item.linkUrl?.[0]?.['@id']) || '/',
         title: item.title,
+        inEvidence:item.inEvidence
       };
     });
 
