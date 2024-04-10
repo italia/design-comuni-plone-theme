@@ -35,6 +35,7 @@ const UniversalLink = ({
 }) => {
   const intl = useIntl();
   const token = useSelector((state) => state.userSession?.token);
+  const { openExternalLinkInNewTab } = config.settings;
 
   let url = href;
   if (!href && item) {
@@ -99,6 +100,8 @@ const UniversalLink = ({
   );
 
   if (isExternal) {
+    const openInNewTab =
+      openLinkInNewTab === null ? openExternalLinkInNewTab : openLinkInNewTab;
     tag = (
       <a
         href={url}
@@ -106,9 +109,7 @@ const UniversalLink = ({
           id: 'opensInNewTab',
         })}`}
         target={
-          !checkedURL.isMail &&
-          !checkedURL.isTelephone &&
-          !(openLinkInNewTab === false)
+          !checkedURL.isMail && !checkedURL.isTelephone && openInNewTab
             ? '_blank'
             : null
         }
