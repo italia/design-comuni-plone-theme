@@ -59,15 +59,15 @@ const FooterNavigation = () => {
                     title: item.title,
                   }}
                 />
-                <Link
-                  to={item.url}
+                <UniversalLink
+                  href={item.url}
                   title={
                     intl.formatMessage(messages.goToPage) + ': ' + item.title
                   }
                 >
                   {item.title}
                   <Icon icon="it-arrow-right" color="white" />
-                </Link>
+                </UniversalLink>
               </h4>
               {/* DEPRECATED: isFooterCollapsed to be removed in version 12 */}
               {!config.settings.isFooterCollapsed &&
