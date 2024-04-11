@@ -134,7 +134,6 @@ const MegaMenu = ({ item, pathname }) => {
   } else {
     //megamenu
     let hasBlocks = hasBlocksData(item);
-    console.log(hasBlocks, item);
     if (item?.blocks && Object.keys(item.blocks).length === 1) {
       let b = item.blocks[Object.keys(item.blocks)[0]];
 
