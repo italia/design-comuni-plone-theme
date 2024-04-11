@@ -59,6 +59,7 @@ const UniversalLink = ({
     console.log('Cannot use intl here. View default messages.', e);
   }
   const token = useSelector((state) => state.userSession?.token);
+  const { openExternalLinkInNewTab } = config.settings;
 
   let url = href;
   let enhanced_link_infos = null;
@@ -149,7 +150,10 @@ const UniversalLink = ({
 
   if (isExternal) {
     const openInNewTab =
-      openLinkInNewTab === null ? openExternalLinkInNewTab : openLinkInNewTab;
+      openLinkInNewTab === null || openLinkInNewTab === undefined
+        ? openExternalLinkInNewTab
+        : openLinkInNewTab;
+
     tag = (
       <a
         href={url}
