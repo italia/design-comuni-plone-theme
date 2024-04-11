@@ -42,7 +42,6 @@ const UniversalLink = ({
   hideFileFormat = false,
   ...props
 }) => {
-  const { openExternalLinkInNewTab } = config.settings;
   let translations = {
     opensInNewTab: {
       defaultMessage: messages.opensInNewTab.defaultMessage,
