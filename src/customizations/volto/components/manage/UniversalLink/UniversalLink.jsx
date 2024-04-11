@@ -86,6 +86,7 @@ const UniversalLink = ({
 
   const checkedURL = URLUtils.checkAndNormalizeUrl(url);
   url = checkedURL.url;
+
   let tag = (
     <Link
       to={flattenToAppURL(url)}
@@ -101,7 +102,10 @@ const UniversalLink = ({
 
   if (isExternal) {
     const openInNewTab =
-      openLinkInNewTab === null ? openExternalLinkInNewTab : openLinkInNewTab;
+      openLinkInNewTab === null || openLinkInNewTab === undefined
+        ? openExternalLinkInNewTab
+        : openLinkInNewTab;
+
     tag = (
       <a
         href={url}
