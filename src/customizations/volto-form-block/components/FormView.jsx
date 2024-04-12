@@ -5,19 +5,16 @@
 */
 import React from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-import {
-  Card,
-  CardBody,
-  Row,
-  Col,
-  Button,
-  Alert,
-  Progress,
-} from 'design-react-kit';
+import { Card, CardBody, Row, Col, Alert, Progress } from 'design-react-kit';
 // eslint-disable-next-line import/no-unresolved
 import { getFieldName } from 'volto-form-block/components/utils';
 // eslint-disable-next-line import/no-unresolved
 import Field from 'volto-form-block/components/Field';
+import {
+  OTPWidget,
+  OTP_FIELDNAME_EXTENDER,
+  Button,
+} from 'volto-form-block/components/Widget';
 // eslint-disable-next-line import/no-unresolved
 import config from '@plone/volto/registry';
 
@@ -64,6 +61,8 @@ const FormView = ({
   captcha,
   id,
   getErrorMessage,
+  path,
+  block_id,
 }) => {
   const intl = useIntl();
   const alertTransition = {
@@ -115,6 +114,26 @@ const FormView = ({
   const submit = (e) => {
     resetFormOnError();
     onSubmit(e);
+  };
+
+  const getFieldsToSendWithValue = (subblock) => {
+    var fields_to_send = [];
+    var fieldSchemaProperties = FieldSchema(subblock)?.properties;
+    for (var key in fieldSchemaProperties) {
+      if (fieldSchemaProperties[key].send_to_backend) {
+        fields_to_send.push(key);
+      }
+    }
+
+    var fields_to_send_with_value = Object.assign(
+      {},
+      ...fields_to_send.map((field) => {
+        return {
+          [field]: subblock[field],
+        };
+      }),
+    );
+    return fields_to_send_with_value;
   };
 
   return (
@@ -201,14 +220,8 @@ const FormView = ({
                   )}
                   {data.subblocks.map((subblock, index) => {
                     let name = getFieldName(subblock.label, subblock.id);
-                    var fields_to_send_with_value = Object.assign(
-                      {},
-                      ...fields_to_send.map((field) => {
-                        return {
-                          [field]: subblock[field],
-                        };
-                      }),
-                    );
+                    const fields_to_send_with_value =
+                      getFieldsToSendWithValue(subblock);
 
                     return (
                       <Row key={'row' + index}>
@@ -237,6 +250,48 @@ const FormView = ({
                       </Row>
                     );
                   })}
+
+                  {/*OTP*/}
+                  {data.subblocks
+                    .filter((subblock) => subblock.use_as_bcc)
+                    .map((subblock, index) => {
+                      const fieldName = getFieldName(
+                        subblock.label,
+                        subblock.id,
+                      );
+                      const name = fieldName + OTP_FIELDNAME_EXTENDER;
+                      const fieldValue = formData[name]?.value;
+                      const fields_to_send_with_value =
+                        getFieldsToSendWithValue(subblock);
+
+                      return (
+                        <Row key={'row_otp' + index}>
+                          <Col className="py-2">
+                            <OTPWidget
+                              {...subblock}
+                              fieldValue={fieldValue}
+                              onChange={(value) =>
+                                onChangeFormData(
+                                  subblock.id,
+                                  fieldName,
+                                  fieldValue,
+                                  {
+                                    ...fields_to_send_with_value,
+                                    otp: value,
+                                  },
+                                )
+                              }
+                              value={formData[name]?.otp}
+                              valid={isValidField(name)}
+                              errorMessage={getErrorMessage(name)}
+                              formHasErrors={formErrors?.length > 0}
+                              path={path}
+                              block_id={block_id}
+                            />
+                          </Col>
+                        </Row>
+                      );
+                    })}
 
                   {enableCaptcha && <>{captcha.render()}</>}
 
