@@ -18,6 +18,7 @@ import {
 import { getFieldName } from 'volto-form-block/components/utils';
 // eslint-disable-next-line import/no-unresolved
 import Field from 'volto-form-block/components/Field';
+import { FormResult } from 'volto-form-block/components';
 // eslint-disable-next-line import/no-unresolved
 import config from '@plone/volto/registry';
 
@@ -86,23 +87,6 @@ const FormView = ({
     return formErrors?.filter((e) => e.field === field).length === 0;
   };
 
-  /* Function that replaces variables from the user customized message  */
-  const replaceMessage = (text) => {
-    let i = 0;
-    while (i < data.subblocks.length) {
-      let idField = getFieldName(
-        data.subblocks[i].label,
-        data.subblocks[i].field_id,
-      );
-      text = text.replaceAll(
-        '${' + idField + '}',
-        formData[idField]?.value || '',
-      );
-      i++;
-    }
-    return text;
-  };
-
   var FieldSchema = config.blocks.blocksConfig.form.fieldSchema;
   var fieldSchemaProperties = FieldSchema()?.properties;
   var fields_to_send = [];
@@ -128,38 +112,11 @@ const FormView = ({
           <Card className="card-bg rounded py-3" noWrapper={false} tag="div">
             <CardBody tag="div">
               {formState.result ? (
-                <Alert
-                  color="success"
-                  fade
-                  isOpen
-                  tag="div"
-                  transition={alertTransition}
-                >
-                  <h4>{intl.formatMessage(messages.success)}</h4>
-                  <br />
-                  {/* Custom message */}
-                  {data.send_message && (
-                    <>
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: replaceMessage(data.send_message),
-                        }}
-                      />
-                      <br />
-                    </>
-                  )}
-                  <Button
-                    color="primary"
-                    outline
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      resetFormState();
-                    }}
-                  >
-                    {intl.formatMessage(messages.reset)}
-                  </Button>
-                </Alert>
+                <FormResult
+                  formState={formState}
+                  data={data}
+                  resetFormState={resetFormState}
+                />
               ) : (
                 <form
                   onSubmit={submit}
