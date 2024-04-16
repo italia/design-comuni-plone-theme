@@ -20,7 +20,7 @@ const AccordionView = ({ data, block }) => {
   };
   const id = new Date().getTime();
   return (
-    <div className="block accordion">
+    <div className="block accordion border-bottom-0">
       <div className="public-ui">
         <div className="full-width section section-muted section-inset-shadow py-5">
           <Container className="px-md-4">
