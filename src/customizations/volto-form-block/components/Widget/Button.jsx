@@ -21,7 +21,7 @@ const Button = (props) => {
     delete _props.secondary;
   }
   if (props.basic) {
-    props.outline = true;
+    _props.outline = true;
     delete _props.basic;
   }
   if (props.size) {
