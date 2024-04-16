@@ -49,11 +49,12 @@ const ContactLink = ({ tel, fax, email, label = true, strong = false }) => {
   function replaceString(str, type) {
     const regex = type === 'mailto' ? emailRegex : phoneRegex;
     return str.split(regex).reduce((acc, substr, i) => {
-      if (substr.trim() !== '') return acc;
+      if (substr.trim() === '') return acc;
+
       return [
         ...acc,
         acc.length === 0 ? '' : ' ',
-        substr.test(regex) ? (
+        regex.test(substr) ? (
           <a
             key={`${type}-${i}`}
             href={`${type}:${substr
