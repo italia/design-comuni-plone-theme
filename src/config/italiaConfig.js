@@ -68,8 +68,8 @@ import { schemaListing } from 'design-comuni-plone-theme/components/ItaliaTheme/
 
 import reducers from 'design-comuni-plone-theme/reducers';
 
-const ReleaseLog = loadable(() =>
-  import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
+const ReleaseLog = loadable(
+  () => import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
 );
 
 const messages = defineMessages({
@@ -89,6 +89,7 @@ export default function applyConfig(voltoConfig) {
 
   config.settings = {
     ...config.settings,
+    openExternalLinkInNewTab: true,
     sentryOptions: (libraries) => ({
       ...voltoSentryOptions(libraries),
       ignoreErrors: [

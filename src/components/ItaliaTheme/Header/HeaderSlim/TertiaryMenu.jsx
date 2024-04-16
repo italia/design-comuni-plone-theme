@@ -4,6 +4,7 @@
  */
 
 import React, { useEffect } from 'react';
+import cx from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { Nav, NavItem, NavLink } from 'design-react-kit';
@@ -25,6 +26,7 @@ const TertiaryMenu = () => {
       return {
         url: item.href || flattenToAppURL(item.linkUrl?.[0]?.['@id']) || '/',
         title: item.title,
+        inEvidence: item.inEvidence,
       };
     });
 
@@ -40,7 +42,11 @@ const TertiaryMenu = () => {
   return items?.length > 0 ? (
     <Nav vertical={false} className="tertiary-menu">
       {items.map((navitem, id) => (
-        <NavItem tag="li" key={id}>
+        <NavItem
+          tag="li"
+          key={id}
+          className={cx('', { 'in-evidence': navitem.inEvidence })}
+        >
           <NavLink href={navitem.url} tag={UniversalLink}>
             <span>{navitem.title}</span>
           </NavLink>
