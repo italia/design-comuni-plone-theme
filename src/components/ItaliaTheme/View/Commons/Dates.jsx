@@ -67,6 +67,14 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
   const end = viewDate(intl.locale, content.end);
   const openEnd = content?.open_end;
   const wholeDay = content?.whole_day;
+  const rdates = rruleSet?.rdates() ?? [];
+  const exdates = rruleSet?.exdates() ?? [];
+  const additionalDates = rdates.reduce((acc, curr) => {
+    const isExdate = exdates.some((b) => b.toString() === curr.toString());
+    if (!isExdate) {
+      return [...acc, curr];
+    } else return acc;
+  }, []);
 
   return content ? (
     <>
@@ -134,20 +142,20 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
           <strong>{recurrenceText}</strong>
         </div>
       )}
-      {rruleSet?.rdates().length > 0 && (
+      {additionalDates.length > 0 && (
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.additional_dates)}</h5>
-          {rruleSet.rdates().map((additionalDate) => (
+          {additionalDates.map((additionalDate) => (
             <div className="font-serif">
               {viewDate(intl.locale, additionalDate, 'dddd DD MMMM YYYY')}
             </div>
           ))}
         </div>
       )}
-      {rruleSet?.exdates().length > 0 && (
+      {exdates.length > 0 && (
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.excluded_dates)}</h5>
-          {rruleSet.exdates().map((exDate) => (
+          {exdates.map((exDate) => (
             <div className="font-serif">
               {viewDate(intl.locale, exDate, 'dddd DD MMMM YYYY')}
             </div>

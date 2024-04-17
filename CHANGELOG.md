@@ -1,5 +1,52 @@
 
 
+## [11.9.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.9.0...v11.9.1) (2024-04-03)
+
+
+### Bug Fixes
+
+* missing message id in navigation customization ([7183f75](https://github.com/redturtle/design-comuni-plone-theme/commit/7183f75f812b387469f8cd15037811d907c0181d))
+
+
+### Documentation
+
+* updated publiccode and release log ([c05ece3](https://github.com/redturtle/design-comuni-plone-theme/commit/c05ece3acec39bcc0f43f116ff3b994666f344d5))
+
+## [11.9.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.8.1...v11.9.0) (2024-04-03)
+
+
+### Features
+
+* added new AttachmentCardTemplate listing variation ([#603](https://github.com/redturtle/design-comuni-plone-theme/issues/603)) ([26ae362](https://github.com/redturtle/design-comuni-plone-theme/commit/26ae36219955b785d994815f8c041e4c54f7889f))
+* added ppt icon file format ([#615](https://github.com/redturtle/design-comuni-plone-theme/issues/615)) ([4e5c352](https://github.com/redturtle/design-comuni-plone-theme/commit/4e5c352e783c969a12b626ecb4fd356863192369))
+
+
+### Bug Fixes
+
+* added aria label to icons across ioComune ([#557](https://github.com/redturtle/design-comuni-plone-theme/issues/557)) ([a33c93b](https://github.com/redturtle/design-comuni-plone-theme/commit/a33c93b0b414e7cfb0b6b7344c799070a14f92ea))
+* added aria-hidden attribute to icons ([#594](https://github.com/redturtle/design-comuni-plone-theme/issues/594)) ([e736bed](https://github.com/redturtle/design-comuni-plone-theme/commit/e736bed0a399aecd6ec2f399c1c5c70f1192509b))
+* added role='button' to search link ([#611](https://github.com/redturtle/design-comuni-plone-theme/issues/611)) ([32a008a](https://github.com/redturtle/design-comuni-plone-theme/commit/32a008a8dbf0516ff344e7f3579f643546db4acd))
+* added styles to spread out card-image-wrapper div ([#614](https://github.com/redturtle/design-comuni-plone-theme/issues/614)) ([661ba6e](https://github.com/redturtle/design-comuni-plone-theme/commit/661ba6ec6ee732127a4b1d76caf85869266221a7))
+* alt defaults to item.title for CompleteBlockLinksTemplate for accessibility ([#617](https://github.com/redturtle/design-comuni-plone-theme/issues/617)) ([669dfff](https://github.com/redturtle/design-comuni-plone-theme/commit/669dfffc42b3b9956396e6d00ee676bdfe798017))
+* aria-label in calendar block controls ([#620](https://github.com/redturtle/design-comuni-plone-theme/issues/620)) ([1c7bd5c](https://github.com/redturtle/design-comuni-plone-theme/commit/1c7bd5ccac6b08ee4dad6e56af4edec15c422f40))
+* footer logo responsive height ([#621](https://github.com/redturtle/design-comuni-plone-theme/issues/621)) ([282eef7](https://github.com/redturtle/design-comuni-plone-theme/commit/282eef72f5caea46f4c40f1a24529b2725193ce3))
+* p instead of headings in BrandText for a11y ([#616](https://github.com/redturtle/design-comuni-plone-theme/issues/616)) ([6b2a26d](https://github.com/redturtle/design-comuni-plone-theme/commit/6b2a26dd3d5206bff141c39945bf6792479dbb83))
+* remove dangerouslySetInnerHTML from ContactLink ([#601](https://github.com/redturtle/design-comuni-plone-theme/issues/601)) ([2e5d7f9](https://github.com/redturtle/design-comuni-plone-theme/commit/2e5d7f9b5a714b3560e790e5fab9f0cc232d832c))
+* remove icon from Organizzatori eventi card ([#628](https://github.com/redturtle/design-comuni-plone-theme/issues/628)) ([4acc74f](https://github.com/redturtle/design-comuni-plone-theme/commit/4acc74fff73d736ab743f08962bb0d76c6138302))
+* reset of search blocks results ([#625](https://github.com/redturtle/design-comuni-plone-theme/issues/625)) ([17048e2](https://github.com/redturtle/design-comuni-plone-theme/commit/17048e25cd467579118519d8789567b69207394e))
+* sovrapposizione etichetta card nastro ([#409](https://github.com/redturtle/design-comuni-plone-theme/issues/409)) ([b57f290](https://github.com/redturtle/design-comuni-plone-theme/commit/b57f290e91da06e57e04e60f892846bba0c060e4))
+* string formatting for modified date ([#608](https://github.com/redturtle/design-comuni-plone-theme/issues/608)) ([cc43200](https://github.com/redturtle/design-comuni-plone-theme/commit/cc43200b7bee1444f5149f8e280b25034a835c4f))
+* translated aria-label of menu hamburger icon ([#591](https://github.com/redturtle/design-comuni-plone-theme/issues/591)) ([c822363](https://github.com/redturtle/design-comuni-plone-theme/commit/c8223631086d310e3538d26586b831bae174df94))
+* translation id typo ([#622](https://github.com/redturtle/design-comuni-plone-theme/issues/622)) ([5cc5056](https://github.com/redturtle/design-comuni-plone-theme/commit/5cc5056ecd95bda25940321c8037a0ca0a29361a))
+* updated volto-editable-footer to fix view sidebar in edit config ([#623](https://github.com/redturtle/design-comuni-plone-theme/issues/623)) ([ae82478](https://github.com/redturtle/design-comuni-plone-theme/commit/ae824782dbe201ac3c3c501202b316b4b0ae975e))
+* updated volto-form-block ([#613](https://github.com/redturtle/design-comuni-plone-theme/issues/613)) ([0d7e84b](https://github.com/redturtle/design-comuni-plone-theme/commit/0d7e84b7eb7c24cb4fe850ccd69e9b0749ab86b5))
+* view Listing blocks inside Grid block ([#626](https://github.com/redturtle/design-comuni-plone-theme/issues/626)) ([c5549a7](https://github.com/redturtle/design-comuni-plone-theme/commit/c5549a7285822df258b53f88ad3c53bcbf3c00aa))
+
+
+### Documentation
+
+* updated publiccode and release log ([d9adb4a](https://github.com/redturtle/design-comuni-plone-theme/commit/d9adb4a8ee896258244c3fd7f9b4198288c64892))
+
 ## [11.8.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.8.0...v11.8.1) (2024-03-26)
 
 

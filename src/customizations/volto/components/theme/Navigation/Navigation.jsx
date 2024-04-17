@@ -100,7 +100,11 @@ const Navigation = ({ pathname }) => {
           <HeaderToggler
             aria-controls="it-navigation-collapse"
             aria-expanded={collapseOpen}
-            aria-label={intl.formatMessage(messages.toggleNavigation)}
+            aria-label={intl.formatMessage(messages.toggleMenu, {
+              action: collapseOpen
+                ? intl.formatMessage(messages.toggleMenu_close)
+                : intl.formatMessage(messages.toggleMenu_open),
+            })}
             onClick={() => {
               setCollapseOpen(!collapseOpen);
               setFocusTrapActive(!focusTrapActive);
@@ -108,7 +112,11 @@ const Navigation = ({ pathname }) => {
           >
             <Icon
               icon="it-burger"
-              title={intl.formatMessage(messages.toggleNavigation)}
+              title={intl.formatMessage(messages.toggleMenu, {
+                action: collapseOpen
+                  ? intl.formatMessage(messages.toggleMenu_close)
+                  : intl.formatMessage(messages.toggleMenu_open),
+              })}
             />
           </HeaderToggler>
           <Collapse
@@ -185,9 +193,17 @@ const messages = defineMessages({
     id: 'close-menu',
     defaultMessage: 'Chiudi menu',
   },
-  toggleNavigation: {
-    id: 'toggle-navigation',
-    defaultMessage: 'Apri il menu',
+  toggleMenu: {
+    id: 'toggle-menu',
+    defaultMessage: '{action} il menu',
+  },
+  toggleMenu_open: {
+    id: 'toggleMenu_open',
+    defaultMessage: 'Apri',
+  },
+  toggleMenu_close: {
+    id: 'toggleMenu_close',
+    defaultMessage: 'Chiudi',
   },
 });
 

@@ -29,7 +29,7 @@ const UOServices = ({ content }) => {
       <h2 id={`header-servizi_offerti`} className="mb-3 h4">
         {intl.formatMessage(messages.servizi_offerti)}
       </h2>
-      <Row className="card-wrapper card-teaser-wrapper">
+      <Row className="card-wrapper card-teaser-wrapper align-items-stretch">
         {content?.servizi_offerti?.map((servizio, i) => (
           <Col xs="12" lg="6">
             <Card className="shadow rounded card-big-io-comune p-3 my-3">

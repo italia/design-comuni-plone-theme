@@ -1,0 +1,47 @@
+name: Docker build for latest performance test version
+on:
+  push:
+    branches: [performance]
+
+jobs:
+  build_develop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./dockerfiles/Dockerfile
+          tags: redturtletech/io-comune-base:perf
+          pull: true
+          push: true
+          cache-from: type=registry,ref=redturtletech/io-comune-base:perf
+          cache-to: type=inline
+          build-args: |
+            ADDON_NAME=design-comuni-plone-theme
+            ADDON_PATH=design-comuni-plone-theme
+            VOLTO_VERSION=17.7.0
+
+      - name: Deploy to rancher
+        uses: redturtle/rancher-deploy-action@v0.2.0
+        with:
+          host: ${{ secrets.RANCHER_HOST }}
+          api-username: ${{ secrets.RANCHER_API_USERNAME }}
+          api-password: ${{ secrets.RANCHER_API_PASSWORD }}
+          cluster-id: ${{ secrets.RANCHER_CLUSTER_ID }}
+          project-id: ${{ secrets.RANCHER_PROJECT_ID }}
+          namespace: ${{ secrets.RANCHER_NAMESPACE_DEVELOP }}
+          workload: ${{ secrets.RANCHER_WORKLOAD_PERF }}
+          image: redturtletech/io-comune-base:perf
+          slack-hook-url: ${{ secrets.RANCHER_SLACK_HOOK_URL }}

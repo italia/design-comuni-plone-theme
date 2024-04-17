@@ -5,6 +5,7 @@ CUSTOMIZATIONS:
 - 'background class' and 'block class'
 - 'background class' and 'block class' logic for search block
 - search block integration
+- pass 'block'  prop to listing variation
 */
 import React from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
@@ -37,7 +38,9 @@ const ListingBody = React.memo(
         loadingQuery,
         listingRef,
         additionalFilters,
+        block,
       } = props;
+
       let ListingBodyTemplate;
       let templateConfig;
       // Legacy support if template is present
@@ -97,6 +100,7 @@ const ListingBody = React.memo(
       // Also need to purge title from searchblock schema, it's the name of the listing template used
       const listingBodyProps =
         variation?.['@type'] !== 'search' ? data : { ...variation, title: '' };
+
       return (
         <div className="public-ui">
           {loadingQuery && (
@@ -114,6 +118,7 @@ const ListingBody = React.memo(
               <ListingBodyTemplate
                 items={listingItems}
                 isEditMode={isEditMode}
+                block={block}
                 {...listingBodyProps}
                 addFilters={addFilters}
                 additionalFilters={additionalFilters}

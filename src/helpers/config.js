@@ -16,7 +16,7 @@ export const getSiteProperty = (property, locale) => {
             value
           );
         } else {
-          return value.default ?? value;
+          return value.default ?? value[locale] ?? value;
         }
       default:
         break;

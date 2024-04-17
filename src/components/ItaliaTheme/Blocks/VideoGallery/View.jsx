@@ -7,6 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Body from './Body';
 import ViewBlock from './Block/ViewBlock';
+import { SingleSlideWrapper } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 /**
  * View icons blocks class.
@@ -18,9 +19,9 @@ const View = ({ data, block }) => {
     <div className="block video_gallery">
       <Body data={data} nItems={data.subblocks?.length}>
         {data.subblocks.map((subblock, subindex) => (
-          <div className="it-single-slide-wrapper" key={subindex}>
+          <SingleSlideWrapper key={subindex} index={subindex}>
             <ViewBlock data={subblock} />
-          </div>
+          </SingleSlideWrapper>
         ))}
       </Body>
     </div>
