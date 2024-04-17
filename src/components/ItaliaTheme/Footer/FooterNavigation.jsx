@@ -36,6 +36,8 @@ const FooterNavigation = () => {
     );
   }
 
+  const markFooterLinks = config.settings.siteProperties.markFooterLinks;
+
   return show_navigation ? (
     <>
       {items && (
@@ -66,7 +68,9 @@ const FooterNavigation = () => {
                   }
                 >
                   {item.title}
-                  <Icon icon="it-arrow-right" color="white" />
+                  {markFooterLinks && (
+                    <Icon icon="it-arrow-right" color="white" size="sm" />
+                  )}
                 </Link>
               </h4>
               {/* DEPRECATED: isFooterCollapsed to be removed in version 12 */}
