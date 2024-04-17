@@ -34,7 +34,14 @@ const Edit = ({
 
   useEffect(() => {
     if (data.href) {
-      dispatch(getContent(flattenToAppURL(data.href), null, block));
+      dispatch(
+        getContent(
+          // tolerate references to File objects
+          flattenToAppURL(data.href.replace(/\/@@download\/file$/, '')),
+          null,
+          block,
+        ),
+      );
     }
     return () => dispatch(resetContent(block));
   }, [dispatch, block, data.href]);
