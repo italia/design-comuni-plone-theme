@@ -6611,7 +6611,7 @@ __metadata:
     volto-dropdownmenu: 4.1.1
     volto-editablefooter: 5.1.1
     volto-feedback: 0.3.0
-    volto-form-block: 3.7.5
+    volto-form-block: 3.8.0
     volto-gdpr-privacy: 2.2.0
     volto-google-analytics: 2.0.0
     volto-multilingual-widget: 3.0.0
@@ -14398,9 +14398,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-form-block@npm:3.7.5":
-  version: 3.7.5
-  resolution: "volto-form-block@npm:3.7.5"
+"volto-form-block@npm:3.8.0":
+  version: 3.8.0
+  resolution: "volto-form-block@npm:3.8.0"
   dependencies:
     "@hcaptcha/react-hcaptcha": ^0.3.6
     file-saver: ^2.0.5
@@ -14409,7 +14409,7 @@ __metadata:
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
     volto-subblocks: ^2.0.0
-  checksum: fdd00192dff971ccec1e6b299d570116d194b2aa4fa010e0e4f201f603eeb67afb5887178abdab8504ca4687761495cb5c2272241e79474cdd6e36d6adc54cbe
+  checksum: bf5b8fc3bb6b6495fda08f9e2295baac1818021146ef59228d31590819d7ddbed1d7045f945a310a5011f490096c7471d165d07bddd4a19232ffdc496ff6d71d
   languageName: node
   linkType: hard
 
