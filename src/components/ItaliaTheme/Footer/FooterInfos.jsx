@@ -84,16 +84,16 @@ const FooterInfos = () => {
               )}
             </h4>
             {column.showSocial && <FooterSocials />}
-
-            {column.slateText && (
+            {column.slateText ? (
               <TextBlockView data={{ value: column.slateText }} />
-            )}
-            {column.text && (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: flattenHTMLToAppURL(column.text.data),
-                }}
-              />
+            ) : (
+              column.text && (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: flattenHTMLToAppURL(column.text.data),
+                  }}
+                />
+              )
             )}
             {/* <TextBlockView id={index} data={{ value: data.text }} /> */}
             {column.newsletterSubscribe && <FooterNewsletterSubscribe />}
