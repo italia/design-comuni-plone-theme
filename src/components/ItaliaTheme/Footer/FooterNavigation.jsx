@@ -68,7 +68,7 @@ const FooterNavigation = () => {
                   className={markFooterLinks ? 'underlined' : ''}
                 >
                   {item.title}
-                </Link>
+                </UniversalLink>
               </h4>
               {/* DEPRECATED: isFooterCollapsed to be removed in version 12 */}
               {!config.settings.isFooterCollapsed &&
