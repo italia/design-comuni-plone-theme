@@ -32,7 +32,8 @@
     "volto-querywidget-with-browser",
     "@eeacms/volto-taxonomy",
     "volto-feedback",
-    "volto-slimheader"
+    "volto-slimheader",
+    "volto-site-settings"
   ],
   "scripts": {
     "prepare": "husky install",
@@ -154,6 +155,7 @@
     "volto-querywidget-with-browser": "0.4.2",
     "volto-rss-block": "3.0.0",
     "volto-secondarymenu": "4.0.0",
+    "volto-site-settings": "0.2.0",
     "volto-slimheader": "0.1.1",
     "volto-social-settings": "3.0.0",
     "volto-subblocks": "2.0.0",

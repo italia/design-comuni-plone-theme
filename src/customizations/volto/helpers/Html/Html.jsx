@@ -4,7 +4,7 @@
  */
 /*
  CUSTOMIZATIONS:
- - Add <link rel="shortcut icon" href="/favicon.ico" />
+ - Rimosso <link rel="shortcut icon" href="/favicon.ico" /> perchè creato da volto-site-settings
  - Add shrink-to-fit=no in viewport meta
  - Remove link for manifest and svg/apple icons
  */
@@ -122,7 +122,7 @@ class Html extends Component {
               })};`,
             }}
           />
-          <link rel="shortcut icon" href="/favicon.ico" />
+          {/* <link rel="shortcut icon" href="/favicon.ico" /> */}
           <meta property="og:type" content="website" />
           <meta name="generator" content="Plone 6 - https://plone.org" />
           <meta

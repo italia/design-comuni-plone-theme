@@ -1,18 +1,34 @@
 import React from 'react';
 import cx from 'classnames';
 import { useIntl } from 'react-intl';
+import { SiteProperty } from 'volto-site-settings';
 import { getSiteProperty } from 'design-comuni-plone-theme/helpers';
 
 const BrandText = ({ mobile = false, subsite }) => {
   const intl = useIntl();
+  const title = SiteProperty({
+    property: 'site_title',
+    forceValue: !subsite ? getSiteProperty('siteTitle', intl.locale) : null,
+    defaultValue: getSiteProperty('siteTitle', intl.locale),
+    getValue: true,
+  });
+
+  const description = SiteProperty({
+    property: 'site_subtitle',
+    defaultValue: getSiteProperty('siteSubtitle', intl.locale),
+    getValue: true,
+  });
+
   return (
     <div className="it-brand-text">
-      <p className="no_toc h2">
-        {subsite?.title || getSiteProperty('siteTitle', intl.locale)}
-      </p>
-      <p className={cx('no_toc h3', { 'd-none d-md-block': !mobile })}>
-        {subsite?.description || getSiteProperty('siteSubtitle', intl.locale)}
-      </p>
+      {title && <div className="it-brand-title">{title}</div>}
+      {description && (
+        <div
+          className={cx('it-brand-tagline', { 'd-none d-md-block': !mobile })}
+        >
+          {description}
+        </div>
+      )}
     </div>
   );
 };
