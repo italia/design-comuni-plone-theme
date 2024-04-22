@@ -9,6 +9,9 @@
   }
 
   .it-single-slide-wrapper {
+    &:focus {
+      border: 1px solid;
+    }
     figure {
       a {
         display: block;

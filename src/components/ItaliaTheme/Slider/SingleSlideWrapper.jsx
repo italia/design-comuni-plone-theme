@@ -26,8 +26,9 @@ const SingleSlideWrapper = (props) => {
       }
       onKeyDown={onKeyDown}
       onClick={(e) => {
-        e.preventDefault();
-        e.stopPropagation();
+        //commentato perchè i link esterni non si aprivano
+        //e.preventDefault();
+        //e.stopPropagation();
       }}
       tabIndex={0}
     >
