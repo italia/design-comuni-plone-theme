@@ -20,7 +20,7 @@ export default function NextArrow(props) {
       onClick={onClick}
       title={_title}
       aria-label={_title}
-      aria-hidden={true}
+      aria-hidden={false}
       onKeyDown={onKeyDown}
       id={id}
     >

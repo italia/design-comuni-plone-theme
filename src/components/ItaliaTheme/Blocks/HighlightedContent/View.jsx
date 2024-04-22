@@ -21,7 +21,14 @@ const View = ({ data, id }) => {
 
   useEffect(() => {
     if (data.href) {
-      dispatch(getContent(flattenToAppURL(data.href), null, id));
+      dispatch(
+        getContent(
+          // tolerate references to File objects
+          flattenToAppURL(data.href.replace(/\/@@download\/file$/, '')),
+          null,
+          id,
+        ),
+      );
     }
     return () => dispatch(resetContent(id));
     // eslint-disable-next-line react-hooks/exhaustive-deps

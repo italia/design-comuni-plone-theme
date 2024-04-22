@@ -2,9 +2,12 @@
 .public-ui .chip {
   display: inline-block;
   height: unset;
-  cursor: default;
   line-height: 1rem;
   text-align: center;
+
+  &:hover {
+    cursor: default;
+  }
 
   &:not(:disabled):not(.chip-primary):not(.chip-secondary) {
     &.selected,
@@ -38,4 +41,16 @@
   .chip.disabled:hover {
     cursor: default;
   }
+}
+
+a.chip,
+.chip:has(a),
+a .chip {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a:has(.chip):hover {
+  cursor: default;
 }

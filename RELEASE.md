@@ -41,7 +41,7 @@
 - ...
 -->
 
-## Versione x.x.x (xx/xx/xxxx)
+## Versione 11.10.0 (17/04/2024)
 
 ### Migliorie
 
@@ -65,6 +65,8 @@
 - Sistemato un problema nella vista del CT Evento, che mostrava tra le date aggiuntive della ricorrenza anche le date escluse.
 - Sistemato un problema per cui la visualizzazione della sitemap in presenza di un sito multilingua generava errore.
 - Migliorata l'accessibilità dei link nel footer.
+- Migliorata l'accessibilità del blocco elenco nella variazione Slider.
+- Migliorati gli stili del blocco accordion.
 
 ## Versione 11.9.1 (03/04/2024)
 

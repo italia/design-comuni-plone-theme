@@ -42,6 +42,14 @@
 
       a {
         font-weight: 700;
+
+        &.underlined {
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
       }
     }
 
