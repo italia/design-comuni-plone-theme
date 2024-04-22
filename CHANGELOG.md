@@ -1,5 +1,19 @@
 
 
+## [11.10.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.10.0...v11.10.1) (2024-04-22)
+
+
+### Bug Fixes
+
+* better tolerance for files in highlighted content block ([44dc055](https://github.com/redturtle/design-comuni-plone-theme/commit/44dc055240b07575c8608c914a6d118dbccc5df5))
+* slider focus and external links ([#664](https://github.com/redturtle/design-comuni-plone-theme/issues/664)) ([e00e1a9](https://github.com/redturtle/design-comuni-plone-theme/commit/e00e1a970f526d357e617520ad51f915fb8d4e6e))
+* used underlined text decoration for footer link marker ([#660](https://github.com/redturtle/design-comuni-plone-theme/issues/660)) ([ad8c549](https://github.com/redturtle/design-comuni-plone-theme/commit/ad8c5498922a57a01b3b79f0cf0acd07324472a7))
+
+
+### Documentation
+
+* updated publiccode ([74e29aa](https://github.com/redturtle/design-comuni-plone-theme/commit/74e29aa9ed25ae1dde57f5ab022bb88160647172))
+
 ## [11.10.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.9.1...v11.10.0) (2024-04-17)
 
 
