@@ -59,14 +59,12 @@ import logSVG from 'design-comuni-plone-theme/icons/log.svg';
 
 import applyItaliaSlateConfig from 'design-comuni-plone-theme/config/Slate/config';
 
-import gdprPrivacyPanelConfig from 'design-comuni-plone-theme/config/volto-gdpr-privacy-defaultPanelConfig.js';
-
 import { schemaListing } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/schema.js';
 
 import reducers from 'design-comuni-plone-theme/reducers';
 
-const ReleaseLog = loadable(() =>
-  import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
+const ReleaseLog = loadable(
+  () => import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
 );
 
 const messages = defineMessages({
@@ -313,11 +311,6 @@ export default function applyConfig(voltoConfig) {
       ],
 
       showRestricted: false,
-    },
-
-    'volto-gdpr-privacy': {
-      ...config.settings['volto-gdpr-privacy'],
-      defaultPanelConfig: gdprPrivacyPanelConfig,
     },
 
     'volto-editablefooter': {
