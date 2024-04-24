@@ -1,5 +1,17 @@
 
 
+## [11.10.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.10.1...v11.10.2) (2024-04-24)
+
+
+### Bug Fixes
+
+* update gdpr addon to remove breaking change ([e0490f2](https://github.com/redturtle/design-comuni-plone-theme/commit/e0490f2ac2d1a42575eb509d65fed1b65199d075))
+
+
+### Documentation
+
+* updated publiccode ([40cb8dc](https://github.com/redturtle/design-comuni-plone-theme/commit/40cb8dcd22cec06f436cb0190a7b082d7c26d1f6))
+
 ## [11.10.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.10.0...v11.10.1) (2024-04-22)
 
 
