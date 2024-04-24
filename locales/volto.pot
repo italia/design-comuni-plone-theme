@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-04-09T13:53:31.353Z\n"
+"POT-Creation-Date: 2024-04-24T09:25:12.565Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -777,6 +777,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 # defaultMessage: Altre modalità di invio
 msgid "altre_modalita_invio"
+msgstr ""
+
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
+# defaultMessage: Altri allegati
+msgid "altri_allegati"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioAltriDocumenti

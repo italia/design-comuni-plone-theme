@@ -43,9 +43,15 @@ const messages = defineMessages({
     id: 'spese_elettorali',
     defaultMessage: 'Spese elettorali',
   },
+
   variazione_situazione_patrimoniale: {
     id: 'variazione_situazione_patrimoniale',
     defaultMessage: 'Variazione situazione patrimoniale',
+  },
+
+  altri_allegati: {
+    id: 'altri_allegati',
+    defaultMessage: 'Altri allegati',
   },
 });
 
@@ -186,6 +192,20 @@ const PersonaDocumenti = ({ content }) => {
           />
         </RichTextSection>
       )}
+      {contentFolderHasItems(content, 'altri-allegati') && (
+        <RichTextSection
+          tag_id="documenti-altri-allegati"
+          title={intl.formatMessage(messages.altri_allegati)}
+        >
+          <Attachments
+            content={content}
+            folder_name={'altri-allegati'}
+            // title={intl.formatMessage(messages.altri_allegati)}
+            as_section={false}
+          />
+        </RichTextSection>
+      )}
+
     </>
   );
 };
