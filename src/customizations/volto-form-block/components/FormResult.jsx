@@ -35,6 +35,7 @@ const replaceMessage = (text, sent_data) => {
     text = text.replaceAll('${' + idField + '}', sent_data[i].value ?? '');
     i++;
   }
+  text = text.replaceAll(/\$\{[^}]*\}/gm, ''); //replace empty fields with nothing
   text = text.replaceAll('\n', '<br/>');
   return text;
 };
