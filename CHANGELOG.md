@@ -1,5 +1,23 @@
 
 
+## [11.11.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.10.2...v11.11.0) (2024-04-29)
+
+
+### Features
+
+* modificato vista persona per mostrare anche la cartella altri allegati ([#668](https://github.com/redturtle/design-comuni-plone-theme/issues/668)) ([eb47ca0](https://github.com/redturtle/design-comuni-plone-theme/commit/eb47ca02152abf351697dac58dc2704a17a7ba57))
+
+
+### Bug Fixes
+
+* add event start date for subevents that do not have an image ([#667](https://github.com/redturtle/design-comuni-plone-theme/issues/667)) ([0426435](https://github.com/redturtle/design-comuni-plone-theme/commit/04264359589c05d1617fdb060aa716f9e7cab57c))
+* added conditional chaining in cardCalendar ([#669](https://github.com/redturtle/design-comuni-plone-theme/issues/669)) ([a8dacc8](https://github.com/redturtle/design-comuni-plone-theme/commit/a8dacc8049c09b8f0742ee4c1904597610331ec7))
+
+
+### Documentation
+
+* updated publiccode and release log ([1a61edf](https://github.com/redturtle/design-comuni-plone-theme/commit/1a61edf4ad4fd22b906ca012fa9c2f4f26ad2640))
+
 ## [11.10.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.10.1...v11.10.2) (2024-04-24)
 
 
