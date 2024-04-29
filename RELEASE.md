@@ -41,15 +41,15 @@
 - ...
 -->
 
-# Versione X.X.X (dd/mm/yyyy)
+# Versione 11.11.0 (29/04/2024)
 
 ### Migliorie
 
-- Aggiunte le date degli eventi figli nel caso questi non presentino immagini nella card
+- Aggiunte le date degli eventi figli nel caso questi non presentino immagini nella card.
 
 ### Novità
 
-- ...
+- Modificato vista del tipo di contenuto Persona per mostrare anche la cartella interna "Altri allegati".
 
 ### Fix
 
