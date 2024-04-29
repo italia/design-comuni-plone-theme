@@ -1,12 +1,6 @@
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import {
-  Card,
-  CardBody,
-  CardReadMore,
-  CardText,
-  CardTitle,
-} from 'design-react-kit';
+import { Card, CardBody, CardReadMore, CardTitle } from 'design-react-kit';
 import config from '@plone/volto/registry';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -31,30 +25,35 @@ const messages = defineMessages({
 const SubEvent = ({ event, show_image }) => {
   const intl = useIntl();
   const Image = config.getComponent({ name: 'Image' }).component;
+  const hasImage = event.image_field || event.preview_image || event.image;
   return event ? (
     <div className="card-wrapper card-teaser">
       <Card noWrapper className="card no-after shadow rounded">
-        {show_image &&
-          (event.image_field || event.preview_image || event.image) && (
-            <div className="img-responsive-wrapper">
-              <div className="img-responsive">
-                <figure class="volto-image img-wrapper responsive">
-                  <Image
-                    item={event}
-                    alt={intl.formatMessage(messages.immagine)}
-                    loading="lazy"
-                    sizes="(max-width:320px) 300px, (max-width:425px) 400px, (max-width:768px) 600px, 300px"
-                  />
-                </figure>
-                {event.start && (
-                  <div className="card-calendar d-flex flex-column justify-content-center">
-                    {viewDate(intl.locale, event.start, 'DD MMM')}
-                  </div>
-                )}
-              </div>
+        {show_image && hasImage && (
+          <div className="img-responsive-wrapper">
+            <div className="img-responsive">
+              <figure class="volto-image img-wrapper responsive">
+                <Image
+                  item={event}
+                  alt={intl.formatMessage(messages.immagine)}
+                  loading="lazy"
+                  sizes="(max-width:320px) 300px, (max-width:425px) 400px, (max-width:768px) 600px, 300px"
+                />
+              </figure>
+              {event.start && (
+                <div className="card-calendar d-flex flex-column justify-content-center">
+                  {viewDate(intl.locale, event.start, 'DD MMM')}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+        <CardBody>
+          {event.start && (!show_image || (show_image && !hasImage)) && (
+            <div className="category-top mb-2">
+              {viewDate(intl.locale, event.start, 'DD MMM YYYY')}
             </div>
           )}
-        <CardBody>
           <CardTitle className="h5">
             <UniversalLink
               href={flattenToAppURL(event['@id'])}
@@ -64,7 +63,6 @@ const SubEvent = ({ event, show_image }) => {
               {event.title}
             </UniversalLink>
           </CardTitle>
-          <CardText> </CardText>
           <CardReadMore
             iconName="it-arrow-right"
             tag={UniversalLink}
