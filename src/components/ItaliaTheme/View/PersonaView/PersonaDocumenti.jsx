@@ -49,9 +49,9 @@ const messages = defineMessages({
     defaultMessage: 'Variazione situazione patrimoniale',
   },
 
-  altri_allegati: {
-    id: 'altri_allegati',
-    defaultMessage: 'Altri allegati',
+  altri_documenti_persona: {
+    id: 'altri_documenti_persona',
+    defaultMessage: 'Altri documenti',
   },
 });
 
@@ -192,15 +192,15 @@ const PersonaDocumenti = ({ content }) => {
           />
         </RichTextSection>
       )}
-      {contentFolderHasItems(content, 'altri-allegati') && (
+      {contentFolderHasItems(content, 'altri-documenti') && (
         <RichTextSection
-          tag_id="documenti-altri-allegati"
-          title={intl.formatMessage(messages.altri_allegati)}
+          tag_id="documenti-altri-documenti"
+          title={intl.formatMessage(messages.altri_documenti_persona)}
         >
           <Attachments
             content={content}
-            folder_name={'altri-allegati'}
-            // title={intl.formatMessage(messages.altri_allegati)}
+            folder_name={'altri-documenti'}
+            // title={intl.formatMessage(messages.altri_documenti_persona)}
             as_section={false}
           />
         </RichTextSection>

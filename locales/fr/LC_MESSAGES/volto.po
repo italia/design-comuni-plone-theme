@@ -804,6 +804,11 @@ msgstr ""
 msgid "altri_documenti"
 msgstr "Autres documents"
 
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
+# defaultMessage: Altri documenti
+msgid "altri_documenti_persona"
+msgstr ""
+
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 # defaultMessage: Mostra l'immagine per tutti gli elementi
 msgid "always_show_image"
