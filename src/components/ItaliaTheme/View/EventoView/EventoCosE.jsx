@@ -32,6 +32,10 @@ const messages = defineMessages({
     id: 'parteciperanno',
     defaultMessage: 'Parteciperanno',
   },
+  tipologia_evento: {
+    id: 'tipologia_evento',
+    defaultMessage: 'Tipo evento',
+  },
 });
 
 const EventoCosE = ({ content }) => {
@@ -41,7 +45,8 @@ const EventoCosE = ({ content }) => {
     contentFolderHasItems(content, 'immagini') ||
     contentFolderHasItems(content, 'video') ||
     content?.persone_amministrazione?.length > 0 ||
-    richTextHasContent(content?.descrizione_destinatari) ? (
+    richTextHasContent(content?.descrizione_destinatari) ||
+    content?.tipologia_evento ? (
     <RichTextSection
       tag_id={'text-body'}
       title={intl.formatMessage(messages.cos_e)}
@@ -79,13 +84,23 @@ const EventoCosE = ({ content }) => {
         className="mt-4 pb-4"
       />
       <Gallery content={content} folder_name={'video'} />
-
       {richTextHasContent(content?.descrizione_destinatari) && (
         <div className="mb-5 pt-2">
           <RichText
             title={intl.formatMessage(messages.a_chi_rivolto)}
             data={content?.descrizione_destinatari}
           />
+        </div>
+      )}
+
+      {content?.tipologia_evento && (
+        <div className="mb-5 pt-2">
+          <h3 className="tipologia-section h5">
+            {intl.formatMessage(messages.tipologia_evento)}
+          </h3>
+          <p key={content?.tipologia_evento?.token} className="font-serif">
+            {content?.tipologia_evento?.title}
+          </p>
         </div>
       )}
     </RichTextSection>

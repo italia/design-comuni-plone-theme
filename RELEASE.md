@@ -45,7 +45,7 @@
 
 ### Migliorie
 
-- ...
+- Il campo tipologia è ora mostrato all'interno della pagina del CT Evento, se compilato.
 
 ### Novità
 

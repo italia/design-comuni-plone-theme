@@ -3938,6 +3938,11 @@ msgstr "Impossibile aggiungere un elemento alla timeline senza aver compilato il
 msgid "tipologia_bando"
 msgstr "Tipologia del bando"
 
+#: components/ItaliaTheme/View/EventoView/EventoCosE
+# defaultMessage: Tipo evento
+msgid "tipologia_evento"
+msgstr ""
+
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Tipo di incarico

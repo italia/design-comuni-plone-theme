@@ -3938,6 +3938,11 @@ msgstr ""
 msgid "tipologia_bando"
 msgstr "Type of call"
 
+#: components/ItaliaTheme/View/EventoView/EventoCosE
+# defaultMessage: Tipo evento
+msgid "tipologia_evento"
+msgstr "Event type"
+
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Tipo di incarico
