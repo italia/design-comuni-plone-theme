@@ -41,19 +41,11 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.11.1 (02/05/2024)
 
 ### Migliorie
 
 - Il campo tipologia è ora mostrato all'interno della pagina del CT Evento, se compilato.
-
-### Novità
-
-- ...
-
-### Fix
-
-- ...
 
 ## Versione 11.11.0 (29/04/2024)
 
