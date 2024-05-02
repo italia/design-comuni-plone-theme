@@ -1,5 +1,24 @@
 
 
+## [11.11.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.11.1...v11.11.2) (2024-05-02)
+
+
+### Bug Fixes
+
+* error while exiting design plone controlpanel ([cbf7d2a](https://github.com/redturtle/design-comuni-plone-theme/commit/cbf7d2a544a282c42c328d1aed54b8dc3507afc2))
+* no load PuntoDiContatto in ContactsCard ([#674](https://github.com/redturtle/design-comuni-plone-theme/issues/674)) ([d2647b9](https://github.com/redturtle/design-comuni-plone-theme/commit/d2647b90af8af03fe33abe96fd80cbd26dfa2be2))
+* patches for volto-gdpr-privacy and volto-multilingual-widget ([eeada47](https://github.com/redturtle/design-comuni-plone-theme/commit/eeada47d3063e01e6b3a653d0b4c90f5e2090176))
+
+
+### Maintenance
+
+* switch to npm instead of yarn in npm release script ([6d0d2f2](https://github.com/redturtle/design-comuni-plone-theme/commit/6d0d2f24528b7d8c05a76db8a2dc00fb739f2ddd))
+
+
+### Documentation
+
+* updated publiccode ([b981375](https://github.com/redturtle/design-comuni-plone-theme/commit/b98137529e7ad2590bfd810f7c30487c42692b93))
+
 ## [11.11.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.11.0...v11.11.1) (2024-05-02)
 
 
