@@ -50,7 +50,7 @@ const SearchSectionsConfigurationForm = ({
   useEffect(() => {
     document
       .querySelector('form.ui.form')
-      .addEventListener('click', preventClick);
+      ?.addEventListener('click', preventClick);
 
     document.querySelectorAll('form.ui.form input').forEach((item) => {
       item.addEventListener('keypress', preventEnter);
@@ -59,7 +59,7 @@ const SearchSectionsConfigurationForm = ({
     return () => {
       document
         .querySelector('form.ui.form')
-        .removeEventListener('click', preventClick);
+        ?.removeEventListener('click', preventClick);
       document.querySelectorAll('form.ui.form input').forEach((item) => {
         item.removeEventListener('keypress', preventEnter);
       });
