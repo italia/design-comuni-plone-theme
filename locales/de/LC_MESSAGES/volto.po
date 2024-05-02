@@ -792,11 +792,6 @@ msgstr ""
 msgid "altre_modalita_invio"
 msgstr ""
 
-#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
-# defaultMessage: Altri allegati
-msgid "altri_allegati"
-msgstr ""
-
 #: components/ItaliaTheme/View/ServizioView/ServizioAltriDocumenti
 # defaultMessage: Documenti
 msgid "altri_documenti"
@@ -3013,7 +3008,7 @@ msgid "rrule_nd"
 msgstr ""
 
 #: overrideTranslations
-# defaultMessage: il
+# defaultMessage: di
 msgid "rrule_on the"
 msgstr ""
 
