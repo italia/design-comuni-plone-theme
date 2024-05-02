@@ -1,5 +1,26 @@
 
 
+## [11.11.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.11.0...v11.11.1) (2024-05-02)
+
+
+### Bug Fixes
+
+* changed recurrence buttons spacing and rrule translation for on_the ([#672](https://github.com/redturtle/design-comuni-plone-theme/issues/672)) ([383f241](https://github.com/redturtle/design-comuni-plone-theme/commit/383f241ece965ba13071da4e536907c382279e83))
+* spacing for event-recurrences-more ([#673](https://github.com/redturtle/design-comuni-plone-theme/issues/673)) ([675ba21](https://github.com/redturtle/design-comuni-plone-theme/commit/675ba214a52bae7ea9d947b7d238f1490061cced))
+* tipologia evento shown in page ([#670](https://github.com/redturtle/design-comuni-plone-theme/issues/670)) ([13ea54b](https://github.com/redturtle/design-comuni-plone-theme/commit/13ea54bc9aa109738b65ebf775ad1d79c731addd))
+
+
+### Documentation
+
+* fix release log heading ([5e1dbb9](https://github.com/redturtle/design-comuni-plone-theme/commit/5e1dbb904a1362c5d288df5cf3c75fae374d9203))
+* updated publiccode and release log ([3d9c8e5](https://github.com/redturtle/design-comuni-plone-theme/commit/3d9c8e579fe57eb2ce8db8e880dc6f572a58366e))
+
+
+### Maintenance
+
+* abbiamo deciso che la cartella deve essere "altri documenti" ([#671](https://github.com/redturtle/design-comuni-plone-theme/issues/671)) ([0dac7db](https://github.com/redturtle/design-comuni-plone-theme/commit/0dac7dbbdd913bb746f18dbab1f3cad6c56fbffc))
+* switch to releasing to npm with github actions ([7781ab0](https://github.com/redturtle/design-comuni-plone-theme/commit/7781ab01d5f19fb2d16ea0d0a8f89752af5fd152))
+
 ## [11.11.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.10.2...v11.11.0) (2024-04-29)
 
 
