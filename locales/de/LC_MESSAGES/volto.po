@@ -832,6 +832,11 @@ msgstr ""
 msgid "altri_documenti"
 msgstr ""
 
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
+# defaultMessage: Altri documenti
+msgid "altri_documenti_persona"
+msgstr ""
+
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 # defaultMessage: Mostra l'immagine per tutti gli elementi
 msgid "always_show_image"
@@ -3076,7 +3081,7 @@ msgid "rrule_nd"
 msgstr ""
 
 #: overrideTranslations
-# defaultMessage: il
+# defaultMessage: di
 msgid "rrule_on the"
 msgstr ""
 
@@ -4014,6 +4019,11 @@ msgstr ""
 #: components/ItaliaTheme/View/BandoView/BandoTextTipologia
 # defaultMessage: Tipologia del bando
 msgid "tipologia_bando"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView/EventoCosE
+# defaultMessage: Tipo evento
+msgid "tipologia_evento"
 msgstr ""
 
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView

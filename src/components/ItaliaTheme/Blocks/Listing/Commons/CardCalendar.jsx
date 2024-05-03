@@ -84,7 +84,7 @@ export const CardCalendar = ({ start, end, recurrence, rrule }) => {
     } else if (recurrenceDates) {
       let dateFormat = 'DD/MM';
       if (
-        !recurrenceDates?.recurrenceStart.isSame(
+        !recurrenceDates?.recurrenceStart?.isSame(
           recurrenceDates?.recurrenceEnd,
           'year',
         )

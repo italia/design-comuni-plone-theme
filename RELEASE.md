@@ -41,6 +41,26 @@
 - ...
 -->
 
+## Versione 11.11.1 (02/05/2024)
+
+### Migliorie
+
+- Il campo tipologia è ora mostrato all'interno della pagina del CT Evento, se compilato.
+
+## Versione 11.11.0 (29/04/2024)
+
+### Migliorie
+
+- Aggiunte le date degli eventi figli nel caso questi non presentino immagini nella card.
+
+### Novità
+
+- Modificato vista del tipo di contenuto Persona per mostrare anche la cartella interna "Altri allegati".
+
+### Fix
+
+- Aggiustato problema per il blocco elenco, variazione card con Immagine, per gli eventi con ricorrenza.
+
 ## Versione 11.10.0 (17/04/2024)
 
 ### Migliorie
