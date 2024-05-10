@@ -12,7 +12,11 @@ import { matchPath } from 'react-router';
 import { useLocation } from 'react-router-dom';
 import { isEqual, isEmpty } from 'lodash';
 import { getBreadcrumbs } from '@plone/volto/actions';
-import { getBaseUrl, flattenToAppURL } from '@plone/volto/helpers';
+import {
+  getBaseUrl,
+  flattenToAppURL,
+  hasApiExpander,
+} from '@plone/volto/helpers';
 
 import { UniversalLink } from '@plone/volto/components';
 import { Row, Col, BreadcrumbItem } from 'design-react-kit';
@@ -73,13 +77,15 @@ const Breadcrumbs = ({ pathname }) => {
   /** fine della gestione delle rotte statiche */
 
   useEffect(() => {
-    let actualPathForBreadcrumbs = pathname;
-    const { path, buildFullNavTree } = getCurrentPathFromAddonRoutes();
-    if (buildFullNavTree) {
-      const replacedPath = path.replace('**/', '');
-      actualPathForBreadcrumbs = pathname.replace(replacedPath, '');
+    if (!hasApiExpander('breadcrumbs', getBaseUrl(pathname))) {
+      let actualPathForBreadcrumbs = pathname;
+      const { path, buildFullNavTree } = getCurrentPathFromAddonRoutes();
+      if (buildFullNavTree) {
+        const replacedPath = path.replace('**/', '');
+        actualPathForBreadcrumbs = pathname.replace(replacedPath, '');
+      }
+      dispatch(getBreadcrumbs(getBaseUrl(actualPathForBreadcrumbs)));
     }
-    dispatch(getBreadcrumbs(getBaseUrl(actualPathForBreadcrumbs)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
