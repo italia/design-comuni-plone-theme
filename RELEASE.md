@@ -45,7 +45,7 @@
 
 ### Migliorie
 
-- ...
+- Cambiato il layout delle immagini all'interno del blocco Griglia.
 
 ### Novità
 

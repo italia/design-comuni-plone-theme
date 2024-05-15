@@ -52,6 +52,9 @@
         }
       }
     }
+    &.image img {
+      object-fit: contain;
+    }
   }
 
   //in edit (cms-ui)
