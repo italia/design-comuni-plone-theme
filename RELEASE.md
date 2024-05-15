@@ -41,6 +41,20 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Corretto il testo per la ricorrenza eventi nel CT Eventi.
+
 ## Versione 11.11.1 (02/05/2024)
 
 ### Migliorie

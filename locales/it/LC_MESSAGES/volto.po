@@ -2995,7 +2995,7 @@ msgstr " "
 #: overrideTranslations
 # defaultMessage: di
 msgid "rrule_on the"
-msgstr "il giorno"
+msgstr "di"
 
 #: overrideTranslations
 # defaultMessage: _
