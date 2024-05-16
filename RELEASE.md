@@ -50,7 +50,7 @@
 
 ### Novità
 
-- ...
+- Le immagini delle Card con Immagine del blocco Elenco sono ora cliccabili. Cliccandoci sopra, si apre la vista del contenuto della Card.
 
 ### Fix
 
