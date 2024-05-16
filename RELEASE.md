@@ -46,6 +46,7 @@
 ### Migliorie
 
 - Cambiato il layout delle immagini all'interno del blocco Griglia.
+- Migliorata la visualizzazione delle parole evidenziate nella pagina di Ricerca.
 
 ### Novità
 
