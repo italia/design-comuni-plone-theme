@@ -3003,6 +3003,11 @@ msgstr ""
 
 #: overrideTranslations
 # defaultMessage: di
+msgid "rrule_on"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: di
 msgid "rrule_on the"
 msgstr ""
 

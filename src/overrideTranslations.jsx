@@ -21,6 +21,10 @@ defineMessages({
     id: 'rrule_in',
     defaultMessage: 'il giorno',
   },
+  rrule_on: {
+    id: 'rrule_on',
+    defaultMessage: 'di',
+  },
   rrule_on_the: {
     id: 'rrule_on the',
     defaultMessage: 'di',

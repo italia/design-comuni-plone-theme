@@ -2994,6 +2994,11 @@ msgstr "nd"
 
 #: overrideTranslations
 # defaultMessage: di
+msgid "rrule_on"
+msgstr "on"
+
+#: overrideTranslations
+# defaultMessage: di
 msgid "rrule_on the"
 msgstr "on the"
 
