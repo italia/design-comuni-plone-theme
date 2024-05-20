@@ -41,17 +41,18 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.12.0 (20/05/2024)
 
 ### Migliorie
 
-- Se il CT UO è collegato a più di 4 servizi, le card dei servizi collegati verranno divise in diverse pagine navigabili da uno strumento di paginazione per rendere lo scorrimento della pagina più semplice.
+- Se una Unità Organizzativa è collegata a più di 4 servizi, le card dei servizi collegati verranno divise in diverse pagine navigabili da uno strumento di paginazione per rendere lo scorrimento della pagina più semplice.
 - Cambiato il layout delle immagini all'interno del blocco Griglia.
 - Migliorata la visualizzazione delle parole evidenziate nella pagina di Ricerca.
+- Rinominato il contenitore "Altri allegati" dentro i contenuti di tipo Persona in "Altri documenti".
 
 ### Novità
 
-- Le immagini delle Card con Immagine del blocco Elenco sono ora cliccabili. Cliccandoci sopra, si apre la vista del contenuto della Card.
+- Le immagini delle Card con Immagine del blocco Elenco sono ora cliccabili. Cliccandole si apre il contenuto della Card.
 
 ### Fix
 
