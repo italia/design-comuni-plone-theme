@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 import _ from 'lodash';
 import keyboardKey from 'keyboard-key';
 import PropTypes from 'prop-types';
@@ -50,6 +51,9 @@ class PaginationItem extends Component {
       'nextItem',
       'lastItem',
     ]),
+
+    isPrevButtonInactive: PropTypes.bool,
+    isForwButtonInactive: PropTypes.bool,
   };
 
   handleClick = (e) => {
@@ -63,7 +67,15 @@ class PaginationItem extends Component {
   };
 
   render() {
-    const { active, type, children, intl, ellipsisItem } = this.props;
+    const {
+      active,
+      type,
+      children,
+      intl,
+      ellipsisItem,
+      isPrevButtonInactive,
+      isForwButtonInactive,
+    } = this.props;
     const disabled = this.props.disabled || type === 'ellipsisItem';
     return (
       <PagerItem disabled={disabled}>
@@ -79,6 +91,7 @@ class PaginationItem extends Component {
                 icon="it-chevron-left"
                 style={{ ariaHidden: true }}
                 color="primary"
+                className={cx({ disabled: isPrevButtonInactive })}
                 title={intl.formatMessage(messages.prevPage)}
               />
 
@@ -93,6 +106,7 @@ class PaginationItem extends Component {
                 icon="it-chevron-right"
                 style={{ ariaHidden: true }}
                 color="primary"
+                className={cx({ disabled: isForwButtonInactive })}
                 title={intl.formatMessage(messages.nextPage)}
               />
               <span className="visually-hidden">

@@ -19,3 +19,13 @@
     }
   }
 }
+
+.pagination-wrapper {
+  li.page-item {
+    button.page-link {
+      .icon.icon-primary.disabled {
+        fill: $gray-600 !important;
+      }
+    }
+  }
+}

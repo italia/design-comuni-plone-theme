@@ -45,6 +45,7 @@
 
 ### Migliorie
 
+- Se il CT UO è collegato a più di 4 servizi, le card dei servizi collegati verranno divise in diverse pagine navigabili da uno strumento di paginazione per rendere lo scorrimento della pagina più semplice.
 - Cambiato il layout delle immagini all'interno del blocco Griglia.
 - Migliorata la visualizzazione delle parole evidenziate nella pagina di Ricerca.
 
