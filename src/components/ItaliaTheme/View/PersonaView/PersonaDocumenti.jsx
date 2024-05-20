@@ -205,7 +205,6 @@ const PersonaDocumenti = ({ content }) => {
           />
         </RichTextSection>
       )}
-
     </>
   );
 };

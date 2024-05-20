@@ -2,7 +2,6 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
-  RichText,
   RichTextSection,
   GenericCard,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
