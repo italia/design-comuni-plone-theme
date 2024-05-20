@@ -126,7 +126,9 @@ const UniversalLink = ({
           config.settings.siteProperties.markSpecialLinks && (
             <Icon
               icon="it-external-link"
-              title={title}
+              title={`${title ? title + ' - ' : ''}${intl.formatMessage({
+                id: 'opensInNewTab',
+              })}`}
               size="xs"
               className="ms-1 align-sub external-link"
             />

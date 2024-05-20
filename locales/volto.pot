@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-05-15T10:24:13.596Z\n"
+"POT-Creation-Date: 2024-05-15T15:55:46.048Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -104,6 +104,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 # defaultMessage: Cerca per parola chiave
 msgid "Cerca per parola chiave"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: Pulisci i campi
+msgid "Clear dates"
 msgstr ""
 
 #: helpers/Translations/searchBlockExtendedTranslations
@@ -3287,6 +3292,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
 # defaultMessage: Data fine
 msgid "search_endDate"
+msgstr ""
+
+#: components/ItaliaTheme/View/FAQ/FaqFolder/SearchBar
+# defaultMessage: Search icon
+msgid "search_icon"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
