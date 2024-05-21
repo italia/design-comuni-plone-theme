@@ -1,5 +1,22 @@
 
 
+## [11.12.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.12.0...v11.12.1) (2024-05-21)
+
+
+### Bug Fixes
+
+* use UniversalLink in PageHeaderTassonomiaArgomenti ([690da33](https://github.com/redturtle/design-comuni-plone-theme/commit/690da33a5f568b177a9ac748af5a85da7520e314))
+
+
+### Maintenance
+
+* fix npm release script ([bb652d7](https://github.com/redturtle/design-comuni-plone-theme/commit/bb652d717558f1541ad9c4d5250effe3adcd7f0a))
+
+
+### Documentation
+
+* updated publiccode and release log ([1b3b3a9](https://github.com/redturtle/design-comuni-plone-theme/commit/1b3b3a9a28fb7ec31124fab06fec984000ad67ce))
+
 ## [11.12.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.11.2...v11.12.0) (2024-05-21)
 
 
