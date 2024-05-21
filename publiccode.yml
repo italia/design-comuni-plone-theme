@@ -227,7 +227,7 @@ maintenance:
 name: io-Comune - Il sito AgID per Comuni ed Enti Pubblici
 platforms:
   - web
-releaseDate: '2024-05-20'
+releaseDate: '2024-05-21'
 softwareType: standalone/web
 softwareVersion: 11.12.0
 url: 'https://github.com/italia/design-comuni-plone-theme'
