@@ -1,5 +1,39 @@
 
 
+## [11.12.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.11.2...v11.12.0) (2024-05-21)
+
+
+### Features
+
+* added link to cardWithImage image ([#682](https://github.com/redturtle/design-comuni-plone-theme/issues/682)) ([a223f33](https://github.com/redturtle/design-comuni-plone-theme/commit/a223f334dd4e1d19fb7e84958631778fc4d4bcff))
+* added pagination to servizio cards in UO ([#678](https://github.com/redturtle/design-comuni-plone-theme/issues/678)) ([4abefd5](https://github.com/redturtle/design-comuni-plone-theme/commit/4abefd5859b66cb923c01951dcdfc63778875e8e))
+* otp code in volto-form-block for bcc email fields ([#652](https://github.com/redturtle/design-comuni-plone-theme/issues/652)) ([c2a9a8c](https://github.com/redturtle/design-comuni-plone-theme/commit/c2a9a8cb50ca00b63c81040baab4426fd9b7f1f8))
+
+
+### Bug Fixes
+
+* accessibility fixes after bootstrap-italia upgrade ([#679](https://github.com/redturtle/design-comuni-plone-theme/issues/679)) ([449875d](https://github.com/redturtle/design-comuni-plone-theme/commit/449875d85dd15c5b7af366309fd3982db3b33926))
+* added a11y params for lisingImage ([#684](https://github.com/redturtle/design-comuni-plone-theme/issues/684)) ([da1110b](https://github.com/redturtle/design-comuni-plone-theme/commit/da1110bd58db54f4274558446bb5d452ba40383c))
+* alignment of imgs in grid block ([#681](https://github.com/redturtle/design-comuni-plone-theme/issues/681)) ([aa3a243](https://github.com/redturtle/design-comuni-plone-theme/commit/aa3a243741d7407f8d7226b01a904545f90f5100))
+* avoid unnecessary [@breadcrumbs](https://github.com/breadcrumbs) call ([#677](https://github.com/redturtle/design-comuni-plone-theme/issues/677)) ([25938aa](https://github.com/redturtle/design-comuni-plone-theme/commit/25938aa789a53b3eb87c47a18c935a9add2e1c3f))
+* changed img layout in grid block ([#675](https://github.com/redturtle/design-comuni-plone-theme/issues/675)) ([1fa5557](https://github.com/redturtle/design-comuni-plone-theme/commit/1fa55574551f6cb0f34b88d3e7f1bc8b5e69db34))
+* changed layout and styles of highlighted words in search page ([#683](https://github.com/redturtle/design-comuni-plone-theme/issues/683)) ([d8f4d09](https://github.com/redturtle/design-comuni-plone-theme/commit/d8f4d090286469d4efdbb42bf30505abaa48cab8))
+* it translation for rrule ([#676](https://github.com/redturtle/design-comuni-plone-theme/issues/676)) ([d9a74eb](https://github.com/redturtle/design-comuni-plone-theme/commit/d9a74ebd58a17c10bceef9fbf558d7e74ec16c99))
+* prevent xss in form block reading sent data from BE response ([#651](https://github.com/redturtle/design-comuni-plone-theme/issues/651)) ([81a5a9e](https://github.com/redturtle/design-comuni-plone-theme/commit/81a5a9edd9cfa9072d2f746b607b04d30fc1845b))
+* removed unnecessary text - documento accedi al servizio ([#663](https://github.com/redturtle/design-comuni-plone-theme/issues/663)) ([fad9abb](https://github.com/redturtle/design-comuni-plone-theme/commit/fad9abb65989b18de1d7fc75ae61c208f1e62da9))
+* translation for rrule_on ([#680](https://github.com/redturtle/design-comuni-plone-theme/issues/680)) ([009c72a](https://github.com/redturtle/design-comuni-plone-theme/commit/009c72af463f5748a64f2c9c0afe0567ca192c26))
+* update volto-form-block to 3.8.3 ([46c55fe](https://github.com/redturtle/design-comuni-plone-theme/commit/46c55fe71ab533d66b4ec75374d7332a2539699d))
+
+
+### Maintenance
+
+* fix npm release script ([fcdce81](https://github.com/redturtle/design-comuni-plone-theme/commit/fcdce81c3fcfd5f46dd495dace84d662ffa7d307))
+
+
+### Documentation
+
+* updated publiccode and release log ([61e1da3](https://github.com/redturtle/design-comuni-plone-theme/commit/61e1da376c3f64569d36144be21da1fcf00dff90))
+
 ## [11.11.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.11.1...v11.11.2) (2024-05-02)
 
 
