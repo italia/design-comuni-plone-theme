@@ -41,19 +41,11 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.12.1 (21/05/2024)
 
 ### Migliorie
 
-- ...
-
-### Novità
-
-- ...
-
-### Fix
-
-- ...
+- Migliorate le performance di navigazione per alcuni link agli argomenti nella testata delle pagine.
 
 ## Versione 11.12.0 (21/05/2024)
 
