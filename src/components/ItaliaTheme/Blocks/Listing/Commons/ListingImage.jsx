@@ -16,9 +16,9 @@ const ListingImage = ({
   const Image = config.getComponent({ name: 'Image' }).component;
   let commonImageProps = {
     item,
-    'aria-hidden': true,
-    alt: imageProps.alt ?? '',
-    role: 'presentation',
+    'aria-hidden': imageProps.alt || item.title ? false : true,
+    alt: imageProps.alt ?? item.title ?? '',
+    role: imageProps.alt || item.title ? '' : 'presentation',
     className,
     loading,
     responsive,
