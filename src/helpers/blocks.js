@@ -59,12 +59,6 @@ export const useHandleDetachedBlockFocus = (
   }, [selected]);
 
   useEffect(() => {
-    if (!selected && selectedField && onSelectBlock) {
-      onSelectBlock(block);
-    }
-  }, [selectedField]);
-
-  useEffect(() => {
     const handleEnter = (e) => {
       if (selected && !selectedField) {
         handleKeyDownOwnFocusManagement(e, blockProps);
