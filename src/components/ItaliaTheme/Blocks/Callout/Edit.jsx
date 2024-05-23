@@ -57,7 +57,7 @@ const Edit = (props) => {
               block={block}
               fieldName="title"
               onChangeBlock={onChangeBlock}
-              selected={selectedField === 'title'}
+              selected={selected && selectedField === 'title'}
               placeholder={intl.formatMessage(messages.title)}
               setSelected={setSelectedField}
               focusNextField={() => {
@@ -74,7 +74,7 @@ const Edit = (props) => {
             fieldName="text"
             block={block}
             onSelectBlock={onSelectBlock}
-            selected={selectedField === 'text'}
+            selected={selected && selectedField === 'text'}
             placeholder={intl.formatMessage(messages.text)}
             onChangeBlock={onChangeBlock}
             setSelected={setSelectedField}

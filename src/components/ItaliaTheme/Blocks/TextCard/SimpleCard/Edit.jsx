@@ -62,7 +62,7 @@ const Edit = (props) => {
                   data={data}
                   block={block}
                   fieldName="simple_card_title"
-                  selected={selectedField === 'simple_card_title'}
+                  selected={selected && selectedField === 'simple_card_title'}
                   onChangeBlock={onChangeBlock}
                   onSelectBlock={onSelectBlock}
                   placeholder={intl.formatMessage(messages.simple_card_title)}
@@ -79,7 +79,7 @@ const Edit = (props) => {
                   showToolbar={true}
                   data={data}
                   fieldName="simple_card_content"
-                  selected={selectedField === 'simple_card_content'}
+                  selected={selected && selectedField === 'simple_card_content'}
                   setSelected={setSelectedField}
                   block={block}
                   onChangeBlock={onChangeBlock}

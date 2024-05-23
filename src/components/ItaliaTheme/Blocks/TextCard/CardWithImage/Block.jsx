@@ -65,7 +65,7 @@ const Block = (props) => {
             data={data}
             block={block}
             fieldName="image_card_title"
-            selected={selectedField === 'image_card_title'}
+            selected={selected && selectedField === 'image_card_title'}
             onChangeBlock={(block, data) => onChange(data)}
             placeholder={intl.formatMessage(messages.image_card_title)}
             setSelected={setSelectedField}
@@ -123,7 +123,9 @@ const Block = (props) => {
                       data={data}
                       fieldName="image_card_content"
                       block={block}
-                      selected={selectedField === 'image_card_content'}
+                      selected={
+                        selected && selectedField === 'image_card_content'
+                      }
                       onChangeBlock={(block, data) => onChange(data)}
                       placeholder={intl.formatMessage(
                         messages.image_card_content,

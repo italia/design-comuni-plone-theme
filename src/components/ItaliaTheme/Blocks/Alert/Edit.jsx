@@ -68,7 +68,7 @@ const Edit = (props) => {
                   {...props}
                   data={data}
                   fieldName="text"
-                  selected={selectedField === 'text'}
+                  selected={selected && selectedField === 'text'}
                   setSelected={setSelectedField}
                   placeholder={intl.formatMessage(messages.content_placeholder)}
                   showToolbar={true}

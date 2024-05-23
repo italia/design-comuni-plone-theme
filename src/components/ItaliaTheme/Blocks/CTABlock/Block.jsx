@@ -69,7 +69,7 @@ const Block = (props) => {
                 showToolbar={false}
                 data={data}
                 fieldName="cta_title"
-                selected={selectedField === 'cta_title'}
+                selected={selected && selectedField === 'cta_title'}
                 setSelected={setSelectedField}
                 block={block}
                 placeholder={intl.formatMessage(messages.cta_title)}
@@ -89,7 +89,7 @@ const Block = (props) => {
               data={data}
               fieldName="cta_content"
               block={block}
-              selected={selectedField === 'cta_content'}
+              selected={selected && selectedField === 'cta_content'}
               placeholder={intl.formatMessage(messages.cta_content)}
               setSelected={setSelectedField}
               focusPrevField={() => {
