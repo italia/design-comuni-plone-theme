@@ -2,11 +2,7 @@
   "name": "design-comuni-plone-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "GPL-v3",
-<<<<<<< HEAD
   "version": "12.0.0-alpha.1",
-=======
-  "version": "11.12.1",
->>>>>>> main
   "main": "src/index.js",
   "repository": {
     "type": "git",
