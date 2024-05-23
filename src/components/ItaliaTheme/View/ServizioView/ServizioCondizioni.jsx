@@ -30,7 +30,11 @@ const ServizioCondizioni = ({ content }) => {
           data-element="service-file"
         >
           <span className="list-item-title-icon-wrapper">
-            <Icon icon="it-clip" className="icon-primary me-1" />
+            <Icon
+              icon="it-clip"
+              className="icon-primary me-1"
+              title={intl.formatMessage(messages.condizioni_link)}
+            />
             {intl.formatMessage(messages.condizioni_link)} (
             {label ? <span className="text-uppercase">{label} </span> : ''}
             <span className="list-item">

@@ -8251,7 +8251,11 @@ __metadata:
     volto-dropdownmenu: 4.1.1
     volto-editablefooter: 5.1.1
     volto-feedback: 0.3.0
+<<<<<<< HEAD
     volto-form-block: 3.8.2
+=======
+    volto-form-block: 3.8.3
+>>>>>>> main
     volto-gdpr-privacy: 2.2.5
     volto-google-analytics: 2.0.0
     volto-multilingual-widget: 3.2.1
@@ -16170,9 +16174,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "volto-form-block@npm:3.8.2":
   version: 3.8.2
   resolution: "volto-form-block@npm:3.8.2"
+=======
+"volto-form-block@npm:3.8.3":
+  version: 3.8.3
+  resolution: "volto-form-block@npm:3.8.3"
+>>>>>>> main
   dependencies:
     "@hcaptcha/react-hcaptcha": ^0.3.6
     file-saver: ^2.0.5
@@ -16181,7 +16191,11 @@ __metadata:
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
     volto-subblocks: ^2.0.0
+<<<<<<< HEAD
   checksum: 5b72a06a5ee81b3c5f6600cc57df0a190d95765d30bb9afcd09e6ca2215f605184327fa4a88b0e8ce4e410ff9e21b2351cb4340e5a9dcdf95d19f3fac9580573
+=======
+  checksum: 44b043f3eab2ef11c328b1b185ea9711a6e67344745708f5b9f293fcde75f6037e5cd5e9baee2ee0ce4a661a1ef752564d73da12e4b792a475bce6b4bc0a47b8
+>>>>>>> main
   languageName: node
   linkType: hard
 

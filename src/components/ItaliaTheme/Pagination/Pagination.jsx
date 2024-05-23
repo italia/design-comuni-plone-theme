@@ -81,6 +81,9 @@ class Pagination extends Component {
       totalPages,
     });
 
+    const inactivePrevButton = activePage === 1;
+    const inactiveForwButton = activePage === this.props.totalPages;
+
     return (
       <Pager
         className="justify-content-center mt-5"
@@ -96,6 +99,8 @@ class Pagination extends Component {
                   onClick={this.handleItemClick}
                   type={type}
                   ellipsisItem={ellipsisItem}
+                  isPrevButtonInactive={inactivePrevButton}
+                  isForwButtonInactive={inactiveForwButton}
                 >
                   {value}
                 </PaginationItem>

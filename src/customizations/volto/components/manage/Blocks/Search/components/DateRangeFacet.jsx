@@ -22,6 +22,10 @@ const messages = defineMessages({
     id: 'End Date',
     defaultMessage: 'End Date',
   },
+  clearDates: {
+    id: 'Clear dates',
+    defaultMessage: 'Pulisci i campi',
+  },
 });
 
 const PrevIcon = () => (
@@ -64,7 +68,17 @@ const customArrowIcon = (props) => {
   );
 };
 
-const CloseIcon = () => <Icon icon="it-close" size="24px" className="close" />;
+const CloseIcon = (props) => {
+  const { intl } = props;
+  return (
+    <Icon
+      icon="it-close"
+      size="24px"
+      className="close"
+      title={intl.formatMessage(messages.clearDates)}
+    />
+  );
+};
 
 const DateRangeFacet = (props) => {
   const { facet, isEditMode, onChange, value, reactDates, intl, lang } = props;
@@ -89,7 +103,7 @@ const DateRangeFacet = (props) => {
             disabled={isEditMode}
             noBorder
             showClearDates
-            customCloseIcon={<CloseIcon />}
+            customCloseIcon={<CloseIcon {...props} />}
             displayFormat={moment.localeData(lang).longDateFormat('L')}
             focusedInput={focused}
             onFocusChange={(focusedInput) => setFocused(focusedInput)}

@@ -12,6 +12,7 @@ const SingleSlideWrapper = (props) => {
   const wrapperKey = key ?? 'slide-wrapper-' + index;
 
   return (
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <div
       className={`it-single-slide-wrapper ${className ?? ''}`}
       key={wrapperKey}
@@ -30,6 +31,7 @@ const SingleSlideWrapper = (props) => {
         //e.preventDefault();
         //e.stopPropagation();
       }}
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
       tabIndex={0}
     >
       {children}

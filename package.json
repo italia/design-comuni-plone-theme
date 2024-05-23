@@ -2,8 +2,16 @@
   "name": "design-comuni-plone-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "GPL-v3",
+<<<<<<< HEAD
   "version": "12.0.0-alpha.1",
+=======
+  "version": "11.12.1",
+>>>>>>> main
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RedTurtle/design-comuni-plone-theme"
+  },
   "keywords": [
     "volto-addon",
     "volto",
@@ -147,7 +155,7 @@
     "volto-dropdownmenu": "4.1.1",
     "volto-editablefooter": "5.1.1",
     "volto-feedback": "0.3.0",
-    "volto-form-block": "3.8.2",
+    "volto-form-block": "3.8.3",
     "volto-gdpr-privacy": "2.2.5",
     "volto-google-analytics": "2.0.0",
     "volto-multilingual-widget": "3.2.1",

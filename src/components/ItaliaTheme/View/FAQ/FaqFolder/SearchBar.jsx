@@ -14,6 +14,10 @@ const messages = defineMessages({
     id: 'faq_search',
     defaultMessage: 'Type in a keyword to find answers',
   },
+  search_icon: {
+    id: 'search_icon',
+    defaultMessage: 'Search icon',
+  },
 });
 
 /**
@@ -41,6 +45,7 @@ const SearchBar = ({ searchableText, setSearchableText }) => {
                   style={{
                     ariaHidden: true,
                   }}
+                  title={intl.formatMessage(messages.search_icon)}
                 />
               </div>
             </div>

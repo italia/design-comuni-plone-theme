@@ -2,7 +2,6 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
-  RichText,
   RichTextSection,
   GenericCard,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
@@ -24,13 +23,11 @@ const DocumentoAccedereServizio = ({ content }) => {
     >
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
         {content.servizi_collegati?.map((servizio, i) => (
-          <GenericCard key={servizio['@id']} item={servizio} showimage={false}>
-            <RichText
-              serif={false}
-              data={servizio.canale_digitale}
-              add_class="mt-3"
-            />
-          </GenericCard>
+          <GenericCard
+            key={servizio['@id']}
+            item={servizio}
+            showimage={false}
+          ></GenericCard>
         ))}
       </div>
     </RichTextSection>

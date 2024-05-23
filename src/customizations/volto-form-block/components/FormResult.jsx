@@ -1,3 +1,7 @@
+/*
+CUSTOMIZATIONS:
+- used design-react-kit components to render form result
+*/
 import React from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { Button, Alert } from 'design-react-kit';

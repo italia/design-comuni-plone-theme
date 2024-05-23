@@ -3,7 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { Chip, ChipLabel } from 'design-react-kit';
 
-import { flattenToAppURL } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 
 /**
  * PageHeaderTassonomiaArgomenti view component class.
@@ -28,17 +28,16 @@ const PageHeaderTassonomiaArgomenti = ({ content }) => {
         <small>{intl.formatMessage(messages.topics)}</small>
       </h5>
       {content.tassonomia_argomenti.map((item, i) => (
-        <a
-          href={flattenToAppURL(item['@id'])}
+        <UniversalLink
+          item={item}
           key={item['@id']}
-          title={item.title}
           className="text-decoration-none me-2 d-inline-block"
           data-element="service-topic"
         >
           <Chip color="primary" disabled={false} large={false} simple tag="div">
             <ChipLabel tag="span">{item.title}</ChipLabel>
           </Chip>
-        </a>
+        </UniversalLink>
       ))}
     </div>
   ) : null;

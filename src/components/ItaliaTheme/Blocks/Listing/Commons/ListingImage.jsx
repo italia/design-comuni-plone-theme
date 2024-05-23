@@ -1,3 +1,4 @@
+import { UniversalLink } from '@plone/volto/components';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import config from '@plone/volto/registry';
@@ -15,9 +16,9 @@ const ListingImage = ({
   const Image = config.getComponent({ name: 'Image' }).component;
   let commonImageProps = {
     item,
-    'aria-hidden': true,
-    alt: imageProps.alt ?? '',
-    role: 'presentation',
+    'aria-hidden': imageProps.alt || item.title ? false : true,
+    alt: imageProps.alt ?? item.title ?? '',
+    role: imageProps.alt || item.title ? '' : 'presentation',
     className,
     loading,
     responsive,
@@ -28,7 +29,10 @@ const ListingImage = ({
     commonImageProps = { ...commonImageProps, title: item.title };
   // photogallery needs to check for null image
   // https://stackoverflow.com/questions/33136399/is-there-a-way-to-tell-if-reactelement-renders-null
-  const image = Image(commonImageProps);
+
+  const image = (
+    <UniversalLink item={item}>{Image(commonImageProps)}</UniversalLink>
+  );
   if (image === null)
     return showDefault ? <img src={DefaultImageSVG} alt="" /> : null;
 

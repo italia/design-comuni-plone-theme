@@ -154,6 +154,11 @@ msgstr "Buscar por tema"
 msgid "Cerca per parola chiave"
 msgstr "Buscar por palabra clave"
 
+#: overrideTranslations
+# defaultMessage: Pulisci i campi
+msgid "Clear dates"
+msgstr ""
+
 #: helpers/Translations/searchBlockExtendedTranslations
 # defaultMessage: Clear filters
 msgid "Clear filters"
@@ -3076,6 +3081,11 @@ msgstr ""
 
 #: overrideTranslations
 # defaultMessage: di
+msgid "rrule_on"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: di
 msgid "rrule_on the"
 msgstr ""
 
@@ -3363,6 +3373,11 @@ msgstr "Tipo de elementos"
 # defaultMessage: Data fine
 msgid "search_endDate"
 msgstr "Fecha de fin"
+
+#: components/ItaliaTheme/View/FAQ/FaqFolder/SearchBar
+# defaultMessage: Search icon
+msgid "search_icon"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Dove cercare

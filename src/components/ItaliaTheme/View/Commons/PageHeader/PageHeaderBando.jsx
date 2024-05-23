@@ -48,6 +48,9 @@ const PageHeaderBando = ({ content }) => {
                 }
                 padding={false}
                 size=""
+                title={`${intl.formatMessage(messages.bando)} ${
+                  content.bando_state[1]
+                }`}
               />
               {intl.formatMessage(messages.bando)}{' '}
               <BandoStatus content={content} />

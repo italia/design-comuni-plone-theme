@@ -89,6 +89,7 @@ body.search-modal-opened {
 
 .search-results-wrapper {
   mark.highlighted-text {
+    padding: 0em 0.1875em;
     background-color: $highlight-search;
   }
 
@@ -102,6 +103,10 @@ body.search-modal-opened {
         .data:before {
           content: none;
         }
+      }
+
+      .card-title {
+        line-height: 1.3em;
       }
     }
   }

@@ -52,6 +52,11 @@
         }
       }
     }
+
+    &.image img {
+      object-fit: contain;
+      object-position: center;
+    }
   }
 
   //in edit (cms-ui)
