@@ -1,6 +1,6 @@
 /**
  * ViewBlock.
- * @module components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
+ * @module components/ItaliaTheme/Blocks/IconBlocks/Block/ViewBlock
  */
 
 import React from 'react';
@@ -26,15 +26,6 @@ const messages = defineMessages({
  * @extends Component
  */
 const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
-  const rawStringRenderer = {
-    blocks: {
-      unstyled: (children) => {
-        const text = children.map((child) => child[1]).join(''); // Join the text elements
-        return text.trim(); // Remove leading/trailing whitespace
-      },
-    },
-  };
-
   const intl = useIntl();
 
   return (
@@ -47,7 +38,7 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
       <CardBody tag="div">
         {data.icon?.length > 0 && (
           <div className="iconblock-icon">
-            <Icon icon={data.icon} aria-hidden={true} title={cardTitle} />
+            <Icon icon={data.icon} aria-hidden={true} title={data.title} />
           </div>
         )}
 
