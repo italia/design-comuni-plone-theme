@@ -1,5 +1,17 @@
 
 
+## [12.0.0-alpha.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.2...v12.0.0-alpha.3) (2024-05-27)
+
+
+### Bug Fixes
+
+* IconsBlock title ([0d5a302](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0d5a30220047e99f7c67806963b78f173394bd51))
+
+
+### Maintenance
+
+* updated locales ([0d4390f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0d4390fa1943bc8aef88c1f642498b931a054cff))
+
 ## [12.0.0-alpha.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.1...v12.0.0-alpha.2) (2024-05-23)
 
 
