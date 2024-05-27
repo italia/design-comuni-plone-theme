@@ -1,5 +1,18 @@
 
 
+## [11.12.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.12.1...v11.12.2) (2024-05-27)
+
+
+### Maintenance
+
+* added more logging for some errors ([73a6d13](https://github.com/RedTurtle/design-comuni-plone-theme/commit/73a6d13969775a0d2e52a8794211154a6f8c4da0))
+* updated repository info in package.json ([ac3ae90](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ac3ae90b55b8e293bf7dc46394c4a5b81c8db035))
+
+
+### Documentation
+
+* updated publiccode ([2a28968](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2a28968d62a3800df080842dfc399f7433050b75))
+
 ## [11.12.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v11.12.0...v11.12.1) (2024-05-21)
 
 
