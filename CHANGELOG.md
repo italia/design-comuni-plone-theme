@@ -1,5 +1,17 @@
 
 
+## [11.12.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.12.2...v11.12.3) (2024-05-28)
+
+
+### Bug Fixes
+
+* removed figure tag + added prop for link condition ([#685](https://github.com/RedTurtle/design-comuni-plone-theme/issues/685)) ([601e16c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/601e16c51938aefb45524d8661a901427ff79c86))
+
+
+### Documentation
+
+* updated publiccode ([79cae20](https://github.com/RedTurtle/design-comuni-plone-theme/commit/79cae2059c5135d4f036eb16b193f072dd176f86))
+
 ## [11.12.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.12.1...v11.12.2) (2024-05-27)
 
 
