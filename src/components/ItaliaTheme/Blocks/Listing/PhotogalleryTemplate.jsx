@@ -160,9 +160,10 @@ const PhotogalleryTemplate = ({
                     items.length === 1
                       ? '1300'
                       : items.length === 2
-                        ? '650'
-                        : '450'
+                      ? '650'
+                      : '450'
                   }px`,
+                  noWrapLink: true,
                 });
                 return (
                   <SingleSlideWrapper

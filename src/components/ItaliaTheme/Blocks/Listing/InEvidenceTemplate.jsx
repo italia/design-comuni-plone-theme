@@ -109,7 +109,7 @@ const InEvidenceTemplate = (props) => {
                 {index === 0 && image && (
                   <div className="img-responsive-wrapper">
                     <div className="img-responsive">
-                      <figure className="img-wrapper">{image}</figure>
+                      {image}
                       {item['@type'] === 'Event' && (
                         <CardCalendar start={item.start} end={item.end} />
                       )}
