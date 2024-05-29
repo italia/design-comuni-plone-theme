@@ -102,7 +102,7 @@ const CardWithImageDefault = (props) => {
               })}
             >
               <div className="img-responsive img-responsive-panoramic">
-                <figure className="img-wrapper">{image}</figure>
+                {image}
                 {item['@type'] === 'Event' && (
                   <CardCalendar
                     start={item.start}

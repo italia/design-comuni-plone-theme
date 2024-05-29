@@ -163,6 +163,7 @@ const PhotogalleryTemplate = ({
                         ? '650'
                         : '450'
                   }px`,
+                  noWrapLink: true,
                 });
                 return (
                   <SingleSlideWrapper
