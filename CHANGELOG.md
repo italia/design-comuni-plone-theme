@@ -1,5 +1,12 @@
 # Changelog
 
+## [12.0.0-alpha.6](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.5...v12.0.0-alpha.6) (2024-05-30)
+
+
+### Bug Fixes
+
+* applied img-wrapper styles to all html elements with class ([#688](https://github.com/RedTurtle/design-comuni-plone-theme/issues/688)) ([d9397b3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d9397b33e4896a20b1df0d748c89bdd52c43bfbc))
+
 ## [12.0.0-alpha.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.4...v12.0.0-alpha.5) (2024-05-30)
 
 
