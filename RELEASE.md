@@ -41,15 +41,7 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
+## Versione 11.12.6 (30/05/2024)
 
 ### Fix
 
