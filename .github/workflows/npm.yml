@@ -1,10 +1,12 @@
 name: Release latest version on npm
+
 on:
   release:
     types: [released]
 
 jobs:
   release_to_npm:
+    name: Release to npm
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -25,3 +27,16 @@ jobs:
         run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Get the version
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger job
+        run: |
+          curl --fail --request POST \
+          --form token=${{ secrets.TOKEN }} \
+          --form ref=master \
+          --form "variables[ADDON_NAME]=design-comuni-plone-theme" \
+          --form "variables[ADDON_TAG]=${{ steps.get_version.outputs.VERSION }}" \
+          "https://gitlab.com/api/v4/projects/${{ secrets.PROJECT_ID }}/trigger/pipeline"
