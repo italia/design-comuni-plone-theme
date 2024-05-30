@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione 11.12.5 (30/05/2024)
+
+### Fix
+
+- Sistemato il layout "Card con immagine" dei blocchi elenco quando gli elementi non hanno immagine.
+
 ## Versione 11.12.4 (30/05/2024)
 
 ### Fix

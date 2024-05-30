@@ -31,17 +31,18 @@ const ListingImage = ({
   // photogallery needs to check for null image
   // https://stackoverflow.com/questions/33136399/is-there-a-way-to-tell-if-reactelement-renders-null
 
-  const image = !noWrapLink ? (
+  const image = Image(commonImageProps);
+  const defaultImage = <img src={DefaultImageSVG} alt="" />;
+
+  if (image === null && !showDefault) return null;
+
+  return !noWrapLink ? (
     <UniversalLink item={item} className="img-wrapper">
-      {Image(commonImageProps)}
+      {image ?? defaultImage}
     </UniversalLink>
   ) : (
-    Image(commonImageProps)
+    image ?? defaultImage
   );
-  if (image === null)
-    return showDefault ? <img src={DefaultImageSVG} alt="" /> : null;
-
-  return image;
 };
 
 export const getListingImageBackground = (item = {}, size = 'listing') => {
