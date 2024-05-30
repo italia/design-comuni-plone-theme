@@ -53,6 +53,20 @@
 
 ### Fix
 
+- Il layout delle card con immagini rimane corretto anche selezionando l'opzione "Non alterare le dimensioni naturali dell'immagine".
+
+## Versione 11.12.5 (30/05/2024)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
 - Aggiustato il layout dei campi nel widget delle ricorrenze.
 
 ## Versione 11.12.1 (21/05/2024)
