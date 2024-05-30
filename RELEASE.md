@@ -41,6 +41,20 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Aggiustato il layout dei campi nel widget delle ricorrenze.
+
 ## Versione 11.12.1 (21/05/2024)
 
 ### Migliorie

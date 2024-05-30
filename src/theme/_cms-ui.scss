@@ -745,6 +745,22 @@ body.cms-ui {
     @import 'bootstrap-italia/src/scss/custom/card';
     @import './bootstrap-override/bootstrap-italia/_card.scss';
   }
+
+  .recurrence-form {
+    .byday-field {
+      .ui.button {
+        padding: 0px;
+      }
+    }
+
+    .byyear-field {
+      .byyear-byday {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+    }
+  }
 }
 
 body.has-toolbar {
