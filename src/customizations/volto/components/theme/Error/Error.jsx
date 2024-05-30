@@ -25,7 +25,7 @@ const Error = (props) => {
   let FoundView;
 
   // CUSTOMIZATION: added logging of errors
-  const notifySentry = (error) => {
+  const notifySentry = (message) => {
     const loaders = Object.entries(sentryLibraries).map(
       ([name, Lib]) =>
         new Promise((resolve) =>
@@ -37,7 +37,15 @@ const Error = (props) => {
         {},
         ...libs.map(([name, lib]) => ({ [name]: lib })),
       );
-      libraries.Sentry.captureException(error);
+      class MaybeCorsError extends Error {
+        constructor({ error, ...props }, ...args) {
+          super(...args);
+          this.name = 'MaybeCorsError';
+          this.error = error;
+          this.props = props;
+        }
+      }
+      libraries.Sentry.captureException(new MaybeCorsError(props, message));
     });
   };
 
@@ -50,7 +58,7 @@ const Error = (props) => {
       'DEV MODE CORS ERROR in Error component: ',
       JSON.stringify(props, null, 2),
     );
-    notifySentry(props);
+    notifySentry('DEV MODE CORS ERROR in Error component');
     FoundView = views.errorViews.corsError;
   } else {
     if (error.status.toString() === 'corsError') {
@@ -59,7 +67,7 @@ const Error = (props) => {
         'CORS ERROR in Error component: ',
         JSON.stringify(props, null, 2),
       );
-      notifySentry(props);
+      notifySentry('CORS ERROR in Error component');
     }
     FoundView = views.errorViews[error.status.toString()];
   }

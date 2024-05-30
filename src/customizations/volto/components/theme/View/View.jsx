@@ -209,7 +209,7 @@ class View extends Component {
       .toLowerCase();
 
   // CUSTOMIZATION: added logging of errors
-  notifySentry = (error) => {
+  notifySentry = (message) => {
     const loaders = Object.entries(sentryLibraries).map(
       ([name, Lib]) =>
         new Promise((resolve) =>
@@ -221,7 +221,37 @@ class View extends Component {
         {},
         ...libs.map(([name, lib]) => ({ [name]: lib })),
       );
-      libraries.Sentry.captureException(error);
+      class MaybeCorsError extends Error {
+        constructor(
+          {
+            error,
+            apiError,
+            actions,
+            token,
+            content,
+            connectionRefused,
+            pathname,
+            versionId,
+            ...props
+          },
+          ...args
+        ) {
+          super(...args);
+          this.name = 'MaybeCorsError';
+          this.error = error;
+          this.apiError = apiError;
+          this.actions = actions;
+          this.token = token;
+          this.content = content;
+          this.connectionRefused = connectionRefused;
+          this.pathname = pathname;
+          this.versionId = versionId;
+          this.props = props;
+        }
+      }
+      libraries.Sentry.captureException(
+        new MaybeCorsError(this.props, message),
+      );
     });
   };
 
@@ -246,7 +276,7 @@ class View extends Component {
           'DEV MODE CORS ERROR in View component: ',
           JSON.stringify(this.props, null, 2),
         );
-        this.notifySentry(this.props);
+        this.notifySentry('DEV MODE CORS ERROR in View component');
         FoundView = views.errorViews.corsError;
       } else {
         if (this.props.error.status.toString() === 'corsError') {
@@ -255,7 +285,7 @@ class View extends Component {
             'CORS ERROR in View component: ',
             JSON.stringify(this.props, null, 2),
           );
-          this.notifySentry(this.props);
+          this.notifySentry('CORS ERROR in View component');
         }
         FoundView = views.errorViews[this.props.error.status.toString()];
       }
