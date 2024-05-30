@@ -6,7 +6,7 @@
   }
 
   .single-slide {
-    figure.img-wrapper {
+    .img-wrapper {
       height: auto;
       max-height: 500px;
 
@@ -16,7 +16,7 @@
     }
   }
 
-  figure.img-wrapper {
+  .img-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -41,6 +41,20 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Il layout delle card con immagini rimane corretto anche selezionando l'opzione "Non alterare le dimensioni naturali dell'immagine".
+
 ## Versione 11.12.5 (30/05/2024)
 
 ### Fix
