@@ -1,5 +1,17 @@
 
 
+## [11.12.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.12.4...v11.12.5) (2024-05-30)
+
+
+### Bug Fixes
+
+* card with image when elements have no image ([ff99a3b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ff99a3b0081d734e63a853e6d44830cf9624a3f3))
+
+
+### Maintenance
+
+* update release jobs ([1318aad](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1318aad487cb310b7d445a305fb311243ee2fac5))
+
 ## [11.12.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.12.3...v11.12.4) (2024-05-30)
 
 
