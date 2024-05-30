@@ -1,5 +1,19 @@
 # Changelog
 
+## [12.0.0-alpha.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.4...v12.0.0-alpha.5) (2024-05-30)
+
+
+### Bug Fixes
+
+* added styles for recurrence widget fields layout ([#686](https://github.com/RedTurtle/design-comuni-plone-theme/issues/686)) ([8bc9748](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8bc97482b487004465ad50a894fa5c4fe1c52436))
+* card with image when elements have no image ([a97dac5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a97dac5e40f1ee19237602a01818c86fd37ced60))
+
+
+### Maintenance
+
+* improve cors error logging ([3ab008f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3ab008fbb7595efd113cad4936a78f73b0cbb8e3))
+* update release jobs ([ab42cd4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ab42cd493cf0f2c4a1bf65613e7e49afcd1b9d59))
+
 ## [12.0.0-alpha.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.3...v12.0.0-alpha.4) (2024-05-29)
 
 
