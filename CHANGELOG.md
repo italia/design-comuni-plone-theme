@@ -1,5 +1,22 @@
 
 
+## [11.12.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.12.3...v11.12.4) (2024-05-30)
+
+
+### Bug Fixes
+
+* added styles for recurrence widget fields layout ([#686](https://github.com/RedTurtle/design-comuni-plone-theme/issues/686)) ([ec415d1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ec415d1615524b79755d3f562fcef909f1a126d1))
+
+
+### Maintenance
+
+* improve cors error logging ([6c483a7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6c483a79fbe6d40d688c33a36bb61e96f37372fb))
+
+
+### Documentation
+
+* updated publiccode and release log ([312af90](https://github.com/RedTurtle/design-comuni-plone-theme/commit/312af90e5c708e090df1ccd7eaa194a7f03360ec))
+
 ## [11.12.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.12.2...v11.12.3) (2024-05-28)
 
 
