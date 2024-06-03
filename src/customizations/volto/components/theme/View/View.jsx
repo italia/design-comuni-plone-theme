@@ -222,35 +222,16 @@ class View extends Component {
         ...libs.map(([name, lib]) => ({ [name]: lib })),
       );
       class MaybeCorsError extends Error {
-        constructor(
-          {
-            error,
-            apiError,
-            actions,
-            token,
-            content,
-            connectionRefused,
-            pathname,
-            versionId,
-            ...props
-          },
-          ...args
-        ) {
+        constructor(...args) {
           super(...args);
           this.name = 'MaybeCorsError';
-          this.error = error;
-          this.apiError = apiError;
-          this.actions = actions;
-          this.token = token;
-          this.content = content;
-          this.connectionRefused = connectionRefused;
-          this.pathname = pathname;
-          this.versionId = versionId;
-          this.props = props;
         }
       }
       libraries.Sentry.captureException(
-        new MaybeCorsError(this.props, message),
+        new MaybeCorsError(message, {
+          props: this.props,
+          isAnonymous: !this.props.token,
+        }),
       );
     });
   };
