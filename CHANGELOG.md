@@ -1,5 +1,17 @@
 
 
+## [11.12.7](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.12.6...v11.12.7) (2024-06-03)
+
+
+### Maintenance
+
+* improve cors error logging ([b9d4513](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b9d4513d58101d13315a3cfc1a06cffecb3b0307))
+
+
+### Documentation
+
+* updated publiccode ([a277894](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a27789465ba8a4f7214ddaf01181573a55ee3664))
+
 ## [11.12.6](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.12.5...v11.12.6) (2024-05-30)
 
 
