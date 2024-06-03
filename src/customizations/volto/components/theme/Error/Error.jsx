@@ -38,14 +38,14 @@ const Error = (props) => {
         ...libs.map(([name, lib]) => ({ [name]: lib })),
       );
       class MaybeCorsError extends Error {
-        constructor({ error, ...props }, ...args) {
+        constructor(...args) {
           super(...args);
           this.name = 'MaybeCorsError';
-          this.error = error;
-          this.props = props;
         }
       }
-      libraries.Sentry.captureException(new MaybeCorsError(props, message));
+      libraries.Sentry.captureException(new MaybeCorsError(message), {
+        props,
+      });
     });
   };
 
