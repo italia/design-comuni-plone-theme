@@ -227,12 +227,14 @@ class View extends Component {
           this.name = 'MaybeCorsError';
         }
       }
-      libraries.Sentry.captureException(
-        new MaybeCorsError(message, {
-          props: this.props,
-          isAnonymous: !this.props.token,
-        }),
-      );
+      libraries.Sentry.captureException(new MaybeCorsError(message), {
+        contexts: {
+          props: {
+            isAnonymous: !this.props.token,
+            ...this.props,
+          },
+        },
+      });
     });
   };
 

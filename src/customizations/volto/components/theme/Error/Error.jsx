@@ -44,7 +44,9 @@ const Error = (props) => {
         }
       }
       libraries.Sentry.captureException(new MaybeCorsError(message), {
-        props,
+        contexts: {
+          props,
+        },
       });
     });
   };
