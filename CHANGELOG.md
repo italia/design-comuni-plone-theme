@@ -1,5 +1,17 @@
 # Changelog
 
+## [12.0.0-alpha.7](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.6...v12.0.0-alpha.7) (2024-06-05)
+
+
+### Bug Fixes
+
+* view link in attachment card template ([baa9cdf](https://github.com/RedTurtle/design-comuni-plone-theme/commit/baa9cdfb09d1bd015510cb7909578ddb6bc0b7dd))
+
+
+### Maintenance
+
+* improve cors error logging ([9029b9a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9029b9a6834f3f116c2e4e1bc5d72092f84ca62c))
+
 ## [12.0.0-alpha.6](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.5...v12.0.0-alpha.6) (2024-05-30)
 
 
