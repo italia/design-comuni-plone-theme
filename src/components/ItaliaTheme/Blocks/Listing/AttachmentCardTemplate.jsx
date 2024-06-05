@@ -51,16 +51,17 @@ const AttachmentCardTemplate = ({
         <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3">
           {items.map((item, index) => {
             let itemUrl = { ...item };
-            if (item['@type'] === 'File') {
-              itemUrl = {
-                ...item,
-                file: item,
-                '@id':
-                  show_pdf_preview && item?.mime_type === 'application/pdf'
-                    ? item?.['@id'] + '/@@display-file/file'
-                    : item?.['@id'] + '/@@download/file',
-              };
-            }
+            //la parte qui sotto commentata non serve perchè gestisce gia tutto UniversalLink e in view si vedrebbe /@@download/file duplicato nell url
+            // if (item['@type'] === 'File') {
+            //   itemUrl = {
+            //     ...item,
+            //     file: item,
+            //     '@id':
+            //       show_pdf_preview && item?.mime_type === 'application/pdf'
+            //         ? item?.['@id'] + '/@@display-file/file'
+            //         : item?.['@id'] + '/@@download/file',
+            //   };
+            // }
 
             return (
               <Card
