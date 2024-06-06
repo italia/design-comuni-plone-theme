@@ -1,5 +1,18 @@
 
 
+## [11.12.9](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.12.8...v11.12.9) (2024-06-06)
+
+
+### Bug Fixes
+
+* login and password reset page font ([666baf7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/666baf7281f9fac6e8e7beec9f2442deb85ea166))
+* view link in attachment card template ([#690](https://github.com/RedTurtle/design-comuni-plone-theme/issues/690)) ([8e03a21](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8e03a21990cc2a8006ccd78b836fefdb80a69ede))
+
+
+### Documentation
+
+* updated publiccode and release log ([17bcbc7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/17bcbc7f8106eef52d3d398fcec4b5f48b4501bb))
+
 ## [11.12.8](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.12.7...v11.12.8) (2024-06-04)
 
 
