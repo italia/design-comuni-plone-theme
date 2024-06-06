@@ -646,6 +646,12 @@ body.cms-ui {
   }
 
   #page-login {
+    .ui.text.container,
+    .ui.form input[type='text'],
+    .ui.form input[type='password'] {
+      font-family: $font-family-sans-serif;
+    }
+
     .help {
       a {
         color: $link-color;
@@ -700,6 +706,14 @@ body.cms-ui {
 
     .ui.segment.form {
       padding-top: 1rem;
+    }
+  }
+
+  #page-password-reset {
+    &,
+    h1,
+    .ui.message .header {
+      font-family: $font-family-sans-serif;
     }
   }
 
