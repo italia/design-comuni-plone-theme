@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione 11.12.9 (06/06/2024)
+
+### Fix
+
+- La pagina di login e di reset della password usano il font corretto.
+
 ## Versione 11.12.6 (30/05/2024)
 
 ### Fix
