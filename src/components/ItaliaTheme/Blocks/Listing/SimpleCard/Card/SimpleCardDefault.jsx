@@ -19,6 +19,7 @@ import {
   getItemIcon,
   ListingCategory,
   ListingText,
+  RassegnaInfo,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   getCalendarDate,
@@ -91,6 +92,9 @@ const SimpleCardDefault = (props) => {
     dependencies: ['SimpleCardDefault', type],
   }).component;
 
+  const isEventAppointment =
+    item?.parent?.['@type'] === 'Event' && item?.['@type'] === 'Event';
+
   return (
     <Card
       className={`align-items-top rounded shadow no-after ${getItemClass(
@@ -114,7 +118,12 @@ const SimpleCardDefault = (props) => {
             )}
           </CardCategory>
         )}
-        <CardTitle tag="h3">
+        <CardTitle
+          tag="h3"
+          className={`${
+            isEventAppointment ? 'rassegna-appointment-title' : ''
+          }`}
+        >
           <UniversalLink
             item={!isEditMode ? item : null}
             href={isEditMode ? '#' : null}
@@ -124,6 +133,7 @@ const SimpleCardDefault = (props) => {
             {itemTitle}
           </UniversalLink>
         </CardTitle>
+        {isEventAppointment && <RassegnaInfo eventoPadre={item.parent} />}
         {listingText && (
           <CardText className={cx('', { 'mb-5': eventRecurrenceMore })}>
             {listingText}

@@ -22,6 +22,7 @@ import {
   getItemIcon,
   ListingText,
   ListingLinkMore,
+  RassegnaInfo,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   getCalendarDate,
@@ -100,6 +101,10 @@ const RibbonCardTemplate = (props) => {
               name: 'BlockExtraTags',
               dependencies: ['RibbonCardTemplate', item['@type']],
             }).component;
+
+            const isEventAppointment =
+              item.parent?.['@type'] === 'Event' && item?.['@type'] === 'Event';
+
             return (
               <Col lg={4} sm={12} key={index}>
                 <Card
@@ -133,7 +138,12 @@ const RibbonCardTemplate = (props) => {
                     className={cx('', { 'mt-5': !showRibbon })}
                   >
                     {date && <div className="dates">{date}</div>}
-                    <CardTitle tag="h3">
+                    <CardTitle
+                      tag="h3"
+                      className={`${
+                        isEventAppointment ? 'rassegna-appointment-title' : ''
+                      }`}
+                    >
                       <UniversalLink
                         item={!isEditMode ? item : null}
                         href={isEditMode ? '#' : null}
@@ -142,6 +152,10 @@ const RibbonCardTemplate = (props) => {
                         {itemTitle}
                       </UniversalLink>
                     </CardTitle>
+                    {isEventAppointment && (
+                      <RassegnaInfo eventoPadre={item.parent} />
+                    )}
+
                     {listingText && <CardText>{listingText}</CardText>}
                     <BlockExtraTags {...props} item={item} itemIndex={index} />
                     {eventRecurrenceMore}

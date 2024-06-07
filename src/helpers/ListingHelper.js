@@ -90,7 +90,7 @@ export const getEventRecurrenceMore = (item, isEditMode) => {
   const intl = Intl();
   let ret = null;
   if (item['@type'] === 'Event') {
-    if (item.recurrence) {
+    if (item.recurrence || item.rassegna) {
       ret = (
         <Link
           to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
