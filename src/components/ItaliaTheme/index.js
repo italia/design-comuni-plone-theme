@@ -80,6 +80,7 @@ export SearchSectionsBackground from 'design-comuni-plone-theme/components/Itali
 export BackgroundUser from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/BackgroundUser';
 export Skeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/Skeleton';
 export CardCalendar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar';
+export RassegnaInfo from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/RassegnaInfo';
 export ListingCategory from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/ListingCategory';
 export ListingText from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/ListingText';
 export ListingLinkMore from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore';

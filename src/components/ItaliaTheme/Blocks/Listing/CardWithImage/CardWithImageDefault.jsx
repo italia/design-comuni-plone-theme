@@ -31,6 +31,7 @@ import {
   ListingImage,
   ListingText,
   CardPersona,
+  RassegnaInfo,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const CardWithImageDefault = (props) => {
@@ -71,6 +72,9 @@ const CardWithImageDefault = (props) => {
     name: 'BlockExtraTags',
     dependencies: ['CardWithImageDefault', item['@type']],
   }).component;
+
+  const isEventAppointment =
+    item?.parent?.['@type'] === 'Event' && item?.['@type'] === 'Event';
 
   return (
     <>
@@ -119,7 +123,12 @@ const CardWithImageDefault = (props) => {
                 <ListingCategory category={category} item={item} />
               </CardCategory>
             )}
-            <CardTitle tag="h3">
+            <CardTitle
+              tag="h3"
+              className={`${
+                isEventAppointment ? 'rassegna-appointment-title' : ''
+              }`}
+            >
               <UniversalLink
                 item={!isEditMode ? item : null}
                 href={isEditMode ? '#' : ''}
@@ -129,6 +138,7 @@ const CardWithImageDefault = (props) => {
                 {item.title || item.id}
               </UniversalLink>
             </CardTitle>
+            {isEventAppointment && <RassegnaInfo eventoPadre={item.parent} />}
             {listingText && (
               <CardText
                 className={cx('', {

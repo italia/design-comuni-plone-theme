@@ -33,6 +33,7 @@ import {
   ListingImage,
   CardCategory,
   CardPersona,
+  RassegnaInfo,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { getCategory } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
@@ -94,6 +95,10 @@ const InEvidenceTemplate = (props) => {
             const category = getCategory(item, show_type, show_section, props);
             const topics = show_topics ? item.tassonomia_argomenti : null;
 
+            const isEventAppointment =
+              item?.parent?.['@type'] === 'Event' &&
+              item?.['@type'] === 'Event';
+
             return item['@type'] === 'Persona' ? (
               <CardPersona
                 item={item}
@@ -124,7 +129,12 @@ const InEvidenceTemplate = (props) => {
                       )}
                     </CardCategory>
                   )}
-                  <CardTitle tag="h3">
+                  <CardTitle
+                    tag="h3"
+                    className={`${
+                      isEventAppointment ? 'rassegna-appointment-title' : ''
+                    }`}
+                  >
                     <UniversalLink
                       item={!isEditMode ? item : null}
                       href={isEditMode ? '#' : null}
@@ -133,6 +143,9 @@ const InEvidenceTemplate = (props) => {
                       {item.title || item.id}
                     </UniversalLink>
                   </CardTitle>
+                  {isEventAppointment && (
+                    <RassegnaInfo eventoPadre={item.parent} />
+                  )}
                   {listingText && (
                     <CardText
                       className={cx('', {

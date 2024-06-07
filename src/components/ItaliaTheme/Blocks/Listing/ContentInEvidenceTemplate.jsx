@@ -31,6 +31,7 @@ import {
   getItemIcon,
   // ListingLinkMore,
   ListingImage,
+  RassegnaInfo,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const ContentInEvidenceTemplate = (props) => {
@@ -78,6 +79,9 @@ const ContentInEvidenceTemplate = (props) => {
             dependencies: ['ContentInEvidenceTemplate', item['@type']],
           }).component;
 
+          const isEventAppointment =
+            item?.parent?.['@type'] === 'Event' && item?.['@type'] === 'Event';
+
           return (
             <Row key={item['@id']} className="content-in-evidence">
               {image && (
@@ -93,11 +97,19 @@ const ContentInEvidenceTemplate = (props) => {
                         item={item}
                       />
                     </CardCategory>
-                    <CardTitle tag="h2">
+                    <CardTitle
+                      tag="h2"
+                      className={`${
+                        isEventAppointment ? 'rassegna-appointment-title' : ''
+                      }`}
+                    >
                       <UniversalLink item={item} data-element={id_lighthouse}>
                         {item.title}
                       </UniversalLink>
                     </CardTitle>
+                    {isEventAppointment && (
+                      <RassegnaInfo eventoPadre={item.parent} />
+                    )}
                     <CardText>{listingText}</CardText>
 
                     {item.tassonomia_argomenti &&

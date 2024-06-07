@@ -166,15 +166,35 @@
   }
 }
 
-.block.listing.simpleCard {
-  @include media-breakpoint-down(xl) {
-    .card {
-      row-gap: 0.56em;
+.block.listing {
+  &.simpleCard {
+    @include media-breakpoint-down(xl) {
+      .card {
+        row-gap: 0.56em;
+      }
+
+      .card-body {
+        flex-basis: 100%;
+        margin-left: 0em;
+      }
+    }
+  }
+
+  .card {
+    .card-title {
+      &.rassegna-appointment-title {
+        margin-bottom: 0px !important;
+      }
     }
 
-    .card-body {
-      flex-basis: 100%;
-      margin-left: 0em;
+    .rassegna-info {
+      font-size: 0.9rem;
+      display: inline-flex;
+      column-gap: 0.3rem;
+
+      a {
+        text-decoration: none;
+      }
     }
   }
 }
