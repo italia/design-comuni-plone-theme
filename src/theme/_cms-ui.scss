@@ -192,32 +192,6 @@ body.cms-ui {
     }
   }
 
-  .skiplinks {
-    position: absolute;
-    top: -100%;
-
-    a {
-      display: inline-block;
-      color: $link-color;
-
-      &:focus {
-        position: fixed;
-        z-index: 9999;
-        top: 10px;
-        left: 10px;
-        padding: 10px;
-        border: 2px solid $link-color;
-        background: #fff;
-        outline: 3px solid $link-color;
-      }
-
-      &:hover {
-        border-color: $link-color;
-        color: $link-color;
-      }
-    }
-  }
-
   .react-select__menu {
     z-index: 11;
 

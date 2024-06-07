@@ -31,17 +31,19 @@ const SkipLinks = () => {
   }, []);
 
   return (
-    <Skiplink tag="div">
-      <SkiplinkItem href="#view" tag="a">
-        {intl.formatMessage(messages.mainView)}
-      </SkiplinkItem>
-      <SkiplinkItem href="#navigation" tag="a">
-        {intl.formatMessage(messages.navigation)}
-      </SkiplinkItem>
-      <SkiplinkItem href="#footer" tag="a">
-        {intl.formatMessage(messages.footer)}
-      </SkiplinkItem>
-    </Skiplink>
+    <div className="public-ui">
+      <Skiplink tag="div">
+        <SkiplinkItem href="#view" tag="a">
+          {intl.formatMessage(messages.mainView)}
+        </SkiplinkItem>
+        <SkiplinkItem href="#navigation" tag="a">
+          {intl.formatMessage(messages.navigation)}
+        </SkiplinkItem>
+        <SkiplinkItem href="#footer" tag="a">
+          {intl.formatMessage(messages.footer)}
+        </SkiplinkItem>
+      </Skiplink>
+    </div>
   );
 };
 
