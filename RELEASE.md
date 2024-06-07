@@ -53,6 +53,20 @@
 
 ### Fix
 
+- Il bottone "callout con sfondo" della barra degli strumenti per il testo è nuovamente visibile.
+
+## Versione 11.12.9 (06/06/2024)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
 - Il layout delle card con immagini rimane corretto anche selezionando l'opzione "Non alterare le dimensioni naturali dell'immagine".
 
 ## Versione 11.12.5 (30/05/2024)
