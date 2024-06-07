@@ -41,6 +41,20 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Il bottone "callout con sfondo" della barra degli strumenti per il testo è nuovamente visibile.
+
 ## Versione 11.12.9 (06/06/2024)
 
 ### Fix
