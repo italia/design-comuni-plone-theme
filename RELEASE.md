@@ -49,7 +49,7 @@
 
 ### Novità
 
-- ...
+- Aggiunte informazioni sulle rassegne di eventi nei blocchi elenco.
 
 ### Fix
 
