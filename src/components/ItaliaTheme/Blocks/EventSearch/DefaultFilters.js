@@ -99,12 +99,12 @@ const DefaultFilters = () => {
         component: DateFilter,
         props: {
           value: {
-            startDate: moment().startOf('day'),
-            endDate: moment().endOf('day'),
+            startDate: null,
+            endDate: null,
           },
           showClearDates: true,
-          defaultStart: moment().startOf('day'),
-          defaultEnd: moment().endOf('day'),
+          defaultStart: null,
+          defaultEnd: null,
           isOutsideRange: () => false,
         },
       },

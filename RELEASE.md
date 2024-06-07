@@ -54,6 +54,7 @@
 ### Fix
 
 - Il bottone "callout con sfondo" della barra degli strumenti per il testo è nuovamente visibile.
+- Il blocco Ricerca Eventi permette di eliminare il filtro date.
 
 ## Versione 11.12.9 (06/06/2024)
 

@@ -101,6 +101,8 @@ const Body = ({ data, id, inEditMode, path, onChangeBlock }) => {
           fullobjects: 1,
           query: query,
           b_size: b_size,
+          sort_order: 'ascending',
+          sort_on: 'start',
         },
         id + '_events_search',
         page,
