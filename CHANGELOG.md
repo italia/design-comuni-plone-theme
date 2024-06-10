@@ -1,5 +1,21 @@
 # Changelog
 
+## [12.0.0-alpha.8](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.7...v12.0.0-alpha.8) (2024-06-10)
+
+
+### Bug Fixes
+
+* added prefix condition to render solid icons ([#693](https://github.com/RedTurtle/design-comuni-plone-theme/issues/693)) ([73d00d2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/73d00d2643a462835ae8cde0cc8052a179f6c19d))
+* better handle /diff route as non-content route because otherwise cms-ui styles are applied also on contents that starts with "diff" like "diffusione". ([10f71f1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/10f71f1a51bff7e69a8f9d00811956dd220e7092))
+* changed default filters in EventSearch DataFilter + query parameters ([#691](https://github.com/RedTurtle/design-comuni-plone-theme/issues/691)) ([90c68fb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/90c68fbb2fdc843e2556b07295c3eaad383d821e))
+* login and password reset page font ([ee9759a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ee9759a30a60d95258ed9893564520ab8ba93964))
+* match path in search filters ([#694](https://github.com/RedTurtle/design-comuni-plone-theme/issues/694)) ([8df3d83](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8df3d830126ed6c950db2d7fc8b8d9b70009e25b))
+
+
+### Maintenance
+
+* removed unneccessary skiplink styles ([#695](https://github.com/RedTurtle/design-comuni-plone-theme/issues/695)) ([5dbef84](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5dbef844953de51be27f65cdd27b6fe8e4625cc6))
+
 ## [12.0.0-alpha.7](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.6...v12.0.0-alpha.7) (2024-06-05)
 
 
