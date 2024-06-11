@@ -801,6 +801,11 @@ msgstr "Otros documentos"
 msgid "altri_documenti_persona"
 msgstr ""
 
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
+# defaultMessage: Altri incarichi
+msgid "altri_incarichi"
+msgstr ""
+
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 # defaultMessage: Mostra l'immagine per tutti gli elementi
 msgid "always_show_image"
@@ -2902,6 +2907,11 @@ msgstr ""
 # defaultMessage: Quartiere
 msgid "quartiere"
 msgstr "Vecindario"
+
+#: components/ItaliaTheme/Blocks/Listing/Commons/RassegnaInfo
+# defaultMessage: Rassegna:
+msgid "rassegna_label"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 # defaultMessage: Tempo di lettura

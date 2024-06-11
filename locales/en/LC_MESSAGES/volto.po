@@ -792,6 +792,11 @@ msgstr "Other documents"
 msgid "altri_documenti_persona"
 msgstr "Other documents"
 
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
+# defaultMessage: Altri incarichi
+msgid "altri_incarichi"
+msgstr "Other roles"
+
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 # defaultMessage: Mostra l'immagine per tutti gli elementi
 msgid "always_show_image"
@@ -2893,6 +2898,11 @@ msgstr ""
 # defaultMessage: Quartiere
 msgid "quartiere"
 msgstr "District "
+
+#: components/ItaliaTheme/Blocks/Listing/Commons/RassegnaInfo
+# defaultMessage: Rassegna:
+msgid "rassegna_label"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 # defaultMessage: Tempo di lettura

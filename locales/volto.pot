@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-05-15T15:55:46.048Z\n"
+"POT-Creation-Date: 2024-06-11T14:57:29.832Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -792,6 +792,11 @@ msgstr ""
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Altri documenti
 msgid "altri_documenti_persona"
+msgstr ""
+
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
+# defaultMessage: Altri incarichi
+msgid "altri_incarichi"
 msgstr ""
 
 #: config/Blocks/ListingOptions/cardWithImageTemplate
@@ -2894,6 +2899,11 @@ msgstr ""
 #: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Quartiere
 msgid "quartiere"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Commons/RassegnaInfo
+# defaultMessage: Rassegna:
+msgid "rassegna_label"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader

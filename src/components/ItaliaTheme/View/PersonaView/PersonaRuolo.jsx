@@ -74,6 +74,10 @@ const messages = defineMessages({
     defaultMessage:
       "Ha fatto parte dell'organizzazione comunale come {incarico} fino al",
   },
+  altri_incarichi: {
+    id: 'altri_incarichi',
+    defaultMessage: 'Altri incarichi',
+  },
 });
 
 const PersonaRuolo = ({ content }) => {
@@ -86,16 +90,16 @@ const PersonaRuolo = ({ content }) => {
             tag_id="incarico"
             title={intl.formatMessage(messages.ruolo)}
           >
-            {content?.incarichi_persona?.map((incarico) => (
-              <div className="font-serif" key={incarico.id}>
-                <p>{incarico.title}</p>
-                {incarico.atto_di_nomina && (
-                  <UniversalLink href={incarico.atto_di_nomina}>
-                    {intl.formatMessage(messages.atto_nomina)}
-                  </UniversalLink>
-                )}
-              </div>
-            ))}
+            <div className="font-serif" key={content?.incarichi_persona[0]?.id}>
+              <p>{content?.incarichi_persona[0]?.title}</p>
+              {content?.incarichi_persona[0]?.atto_di_nomina && (
+                <UniversalLink
+                  href={content?.incarichi_persona[0]?.atto_di_nomina}
+                >
+                  {intl.formatMessage(messages.atto_nomina)}
+                </UniversalLink>
+              )}
+            </div>
           </RichTextSection>
           {content.incarichi_persona[0]?.tipologia_incarico?.title && (
             <RichTextSection
@@ -152,7 +156,7 @@ const PersonaRuolo = ({ content }) => {
               title={intl.formatMessage(
                 messages.importi_di_viaggio_e_o_servizi,
               )}
-              data={content.incarichi_persona[0].importi_di_viaggio_e_o_servizi}
+              data={content.incarichi_persona[0].importi_viaggio_servizio}
             >
               {content.incarichi_persona[0]?.importi_di_viaggio_e_o_servizi
                 ?.length > 0 && (
@@ -233,6 +237,26 @@ const PersonaRuolo = ({ content }) => {
           )}
         </>
       )}
+
+      {content.incarichi_persona?.length > 1 && (
+        <RichTextSection
+          tag_id="altri_incarichi"
+          title={intl.formatMessage(messages.altri_incarichi)}
+        >
+          <ul>
+            {content.incarichi_persona.map((incarico, index) =>
+              index > 0 ? (
+                <li key={index}>
+                  <UniversalLink href={incarico['@id']}>
+                    {incarico.title}
+                  </UniversalLink>
+                </li>
+              ) : null,
+            )}
+          </ul>
+        </RichTextSection>
+      )}
+
       {content.assessore_di?.length > 0 && (
         <RichTextSection
           tag_id="assessore_di"
