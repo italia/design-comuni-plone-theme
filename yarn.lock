@@ -3952,15 +3952,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone-collective/volto-sentry@npm:0.3.0":
-  version: 0.3.0
-  resolution: "@plone-collective/volto-sentry@npm:0.3.0"
+"@plone-collective/volto-sentry@npm:0.3.1":
+  version: 0.3.1
+  resolution: "@plone-collective/volto-sentry@npm:0.3.1"
   dependencies:
     "@sentry/browser": 7.15.0
     "@sentry/integrations": 7.15.0
     "@sentry/node": 7.15.0
     "@sentry/webpack-plugin": 1.19.1
-  checksum: 99e5493e46fdc93d69dcdacfdbd7a4ca746952edca805ff095a5fd6789a41820510e4e73d0a4d218f9fbb9b65f80641ac4f2a0c65753a20f193f88e92a04ee1d
+  checksum: cf3a1928608a8444cf09203037063d098da329e62bd2550ca36787f27a96ae8b03b1357943767f4e566f9e51d232ef59a533d8dc438bb6ffa7ce0bcb13b19aa1
   languageName: node
   linkType: hard
 
@@ -8169,7 +8169,7 @@ __metadata:
     "@commitlint/config-conventional": 17.6.6
     "@eeacms/volto-taxonomy": ^1.0.0
     "@loadable/babel-plugin": 5.13.2
-    "@plone-collective/volto-sentry": 0.3.0
+    "@plone-collective/volto-sentry": 0.3.1
     "@plone/scripts": "*"
     "@release-it/conventional-changelog": 5.1.1
     bootstrap-italia: 2.6.1
@@ -8211,24 +8211,24 @@ __metadata:
     typeface-lora: 0.0.72
     typeface-roboto-mono: 0.0.75
     typeface-titillium-web: 0.0.72
-    volto-blocks-widget: 3.4.0
+    volto-blocks-widget: 3.4.1
     volto-data-grid-widget: 2.3.1
-    volto-dropdownmenu: 4.1.1
-    volto-editablefooter: 5.1.1
-    volto-feedback: 0.3.0
-    volto-form-block: 3.8.3
-    volto-gdpr-privacy: 2.2.5
+    volto-dropdownmenu: 4.1.3
+    volto-editablefooter: 5.1.6
+    volto-feedback: 0.3.2
+    volto-form-block: 3.8.5
+    volto-gdpr-privacy: 2.2.6
     volto-google-analytics: 2.0.0
     volto-multilingual-widget: 3.2.1
     volto-querywidget-with-browser: 0.4.2
     volto-rss-block: 3.0.0
-    volto-secondarymenu: 4.0.0
-    volto-slimheader: 0.1.1
+    volto-secondarymenu: 4.1.1
+    volto-slimheader: 0.1.2
     volto-social-settings: 3.0.0
-    volto-subblocks: 2.0.0
-    volto-subfooter: 3.0.0
-    volto-subsites: 4.0.0
-    volto-venue: 4.0.2
+    volto-subblocks: 2.1.0
+    volto-subfooter: 3.1.1
+    volto-subsites: 4.0.1
+    volto-venue: 4.1.0
     webpack-image-resize-loader: ^5.0.0
   peerDependencies:
     "@plone/volto": 17.7.0
@@ -16075,12 +16075,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-blocks-widget@npm:3.4.0":
-  version: 3.4.0
-  resolution: "volto-blocks-widget@npm:3.4.0"
+"volto-blocks-widget@npm:3.4.1":
+  version: 3.4.1
+  resolution: "volto-blocks-widget@npm:3.4.1"
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 355675359cc64b23c0357de8b952195a9693543a7e95c2c1f463b65fc7bd081d64aca8f2086e95775d5771f7071d681276f18a968e666dbead40e2c48ee9843a
+  checksum: 4f5c183698e38edd40f24d7f35d3d59745c67b77ffaf0b2e448d8c7696453e9c83bbcd1b3c91599e6ccb77d64177fd7923d9ad36607dc1a41cba7fa9b20029b2
   languageName: node
   linkType: hard
 
@@ -16093,65 +16093,65 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-dropdownmenu@npm:4.1.1":
-  version: 4.1.1
-  resolution: "volto-dropdownmenu@npm:4.1.1"
+"volto-dropdownmenu@npm:4.1.3":
+  version: 4.1.3
+  resolution: "volto-dropdownmenu@npm:4.1.3"
   dependencies:
     react-outside-click-handler: 1.3.0
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 81edb600753e8fbe3ec7a1fe2bac342925f5b3b6dbdec2377972fa6f06e3cf46396eb5857e7da99d8372d1c73c2c25d619f6ae092baf631501101208239e2913
+  checksum: 5dc76c2ee7f71b0946dfa9add41549cce4fbd1fd2a3fcf3e6f6395880dbea029c9012202cdc8bf3009de090aee75188f761b55ebdbcefd9de117ad87e5b64dfd
   languageName: node
   linkType: hard
 
-"volto-editablefooter@npm:5.1.1":
-  version: 5.1.1
-  resolution: "volto-editablefooter@npm:5.1.1"
+"volto-editablefooter@npm:5.1.6":
+  version: 5.1.6
+  resolution: "volto-editablefooter@npm:5.1.6"
   dependencies:
     react-outside-click-handler: 1.3.0
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
     volto-blocks-widget: ">=3.4.0"
-  checksum: c9a2e1f96f1aacf10b30052eac5a4f069afc9e32773b0d2f7a35f9a7b5711c2dd4f9cc59acb6d6ada488071cee9cd8fcca732ad59d45acc866140f5ee1c6689e
+  checksum: 0e479d49c417e4eac3d15d49752bab794647b24b7eb800dbfd841d351a681d34b1353a03a2c681c53c8be4cc4336b14b07a1320d4bae29ee2112402ce90edac4
   languageName: node
   linkType: hard
 
-"volto-feedback@npm:0.3.0":
-  version: 0.3.0
-  resolution: "volto-feedback@npm:0.3.0"
+"volto-feedback@npm:0.3.2":
+  version: 0.3.2
+  resolution: "volto-feedback@npm:0.3.2"
   dependencies:
     react-google-recaptcha-v3: 1.9.5
     semantic-ui-css: 2.5.0
   peerDependencies:
     "@plone/volto": ">=16.0.0"
-  checksum: 5d4fe0327995d0e6dfaaed5594938b463212856d80b66619f19815fcd1c65b71ed422f47b012082900dfff176d18806f6e568091ae1239288e870b5996a370b7
+  checksum: bfc7951ca5761640896e54fbe84c612176f95bad06682b198596425905b592bf1a287664cc1a8ebade814325c4514313043e62568ae3ac2325a18a43d2c43722
   languageName: node
   linkType: hard
 
-"volto-form-block@npm:3.8.3":
-  version: 3.8.3
-  resolution: "volto-form-block@npm:3.8.3"
+"volto-form-block@npm:3.8.5":
+  version: 3.8.5
+  resolution: "volto-form-block@npm:3.8.5"
   dependencies:
     "@hcaptcha/react-hcaptcha": ^0.3.6
     file-saver: ^2.0.5
     react-google-recaptcha-v3: ^1.8.0
-    volto-subblocks: ^2.0.0
+    volto-subblocks: ^2.1.0
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-    volto-subblocks: ^2.0.0
-  checksum: 44b043f3eab2ef11c328b1b185ea9711a6e67344745708f5b9f293fcde75f6037e5cd5e9baee2ee0ce4a661a1ef752564d73da12e4b792a475bce6b4bc0a47b8
+    volto-subblocks: ^2.1.0
+  checksum: db8d56e91b3c109803bf7006d96a0b8635f9fa96ec6faaae72bec7b3747f7980e2357d7c7f8c424a6b52d0ff6049da60030de8ea597697dd861c7eb1fd088611
   languageName: node
   linkType: hard
 
-"volto-gdpr-privacy@npm:2.2.5":
-  version: 2.2.5
-  resolution: "volto-gdpr-privacy@npm:2.2.5"
+"volto-gdpr-privacy@npm:2.2.6":
+  version: 2.2.6
+  resolution: "volto-gdpr-privacy@npm:2.2.6"
   dependencies:
     react-focus-lock: 2.9.4
     volto-multilingual-widget: 3.2.1
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 0cfc4e9ba7a7f19d9f71e2f8932a94f3a68a1cda6156b490e84b3e7855a5675b146029f261e65485150b0ff5697fa08c378a7c19c4a67542f644718fe5838962
+  checksum: 604badfe7225ccc6783c05bada9fb03c07a66e673de6ca8bb681b9aedb48c2dd25213001f60a31e288811686dd41e28c0d38d95c8793df0b56ce5abe3b022087
   languageName: node
   linkType: hard
 
@@ -16198,21 +16198,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-secondarymenu@npm:4.0.0":
-  version: 4.0.0
-  resolution: "volto-secondarymenu@npm:4.0.0"
+"volto-secondarymenu@npm:4.1.1":
+  version: 4.1.1
+  resolution: "volto-secondarymenu@npm:4.1.1"
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: cec270574025c0fdf66f050261d018738fb3784ff6d90524d6e034722aaa5e62216f286b720c45829e2de7fdc20cf694c49f5aeae37f6cad65dce88da1a03ade
+  checksum: 94eeac0bc4143825494448ecf80c135126d74f9901b63de148e266b0b3e2e98b24081fa7409074455b11505d8adbb9bab9673d6cc3b634ef847b2ad80b84f622
   languageName: node
   linkType: hard
 
-"volto-slimheader@npm:0.1.1":
-  version: 0.1.1
-  resolution: "volto-slimheader@npm:0.1.1"
+"volto-slimheader@npm:0.1.2":
+  version: 0.1.2
+  resolution: "volto-slimheader@npm:0.1.2"
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 94bafa197c4ef2c8cbb15333df102fa189220cac5e24a95d330ebf1544a0203d4ec33fdbd7aafcc006d0bdbd529c87aa88f827ea7a8d9ef7ecb361291cab90af
+  checksum: fb657c3274785f3201d7720e8fde999e1be6cec18bda98634d6ed68192a524cbbb4298b48b9758d3600549b37db1bcc69b6a2f3264193f0956bb57dcc0db0e9b
   languageName: node
   linkType: hard
 
@@ -16225,46 +16225,46 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-subblocks@npm:2.0.0, volto-subblocks@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "volto-subblocks@npm:2.0.0"
+"volto-subblocks@npm:2.1.0, volto-subblocks@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "volto-subblocks@npm:2.1.0"
   dependencies:
     react-dnd: ^5.0.0
     react-dnd-html5-backend: ^5.0.1
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 7e4774cd63aad14d46f8371d725d800cc978dafb3672cb9ddb16e032b8fc849948d7e39301c3d55864a40d5143e101fd819165ba5254a016be31812f826c4f76
+  checksum: a1cc02ca26176b44398445084c9b90330e898ccb725247f131e71dcc8b1c9e70b3352b8dd4fcf322ea60df7970c02f001454151ab7a82b7a6f6ab96ed4ffc8d5
   languageName: node
   linkType: hard
 
-"volto-subfooter@npm:3.0.0":
-  version: 3.0.0
-  resolution: "volto-subfooter@npm:3.0.0"
+"volto-subfooter@npm:3.1.1":
+  version: 3.1.1
+  resolution: "volto-subfooter@npm:3.1.1"
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: c7619ac55e4e8d148c080e3333f612afb2b38a42b2f754f984cf0725972684625e84f5bab4c03f4480ce7911c8833cdfdf66765ed47496022cb983cdbd178a8e
+  checksum: d03848013d08790d5a736c9e788ed101cbe0d7d89eb6c73eef45e330cc3082edf1f3ccbb787a98ed25a1b90719b7caf9f7c96d7b013cf3ae9c6682a12169bd3a
   languageName: node
   linkType: hard
 
-"volto-subsites@npm:4.0.0":
-  version: 4.0.0
-  resolution: "volto-subsites@npm:4.0.0"
+"volto-subsites@npm:4.0.1":
+  version: 4.0.1
+  resolution: "volto-subsites@npm:4.0.1"
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 9f943abc00fb1d25d1bf2b487b9f545663ad85b216c751a2fd37739cea7cfd62de958edc8bdfbb51b3e795007199706b272f344e9e08179874a02f903b3e2071
+  checksum: 0796a9f77c2a4666898ecc6d23af3d7c15afe9053a6ea2f690db0cb93082327143225f02620591033b335b94f0fa7f78fed458157cdb1142cf47739e5678b8ae
   languageName: node
   linkType: hard
 
-"volto-venue@npm:4.0.2":
-  version: 4.0.2
-  resolution: "volto-venue@npm:4.0.2"
+"volto-venue@npm:4.1.0":
+  version: 4.1.0
+  resolution: "volto-venue@npm:4.1.0"
   dependencies:
     leaflet: 1.6.0
     leaflet.markercluster: 1.5.0
     react-leaflet: 2.7.0
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: d6ebdb2e3da5de55a565939c814218a331b6611ce6211758d32d6c908882f30a16f885c9d316a40f2b00521d252f224f45aba7759f6f128a40e51df4f0e773a9
+  checksum: 64ca36bc93a08e503fdc372476020a0643b109819b101a604c24221655a8c43d6a8b20ed61b759d1ad0a8d6a82b5c1b6c687438a7847ff40770e0d15dd1c0292
   languageName: node
   linkType: hard
 
