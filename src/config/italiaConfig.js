@@ -342,8 +342,10 @@ export default function applyConfig(voltoConfig) {
   };
 
   config.settings.nonContentRoutes = config.settings.nonContentRoutes.filter(
-    (route) => route !== '/contact-form',
+    (route) => route !== '/contact-form' && route !== '/diff',
   );
+  config.settings.nonContentRoutes.push(/\/diff$/);
+  config.settings.nonContentRoutes.push('/diff\\?');
   config.settings.nonContentRoutes.push('/release-log');
 
   /******************************************************************************
