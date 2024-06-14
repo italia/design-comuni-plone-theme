@@ -1,5 +1,18 @@
 # Changelog
 
+## [12.0.0-alpha.9](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.8...v12.0.0-alpha.9) (2024-06-14)
+
+
+### Features
+
+* indicate le rassegne nei listing ([#689](https://github.com/RedTurtle/design-comuni-plone-theme/issues/689)) ([c2bde36](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c2bde36a0199563c215e59db3f3bd5c987937c0d))
+* show more than one incarico in CT Persona ([#692](https://github.com/RedTurtle/design-comuni-plone-theme/issues/692)) ([b31fe3a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b31fe3ae0ff11aadae09238fe918fa65d1c79dcc))
+
+
+### Maintenance
+
+* **perf:** updated dependencies ([af35d17](https://github.com/RedTurtle/design-comuni-plone-theme/commit/af35d17b2ebde7db6dad2c8b5b6329f98974861f))
+
 ## [12.0.0-alpha.8](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.7...v12.0.0-alpha.8) (2024-06-10)
 
 
