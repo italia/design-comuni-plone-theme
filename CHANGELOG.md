@@ -1,5 +1,12 @@
 # Changelog
 
+## [12.0.0-alpha.10](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.9...v12.0.0-alpha.10) (2024-06-14)
+
+
+### Bug Fixes
+
+* volto-form-block form result ([289f808](https://github.com/RedTurtle/design-comuni-plone-theme/commit/289f80829d769149f77243deba725f4ffadadff5))
+
 ## [12.0.0-alpha.9](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.8...v12.0.0-alpha.9) (2024-06-14)
 
 
