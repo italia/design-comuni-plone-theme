@@ -1,3 +1,15 @@
+## [12.0.0-alpha.11](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.10...v12.0.0-alpha.11) (2024-06-18)
+
+
+### Bug Fixes
+
+* megamenu active item ([#703](https://github.com/RedTurtle/design-comuni-plone-theme/issues/703)) ([ddd4efb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ddd4efba19f95c486277302fa5cea01b4ef82f01))
+
+
+### Maintenance
+
+* updated RELEASE.md ([fb806ee](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fb806ee593dc9957c436977e9e6ce521b1a9c1f1))
+
 # Changelog
 
 ## [12.0.0-alpha.10](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.9...v12.0.0-alpha.10) (2024-06-14)
