@@ -41,6 +41,10 @@
 - ...
 -->
 
+## Versione xx.xx.xx (dd/mm/yyyy)
+
+- il pulsante di aggiunta del blocco è stato spostato nella parte bassa del blocco (non si trova più alla sua sinistra), per migliorare l'usabilità della gestione dei blocchi anche su mobile/tablet
+
 ## Versione 11.13.0 (12/06/2024)
 
 ### Migliorie
