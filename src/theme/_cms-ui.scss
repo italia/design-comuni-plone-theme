@@ -250,6 +250,11 @@ body.cms-ui {
     }
   }
 
+  /*Block chooser*/
+  [data-popper-placement] {
+    z-index: 1000;
+  }
+
   .sidebar-container {
     .numbers-block-sidebar-form-container {
       padding-bottom: 1rem;
