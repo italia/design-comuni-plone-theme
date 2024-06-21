@@ -1,5 +1,23 @@
 
 
+## [11.14.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.13.0...v11.14.0) (2024-06-21)
+
+
+### Features
+
+* button block pos editor ([#704](https://github.com/RedTurtle/design-comuni-plone-theme/issues/704)) ([8cf55af](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8cf55afe4d2864ec72a2eba166d9e838b2304899))
+
+
+### Bug Fixes
+
+* megamenu active item ([#703](https://github.com/RedTurtle/design-comuni-plone-theme/issues/703)) ([f6668ef](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f6668ef7e7f6eaf624a3c3bd2eaf557d7f32ac14))
+* volto-form-block form result ([#700](https://github.com/RedTurtle/design-comuni-plone-theme/issues/700)) ([746502f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/746502f827359205374d54eda99ac4efd47502ba))
+
+
+### Documentation
+
+* updated publiccode and release log ([309474a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/309474adfde862d56c35c9b0832925cc157ecef0))
+
 ## [11.13.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.12.9...v11.13.0) (2024-06-12)
 
 
