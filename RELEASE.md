@@ -42,6 +42,21 @@
 -->
 
 ## Versione xx.xx.xx (dd/mm/yyyy)
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- Le informazioni sulla data di inizio e fine incarico sul CT persona vengono ora mostrate subito dopo l'incarico.
+
+### Fix
+
+- ...
+
+## Versione 11.14.0 (21/06/2024)
 
 - il pulsante di aggiunta del blocco è stato spostato nella parte bassa del blocco (non si trova più alla sua sinistra), per migliorare l'usabilità della gestione dei blocchi anche su mobile/tablet
 
