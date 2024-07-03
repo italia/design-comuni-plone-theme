@@ -90,7 +90,10 @@ const PersonaRuolo = ({ content }) => {
             tag_id="incarico"
             title={intl.formatMessage(messages.ruolo)}
           >
-            <div className="font-serif" key={content?.incarichi_persona[0]?.id}>
+            <div
+              className="font-serif mb-3"
+              key={content?.incarichi_persona[0]?.id}
+            >
               <p>{content?.incarichi_persona[0]?.title}</p>
               {content?.incarichi_persona[0]?.atto_di_nomina && (
                 <UniversalLink
@@ -100,6 +103,51 @@ const PersonaRuolo = ({ content }) => {
                 </UniversalLink>
               )}
             </div>
+
+            {content.incarichi_persona[0].data_inizio_incarico && (
+              <RichTextSection
+                tag_id="data_inizio_incarico"
+                title={intl.formatMessage(messages.data_inizio_incarico)}
+              >
+                <div className="font-serif">
+                  {viewDate(
+                    intl.locale,
+                    content.incarichi_persona[0].data_inizio_incarico,
+                    'DD MMMM Y',
+                  )}
+                </div>
+              </RichTextSection>
+            )}
+            {content.incarichi_persona[0].data_conclusione_incarico && (
+              <RichTextSection
+                tag_id="data_conclusione_incarico"
+                title={intl.formatMessage(messages.data_conclusione_incarico, {
+                  incarico: content.incarichi_persona[0].title,
+                })}
+              >
+                <div className="font-serif">
+                  {viewDate(
+                    intl.locale,
+                    content.incarichi_persona[0].data_conclusione_incarico,
+                    'DD MMMM Y',
+                  )}
+                </div>
+              </RichTextSection>
+            )}
+            {content.incarichi_persona[0].data_insediamento && (
+              <RichTextSection
+                tag_id="data_insediamento"
+                title={intl.formatMessage(messages.data_insediamento)}
+              >
+                <div className="font-serif">
+                  {viewDate(
+                    intl.locale,
+                    content.incarichi_persona[0].data_insediamento,
+                    'DD MMMM Y',
+                  )}
+                </div>
+              </RichTextSection>
+            )}
           </RichTextSection>
           {content.incarichi_persona[0]?.tipologia_incarico?.title && (
             <RichTextSection
@@ -189,50 +237,6 @@ const PersonaRuolo = ({ content }) => {
                   </div>
                 </div>
               )}
-            </RichTextSection>
-          )}
-          {content.incarichi_persona[0].data_insediamento && (
-            <RichTextSection
-              tag_id="data_insediamento"
-              title={intl.formatMessage(messages.data_insediamento)}
-            >
-              <div className="font-serif">
-                {viewDate(
-                  intl.locale,
-                  content.incarichi_persona[0].data_insediamento,
-                  'DD MMMM Y',
-                )}
-              </div>
-            </RichTextSection>
-          )}
-          {content.incarichi_persona[0].data_inizio_incarico && (
-            <RichTextSection
-              tag_id="data_inizio_incarico"
-              title={intl.formatMessage(messages.data_inizio_incarico)}
-            >
-              <div className="font-serif">
-                {viewDate(
-                  intl.locale,
-                  content.incarichi_persona[0].data_inizio_incarico,
-                  'DD MMMM Y',
-                )}
-              </div>
-            </RichTextSection>
-          )}
-          {content.incarichi_persona[0].data_conclusione_incarico && (
-            <RichTextSection
-              tag_id="data_conclusione_incarico"
-              title={intl.formatMessage(messages.data_conclusione_incarico, {
-                incarico: content.incarichi_persona[0].title,
-              })}
-            >
-              <div className="font-serif">
-                {viewDate(
-                  intl.locale,
-                  content.incarichi_persona[0].data_conclusione_incarico,
-                  'DD MMMM Y',
-                )}
-              </div>
             </RichTextSection>
           )}
         </>
