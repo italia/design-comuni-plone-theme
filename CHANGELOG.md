@@ -1,5 +1,24 @@
 
 
+## [11.15.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.14.0...v11.15.0) (2024-07-05)
+
+
+### Features
+
+* moved start and end date of incarico after incarico name ([#715](https://github.com/RedTurtle/design-comuni-plone-theme/issues/715)) ([c07c1ea](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c07c1ea41b3534ad0c05ba2b9990c7b1c8f226ff))
+* update to volto 17.18.1 ([8896926](https://github.com/RedTurtle/design-comuni-plone-theme/commit/889692614b5728bd812754dea9191c5bcb127a0a))
+
+
+### Bug Fixes
+
+* updated form validation customization ([f3d2e72](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f3d2e72b47c8ce33326d0b4b5ca87daf9e874668))
+* upgrade dependencies ([4ea3806](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4ea38067018f2bbd35566b4d70ed87e9362988ef))
+
+
+### Documentation
+
+* updated publiccode and release log ([91a58b6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/91a58b6f124da03e10437c0ee4f48b9545d51ddf))
+
 ## [11.14.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.13.0...v11.14.0) (2024-06-21)
 
 
