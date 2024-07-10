@@ -41,6 +41,20 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- Tutti i campi compilabili nel CT Incarico vengono ora visualizzati nella vista corrispondente.
+
+### Novità
+
+- ...
+
+### Fix
+
+- ...
+
 ## Versione 11.15.0 (05/07/2024)
 
 ### Novità

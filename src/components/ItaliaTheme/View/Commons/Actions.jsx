@@ -10,7 +10,7 @@ import {
   Button,
 } from 'design-react-kit';
 import { toPublicURL } from '@plone/volto/helpers';
-import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import Icon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/Icon';
 
 /**
  * Actions view component class.
@@ -98,7 +98,7 @@ const Actions = (props) => {
         <LinkList>
           {socials.map((item, i) => {
             const commonButtonProps = {
-              icon: false,
+              icon: undefined,
               title: item.title,
               alt: item.title,
               'aria-label': item.title,

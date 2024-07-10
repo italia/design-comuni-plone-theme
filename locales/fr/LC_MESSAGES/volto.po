@@ -1470,6 +1470,7 @@ msgstr ""
 msgid "data_conclusione"
 msgstr ""
 
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Ha fatto parte dell'organizzazione comunale come {incarico} fino al
 msgid "data_conclusione_incarico"
@@ -1480,6 +1481,7 @@ msgstr "Date de conclusion de la mission"
 msgid "data_inizio"
 msgstr ""
 
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Data di inizio dell'incarico
 msgid "data_inizio_incarico"
@@ -1487,7 +1489,7 @@ msgstr ""
 
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
-# defaultMessage: Data insediamento
+# defaultMessage: Data di insediamento
 msgid "data_insediamento"
 msgstr "Date de règlement"
 

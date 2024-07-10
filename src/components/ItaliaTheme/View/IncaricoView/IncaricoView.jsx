@@ -5,7 +5,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl } from 'react-intl';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   PageHeader,
@@ -24,11 +23,25 @@ import {
 import { contentFolderHasItems } from 'design-comuni-plone-theme/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const messages = defineMessages({
   tipologia_incarico: {
     id: 'tipologia_incarico',
     defaultMessage: 'Tipo di incarico',
+  },
+  data_inizio_incarico: {
+    id: 'data_inizio_incarico',
+    defaultMessage: "Data di inizio dell'incarico",
+  },
+  data_conclusione_incarico: {
+    id: 'data_conclusione_incarico',
+    defaultMessage:
+      "Ha fatto parte dell'organizzazione comunale come {incarico} fino al",
+  },
+  data_insediamento: {
+    id: 'data_insediamento',
+    defaultMessage: 'Data di insediamento',
   },
   importi_viaggio: {
     id: 'importi_viaggio',
@@ -54,10 +67,6 @@ const messages = defineMessages({
     id: 'data_conclusione',
     defaultMessage: 'Data conclusione incarico',
   },
-  data_insediamento: {
-    id: 'data_insediamento',
-    defaultMessage: 'Data insediamento',
-  },
   atto_nomina: {
     id: 'atto_nomina',
     defaultMessage: 'Atto di nomina',
@@ -69,9 +78,10 @@ const messages = defineMessages({
  * @param {Object} content Content object.
  * @returns {string} Markup of the component.
  */
-const IncaricoView = (props) => {
-  const { content } = props;
+const IncaricoView = ({ content, moment: momentlib }) => {
+  const moment = momentlib.default;
   const intl = useIntl();
+
   return (
     <div className="container px-4 my-4 incarico-view">
       <SkipToMainContent />
@@ -91,6 +101,38 @@ const IncaricoView = (props) => {
             title={intl.formatMessage(messages.tipologia_incarico)}
           >
             <div className="font-serif">{content.tipologia_incarico.title}</div>
+          </RichTextSection>
+        )}
+        {content.data_inizio_incarico && (
+          <RichTextSection
+            tag_id="data_inizio_incarico"
+            title={intl.formatMessage(messages.data_inizio_incarico)}
+          >
+            <div className="font-serif">
+              {moment(content.data_inizio_incarico).format('D-MM-YYYY')}
+            </div>
+          </RichTextSection>
+        )}
+        {content.data_conclusione_incarico && (
+          <RichTextSection
+            tag_id="data_conclusione_incarico"
+            title={intl.formatMessage(messages.data_conclusione_incarico, {
+              incarico: content.title,
+            })}
+          >
+            <div className="font-serif">
+              {moment(content.data_conclusione_incarico).format('D-MM-YYYY')}
+            </div>
+          </RichTextSection>
+        )}
+        {content.data_insediamento && (
+          <RichTextSection
+            tag_id="data_insediamento"
+            title={intl.formatMessage(messages.data_insediamento)}
+          >
+            <div className="font-serif">
+              {moment(content.data_insediamento).format('D-MM-YYYY')}
+            </div>
           </RichTextSection>
         )}
         {richTextHasContent(content.compensi) && (
@@ -196,4 +238,4 @@ IncaricoView.propTypes = {
   }).isRequired,
 };
 
-export default injectIntl(IncaricoView);
+export default injectLazyLibs(['moment'])(IncaricoView);

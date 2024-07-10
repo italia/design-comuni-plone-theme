@@ -1,3 +1,4 @@
+import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
 import {
@@ -85,15 +86,12 @@ const PersonaRuolo = ({ content }) => {
   return (
     <>
       {content?.incarichi_persona?.length > 0 && (
-        <>
+        <React.Fragment key={content?.incarichi_persona[0]?.id}>
           <RichTextSection
             tag_id="incarico"
             title={intl.formatMessage(messages.ruolo)}
           >
-            <div
-              className="font-serif mb-3"
-              key={content?.incarichi_persona[0]?.id}
-            >
+            <div className="font-serif mb-3">
               <p>{content?.incarichi_persona[0]?.title}</p>
               {content?.incarichi_persona[0]?.atto_di_nomina && (
                 <UniversalLink
@@ -239,7 +237,7 @@ const PersonaRuolo = ({ content }) => {
               )}
             </RichTextSection>
           )}
-        </>
+        </React.Fragment>
       )}
 
       {content.incarichi_persona?.length > 1 && (

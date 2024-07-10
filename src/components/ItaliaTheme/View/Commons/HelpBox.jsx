@@ -2,7 +2,7 @@ import React from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import PropTypes from 'prop-types';
 import { Callout, CalloutTitle } from 'design-react-kit';
-import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import Icon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/Icon';
 import { RichText } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const HelpBox = ({ text }) => {
