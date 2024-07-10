@@ -49,7 +49,7 @@
 
 ### Novità
 
-- ...
+- Aggiunti due campi nel blocco Form che permettono di configurare un testo per l'intestazione e uno a piè di pagina nella mail inviata.
 
 ### Fix
 
