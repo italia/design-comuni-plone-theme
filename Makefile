@@ -27,7 +27,7 @@ CURRENT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 # ADDON ?= "design-comuni-plone-theme"
 
 PLONE_VERSION=6
-VOLTO_VERSION=17.18.1
+VOLTO_VERSION=17.18.2
 
 ADDON_NAME='design-comuni-plone-theme'
 ADDON_PATH='design-comuni-plone-theme'
