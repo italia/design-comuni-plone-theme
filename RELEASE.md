@@ -41,7 +41,7 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.16.0 (10/07/2024)
 
 ### Migliorie
 
@@ -50,10 +50,6 @@
 ### Novità
 
 - Aggiunti due campi nel blocco Form che permettono di configurare un testo per l'intestazione e uno a piè di pagina nella mail inviata.
-
-### Fix
-
-- ...
 
 ## Versione 11.15.0 (05/07/2024)
 
