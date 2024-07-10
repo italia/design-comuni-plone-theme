@@ -1,5 +1,23 @@
 
 
+## [11.16.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.15.0...v11.16.0) (2024-07-10)
+
+
+### Features
+
+* added date fields to incarico view ([#711](https://github.com/RedTurtle/design-comuni-plone-theme/issues/711)) ([038ef58](https://github.com/RedTurtle/design-comuni-plone-theme/commit/038ef5803af9bcb417fc757bb8ee6a57e065bad7))
+* updated volto-form-block v3.9.2 ([#709](https://github.com/RedTurtle/design-comuni-plone-theme/issues/709)) ([1b9fde0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1b9fde00f01f646eb27f088e09e662c9c1c8d9d6))
+
+
+### Bug Fixes
+
+* update to volto 17.18.2 ([c1ce5ac](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c1ce5ac3239b77b819909e224cbb07f0097230ea))
+
+
+### Documentation
+
+* updated publiccode and release log ([5ea19f6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5ea19f65ffeac054e318c77014d4a0bab478415f))
+
 ## [11.15.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.14.0...v11.15.0) (2024-07-05)
 
 
