@@ -41,12 +41,10 @@
 - ...
 -->
 
-## Versione xx.xx.xx (dd/mm/yyyy)
 ## Versione X.X.X (dd/mm/yyyy)
 
 ### Migliorie
 
-- ...
 - Tutti i campi compilabili nel CT Incarico vengono ora visualizzati nella vista corrispondente.
 
 ### Novità
@@ -63,10 +61,6 @@
 
 - Le informazioni sulla data di inizio e fine incarico sul CT persona vengono ora mostrate subito dopo l'incarico.
 
-### Fix
-
-- ...
-
 ## Versione 11.14.0 (21/06/2024)
 
 - il pulsante di aggiunta del blocco è stato spostato nella parte bassa del blocco (non si trova più alla sua sinistra), per migliorare l'usabilità della gestione dei blocchi anche su mobile/tablet
@@ -77,10 +71,6 @@
 
 - Nel CT Persona viene visualizzato anche il testo del campo "Importi di viaggio e/o servizi" impostato nel CT Incarico collegato e, se presente più di un Incarico collegato, vengono mostrati i link a ciascun Incarico nella sezione "Altri incarichi".
 
-### Novità
-
-- ...
-
 ### Fix
 
 - Il bottone "callout con sfondo" della barra degli strumenti per il testo è nuovamente visibile.
@@ -88,27 +78,11 @@
 
 ## Versione 11.12.9 (06/06/2024)
 
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
-
 ### Fix
 
 - Il layout delle card con immagini rimane corretto anche selezionando l'opzione "Non alterare le dimensioni naturali dell'immagine".
 
 ## Versione 11.12.5 (30/05/2024)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
 
 ### Fix
 
@@ -238,6 +212,7 @@
 - Nel blocco con icone, se era impostata una immagine di sfondo non si vedeva.
 
 ## Versione 11.6.1 (06/03/2024)
+
 ### Migliorie
 
 - Nel blocco form, se in fase di compilazione ci sono degli errori, viene mostrato un messaggio di errore specifico per ogni campo con errori.
