@@ -67,9 +67,12 @@ const RenderBlocks = ({
 
         if (Block != null) {
           return (
-            <Wrapper block={blockContent[blocksFieldname]?.[block]} id={block}>
+            <Wrapper
+              block={blockContent[blocksFieldname]?.[block]}
+              id={block}
+              key={block}
+            >
               <Block
-                key={block}
                 id={block}
                 properties={content ?? data}
                 data={{
