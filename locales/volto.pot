@@ -3337,7 +3337,7 @@ msgid "search_startDate"
 msgstr ""
 
 #: helpers/Translations/searchBlockExtendedTranslations
-# defaultMessage: Ricerca per: <em>{searchedtext}</em>. 
+# defaultMessage: Ricerca per: <em>{searchedtext}</em>.
 msgid "searchedFor"
 msgstr ""
 

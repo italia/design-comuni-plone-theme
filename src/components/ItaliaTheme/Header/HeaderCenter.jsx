@@ -30,14 +30,6 @@ const messages = defineMessages({
 const HeaderCenter = () => {
   const intl = useIntl();
   const subsite = useSelector((state) => state.subsite?.data);
-  const logoSubsite = subsite?.subsite_logo && (
-    <figure className="icon">
-      <img
-        src={flattenToAppURL(subsite.subsite_logo.scales?.mini?.download)}
-        alt={intl.formatMessage(messages.logoSubsiteAlt)}
-      />
-    </figure>
-  );
 
   return (
     <Header small={false} theme="" type="center">
@@ -47,7 +39,9 @@ const HeaderCenter = () => {
             href={subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'}
             title={intl.formatMessage(messages.subsiteUniversalLink)}
           >
-            {subsite?.subsite_logo ? logoSubsite : <Logo />}
+            <Logo
+              alt={subsite ? intl.formatMessage(messages.logoSubsiteAlt) : null}
+            />
             <BrandText subsite={subsite} />
           </UniversalLink>
         </div>
