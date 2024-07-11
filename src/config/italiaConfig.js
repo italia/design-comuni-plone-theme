@@ -34,6 +34,8 @@ import HandleAnchor from 'design-comuni-plone-theme/components/ItaliaTheme/AppEx
 import GenericAppExtras from 'design-comuni-plone-theme/components/ItaliaTheme/AppExtras/GenericAppExtras';
 import PageLoader from 'design-comuni-plone-theme/components/ItaliaTheme/AppExtras/PageLoader';
 import TrackFocus from 'design-comuni-plone-theme/components/ItaliaTheme/AppExtras/TrackFocus';
+import SiteSettingsExtras from 'design-comuni-plone-theme/components/ItaliaTheme/AppExtras/SiteSettingsExtras';
+
 import { loadables as ItaliaLoadables } from 'design-comuni-plone-theme/config/loadables';
 
 // CTs icons
@@ -63,8 +65,8 @@ import { schemaListing } from 'design-comuni-plone-theme/components/ItaliaTheme/
 
 import reducers from 'design-comuni-plone-theme/reducers';
 
-const ReleaseLog = loadable(() =>
-  import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
+const ReleaseLog = loadable(
+  () => import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
 );
 
 const messages = defineMessages({
@@ -295,6 +297,10 @@ export default function applyConfig(voltoConfig) {
         match: '',
         component: TrackFocus,
       },
+      {
+        match: '',
+        component: SiteSettingsExtras,
+      },
     ],
     maxFileUploadSize: null,
     'volto-blocks-widget': {
@@ -471,6 +477,10 @@ export default function applyConfig(voltoConfig) {
     ...config.components,
     BlockExtraTags: { component: () => null },
   };
+  config.registerComponent({
+    name: 'SiteSettingsExtras',
+    component: SiteSettingsExtras,
+  });
 
   // REDUCERS
   config.addonReducers = {
