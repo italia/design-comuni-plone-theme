@@ -1,3 +1,30 @@
+# Changelog
+
+## [12.0.0-alpha.12](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.11...v12.0.0-alpha.12) (2024-07-11)
+
+
+### Features
+
+* added date fields to incarico view ([#711](https://github.com/RedTurtle/design-comuni-plone-theme/issues/711)) ([7bb0f92](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7bb0f927c77933b34e557cbd7a0f9594bdd25c31))
+* button block pos editor ([#704](https://github.com/RedTurtle/design-comuni-plone-theme/issues/704)) ([5aeb609](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5aeb60902c03cd4504dd57a308540831299a60ab))
+* moved start and end date of incarico after incarico name ([#715](https://github.com/RedTurtle/design-comuni-plone-theme/issues/715)) ([b561b3c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b561b3cb489e4e354850a463c28a4222670ddf0f))
+* site settings to manage title, logo, favicon ([723241d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/723241d20f8b3d788efbf51e7433da7a4eb548f2))
+* update to volto 17.18.1 ([98839c0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/98839c0fb0729cacb6dd5467ba239130d77c5a69))
+* updated volto-form-block v3.9.2 ([#709](https://github.com/RedTurtle/design-comuni-plone-theme/issues/709)) ([05127ad](https://github.com/RedTurtle/design-comuni-plone-theme/commit/05127ad329cf8dcfbf3a40ee1ba2adea2615a5ad))
+
+
+### Bug Fixes
+
+* added missing pager-link data-element in links ([8290c00](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8290c0087b99e50b9a75b845e3f39820510152e6))
+* update to volto 17.18.2 ([15522c7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/15522c7adadc7626af7e1cb18c7d2a242c4c8208))
+* updated form validation customization ([63eae03](https://github.com/RedTurtle/design-comuni-plone-theme/commit/63eae032899715ac8de6990aea0e7433c626cb5a))
+
+
+### Maintenance
+
+* Update RELEASE.md ([479340f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/479340fbc294f9f84e3f769a8540e6434907b686))
+* updated slate testing workflow ([fa44e45](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fa44e45d28909f381c87477dac9526fefc044cea))
+
 ## [12.0.0-alpha.11](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.10...v12.0.0-alpha.11) (2024-06-18)
 
 
@@ -10,7 +37,7 @@
 
 * updated RELEASE.md ([fb806ee](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fb806ee593dc9957c436977e9e6ce521b1a9c1f1))
 
-# Changelog
+
 
 ## [12.0.0-alpha.10](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.9...v12.0.0-alpha.10) (2024-06-14)
 
