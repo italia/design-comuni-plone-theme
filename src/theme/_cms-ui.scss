@@ -94,6 +94,12 @@ body.cms-ui {
     }
   }
 
+  .blocks-widget-container {
+    .block.table .toolbar {
+      top: -3.34rem;
+    }
+  }
+
   .it-header-wrapper,
   .public-ui {
     font-size: 18px;
