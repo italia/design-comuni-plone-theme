@@ -47,6 +47,10 @@
 
 - Ora il titolo, sottotitolo, favicon, logo e logo del footer sono editabili dal pannello di controllo del Sito. Se non impostati, verranno usati quelli definiti dagli sviluppatori.
 
+### Fix
+
+- Ripristinato il funzionamento del filtro luogo nella ricerca eventi.
+
 ## Versione 11.16.0 (10/07/2024)
 
 ### Migliorie
