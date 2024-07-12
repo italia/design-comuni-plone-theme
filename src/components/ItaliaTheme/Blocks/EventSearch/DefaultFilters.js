@@ -36,6 +36,8 @@ const DefaultFilters = () => {
   const intl = useIntl();
   moment.locale(intl.locale);
   const subsite = useSelector((state) => state.subsite?.data);
+  const isSubsiteValid = subsite && Object.keys(subsite).length > 0;
+  const path = isSubsiteValid ? flattenToAppURL(subsite['@id']) : '/';
 
   return {
     text_filter: {
@@ -68,7 +70,7 @@ const DefaultFilters = () => {
           isSearchable: true,
           options: {
             dispatch: {
-              path: subsite ? flattenToAppURL(subsite['@id']) : '/',
+              path: path,
               portal_types: ['Venue'],
               fullobjects: 0,
               b_size: 10000,
