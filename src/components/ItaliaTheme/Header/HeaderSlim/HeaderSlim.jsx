@@ -26,13 +26,20 @@ const HeaderSlim = () => {
 
   const staticParentSiteTitle = getSiteProperty('parentSiteTitle', intl.locale);
 
-  const parentSiteTile = SiteProperty({
-    property: 'site_title',
-    forceValue: subsite ? null : staticParentSiteTitle,
-    defaultValue: staticParentSiteTitle,
-    getValue: true,
-    getParent: true,
-  });
+  // TODO DEPRECATED use only SiteProperty
+  const deprecatedSubsiteParentSiteTitle = getSiteProperty(
+    'subsiteParentSiteTitle',
+    intl.locale,
+  );
+
+  const parentSiteTitle =
+    deprecatedSubsiteParentSiteTitle ||
+    SiteProperty({
+      property: 'site_title',
+      defaultValue: getSiteProperty('subsiteParentSiteTitle', intl.locale),
+      getValue: true,
+      getParent: true,
+    });
 
   const target = subsite ? null : '_blank';
   return (
@@ -44,7 +51,8 @@ const HeaderSlim = () => {
           target={target}
           rel="noopener noreferrer"
         >
-          {parentSiteTile.replaceAll('\\n', ' - ')}
+          {!subsite && staticParentSiteTitle}
+          {subsite && parentSiteTitle.replaceAll('\\n', ' - ')}
         </HeaderBrand>
         <HeaderRightZone>
           <HeaderSlimRightZone />

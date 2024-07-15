@@ -16,11 +16,15 @@ const fieldDataToPlainText = (field) => {
 
 const ServizioMetatag = ({ content }) => {
   const intl = useIntl();
-  let siteTitle = SiteProperty({
-    property: 'site_title',
-    getValue: true,
-    defaultTitle: getSiteProperty('siteTitle', intl.locale),
-  });
+  // TODO DEPRECATED use only SiteProperty
+  const deprecatedSiteTitle = getSiteProperty('siteTitle', intl.locale);
+  let siteTitle =
+    deprecatedSiteTitle ||
+    SiteProperty({
+      property: 'site_title',
+      getValue: true,
+      defaultTitle: getSiteProperty('siteTitle', intl.locale),
+    });
   siteTitle = siteTitle.replaceAll('\\n', ' - ');
 
   const schemaOrg = {
