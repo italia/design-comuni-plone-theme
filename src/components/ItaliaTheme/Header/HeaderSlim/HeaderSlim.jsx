@@ -13,15 +13,18 @@ import {
   HeaderRightZone,
 } from 'design-react-kit';
 import { useIntl } from 'react-intl';
-import { getSiteProperty } from 'design-comuni-plone-theme/helpers';
+import {
+  getSiteProperty,
+  useHomePath,
+} from 'design-comuni-plone-theme/helpers';
 import { SiteProperty } from 'volto-site-settings';
 
 const HeaderSlim = () => {
   const subsite = useSelector((state) => state.subsite?.data);
   const intl = useIntl();
-
+  const homepath = useHomePath();
   const parentSiteURL = subsite
-    ? '/'
+    ? homepath
     : getSiteProperty('parentSiteURL', intl.locale);
 
   const staticParentSiteTitle = getSiteProperty('parentSiteTitle', intl.locale);

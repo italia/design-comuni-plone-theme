@@ -7,6 +7,7 @@ import React from 'react';
 import { Container, Row, Col } from 'design-react-kit';
 
 import { UniversalLink } from '@plone/volto/components';
+import { FooterTop } from 'volto-editablefooter';
 import {
   FooterNavigation,
   FooterInfos,
@@ -14,8 +15,7 @@ import {
   BrandTextFooter,
   FooterPNRRLogo,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/';
-
-import { FooterTop } from 'volto-editablefooter';
+import { useHomePath } from 'design-comuni-plone-theme/helpers';
 
 /**
  * FooterMain component class.
@@ -24,7 +24,7 @@ import { FooterTop } from 'volto-editablefooter';
  */
 const FooterMain = () => {
   const footerTopContent = FooterTop();
-
+  const homepath = useHomePath();
   return (
     <div className="it-footer-main">
       <Container tag="div">
@@ -35,7 +35,7 @@ const FooterMain = () => {
                 {footerTopContent ?? (
                   <>
                     <FooterPNRRLogo />
-                    <UniversalLink href="/">
+                    <UniversalLink href={homepath}>
                       <LogoFooter />
                       <BrandTextFooter />
                     </UniversalLink>

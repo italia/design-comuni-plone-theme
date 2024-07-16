@@ -17,6 +17,8 @@ import {
   FooterSocials,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
+import { useHomePath } from 'design-comuni-plone-theme/helpers';
+
 const messages = defineMessages({
   goToPage: {
     id: 'Vai alla pagina',
@@ -29,7 +31,7 @@ const FooterInfos = () => {
   const N_COLUMNS = 4;
   const location = useLocation();
   const dispatch = useDispatch();
-
+  const homepath = useHomePath();
   const footerConfiguration = useSelector(
     (state) => state.editableFooterColumns?.result,
   );
@@ -41,7 +43,7 @@ const FooterInfos = () => {
   //filter rootpaths
   const footerColumns = getItemsByPath(
     footerConfiguration,
-    location?.pathname?.length ? location.pathname : '/',
+    location?.pathname?.length ? location.pathname : homepath,
   );
 
   const colWidth =
