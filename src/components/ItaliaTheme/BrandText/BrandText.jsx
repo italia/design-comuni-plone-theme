@@ -4,27 +4,27 @@ import { useIntl } from 'react-intl';
 import { SiteProperty } from 'volto-site-settings';
 import { getSiteProperty } from 'design-comuni-plone-theme/helpers';
 
-const BrandText = ({ mobile = false, getParent = false }) => {
+const BrandText = ({ mobile = false }) => {
   const intl = useIntl();
   let title = SiteProperty({
     property: 'site_title',
     defaultValue: getSiteProperty('siteTitle', intl.locale),
     getValue: true,
-    getParent: getParent,
+    getParent: false,
   });
 
   const description = SiteProperty({
     property: 'site_subtitle',
     defaultValue: getSiteProperty('siteSubtitle', intl.locale),
     getValue: true,
-    getParent: getParent,
+    getParent: false,
   });
   const titleSplit = title?.split('\n') ?? null;
   title = titleSplit?.map((t, i) => (
-    <>
+    <React.Fragment key={i}>
       {t}
       {i < titleSplit.length - 1 && <br />}
-    </>
+    </React.Fragment>
   ));
 
   return (
