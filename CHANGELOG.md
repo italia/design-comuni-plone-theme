@@ -1,5 +1,21 @@
 # Changelog
 
+## [12.0.0-alpha.13](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.12...v12.0.0-alpha.13) (2024-07-16)
+
+
+### Bug Fixes
+
+* added check for subsite to path in venue query for events search filter ([#718](https://github.com/RedTurtle/design-comuni-plone-theme/issues/718)) ([4e3cf9e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4e3cf9e94fea913c427274b863b5c6097f7efd5a))
+* blocks widget table block toolbar position ([#716](https://github.com/RedTurtle/design-comuni-plone-theme/issues/716)) ([98adaac](https://github.com/RedTurtle/design-comuni-plone-theme/commit/98adaac3018701edd6411444f044662c7178551a))
+* home link per languageRootFoolder ([#724](https://github.com/RedTurtle/design-comuni-plone-theme/issues/724)) ([d06e75a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d06e75a71e0bf7fd9f12ef8898cbb7700fd9315b))
+* sidebar styles and sidebar slate list style ([4b4ae2f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4b4ae2f9725047aa9f889f4991b1f5e5181764f6))
+* site settings style issues and minor warnings ([#723](https://github.com/RedTurtle/design-comuni-plone-theme/issues/723)) ([0190909](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0190909fb9cfc80aa955e154930dea6192c142e1))
+
+
+### Documentation
+
+* cleanup release log ([abb54d5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/abb54d5627161244fa10c8311f69d4ad69ffcbdc))
+
 ## [12.0.0-alpha.12](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.11...v12.0.0-alpha.12) (2024-07-11)
 
 
