@@ -240,6 +240,10 @@ body.cms-ui {
     }
   }
 
+  .sidebar-container-enter-done {
+    z-index: 150000 !important;
+  }
+
   .sidebar-container .object-listing,
   .icon-align-name {
     svg.icon {
@@ -328,6 +332,11 @@ body.cms-ui {
           }
         }
       }
+    }
+
+    .slate-editor ul li {
+      display: list-item;
+      padding: 0;
     }
   }
 
