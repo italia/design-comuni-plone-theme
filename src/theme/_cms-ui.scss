@@ -8,6 +8,7 @@ body.cms-ui {
     font-size: 18px;
     line-height: 1.555;
   }
+
   .block {
     font-family: $font-family-sans-serif;
     font-weight: $font-weight-base;
@@ -88,14 +89,15 @@ body.cms-ui {
 
   .simple-text-editor-widget {
     .simple-text-input {
-      min-width: 1px;
       display: inline-block;
+      min-width: 1px;
+
       &:empty:before {
-        content: attr(placeholder);
-        pointer-events: none;
         display: block; /* For Firefox */
+        content: attr(placeholder);
         font-weight: inherit;
         opacity: 0.333;
+        pointer-events: none;
       }
     }
   }
@@ -103,6 +105,12 @@ body.cms-ui {
   .detached-slate-editor {
     p:not(:last-child) {
       margin-bottom: 1rem !important;
+    }
+  }
+
+  .blocks-widget-container {
+    .block.table .toolbar {
+      top: -3.34rem;
     }
   }
 
@@ -158,10 +166,10 @@ body.cms-ui {
 
       input#field-link {
         height: auto;
-        color: #444;
-        font-weight: normal;
         height: auto;
+        color: #444;
         font-size: 0.7rem;
+        font-weight: normal;
       }
 
       #field-data-element-select {
@@ -375,6 +383,7 @@ body.cms-ui {
     .button.tertiary.active {
       background-color: $tertiary;
     }
+
     .button.success,
     .button.success.active {
       background-color: $success;
@@ -394,6 +403,7 @@ body.cms-ui {
     .button.callout_default.active {
       background-color: $secondary;
     }
+
     .button.callout_note,
     .button.callout_note.active {
       background-color: $primary;
