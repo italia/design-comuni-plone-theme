@@ -27,7 +27,7 @@ export default function PrevArrow(props) {
       onKeyDown={onKeyDown}
     >
       <Icon icon="chevron-left" key="chevron-left-prev" title={_title} />
-      <span class="visually-hidden">{_title}</span>
+      <span className="visually-hidden">{_title}</span>
     </button>
   );
 }

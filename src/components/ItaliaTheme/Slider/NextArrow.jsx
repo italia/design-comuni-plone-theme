@@ -25,7 +25,7 @@ export default function NextArrow(props) {
       id={id}
     >
       <Icon icon="chevron-right" key="chevron-right" title={_title} />
-      <span class="visually-hidden">{_title}</span>
+      <span className="visually-hidden">{_title}</span>
     </button>
   );
 }

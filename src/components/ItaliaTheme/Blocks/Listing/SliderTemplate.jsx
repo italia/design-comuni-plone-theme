@@ -41,7 +41,7 @@ const messages = defineMessages({
 
 const Slide = (props) => {
   const intl = useIntl();
-  const { item, index, appearance, appearanceProp, onKeyDown } = props;
+  const { index, appearance, appearanceProp, onKeyDown } = props;
 
   const appearances = config.blocks.blocksConfig.listing.variations.filter(
     (v) => v.id === 'slider',
@@ -50,7 +50,6 @@ const Slide = (props) => {
 
   return (
     <SingleSlideWrapper
-      key={item['@id'] + index}
       index={index}
       onKeyDown={onKeyDown}
       aria-label={
@@ -130,6 +129,7 @@ const SliderTemplate = ({
             };
           return (
             <El
+              key={index}
               className={`${item.props.className} slick-dot`}
               tabIndex={-1}
               title={intl.formatMessage(messages.slideDot, {
@@ -228,6 +228,7 @@ const SliderTemplate = ({
                 const prevIndex = index > 0 ? index - 1 : null;
                 return (
                   <Slide
+                    key={item['@id'] + index}
                     image={image}
                     index={index}
                     full_width={full_width}

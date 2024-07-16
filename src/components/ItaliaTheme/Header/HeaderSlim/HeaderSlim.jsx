@@ -35,7 +35,7 @@ const HeaderSlim = () => {
     intl.locale,
   );
 
-  const parentSiteTitle =
+  const subsiteParentSiteTitle =
     deprecatedSubsiteParentSiteTitle ||
     SiteProperty({
       property: 'site_title',
@@ -55,7 +55,7 @@ const HeaderSlim = () => {
           rel="noopener noreferrer"
         >
           {!subsite && staticParentSiteTitle}
-          {subsite && parentSiteTitle.replaceAll('\\n', ' - ')}
+          {subsite && subsiteParentSiteTitle.replaceAll('\\n', ' - ')}
         </HeaderBrand>
         <HeaderRightZone>
           <HeaderSlimRightZone />
