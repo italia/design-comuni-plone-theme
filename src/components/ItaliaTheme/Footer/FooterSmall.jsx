@@ -5,15 +5,18 @@
 
 import React, { useEffect } from 'react';
 import cx from 'classnames';
-import { UniversalLink } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit';
-import { getSiteProperty } from 'design-comuni-plone-theme/helpers';
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSubFooter, getItemsByPath } from 'volto-subfooter';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { displayBanner } from 'volto-gdpr-privacy';
+import { UniversalLink } from '@plone/volto/components';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import {
+  getSiteProperty,
+  useHomePath,
+} from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
   goToPage: {
@@ -35,7 +38,7 @@ const FooterSmall = () => {
   const intl = useIntl();
   const pathname = useLocation().pathname;
   const dispatch = useDispatch();
-
+  const homepath = useHomePath();
   const subFooter = useSelector((state) => state.subFooter?.result);
   const subFooterItems = getItemsByPath(subFooter, pathname)?.filter(
     (item) => item.visible,
@@ -54,7 +57,9 @@ const FooterSmall = () => {
           {subFooterItems?.length > 0 &&
             subFooterItems.map((item, index) => {
               let url =
-                item.href || flattenToAppURL(item.linkUrl?.[0]?.['@id']) || '/';
+                item.href ||
+                flattenToAppURL(item.linkUrl?.[0]?.['@id']) ||
+                homepath;
               return (
                 <li
                   className={cx('list-inline-item', {
