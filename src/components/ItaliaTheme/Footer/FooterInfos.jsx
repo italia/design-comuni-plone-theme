@@ -20,6 +20,7 @@ import {
 
 import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 import { fromHtml } from 'design-comuni-plone-theme/config/Slate/utils';
+import { useHomePath } from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
   goToPage: {
@@ -33,7 +34,7 @@ const FooterInfos = () => {
   const N_COLUMNS = 4;
   const location = useLocation();
   const dispatch = useDispatch();
-
+  const homepath = useHomePath();
   const footerConfiguration = useSelector(
     (state) => state.editableFooterColumns?.result,
   );
@@ -45,7 +46,7 @@ const FooterInfos = () => {
   //filter rootpaths
   let footerColumns = getItemsByPath(
     footerConfiguration,
-    location?.pathname?.length ? location.pathname : '/',
+    location?.pathname?.length ? location.pathname : homepath,
   );
   footerColumns.forEach((column) => {
     if (__CLIENT__) {
