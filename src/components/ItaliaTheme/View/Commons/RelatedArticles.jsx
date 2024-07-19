@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { OfficeCard } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { usePaginatedItemsSection } from 'design-comuni-plone-theme/helpers';
+import { Pagination } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const RelatedArticles = ({
   id = 'related-articles',
@@ -12,6 +14,9 @@ const RelatedArticles = ({
   show_title = true,
   noMargin = false,
 }) => {
+  const { batches, currentPage, onPaginationChange, pageNumbers } =
+    usePaginatedItemsSection({ data: items });
+
   return (
     <article
       id={id}
@@ -27,7 +32,7 @@ const RelatedArticles = ({
       ) : null}
 
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-        {items?.map((item, i) => (
+        {batches?.map((item, i) => (
           <OfficeCard
             key={item['@id']}
             office={item}
@@ -36,6 +41,11 @@ const RelatedArticles = ({
           />
         ))}
       </div>
+      <Pagination
+        activePage={currentPage}
+        totalPages={pageNumbers}
+        onPageChange={onPaginationChange}
+      />
     </article>
   );
 };

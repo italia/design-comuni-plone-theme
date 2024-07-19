@@ -54,3 +54,4 @@ export { commonSearchBlockMessages } from 'design-comuni-plone-theme/helpers/Tra
 export { getComponentWithFallback } from 'design-comuni-plone-theme/helpers/registry';
 export { EnhanceLink };
 export { useHomePath } from 'design-comuni-plone-theme/helpers/url';
+export { usePaginatedItemsSection } from 'design-comuni-plone-theme/helpers/usePaginatedItemsSection.hook.ts';
