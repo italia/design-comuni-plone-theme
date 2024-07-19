@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- Aggiunta la paginazione per le card presenti sotto i campi "Sede di" e "Servizi presenti nel luogo", ora verranno mostrati solo 4 elementi alla volta
+
 ## Versione 11.17.0 (16/07/2024)
 
 ### Novità

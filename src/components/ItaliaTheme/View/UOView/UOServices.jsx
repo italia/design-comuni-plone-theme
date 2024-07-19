@@ -11,6 +11,7 @@ import {
 } from 'design-react-kit';
 import { Pagination } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { UniversalLink } from '@plone/volto/components';
+import { usePaginatedItemsSection } from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
   servizi_offerti: {
@@ -19,34 +20,15 @@ const messages = defineMessages({
   },
 });
 
-//* Pagination **/
-const divideServicesIntoBatches = (arr, batchSize) => {
-  const batches = [];
-  for (let i = 0; i < arr.length; i += batchSize) {
-    batches.push(arr.slice(i, i + batchSize));
-  }
-  return batches;
-};
-
 const UOServices = ({ content }) => {
   const intl = useIntl();
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const bSize = 4;
-
-  //* Calcolo numero pagine
 
   const servizi_offerti =
     content.servizi_offerti === undefined || content.servizi_offerti === null
       ? []
       : content.servizi_offerti;
-
-  const pageNumbers = Math.ceil(servizi_offerti.length / bSize);
-
-  const onPaginationChange = (activePage) => {
-    const current = activePage?.children ?? 1;
-    setCurrentPage(current);
-  };
+  const { batches, currentPage, onPaginationChange, pageNumbers } =
+    usePaginatedItemsSection({ data: servizi_offerti });
 
   return content?.servizi_offerti?.length > 0 ? (
     <section
@@ -57,9 +39,7 @@ const UOServices = ({ content }) => {
         {intl.formatMessage(messages.servizi_offerti)}
       </h2>
       <Row className="card-wrapper card-teaser-wrapper align-items-stretch">
-        {divideServicesIntoBatches(content?.servizi_offerti, bSize)[
-          currentPage - 1
-        ]?.map((servizio, i) => (
+        {batches?.map((servizio, i) => (
           <Col xs="12" lg="6">
             <Card className="shadow rounded card-big-io-comune p-3 my-3">
               <CardBody>
@@ -79,7 +59,7 @@ const UOServices = ({ content }) => {
         <Pagination
           activePage={currentPage}
           totalPages={pageNumbers}
-          onPageChange={(e, { activePage }) => onPaginationChange(activePage)}
+          onPageChange={onPaginationChange}
         />
       </div>
     </section>
