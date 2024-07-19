@@ -35,14 +35,13 @@ const HeaderSlim = () => {
     intl.locale,
   );
 
-  const subsiteParentSiteTitle =
-    deprecatedSubsiteParentSiteTitle ||
-    SiteProperty({
-      property: 'site_title',
-      defaultValue: getSiteProperty('subsiteParentSiteTitle', intl.locale),
-      getValue: true,
-      getParent: true,
-    });
+  const subsiteParentSiteTitle = SiteProperty({
+    property: 'site_title',
+    forceValue: deprecatedSubsiteParentSiteTitle,
+    defaultValue: getSiteProperty('subsiteParentSiteTitle', intl.locale),
+    getValue: true,
+    getParent: true,
+  });
 
   const target = subsite ? null : '_blank';
   return (
@@ -55,7 +54,7 @@ const HeaderSlim = () => {
           rel="noopener noreferrer"
         >
           {!subsite && staticParentSiteTitle}
-          {subsite && subsiteParentSiteTitle.replaceAll('\\n', ' - ')}
+          {subsite && (subsiteParentSiteTitle?.replaceAll('\\n', ' - ') ?? '')}
         </HeaderBrand>
         <HeaderRightZone>
           <HeaderSlimRightZone />

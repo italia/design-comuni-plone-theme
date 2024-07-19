@@ -9,26 +9,24 @@ const BrandText = ({ mobile = false, subsite, getParent = false }) => {
   // TODO DEPRECATED: remove and only use SiteProperty
   const deprecatedSiteTitle =
     subsite?.title || getSiteProperty('siteTitle', intl.locale);
-  let title =
-    deprecatedSiteTitle ||
-    SiteProperty({
-      property: 'site_title',
-      defaultValue: getSiteProperty('siteTitle', intl.locale),
-      getValue: true,
-      getParent: getParent,
-    });
+  let title = SiteProperty({
+    property: 'site_title',
+    forceValue: deprecatedSiteTitle,
+    defaultValue: getSiteProperty('siteTitle', intl.locale),
+    getValue: true,
+    getParent: getParent,
+  });
 
   // TODO DEPRECATED: remove and only use SiteProperty
   const deprecatedSiteSubtitle =
     subsite?.description || getSiteProperty('siteSubtitle', intl.locale);
-  const description =
-    deprecatedSiteSubtitle ||
-    SiteProperty({
-      property: 'site_subtitle',
-      defaultValue: getSiteProperty('siteSubtitle', intl.locale),
-      getValue: true,
-      getParent: getParent,
-    });
+  const description = SiteProperty({
+    property: 'site_subtitle',
+    forceValue: deprecatedSiteSubtitle,
+    defaultValue: getSiteProperty('siteSubtitle', intl.locale),
+    getValue: true,
+    getParent: getParent,
+  });
   const titleSplit = title?.split('\n') ?? null;
   title = titleSplit?.map((t, i) => (
     <React.Fragment key={i}>
