@@ -127,6 +127,16 @@ export default function applyConfig(voltoConfig) {
         errorPages: true,
       },
     },
+    /*
+      Set to 100mb in BINARY bytes, not decimal, see volto/helpers/FormValidation.js.validateFileUploadSize error message
+      ...
+      messages.fileTooLarge, {
+        limit: `${Math.floor(
+          config.settings.maxFileUploadSize / 1024 / 1024,
+        )}MB`,
+      }
+    */
+    maxFileUploadSize: 104857600,
     querystringAdditionalFields: [],
     searchBlockTemplates: [
       'simpleCard',
@@ -305,7 +315,6 @@ export default function applyConfig(voltoConfig) {
         component: SiteSettingsExtras,
       },
     ],
-    maxFileUploadSize: null,
     'volto-blocks-widget': {
       allowedBlocks: [
         ...(config.settings['volto-blocks-widget']?.allowedBlocks ?? []).filter(
