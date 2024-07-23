@@ -63,6 +63,10 @@
 
 - Ripristinato il funzionamento del filtro luogo nella ricerca eventi.
 
+### Migliorie
+
+- Viene ora mostrato un errore parlante nel caso si tenti di caricare un file che superi le dimensioni massime consentite, di default 100mb, come già esplicitato sul manuale utente.
+
 ## Versione 11.16.0 (10/07/2024)
 
 ### Migliorie
