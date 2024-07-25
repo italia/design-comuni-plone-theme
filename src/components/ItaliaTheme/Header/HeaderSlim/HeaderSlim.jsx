@@ -47,7 +47,7 @@ const HeaderSlim = () => {
           rel="noopener noreferrer"
         >
           {!subsite && staticParentSiteTitle}
-          {subsite && subsiteParentSiteTitle.replaceAll('\\n', ' - ')}
+          {subsite && (subsiteParentSiteTitle?.replaceAll('\\n', ' - ') ?? '')}
         </HeaderBrand>
         <HeaderRightZone>
           <HeaderSlimRightZone />

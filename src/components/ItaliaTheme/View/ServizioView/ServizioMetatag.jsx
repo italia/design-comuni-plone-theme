@@ -25,7 +25,7 @@ const ServizioMetatag = ({ content }) => {
     getValue: true,
     defaultTitle: getSiteProperty('siteTitle', intl.locale),
   });
-  siteTitle = siteTitle.replaceAll('\\n', ' - ');
+  siteTitle = siteTitle?.replaceAll('\\n', ' - ') ?? '';
 
   const schemaOrg = {
     '@context': 'https://schema.org',
