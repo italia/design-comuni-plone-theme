@@ -1,5 +1,5 @@
 .navbar {
-  @media (max-width: 991px) {
+  @media (max-width: #{map-get($grid-breakpoints, 'lg') - 1px}) {
     .navbar-collapsable {
       &,
       .public-ui & {
@@ -26,32 +26,28 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            text-decoration: none;
+
+            .icon {
+              width: auto;
+            }
           }
 
-          h2 {
-            margin-bottom: 0;
+          .it-brand-title {
             color: $text-color;
-            font-size: 1.5rem;
+            font-size: 1.333rem;
+            font-weight: 700;
           }
 
-          h3 {
-            margin-bottom: 0;
+          .it-brand-tagline {
             color: $gray-secondary;
             font-size: 1rem;
-          }
-
-          svg {
-            width: 3rem;
-            height: 3rem;
+            font-weight: 700;
           }
 
           .it-brand-text {
             flex: 1;
             padding-left: 1rem;
-          }
-
-          a {
-            text-decoration: none;
           }
         }
 
@@ -143,7 +139,7 @@
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: #{map-get($grid-breakpoints, 'lg')}) {
     .navbar-collapsable {
       .menu-wrapper {
         .it-brand-wrapper,

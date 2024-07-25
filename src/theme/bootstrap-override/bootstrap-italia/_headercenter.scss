@@ -1,8 +1,13 @@
-//mobile
 .it-header-center-wrapper {
-  // height: $dvt-header-center-max-height;
-
   .it-header-center-content-wrapper {
+    .it-brand-wrapper {
+      a {
+        .icon {
+          width: auto;
+        }
+      }
+    }
+
     //right zone
     .it-right-zone {
       .it-socials {
