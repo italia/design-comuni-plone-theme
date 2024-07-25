@@ -1,5 +1,29 @@
 # Changelog
 
+## [12.0.0-alpha.14](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.13...v12.0.0-alpha.14) (2024-07-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* unified logo sizes for any use case (#730)
+
+### Features
+
+* add pagination to cards listings in Venue, refactor pagination logic into custom hook ([#726](https://github.com/RedTurtle/design-comuni-plone-theme/issues/726)) ([fbb74eb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fbb74eb4ea987366201a46c75c06229466f5fd05))
+
+
+### Bug Fixes
+
+* removed fullobjects from query in EventSearch and UOSearch blocks ([#731](https://github.com/RedTurtle/design-comuni-plone-theme/issues/731)) ([3e96857](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3e96857e0c02b9246b78591f693f1fd0a04554cb))
+* set maxFileUploadSize config setting to 100mb in binary ([#725](https://github.com/RedTurtle/design-comuni-plone-theme/issues/725)) ([b4d4fef](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b4d4fef8df67c7e1f03c4c6e45ddadf506a12f82))
+* site settings issues with race conditions ([#728](https://github.com/RedTurtle/design-comuni-plone-theme/issues/728)) ([fcfbc8b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fcfbc8b072b5d11235607c1c4ae280871b632a3f))
+* unified logo sizes for any use case ([#730](https://github.com/RedTurtle/design-comuni-plone-theme/issues/730)) ([ace3558](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ace35587c24f1b810afd75fcc412d7b366b67511))
+
+
+### Maintenance
+
+* remove slate branch workflow ([a7081bf](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a7081bf0c5166f1ea93215dba10e2dfbc7baea33))
+
 ## [12.0.0-alpha.13](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.12...v12.0.0-alpha.13) (2024-07-16)
 
 
