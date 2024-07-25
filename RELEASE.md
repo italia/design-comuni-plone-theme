@@ -43,6 +43,18 @@
 
 ## Versione X.X.X (dd/mm/yyyy)
 
+### Fix
+
+- Migliorata la visualizzazione delle card risultato nella ricerca Eventi e Unità Organizzativa
+
+## Versione 11.18.0 (19/07/2024)
+
+### Migliorie
+
+- Aggiunta la paginazione per le card presenti sotto i campi "Sede di" e "Servizi presenti nel luogo", ora verranno mostrati solo 4 elementi alla volta.
+
+## Versione 11.17.0 (16/07/2024)
+
 ### Novità
 
 - Ora il titolo, sottotitolo, favicon, logo e logo del footer sono editabili dal pannello di controllo del Sito. Se non impostati, verranno usati quelli definiti dagli sviluppatori.
