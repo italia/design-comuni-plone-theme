@@ -41,6 +41,20 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Nel CT Persona, tutte le sezioni Incarico appaiono ora nel menu
+
 ## Versione 11.18.1 (25/07/2024)
 
 ### Fix
