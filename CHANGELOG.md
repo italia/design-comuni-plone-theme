@@ -1,5 +1,17 @@
 
 
+## [11.18.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.18.1...v11.18.2) (2024-07-25)
+
+
+### Bug Fixes
+
+* removed incarichi sub sections from incarico RichTextSection ([#732](https://github.com/RedTurtle/design-comuni-plone-theme/issues/732)) ([a75258f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a75258f0c69bb8015cf86b88e1f18b00b710cabb))
+
+
+### Documentation
+
+* updated publiccode and release log ([0f87a6c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0f87a6ccdfa68b890531e5fcd7d10c9ee1b02a8a))
+
 ## [11.18.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.18.0...v11.18.1) (2024-07-25)
 
 
