@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Migliorata la visualizzazione delle card risultato nella ricerca Eventi e Unità Organizzativa
+
 ## Versione 11.18.0 (19/07/2024)
 
 ### Migliorie
