@@ -1,5 +1,18 @@
 
 
+## [11.18.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.18.0...v11.18.1) (2024-07-25)
+
+
+### Bug Fixes
+
+* removed fullobjects from query in EventSearch and UOSearch blocks ([#731](https://github.com/RedTurtle/design-comuni-plone-theme/issues/731)) ([1f48864](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1f48864869e2086f28671899a6acaca1b87c23a8))
+* set maxFileUploadSize config setting to 100mb in binary ([#725](https://github.com/RedTurtle/design-comuni-plone-theme/issues/725)) ([8bd05c0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8bd05c039e753159421c6d94d5166b5657f7b92a))
+
+
+### Documentation
+
+* updated publiccode and release log ([c91931e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c91931e4591165b313fe0ca32f9c09295a8bd784))
+
 ## [11.18.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.17.0...v11.18.0) (2024-07-19)
 
 
