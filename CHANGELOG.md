@@ -1,5 +1,12 @@
 
 
+## [11.18.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.18.2...v11.18.3) (2024-07-26)
+
+
+### Bug Fixes
+
+* hamburger menu icon color for sites with white header ([f0de756](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f0de756e9431df00e03e7c5d2442cba81553b5fd))
+
 ## [11.18.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.18.1...v11.18.2) (2024-07-25)
 
 
