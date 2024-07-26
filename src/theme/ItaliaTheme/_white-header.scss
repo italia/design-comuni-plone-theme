@@ -55,7 +55,7 @@
     }
     @media (max-width: map-get($map: $grid-breakpoints, $key: 'lg') - 1px) {
       button.custom-navbar-toggler svg.icon {
-        fill: color-contrast($primary);
+        fill: $primary;
       }
     }
   }
