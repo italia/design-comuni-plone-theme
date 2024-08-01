@@ -44,6 +44,7 @@ defineMessages({
 const italiaContentTypesViews = {
   Document: PageView,
   'News Item': NewsItemView,
+  ComunicatoStampa: NewsItemView, // ct opzionale da volto-rer-ufficiostampa
   UnitaOrganizzativa: UOView,
   Persona: PersonaView,
   Venue: VenueView,
