@@ -16,7 +16,6 @@ const RelatedArticles = ({
 }) => {
   const { batches, currentPage, onPaginationChange, pageNumbers } =
     usePaginatedItemsSection({ data: items });
-
   return (
     <article
       id={id}
@@ -41,11 +40,13 @@ const RelatedArticles = ({
           />
         ))}
       </div>
-      <Pagination
-        activePage={currentPage}
-        totalPages={pageNumbers}
-        onPageChange={onPaginationChange}
-      />
+      {pageNumbers > 1 ? (
+        <Pagination
+          activePage={currentPage}
+          totalPages={pageNumbers}
+          onPageChange={onPaginationChange}
+        />
+      ) : null}
     </article>
   );
 };
