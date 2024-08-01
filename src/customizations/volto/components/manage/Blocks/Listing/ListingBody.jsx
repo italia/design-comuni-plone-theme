@@ -82,7 +82,7 @@ const ListingBody = React.memo(
             isSearchBlockResults ? '' : 'full-width'
           }`;
         } else {
-          return `py-5 ${bg_color} ${
+          return `py-5 ${
             isSearchBlockResults ? 'template-wrapper' : 'full-width'
           }`;
         }
