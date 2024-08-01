@@ -1,5 +1,21 @@
 # Changelog
 
+## [12.0.0-alpha.15](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.14...v12.0.0-alpha.15) (2024-08-01)
+
+
+### Features
+
+* vista news su ct ComunicatoStampa ([#727](https://github.com/RedTurtle/design-comuni-plone-theme/issues/727)) ([3c64496](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3c64496b5e13574756cda57d41f7c2621ea7bdbb))
+
+
+### Bug Fixes
+
+* add clear:both to bottom-metadata and richtext-blocks classes ([#735](https://github.com/RedTurtle/design-comuni-plone-theme/issues/735)) ([0d4515d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0d4515d26959cbb2da82fe4340862e7d5a184c31))
+* hamburger menu icon color for sites with white header ([edb14a4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/edb14a4899ec3345400eeef42f567cd5c2a77063))
+* removed bg from template-wrapper inside block search ([#733](https://github.com/RedTurtle/design-comuni-plone-theme/issues/733)) ([1785f4e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1785f4ed6addacee0a1c422d6ce5cb6d3908f9da))
+* removed incarichi sub sections from incarico RichTextSection ([#732](https://github.com/RedTurtle/design-comuni-plone-theme/issues/732)) ([6348ee9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6348ee9dba63b1928a8e9db5422b524e25730c24))
+* updated logic to show paginator only if pages>1 in Uo and venue ([#734](https://github.com/RedTurtle/design-comuni-plone-theme/issues/734)) ([d462af8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d462af86f4cb6d58f889e40dbac87eb068a57bbb))
+
 ## [12.0.0-alpha.14](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.13...v12.0.0-alpha.14) (2024-07-25)
 
 
