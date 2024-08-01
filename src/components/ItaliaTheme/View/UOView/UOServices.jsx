@@ -55,13 +55,15 @@ const UOServices = ({ content }) => {
           </Col>
         ))}
       </Row>
-      <div className="pagination-wrapper">
-        <Pagination
-          activePage={currentPage}
-          totalPages={pageNumbers}
-          onPageChange={onPaginationChange}
-        />
-      </div>
+      {pageNumbers > 1 ? (
+        <div className="pagination-wrapper">
+          <Pagination
+            activePage={currentPage}
+            totalPages={pageNumbers}
+            onPageChange={onPaginationChange}
+          />
+        </div>
+      ) : null}
     </section>
   ) : null;
 };
