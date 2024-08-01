@@ -1,5 +1,24 @@
 
 
+## [11.19.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.18.3...v11.19.0) (2024-08-01)
+
+
+### Features
+
+* vista news su ct ComunicatoStampa ([#727](https://github.com/RedTurtle/design-comuni-plone-theme/issues/727)) ([a161c56](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a161c56fd326f03277c50ada59dee6d6166aeba0))
+
+
+### Bug Fixes
+
+* add clear:both to bottom-metadata and richtext-blocks classes ([#735](https://github.com/RedTurtle/design-comuni-plone-theme/issues/735)) ([e1a9e9a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e1a9e9a4b0f1e1cdcf424802a74278a9ed827e85))
+* removed bg from template-wrapper inside block search ([#733](https://github.com/RedTurtle/design-comuni-plone-theme/issues/733)) ([965a201](https://github.com/RedTurtle/design-comuni-plone-theme/commit/965a201cc63334eb4820f39de58d8fcdc5c35460))
+* updated logic to show paginator only if pages>1 in Uo and venue ([#734](https://github.com/RedTurtle/design-comuni-plone-theme/issues/734)) ([2ab208d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2ab208d21aab76332296d2fb21e5dd35a047f3d9))
+
+
+### Documentation
+
+* updated publiccode ([0d51acd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0d51acd2a0d7efd10b0e07fe45d26fcc167cf270))
+
 ## [11.18.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.18.2...v11.18.3) (2024-07-26)
 
 
