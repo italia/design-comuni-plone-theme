@@ -1,5 +1,27 @@
 
 
+## [11.20.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.19.0...v11.20.0) (2024-08-06)
+
+
+### Features
+
+* added option to pass static choices and isClearable to select filter ([f67acda](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f67acdaee5b06ab615b8338bc286ae01c02b7fd4))
+
+
+### Bug Fixes
+
+* added new variable to set bg null ([#737](https://github.com/RedTurtle/design-comuni-plone-theme/issues/737)) ([5be0842](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5be08427dc62200440cc0d3771c0a400e2871bab))
+
+
+### Maintenance
+
+* set the ground for performance improvements ([#659](https://github.com/RedTurtle/design-comuni-plone-theme/issues/659)) ([e5951a2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e5951a22e51acf9f5deca0d12c848ee335e850fa))
+
+
+### Documentation
+
+* updated publiccode ([53523eb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/53523eb3a968c2102bf7dcc4025518fe6fe343c5))
+
 ## [11.19.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.18.3...v11.19.0) (2024-08-01)
 
 
