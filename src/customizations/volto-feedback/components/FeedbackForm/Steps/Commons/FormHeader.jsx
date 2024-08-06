@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-export const FormHeader = ({ title, step, totalSteps, className, hidden }) => {
+const FormHeader = ({ title, step, totalSteps, className, hidden }) => {
   return (
     <div className={className}>
       <legend
@@ -21,3 +21,4 @@ export const FormHeader = ({ title, step, totalSteps, className, hidden }) => {
     </div>
   );
 };
+export default FormHeader;

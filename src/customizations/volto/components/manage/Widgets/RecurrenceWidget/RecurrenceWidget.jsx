@@ -8,9 +8,10 @@
  */
 
 import React, { Component } from 'react';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import moment from 'moment';
-import { RRule, RRuleSet, rrulestr } from 'rrule';
+//import { RRule, RRuleSet, rrulestr } from 'rrule';
 
 import cx from 'classnames';
 import { isEqual, map, find, concat, remove } from 'lodash';
@@ -24,6 +25,8 @@ import {
   Modal,
   Header,
 } from 'semantic-ui-react';
+import { toBackendLang } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import { SelectWidget, Icon, DatetimeWidget } from '@plone/volto/components';
 
@@ -181,8 +184,10 @@ class RecurrenceWidget extends Component {
    */
   constructor(props, intl) {
     super(props);
+    const { RRuleSet, rrulestr } = props.rrule;
 
-    moment.locale(this.props.intl.locale);
+    this.moment = this.props.moment.default;
+    this.moment.locale(toBackendLang(this.props.lang));
 
     let rruleSet = this.props.value
       ? rrulestr(props.value, {
@@ -202,8 +207,8 @@ class RecurrenceWidget extends Component {
       formValues: this.getFormValues(rruleSet),
       RRULE_LANGUAGE: rrulei18n(
         this.props.intl,
-        moment,
-        this.props.intl.locale,
+        this.moment,
+        toBackendLang(this.props.lang),
       ),
     };
   }
@@ -279,8 +284,8 @@ class RecurrenceWidget extends Component {
 
   getUTCDate = (date) => {
     return date.match(/T(.)*(-|\+|Z)/g)
-      ? moment(date).utc()
-      : moment(`${date}Z`).utc();
+      ? this.moment(date).utc()
+      : this.moment(`${date}Z`).utc();
   };
 
   show = (dimmer) => () => {
@@ -436,17 +441,17 @@ class RecurrenceWidget extends Component {
         case 'until':
           let mDate = null;
           if (value) {
-            mDate = moment(new Date(value));
+            mDate = this.moment(new Date(value));
             if (typeof value === 'string') {
-              mDate = moment(new Date(value));
+              mDate = this.moment(new Date(value));
             } else {
               //object-->Date()
-              mDate = moment(value);
+              mDate = this.moment(value);
             }
 
             if (this.props.formData.end) {
               //set time from formData.end
-              const mEnd = moment(new Date(this.props.formData.end));
+              const mEnd = this.moment(new Date(this.props.formData.end));
               mDate.set('hour', mEnd.get('hour'));
               mDate.set('minute', mEnd.get('minute'));
             }
@@ -475,8 +480,8 @@ class RecurrenceWidget extends Component {
       field === 'dtstart'
         ? value
         : rruleSet.dtstart()
-          ? rruleSet.dtstart()
-          : new Date();
+        ? rruleSet.dtstart()
+        : new Date();
     var exdates =
       field === 'exdates' ? value : Object.assign([], rruleSet.exdates());
 
@@ -484,6 +489,8 @@ class RecurrenceWidget extends Component {
       field === 'rdates' ? value : Object.assign([], rruleSet.rdates());
 
     rruleOptions.dtstart = dstart;
+
+    const { RRule, RRuleSet } = this.props.rrule;
 
     let set = new RRuleSet();
     //set.dtstart(dstart);
@@ -496,6 +503,7 @@ class RecurrenceWidget extends Component {
   };
 
   getDefaultUntil = (freq) => {
+    const moment = this.moment;
     var end = this.props.formData?.end
       ? moment(new Date(this.props.formData.end))
       : null;
@@ -545,6 +553,7 @@ class RecurrenceWidget extends Component {
   };
 
   changeField = (formValues, field, value) => {
+    const moment = this.moment;
     //  git p.log('field', field, 'value', value);
     //get weekday from state.
     var byweekday =
@@ -739,6 +748,7 @@ class RecurrenceWidget extends Component {
   };
 
   addDate = (date) => {
+    const moment = this.moment;
     let all = concat(this.state.rruleSet.all(), this.state.rruleSet.exdates());
 
     var simpleDate = moment(new Date(date)).startOf('day').toDate().getTime();
@@ -764,6 +774,7 @@ class RecurrenceWidget extends Component {
   };
 
   remove = () => {
+    const { RRuleSet } = this.props.rrule;
     this.props.onChange(this.props.id, null);
     let rruleSet = new RRuleSet();
     this.setState({
@@ -1007,4 +1018,10 @@ class RecurrenceWidget extends Component {
   }
 }
 
-export default injectIntl(RecurrenceWidget);
+export default compose(
+  injectLazyLibs(['moment', 'rrule']),
+  connect((state) => ({
+    lang: state.intl.locale,
+  })),
+  injectIntl,
+)(RecurrenceWidget);

@@ -40,25 +40,27 @@ import SiteSettingsExtras from 'design-comuni-plone-theme/components/ItaliaTheme
 import { loadables as ItaliaLoadables } from 'design-comuni-plone-theme/config/loadables';
 
 // CTs icons
-import faFileInvoiceSVG from 'design-comuni-plone-theme/icons/file-invoice.svg';
-import faFolderOpenSVG from 'design-comuni-plone-theme/icons/folder-open.svg';
-import faImageSVG from 'design-comuni-plone-theme/icons/image.svg';
-import faFileSVG from 'design-comuni-plone-theme/icons/file.svg';
-import faLinkSVG from 'design-comuni-plone-theme/icons/link.svg';
-import faBoxOpenSVG from 'design-comuni-plone-theme/icons/box-open.svg';
-import faArchiveSVG from 'design-comuni-plone-theme/icons/archive.svg';
-import faFileAltSVG from 'design-comuni-plone-theme/icons/file-alt.svg';
-import faCalendarAltSVG from 'design-comuni-plone-theme/icons/calendar-alt.svg';
-import faMapMarkedAltSVG from 'design-comuni-plone-theme/icons/map-marked-alt.svg';
-import faNewspaperSVG from 'design-comuni-plone-theme/icons/newspaper.svg';
-import faUserSVG from 'design-comuni-plone-theme/icons/user.svg';
-import faCogSVG from 'design-comuni-plone-theme/icons/cog.svg';
-import faSitemapSVG from 'design-comuni-plone-theme/icons/sitemap.svg';
-import faBuildingSVG from 'design-comuni-plone-theme/icons/building.svg';
-import faFileDownloadSVG from 'design-comuni-plone-theme/icons/file-download.svg';
-import faQuestionSVG from 'design-comuni-plone-theme/icons/question-solid.svg';
-import bandoSVG from 'design-comuni-plone-theme/icons/bando.svg';
-import logSVG from 'design-comuni-plone-theme/icons/log.svg';
+import {
+  faFileInvoiceSVG,
+  faFolderOpenSVG,
+  faImageSVG,
+  faFileSVG,
+  faLinkSVG,
+  faBoxOpenSVG,
+  faArchiveSVG,
+  faFileAltSVG,
+  faCalendarAltSVG,
+  faMapMarkedAltSVG,
+  faNewspaperSVG,
+  faUserSVG,
+  faCogSVG,
+  faSitemapSVG,
+  faBuildingSVG,
+  faFileDownloadSVG,
+  faQuestionSVG,
+  bandoSVG,
+  logSVG,
+} from 'design-comuni-plone-theme/icons';
 
 import applyRichTextConfig from 'design-comuni-plone-theme/config/RichTextEditor/config';
 
@@ -68,8 +70,8 @@ import { schemaListing } from 'design-comuni-plone-theme/components/ItaliaTheme/
 
 import reducers from 'design-comuni-plone-theme/reducers';
 
-const ReleaseLog = loadable(() =>
-  import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
+const ReleaseLog = loadable(
+  () => import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
 );
 
 const messages = defineMessages({

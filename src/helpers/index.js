@@ -4,9 +4,8 @@
  * @example
  * export { Api } from './Api/Api';
  */
-
 export { defaultIconWidgetOptions } from 'design-comuni-plone-theme/helpers/IconWidget/IconWidgetHelper';
-export { fontAwesomeAliases } from 'design-comuni-plone-theme/helpers/IconWidget/IconAliasHelper';
+
 export {
   getCalendarDate,
   getEventRecurrenceMore,

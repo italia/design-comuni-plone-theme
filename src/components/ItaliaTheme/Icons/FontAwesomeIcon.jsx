@@ -1,13 +1,13 @@
 /**
- * Icon component.
- * @module components/ItaliaTheme/Icons/SectionIcon
+ * FontAwesomeIcon component.
+ * @module components/ItaliaTheme/Icons/FontAwesomeIcon
  */
 import React, { useMemo } from 'react';
 import { v4 as uuid } from 'uuid';
-import { fontAwesomeAliases } from 'design-comuni-plone-theme/helpers/index';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const FontAwesomeIcon = (props) => {
-  const { className, icon, prefix, title } = props;
+  const { className, icon, prefix, title, fontAwesomeAliases } = props;
   const iconID = useMemo(() => uuid(), []);
   const [loadedIcon, setLoadedIcon] = React.useState({
     module: null,
@@ -27,9 +27,9 @@ const FontAwesomeIcon = (props) => {
     let iconName = '';
     if (Array.isArray(icon)) {
       prefixKey = icon[0];
-      iconName = getIconAlias(icon[1], fontAwesomeAliases);
+      iconName = getIconAlias(icon[1], fontAwesomeAliases.default);
     } else {
-      iconName = getIconAlias(icon, fontAwesomeAliases);
+      iconName = getIconAlias(icon, fontAwesomeAliases.default);
     }
 
     return [
@@ -53,6 +53,7 @@ const FontAwesomeIcon = (props) => {
       (iconName !== loadedIcon.iconName || prefixFolder !== loadedIcon.family)
     ) {
       import(
+        /* webpackChunkName: "DCPTIcons" */
         `design-comuni-plone-theme/icons/fontawesome-free-6.4.0-web/svgs/${prefixFolder}/${iconName}.svg`
       )
         .then((_loadedIcon) => {
@@ -89,4 +90,4 @@ const FontAwesomeIcon = (props) => {
   );
 };
 
-export default FontAwesomeIcon;
+export default injectLazyLibs(['fontAwesomeAliases'])(FontAwesomeIcon);
