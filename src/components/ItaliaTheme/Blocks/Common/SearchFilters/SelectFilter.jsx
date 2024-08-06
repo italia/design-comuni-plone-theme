@@ -56,9 +56,11 @@ const SelectFilter = ({
     }
   }, []);
 
-  const select_options = options?.vocabulary
-    ? vocabularies?.[options.vocabulary]?.items
-    : selectOptions;
+  const select_options = options?.choices
+    ? options.choices
+    : options?.vocabulary
+      ? vocabularies?.[options.vocabulary]?.items
+      : selectOptions;
 
   return (
     <div className="me-lg-3 my-2 my-lg-1 filter-wrapper select-filter">
@@ -70,7 +72,7 @@ const SelectFilter = ({
           onChange(id, opt);
         }}
         options={select_options?.filter((opt) => !!opt.value?.toString()) ?? []}
-        isClearable={true}
+        isClearable={options?.isClearable ?? true}
         isSearchable={isSearchable}
         // components={{
         //   ClearIndicator: (props) => {
