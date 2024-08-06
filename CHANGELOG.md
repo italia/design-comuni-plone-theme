@@ -1,5 +1,12 @@
 # Changelog
 
+## [12.0.0-alpha.16](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.15...v12.0.0-alpha.16) (2024-08-06)
+
+
+### Features
+
+* added option to pass static choices and isClearable to select filter ([c044159](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c04415980a183ad7919c4222403a030b2cbc4fcb))
+
 ## [12.0.0-alpha.15](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.14...v12.0.0-alpha.15) (2024-08-01)
 
 
