@@ -6,6 +6,7 @@ CUSTOMIZATIONS:
 - 'background class' and 'block class' logic for search block
 - search block integration
 - pass 'block'  prop to listing variation
+- added bg_color = "" if is a search block
 */
 import React from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
@@ -77,12 +78,16 @@ const ListingBody = React.memo(
           ? `bg-${data.bg_color}`
           : 'bg-light';
 
+        if (isSearchBlockResults) {
+          bg_color = '';
+        }
+
         if (block.template === 'gridGalleryTemplate') {
           return `section section-muted section-inset-shadow py-5 ${bg_color} ${
             isSearchBlockResults ? '' : 'full-width'
           }`;
         } else {
-          return `py-5 ${
+          return `py-5 ${bg_color} ${
             isSearchBlockResults ? 'template-wrapper' : 'full-width'
           }`;
         }
