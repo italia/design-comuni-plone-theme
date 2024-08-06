@@ -1,5 +1,12 @@
 # Changelog
 
+## [12.0.0-alpha.17](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.16...v12.0.0-alpha.17) (2024-08-06)
+
+
+### Bug Fixes
+
+* added new variable to set bg null ([#737](https://github.com/RedTurtle/design-comuni-plone-theme/issues/737)) ([d5f1738](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d5f1738dcee3a0563d9d530f95350268fab9e314))
+
 ## [12.0.0-alpha.16](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.15...v12.0.0-alpha.16) (2024-08-06)
 
 
