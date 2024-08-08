@@ -11,10 +11,9 @@ import { Container, Row, Col } from 'design-react-kit';
 import { SidebarPortal } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 import { useHandleDetachedBlockFocus } from 'design-comuni-plone-theme/helpers/blocks';
-import {
-  AlertSidebar,
-  TextEditorWidget,
-} from 'design-comuni-plone-theme/components/ItaliaTheme';
+
+import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { Sidebar as AlertSidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert';
 
 const messages = defineMessages({
   content_placeholder: {

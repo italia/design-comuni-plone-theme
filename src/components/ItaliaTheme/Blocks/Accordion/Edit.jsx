@@ -15,7 +15,7 @@ import {
 
 import { SidebarPortal } from '@plone/volto/components';
 import { handleKeyDownOwnFocusManagement } from 'design-comuni-plone-theme/helpers/blocks';
-import Sidebar from './Sidebar.jsx';
+import { Sidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Accordion';
 
 import { defineMessages } from 'react-intl';
 

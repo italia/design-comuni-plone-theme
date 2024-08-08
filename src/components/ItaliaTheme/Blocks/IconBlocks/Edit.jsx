@@ -19,7 +19,7 @@ import {
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 import EditBlock from './Block/EditBlock';
-import Sidebar from './Sidebar.jsx';
+import { Sidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/IconBlocks';
 
 import config from '@plone/volto/registry';
 

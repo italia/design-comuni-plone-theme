@@ -4,7 +4,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { TextWidget, SelectWidget } from '@plone/volto/components';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { FontAwesomeIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import IconPreviewWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/IconPreviewWidget';
+import { IconPreviewWidget } from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets';
 
 const messages = defineMessages({
   icon: {
