@@ -41,15 +41,7 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
+## Versione 11.18.2 (25/07/2024)
 
 ### Fix
 
@@ -59,16 +51,13 @@
 
 ### Fix
 
-- Migliorata la visualizzazione delle card risultato nella ricerca Eventi e Unità Organizzativa
+- Migliorata la visualizzazione delle card risultato nella ricerca Eventi e Unità Organizzativa.
 
 ## Versione 11.18.0 (19/07/2024)
 
 ### Migliorie
 
 - Aggiunta la paginazione per le card presenti sotto i campi "Sede di" e "Servizi presenti nel luogo", ora verranno mostrati solo 4 elementi alla volta.
-### Migliorie
-
-- Aggiunta la paginazione per le card presenti sotto i campi "Sede di" e "Servizi presenti nel luogo", ora verranno mostrati solo 4 elementi alla volta
 
 ## Versione 11.17.0 (16/07/2024)
 
@@ -102,13 +91,19 @@
 
 ## Versione 11.14.0 (21/06/2024)
 
-- il pulsante di aggiunta del blocco è stato spostato nella parte bassa del blocco (non si trova più alla sua sinistra), per migliorare l'usabilità della gestione dei blocchi anche su mobile/tablet
+### Migliorie
+
+- Il pulsante di aggiunta dei blocchi è stato spostato nella parte bassa del blocco (non si trova più alla sua sinistra), per migliorare l'usabilità della gestione dei blocchi anche su mobile/tablet.
 
 ## Versione 11.13.0 (12/06/2024)
 
 ### Migliorie
 
 - Nel CT Persona viene visualizzato anche il testo del campo "Importi di viaggio e/o servizi" impostato nel CT Incarico collegato e, se presente più di un Incarico collegato, vengono mostrati i link a ciascun Incarico nella sezione "Altri incarichi".
+
+### Novità
+
+- Aggiunte informazioni sulle rassegne di eventi nei blocchi elenco.
 
 ### Fix
 
@@ -119,9 +114,21 @@
 
 ### Fix
 
+- La pagina di login e di reset della password usano il font corretto.
+
+## Versione 11.12.6 (30/05/2024)
+
+### Fix
+
 - Il layout delle card con immagini rimane corretto anche selezionando l'opzione "Non alterare le dimensioni naturali dell'immagine".
 
 ## Versione 11.12.5 (30/05/2024)
+
+### Fix
+
+- Sistemato il layout "Card con immagine" dei blocchi elenco quando gli elementi non hanno immagine.
+
+## Versione 11.12.4 (30/05/2024)
 
 ### Fix
 
@@ -215,9 +222,6 @@
 
 ### Fix
 
-- Sistemata la visualizzazione dei blocchi elenco all'interno del blocco griglia
-- L'etichetta della Card con Nastro (Blocco Elenco) non si sovrappone più all'immagine del nastro.
-- Aggiustato il layout della card per il CT persone quando è impostata un'immagine.
 - Sistemata la visualizzazione dei blocchi elenco all'interno del blocco griglia.
 - L'etichetta della Card con Nastro (Blocco Elenco) non si sovrappone più all'icona del nastro.
 - Aggiustato il layout della card per le persone quando è impostata un'immagine.
@@ -245,12 +249,6 @@
 
 - Ora la fascia del footer contenente il logo e il nome del sito è configurabile da pannello di controllo.
 - Nel pannello di controllo dei Feedback, ora gli utenti con permesso di eliminare elementi da questa sezione, possono eliminare i feedback.
-
-### Fix
-
-- Nel blocco con icone, se era impostata una immagine di sfondo non si vedeva.
-
-## Versione 11.6.1 (06/03/2024)
 
 ### Migliorie
 
