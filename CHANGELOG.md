@@ -1,5 +1,18 @@
 
 
+## [11.20.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.20.0...v11.20.1) (2024-08-09)
+
+
+### Bug Fixes
+
+* en translations ([#736](https://github.com/RedTurtle/design-comuni-plone-theme/issues/736)) ([a684186](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a684186441c019600b12d21d7a4738b88c25df81))
+* rrule monthly recurrence text italian translation ([#739](https://github.com/RedTurtle/design-comuni-plone-theme/issues/739)) ([9c4e75a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9c4e75a30657d5b3e035cfe3a6443fd31eacbf02))
+
+
+### Documentation
+
+* updated publiccode and release log ([97062e4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/97062e43a963873c89a0059daf4a961184f1cb94))
+
 ## [11.20.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.19.0...v11.20.0) (2024-08-06)
 
 
