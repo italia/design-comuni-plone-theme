@@ -41,6 +41,20 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Il testo che descrive la ricorrenza mensile è stato corretto per coprire tutti i casi.
+
 ## Versione 11.18.2 (25/07/2024)
 
 ### Fix

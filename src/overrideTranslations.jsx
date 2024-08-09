@@ -27,7 +27,7 @@ defineMessages({
   },
   rrule_on_the: {
     id: 'rrule_on the',
-    defaultMessage: 'di',
+    defaultMessage: 'il',
   },
   weekdays: {
     id: 'rrule_weekdays',
