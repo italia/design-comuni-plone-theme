@@ -50,13 +50,28 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
   let recurrenceText = null;
 
   if (content.recurrence) {
+    const isRecurrenceByDay = content.recurrence.includes('BYDAY=+');
+    const isWeekdaySunday = content.recurrence
+      .split('BYDAY')[1]
+      ?.includes('SU');
     const RRULE_LANGUAGE = rrulei18n(intl, moment);
     rruleSet = rrulestr(content.recurrence, {
       compatible: true, //If set to True, the parser will operate in RFC-compatible mode. Right now it means that unfold will be turned on, and if a DTSTART is found, it will be considered the first recurrence instance, as documented in the RFC.
       forceset: true,
     });
+
     recurrenceText = rruleSet.rrules()[0]?.toText(
       (t) => {
+        if (moment.locale(intl.locale) === 'it' && isRecurrenceByDay) {
+          RRULE_LANGUAGE.strings.th = '°';
+          RRULE_LANGUAGE.strings.nd = '°';
+          RRULE_LANGUAGE.strings.rd = '°';
+          RRULE_LANGUAGE.strings.st = '°';
+
+          if (isWeekdaySunday) {
+            RRULE_LANGUAGE.strings['on the'] = 'la';
+          }
+        }
         return RRULE_LANGUAGE.strings[t];
       },
       RRULE_LANGUAGE,

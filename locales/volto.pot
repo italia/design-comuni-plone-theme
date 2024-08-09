@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-07-15T11:07:19.251Z\n"
+"POT-Creation-Date: 2024-08-06T16:50:24.401Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -3017,7 +3017,7 @@ msgid "rrule_on"
 msgstr ""
 
 #: overrideTranslations
-# defaultMessage: di
+# defaultMessage: il
 msgid "rrule_on the"
 msgstr ""
 

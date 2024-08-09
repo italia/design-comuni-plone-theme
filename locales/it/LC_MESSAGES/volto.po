@@ -3015,9 +3015,9 @@ msgid "rrule_on"
 msgstr "di"
 
 #: overrideTranslations
-# defaultMessage: di
+# defaultMessage: il
 msgid "rrule_on the"
-msgstr "di"
+msgstr "il"
 
 #: overrideTranslations
 # defaultMessage: _
