@@ -1,5 +1,23 @@
 
 
+## [11.20.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.20.1...v11.20.2) (2024-08-12)
+
+
+### Bug Fixes
+
+* 302 redirects for aliases, removed custom cors error logging ([8348e94](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8348e94940feeddc85c8f3d0364f37daa2145404))
+* icons lazy loading race condition ([4e32354](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4e3235467b886144afcc240aacda9116b729aeb8))
+
+
+### Maintenance
+
+* remove unused performance workflow ([adc31a7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/adc31a718b491075b03d789714354089de09a06e))
+
+
+### Documentation
+
+* updated publiccode and release log ([e9a2e52](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e9a2e52247683876b2599bf6938e65354457f6f4))
+
 ## [11.20.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.20.0...v11.20.1) (2024-08-09)
 
 
