@@ -41,6 +41,20 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Risolto un problema per cui veniva mostrato temporaneamente un messaggio di errore quando si visitava un indirizzo alternativo creato con lo strumento Gestione URL.
+
 ## Versione 11.20.1 (09/08/2024)
 
 ### Fix
