@@ -1,5 +1,22 @@
 
 
+## [11.21.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.20.4...v11.21.0) (2024-08-14)
+
+
+### Features
+
+* contextualvocabularies [#6236](https://github.com/RedTurtle/design-comuni-plone-theme/issues/6236) backport ([#738](https://github.com/RedTurtle/design-comuni-plone-theme/issues/738)) ([29f5c2e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/29f5c2e7f2849dbc5d03fbc31d216a2920564116))
+
+
+### Bug Fixes
+
+* metadata field in EventSearch ([#744](https://github.com/RedTurtle/design-comuni-plone-theme/issues/744)) ([0b255e6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0b255e6569573e557622de6afaa6f9d260bb7efe))
+
+
+### Documentation
+
+* updated publiccode and release log ([1bc0699](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1bc0699fcf0a234929f5b960c1a0305878fe2db4))
+
 ## [11.20.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.20.3...v11.20.4) (2024-08-14)
 
 
