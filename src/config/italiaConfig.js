@@ -86,6 +86,7 @@ export default function applyConfig(voltoConfig) {
   config.experimental.addBlockButton.enabled = true; //per spostare il bottone di aggiunta dei blocchi in basso, e fare in modo che i bottoni di edit dei blocchi siano usabili anche da tablet/mobile
   config.settings = {
     ...config.settings,
+    contextualVocabularies: config.settings.contextualVocabularies || [],
     openExternalLinkInNewTab: true,
     sentryOptions: (libraries) => ({
       ...voltoSentryOptions(libraries),
