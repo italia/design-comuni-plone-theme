@@ -1,5 +1,17 @@
 
 
+## [11.20.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.20.2...v11.20.3) (2024-08-14)
+
+
+### Bug Fixes
+
+* reverted "chore: set the ground for performance improvements ([#659](https://github.com/RedTurtle/design-comuni-plone-theme/issues/659))" ([381d09a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/381d09a27f45484d429c1424e4d746e8aca4beec))
+
+
+### Documentation
+
+* updated publiccode ([8a3681e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8a3681eacd072df73e3139f38601b760193c660a))
+
 ## [11.20.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.20.1...v11.20.2) (2024-08-12)
 
 
