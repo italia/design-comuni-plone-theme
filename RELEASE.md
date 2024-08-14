@@ -50,6 +50,11 @@
 ### Novità
 
 - ...
+### Fix
+
+- Le date delle card nella Ricerca Eventi vengono mostrate correttamente come impostate nell'evento.
+
+## Versione 11.20.2 (12/08/2024)
 
 ### Fix
 
