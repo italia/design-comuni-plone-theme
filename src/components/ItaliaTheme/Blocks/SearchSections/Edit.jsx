@@ -3,8 +3,10 @@ import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { SidebarPortal } from '@plone/volto/components';
-import { BlockSearchSectionsBody } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import { Sidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections';
+import {
+  BlockSearchSectionsSidebar,
+  BlockSearchSectionsBody,
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { SearchUtils } from 'design-comuni-plone-theme/components';
 
 const Edit = ({
@@ -32,7 +34,7 @@ const Edit = ({
         <BlockSearchSectionsBody block={data} sections={sections} />
       </div>
       <SidebarPortal selected={selected}>
-        <Sidebar
+        <BlockSearchSectionsSidebar
           data={data}
           block={block}
           onChangeBlock={onChangeBlock}

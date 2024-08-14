@@ -1,4 +1,4 @@
-const fontAwesomeAliases = {
+export const fontAwesomeAliases = {
   ad: 'rectangle-ad',
   adjust: 'circle-half-stroke',
   'air-freshener': 'spray-can-sparkles',
@@ -674,4 +674,3 @@ const fontAwesomeAliases = {
   'window-close': 'rectangle-xmark',
   'wine-glass-alt': 'wine-glass-empty',
 };
-export default fontAwesomeAliases;

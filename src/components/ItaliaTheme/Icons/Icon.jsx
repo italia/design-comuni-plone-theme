@@ -1,6 +1,6 @@
 /**
  * Icon component.
- * @module components/ItaliaTheme/Icons/Icon
+ * @module components/ItaliaTheme/Icons/SectionIcon
  */
 import React from 'react';
 import classNames from 'classnames';
