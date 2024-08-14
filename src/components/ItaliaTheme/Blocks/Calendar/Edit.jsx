@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Body from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Calendar/Body';
 import { SidebarPortal } from '@plone/volto/components';
 import { getBaseUrl } from '@plone/volto/helpers';
-import { Sidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Calendar';
+import ListingSidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Calendar/ListingSidebar';
 
 const Edit = ({ data, block, onChangeBlock, selected, pathname }) => {
   return (
@@ -16,7 +16,11 @@ const Edit = ({ data, block, onChangeBlock, selected, pathname }) => {
         onChangeBlock={onChangeBlock}
       />
       <SidebarPortal selected={selected}>
-        <Sidebar data={data} block={block} onChangeBlock={onChangeBlock} />
+        <ListingSidebar
+          data={data}
+          block={block}
+          onChangeBlock={onChangeBlock}
+        />
       </SidebarPortal>
     </div>
   );

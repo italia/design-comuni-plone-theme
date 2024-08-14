@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import { SidebarPortal } from '@plone/volto/components';
-import { TextCardWithImageSidebar as Sidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard';
+import Sidebar from './Sidebar.jsx';
 import BodyWrapper from './BodyWrapper.jsx';
 import Block from './Block';
 

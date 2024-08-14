@@ -9,7 +9,7 @@ import {
   SubblocksWrapper,
 } from 'volto-subblocks';
 import { SidebarPortal } from '@plone/volto/components';
-import { Sidebar } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence';
+import Sidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar.jsx';
 import { ArgumentsInEvidenceBackground } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 class Edit extends SubblocksEdit {

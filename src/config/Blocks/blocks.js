@@ -1,106 +1,69 @@
+import newsSVG from '@plone/volto/icons/news.svg';
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
-
-import listArrowsSVG from '@plone/volto/icons/list-arrows.svg';
-import {
-  AccordionView,
-  AccordionEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Accordion';
+import HighlightedContentView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/HighlightedContent/View';
+import HighlightedContentEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/HighlightedContent/Edit';
+import noteSvg from 'bootstrap-italia/src/svg/it-note.svg';
+import calendarSvg from 'bootstrap-italia/src/svg/it-calendar.svg';
 
 import alertSVG from '@plone/volto/icons/alert.svg';
-import {
-  AlertView,
-  AlertEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert';
-
-import noteSvg from 'bootstrap-italia/src/svg/it-note.svg';
-import {
-  ArgumentsInEvidenceView,
-  ArgumentsInEvidenceEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence';
-
-import {
-  BandiSearchView,
-  BandiSearchEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/BandiSearch';
+import AlertView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert/View';
+import AlertEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert/Edit';
 
 import divideHorizontalSVG from '@plone/volto/icons/divide-horizontal.svg';
-import {
-  ViewBreak,
-  EditBreak,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Break';
+import ViewBreak from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Break/View';
+import EditBreak from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Break/Edit';
 
-import calendarSvg from 'bootstrap-italia/src/svg/it-calendar.svg';
-import {
-  CalendarView,
-  CalendarEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Calendar';
+import SearchSectionsView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/View';
+import SearchSectionsEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/Edit';
+import ArgumentsInEvidenceEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Edit';
+import ArgumentsInEvidenceView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/View';
 
-import emailSVG from '@plone/volto/icons/email.svg';
-import {
-  ContactsBlockView,
-  ContactsBlockEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ContactsBlock';
+import CalendarView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Calendar/View';
+import CalendarEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Calendar/Edit';
 
-import { countDownSVG } from 'design-comuni-plone-theme/icons';
-import {
-  CountDownBlockView,
-  CountDownBlockEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown';
+import EventSearchView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/EventSearch/View';
+import EventSearchEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/EventSearch/Edit';
 
-import flashSVG from '@plone/volto/icons/flash.svg';
-import {
-  CTABlockView,
-  CTABlockEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CTABlock';
+import simpleTextCardSVG from 'design-comuni-plone-theme/icons/card-semplice.svg';
+import TextCardView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard/SimpleCard/View';
+import TextCardEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard/SimpleCard/Edit';
+import imageTextCardSVG from 'design-comuni-plone-theme/icons/card-immagine.svg';
+import TextCardWithImageView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard/CardWithImage/View';
+import TextCardWithImageEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard/CardWithImage/Edit';
 
-import {
-  EventSearchView,
-  EventSearchEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/EventSearch';
-
-import newsSVG from '@plone/volto/icons/news.svg';
-import {
-  HighlightedContentView,
-  // getHiglitedContentAsyncData,
-  HighlightedContentEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/HighlightedContent';
-
-import { iconBlocksSVG } from 'design-comuni-plone-theme/icons';
-import {
-  IconBlocksView,
-  IconBlocksEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/IconBlocks';
-
-import { numbersBlockSVG } from 'design-comuni-plone-theme/icons';
-import {
-  NumbersBlockView,
-  NumbersBlockEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/NumbersBlock';
-
-import {
-  SearchSectionsView,
-  SearchSectionsEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections';
-
-import { simpleTextCardSVG } from 'design-comuni-plone-theme/icons';
-import { imageTextCardSVG } from 'design-comuni-plone-theme/icons';
-import {
-  TextCardView,
-  TextCardEdit,
-  TextCardWithImageView,
-  TextCardWithImageEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TextCard';
-
-import {
-  UOSearchView,
-  UOSearchEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/UOSearch';
+import listArrowsSVG from '@plone/volto/icons/list-arrows.svg';
+import AccordionView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Accordion/View';
+import AccordionEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Accordion/Edit';
 
 import videoSVG from '@plone/volto/icons/video.svg';
-import {
-  VideoGalleryView,
-  VideoGalleryEdit,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery';
+import VideoGalleryView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery/View';
+import VideoGalleryEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery/Edit';
+
+import iconBlocksSVG from 'design-comuni-plone-theme/icons/blocco-icone.svg';
+import IconBlocksView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/IconBlocks/View';
+import IconBlocksEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/IconBlocks/Edit';
+
+import emailSVG from '@plone/volto/icons/email.svg';
+import ContactsBlockView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ContactsBlock/View';
+import ContactsBlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ContactsBlock/Edit';
+
+import numbersBlockSVG from 'design-comuni-plone-theme/icons/numeri.svg';
+import NumbersBlockView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/NumbersBlock/View';
+import NumbersBlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/NumbersBlock/Edit';
+
+import BandiSearchView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/BandiSearch/View';
+import BandiSearchEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/BandiSearch/Edit';
+
+import UOSearchView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/UOSearch/View';
+import UOSearchEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/UOSearch/Edit';
+
+import flashSVG from '@plone/volto/icons/flash.svg';
+import CTABlockView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CTABlock/View';
+import CTABlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CTABlock/Edit';
+
+import countDownSVG from 'design-comuni-plone-theme/icons/count-down.svg';
+import CountDownBlockView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/View';
+import CountDownBlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/Edit';
 
 import { cloneBlock } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
@@ -119,7 +82,6 @@ const italiaBlocks = {
       view: [],
     },
     sidebarTab: 1,
-    // getAsyncData: getHiglitedContentAsyncData,
   },
   searchSections: {
     id: 'searchSections',

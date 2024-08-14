@@ -3,11 +3,6 @@
  * @module components/theme/Search/Search
  */
 
-import loadable from '@loadable/component';
+import Search from 'design-comuni-plone-theme/components/ItaliaTheme/Search/Search';
 
-const Search = loadable(() =>
-  import(
-    /* webpackChunkName: "DCPTSearch" */ 'design-comuni-plone-theme/components/ItaliaTheme/Search/Search'
-  ),
-);
 export default Search;
