@@ -1,5 +1,17 @@
 
 
+## [11.20.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.20.3...v11.20.4) (2024-08-14)
+
+
+### Bug Fixes
+
+* changed rrule translation in PageHeaderEventDates ([#743](https://github.com/RedTurtle/design-comuni-plone-theme/issues/743)) ([9a7d59f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9a7d59f0927f34dbab74c44d09029904e07d5067))
+
+
+### Documentation
+
+* updated publiccode ([e0c1f3c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e0c1f3ceaf1134cd0b5eec8352eeab2a2632e154))
+
 ## [11.20.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.20.2...v11.20.3) (2024-08-14)
 
 
