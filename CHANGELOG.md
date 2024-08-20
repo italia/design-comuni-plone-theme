@@ -1,5 +1,17 @@
 
 
+## [11.21.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.21.0...v11.21.1) (2024-08-20)
+
+
+### Bug Fixes
+
+* news item view for older devices ([3970175](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3970175647bb3b28e6f970475b52f4a10ed1cddd))
+
+
+### Documentation
+
+* updated publiccode ([f3568a5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f3568a51a7944450dfcee6635b6d8319105664be))
+
 ## [11.21.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.20.4...v11.21.0) (2024-08-14)
 
 
