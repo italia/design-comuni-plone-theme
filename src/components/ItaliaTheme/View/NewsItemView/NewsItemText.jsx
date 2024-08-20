@@ -24,7 +24,7 @@ const NewsItemText = ({ content }) => {
   // La condizione sul campo descrizione_estesa è volutamente semplificata
   // senza `richTextHasContent` perchè non interessa tanto se il campo
   // ha o non ha contenuto, ma se il campo esiste o non esiste
-  return Object.hasOwn(content, 'descrizione_estesa')
+  return (Object.hasOwn || Object.hasOwnProperty)(content, 'descrizione_estesa')
     ? richTextHasContent(content.descrizione_estesa) && (
         <RichTextSection
           data={content.descrizione_estesa}
