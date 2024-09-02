@@ -2,6 +2,9 @@
   - Agid styling
   - Add class .block.listing in listing body container div to use
     existing listing template styles
+  - Inspired from
+    https://github.com/plone/volto/commit/211d9bea13119cc430db9d53a4740a860781ca2e
+    the way to handle search sort
 */
 
 import React from 'react';
@@ -9,15 +12,15 @@ import React from 'react';
 import ListingBody from '@plone/volto/components/manage/Blocks/Listing/ListingBody';
 import { withBlockExtensions } from '@plone/volto/helpers';
 
+import {
+  withQueryString,
+  withSearch,
+} from '@plone/volto/components/manage/Blocks/Search/hocs';
 import config from '@plone/volto/registry';
 import cx from 'classnames';
-import {
-  withSearch,
-  withQueryString,
-} from '@plone/volto/components/manage/Blocks/Search/hocs';
-import { compose } from 'redux';
-import { useSelector } from 'react-redux';
 import { isEqual, isFunction } from 'lodash';
+import { useSelector } from 'react-redux';
+import { compose } from 'redux';
 
 const getListingBodyVariation = (data) => {
   const { variations } = config.blocks.blocksConfig.listing;
@@ -57,12 +60,36 @@ const applyDefaults = (data, root) => {
       v: root || '/',
     },
   ];
-  return {
+
+  const searchBySearchableText = data.query.filter(
+    (item) => item['i'] === 'SearchableText',
+  ).length;
+
+  const sort_on =
+    searchBySearchableText === 0
+      ? data?.sort_on
+        ? { sort_on: data.sort_on }
+        : { sort_on: 'effective' }
+      : undefined;
+
+  const sort_order =
+    searchBySearchableText === 0
+      ? data?.sort_order
+        ? { sort_order: data.sort_order }
+        : { sort_order: 'descending' }
+      : undefined;
+
+  const result = {
     ...data,
-    sort_on: data?.sort_on || 'effective',
-    sort_order: data?.sort_order || 'descending',
     query: data?.query?.length ? data.query : defaultQuery,
   };
+  if (!sort_on) {
+    delete result.sort_on;
+  }
+  if (!sort_order) {
+    delete result.sort_order;
+  }
+  return result;
 };
 
 const SearchBlockView = (props) => {
@@ -89,7 +116,6 @@ const SearchBlockView = (props) => {
 
   const root = useSelector((state) => state.breadcrumbs.root);
   const listingBodyData = applyDefaults(searchData, root);
-
   const { variations } = config.blocks.blocksConfig.listing;
   const listingBodyVariation = variations.find(({ id }) => id === selectedView);
   if (!Layout) return null;

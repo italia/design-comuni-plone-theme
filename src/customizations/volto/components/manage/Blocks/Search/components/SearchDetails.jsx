@@ -2,9 +2,8 @@
   - Agid styling
 
 */
-import React from 'react';
-import { defineMessages, useIntl } from 'react-intl';
 import { commonSearchBlockMessages } from 'design-comuni-plone-theme/helpers';
+import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
   searchResults: {
@@ -26,7 +25,7 @@ const SearchDetails = ({ total, text, as = 'p', data }) => {
               searchedtext: text,
             })}
           </>
-        )}
+        )}{' '}
         {data.showTotalResults && (
           <>
             {intl.formatMessage(messages.searchResults)}: <b>{total}</b>
