@@ -183,6 +183,7 @@ export UOContacts from 'design-comuni-plone-theme/components/ItaliaTheme/View/UO
 export UOContactsLocations from 'design-comuni-plone-theme/components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsLocations';
 export UOContactsContacts from 'design-comuni-plone-theme/components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts';
 export UOContactsSediSecondarie from 'design-comuni-plone-theme/components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsSediSecondarie';
+export UOMetadati from 'design-comuni-plone-theme/components/ItaliaTheme/View/UOView/UOMetadati';
 
 export UODocuments from 'design-comuni-plone-theme/components/ItaliaTheme/View/UOView/UODocuments';
 export UOWhatDoesItDo from 'design-comuni-plone-theme/components/ItaliaTheme/View/UOView/UOWhatDoesItDo';
