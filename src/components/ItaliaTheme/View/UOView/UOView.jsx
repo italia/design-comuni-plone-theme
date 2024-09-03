@@ -19,6 +19,7 @@ import {
   UODocuments,
   UOWhatDoesItDo,
   UOMoreInfos,
+  UOMetadati,
   RelatedItemInEvidence,
   SkipToMainContent,
   ContentTypeViewSections,
@@ -46,6 +47,8 @@ export const UOViewSectionsOrder = [
   { /* DOCUMENTI */ component: UODocuments },
 
   { /* ULTERIORI INFORMAZIONI */ component: UOMoreInfos },
+
+  { /*METADATI*/ component: UOMetadati },
 ];
 
 /**

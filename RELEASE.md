@@ -41,6 +41,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Ripristinato l'informazione sull'ultimo aggiornamento nel CT UO
+
 ## Versione 11.21.0 (14/08/2024)
 
 ### Fix
