@@ -29,7 +29,6 @@ RUN <<EOT
     cp -a /app/src/addons/${ADDON_PATH}/public .
     yarn install --network-timeout 1000000
     yarn dedupe @popperjs/core
-    yarn add @redturtle/volto-newsletter
     yarn build
     rm -rf cache omelette .yarn/cache
 EOT
@@ -42,5 +41,3 @@ LABEL maintainer="RedTurtle" \
       org.label-schema.vendor="RedTurtle"
 
 COPY --from=builder /app/ /app/
-
-ENV ADDONS="@redturtle/volto-newsletter"
