@@ -1,5 +1,28 @@
 
 
+## [11.22.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.21.1...v11.22.0) (2024-09-05)
+
+
+### Features
+
+* added form state warning ([#710](https://github.com/RedTurtle/design-comuni-plone-theme/issues/710)) ([afb252c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/afb252c20632b9f29eff245263a8e5367f83cda7))
+* custom feedback form title ([#752](https://github.com/RedTurtle/design-comuni-plone-theme/issues/752)) ([651cc36](https://github.com/RedTurtle/design-comuni-plone-theme/commit/651cc36d9d59b7a58b2a16105aa60c138aec403a))
+
+
+### Bug Fixes
+
+* Revert "temporary test of adding the newsletter add-on" ([2f2d613](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2f2d6137c00aa5800ecd5adc9a017d70ca6938d9))
+* added trasparenza fields to CT Persona ([#759](https://github.com/RedTurtle/design-comuni-plone-theme/issues/759)) ([3c10633](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3c10633a39ff764c33c7ddd068ed5a265e439251))
+* paranoid check for contextual vocabularies ([#746](https://github.com/RedTurtle/design-comuni-plone-theme/issues/746)) ([83cefdd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/83cefdda38cabad73f1c9007120f5ca80dc65151))
+* restored Metadata component in UO View ([#753](https://github.com/RedTurtle/design-comuni-plone-theme/issues/753)) ([2dde96b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2dde96bbe52ca1632fd64972431b9dcdbc8e362f))
+* sort_on default and total results in search block ([#756](https://github.com/RedTurtle/design-comuni-plone-theme/issues/756)) ([8eaa41c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8eaa41ca814e03d7cec7b7b6ae927da16ef9bc75))
+* updated search block to use event_location ([#758](https://github.com/RedTurtle/design-comuni-plone-theme/issues/758)) ([e003eb0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e003eb0fb8acd852a32476153b0034c885367916))
+
+
+### Documentation
+
+* updated publiccode and release log ([3b3c190](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3b3c190c8471b9c83c819291965b1ff5da144bb5))
+
 ## [11.21.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.21.0...v11.21.1) (2024-08-20)
 
 
