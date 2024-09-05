@@ -1686,6 +1686,11 @@ msgstr "Details of the type of procedure"
 msgid "dichiarazione_dei_redditi"
 msgstr "Tax declaration"
 
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
+# defaultMessage: Dichiarazioni di insussistenza e incompatibilità
+msgid "dichiarazioni_di_insussistenza_e_incompatibilita"
+msgstr "Statements of Incompatibility"
+
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Dirigente
@@ -1898,6 +1903,11 @@ msgstr "E-mail"
 # defaultMessage: YouTube Video {id}
 msgid "embedVideo"
 msgstr ""
+
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
+# defaultMessage: Emolumenti a carico della finanza pubblica
+msgid "emolumenti_a_carico_della_finanza_pubblica"
+msgstr "Remuneration Charged to Public Finances"
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Edit
 # defaultMessage: Please select an item in the sidebar in order to show it here
