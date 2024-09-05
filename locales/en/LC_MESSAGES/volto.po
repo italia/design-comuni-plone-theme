@@ -2139,6 +2139,16 @@ msgstr ""
 msgid "feedback_unclear_proceeding"
 msgstr ""
 
+#: overrideTranslations
+# defaultMessage: Check this box if the value entered in this field can be used only once.
+msgid "field_unique_description"
+msgstr "Check this box if the value entered in this field can be used only once."
+
+#: overrideTranslations
+# defaultMessage: Unique field
+msgid "field_unique_title"
+msgstr "Unique field"
+
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: File correlato
@@ -2174,9 +2184,29 @@ msgid "form_default_cancel_label"
 msgstr "Cancel"
 
 #: overrideTranslations
+# defaultMessage: Submission limit
+msgid "form_limit"
+msgstr "Submission limit"
+
+#: overrideTranslations
 # defaultMessage: Ricomincia
 msgid "form_reset"
 msgstr "Restart"
+
+#: overrideTranslations
+# defaultMessage: Set a submission limit
+msgid "form_set_limit"
+msgstr "Set a submission limit"
+
+#: overrideTranslations
+# defaultMessage: Sei stato inserito in lista d'attesa
+msgid "form_submit_success_warning"
+msgstr "You've been added to the waiting list"
+
+#: overrideTranslations
+# defaultMessage: I tuoi dati sono stati inviati, ma è già stato raggiunto il limite di iscrizioni, sei stato inserito in lista d'attesa.
+msgid "form_submit_success_warning_description"
+msgstr "Your data has been submitted, but the subscription limit has been reached and you've been added to the waiting list."
 
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Foto dell'attività politica

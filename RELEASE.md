@@ -45,6 +45,7 @@
 
 ### Novità
 
+- Il blocco form ha nuove funzionalità come il limite di iscrizioni e la possibilità di impostare un campo come univoco.
 - Aggiunti al CT Persona i campi per la gestione della Trasparenza per allegare i file sugli emolumenti a carico della finanza pubblica e le dichiarazioni di insussistenza e incompatibilità.
 
 ### Fix
@@ -56,7 +57,6 @@
   Fissato la spaziatura nel testo di presentazione dei risultati di
   ricerca nel blocco cerca
   Mostrato il numero di risultati della ricerca nel blocco cerca
-  
 
 ### Migliorie
 
