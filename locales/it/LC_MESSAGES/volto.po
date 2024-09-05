@@ -2080,11 +2080,6 @@ msgid "feedback_form_title"
 msgstr "Quanto sono chiare le informazioni su questa pagina?"
 
 #: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
-# defaultMessage: How easy was it to use this service?
-msgid "feedback_form_title_service"
-msgstr "Quanto è stato facile usare questo servizio?"
-
-#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
 # defaultMessage: Yes
 msgid "feedback_form_yes"
 msgstr "Si"

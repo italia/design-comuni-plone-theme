@@ -2089,11 +2089,6 @@ msgid "feedback_form_title"
 msgstr ""
 
 #: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
-# defaultMessage: How easy was it to use this service?
-msgid "feedback_form_title_service"
-msgstr ""
-
-#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
 # defaultMessage: Yes
 msgid "feedback_form_yes"
 msgstr ""

@@ -32,10 +32,6 @@ const messages = defineMessages({
     id: 'feedback_form_title',
     defaultMessage: 'How clear is the information on this page?',
   },
-  service_title: {
-    id: 'feedback_form_title_service',
-    defaultMessage: 'How easy was it to use this service?',
-  },
   yes: {
     id: 'feedback_form_yes',
     defaultMessage: 'Yes',
@@ -120,7 +116,7 @@ const messages = defineMessages({
   },
 });
 
-const FeedbackForm = ({ contentType, pathname }) => {
+const FeedbackForm = ({ title, pathname }) => {
   const intl = useIntl();
   const location = useLocation();
   const path = pathname ?? location.pathname ?? '/';
@@ -273,18 +269,7 @@ const FeedbackForm = ({ contentType, pathname }) => {
                         className="title-medium-2-semi-bold mb-0"
                         data-element="feedback-title"
                       >
-                        {/* Il validatore a quanto pare fa il check per titolo.
-                            Il titolo da specifiche deve essere diverso per Servizi, ma loro non lo sanno
-                            https://github.com/italia/pa-website-validator/blob/main/src/storage/municipality/feedbackComponentStructure.ts#L8
-                        */}
-                        {/* {contentType === 'Servizio'
-                          ? intl.formatMessage(messages.service_title)
-                          : intl.formatMessage(messages.title)} */}
-
-                        {/* Aggiunto titolo per compatibilità modello AGID di io-cittadino */}
-                        {contentType === 'ModelloPratica'
-                          ? intl.formatMessage(messages.service_title)
-                          : intl.formatMessage(messages.title)}
+                        {title || intl.formatMessage(messages.title)}
                       </h2>
                       <div className="rating-container mb-0">
                         <RTRating
@@ -455,7 +440,7 @@ const FeedbackForm = ({ contentType, pathname }) => {
 };
 
 FeedbackForm.propTypes = {
-  contentType: PropTypes.string,
+  title: PropTypes.string,
   pathname: PropTypes.string,
 };
 

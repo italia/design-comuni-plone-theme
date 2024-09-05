@@ -279,6 +279,7 @@ export default function applyConfig(voltoConfig) {
         ],
       },
       enableFeedbackForm: true,
+      noFeedbackFormFor: ['ModelloPratica'],
       enableFeedbackFormCaptcha: false,
       enableVoltoFormBlockCaptcha: true,
       splitMegamenuColumns: true, //se impostato a false, non spezza le colonne con intestazioni nel megamenu
