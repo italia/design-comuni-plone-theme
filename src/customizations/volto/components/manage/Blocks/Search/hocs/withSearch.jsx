@@ -1,10 +1,10 @@
 /* CUSTOMIZATIONS:
   - Read puntual comments in code
 */
+import qs from 'query-string';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import qs from 'query-string';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
 import { resolveExtension } from '@plone/volto/helpers/Extensions/withBlockExtensions';
 import config from '@plone/volto/registry';
@@ -236,7 +236,7 @@ const withSearch = (options) => (WrappedComponent) => {
   const { inputDelay = 1000 } = options || {};
 
   function WithSearch(props) {
-    const { data, id, editable = false } = props;
+    const { data, id, editable = false, properties } = props;
 
     const [locationSearchData, setLocationSearchData] = useSearchBlockState(
       id,
@@ -325,8 +325,10 @@ const withSearch = (options) => (WrappedComponent) => {
     const querystringResults = useSelector(
       (state) => state.querystringsearch.subrequests,
     );
+    const subrequestID = properties?.UID + '-' + id;
     const totalItems =
-      querystringResults[id]?.total || querystringResults[id]?.items?.length;
+      querystringResults[subrequestID]?.total ||
+      querystringResults[subrequestID]?.items?.length;
 
     return (
       <WrappedComponent

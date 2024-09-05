@@ -46,6 +46,13 @@
 ### Fix
 
 - Ripristinato l'informazione sull'ultimo aggiornamento nel CT UO
+- Fissato l'ordinamento della ricerca nel blocco cerca: la ricerca
+  iniziale rispetta l'eventuale selezione del redattore; come si cerca
+  per testo allora si ordina per ranking
+  Fissato la spaziatura nel testo di presentazione dei risultati di
+  ricerca nel blocco cerca
+  Mostrato il numero di risultati della ricerca nel blocco cerca
+  
 
 ## Versione 11.21.0 (14/08/2024)
 
