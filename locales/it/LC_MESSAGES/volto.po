@@ -2211,6 +2211,16 @@ msgstr "A volte le indicazioni non erano chiare"
 msgid "feedback_unclear_proceeding"
 msgstr "A volte non capivo se stavo procedendo correttamente"
 
+#: overrideTranslations
+# defaultMessage: Check this box if the value entered in this field can be used only once.
+msgid "field_unique_description"
+msgstr "Seleziona questo checkbox se il valore inserito in questo campo può essere utilizzato solo una volta"
+
+#: overrideTranslations
+# defaultMessage: Unique field
+msgid "field_unique_title"
+msgstr "Campo univoco"
+
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: File correlato
@@ -2246,9 +2256,29 @@ msgid "form_default_cancel_label"
 msgstr "Annulla"
 
 #: overrideTranslations
+# defaultMessage: Submission limit
+msgid "form_limit"
+msgstr "Limite iscrizioni"
+
+#: overrideTranslations
 # defaultMessage: Ricomincia
 msgid "form_reset"
 msgstr "Ricomincia"
+
+#: overrideTranslations
+# defaultMessage: Set a submission limit
+msgid "form_set_limit"
+msgstr "Imposta un limite iscrizioni"
+
+#: overrideTranslations
+# defaultMessage: Sei stato inserito in lista d'attesa
+msgid "form_submit_success_warning"
+msgstr "Sei stato inserito in lista d'attesa"
+
+#: overrideTranslations
+# defaultMessage: I tuoi dati sono stati inviati, ma è già stato raggiunto il limite di iscrizioni, sei stato inserito in lista d'attesa.
+msgid "form_submit_success_warning_description"
+msgstr "I tuoi dati sono stati inviati, ma è già stato raggiunto il limite di iscrizioni, sei stato inserito in lista d'attesa."
 
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Foto dell'attività politica

@@ -68,4 +68,30 @@ defineMessages({
     id: 'Clear dates',
     defaultMessage: 'Pulisci i campi',
   },
+  success_warning: {
+    id: 'form_submit_success_warning',
+    defaultMessage: "Sei stato inserito in lista d'attesa",
+  },
+  success_warning_description: {
+    id: 'form_submit_success_warning_description',
+    defaultMessage:
+      "I tuoi dati sono stati inviati, ma è già stato raggiunto il limite di iscrizioni, sei stato inserito in lista d'attesa.",
+  },
+  field_unique_title: {
+    id: 'field_unique_title',
+    defaultMessage: 'Unique field',
+  },
+  field_unique_description: {
+    id: 'field_unique_description',
+    defaultMessage:
+      'Check this box if the value entered in this field can be used only once.',
+  },
+  set_limit: {
+    id: 'form_set_limit',
+    defaultMessage: 'Set a submission limit',
+  },
+  limit: {
+    id: 'form_limit',
+    defaultMessage: 'Submission limit',
+  },
 });
