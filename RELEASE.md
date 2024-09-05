@@ -54,6 +54,12 @@
   Mostrato il numero di risultati della ricerca nel blocco cerca
   
 
+### Migliorie
+
+- Modificato la lista dei Luoghi per filtrare la ricerca. Si prendevano
+  tutti i luoghi, ora solo quelli legati agli eventi per avere una lista
+  più corta
+
 ## Versione 11.21.0 (14/08/2024)
 
 ### Fix
