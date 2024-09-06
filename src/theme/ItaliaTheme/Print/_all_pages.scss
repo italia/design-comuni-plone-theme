@@ -1,6 +1,16 @@
 @media print {
+  @page {
+    margin: 0.2cm; /* 1 inch margin for all sides */
+  }
+
   body {
     display: block !important;
+  }
+
+  .public-ui {
+    h2 {
+      font-size: 1.5rem;
+    }
   }
 
   .public-ui {
@@ -222,6 +232,16 @@
       margin: 0.5rem 0rem;
       box-shadow: none;
       font-size: 1rem;
+    }
+
+    .callout {
+      page-break-inside: avoid;
+      .callout-inner {
+        // padding-top: 0px;
+        p {
+          margin-top: -2rem;
+        }
+      }
     }
   }
 
