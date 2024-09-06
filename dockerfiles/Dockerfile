@@ -40,11 +40,15 @@ LABEL maintainer="RedTurtle" \
       org.label-schema.description="Plone theme for Italian Public Administration" \
       org.label-schema.vendor="RedTurtle"
 
+USER root
+
 RUN <<EOT
     set -e
     apt update
     apt install -y --no-install-recommends libvips-dev
     rm -rf /var/lib/apt/lists/*
 EOT
+
+USER node
 
 COPY --from=builder /app/ /app/
