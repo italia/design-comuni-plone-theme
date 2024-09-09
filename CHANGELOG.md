@@ -1,5 +1,12 @@
 
 
+## [11.22.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.22.0...v11.22.1) (2024-09-09)
+
+
+### Bug Fixes
+
+* removed RemoveBodyClass component in favor of a customized BodyClass component ([61062d8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/61062d84041f52182c2d04716b0411673a98e1f9))
+
 ## [11.22.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.21.1...v11.22.0) (2024-09-05)
 
 
