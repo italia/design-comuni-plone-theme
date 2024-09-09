@@ -13,10 +13,7 @@ import { BodyClass } from '@plone/volto/helpers';
 import { useLocation } from 'react-router-dom';
 import { getBaseUrl } from '@plone/volto/helpers';
 import config from '@plone/volto/registry';
-import {
-  LoginAgidButtons,
-  RemoveBodyClass,
-} from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { LoginAgidButtons } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 /**
  * unauthorized function.
@@ -58,7 +55,7 @@ const Unauthorized = (props) => {
   return (
     <div id="unauthorized-agid" className="view-wrapper">
       <BodyClass className="public-ui" />
-      <RemoveBodyClass className="cms-ui" />
+      <BodyClass className="cms-ui" remove={true} />
 
       <Container className="view-wrapper py-5">
         {spidLoginUrl || spidLogin ? (

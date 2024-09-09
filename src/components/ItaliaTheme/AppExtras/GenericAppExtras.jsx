@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { BodyClass } from '@plone/volto/helpers';
-import { RemoveBodyClass } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import ScrollToTop from 'design-comuni-plone-theme/components/ItaliaTheme/ScrollToTop/ScrollToTop';
 import { SubsiteLoader } from 'volto-subsites';
 import config from '@plone/volto/registry';
@@ -28,7 +27,7 @@ const GenericAppExtras = (props) => {
       {isPublicUI && (
         <>
           <BodyClass className="public-ui" />
-          <RemoveBodyClass className="cms-ui" />
+          <BodyClass className="cms-ui" remove={true} />
         </>
       )}
       <ScrollToTop />
