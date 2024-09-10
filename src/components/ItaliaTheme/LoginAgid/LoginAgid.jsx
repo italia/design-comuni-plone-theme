@@ -11,10 +11,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { withRouter } from 'react-router-dom';
 import { Login } from '@plone/volto/components';
 import { Row, Col, Container } from 'design-react-kit';
-import {
-  RemoveBodyClass,
-  LoginAgidButtons,
-} from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { LoginAgidButtons } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { Button } from 'design-react-kit';
 import { useLocation } from 'react-router-dom';
 import { getBaseUrl } from '@plone/volto/helpers';
@@ -72,7 +69,7 @@ const LoginAgid = (props) => {
         <div id="page-login">
           <Helmet title={intl.formatMessage(messages.login)} />
           <BodyClass className="public-ui" />
-          <RemoveBodyClass className="cms-ui" />
+          <BodyClass className="cms-ui" remove={true} />
           <Container className="view-wrapper py-5">
             <Row className="view-container">
               <Col xs={12} lg={{ size: 10, offset: 1 }}>

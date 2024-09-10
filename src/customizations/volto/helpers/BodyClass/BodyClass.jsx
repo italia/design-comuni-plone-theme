@@ -1,13 +1,17 @@
+/**
+ * CUSTOMIZATIONS:
+ * - handle bodyclass removal
+ */
 import { Component, Children } from 'react';
 import PropTypes from 'prop-types';
 import withSideEffect from 'react-side-effect';
 
 /**
  * @export
- * @class RemoveBodyClass
+ * @class BodyClass
  * @extends {Component}
  */
-class RemoveBodyClass extends Component {
+class BodyClass extends Component {
   /**
    * Render method.
    * @method render
@@ -21,14 +25,16 @@ class RemoveBodyClass extends Component {
   }
 }
 
-RemoveBodyClass.propTypes = {
+BodyClass.propTypes = {
   children: PropTypes.element,
   className: PropTypes.string,
+  remove: PropTypes.bool,
 };
 
-RemoveBodyClass.defaultProps = {
+BodyClass.defaultProps = {
   children: null,
   className: null,
+  remove: false,
 };
 
 /**
@@ -41,7 +47,11 @@ function reducePropsToState(propsList) {
   let classList = [];
   propsList.forEach((props) => {
     if (props.className) {
-      classList = classList.concat(props.className);
+      if (props.remove) {
+        classList = classList.filter((c) => c !== props.className);
+      } else {
+        classList = classList.concat(props.className.split(' '));
+      }
     }
   });
   return classList;
@@ -54,26 +64,10 @@ function reducePropsToState(propsList) {
  * @returns {null} null
  */
 function handleStateChangeOnClient(classList) {
-  //  document.body.className = '';
-  let domClassNames = [];
-  Object.keys(document.body.classList).forEach((k) => {
-    domClassNames.push(document.body.classList[k]);
-  });
-
+  document.body.className = '';
   classList.forEach((className) => {
-    // This allows the component to accept more than one class at the same time
-    if (className.includes(' ')) {
-      className.split(' ').forEach((className) => {
-        if (document.body.classList.contains(className)) {
-          domClassNames.splice(domClassNames.indexOf(className), 1);
-        }
-      });
-      document.body.classList = domClassNames.join(' ');
-    } else {
-      if (document.body.classList.contains(className)) {
-        domClassNames.splice(domClassNames.indexOf(className), 1);
-        document.body.classList = domClassNames.join(' ');
-      }
+    if (!document.body.classList.contains(className)) {
+      document.body.classList.add(className);
     }
   });
 }
@@ -81,4 +75,4 @@ function handleStateChangeOnClient(classList) {
 export default withSideEffect(
   reducePropsToState,
   handleStateChangeOnClient,
-)(RemoveBodyClass);
+)(BodyClass);

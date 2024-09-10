@@ -24,7 +24,7 @@ import {
 import { Skiplink, SkiplinkItem } from 'design-react-kit';
 import { useLocation, useHistory } from 'react-router-dom';
 
-import { Helmet, flattenToAppURL } from '@plone/volto/helpers';
+import { Helmet, flattenToAppURL, BodyClass } from '@plone/volto/helpers';
 import { resetSubsite } from 'volto-subsites';
 
 import {
@@ -33,7 +33,6 @@ import {
   SearchTopics,
   SearchCTs,
   Icon,
-  RemoveBodyClass,
   SearchResultItem,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
@@ -727,7 +726,7 @@ const Search = () => {
         </Container>
       </div>
       {/*force remove body class for subsite search pages*/}
-      <RemoveBodyClass className="cms-ui" />
+      <BodyClass className="cms-ui" remove={true} />
     </>
   );
 };

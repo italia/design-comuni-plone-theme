@@ -26,7 +26,6 @@ export SectionIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/
 
 /********* COMMONS ********* */
 export CardCategory from 'design-comuni-plone-theme/components/ItaliaTheme/Cards/CardCategory';
-export RemoveBodyClass from 'design-comuni-plone-theme/components/ItaliaTheme/RemoveBodyClass/RemoveBodyClass';
 export CardPersona from 'design-comuni-plone-theme/components/ItaliaTheme/Cards/CardPersona';
 export GalleryPreview from 'design-comuni-plone-theme/components/ItaliaTheme/GalleryPreview/GalleryPreview';
 
