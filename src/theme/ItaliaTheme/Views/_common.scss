@@ -367,3 +367,30 @@ dl.trasparenza-fields {
   @include rem-size(font-size, 16px);
   @include rem-size(line-height, 24px);
 }
+
+// CT gallery slider
+.it-carousel-wrapper {
+  .slider-container {
+    .slick-list .slick-track {
+      .slick-slide {
+        position: relative;
+        margin: 0 auto;
+
+        a {
+          height: 150px;
+          &.img-wrapper {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            margin: 0;
+
+            img {
+              min-height: 150px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
