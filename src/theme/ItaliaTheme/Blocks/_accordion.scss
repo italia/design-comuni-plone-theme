@@ -3,6 +3,18 @@ $accordion-icon-color: #7fb2e5;
 .block.accordion {
   .section.full-width {
     height: auto;
+    .title {
+      font-size: 2.35rem !important;
+      font-weight: bold;
+      line-height: 3rem;
+
+      .DraftEditor-root {
+        .public-DraftEditorPlaceholder-root {
+          width: 100%;
+          font-size: 2.35rem;
+        }
+      }
+    }
 
     @media (max-width: #{map-get($grid-breakpoints, md)}) {
       padding: 0.5em;
