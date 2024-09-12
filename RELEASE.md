@@ -45,7 +45,7 @@
 
 ### Migliorie
 
-- ...
+- Migliorato il layout della galleria immagini nei CT.
 
 ### Novità
 

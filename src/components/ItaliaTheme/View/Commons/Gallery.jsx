@@ -13,6 +13,8 @@ import {
   SingleSlideWrapper,
   CarouselWrapper,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { useSlider } from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/slider';
+
 import PropTypes from 'prop-types';
 import { contentFolderHasItems } from 'design-comuni-plone-theme/helpers';
 import { UniversalLink } from '@plone/volto/components';
@@ -50,6 +52,7 @@ const Gallery = ({
   reactSlick,
 }) => {
   const Slider = reactSlick.default;
+  const { SliderNextArrow, SliderPrevArrow } = useSlider();
   const Image = config.getComponent({ name: 'Image' }).component;
   const getSettings = (nItems, slideToScroll) => {
     return {
@@ -58,6 +61,8 @@ const Gallery = ({
       speed: 500,
       slidesToShow: nItems < 3 ? nItems : 3,
       slidesToScroll: slideToScroll ?? 3,
+      nextArrow: <SliderNextArrow intl={intl} />,
+      prevArrow: <SliderPrevArrow intl={intl} />,
       responsive: [
         {
           breakpoint: 1024,
@@ -154,37 +159,40 @@ const Gallery = ({
               <Slider {...getSettings(images.length)}>
                 {images.map((item, i) => (
                   <SingleSlideWrapper key={item['@id']} index={i}>
-                    <figure>
-                      <UniversalLink
-                        item={item}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          setViewImageIndex(i);
-                        }}
-                        onKeyDown={(e) => {
-                          if (e.keyCode === 13) {
+                    <div className={'slide-wrapper'} role="presentation">
+                      <figure className="img-wrapper">
+                        <UniversalLink
+                          item={item}
+                          onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
                             setViewImageIndex(i);
-                          }
-                        }}
-                        aria-label={`${intl.formatMessage(
-                          messages.viewPreview,
-                        )} ${item.title}`}
-                      >
-                        <Image
-                          item={item}
-                          alt={item.title}
-                          className="img-fluid"
-                          loading="lazy"
-                          sizes={`(max-width:320px) 300px, (max-width:425px) 400px, ${default_width_image}`}
-                        />
-                      </UniversalLink>
-                      <figcaption className="figure-caption mt-2">
-                        {item.title}
-                      </figcaption>
-                    </figure>
+                          }}
+                          onKeyDown={(e) => {
+                            if (e.keyCode === 13) {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              setViewImageIndex(i);
+                            }
+                          }}
+                          aria-label={`${intl.formatMessage(
+                            messages.viewPreview,
+                          )} ${item.title}`}
+                          className="img-wrapper"
+                        >
+                          <Image
+                            item={item}
+                            alt={item.title}
+                            className="img-fluid"
+                            loading="lazy"
+                            sizes={`(max-width:320px) 300px, (max-width:425px) 400px, ${default_width_image}`}
+                          />
+                        </UniversalLink>
+                        <figcaption className="figure-caption mt-2">
+                          {item.title}
+                        </figcaption>
+                      </figure>
+                    </div>
                   </SingleSlideWrapper>
                 ))}
               </Slider>
