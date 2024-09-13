@@ -22,7 +22,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: ./dockerfiles/Dockerfile
+          file: ./dockerfiles/Dockerfile.withnewsletter
           tags: redturtletech/io-comune-base:withnewsletter
           pull: true
           push: true
