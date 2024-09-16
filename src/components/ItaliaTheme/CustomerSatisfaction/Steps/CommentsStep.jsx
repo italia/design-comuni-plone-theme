@@ -80,6 +80,7 @@ const CommentsStep = ({
               invalid={invalid}
               className="mt-1"
               data-element="feedback-input-text"
+              autoComplete="off"
             />
           </FormGroup>
         </Form>

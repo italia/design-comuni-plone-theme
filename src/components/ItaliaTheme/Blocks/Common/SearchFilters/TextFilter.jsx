@@ -21,6 +21,7 @@ const TextFilter = ({ value, id, onChange, placeholder }) => {
         onChange={(e, data) => {
           onChange(id, e.target.value ?? '');
         }}
+        autocomplete="off"
       />
     </div>
   );
