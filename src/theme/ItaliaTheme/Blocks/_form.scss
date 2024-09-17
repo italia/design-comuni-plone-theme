@@ -1,45 +1,50 @@
 .public-ui {
   .block.form {
-    @media (max-width: #{map-get($grid-breakpoints, md)}) {
-      .form-group {
-        display: flex;
-        flex-direction: column;
+    .row {
+      max-width: 100%;
 
-        label {
-          position: relative;
-          order: 1;
-          font-size: 0.777rem;
-          line-height: 1.375rem;
-          transform: none;
-          transform: none;
-          white-space: normal;
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          max-width: 100%;
 
-          &.active {
+          label {
+            position: relative;
+            order: 1;
+            font-size: 0.777rem;
+            line-height: 1.375rem;
+            transform: none;
+            transform: none;
+            white-space: normal;
+
+            &.active {
+              font-size: 0.777rem;
+              transform: none;
+            }
+          }
+
+          input,
+          textarea,
+          .form-input-file {
+            order: 2;
+          }
+
+          input[type='date'] ~ label {
             font-size: 0.777rem;
             transform: none;
           }
+
+          small.form-text {
+            position: relative;
+            order: 3;
+          }
         }
 
-        input,
-        textarea,
         .form-input-file {
-          order: 2;
-        }
-
-        input[type='date'] ~ label {
-          font-size: 0.777rem;
-          transform: none;
-        }
-
-        small.form-text {
-          position: relative;
-          order: 3;
-        }
-      }
-
-      .form-input-file {
-        .dropzone-placeholder {
-          margin-top: 0;
+          .dropzone-placeholder {
+            margin-top: 0;
+          }
         }
       }
     }
@@ -65,6 +70,7 @@
   &,
   .volto-subblocks-wrapper,
   .form-field {
+    max-width: 100%;
     .single-block {
       .dragsubblock {
         top: 0.3rem;
