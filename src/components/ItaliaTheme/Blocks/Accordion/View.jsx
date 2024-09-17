@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ViewBlock from './Block/ViewBlock';
+import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 import { Container, Card, CardBody } from 'design-react-kit';
 
 /**
@@ -25,6 +26,14 @@ const AccordionView = ({ data, block }) => {
         <div className="full-width section section-muted section-inset-shadow py-5">
           <Container className="px-md-4">
             <Card className="card-bg rounded" noWrapper={false} space tag="div">
+              <div className="block-header">
+                {data.title && <div className="title">{data.title}</div>}
+                {data.description && (
+                  <div className="description">
+                    <TextBlockView data={{ value: data.description }} />
+                  </div>
+                )}
+              </div>
               <CardBody tag="div">
                 {data.subblocks.map((subblock, index) => (
                   <ViewBlock

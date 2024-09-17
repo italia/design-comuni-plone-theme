@@ -12,6 +12,7 @@ import {
   SubblocksEdit,
   SubblocksWrapper,
 } from 'volto-subblocks';
+import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 import { SidebarPortal } from '@plone/volto/components';
 import { handleKeyDownOwnFocusManagement } from 'design-comuni-plone-theme/helpers/blocks';
@@ -23,6 +24,14 @@ const messages = defineMessages({
   addItem: {
     id: 'Add accordion item',
     defaultMessage: 'Aggiungi elemento',
+  },
+  title: {
+    id: 'Title',
+    defaultMessage: 'Titolo...',
+  },
+  description: {
+    id: 'Description placeholder',
+    defaultMessage: 'Descrizione...',
   },
 });
 /**
@@ -107,6 +116,56 @@ class Edit extends SubblocksEdit {
         <div className="full-width section section-muted section-inset-shadow py-5 is-edit-mode">
           <Container className="px-md-4">
             <Card className="card-bg rounded" noWrapper={false} space tag="div">
+              <div className="block-header">
+                <div className="title">
+                  <TextEditorWidget
+                    {...this.props}
+                    showToolbar={false}
+                    data={this.props.data}
+                    key={'title'}
+                    fieldName="title"
+                    selected={this.state.selectedField === 'title'}
+                    setSelected={(f) => {
+                      this.setState({
+                        selectedField: f,
+                        subIndexSelected: -1,
+                      });
+                    }}
+                    placeholder={this.props.intl.formatMessage(messages.title)}
+                    focusNextField={() => {
+                      this.setState({ selectedField: 'description' });
+                    }}
+                  />
+                </div>
+
+                <div className="description">
+                  <TextEditorWidget
+                    {...this.props}
+                    showToolbar={true}
+                    data={this.props.data}
+                    fieldName="description"
+                    selected={this.state.selectedField === 'description'}
+                    setSelected={(f) => {
+                      this.setState({
+                        selectedField: f,
+                        subIndexSelected: -1,
+                      });
+                    }}
+                    placeholder={this.props.intl.formatMessage(
+                      messages.description,
+                    )}
+                    focusPrevField={() => {
+                      this.setState({ selectedField: 'title' });
+                    }}
+                    focusNextField={() => {
+                      this.setState({
+                        selectedField: null,
+                        subIndexSelected: 0,
+                      });
+                    }}
+                  />
+                </div>
+              </div>
               <CardBody tag="div">
                 <SubblocksWrapper node={this.node}>
                   {this.state.subblocks.map((subblock, subindex) => (

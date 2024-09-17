@@ -226,6 +226,7 @@ msgstr ""
 msgid "Description"
 msgstr "Descripción..."
 
+#: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 # defaultMessage: Descrizione...
@@ -620,6 +621,7 @@ msgstr "Texto..."
 msgid "Thank you."
 msgstr "Gracias."
 
+#: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit

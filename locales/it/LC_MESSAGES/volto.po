@@ -217,6 +217,7 @@ msgstr "Dal {start} al {end}"
 msgid "Description"
 msgstr "Descrizione"
 
+#: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 # defaultMessage: Descrizione...
@@ -611,6 +612,7 @@ msgstr "Testo..."
 msgid "Thank you."
 msgstr "Grazie."
 
+#: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
