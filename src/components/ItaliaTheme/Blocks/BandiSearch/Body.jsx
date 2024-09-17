@@ -203,6 +203,7 @@ const Body = ({ data, id, inEditMode, path, onChangeBlock }) => {
                 icon={false}
                 tag="button"
                 className="my-2 my-lg-1"
+                type="submit"
               >
                 {intl.formatMessage(messages.find)}
               </Button>
