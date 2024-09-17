@@ -188,6 +188,7 @@ const DateFilter = (props) => {
     endLabel,
     defaultStart,
     defaultEnd,
+    blockID,
     ...rest
   } = props;
   const { DateRangePicker } = reactDates;
@@ -230,12 +231,12 @@ const DateFilter = (props) => {
       <DateRangePicker
         {...rest}
         startDate={value?.startDate || defaultStart}
-        startDateId="start-date-filter"
+        startDateId={`start-date-filter-${blockID}`}
         startDatePlaceholderText={
           startLabel ?? intl.formatMessage(messages.eventSearchStartDate)
         }
         endDate={value?.endDate || defaultEnd}
-        endDateId="end-date-filter"
+        endDateId={`end-date-filter-${blockID}`}
         endDatePlaceholderText={
           endLabel ?? intl.formatMessage(messages.eventSearchEndDate)
         }
