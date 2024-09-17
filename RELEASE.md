@@ -46,6 +46,7 @@
 ### Migliorie
 
 - Migliorato il layout della galleria immagini nei CT.
+- Nel blocco Cerca Evento, nel caso di un Evento Rassegna, tra i risultati vengono ora visualizzati solo gli appuntamenti della rassegna e non l'evento contenitore.
 
 ### Novità
 
