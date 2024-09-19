@@ -1,5 +1,18 @@
 
 
+## [11.23.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.23.0...v11.23.1) (2024-09-19)
+
+
+### Bug Fixes
+
+* **a11y:** used p with h classname to ensure correct heading order ([#770](https://github.com/RedTurtle/design-comuni-plone-theme/issues/770)) ([2ab487e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2ab487e1a799e48fbbb98e89ca7d195ed37b3ea6))
+* changed focus color ([#772](https://github.com/RedTurtle/design-comuni-plone-theme/issues/772)) ([e3c4e45](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e3c4e45cc06e18c10ae1c51327e4762d0197f767))
+
+
+### Documentation
+
+* updated publiccode and release log ([de02c1e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/de02c1e5ad7f71ecdd8f1dbd6b97dfe7bdec67d2))
+
 ## [11.23.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.22.1...v11.23.0) (2024-09-19)
 
 
