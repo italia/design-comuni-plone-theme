@@ -1,5 +1,32 @@
 # Changelog
 
+## [12.0.0-alpha.19](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.18...v12.0.0-alpha.19) (2024-09-19)
+
+
+### Features
+
+* title and description added to accordion block ([#766](https://github.com/RedTurtle/design-comuni-plone-theme/issues/766)) ([7915b92](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7915b92272aeaaf1d7ab1d8ef73122e68231fa06))
+
+
+### Bug Fixes
+
+* **a11y:** used p with h classname to ensure correct heading order ([#770](https://github.com/RedTurtle/design-comuni-plone-theme/issues/770)) ([ea54251](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ea542519ac84d72f08499199a9f19ff876b8ba27))
+* added autocomplete attribute in search and customer satisfaction fields ([#768](https://github.com/RedTurtle/design-comuni-plone-theme/issues/768)) ([e4dcf38](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e4dcf382e69cd748aec35e4322412ee9e38403e1))
+* added block id to date ids to ensure unique field ids ([#771](https://github.com/RedTurtle/design-comuni-plone-theme/issues/771)) ([4f0349b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4f0349b012d3422da055c7f748780e6508669769))
+* added filter for eventi rassegne in Event Search ([#774](https://github.com/RedTurtle/design-comuni-plone-theme/issues/774)) ([4661b5c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4661b5c87d9d32ffb9417c1d672f6152e67d04c5))
+* added max-width attribute to row to fit elements within page when zoomed in ([#773](https://github.com/RedTurtle/design-comuni-plone-theme/issues/773)) ([c94001f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c94001f1e7b41b97eae10548d14fab37d15e062f))
+* added submit type attribute to search submit buttons ([#769](https://github.com/RedTurtle/design-comuni-plone-theme/issues/769)) ([d3ff444](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d3ff4446206fec0d2816fdac85601c75a4b09b30))
+* changed focus color ([#772](https://github.com/RedTurtle/design-comuni-plone-theme/issues/772)) ([5616947](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5616947b80a31b4c022cd4be8d0b65417072979a))
+* removed id_lighthouse field in cardWithSlideUpTextTemplate ([#762](https://github.com/RedTurtle/design-comuni-plone-theme/issues/762)) ([5f3de3e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5f3de3ec2d4fd73e679124956850e056a7d4682b))
+* removed RemoveBodyClass component in favor of a customized BodyClass component ([b560bf8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b560bf80e2b8e0e9ea9dd5c9e86c12c7478c17c4))
+* slider styles + arrows in ct gallery ([#763](https://github.com/RedTurtle/design-comuni-plone-theme/issues/763)) ([fe1d50d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fe1d50d44c7656aec90dd87f3a837cb926ec58f3))
+
+
+### Maintenance
+
+* added custom image for testing with newsletter add-on ([105a6d9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/105a6d9d8b88d4fe0b38ec311321a83d8aa7605c))
+* updated workflow to build image with newsletter ([261f7f3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/261f7f34ccb9319735d71da1480de4a42c0df865))
+
 ## [12.0.0-alpha.18](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.17...v12.0.0-alpha.18) (2024-09-09)
 
 
