@@ -20,6 +20,7 @@
 .react-select__control,
 .react-select__control:hover {
   &.react-select__control--is-focused {
-    box-shadow: 0 0 0 2px $focus-outline-color !important;
+    border: 2px solid $inner-focus-border !important;
+    box-shadow: 0 0 0 2px $outer-focus-outline !important;
   }
 }
