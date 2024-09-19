@@ -1,5 +1,28 @@
 
 
+## [11.23.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.22.1...v11.23.0) (2024-09-19)
+
+
+### Features
+
+* title and description for block accordion - v11 ([#765](https://github.com/RedTurtle/design-comuni-plone-theme/issues/765)) ([93e4926](https://github.com/RedTurtle/design-comuni-plone-theme/commit/93e49267e1d896ea08b99ad1860b479f4b7bcd89))
+
+
+### Bug Fixes
+
+* added autocomplete attribute in search and customer satisfaction fields ([#768](https://github.com/RedTurtle/design-comuni-plone-theme/issues/768)) ([8de28b9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8de28b9325ffba67e47431d948f035556e100649))
+* added block id to date ids to ensure unique field ids ([#771](https://github.com/RedTurtle/design-comuni-plone-theme/issues/771)) ([4c9f6c1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4c9f6c1cead8f6185effd7d287823bb6d8cdaa0c))
+* added filter for eventi rassegne in Event Search ([#774](https://github.com/RedTurtle/design-comuni-plone-theme/issues/774)) ([2f6c69c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2f6c69c20326568350d32d540a75da28bf017b70))
+* added max-width attribute to row to fit elements within page when zoomed in ([#773](https://github.com/RedTurtle/design-comuni-plone-theme/issues/773)) ([92ab586](https://github.com/RedTurtle/design-comuni-plone-theme/commit/92ab5867ee677280e326b9af2af14decbc163cc8))
+* added submit type attribute to search submit buttons ([#769](https://github.com/RedTurtle/design-comuni-plone-theme/issues/769)) ([bf5a9a6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bf5a9a6f03bbb27322816743b4b8d1e2cbcafdb1))
+* removed id_lighthouse field in cardWithSlideUpTextTemplate ([#762](https://github.com/RedTurtle/design-comuni-plone-theme/issues/762)) ([aa4fe58](https://github.com/RedTurtle/design-comuni-plone-theme/commit/aa4fe58d6db372a2848efe429e78fceb1203f54d))
+* slider styles + arrows in ct gallery ([#764](https://github.com/RedTurtle/design-comuni-plone-theme/issues/764)) ([c1bbdb9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c1bbdb998a145c608e0fc8da5d23223ddaa0ac12))
+
+
+### Documentation
+
+* updated publiccode and release log ([f43b737](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f43b737e4ef0438182f371f46d30002d1459d21d))
+
 ## [11.22.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.22.0...v11.22.1) (2024-09-09)
 
 
