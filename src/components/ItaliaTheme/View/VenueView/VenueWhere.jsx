@@ -39,7 +39,7 @@ const VenueWhere = ({ content }) => {
       <Card className="card card-teaser border-left-card preview-image-card card-big-io-comune shadow mt-3 rounded mb-4">
         <CardBody>
           <CardTitle>
-            <h5 className="card-title">{content.title}</h5>
+            <h3 className="h5 card-title">{content.title}</h3>
           </CardTitle>
           <CardText>
             <p>

@@ -26,9 +26,9 @@ const BottomBody = ({ data, intl, hasArguments }) => {
         <div
           className={data?.centerAlignment ? 'col-lg-12 mb-3' : 'col-lg-auto'}
         >
-          <h6 className="text-uppercase text-center mt-1">
+          <p className="h6 text-uppercase text-center mt-1">
             {intl?.formatMessage(messages.otherArguments)}
-          </h6>
+          </p>
         </div>
         <div className={data?.centerAlignment ? 'col-lg-12' : 'col-lg-auto'}>
           {data?.arguments?.map((argument, index) => (

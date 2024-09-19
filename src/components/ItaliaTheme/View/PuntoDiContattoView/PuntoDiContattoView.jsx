@@ -105,7 +105,7 @@ const PuntoDiContattoView = (props) => {
             {content?.value_punto_contatto?.map((pdc, i) => {
               return (
                 <div className="my-2" key={i}>
-                  <h5 className="h6">
+                  <p className="h6">
                     {messages[pdc?.pdc_type] === undefined
                       ? pdc?.pdc_type
                       : intl.formatMessage(messages[pdc.pdc_type])}
@@ -113,7 +113,7 @@ const PuntoDiContattoView = (props) => {
                     <span className="ms-1">
                       {renderPDCItemValue(pdc, intl)}
                     </span>
-                  </h5>
+                  </p>
                 </div>
               );
             })}
