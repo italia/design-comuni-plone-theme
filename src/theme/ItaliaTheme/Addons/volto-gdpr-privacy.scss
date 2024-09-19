@@ -49,11 +49,6 @@
           outline: none;
           vertical-align: baseline;
 
-          input:focus ~ label::before {
-            box-shadow: $gdpr-focus-shadow !important;
-            outline: none !important;
-          }
-
           label {
             position: relative;
             display: block;
@@ -238,19 +233,6 @@ body.has-toolbar-collapsed {
       }
     }
   }
-}
-
-.gdpr-privacy-banner
-  .gdpr-privacy-content-wrapper
-  .gdpr-privacy-content
-  .buttons
-  button.gdpr-privacy-banner-button:focus,
-.gdpr-privacy-banner
-  .gdpr-privacy-content-wrapper
-  .gdpr-privacy-content
-  a:focus {
-  box-shadow: $gdpr-focus-shadow;
-  outline: none !important;
 }
 
 .gdpr-privacy-banner

@@ -7,11 +7,8 @@
   button.btn,
   button.rounded-right {
     &:focus {
-      border-color: $focus-outline-color !important;
-      box-shadow:
-        inset 0 1px 0 $focus-outline-color,
-        0 1px 1px $focus-outline-color,
-        0 0 0 0.2rem $focus-outline-color !important;
+      border: 2px solid $inner-focus-border !important;
+      box-shadow: 0 0 0 2px $outer-focus-outline !important;
       outline: none;
     }
   }

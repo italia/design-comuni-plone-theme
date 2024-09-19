@@ -20,10 +20,11 @@
 
       .it-search-wrapper {
         a.search-link {
-          outline: $header-center-bg-color 2px solid !important;
+          border: $header-center-bg-color 2px solid !important;
 
           &:focus {
-            box-shadow: 0 0 0 5px $focus-outline-color !important;
+            outline: 2.5px solid $inner-focus-border !important;
+            box-shadow: 0 0 0 5px $outer-focus-outline !important;
           }
         }
       }

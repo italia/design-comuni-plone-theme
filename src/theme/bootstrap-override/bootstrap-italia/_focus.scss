@@ -1,3 +1,9 @@
+:focus:not(.focus--mouse),
+%focus {
+  box-shadow: 0 0 0 2px $outer-focus-outline !important;
+  border: 2px solid $inner-focus-border !important;
+}
+
 .skiplinks a:focus:not(.focus--mouse) {
   border: 2px solid;
 }

@@ -15,7 +15,8 @@
         min-width: 150px;
 
         &:focus-within {
-          box-shadow: 0 0 0 2px $focus-outline-color;
+          border: 2px solid $inner-focus-border !important;
+          box-shadow: 0 0 0 2px $outer-focus-outline !important;
         }
 
         .react-select__control {
@@ -57,7 +58,8 @@
             }
 
             &.DateInput_input__focused {
-              box-shadow: 0 0 0 2px $focus-outline-color;
+              border: 2px solid $inner-focus-border !important;
+              box-shadow: 0 0 0 2px $outer-focus-outline !important;
             }
           }
 
