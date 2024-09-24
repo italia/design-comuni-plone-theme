@@ -41,19 +41,11 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.23.2 (24/09/2024)
 
 ### Migliorie
 
 - Gli utenti SPID vengono ora direttamente rediretti al link finale quando viene utilizzato un CT di tipo Collegamento
-
-### Novità
-
-- ...
-
-### Fix
-
-- ...
 
 ## Versione 11.23.1 (19/09/2024)
 
