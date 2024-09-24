@@ -1,5 +1,17 @@
 
 
+## [11.23.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.23.1...v11.23.2) (2024-09-24)
+
+
+### Bug Fixes
+
+* added condition for spid user link redirect ([#776](https://github.com/RedTurtle/design-comuni-plone-theme/issues/776)) ([8ab726b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8ab726b52fb22df66d76f1b00089cb4aa0f07968))
+
+
+### Documentation
+
+* updated publiccode and release log ([19a712d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/19a712d35570da2a97bf811c72f4d87343c4e2dc))
+
 ## [11.23.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.23.0...v11.23.1) (2024-09-19)
 
 
