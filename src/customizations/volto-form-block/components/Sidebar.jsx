@@ -294,7 +294,10 @@ const Sidebar = ({
                     <BlockDataForm
                       schema={FieldSchema(subblock)}
                       onChangeField={(name, value) => {
-                        var update_values = {};
+                        const update_values = {};
+                        if (subblock.field_type === 'static_text') {
+                          update_values.required = false;
+                        }
 
                         onChangeSubBlock(index, {
                           ...subblock,
