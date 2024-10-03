@@ -1470,6 +1470,11 @@ msgstr ""
 msgid "data_conclusione_incarico"
 msgstr "Formó parte de la organización municipal hasta"
 
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
+# defaultMessage: Data di fine dell'incarico
+msgid "data_conclusione_incarico_label"
+msgstr ""
+
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
 # defaultMessage: Data inizio incarico
 msgid "data_inizio"

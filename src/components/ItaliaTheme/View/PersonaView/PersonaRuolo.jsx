@@ -70,6 +70,10 @@ const messages = defineMessages({
     id: 'foto_attivita_politica',
     defaultMessage: "Foto dell'attività politica",
   },
+  data_conclusione_incarico_label: {
+    id: 'data_conclusione_incarico_label',
+    defaultMessage: "Data di fine dell'incarico",
+  },
   data_conclusione_incarico: {
     id: 'data_conclusione_incarico',
     defaultMessage:
@@ -120,16 +124,18 @@ const PersonaRuolo = ({ content }) => {
           {content.incarichi_persona[0].data_conclusione_incarico && (
             <RichTextSection
               tag_id="data_conclusione_incarico"
-              title={intl.formatMessage(messages.data_conclusione_incarico, {
-                incarico: content.incarichi_persona[0].title,
-              })}
+              title={intl.formatMessage(
+                messages.data_conclusione_incarico_label,
+              )}
             >
               <div className="font-serif">
-                {viewDate(
+                {`${intl.formatMessage(messages.data_conclusione_incarico, {
+                  incarico: content.incarichi_persona[0].title,
+                })} ${viewDate(
                   intl.locale,
                   content.incarichi_persona[0].data_conclusione_incarico,
                   'DD MMMM Y',
-                )}
+                )}`}
               </div>
             </RichTextSection>
           )}

@@ -1461,6 +1461,11 @@ msgstr "Assignment start date"
 msgid "data_conclusione_incarico"
 msgstr "He was part of the municipal organization until"
 
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
+# defaultMessage: Data di fine dell'incarico
+msgid "data_conclusione_incarico_label"
+msgstr "Assignment end date"
+
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
 # defaultMessage: Data inizio incarico
 msgid "data_inizio"

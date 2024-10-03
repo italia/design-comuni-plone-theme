@@ -45,7 +45,7 @@
 
 ### Migliorie
 
-- ...
+- Cambiato il titolo della sezione "fine incarico" nel CT Persona.
 
 ### Novità
 
