@@ -1533,6 +1533,11 @@ msgstr "Data conclusione incarico"
 msgid "data_conclusione_incarico"
 msgstr "Ha fatto parte dell'organizzazione comunale come {incarico} fino al"
 
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
+# defaultMessage: Data di fine dell'incarico
+msgid "data_conclusione_incarico_label"
+msgstr "Data di conclusione dell'incarico"
+
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
 # defaultMessage: Data inizio incarico
 msgid "data_inizio"

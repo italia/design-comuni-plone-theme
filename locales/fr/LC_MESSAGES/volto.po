@@ -1550,6 +1550,11 @@ msgstr ""
 msgid "data_conclusione_incarico"
 msgstr "Date de conclusion de la mission"
 
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
+# defaultMessage: Data di fine dell'incarico
+msgid "data_conclusione_incarico_label"
+msgstr ""
+
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
 # defaultMessage: Data inizio incarico
 msgid "data_inizio"
