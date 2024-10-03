@@ -61,6 +61,14 @@
 
 - Gli utenti SPID vengono ora direttamente rediretti al link finale quando viene utilizzato un CT di tipo Collegamento
 
+### Novità
+
+- ...
+
+### Fix
+
+- L'assegnazione dei ruoli nella vista gruppi funziona correttamente per tutti i gruppi di utenti.
+
 ## Versione 11.23.1 (19/09/2024)
 
 ### Migliorie
