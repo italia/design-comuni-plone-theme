@@ -1,5 +1,27 @@
 
 
+## [11.24.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.23.2...v11.24.0) (2024-10-03)
+
+
+### Features
+
+* make configurable the types that show dates in listing cards ([#777](https://github.com/RedTurtle/design-comuni-plone-theme/issues/777)) ([42da305](https://github.com/RedTurtle/design-comuni-plone-theme/commit/42da305e45bd07391cb7bf958e9e09c0fe187034))
+* update to volto 17.19.0 ([fcef9ba](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fcef9ba685cca2189aac8db3c49c1af3e17c1c8e))
+
+
+### Bug Fixes
+
+* always set form block static_text fields as not required ([#782](https://github.com/RedTurtle/design-comuni-plone-theme/issues/782)) ([4a62da4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4a62da4bc169dc1ddaa8d04ecd4cf23eefedb03a))
+* changed end of assignment section label ([#778](https://github.com/RedTurtle/design-comuni-plone-theme/issues/778)) ([e2b11f6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e2b11f6200f0304204921c2d58aec3a755adb060))
+* changed state management of authenticatedRole ([#780](https://github.com/RedTurtle/design-comuni-plone-theme/issues/780)) ([bf8bccb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bf8bccb56603a3baff0b92dd1c6ae807f7ef6f69))
+* recurrence widget bug when closing and opening multiple times without saving ([#741](https://github.com/RedTurtle/design-comuni-plone-theme/issues/741)) ([586ef0a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/586ef0aad7a988c48157351edeaa600f4939c185))
+* switchable OTP in volto-form-block ([#783](https://github.com/RedTurtle/design-comuni-plone-theme/issues/783)) ([568bb2d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/568bb2d5d6b27c99b1363a5b1b3ae21ac0941471))
+
+
+### Documentation
+
+* updated publiccode and release log ([c0caca3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c0caca3db87ef9d62945cf07eb2dfab65729528f))
+
 ## [11.23.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.23.1...v11.23.2) (2024-09-24)
 
 
