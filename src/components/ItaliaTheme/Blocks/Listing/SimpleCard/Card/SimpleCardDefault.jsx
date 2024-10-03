@@ -26,6 +26,7 @@ import {
   getEventRecurrenceMore,
   getComponentWithFallback,
 } from 'design-comuni-plone-theme/helpers';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   card_detail_label: { id: 'Card detail label', defaultMessage: 'Vedi' },
@@ -95,6 +96,9 @@ const SimpleCardDefault = (props) => {
   const isEventAppointment =
     item?.parent?.['@type'] === 'Event' && item?.['@type'] === 'Event';
 
+  const showContentDateInListingFor =
+    config.settings.siteProperties.showContentDateInListingFor;
+
   return (
     <Card
       className={`align-items-top rounded shadow no-after ${getItemClass(
@@ -137,7 +141,7 @@ const SimpleCardDefault = (props) => {
         {listingText && (
           <CardText className={cx('', { 'mb-5': eventRecurrenceMore })}>
             {listingText}
-            {(type === 'Modulo' || type === 'Documento') && !hide_dates && (
+            {showContentDateInListingFor.includes(type) && !hide_dates && (
               <div className="document-date mt-3">
                 {item?.effective && (
                   <p className="mb-0">
