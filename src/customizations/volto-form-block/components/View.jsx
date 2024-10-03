@@ -5,7 +5,7 @@ import React, { useState, useEffect, useReducer, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
-import { submitForm } from 'volto-form-block/actions';
+import { submitForm, resetOTP } from 'volto-form-block/actions';
 import { getFieldName } from 'volto-form-block/components/utils';
 import FormView from 'volto-form-block/components/FormView';
 import { formatDate } from '@plone/volto/helpers/Utils/Date';
@@ -127,6 +127,9 @@ const View = ({ data, id, path }) => {
 
   const [formData, setFormData] = useReducer((state, action) => {
     if (action.reset) {
+      if (data.email_otp_verification) {
+        dispatch(resetOTP(id));
+      }
       return getInitialData(data);
     }
 
@@ -209,7 +212,11 @@ const View = ({ data, id, path }) => {
             field: name,
             message: intl.formatMessage(messages.invalidEmailMessage),
           });
-        } else if (isBCC && !formData[name].otp) {
+        } else if (
+          data.email_otp_verification &&
+          isBCC &&
+          !formData[name].otp
+        ) {
           v.push({
             field: name + OTP_FIELDNAME_EXTENDER,
             message: intl.formatMessage(messages.insertOtp),
