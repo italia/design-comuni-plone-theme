@@ -7,7 +7,7 @@
  * - added customization to have this changes https://github.com/plone/volto/pull/5555/files
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, injectIntl } from 'react-intl';
 import { Form, Grid, Input, Radio } from 'semantic-ui-react';
@@ -25,6 +25,12 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 const EndField = ({ value, count, until, onChange, intl }) => {
+  // Give state to fields, updating logic is convoluted,
+  // update only when/if needed
+  const [occurrenceValue, setOccurrenceValue] = useState(count);
+  const [untilValue, setUntilValue] = useState(until);
+  useEffect(() => setOccurrenceValue(count), [count]);
+  useEffect(() => setUntilValue(until), [until]);
   return (
     <Form.Field inline className="text">
       <Grid>
@@ -55,12 +61,12 @@ const EndField = ({ value, count, until, onChange, intl }) => {
                 <Input
                   id="count"
                   name="count"
-                  value={count || ''}
+                  value={occurrenceValue || ''}
                   onChange={({ target }) => {
-                    onChange(
-                      target.id,
-                      target.value === '' ? undefined : target.value,
-                    );
+                    setOccurrenceValue(target.value);
+                    if (target.value) {
+                      onChange(target.id, parseInt(target.value));
+                    }
                   }}
                 />
               </Form.Field>
@@ -86,15 +92,16 @@ const EndField = ({ value, count, until, onChange, intl }) => {
                   title={intl.formatMessage(messages.recurrenceEndsUntil)}
                   dateOnly={true}
                   value={
-                    until
-                      ? typeof until === 'string'
-                        ? until
-                        : until?.toISOString()
+                    untilValue
+                      ? typeof untilValue === 'string'
+                        ? untilValue
+                        : untilValue?.toISOString()
                       : ''
                   }
                   resettable={false}
                   onChange={(id, value) => {
-                    onChange(id, value === '' ? undefined : value);
+                    setUntilValue(value);
+                    if (value) onChange(id, value === '' ? undefined : value);
                   }}
                 />
               </Form.Field>

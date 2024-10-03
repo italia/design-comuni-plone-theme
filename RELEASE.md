@@ -54,6 +54,7 @@
 ### Fix
 
 - Risolto un problema con il blocco Form che in alcuni casi poteva dare problemi di validazione dei campi di tipo 'testo statico'.
+- Sistemate diverse incogruenze e errori generati dal widget per la creazione delle ricorrenze nel CT Evento.
 
 ## Versione 11.23.2 (24/09/2024)
 
