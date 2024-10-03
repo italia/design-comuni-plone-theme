@@ -1,5 +1,27 @@
 # Changelog
 
+## [12.0.0-alpha.21](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.20...v12.0.0-alpha.21) (2024-10-03)
+
+
+### Features
+
+* make configurable the types that show dates in listing cards ([#777](https://github.com/RedTurtle/design-comuni-plone-theme/issues/777)) ([b483949](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b483949c77b9b123a82593acecf5633331105583))
+* update to volto 17.19.0 ([b66498a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b66498a00f21bac7ae10aecdf345ff606dfccb5f))
+
+
+### Bug Fixes
+
+* always set form block static_text fields as not required ([#782](https://github.com/RedTurtle/design-comuni-plone-theme/issues/782)) ([9eb087e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9eb087e6b2a45401e2cacd289c2329136146056d))
+* changed end of assignment section label ([#778](https://github.com/RedTurtle/design-comuni-plone-theme/issues/778)) ([d76ef58](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d76ef58004ee521629cc2c8a1e959489145ee382))
+* changed state management of authenticatedRole ([#780](https://github.com/RedTurtle/design-comuni-plone-theme/issues/780)) ([057eb9d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/057eb9db4e36247ef9211b4a6af5f694dd65ddef))
+* recurrence widget bug when closing and opening multiple times without saving ([#741](https://github.com/RedTurtle/design-comuni-plone-theme/issues/741)) ([0ad425c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0ad425c162b32372123fd86f6b4655b84f355a91))
+* switchable OTP in volto-form-block ([#783](https://github.com/RedTurtle/design-comuni-plone-theme/issues/783)) ([8f39b93](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8f39b932e9bd9c1ef8a7f31056de563bb39b72d6))
+
+
+### Documentation
+
+* updated publiccode and release log ([3ae1601](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3ae1601541e31de2ec6adc4a7177436d0e507782))
+
 ## [12.0.0-alpha.20](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.19...v12.0.0-alpha.20) (2024-09-24)
 
 
