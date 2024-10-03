@@ -114,7 +114,6 @@ const DiffField = ({
       const second = SSRRenderHtml(history, store, two, field);
       parts = diff2(first, second);
     } else if (schema.type === 'array') {
-      // debugger;
       const oneArray = (one || []).map((i) => i?.title || i).join(', ');
       const twoArray = (two || []).map((j) => j?.title || j).join(', ');
       parts = diff2(oneArray, twoArray);
@@ -150,8 +149,8 @@ const DiffField = ({
                     schema?.type === 'boolean'
                       ? booleanMapping[!!one]
                       : schema?.widget === 'json'
-                        ? contentOne
-                        : one,
+                      ? contentOne
+                      : one,
                     schema?.widget ??
                       (schema?.type === 'object' && field.includes('image')
                         ? field
