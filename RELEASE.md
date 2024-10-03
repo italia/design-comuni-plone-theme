@@ -67,7 +67,7 @@
 
 ### Fix
 
-- ...
+- L'assegnazione dei ruoli nella vista gruppi funziona correttamente per tutti i gruppi di utenti.
 
 ## Versione 11.23.1 (19/09/2024)
 
