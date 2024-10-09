@@ -23,8 +23,11 @@
           border: $header-center-bg-color 2px solid !important;
 
           &:focus {
-            outline: 2.5px solid $inner-focus-border !important;
-            box-shadow: 0 0 0 5px $outer-focus-outline !important;
+            outline: 2px solid $outer-focus-outline !important;
+            outline-offset: 2px;
+
+            border: none !important;
+            box-shadow: 0 0 0 2px $inner-focus-shadow !important;
           }
         }
       }

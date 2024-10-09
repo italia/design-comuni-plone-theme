@@ -15,8 +15,11 @@
         min-width: 150px;
 
         &:focus-within {
-          border: 2px solid $inner-focus-border !important;
-          box-shadow: 0 0 0 2px $outer-focus-outline !important;
+          outline: 2px solid $outer-focus-outline !important;
+          outline-offset: 2px;
+
+          border: none !important;
+          box-shadow: 0 0 0 2px $inner-focus-shadow !important;
         }
 
         .react-select__control {
@@ -58,8 +61,11 @@
             }
 
             &.DateInput_input__focused {
-              border: 2px solid $inner-focus-border !important;
-              box-shadow: 0 0 0 2px $outer-focus-outline !important;
+              outline: 2px solid $outer-focus-outline !important;
+              outline-offset: 2px;
+
+              border: none !important;
+              box-shadow: 0 0 0 2px $inner-focus-shadow !important;
             }
           }
 
