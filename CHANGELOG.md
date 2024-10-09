@@ -1,5 +1,17 @@
 # Changelog
 
+## [12.0.0-alpha.22](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.21...v12.0.0-alpha.22) (2024-10-09)
+
+
+### Bug Fixes
+
+* changed double focus to outline and box-shadow ([#785](https://github.com/RedTurtle/design-comuni-plone-theme/issues/785)) ([46fdcb5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/46fdcb50f89f15f23bdb0278e482762594e78f9f))
+
+
+### Documentation
+
+* cleaned up release log ([3d879ae](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3d879aed36099fd82a9f8a0c4bdb4b5ad508af10))
+
 ## [12.0.0-alpha.21](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.20...v12.0.0-alpha.21) (2024-10-03)
 
 
