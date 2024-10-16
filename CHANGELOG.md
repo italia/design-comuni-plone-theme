@@ -1,5 +1,17 @@
 # Changelog
 
+## [12.0.0-alpha.23](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.22...v12.0.0-alpha.23) (2024-10-16)
+
+
+### Bug Fixes
+
+* do not break LinkView for anonymous users ([#786](https://github.com/RedTurtle/design-comuni-plone-theme/issues/786)) ([c773e5d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c773e5de150c51525d534a289fbb1863c912b257))
+
+
+### Documentation
+
+* updated publiccode ([09e5bdc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/09e5bdc3b6d34e6077b93b3c211a0c8014da1699))
+
 ## [12.0.0-alpha.22](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.21...v12.0.0-alpha.22) (2024-10-09)
 
 
