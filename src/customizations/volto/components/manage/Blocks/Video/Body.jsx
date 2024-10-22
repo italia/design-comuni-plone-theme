@@ -34,7 +34,6 @@ const Body = ({ data, isEditMode }) => {
   let placeholder = null;
   let videoID = null;
   let listID = null;
-
   if (data.url) {
     const [computedID, computedPlaceholder] = videoUrlHelper(
       data.url,
@@ -74,6 +73,11 @@ const Body = ({ data, isEditMode }) => {
     ref: ref,
   };
 
+  let apiPath = config.settings.apiPath;
+  if (!apiPath.endsWith('/')) {
+    apiPath += '/';
+  }
+
   return (
     <>
       {data.url && (
@@ -105,10 +109,7 @@ const Body = ({ data, isEditMode }) => {
                       <video
                         src={
                           isInternalURL(
-                            data.url.replace(
-                              getParentUrl(config.settings.apiPath),
-                              '',
-                            ),
+                            data.url.replace(getParentUrl(apiPath), ''),
                           )
                             ? `${data.url}${
                                 data.url.indexOf('@@download/file') < 0
