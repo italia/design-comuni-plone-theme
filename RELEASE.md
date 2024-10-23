@@ -202,6 +202,10 @@
 
 ## Versione 11.12.5 (30/05/2024)
 
+### Novità
+
+- Per ragioni di conformità alle linee guida Agid, inibito l'inserimento di CT File nella cartella modulistica.
+
 ### Fix
 
 - Sistemato il layout "Card con immagine" dei blocchi elenco quando gli elementi non hanno immagine.
