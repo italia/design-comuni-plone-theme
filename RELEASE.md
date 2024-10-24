@@ -43,10 +43,13 @@
 
 ## Versione X.X.X (dd/mm/yyyy)
 
+### Migliorie
+
+- Quando viene impostata una ricorrenza, nel tipo di contenuto Evento viene mostrata la data di fine della ricorrenza invece che del singolo evento
+
 ### Fix
 
 - Risolto problema con i video esterni che puntano a degli mp4: ora non vengono più erroneamente visti come link interni.
-
 
 ## Versione 11.24.0 (03/10/2024)
 
