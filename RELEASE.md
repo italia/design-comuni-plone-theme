@@ -206,6 +206,10 @@
 
 ## Versione 11.12.6 (30/05/2024)
 
+### Novità
+
+- Per ragioni di conformità alle linee guida Agid, inibito l'inserimento di CT File nella cartella modulistica.
+
 ### Fix
 
 - Il layout delle card con immagini rimane corretto anche selezionando l'opzione "Non alterare le dimensioni naturali dell'immagine".
