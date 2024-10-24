@@ -41,6 +41,20 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- Quando viene impostata una ricorrenza, nel tipo di contenuto Evento viene mostrata la data di fine della ricorrenza invece che del singolo evento
+
+### Novità
+
+- ...
+
+### Fix
+
+- ...
+
 ## Versione 11.24.0 (03/10/2024)
 
 ### Migliorie

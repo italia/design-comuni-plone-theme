@@ -21,6 +21,7 @@ export { getItemsByPath } from 'design-comuni-plone-theme/helpers/getItemsByPath
 export {
   viewDate,
   getRealStartAndEndWithRecurrence,
+  getRealEventEnd,
 } from 'design-comuni-plone-theme/helpers/dates';
 export { getSiteProperty } from 'design-comuni-plone-theme/helpers/config';
 export { useDebouncedEffect } from 'design-comuni-plone-theme/helpers/debounce';

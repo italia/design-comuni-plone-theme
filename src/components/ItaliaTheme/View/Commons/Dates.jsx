@@ -4,7 +4,7 @@ import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidg
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { Card, CardTitle, CardBody } from 'design-react-kit';
 import PropTypes from 'prop-types';
-import { viewDate } from 'design-comuni-plone-theme/helpers';
+import { viewDate, getRealEventEnd } from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
   start: {
@@ -46,8 +46,16 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
 
   const rrulestr = rrule.rrulestr;
 
-  let rruleSet = null;
   let recurrenceText = null;
+
+  const rruleSet = content.recurrence
+    ? rrulestr(content?.recurrence, {
+        compatible: true, //If set to True, the parser will operate in RFC-compatible mode. Right now it means that unfold will be turned on, and if a DTSTART is found, it will be considered the first recurrence instance, as documented in the RFC.
+        forceset: true,
+      })
+    : null;
+
+  const actualEndDate = getRealEventEnd(content, rruleSet);
 
   if (content.recurrence) {
     const isRecurrenceByDay = content.recurrence.includes('BYDAY=+');
@@ -55,10 +63,6 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
       .split('BYDAY')[1]
       ?.includes('SU');
     const RRULE_LANGUAGE = rrulei18n(intl, moment);
-    rruleSet = rrulestr(content.recurrence, {
-      compatible: true, //If set to True, the parser will operate in RFC-compatible mode. Right now it means that unfold will be turned on, and if a DTSTART is found, it will be considered the first recurrence instance, as documented in the RFC.
-      forceset: true,
-    });
 
     recurrenceText = rruleSet.rrules()[0]?.toText(
       (t) => {
@@ -79,7 +83,8 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
     );
   }
   const start = viewDate(intl.locale, content.start);
-  const end = viewDate(intl.locale, content.end);
+  // format and save date into new variable depending on recurrence of event
+  const end = viewDate(intl.locale, actualEndDate);
   const openEnd = content?.open_end;
   const wholeDay = content?.whole_day;
   const rdates = rruleSet?.rdates() ?? [];
