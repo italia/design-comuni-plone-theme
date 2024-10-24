@@ -38,7 +38,6 @@ const PageHeaderEventDates = ({ content, moment, rrule }) => {
 
   const wholeDay = content?.whole_day;
   const openEnd = content?.open_end;
-
   // show only start when event starts and ends in same day or if a recurrence is set
   // because to set a recurrence, the event must have the same date as start and end date
   const renderOnlyStart =
@@ -65,6 +64,7 @@ const PageHeaderEventDates = ({ content, moment, rrule }) => {
               RRULE_LANGUAGE.strings['on the'] = 'la';
             }
           }
+
           return RRULE_LANGUAGE.strings[t];
         },
         RRULE_LANGUAGE,
