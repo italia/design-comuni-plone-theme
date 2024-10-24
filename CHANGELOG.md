@@ -1,5 +1,27 @@
 
 
+## [11.24.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.24.2...v11.24.3) (2024-10-24)
+
+
+### Features
+
+* show end of recurrence date instead of end date in event ct when set ([#789](https://github.com/RedTurtle/design-comuni-plone-theme/issues/789)) ([23e06c4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/23e06c4c619d41d780f01a67502082d7603e199e))
+
+
+### Bug Fixes
+
+* append / to the end of apiPath because if it hasn't, internal url check for mp4 links fails. ([#794](https://github.com/RedTurtle/design-comuni-plone-theme/issues/794)) ([4f84bc3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4f84bc31b50b14657d53961ae4e4171e1c68b765))
+
+
+### Maintenance
+
+* added BE info in release.md bc impacts usability ([#791](https://github.com/RedTurtle/design-comuni-plone-theme/issues/791)) ([b608189](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b60818985b4065035cc9b4015890adfe6dbf86db))
+
+
+### Documentation
+
+* updated publiccode and release log ([ffe98a5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ffe98a5896d6efd05ed63ca64f8a58c7282a0030))
+
 ## [11.24.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.24.1...v11.24.2) (2024-10-16)
 
 
