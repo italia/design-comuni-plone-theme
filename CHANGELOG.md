@@ -1,5 +1,23 @@
 # Changelog
 
+## [12.0.0-alpha.24](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.23...v12.0.0-alpha.24) (2024-10-24)
+
+
+### Bug Fixes
+
+* append / to the end of apiPath because if it hasn't, internal url check for mp4 links fails. ([#788](https://github.com/RedTurtle/design-comuni-plone-theme/issues/788)) ([0b4fbac](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0b4fbac295ca46f22611a655b5dc8f89b6fc378b))
+* porting of end date in event view ([#793](https://github.com/RedTurtle/design-comuni-plone-theme/issues/793)) ([f5c6507](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f5c650753bc0277e82c4aa5db7c7d6074eb0306f))
+
+
+### Maintenance
+
+* added BE info in release.md bc impacts usability ([#790](https://github.com/RedTurtle/design-comuni-plone-theme/issues/790)) ([a922fe5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a922fe50ab69fd08af90f594e63ee02a2821d5af))
+
+
+### Documentation
+
+* updated publiccode and release log ([4e30cac](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4e30cac22da529b9635bca370cf462d2c5ba27f9))
+
 ## [12.0.0-alpha.23](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.22...v12.0.0-alpha.23) (2024-10-16)
 
 
