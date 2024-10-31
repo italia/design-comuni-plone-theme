@@ -369,3 +369,13 @@ iframe {
     }
   }
 }
+
+.public-ui
+  .it-header-slim-wrapper
+  .it-header-slim-wrapper-content
+  .it-header-slim-right-zone.header-slim-right-zone
+  .login-button {
+  @media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width:#{map-get($grid-breakpoints, xl)}) {
+    flex: unset;
+  }
+}
