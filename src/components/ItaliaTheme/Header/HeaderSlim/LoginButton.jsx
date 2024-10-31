@@ -9,7 +9,7 @@ import { Button } from 'design-react-kit';
 const LoginButton = ({ children, baseLoginUrl, size = 'full' }) => {
   return baseLoginUrl ? (
     <Button
-      className="btn-icon"
+      className="btn-icon login-button"
       color="primary"
       href={baseLoginUrl}
       icon={false}
