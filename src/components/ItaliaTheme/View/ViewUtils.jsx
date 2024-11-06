@@ -67,9 +67,8 @@ export const useSideMenu = (content, documentBody) => {
     }
     if (observer) {
       observer.observe(documentBody.current, {
-        //attributes: true,
         childList: true,
-        subtree: true,
+        //subtree: true, //commentato, perchè a noi interessano solo i figli di primo livello. Con questo abilitato, se in pagina ci sono delle gallery si impalla il browser
       });
     }
     return () => {
