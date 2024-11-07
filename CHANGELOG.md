@@ -1,5 +1,23 @@
 # Changelog
 
+## [12.0.0-alpha.25](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.24...v12.0.0-alpha.25) (2024-11-07)
+
+
+### Features
+
+* show end of recurrence date instead of end date in event ct when set ([#789](https://github.com/RedTurtle/design-comuni-plone-theme/issues/789)) ([18c900a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/18c900aa92325b95fc27cce3e0e42e8878ee8fde))
+
+
+### Bug Fixes
+
+* arlogin styles in 992px-1200px media query space ([#802](https://github.com/RedTurtle/design-comuni-plone-theme/issues/802)) ([a909372](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a909372af462968b2880133d47760b37bbcba032))
+* page freeze when updateSideMenuOnLoadingBlocks=true and page has gallery ([#805](https://github.com/RedTurtle/design-comuni-plone-theme/issues/805)) ([e210bee](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e210bee91a092b6da098aefac6e902db672e24ec))
+
+
+### Documentation
+
+* update docs link in publiccode.yml ([#190](https://github.com/RedTurtle/design-comuni-plone-theme/issues/190)) ([82f9d0f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/82f9d0f00274efeb3c95cb8e5c3e1aa26859e487))
+
 ## [12.0.0-alpha.24](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.23...v12.0.0-alpha.24) (2024-10-24)
 
 
