@@ -1,5 +1,19 @@
 
 
+## [11.24.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.24.3...v11.24.4) (2024-11-07)
+
+
+### Bug Fixes
+
+* arlogin styles in 992px-1200px media query space ([#802](https://github.com/RedTurtle/design-comuni-plone-theme/issues/802)) ([eebf6e4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/eebf6e4129c021dc361638c940b62b67a5b15739))
+* page freeze when updateSideMenuOnLoadingBlocks=true and page has gallery ([#805](https://github.com/RedTurtle/design-comuni-plone-theme/issues/805)) ([cab333e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cab333e35dc7faac5fbc61a41fdec02922378b00))
+
+
+### Documentation
+
+* update docs link in publiccode.yml ([#190](https://github.com/RedTurtle/design-comuni-plone-theme/issues/190)) ([34a35b2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/34a35b2ac7c6301e1bbf22a6109fef8d8135db3f))
+* updated publiccode and release log ([67a062c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/67a062cf007333435046c1b3cf8cf0d34bf59abc))
+
 ## [11.24.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.24.2...v11.24.3) (2024-10-24)
 
 
