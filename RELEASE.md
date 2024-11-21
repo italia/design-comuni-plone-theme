@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- L'impostazione "Solo cookie tecnici" non causa problemi nell'apertura del cookie banner.
+
 ## Versione 11.24.4 (07/11/2024)
 
 ### Fix
