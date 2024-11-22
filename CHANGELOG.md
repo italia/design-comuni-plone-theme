@@ -1,5 +1,27 @@
 # Changelog
 
+## [12.0.0-alpha.26](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.25...v12.0.0-alpha.26) (2024-11-22)
+
+
+### Bug Fixes
+
+* added info on contents file upload modal on restraint in servizio-modulistica folder ([#797](https://github.com/RedTurtle/design-comuni-plone-theme/issues/797)) ([a86fee7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a86fee7b8ddce508480b872ab9f2b02e5bb1eace))
+* removed getContent from Documento, Bando, Argomento and LocationsMap ([#803](https://github.com/RedTurtle/design-comuni-plone-theme/issues/803)) ([a1f250a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a1f250a8a8fa8d6d85657fe622b3a1a306dd7314))
+* removed whole day condition in page header subtitle ([#801](https://github.com/RedTurtle/design-comuni-plone-theme/issues/801)) ([01281b1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/01281b15f95933a04fd572e5e6b73c04bfc79d0f))
+* safari rendering issues and overhaul old dynamic bootstrap italia icons import using cache map ([#811](https://github.com/RedTurtle/design-comuni-plone-theme/issues/811)) ([7bbf65d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7bbf65ddf3933716715d2360b4dcafd7c59334cc))
+* updated lockfile ([1978f6d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1978f6df64de11f9652e3962303f9eead6d90b3a))
+* updated volto-gdpr-privacy addon version to 2.2.9([#806](https://github.com/RedTurtle/design-comuni-plone-theme/issues/806)) ([0f4c7a9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0f4c7a95ae5de2d57d7e7110a18306c292881ea9))
+
+
+### Maintenance
+
+* removed additional info from release.md from september ([#798](https://github.com/RedTurtle/design-comuni-plone-theme/issues/798)) ([cb53fec](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cb53fecc49e837ccf59ffae7a61a187c74dbf4dc))
+
+
+### Documentation
+
+* updated publiccode and release log ([e8f6d72](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e8f6d725fc8f459e718984931ef71a6c619f94df))
+
 ## [12.0.0-alpha.25](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.24...v12.0.0-alpha.25) (2024-11-07)
 
 
