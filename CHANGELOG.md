@@ -1,5 +1,26 @@
 
 
+## [11.24.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.24.4...v11.24.5) (2024-11-22)
+
+
+### Bug Fixes
+
+* added info on contents file upload modal on restraint in servizio-modulistica folder ([#796](https://github.com/RedTurtle/design-comuni-plone-theme/issues/796)) ([cb7b3c8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cb7b3c83325f6aa3da94faa29eaf0c940e216a93))
+* removed whole day condition in page header subtitle ([#800](https://github.com/RedTurtle/design-comuni-plone-theme/issues/800)) ([cc7d668](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cc7d6686dc91aaaf3eaef51102c8e035540efe46))
+* safari rendering issues and overhaul old dynamic bootstrap italia icons import using cache map ([#810](https://github.com/RedTurtle/design-comuni-plone-theme/issues/810)) ([9c23ac6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9c23ac6fd172f31c0aa4723d4db008a92100b1a1))
+* updated lockfile ([8d1cf74](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8d1cf74defdec9059dff9a1e1b4313fa7b4c0402))
+* updated volto-gdpr-privacy addon version to 2.2.9([#806](https://github.com/RedTurtle/design-comuni-plone-theme/issues/806)) ([f785ddd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f785ddd651e1528439a58852f852a9331df2a57e))
+
+
+### Maintenance
+
+* removed additional info from release.md from september ([#799](https://github.com/RedTurtle/design-comuni-plone-theme/issues/799)) ([60052e7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/60052e77b71a9f9dbb59714240acadc01e14ee0a))
+
+
+### Documentation
+
+* updated publiccode and release log ([6a5e490](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6a5e490248df7e53784b5f730b096ab9d6553ad8))
+
 ## [11.24.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.24.3...v11.24.4) (2024-11-07)
 
 
