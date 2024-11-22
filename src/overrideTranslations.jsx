@@ -94,4 +94,9 @@ defineMessages({
     id: 'form_limit',
     defaultMessage: 'Submission limit',
   },
+  modulistica_restraint: {
+    id: 'modulistica_restraint',
+    defaultMessage:
+      'As per the official information architecture outlined in measure 1.4.1, all forms must be properly uploaded in the designated section within Amministrazione > Documenti e Dati > Modulistica, and linked to the relevant service sheet. It is no longer possible to upload files and attachments directly into this container.',
+  },
 });
