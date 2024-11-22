@@ -22,6 +22,7 @@ import {
 import { matchPath } from 'react-router';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { EnhanceLink } from 'design-comuni-plone-theme/helpers';
+import cx from 'classnames';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -132,7 +133,9 @@ const UniversalLink = ({
     extended_children = enhanced_link.children;
     aria_label = enhanced_link.aria_label;
   }
-
+  const showExternalIcon =
+    !overrideMarkSpecialLinks &&
+    config.settings.siteProperties.markSpecialLinks;
   let tag = (
     <Link
       to={flattenToAppURL(url)}
@@ -167,22 +170,23 @@ const UniversalLink = ({
             : null
         }
         rel="noopener noreferrer"
-        className={className}
+        className={cx(className, {
+          'with-external-link-icon': showExternalIcon,
+        })}
         {...props}
         aria-label={aria_label}
       >
         {children}
-        {!overrideMarkSpecialLinks &&
-          config.settings.siteProperties.markSpecialLinks && (
-            <Icon
-              icon="it-external-link"
-              title={`${title ? title + ' - ' : ''}${intl?.formatMessage({
-                id: 'opensInNewTab',
-              })}`}
-              size="xs"
-              className="ms-1 align-sub external-link"
-            />
-          )}
+        {showExternalIcon && (
+          <Icon
+            icon="it-external-link"
+            title={`${title ? title + ' - ' : ''}${intl?.formatMessage({
+              id: 'opensInNewTab',
+            })}`}
+            size="xs"
+            className="ms-1 align-sub external-link"
+          />
+        )}
       </a>
     );
   } else if (isDownload) {

@@ -121,6 +121,37 @@ iframe {
 }
 
 //slate LINK
+/*
+  Safari rendering issue workaround - B#60364
+  Safari rendering fix, icons and fonts coming late means shenanigans for Safari rendering, as
+  Safari is lazy and slow in loading fonts and icons dynamically.
+  Problem: Safari (tested on Safari 17.6) sometimes fails to calculate the layout correctly
+  when dealing with dynamic content such as lazy-loaded icons or fonts, combined with
+  `display: inline-block`. This can result in improperly positioned elements
+  until the page is re-rendered or refocused.
+
+  Solution: To fix this issue:
+  1. Replace `display: inline-block` with `display: inline-flex`. This ensures Safari
+      handles the box model and inline context properly, especially when the element's
+      size or alignment depends on dynamic content.
+  2. Add `position: relative;` to force a recalculation of layout, resolving rendering quirks.
+
+  Background: Safari's WebKit engine has known issues with `inline-block` combined
+  with delayed content rendering, such as lazy-loaded icons. Switching to `inline-flex`
+  better aligns with modern CSS rendering engines, while `position: relative;`
+  ensures the layout is recalculated.
+
+  References:
+  - CSS-Tricks: What Forces Layout or Reflow: https://css-tricks.com/what-forces-layout-reflow/
+  - WebKit Bug Reports on `inline-block` rendering issues with dynamic content.
+  - Testing and observations on Safari 17.6 behavior with lazy-loaded assets.
+*/
+@supports (-webkit-appearance: none) {
+  a.with-external-link-icon {
+    display: inline-flex; /* Evita problemi con inline-block */
+    position: relative; /* Forza Safari a calcolare il layout reflow correttamente */
+  }
+}
 // .inline-link {
 //   margin-left: 0.5rem;
 //   margin-right: 0.5rem;
