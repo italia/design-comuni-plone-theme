@@ -1,5 +1,17 @@
 
 
+## [11.24.6](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.24.5...v11.24.6) (2024-11-22)
+
+
+### Bug Fixes
+
+* removed getContent from Documento, Bando, Argomento and LocationsMap ([#803](https://github.com/RedTurtle/design-comuni-plone-theme/issues/803)) ([ca1f0f0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ca1f0f0b0e8b02d2a50d420e2aa371c97517a8f9))
+
+
+### Documentation
+
+* updated publiccode ([ebcf3d0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ebcf3d05408cc5e175e9f610ba752b53d28082b9))
+
 ## [11.24.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.24.4...v11.24.5) (2024-11-22)
 
 
