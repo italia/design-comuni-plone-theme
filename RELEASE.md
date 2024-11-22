@@ -61,6 +61,20 @@
 
 - ...
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Quando un evento ha impostata l'opzione "Tutta la giornata", le date sotto il titolo vengono visualizzate in maniera corretta.
+
 ## Versione 11.24.3 (24/10/2024)
 
 ### Migliorie

@@ -81,9 +81,7 @@ const PageHeaderEventDates = ({ content, moment, rrule }) => {
         !openEnd &&
         !renderOnlyStart &&
         `dal ${Moment(content.start).format('DD-MM-Y')} al ${endDate}`}
-      {(wholeDay ||
-        renderOnlyStart ||
-        Moment(content.end).isSame(actualEndDate)) &&
+      {(renderOnlyStart || Moment(content.end).isSame(actualEndDate)) &&
         !openEnd &&
         `${Moment(content.start).format('DD-MM-Y')}`}
       {openEnd &&
