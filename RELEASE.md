@@ -41,46 +41,23 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.24.5 (22/11/2024)
+
+### Migliorie
+
+- Inserito messaggio di avviso quando si tenta di caricare un file dalla cartella Modulistica all'interno di un Servizio per segnalare limitazione sull'upload
 
 ### Fix
 
 - L'impostazione "Solo cookie tecnici" non causa problemi nell'apertura del cookie banner.
 - [WebKit, Safari, iOS] Risolto un problema di visualizzazione grafica di alcuni bottoni che contengono al loro interno un link ad un sito esterno.
+- Quando un evento ha impostata l'opzione "Tutta la giornata", le date sotto il titolo vengono visualizzate in maniera corretta.
 
 ## Versione 11.24.4 (07/11/2024)
 
 ### Fix
 
 - Risolto un problema di visualizzazione grafica per il bottone di login all'area personale per alcune specifiche dimensioni di schermi
-
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- Inserito messaggio di avviso quando si tenta di caricare un file dalla cartella Modulistica all'interno di un Servizio per segnalare limitazione sull'upload
-
-### Novità
-
-- ...
-
-### Fix
-
-- ...
-
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
-
-### Fix
-
-- Quando un evento ha impostata l'opzione "Tutta la giornata", le date sotto il titolo vengono visualizzate in maniera corretta.
 
 ## Versione 11.24.3 (24/10/2024)
 
