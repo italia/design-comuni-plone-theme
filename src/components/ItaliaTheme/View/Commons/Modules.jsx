@@ -18,7 +18,9 @@ import {
  */
 const Modules = ({ content, title, id = 'documenti' }) => {
   const moduli =
-    content.items?.filter((item) => item.id !== 'multimedia') ?? [];
+    content.moduli_del_documento ??
+    content.items?.filter((item) => item.id !== 'multimedia') ??
+    [];
 
   return moduli.length > 0 ? (
     <RichTextSection tag_id={id} title={title}>

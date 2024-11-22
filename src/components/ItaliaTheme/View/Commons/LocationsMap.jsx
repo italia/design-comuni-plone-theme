@@ -1,7 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { OSMMap } from 'volto-venue';
 import PropTypes from 'prop-types';
@@ -30,9 +28,7 @@ const messages = defineMessages({
 });
 
 const LocationsMap = ({ center, locations }) => {
-  const dispatch = useDispatch();
   const intl = useIntl();
-  const fetchedLocations = useSelector((state) => state.content.subrequests);
   const venues = locations.map((location) => {
     let url = flattenToAppURL(location['@id']);
     return {
@@ -40,18 +36,6 @@ const LocationsMap = ({ center, locations }) => {
       url: url,
     };
   });
-
-  useEffect(() => {
-    venues.forEach((loc) => {
-      dispatch(getContent(loc.url, null, loc.key));
-    });
-
-    return () =>
-      venues.forEach((loc) => {
-        dispatch(resetContent(loc.key));
-      });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch, locations]);
 
   const pinContent = (item) => {
     return (
@@ -97,7 +81,9 @@ const LocationsMap = ({ center, locations }) => {
   };
 
   let venuesData = venues.reduce((acc, val) => {
-    let venue = fetchedLocations?.[val.key]?.data;
+    let venue = locations.find((el) => {
+      return el['@id'].includes(val.url);
+    });
 
     if (venue?.geolocation?.latitude && venue?.geolocation?.longitude) {
       return [

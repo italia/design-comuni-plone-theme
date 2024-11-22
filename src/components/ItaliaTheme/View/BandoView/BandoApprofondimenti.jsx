@@ -33,7 +33,7 @@ const BandoApprofondimenti = ({ content }) => {
           item={item} //viene utilizzato nelle customizzazioni per ottenere altre proprietà
         />
       );
-    } else if (item.type === 'Link') {
+    } else if (item.type === 'Collegamento') {
       return (
         <Card
           className="card card-teaser shadow p-4 mt-3 rounded attachment"
