@@ -3,9 +3,8 @@
  * @module components/theme/View/PaginaArgomentoView/PaginaArgomentoView
  */
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
 import { Portal } from 'react-portal';
 import cx from 'classnames';
 
@@ -16,7 +15,6 @@ import {
   flattenToAppURL,
   hasBlocksData,
 } from '@plone/volto/helpers';
-import { getContent, resetContent } from '@plone/volto/actions';
 import {
   CardCategory,
   Breadcrumbs,
@@ -44,32 +42,6 @@ import config from '@plone/volto/registry';
 const PaginaArgomentoView = ({ content }) => {
   const Image = config.getComponent({ name: 'Image' }).component;
   const location = useLocation();
-  const dispatch = useDispatch();
-
-  const searchResults = useSelector((state) => state.content?.subrequests);
-
-  // one request is made for every 'unita_amministrative_responsabili' selected
-  useEffect(() => {
-    if (content?.unita_amministrative_responsabili?.length > 0) {
-      content.unita_amministrative_responsabili.forEach((x) => {
-        const url = flattenToAppURL(x['@id']);
-        const loaded =
-          searchResults?.[url]?.loading || searchResults?.[url]?.loaded;
-        if (!loaded) {
-          dispatch(getContent(url, null, url));
-        }
-      });
-    }
-
-    return () => {
-      if (content?.unita_amministrative_responsabili?.length > 0) {
-        content.unita_amministrative_responsabili.forEach((x) => {
-          dispatch(resetContent(flattenToAppURL(x['@id'])));
-        });
-      }
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [content]);
 
   const rightHeaderHasContent =
     richTextHasContent(content.ulteriori_informazioni) ||
@@ -99,12 +71,17 @@ const PaginaArgomentoView = ({ content }) => {
 
               {content?.unita_amministrative_responsabili?.length > 0 &&
                 content?.unita_amministrative_responsabili?.map((u, index) => {
-                  const uo_object =
-                    searchResults[flattenToAppURL(u['@id'])]?.data;
+                  const uo_object = u;
                   let alt = u.title;
-                  if (uo_object?.preview_image && uo_object?.preview_caption) {
+                  if (
+                    uo_object.image_scales.preview_image.length > 0 &&
+                    uo_object?.preview_caption
+                  ) {
                     alt = uo_object.preview_caption;
-                  } else if (uo_object?.image && uo_object?.image_caption) {
+                  } else if (
+                    uo_object.image_scales.image.length > 0 &&
+                    uo_object?.image_caption
+                  ) {
                     alt = uo_object.image_caption;
                   }
 
@@ -132,7 +109,9 @@ const PaginaArgomentoView = ({ content }) => {
                               </CardText>
                             </CardBody>
                             {uo_object &&
-                              (uo_object.preview_image || uo_object.image) && (
+                              (uo_object.image_scales.image.length > 0 ||
+                                uo_object.image_scales.preview_image.length >
+                                  0) && (
                                 <div className="image-container me-3">
                                   <Image
                                     item={uo_object}
