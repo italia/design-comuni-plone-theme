@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- Rimossa dal CT Evento la data di scadenza del CT per evitare confusione con le date effettive dell'evento
+
+### Novità
+
+- ...
+
+### Fix
+
+- ...
+
 ## Versione 11.24.5 (22/11/2024)
 
 ### Migliorie
