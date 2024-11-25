@@ -74,6 +74,8 @@
 
 - Risolto un problema di visualizzazione grafica per il bottone di login all'area personale per alcune specifiche dimensioni di schermi
 
+- Se l'url di una immagine è rotto, viene mostrato un avviso al posto dell'immagine rotta.
+
 ## Versione 11.24.3 (24/10/2024)
 
 ### Migliorie
