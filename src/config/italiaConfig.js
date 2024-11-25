@@ -8,7 +8,7 @@ import shareSVG from '@plone/volto/icons/share.svg';
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
 import { defineMessages } from 'react-intl';
 import { Search } from '@plone/volto/components';
-
+import ImageWithErrors from 'design-comuni-plone-theme/components/ImageWithErrors/ImageWithErrors';
 import {
   getItaliaListingVariations,
   removeListingVariation,
@@ -488,6 +488,9 @@ export default function applyConfig(voltoConfig) {
   config.components = {
     ...config.components,
     BlockExtraTags: { component: () => null },
+    Image: {
+      component: ImageWithErrors,
+    },
   };
   config.registerComponent({
     name: 'SiteSettingsExtras',
