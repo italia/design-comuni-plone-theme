@@ -39,16 +39,6 @@ const PageHeaderDates = ({ content }) => {
               </div>
             </div>
           )}
-          {content.expires && content['@type'] !== 'News Item' && (
-            <div className="row">
-              <div className="col-12">
-                <small>{intl.formatMessage(messages.expire)}:</small>
-                <p className="font-monospace">
-                  {viewDate(intl.locale, content.expires, 'DD-MM-Y')}
-                </p>
-              </div>
-            </div>
-          )}
         </div>
       )}
     </>
