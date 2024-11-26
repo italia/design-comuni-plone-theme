@@ -1,5 +1,26 @@
 # Changelog
 
+## [12.0.0-alpha.27](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.26...v12.0.0-alpha.27) (2024-11-26)
+
+
+### Features
+
+* added cardCalendar in children events for rassegne ([#818](https://github.com/RedTurtle/design-comuni-plone-theme/issues/818)) ([e16e3a2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e16e3a237f00c716b793e35496aa5fc3a0d64044))
+* added checkbox for showing image for all cards in uo search ([#816](https://github.com/RedTurtle/design-comuni-plone-theme/issues/816)) ([504417f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/504417f32e080f386f48501d45d9ae704567104d))
+
+
+### Bug Fixes
+
+* a11y contrast color in view and edit for some blocks ([#812](https://github.com/RedTurtle/design-comuni-plone-theme/issues/812)) ([9d8538b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9d8538bb2101b2e38c8c3cca55b824f1088efdb1))
+* no close search popup when loading results ([#819](https://github.com/RedTurtle/design-comuni-plone-theme/issues/819)) ([e65be2d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e65be2d74fb6ad50d6f1b9c1b9fe234ac21ba6f8))
+* removed expiration date from event header ([#814](https://github.com/RedTurtle/design-comuni-plone-theme/issues/814)) ([c50b2c2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c50b2c2f167d375cfbc27c7951fbbfd558a93148))
+* replace not found img message with placeholder image ([#809](https://github.com/RedTurtle/design-comuni-plone-theme/issues/809)) ([deff07d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/deff07d86eae1338363d5717d06a8f6b8c132112))
+
+
+### Documentation
+
+* updated publiccode and release log ([d759625](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d7596250aaff0a3706b7e353731c3f588397581d))
+
 ## [12.0.0-alpha.26](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.25...v12.0.0-alpha.26) (2024-11-22)
 
 
