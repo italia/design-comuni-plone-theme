@@ -234,7 +234,11 @@ const Body = ({ data, id, inEditMode, path, onChangeBlock }) => {
         items?.length > 0 ? (
           <div className="mt-4" ref={resultsRef} aria-live="polite">
             <div className="block listing">
-              <CardWithImageTemplate items={items} full_width={false} />
+              <CardWithImageTemplate
+                items={items}
+                full_width={false}
+                always_show_image={data.always_show_image}
+              />
             </div>
             {querystringResults.total > b_size && (
               <Pagination

@@ -6,6 +6,7 @@ import {
   SelectWidget,
   Icon,
   ObjectBrowserWidget,
+  CheckboxWidget,
 } from '@plone/volto/components';
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
@@ -71,6 +72,10 @@ const messages = defineMessages({
   date_filter: {
     id: 'searchBlock_date_filter',
     defaultMessage: 'Filtro per date',
+  },
+  always_show_image: {
+    id: 'searchBlock_always_show_image',
+    defaultMessage: "Mostra l'immagine per tutti gli elementi",
   },
 });
 
@@ -150,6 +155,17 @@ const Sidebar = (props) => {
               props.onChangeBlock(props.block, {
                 ...props.data,
                 location: value,
+              });
+            }}
+          />
+          <CheckboxWidget
+            id="always_show_image"
+            title={props.intl.formatMessage(messages.always_show_image)}
+            value={props.data.always_show_image}
+            onChange={(id, value) => {
+              props.onChangeBlock(props.block, {
+                ...props.data,
+                [id]: value,
               });
             }}
           />
