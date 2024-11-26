@@ -46,6 +46,7 @@
 ### Migliorie
 
 - Rimossa dal CT Evento la data di scadenza del CT per evitare confusione con le date effettive dell'evento
+- Durante la ricerca nel sito dalla popup che compare cliccando sul bottone 'Cerca' nella testa del sito, viene mostrato un loader in overlay durante il caricamento della pagina dei risultati perchè questo potrebbe richiedere un po' di tempo. Prima di questa modifica non era chiaro se la ricerca fosse iniziata.
 - Nel CT Evento per una rassegna, se gli eventi figli hanno una ricorrenza o un periodo di date impostato, il range di date verrà mostrato nella card all'interno dell'evento padre.
 
 ### Novità
