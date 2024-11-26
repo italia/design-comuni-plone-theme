@@ -6,6 +6,7 @@ import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { RichTextSection } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import { viewDate } from 'design-comuni-plone-theme/helpers';
+import { CardCalendar } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   events: {
@@ -41,9 +42,11 @@ const SubEvent = ({ event, show_image }) => {
                 />
               </figure>
               {event.start && (
-                <div className="card-calendar d-flex flex-column justify-content-center">
-                  {viewDate(intl.locale, event.start, 'DD MMM')}
-                </div>
+                <CardCalendar
+                  start={event.start}
+                  end={event.end}
+                  recurrence={event.recurrence}
+                />
               )}
             </div>
           </div>
