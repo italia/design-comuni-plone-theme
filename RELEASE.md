@@ -46,6 +46,7 @@
 ### Migliorie
 
 - Rimossa dal CT Evento la data di scadenza del CT per evitare confusione con le date effettive dell'evento
+- Nel CT Evento per una rassegna, se gli eventi figli hanno una ricorrenza o un periodo di date impostato, il range di date verrà mostrato nella card all'interno dell'evento padre.
 
 ### Novità
 
