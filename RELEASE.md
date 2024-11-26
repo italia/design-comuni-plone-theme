@@ -49,14 +49,11 @@
 - Durante la ricerca nel sito dalla popup che compare cliccando sul bottone 'Cerca' nella testa del sito, viene mostrato un loader in overlay durante il caricamento della pagina dei risultati perchè questo potrebbe richiedere un po' di tempo. Prima di questa modifica non era chiaro se la ricerca fosse iniziata.
 - Nel CT Evento per una rassegna, se gli eventi figli hanno una ricorrenza o un periodo di date impostato, il range di date verrà mostrato nella card all'interno dell'evento padre.
 - uniformato il colore dei link tra modalità di edit e view in alcuni blocchi
+- Se l'url di una immagine è rotto, viene mostrato un avviso al posto dell'immagine rotta.
 
 ### Novità
 
 - E' ora possibile decidere se mostrare l'immagine di anteprima per tutte le card nel blocco di ricerca Evento e Unità Organizzativa.
-
-### Fix
-
-- ...
 
 ## Versione 11.24.5 (22/11/2024)
 
@@ -75,8 +72,6 @@
 ### Fix
 
 - Risolto un problema di visualizzazione grafica per il bottone di login all'area personale per alcune specifiche dimensioni di schermi
-
-- Se l'url di una immagine è rotto, viene mostrato un avviso al posto dell'immagine rotta.
 
 ## Versione 11.24.3 (24/10/2024)
 
