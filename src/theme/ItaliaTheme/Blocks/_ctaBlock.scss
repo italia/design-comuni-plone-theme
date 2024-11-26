@@ -22,8 +22,12 @@
       h2,
       h3 {
         margin: 0 0 1.5rem;
-        color: $secondary-text;
         font-size: 2.25rem;
+      }
+      h2,
+      h3,
+      a:not(.btn) {
+        color: $secondary-text;
       }
 
       p:last-of-type {
@@ -98,6 +102,7 @@
 
       .cta-tile-text {
         &,
+        a,
         h3 {
           color: #fff;
         }

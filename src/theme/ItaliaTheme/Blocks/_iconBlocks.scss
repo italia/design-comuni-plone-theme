@@ -80,7 +80,7 @@
       h4,
       h5,
       h6,
-      a {
+      a:not(.btn) {
         color: #fff;
       }
     }

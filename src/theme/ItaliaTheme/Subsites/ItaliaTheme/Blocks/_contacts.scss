@@ -15,6 +15,9 @@
           .description {
             color: $subsite-primary-text;
           }
+          a:not(.btn) {
+            color: currentColor;
+          }
         }
 
         .card {

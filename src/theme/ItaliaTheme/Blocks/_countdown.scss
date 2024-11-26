@@ -1,3 +1,12 @@
+body.cms-ui,
+body.public-ui {
+  .block.count_down .public-ui {
+    a:not(.btn) {
+      color: $white; //to force color in cms-ui
+    }
+  }
+}
+
 .block.count_down .public-ui {
   color: $white;
 
@@ -6,7 +15,7 @@
   h4,
   h5,
   h6,
-  a {
+  a:not(.btn) {
     color: $white;
   }
 

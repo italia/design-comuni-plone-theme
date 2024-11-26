@@ -23,7 +23,8 @@
   }
 }
 
-.public-ui {
+.public-ui,
+body.cms-ui .public-ui {
   .block.alertblock,
   .alertblock {
     .full-width {
@@ -49,11 +50,8 @@
       h3,
       h4,
       h5,
-      h6 {
-        color: $alert-danger-text;
-      }
-
-      a {
+      h6,
+      a:not(.btn) {
         color: $alert-danger-text;
       }
     }
@@ -67,11 +65,8 @@
       h3,
       h4,
       h5,
-      h6 {
-        color: $alert-warning-text;
-      }
-
-      a {
+      h6,
+      a:not(.btn) {
         color: $alert-warning-text;
       }
     }
