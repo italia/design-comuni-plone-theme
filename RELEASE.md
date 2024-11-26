@@ -49,7 +49,7 @@
 
 ### Novità
 
-- ...
+- E' ora possibile decidere se mostrare l'immagine di anteprima per tutte le card nel blocco di ricerca Evento e Unità Organizzativa.
 
 ### Fix
 

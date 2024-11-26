@@ -3173,6 +3173,12 @@ msgstr "Cerca tutti gli argomenti"
 msgid "searchBlock"
 msgstr "Ricerca eventi"
 
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
+# defaultMessage: Mostra l'immagine per tutti gli elementi
+msgid "searchBlock_always_show_image"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 #: components/ItaliaTheme/Blocks/UOSearch/Sidebar
