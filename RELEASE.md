@@ -52,10 +52,6 @@
 
 - E' ora possibile decidere se mostrare l'immagine di anteprima per tutte le card nel blocco di ricerca Evento e Unità Organizzativa.
 
-### Fix
-
-- ...
-
 ## Versione 11.24.5 (22/11/2024)
 
 ### Migliorie
