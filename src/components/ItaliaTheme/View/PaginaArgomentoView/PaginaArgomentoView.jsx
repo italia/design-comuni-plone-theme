@@ -74,15 +74,15 @@ const PaginaArgomentoView = ({ content }) => {
                   const uo_object = u;
                   let alt = u.title;
                   if (
-                    uo_object.image_scales.preview_image.length > 0 &&
+                    uo_object?.image_scales?.preview_image?.length > 0 &&
                     uo_object?.preview_caption
                   ) {
-                    alt = uo_object.preview_caption;
+                    alt = uo_object?.preview_caption;
                   } else if (
-                    uo_object.image_scales.image.length > 0 &&
+                    uo_object?.image_scales?.image.length > 0 &&
                     uo_object?.image_caption
                   ) {
-                    alt = uo_object.image_caption;
+                    alt = uo_object?.image_caption;
                   }
 
                   return (
