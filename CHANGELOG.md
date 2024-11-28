@@ -1,5 +1,17 @@
 
 
+## [11.25.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.25.0...v11.25.1) (2024-11-28)
+
+
+### Bug Fixes
+
+* added conditional chaining to images for uo in argomento view ([#821](https://github.com/RedTurtle/design-comuni-plone-theme/issues/821)) ([91d113a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/91d113a15e030b16c9345a31fa8346f4907a97fb))
+
+
+### Documentation
+
+* updated publiccode and release log ([3ea44fe](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3ea44febc8ef23ea969f53252d7dd3148577b972))
+
 ## [11.25.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.24.6...v11.25.0) (2024-11-26)
 
 
