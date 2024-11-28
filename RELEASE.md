@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Aggiustato il collegamento alla UO nella pagina Argomento.
+
 ## Versione 11.25.0 (26/11/2024)
 
 ### Migliorie
