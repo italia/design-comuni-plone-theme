@@ -323,7 +323,7 @@ const View = ({ data, id, path }) => {
 
   useEffect(() => {
     if (submitResults?.loaded) {
-      if (submitResults?.result?.data?.waiting_list) {
+      if (submitResults?.result?.waiting_list) {
         setFormState({
           type: FORM_STATES.warning,
           result: {
