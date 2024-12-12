@@ -186,7 +186,7 @@ export default function applyConfig(voltoConfig) {
       ...(config.settings.controlpanels ?? []),
       {
         '@id': '/release-log',
-        group: 'Generali',
+        group: 'General',
         title: 'Novità ultimi rilasci',
         id: 'release-log',
       },
