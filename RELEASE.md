@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Colore del font del bottone DraftJS nell'editor sistemato a bianco.
+
 ## Versione 11.25.1 (28/11/2024)
 
 ### Fix
