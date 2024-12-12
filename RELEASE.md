@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione 11.25.3 (12/12/2024)
+
+### Migliorie
+
+- Aggiornate diverse traduzioni italiane.
+
 ## Versione 11.25.1 (28/11/2024)
 
 ### Fix
@@ -54,7 +60,6 @@
 - Rimossa dal CT Evento la data di scadenza del CT per evitare confusione con le date effettive dell'evento
 - Durante la ricerca nel sito dalla popup che compare cliccando sul bottone 'Cerca' nella testa del sito, viene mostrato un loader in overlay durante il caricamento della pagina dei risultati perchè questo potrebbe richiedere un po' di tempo. Prima di questa modifica non era chiaro se la ricerca fosse iniziata.
 - Nel CT Evento per una rassegna, se gli eventi figli hanno una ricorrenza o un periodo di date impostato, il range di date verrà mostrato nella card all'interno dell'evento padre.
-- uniformato il colore dei link tra modalità di edit e view in alcuni blocchi
 - Se l'url di una immagine è rotto, viene mostrato un avviso al posto dell'immagine rotta.
 
 ### Novità
@@ -129,7 +134,7 @@
 
 ### Fix
 
-- Rimosso il campo "ID lighthouse" dal blocco elenco con variazione Card con Testo Animato perchè entra in contrasto con asseveratore.
+- Rimosso il campo "ID lighthouse" dal blocco elenco con variazione Card con Testo Animato perchè entra in contrasto con asseveratore
 
 ## Versione 11.22.0 (05/09/2024)
 
@@ -244,15 +249,15 @@
 
 ## Versione 11.12.6 (30/05/2024)
 
-### Novità
-
-- Per ragioni di conformità alle linee guida Agid, inibito l'inserimento di CT File nella cartella modulistica.
-
 ### Fix
 
 - Il layout delle card con immagini rimane corretto anche selezionando l'opzione "Non alterare le dimensioni naturali dell'immagine".
 
 ## Versione 11.12.5 (30/05/2024)
+
+### Novità
+
+- Per ragioni di conformità alle linee guida Agid, inibito l'inserimento di CT File nella cartella modulistica.
 
 ### Fix
 
