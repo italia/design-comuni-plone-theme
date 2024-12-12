@@ -471,6 +471,14 @@ body.cms-ui {
   }
 
   &.section-controlpanel {
+    .grid > .row {
+      // HIDE TAXONOMIES CONTROLPANEL UNTIL #62343 IS DONE
+      > .column:has([href='/controlpanel/taxonomies']),
+      > .column:has([href='/controlpanel/volto-settings']) {
+        display: none;
+      }
+    }
+
     a {
       text-decoration: none;
 
@@ -483,6 +491,18 @@ body.cms-ui {
       .menu-item-field-additionalClasses {
         display: none;
       }
+    }
+    // Hide the help text in the configuration widgets
+    // TODO this is a temporary fix, a release needs to be made on every add-on to fix this
+    .footer-configuration-widget .stretched.twelve.wide.column:has(p.help),
+    .slimheader-configuration-widget
+      .wrapper:has(label[for='menu-configuration']),
+    .subfooter-configuration-widget
+      .wrapper:has(label[for='menu-configuration']),
+    .secondary-menu-configuration-widget
+      .wrapper:has(label[for='menu-configuration']),
+    .menu-configuration-widget .wrapper:has(label[for='menu-configuration']) {
+      display: none !important;
     }
   }
 
