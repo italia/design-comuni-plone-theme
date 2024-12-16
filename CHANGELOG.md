@@ -1,5 +1,22 @@
 # Changelog
 
+## [12.0.0-alpha.32](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.31...v12.0.0-alpha.32) (2024-12-16)
+
+
+### Bug Fixes
+
+* enable ImageWithErrors to return null value ([#841](https://github.com/RedTurtle/design-comuni-plone-theme/issues/841)) ([556158c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/556158c86aceda40f2b6494067f67390088ab72a))
+
+
+### Maintenance
+
+* upgrade to volto 17.20.3 ([57589e3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/57589e316665d360e43772000e8c104c60171d41))
+
+
+### Documentation
+
+* updated publiccode ([1830541](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1830541fb10ea74e976dc2b7d3cd435d3f803500))
+
 ## [12.0.0-alpha.31](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.30...v12.0.0-alpha.31) (2024-12-12)
 
 
