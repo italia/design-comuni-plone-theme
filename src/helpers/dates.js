@@ -48,7 +48,8 @@ export const getRealStartAndEndWithRecurrence = (
 
 export const getRealEventEnd = (content, rruleSet) => {
   let actualEndDate = content.end;
-  if (content.recurrence) {
+
+  if (content.recurrence && rruleSet.rrules()[0].options.until) {
     actualEndDate = rruleSet.rrules()[0].options.until;
   }
   return actualEndDate;

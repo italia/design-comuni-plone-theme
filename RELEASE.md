@@ -56,6 +56,15 @@
 
 - Il menu a tendina da cui è possibile filtrare i luoghi nel blocco Ricerca Eventi mostra tutti i luoghi collegati agli eventi presenti nel percorso selezionato dalla Sidebar, senza limitarne il numero.
 - Rimossa l'opzione non selezionabile "nessun valore" dal widget ricorrenza.
+- Il sottotitolo del CT Evento mostra il range di date per tutti gli eventi con ricorrenza o con una data di fine diversa dalla data di inizio.
+
+### Novità
+
+- ...
+
+### Fix
+
+- La pagina non dà più errore quando si imposta una ricorrenza con impostazione "Termina dopo tot. ricorrenze".
 
 ## Versione 11.25.3 (12/12/2024)
 

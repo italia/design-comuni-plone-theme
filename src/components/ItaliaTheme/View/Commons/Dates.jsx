@@ -89,6 +89,7 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
   const start = viewDate(intl.locale, content.start);
   // format and save date into new variable depending on recurrence of event
   const end = viewDate(intl.locale, actualEndDate);
+
   const openEnd = content?.open_end;
   const wholeDay = content?.whole_day;
 
@@ -132,11 +133,11 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
               <span className="point-date font-monospace">
-                {end.format('DD')}
+                {end?.format('DD')}
               </span>
-              <span className="point-month">{end.format('MMMM')}</span>
-              {!end.isSame(start, 'year') && (
-                <span className="point-month">{end.format('YYYY')}</span>
+              <span className="point-month">{end?.format('MMMM')}</span>
+              {!end?.isSame(start, 'year') && (
+                <span className="point-month">{end?.format('YYYY')}</span>
               )}
             </div>
             <div className="point-list-content">
@@ -147,7 +148,7 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
               >
                 <CardBody tag="div" className={'card-body'}>
                   <CardTitle tag="p">
-                    {!content.whole_day && `${end.format('HH:mm')} - `}
+                    {!content.whole_day && `${end?.format('HH:mm')} - `}
                     {intl.formatMessage(messages.end)}
                   </CardTitle>
                 </CardBody>
