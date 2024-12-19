@@ -990,6 +990,7 @@ class RecurrenceWidget extends Component {
                             )}
                             value={formValues.freq}
                             onChange={this.onChangeRule}
+                            noValueOption={false}
                           />
                           {OPTIONS.frequences[formValues.freq].interval && (
                             <IntervalField
@@ -1004,7 +1005,6 @@ class RecurrenceWidget extends Component {
                               onChange={this.onChangeRule}
                             />
                           )}
-
                           {/***** byday *****/}
                           {OPTIONS.frequences[formValues.freq].byday && (
                             <ByDayField
@@ -1013,7 +1013,6 @@ class RecurrenceWidget extends Component {
                               onChange={this.onChangeRule}
                             />
                           )}
-
                           {/***** bymonth *****/}
                           {OPTIONS.frequences[formValues.freq].bymonth && (
                             <ByMonthField
@@ -1027,7 +1026,6 @@ class RecurrenceWidget extends Component {
                               onChange={this.onChangeRule}
                             />
                           )}
-
                           {/***** byyear *****/}
                           {OPTIONS.frequences[formValues.freq].byyear && (
                             <ByYearField
@@ -1042,7 +1040,6 @@ class RecurrenceWidget extends Component {
                               onChange={this.onChangeRule}
                             />
                           )}
-
                           {/*-- ends after N recurrence or date --*/}
                           <EndField
                             value={formValues.recurrenceEnds}

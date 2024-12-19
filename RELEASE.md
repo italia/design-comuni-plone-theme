@@ -53,6 +53,7 @@
 
 ### Fix
 
+- Rimossa l'opzione non selezionabile "nessun valore" dal widget ricorrenza.
 - La pagina non dà più errore quando si imposta una ricorrenza con impostazione "Termina dopo tot. ricorrenze".
 
 ## Versione 11.25.3 (12/12/2024)
