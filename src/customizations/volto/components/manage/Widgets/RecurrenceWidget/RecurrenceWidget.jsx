@@ -990,6 +990,7 @@ class RecurrenceWidget extends Component {
                             )}
                             value={formValues.freq}
                             onChange={this.onChangeRule}
+                            noValueOption={false}
                           />
                           {OPTIONS.frequences[formValues.freq].interval && (
                             <IntervalField
