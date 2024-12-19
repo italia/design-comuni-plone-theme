@@ -1983,6 +1983,11 @@ msgstr "Read more"
 msgid "exceeded_chars"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderEventDates
+# defaultMessage: con alcune eccezioni. Per maggiori informazioni controllare la sezione dedicata.
+msgid "exceptionDates"
+msgstr "with some exceptions. Please see the dedicated section for more information."
+
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 # defaultMessage: Scadenza
 msgid "expire"

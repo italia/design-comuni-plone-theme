@@ -22,6 +22,7 @@ export {
   viewDate,
   getRealStartAndEndWithRecurrence,
   getRealEventEnd,
+  getRecurrenceExceptionDates,
 } from 'design-comuni-plone-theme/helpers/dates';
 export { getSiteProperty } from 'design-comuni-plone-theme/helpers/config';
 export { useDebouncedEffect } from 'design-comuni-plone-theme/helpers/debounce';
