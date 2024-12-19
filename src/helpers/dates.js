@@ -53,3 +53,22 @@ export const getRealEventEnd = (content, rruleSet) => {
   }
   return actualEndDate;
 };
+
+export const getRecurrenceExceptionDates = (rruleSet) => {
+  const rdates = rruleSet?.rdates() ?? [];
+  const exdates = rruleSet?.exdates() ?? [];
+
+  const additionalDates = rdates.reduce((acc, curr) => {
+    const isExdate = exdates.some((b) => b.toString() === curr.toString());
+    if (!isExdate) {
+      return [...acc, curr];
+    } else return acc;
+  }, []);
+
+  const exceptionDates = {
+    additionalDates: additionalDates,
+    removedDates: exdates,
+  };
+
+  return exceptionDates;
+};

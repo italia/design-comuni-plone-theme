@@ -2064,6 +2064,11 @@ msgstr ""
 msgid "exceeded_chars"
 msgstr "El texto excede la longitud recomendada"
 
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderEventDates
+# defaultMessage: con alcune eccezioni. Per maggiori informazioni controllare la sezione dedicata.
+msgid "exceptionDates"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 # defaultMessage: Scadenza
 msgid "expire"

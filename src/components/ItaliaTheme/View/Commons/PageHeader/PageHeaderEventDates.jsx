@@ -4,12 +4,20 @@ import PropTypes from 'prop-types';
 
 import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-import { getRealEventEnd } from 'design-comuni-plone-theme/helpers';
+import {
+  getRealEventEnd,
+  getRecurrenceExceptionDates,
+} from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
   dateStart: {
     id: 'dal {dateStart} fino a conclusione',
     defaultMessage: 'dal {dateStart} fino a conclusione',
+  },
+  exceptionDates: {
+    id: 'exceptionDates',
+    defaultMessage:
+      'con alcune eccezioni. Per maggiori informazioni controllare la sezione dedicata.',
   },
 });
 
@@ -36,7 +44,7 @@ const PageHeaderEventDates = ({ content, moment, rrule }) => {
 
   const actualEndDate = getRealEventEnd(content, rruleSet);
 
-  const wholeDay = content?.whole_day;
+  // const wholeDay = content?.whole_day;
   const openEnd = content?.open_end;
   // show only start when event starts and ends in same day or if a recurrence is set
   // because to set a recurrence, the event must have the same date as start and end date
@@ -75,6 +83,11 @@ const PageHeaderEventDates = ({ content, moment, rrule }) => {
 
   // format and save date into new variable depending on recurrence of event
   const endDate = Moment(actualEndDate).format('DD-MM-Y');
+
+  // check if there are exception dates added to the recurrence to add info
+  const { additionalDates, removedDates } =
+    getRecurrenceExceptionDates(rruleSet);
+
   return content['@type'] === 'Event' ? (
     <p className="h4 py-2">
       {!Moment(content.end).isSame(actualEndDate) &&
@@ -89,7 +102,12 @@ const PageHeaderEventDates = ({ content, moment, rrule }) => {
           dateStart: `${Moment(content.start).format('DD-MM-Y')}`,
         })}
       {eventRecurrenceText && (
-        <div className="recurrence small">{eventRecurrenceText}</div>
+        <div className="recurrence small">
+          <span>{eventRecurrenceText}</span>
+          {(additionalDates.length > 0 || removedDates.length > 0) && (
+            <span> {intl.formatMessage(messages.exceptionDates)}</span>
+          )}
+        </div>
       )}
     </p>
   ) : null;

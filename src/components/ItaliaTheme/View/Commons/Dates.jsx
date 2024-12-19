@@ -4,7 +4,11 @@ import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidg
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { Card, CardTitle, CardBody } from 'design-react-kit';
 import PropTypes from 'prop-types';
-import { viewDate, getRealEventEnd } from 'design-comuni-plone-theme/helpers';
+import {
+  viewDate,
+  getRealEventEnd,
+  getRecurrenceExceptionDates,
+} from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
   start: {
@@ -87,14 +91,9 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
   const end = viewDate(intl.locale, actualEndDate);
   const openEnd = content?.open_end;
   const wholeDay = content?.whole_day;
-  const rdates = rruleSet?.rdates() ?? [];
-  const exdates = rruleSet?.exdates() ?? [];
-  const additionalDates = rdates.reduce((acc, curr) => {
-    const isExdate = exdates.some((b) => b.toString() === curr.toString());
-    if (!isExdate) {
-      return [...acc, curr];
-    } else return acc;
-  }, []);
+
+  const { additionalDates, removedDates } =
+    getRecurrenceExceptionDates(rruleSet);
 
   return content ? (
     <>
@@ -172,10 +171,10 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
           ))}
         </div>
       )}
-      {exdates.length > 0 && (
+      {removedDates.length > 0 && (
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.excluded_dates)}</h5>
-          {exdates.map((exDate) => (
+          {removedDates.map((exDate) => (
             <div className="font-serif">
               {viewDate(intl.locale, exDate, 'dddd DD MMMM YYYY')}
             </div>
