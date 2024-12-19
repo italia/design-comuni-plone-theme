@@ -36,18 +36,20 @@ const PageHeaderEventDates = ({ content, moment, rrule }) => {
 
   const actualEndDate = getRealEventEnd(content, rruleSet);
 
-  const wholeDay = content?.whole_day;
+  // const wholeDay = content?.whole_day;
   const openEnd = content?.open_end;
   // show only start when event starts and ends in same day or if a recurrence is set
   // because to set a recurrence, the event must have the same date as start and end date
   const renderOnlyStart =
     Moment(content.end).format('DD-MM-Y') ===
-      Moment(content.start).format('DD-MM-Y') && !content.recurrence;
+    Moment(content.start).format('DD-MM-Y');
+
   let eventRecurrenceText = null;
 
   if (content['@type'] === 'Event') {
     if (content.recurrence) {
       const isRecurrenceByDay = content.recurrence.includes('BYDAY=+');
+      const isRecurrenceByMonthDay = content.recurrence.includes('BYMONTHDAY=');
       const isWeekdaySunday = content.recurrence
         .split('BYDAY')[1]
         ?.includes('SU');
@@ -55,7 +57,10 @@ const PageHeaderEventDates = ({ content, moment, rrule }) => {
       const RRULE_LANGUAGE = rrulei18n(intl, Moment);
       eventRecurrenceText = rruleSet.rrules()[0]?.toText(
         (t) => {
-          if (Moment.locale(intl.locale) === 'it' && isRecurrenceByDay) {
+          if (
+            Moment.locale(intl.locale) === 'it' &&
+            (isRecurrenceByDay || isRecurrenceByMonthDay)
+          ) {
             RRULE_LANGUAGE.strings.th = '°';
             RRULE_LANGUAGE.strings.nd = '°';
             RRULE_LANGUAGE.strings.rd = '°';
@@ -79,11 +84,11 @@ const PageHeaderEventDates = ({ content, moment, rrule }) => {
 
   return content['@type'] === 'Event' ? (
     <p className="h4 py-2">
-      {!Moment(content.end).isSame(actualEndDate) &&
+      {(content.recurrence || !renderOnlyStart) &&
         !openEnd &&
-        !renderOnlyStart &&
         `dal ${Moment(content.start).format('DD-MM-Y')} al ${endDate}`}
-      {(renderOnlyStart || Moment(content.end).isSame(actualEndDate)) &&
+      {!content.recurrence &&
+        renderOnlyStart &&
         !openEnd &&
         `${Moment(content.start).format('DD-MM-Y')}`}
       {openEnd &&
