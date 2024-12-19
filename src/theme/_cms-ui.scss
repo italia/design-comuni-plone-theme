@@ -74,6 +74,48 @@ body.cms-ui {
     .block.text {
       line-height: 1.555;
     }
+
+    &.table {
+      @import 'bootstrap/scss/reboot';
+      @import 'bootstrap/scss/tables';
+      @import 'bootstrap-italia/src/scss/custom/tables';
+      @import 'extras/tables';
+
+      .ui.table {
+        &.inverted {
+          th,
+          td {
+            border-color: inherit !important;
+          }
+        }
+        thead th {
+          font-weight: bold;
+          text-transform: unset;
+          color: var(--bs-table-color);
+        }
+
+        &.very.basic {
+          &:not(.sortable):not(.striped) {
+            th:first-child,
+            td:first-child {
+              padding-left: 0.5rem;
+            }
+            thead tr:first-child th {
+              padding-top: 0.5rem;
+            }
+            td:last-child {
+              padding-right: 0.5rem;
+            }
+          }
+        }
+
+        &.striped {
+          tbody tr:nth-child(2n) {
+            background-color: rgba(0, 0, 50, 0.02) !important;
+          }
+        }
+      }
+    }
   }
 
   &.contenttype-document,

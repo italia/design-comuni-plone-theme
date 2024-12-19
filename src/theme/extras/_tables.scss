@@ -20,6 +20,17 @@
   &.very.basic {
     border: none;
 
+    th,
+    td {
+      &:first-of-type {
+        border-left: none;
+      }
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+
     tbody > tr {
       &:first-of-type {
         th,
@@ -28,23 +39,11 @@
         }
       }
 
-      &:last-of-type {
-        th,
-        td {
-          border-bottom: none;
-        }
-      }
-
       th,
       td {
-        &:first-of-type {
-          border-left: none;
-        }
-
-        &:last-of-type {
-          border-right: none;
-        }
+        border-bottom: none;
       }
+      border-width: 0;
     }
   }
 
