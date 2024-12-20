@@ -41,12 +41,14 @@
 - ...
  -->
 
+
 ## Versione X.X.X (dd/mm/yyyy)
 
 ### Migliorie
 
 - Se vengono aggiunte o rimosse date dalla ricorrenza di un CT evento, nel sottotitolo viene aggiunta l'indicazione di controllare le eccezioni nella sezione apposita.
 - Il sottotitolo del CT Evento mostra il range di date per tutti gli eventi con ricorrenza o con una data di fine diversa dalla data di inizio.
+- sistemata l'accessibilità riguardante il focus lato operatore.
 
 ### Novità
 
@@ -58,6 +60,7 @@
 - Risolto un problema con il colore del testo del bottone nell'editor.
 - Rimossa l'opzione non selezionabile "nessun valore" dal widget ricorrenza.
 - La pagina non dà più errore quando si imposta una ricorrenza con impostazione "Termina dopo tot. ricorrenze".
+
 
 ## Versione 11.25.3 (12/12/2024)
 
