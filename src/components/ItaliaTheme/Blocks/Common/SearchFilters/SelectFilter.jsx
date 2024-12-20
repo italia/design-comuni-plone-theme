@@ -11,6 +11,7 @@ const SelectFilter = ({
   onChange,
   placeholder,
   isSearchable = false,
+  optionsQuerySize = 25,
 }) => {
   const dispatch = useDispatch();
 
@@ -52,15 +53,20 @@ const SelectFilter = ({
         );
       }
     } else if (options.vocabulary) {
-      dispatch(getVocabulary({ vocabNameOrURL: options.vocabulary }));
+      dispatch(
+        getVocabulary({
+          vocabNameOrURL: options.vocabulary,
+          size: optionsQuerySize,
+        }),
+      );
     }
   }, []);
 
   const select_options = options?.choices
     ? options.choices
     : options?.vocabulary
-      ? vocabularies?.[options.vocabulary]?.items
-      : selectOptions;
+    ? vocabularies?.[options.vocabulary]?.items
+    : selectOptions;
 
   return (
     <div className="me-lg-3 my-2 my-lg-1 filter-wrapper select-filter">
