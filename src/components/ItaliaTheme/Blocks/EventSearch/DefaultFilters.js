@@ -72,6 +72,7 @@ const DefaultFilters = () => {
             vocabulary: 'design.plone.vocabularies.event_location',
             placeholder: intl.formatMessage(messages.venues),
           },
+          optionsQuerySize: -1,
         },
       },
       query: (value, query) => {

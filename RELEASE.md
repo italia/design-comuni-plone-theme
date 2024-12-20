@@ -41,13 +41,12 @@
 - ...
  -->
 
-
 ## Versione X.X.X (dd/mm/yyyy)
 
 ### Migliorie
 
 - Se vengono aggiunte o rimosse date dalla ricorrenza di un CT evento, nel sottotitolo viene aggiunta l'indicazione di controllare le eccezioni nella sezione apposita.
-- sistemata l'accessibilità riguardante il focus lato operatore.
+- Sistemata l'accessibilità riguardante il focus lato operatore.
 
 ### Novità
 
@@ -55,8 +54,8 @@
 
 ### Fix
 
+- Il menu a tendina da cui è possibile filtrare i luoghi nel blocco Ricerca Eventi mostra tutti i luoghi collegati agli eventi presenti nel percorso selezionato dalla Sidebar, senza limitarne il numero.
 - Rimossa l'opzione non selezionabile "nessun valore" dal widget ricorrenza.
-
 
 ## Versione 11.25.3 (12/12/2024)
 
