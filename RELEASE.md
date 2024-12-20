@@ -45,8 +45,8 @@
 
 ### Migliorie
 
-- ...
 - Se vengono aggiunte o rimosse date dalla ricorrenza di un CT evento, nel sottotitolo viene aggiunta l'indicazione di controllare le eccezioni nella sezione apposita.
+- Il sottotitolo del CT Evento mostra il range di date per tutti gli eventi con ricorrenza o con una data di fine diversa dalla data di inizio.
 - Sistemata l'accessibilità riguardante il focus lato operatore.
 
 ### Novità
@@ -56,16 +56,7 @@
 ### Fix
 
 - Il menu a tendina da cui è possibile filtrare i luoghi nel blocco Ricerca Eventi mostra tutti i luoghi collegati agli eventi presenti nel percorso selezionato dalla Sidebar, senza limitarne il numero.
-- Rimossa l'opzione non selezionabile "nessun valore" dal widget ricorrenza.
-- Il sottotitolo del CT Evento mostra il range di date per tutti gli eventi con ricorrenza o con una data di fine diversa dalla data di inizio.
-
-### Novità
-
-- ...
-
-### Fix
-
-- Colore del font del bottone DraftJS nell'editor sistemato a bianco.
+- Risolto un problema con il colore del testo del bottone nell'editor.
 - Rimossa l'opzione non selezionabile "nessun valore" dal widget ricorrenza.
 - La pagina non dà più errore quando si imposta una ricorrenza con impostazione "Termina dopo tot. ricorrenze".
 
