@@ -91,15 +91,16 @@
     }
 
     .contact-title {
+
+      margin-bottom: 1rem;
       font-size: 1.35rem;
       font-weight: bold;
       line-height: 1.4em;
-
-      margin-bottom: 1rem;
     }
 
     .contact-text {
       font-size: 0.9rem;
+
       .detached-slate-editor {
         margin-bottom: 1rem;
       }
@@ -107,32 +108,22 @@
 
     .contact-info {
       display: flex;
-
-      &:first-of-type {
-        align-items: center;
-
-        .icon-wrapper {
-          margin-top: 0;
-        }
-      }
-
-      &:not(:last-of-type) {
-        margin-bottom: 1rem;
-      }
+      align-items: center;
 
       [role='textbox'] {
         //slate editor
         width: 100%;
+
         &[data-slate-editor='true'] {
           min-height: 1em;
         }
       }
 
       .icon-wrapper {
-        margin-top: 0.2rem;
-        margin-right: 1rem;
         display: flex;
         align-items: center;
+        margin-top: 0.2rem;
+        margin-right: 1rem;
       }
 
       .tel {

@@ -5,8 +5,18 @@
         max-width: 100%;
       }
 
-      .icon + .card-body {
-        max-width: calc(100% - 112px - 1em);
+      .icon {
+        //to do: forse da spostare nel file degli attachment
+        min-width: 32px;
+        max-width: 32px;
+
+        & + .card-body {
+          max-width: calc(100% - 1em - 32px);
+
+          .card-title a {
+            max-width: 100%;
+          }
+        }
       }
     }
     //Landscape
