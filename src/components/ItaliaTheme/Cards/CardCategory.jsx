@@ -38,9 +38,8 @@ const CardCategory = (props) => {
   const categoryText = !href && children && (
     <span className="text">{children}</span>
   );
-  const categoryIcon = iconName && (
-    <Icon icon={iconName} title={intl.formatMessage(messages.categoryIcon)} />
-  );
+  const iconTitle = rest.title || intl.formatMessage(messages.categoryIcon);
+  const categoryIcon = iconName && <Icon icon={iconName} title={iconTitle} />;
 
   return (
     <div className={classes} {...rest}>
