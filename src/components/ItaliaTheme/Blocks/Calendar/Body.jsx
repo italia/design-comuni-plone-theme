@@ -123,6 +123,7 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
   const adaptedQuery = Object.assign(
     {
       fullobjects: 1,
+      sort_on: !Object.keys(_querystring).includes('sort_on') ? 'start' : null,
     },
     ...copyFields.map((name) =>
       Object.keys(_querystring).includes(name)
