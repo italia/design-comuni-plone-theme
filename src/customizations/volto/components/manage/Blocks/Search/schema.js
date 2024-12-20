@@ -153,6 +153,15 @@ const messages = defineMessages({
     id: 'Link to',
     defaultMessage: 'Link to',
   },
+  usePloneRanking: {
+    id: "Usa l'ordinamento dei risultati di Plone",
+    defaultMessage: "Usa l'ordinamento dei risultati di Plone",
+  },
+  usePloneRankingDescription: {
+    id: "Usa l'ordinamento dei risultati di Plone - descrizione",
+    defaultMessage:
+      "Se impostato, nel momento in cui un utente effettua una ricerca testuale per parola chiave, non viene usato l'ordinamento di default impostato nella sezione 'Ricerca iniziale', ma l'ordinamento di Plone in base all'ordine di importanza dei risultati da esso stabilito.",
+  },
 });
 
 const enhanceSchema = (originalSchema, formData) => {
@@ -285,6 +294,7 @@ const SearchSchema = ({ data = {}, intl }) => {
           ...(data.showSearchInput ?? true ? ['showSearchButton'] : []),
           // ...(data.showSearchInput ? ['searchInputPrompt'] : []),
           // ...(data.showSearchButton ? ['searchButtonLabel'] : []),
+          'usePloneRanking',
           'showTotalResults',
         ],
       },
@@ -315,6 +325,12 @@ const SearchSchema = ({ data = {}, intl }) => {
         type: 'boolean',
         title: intl.formatMessage(messages.showTotalResults),
         default: true,
+      },
+      usePloneRanking: {
+        type: 'boolean',
+        title: intl.formatMessage(messages.usePloneRanking),
+        description: intl.formatMessage(messages.usePloneRankingDescription),
+        default: false,
       },
       searchButtonLabel: {
         title: intl.formatMessage(messages.searchButtonLabel),

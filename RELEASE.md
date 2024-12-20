@@ -52,7 +52,7 @@
 
 ### Novità
 
-- ...
+- Nel blocco 'Cerca' è stata aggiunta l'opzione "Usa l'ordinamento dei risultati di Plone" nella sezione 'Controlli'.
 
 ### Fix
 
