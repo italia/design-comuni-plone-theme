@@ -187,6 +187,9 @@ svg.external-link {
         background-color: darken($primary, 8);
         color: $primary-text;
       }
+      &.link-anchorlink-theme {
+        color: $primary-text !important;
+      }
     }
   }
 }
