@@ -4,6 +4,14 @@ body.cms-ui {
   font-size: 16px;
   line-height: 1.5;
 
+  :focus:not(.focus--mouse),
+  input[type='checkbox']:focus + label:before {
+    outline: 2px solid #000 !important;
+    outline-offset: 2px;
+    border: none !important;
+    box-shadow: 0 0 0 2px #fff !important;
+  }
+
   @include media-breakpoint-up(sm) {
     font-size: 18px;
     line-height: 1.555;
