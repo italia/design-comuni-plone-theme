@@ -112,6 +112,8 @@
     }
 
     .contact-title {
+
+      margin-bottom: 1rem;
       font-size: 1.35rem;
       font-weight: bold;
       line-height: 1.4em;
@@ -123,20 +125,11 @@
 
     .contact-info {
       display: flex;
-
-      &:first-of-type {
-        align-items: center;
-
-        .icon-wrapper {
-          margin-top: 0;
-        }
-      }
-
-      &:not(:last-of-type) {
-        margin-bottom: 1rem;
-      }
+      align-items: center;
 
       .icon-wrapper {
+        display: flex;
+        align-items: center;
         margin-top: 0.2rem;
         margin-right: 1rem;
       }

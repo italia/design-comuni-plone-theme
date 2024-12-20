@@ -145,6 +145,7 @@
     // We don't set margin here because it breaks `size` in Chrome. We also
     // don't use `!important` on `size` as it breaks in Chrome.
     @page {
+      margin: 0rem;
       size: $print-page-size;
     }
   }

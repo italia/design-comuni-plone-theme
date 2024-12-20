@@ -1,5 +1,30 @@
 @media print {
   .block {
+    color: $body-color;
+
+    .bg-primary,
+    .bg-secondary,
+    .bg-tertiary {
+      border: 1px solid $gray-border;
+      background-color: white !important;
+
+      .card .card-body {
+        .category-top,
+        .category-top .text,
+        .card-text,
+        .card-text a,
+        .card-title a,
+        .card-title {
+          color: $body-color !important;
+        }
+
+        .category-top .icon {
+          color: $body-color !important;
+          fill: $body-color !important;
+        }
+      }
+    }
+
     &.full-width,
     .full-width {
       right: unset !important;
@@ -19,14 +44,115 @@
 
         .col-item {
           max-width: 33%;
+          padding-right: 0;
+          padding-left: 0;
         }
       }
+    }
+
+    .bg-gradient {
+      border: 1px solid $gray-border;
+      background-color: white !important;
+      background-image: none !important;
+      opacity: 1 !important;
+    }
+
+    div:has(.bg-gradient) {
+      .title {
+        color: $body-color;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .section.section-inset-shadow {
+    box-shadow: none;
+  }
+
+  .public-ui {
+    .block.alertblock {
+      .bg-alert-danger,
+      .bg-alert-info,
+      .bg-alert-warning {
+        border: 1px solid $gray-border;
+        background-color: white !important;
+
+        a:not(.btn) {
+          color: #000;
+        }
+
+        .container {
+          padding: 1rem !important;
+        }
+      }
+    }
+  }
+
+  .block.form {
+    h2,
+    .block-description {
+      page-break-after: avoid;
+    }
+
+    .card-wrapper {
+      page-break-before: avoid;
     }
   }
 
   .block.image {
     max-width: 50%;
     margin: 0 auto;
+  }
+
+  .block.numbersBlock {
+    .block-number .subblock-title p {
+      font-size: 3.5rem;
+    }
+  }
+
+  // rimozione delle immagini/colori di sfondo come default, applicato colore del testo
+  .block.iconBlocks,
+  .block.numbersBlock,
+  .block.contacts .bg-primary,
+  .block.contacts .bg-secondary {
+    color: $body-color;
+
+    .block-header {
+      .title,
+      .description,
+      a {
+        color: $body-color !important;
+      }
+    }
+
+    .background-image::after,
+    .background-image.no-image::after {
+      border: 1px solid $gray-border;
+      background-color: white;
+      background-image: none;
+    }
+  }
+
+  .block.iconBlocks,
+  .block.numbersBlock {
+    div:not(.title) p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .block.contacts {
+    div:not(.title) p {
+      font-size: 1.5rem;
+    }
+
+    .card-wrapper .contact-title,
+    .card-wrapper .contact-text,
+    .card-wrapper .contact-info {
+      p {
+        margin-bottom: 0.3rem;
+        font-size: 1rem !important;
+      }
+    }
   }
 
   .block.highlitedContent {
@@ -62,16 +188,113 @@
   }
 
   .block.accordion {
-    .accordion-header {
-      button {
-        svg {
-          display: none;
+    .public-ui {
+      width: 100%;
+    }
+
+    .section.full-width {
+      padding: 0px !important;
+
+      .card {
+        .card-body .accordion-item {
+          .accordion-header {
+            button {
+              svg {
+                display: none;
+              }
+            }
+          }
+
+          .accordion-content {
+            max-height: unset;
+
+            .accordion-inner {
+              padding: 0px;
+            }
+          }
+        }
+
+        &:after {
+          margin-top: 0px;
         }
       }
     }
 
-    .section.full-width .card .card-body .accordion-item .accordion-content {
-      max-height: unset;
+  .block.numbersBlock {
+    color: #000;
+    page-break-inside: avoid;
+
+    .section.py-5 {
+      padding: 12px !important;
+      page-break-inside: avoid;
+
+      .container {
+        page-break-inside: avoid;
+
+        .title,
+        .subblock-title {
+          font-size: 1.5rem;
+          page-break-after: avoid;
+        }
+
+        .block-number {
+          page-break-inside: avoid;
+        }
+
+        .subblock-text {
+          page-break-before: avoid;
+        }
+
+        .block-header {
+          page-break-after: avoid;
+        }
+      }
+    }
+  }
+
+  .block.iconBlocks {
+    .section.full-width {
+      padding: 12px !important;
+
+      .block-header {
+        .title {
+          margin: 0px;
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+        }
+
+        .description {
+          margin-bottom: 10px;
+
+          p {
+            margin-top: 10px;
+          }
+        }
+      }
+
+      .card {
+        padding-top: 0px;
+
+        .card-body {
+          padding: 12px;
+
+          .iconblock-icon {
+            margin-bottom: 1rem;
+
+            .icon {
+              height: 2rem;
+            }
+          }
+
+          .iconblock-title {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .link-button {
+        display: none;
+      }
     }
   }
 
@@ -94,11 +317,22 @@
         }
       }
     }
+
+    .calendar .calendar-header {
+      border-bottom: 1px solid $gray-border;
+      background-color: white;
+
+      h3 {
+        color: black !important;
+      }
+    }
   }
 
   .container {
     .block {
       .searchSections {
+        border: 1px solid $gray-border;
+
         .searchSections-background {
           display: none;
         }
@@ -106,19 +340,22 @@
         h2.text-secondary {
           color: $link-color !important;
         }
-
-        border: 1px solid $gray-border;
       }
     }
   }
 
   div.block.listing {
+    page-break-inside: avoid;
+
     .full-width {
       right: unset !important;
       left: unset !important;
       width: 100% !important;
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
       margin-right: 0 !important;
       margin-left: 0 !important;
+      page-break-inside: avoid;
 
       .container {
         max-width: 100% !important;
@@ -145,13 +382,671 @@
     &.inEvidenceTemplate {
       .in-evidence-cards-wrapper {
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
+        gap: 10px;
 
         .card-wrapper {
           flex: 0 0 30%;
+          page-break-inside: avoid;
+
+          .card {
+            page-break-inside: avoid;
+
+            .img-responsive-wrapper {
+              height: 150px;
+
+              .img-responsive {
+                height: 100%;
+              }
+            }
+
+            h3 {
+              font-size: 1.2rem;
+            }
+          }
         }
       }
     }
+
+    .link-button,
+    .link-more-button-align-right {
+      display: none;
+    }
+
+    div.pagination-wrapper {
+      position: relative;
+
+      nav.pagination-wrapper {
+        display: none;
+      }
+    }
+
+    // listing cards
+    .card.card-teaser {
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .card-big-io-comune .card-body .card-title a {
+      font-size: 1.2rem;
+    }
+
+    .card {
+      .rassegna-info {
+        margin-bottom: 0px !important;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .card .card-body {
+      .category-top {
+        margin-bottom: 10px;
+
+        .icon {
+          height: 1rem;
+        }
+      }
+    }
+
+    // simple card template - compatto
+    &.simpleCard {
+      .simple-card-compact-template {
+        page-break-inside: avoid;
+
+        .card-teaser-wrapper {
+          flex-direction: column;
+          margin-bottom: none;
+
+          &:after {
+            display: none;
+          }
+
+          .card-title a {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      // simple card template - default
+      .simple-card-default {
+        page-break-inside: avoid;
+
+        .template-header.with-filters .path-filter-buttons {
+          display: none;
+        }
+
+        .card-teaser-wrapper {
+          flex-direction: column;
+
+          .card-body {
+            padding-bottom: 0px !important;
+
+            .category-top {
+              // margin-bottom: 0px;
+              .icon {
+                height: 1rem;
+              }
+            }
+
+            .card-title {
+              margin-bottom: 0px;
+            }
+
+            .card-text {
+              margin-bottom: 0px !important;
+            }
+          }
+        }
+      }
+    }
+
+    // card with image
+    &.cardWithImageTemplate {
+      .card-with-image-template {
+        flex-direction: column;
+
+        .col-item.col-xl-4 {
+          width: 100%;
+          max-width: 100%;
+          margin-bottom: 5px !important;
+
+          .card-wrapper {
+            .card {
+              page-break-inside: avoid;
+
+              .img-responsive-wrapper {
+                height: 100px;
+
+                .img-responsive {
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // card with image - card persona
+      .card-persona.card-flex {
+        .card-body {
+          padding: 10px;
+
+          .card-title {
+            margin-bottom: 0px;
+          }
+
+          .card-text {
+            margin-top: 5px;
+          }
+        }
+
+        .card-image img {
+          height: 120px !important;
+        }
+      }
+    }
+
+    // content in evidence - contenuto in evidenza
+    &.contentInEvidenceTemplate {
+      .content-in-evidence {
+        page-break-inside: avoid;
+
+        .item-image {
+          height: 100px;
+        }
+
+        .card-title a {
+          font-size: 1.2rem;
+        }
+
+        .read-more {
+          display: none;
+        }
+
+        .event-recurrences-more {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    // ribbon card - card con nastro
+    &.ribbonCardTemplate {
+      .mb-4.row {
+        flex-direction: column;
+
+        .col-lg-4 {
+          width: 100%;
+          max-width: 100%;
+          flex: 0 0 100%;
+
+          .card {
+            .flag-icon {
+              display: none;
+            }
+
+            .etichetta {
+              top: 10px;
+              right: 10px;
+            }
+
+            .read-more {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    // card with slide up text - card con testo animato
+    &.cardSlideUpTextTemplate {
+      .card-slide-text-template {
+        .grid {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0px !important;
+          gap: 10px 0px;
+
+          .listing-item.box {
+            height: auto;
+            padding: 10px;
+            border: 1px solid #c5c7c9;
+            margin-bottom: 10px;
+
+            .category {
+              padding: 0px;
+              background-color: transparent;
+
+              &:after {
+                border-top: 0px;
+              }
+            }
+
+            .title {
+              margin-bottom: 0px;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+
+    // squares image - quadratoni con immagine
+    &.quaresImageTemplate {
+      .squares-image-template {
+        .grid {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0px !important;
+          gap: 10px;
+
+          .box {
+            height: auto;
+            padding: 10px;
+          }
+        }
+      }
+    }
+
+    // complete block links - link completi
+    &.completeBlockLinksTemplate {
+      .complete-block-links-template {
+        .items.row {
+          flex-direction: column;
+
+          .col-item {
+            margin-bottom: 10px;
+
+            &.col-lg-3 {
+              width: 100%;
+              max-width: 100%;
+            }
+
+            .card {
+              .image-container {
+                margin: 10px 0px 0px 10px;
+              }
+
+              .card-body {
+                padding: 10px;
+
+                .card-title {
+                  margin-bottom: 0px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // slider
+    &.slider {
+      .sliderTemplate {
+        .slick-track {
+          min-height: auto;
+        }
+
+        .play-pause-wrapper {
+          display: none;
+        }
+
+        .slide-wrapper {
+          border: 1px solid $gray-border;
+
+          .slide-title {
+            border-top: 1px solid $gray-border;
+            background-color: white;
+
+            a {
+              color: $link-color;
+            }
+          }
+        }
+      }
+    }
+
+    // bandi in evidence - bandi in evidenza
+    &.bandiInEvidenceTemplate {
+      .card {
+        .read-more {
+          display: none;
+        }
+
+        .card-wrapper {
+          flex: 0 0 33%;
+        }
+      }
+    }
+
+    &.contentInEvidenceTemplate {
+      .img-wrapper img {
+        max-height: 200px;
+      }
+
+      .card-body {
+        padding-bottom: 24px !important;
+      }
+    }
+
+    &.ribbonCardTemplate {
+      .card-wrapper .card.card-big {
+        position: relative;
+        margin: 0;
+
+        .etichetta {
+          position: relative;
+          top: 10px;
+          right: 0px;
+          left: 0;
+          width: 100%;
+          max-width: 100%;
+          justify-content: flex-start;
+
+          .icon {
+            margin-left: 5px;
+          }
+        }
+
+        .card-body {
+          padding: 20px;
+
+          .dates {
+            margin: 7px 0 10px;
+          }
+        }
+      }
+    }
+
+    &.cardSlideUpTextTemplate .box {
+      height: auto;
+
+      .category {
+        border: 1px solid black;
+        background-color: white;
+        color: $body-color;
+
+        &::after {
+          top: -1px;
+          border-top-color: black;
+        }
+      }
+    }
+
+    &.quaresImageTemplate {
+      .squares-image-template .grid {
+        gap: 1rem 1.4rem;
+      }
+
+      .box .title {
+        color: $body-color;
+        font-size: 1.1rem;
+      }
+
+      .box.bg-img::before {
+        border: 1px solid $gray-border;
+        background-color: white !important;
+      }
+    }
+
+    &.completeBlockLinksTemplate {
+      .col-item.col-lg-3 {
+        width: 33%;
+      }
+
+      .card-wrapper {
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  // media
+  .block.video,
+  .block.video_gallery {
+    max-width: 50%;
+
+    &,
+    & .video-wrapper {
+      .ui.embed .icon-play {
+        display: flex;
+        width: 2rem;
+        height: 2rem;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          height: 1rem;
+          fill: #000;
+        }
+      }
+    }
+  }
+
+  //hero
+  .block.hero {
+    .hero-body {
+      .read-more {
+        display: none;
+      }
+    }
+  }
+
+  //search
+  .block.search {
+    .search-results {
+      .template-wrapper {
+        padding: 10px !important;
+
+        .card-wrapper {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  // html
+  .block.html {
+    &.py-5 {
+      padding: 10px 0px !important;
+    }
+  }
+
+  .table,
+  .slate-table-block {
+    display: table !important;
+
+    &.ui.table.inverted {
+      color: $body-color;
+
+      & > :not(caption) > * > * {
+        background-color: white;
+      }
+    }
+  }
+
+  .block.rssBlock {
+    .link-button {
+      display: none;
+    }
+  }
+
+  .block.cta-block .cta-block-wrapper.full-width {
+    padding: 10px 0px;
+    border: 1px solid $gray-border;
+    background-color: white !important;
+
+    .title {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+    .title,
+    p,
+    p a {
+      color: $body-color !important;
+    }
+
+    // cta button div
+    .mt-5 {
+      margin-top: 10px !important;
+    }
+  }
+
+  .block.count_down {
+    .public-ui .block-content {
+      padding: 1rem;
+
+      .background-image {
+        border: 1px solid $gray-border;
+        background-color: white !important;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      p,
+      p a:not(.btn),
+      .countdown {
+        color: $body-color;
+      }
+
+      .count-down-timer {
+        padding-bottom: 1rem;
+        border: 1px solid $gray-border;
+        page-break-after: avoid;
+        page-break-before: avoid;
+
+        .expired {
+          padding: 10px;
+          font-size: 1.5rem;
+        }
+
+        .interval .number {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .block.highlitedContent {
+    .card {
+      &:after {
+        display: none;
+      }
+
+      .category-top {
+        margin-bottom: 10px;
+
+        .icon {
+          height: 1rem;
+        }
+      }
+
+      .card-title {
+        margin-bottom: 10px !important;
+
+        a {
+          font-size: 1.2rem;
+        }
+      }
+
+      .card-text {
+        margin-top: 0px !important;
+      }
+
+      .read-more {
+        display: none;
+      }
+    }
+  }
+
+  .calendar {
+    .template-header {
+      h2 {
+        margin-top: 10px !important;
+        font-size: 1.5rem;
+      }
+    }
+
+    .calendar-body {
+      padding: 0rem;
+    }
+
+    .link-more-container {
+      display: none;
+    }
+  }
+
+  .argumentInEvidence {
+    .argumentInEvidence-background {
+      + .argumentsCardsWrapper {
+        padding-top: 10px !important;
+
+        h2 {
+          color: #000 !important;
+        }
+
+        .grid.mt-5 {
+          display: flex;
+          flex-direction: column;
+          margin-top: 10px !important;
+
+          .card {
+            &:after {
+              display: none;
+            }
+
+            .card-body {
+              padding: 10px;
+
+              .icon-argument-container {
+                width: 1rem;
+                min-width: 1rem;
+                height: 1rem;
+                min-height: 1rem;
+              }
+
+              .card-title {
+                margin-bottom: 10px !important;
+                font-size: 1.2rem;
+              }
+
+              .card-text {
+                margin-top: 0px !important;
+              }
+
+              .read-more {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // hide slick arrows and dots
+  .slick-slider {
+    .slick-arrow {
+      display: none !important;
+    }
+
+    .slick-dots {
+      display: none !important;
+    }
+  }
+
+  // override mb-3 inside argumentsInEvidence
+  .public-ui .argumentInEvidence .mb-3 {
+    margin-bottom: 0px !important;
   }
 }

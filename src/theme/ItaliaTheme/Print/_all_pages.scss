@@ -1,13 +1,26 @@
 @media print {
+  @page {
+    margin: 0 !important;
+  }
+
   body {
     display: block !important;
   }
 
   .public-ui {
-    // removed underlining from links
     a {
       font-weight: 600 !important;
-      text-decoration: none !important;
+      // text-decoration: none !important;
+      /* i link che non devono essere sottolineati hanno già regole specifiche,
+          a video è necessario mostare che i tag a sono link */
+
+      &.read-more {
+        display: none !important; // omesso il read more nelle card
+      }
+    }
+
+    .text-secondary {
+      color: $body-color !important;
     }
 
     .content-area,
@@ -15,6 +28,24 @@
       page-break-after: avoid;
       page-break-before: avoid;
       page-break-inside: avoid;
+    }
+
+    .container {
+      max-width: 98%;
+    }
+
+    // padding/margin
+    .py-5 {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+    }
+
+    .pb-5 {
+      padding-bottom: 20px !important;
+    }
+
+    .pt-5 {
+      padding-top: 20px !important;
     }
 
     // removed part of header header
@@ -41,10 +72,8 @@
             }
 
             .it-brand-text {
-              .no_toc {
-                color: $link-color;
-                font-size: 2rem !important;
-              }
+              color: $link-color;
+              font-size: 2rem !important;
             }
           }
         }
@@ -76,6 +105,10 @@
       }
     }
 
+    .section {
+      padding: 1.2rem;
+    }
+
     /* Removed shadow and card's padding. Add border*/
     .card {
       border: 1px solid $gray-border !important;
@@ -89,13 +122,32 @@
         border: none !important;
         border-left-width: 0 !important;
       }
+
+      &::after {
+        display: none;
+      }
+
+      &.card-bg {
+        background-color: white !important;
+        color: $body-color !important;
+      }
     }
 
-    //card teaser 3
+    // Card teaser
     .card-wrapper.card-teaser-wrapper.card-teaser-block-3 {
       > .card-teaser {
-        flex: 0 0 32%;
+        flex: 0 0 32.5%;
       }
+    }
+
+    .card.card-teaser.simple-card-default-item .card-body .card-title a,
+    .card.card-teaser .card-body .card-title a,
+    .card .card-title a {
+      font-size: 1.1rem !important;
+    }
+
+    .card .card-body .category-top {
+      flex-wrap: wrap;
     }
 
     #text-tempi_e_scadenze > div > p {
@@ -155,7 +207,7 @@
       .it-page-sections-container {
         border-top: none;
 
-        .it-carousel-wrapper {
+        .it-carousel-wrapper:not(#galleria) {
           display: none;
         }
 
@@ -223,16 +275,47 @@
       box-shadow: none;
       font-size: 1rem;
     }
+
+    .callout {
+      page-break-inside: avoid;
+
+      .callout-inner {
+        // padding-top: 0px;
+        p {
+          margin-top: -2rem;
+        }
+      }
+    }
+    // buttons
+    button.btn,
+    .btn.btn-primary,
+    .draftjs-buttons a {
+      padding: 0.5rem 1rem;
+      border: 1px solid $link-color;
+      background-color: white;
+      color: $link-color;
+
+      svg.icon {
+        color: $link-color;
+        fill: $link-color;
+      }
+    }
+
+    // blockquote text
+    blockquote.blockquote-card.dark,
+    .blockquote.blockquote-card.dark {
+      border: 1px solid $body-color;
+      background-color: white;
+      color: $body-color;
+
+      a:not(.btn) {
+        color: $body-color;
+      }
+    }
   }
 
   .draft-text-larger {
     font-size: 1.2rem;
-  }
-
-  .public-ui .draftjs-buttons a {
-    padding: 0rem;
-    background-color: white;
-    color: $link-color;
   }
 
   //external link icon
