@@ -151,6 +151,9 @@ iframe {
         color: $primary-text;
         font-weight: 700;
       }
+      &.link-anchorlink-theme {
+        color: $primary-text !important;
+      }
     }
     /*
       Safari rendering issue workaround - B#60364
