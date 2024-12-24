@@ -119,11 +119,18 @@ export const FILE_EXTENSIONS = {
     icon: { lib: '', name: faFileOdp, svg_format: true },
     format_name: 'ODP',
   },
+  pdf: {
+    icon: { lib: 'far', name: 'file-pdf' },
+    format_name: 'PDF',
+  },
 };
 
 export const getFileViewFormat = (file) => {
-  const regexEx = /(?:\.([^.]+))?$/;
-  const fileExtension = regexEx.exec(file.filename)[1];
+  const cleanedFilename = (file.filename || '').split(/\/[@?#]/)[0];
+  const regexEx = /\.([a-zA-Z0-9]+)$/;
+
+  const match = regexEx.exec(cleanedFilename);
+  const fileExtension = match ? match[1] : null;
   const typeOfContent = file['content-type'] ?? file['mime_type'];
 
   const viewFormat = {

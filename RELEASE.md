@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Risolto un problema riguardante la visualizzazione delle estensioni dei file quando si utilizza un link ad un documento nei blocchi di testo.
+
 ## Versione 11.26.0 (20/12/2024)
 
 ### Migliorie
