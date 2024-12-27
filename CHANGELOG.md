@@ -1,5 +1,17 @@
 
 
+## [11.26.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.26.0...v11.26.1) (2024-12-27)
+
+
+### Bug Fixes
+
+* getFileViewFormat regex inconsistencies with different filenames that included @@download/**, added anti-regression tests ([#847](https://github.com/RedTurtle/design-comuni-plone-theme/issues/847)) ([ea9f76d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ea9f76df28c82155c4a0dc965b1cdeba4d5fab55))
+
+
+### Documentation
+
+* updated publiccode and release log ([575ad56](https://github.com/RedTurtle/design-comuni-plone-theme/commit/575ad563ff8781d5dd0483c70f1664ba6a46134a))
+
 ## [11.26.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.25.4...v11.26.0) (2024-12-20)
 
 
