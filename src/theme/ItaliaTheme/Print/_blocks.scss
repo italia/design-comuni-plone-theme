@@ -187,6 +187,16 @@
     }
   }
 
+  .block.image-text-block {
+    .image-text-card-wrapper {
+      page-break-inside: avoid;
+
+      h2 {
+        page-break-after: avoid;
+      }
+    }
+  }
+
   .block.accordion {
     .public-ui {
       width: 100%;
@@ -219,6 +229,7 @@
         }
       }
     }
+  }
 
   .block.numbersBlock {
     color: #000;
@@ -344,6 +355,7 @@
     }
   }
 
+  // listing variations
   div.block.listing {
     page-break-inside: avoid;
 
