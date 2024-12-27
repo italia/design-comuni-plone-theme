@@ -1,5 +1,17 @@
 
 
+## [11.26.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.26.1...v11.26.2) (2024-12-27)
+
+
+### Bug Fixes
+
+* theme build bug due to print styles desync ([2aacb6a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2aacb6a78d6d4c93ef24a4d3b89ff6b587baa698))
+
+
+### Documentation
+
+* updated publiccode ([ba2e5c8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ba2e5c85bfbc0de260a0d0dc8839b2286500656d))
+
 ## [11.26.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.26.0...v11.26.1) (2024-12-27)
 
 
