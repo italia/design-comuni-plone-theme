@@ -99,4 +99,29 @@ defineMessages({
     defaultMessage:
       'As per the official information architecture outlined in measure 1.4.1, all forms must be properly uploaded in the designated section within Amministrazione > Documenti e Dati > Modulistica, and linked to the relevant service sheet. It is no longer possible to upload files and attachments directly into this container.',
   },
+  //table block
+  hideHeaders: {
+    id: 'Hide headers',
+    defaultMessage: 'Hide headers',
+  },
+  sortable: {
+    id: 'Make the table sortable',
+    defaultMessage: 'Make the table sortable',
+  },
+  sortableDescription: {
+    id: 'Visible only in view mode',
+    defaultMessage: 'Visible only in view mode',
+  },
+  inverted: {
+    id: 'Table color inverted',
+    defaultMessage: 'Table color inverted',
+  },
+  table_block: {
+    id: 'Table block',
+    defaultMessage: 'Table block',
+  },
+  divideRows: {
+    id: 'Divide each row into separate cells',
+    defaultMessage: 'Add border to inner columns',
+  },
 });

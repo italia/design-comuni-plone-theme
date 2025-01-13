@@ -234,6 +234,11 @@ msgstr "Dettagli procedimento"
 msgid "Dimensione della mappa"
 msgstr "Dimensione della mappa"
 
+#: overrideTranslations
+# defaultMessage: Add border to inner columns
+msgid "Divide each row into separate cells"
+msgstr "Mostra i margini delle colonne"
+
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 # defaultMessage: Download
 msgid "Download"
@@ -285,6 +290,11 @@ msgstr "Nascondi"
 # defaultMessage: Nascondi tutti i tipi di contenuto
 msgid "Hide all content types"
 msgstr "Nascondi tutti i tipi di contenuto"
+
+#: overrideTranslations
+# defaultMessage: Hide headers
+msgid "Hide headers"
+msgstr "Nascondi le intestazioni"
 
 #: components/ItaliaTheme/Breadcrumbs/Breadcrumbs
 # defaultMessage: Home
@@ -399,6 +409,11 @@ msgstr "Luogo"
 # defaultMessage: Luogo
 msgid "Luogo location filter"
 msgstr "Luogo"
+
+#: overrideTranslations
+# defaultMessage: Make the table sortable
+msgid "Make the table sortable"
+msgstr "Rendi la tabella ordinabile"
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Medio
@@ -600,6 +615,16 @@ msgstr "Sono occorsi degli errori"
 msgid "Subscribe"
 msgstr "Iscriviti"
 
+#: overrideTranslations
+# defaultMessage: Table block
+msgid "Table block"
+msgstr "Blocco Tabella"
+
+#: overrideTranslations
+# defaultMessage: Table color inverted
+msgid "Table color inverted"
+msgstr "Inverti i colori della tabella"
+
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/ContactsBlock/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
@@ -737,6 +762,11 @@ msgstr "Video"
 # defaultMessage: Video Gallery
 msgid "VideoGalleryBlock"
 msgstr "Video gallery"
+
+#: overrideTranslations
+# defaultMessage: Visible only in view mode
+msgid "Visible only in view mode"
+msgstr "Visibile solamente in modalità visualizzazione"
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 # defaultMessage: You are trying to access a protected resource, please {login} first.
