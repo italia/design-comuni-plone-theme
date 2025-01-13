@@ -193,6 +193,11 @@ msgstr "Procedure details"
 msgid "Dimensione della mappa"
 msgstr "Map dimensions"
 
+#: overrideTranslations
+# defaultMessage: Add border to inner columns
+msgid "Divide each row into separate cells"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 # defaultMessage: Download
 msgid "Download"
@@ -249,6 +254,11 @@ msgstr "Hide"
 # defaultMessage: Nascondi tutti i tipi di contenuto
 msgid "Hide all content types"
 msgstr "Hide all content types"
+
+#: overrideTranslations
+# defaultMessage: Hide headers
+msgid "Hide headers"
+msgstr ""
 
 #: components/ItaliaTheme/Breadcrumbs/Breadcrumbs
 # defaultMessage: Home
@@ -362,6 +372,11 @@ msgstr "Place"
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
 # defaultMessage: Luogo
 msgid "Luogo location filter"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: Make the table sortable
+msgid "Make the table sortable"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
@@ -569,6 +584,16 @@ msgstr "Some errors occured"
 msgid "Subscribe"
 msgstr "Subscribe"
 
+#: overrideTranslations
+# defaultMessage: Table block
+msgid "Table block"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: Table color inverted
+msgid "Table color inverted"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/ContactsBlock/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
@@ -701,6 +726,11 @@ msgstr "Video"
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Video Gallery
 msgid "VideoGalleryBlock"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: Visible only in view mode
+msgid "Visible only in view mode"
 msgstr ""
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized
