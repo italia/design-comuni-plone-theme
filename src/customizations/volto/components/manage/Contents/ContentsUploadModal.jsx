@@ -196,12 +196,10 @@ class ContentsUploadModal extends Component {
     // as per agid guidelines, files cannot be uploaded in modulistica folder inside ct servizio
     // show restraint and hide upload button when page is called modulistica and when there's a restraint
     // this is enough to identify this only case bc even if another page is called 'modulistica', it will have 'File'
-    // and "Modulo" as addable type
+    // as addable type
     const showFileRestraint =
       this.props.pathname.includes('modulistica') &&
-      !this.props.types.some(
-        (type) => type.id === 'File' || type.id === 'Modulo',
-      );
+      !this.props.types.some((type) => type.id === 'File');
 
     return (
       this.props.open && (
