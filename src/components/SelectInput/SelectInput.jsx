@@ -343,7 +343,6 @@ const SelectInput = ({
         isClearable={isClearable}
         aria-label={label}
         aria-live="polite"
-        aria-labelledby={id}
         ariaLiveMessages={getSelectAriaLiveMessages(intl)}
         noOptionsMessage={() =>
           intl.formatMessage(messages.select_noOptionsMessage)
