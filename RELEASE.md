@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- E' possibile caricare moduli in maniera massiva nei documenti all'interno delle aree corrette dentro Documenti e Dati > Modulistica
+
 ## Versione 11.26.1 (27/12/2024)
 
 ### Fix
