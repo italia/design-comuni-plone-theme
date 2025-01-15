@@ -64,9 +64,13 @@ import applyItaliaSlateConfig from 'design-comuni-plone-theme/config/Slate/confi
 import { schemaListing } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/schema.js';
 
 import reducers from 'design-comuni-plone-theme/reducers';
+import {
+  FALLBACK_IMAGE_SRC,
+  FALLBACK_IMAGE_SRC_MAX_W,
+} from 'design-comuni-plone-theme/helpers/images';
 
-const ReleaseLog = loadable(
-  () => import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
+const ReleaseLog = loadable(() =>
+  import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
 );
 
 const messages = defineMessages({
@@ -284,6 +288,8 @@ export default function applyConfig(voltoConfig) {
       markSpecialLinks: true, // se impostato a false, non marca con icona i link esterni
       markFooterLinks: true, // se impostato a true, viene aggiunta un'icona ai link del footer per renderli riconoscibili
       showContentDateInListingFor: ['Modulo', 'Documento'], // elenco dei content types per i quali mostrare la data di pubblicazione/modifica in listing
+      fallbackImageSrc: FALLBACK_IMAGE_SRC,
+      fallbackImageSrcMaxW: FALLBACK_IMAGE_SRC_MAX_W,
     },
     apiExpanders: [
       ...config.settings.apiExpanders,
