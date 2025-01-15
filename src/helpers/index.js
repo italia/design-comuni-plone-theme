@@ -54,5 +54,9 @@ export {
 export { commonSearchBlockMessages } from 'design-comuni-plone-theme/helpers/Translations/searchBlockExtendedTranslations';
 
 export { getComponentWithFallback } from 'design-comuni-plone-theme/helpers/registry';
-export { useHomePath } from 'design-comuni-plone-theme/helpers/url';
+export {
+  useHomePath,
+  isResolveUID,
+} from 'design-comuni-plone-theme/helpers/url';
 export { usePaginatedItemsSection } from 'design-comuni-plone-theme/helpers/usePaginatedItemsSection.hook.ts';
+export { useFallbackImageSrc } from 'design-comuni-plone-theme/helpers/images';
