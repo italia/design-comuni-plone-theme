@@ -1,5 +1,18 @@
 
 
+## [11.26.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.26.2...v11.26.3) (2025-01-15)
+
+
+### Bug Fixes
+
+* image with error on error loop, customizable fallback image in site properties ([#852](https://github.com/RedTurtle/design-comuni-plone-theme/issues/852)) ([7187e5f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7187e5f74a3eadcf9ff2d38000386cb3f0792696))
+* remove file upload restraint from contents modal if modules are allowed ([#854](https://github.com/RedTurtle/design-comuni-plone-theme/issues/854)) ([46357ae](https://github.com/RedTurtle/design-comuni-plone-theme/commit/46357aee85f05782fc6d1374a23a7e9d9cd89232))
+
+
+### Documentation
+
+* updated publiccode and release log ([004915b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/004915b0aee731b88b2d77e93a3c5c2f7ab56330))
+
 ## [11.26.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.26.1...v11.26.2) (2024-12-27)
 
 
