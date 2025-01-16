@@ -1,5 +1,17 @@
 
 
+## [11.26.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.26.3...v11.26.4) (2025-01-16)
+
+
+### Bug Fixes
+
+* table block translations ([#848](https://github.com/RedTurtle/design-comuni-plone-theme/issues/848)) ([a6d3871](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a6d3871b8fb9813d0978bc874627f140600b1155))
+
+
+### Maintenance
+
+* upgrade to volto 17.20.4 ([1af7b75](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1af7b75cc776fcd42d144b6efd6d8387425f6c5e))
+
 ## [11.26.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.26.2...v11.26.3) (2025-01-15)
 
 
