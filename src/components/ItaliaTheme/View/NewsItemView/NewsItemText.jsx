@@ -16,6 +16,7 @@ const messages = defineMessages({
 
 const NewsItemText = ({ content }) => {
   const intl = useIntl();
+  if (typeof content !== 'object') return null;
 
   // NewsItem ha la descrizione_estesa (testo con blocchi)
   // altri CT (come i Comunicati Stampa) potrebbero avere `text`
