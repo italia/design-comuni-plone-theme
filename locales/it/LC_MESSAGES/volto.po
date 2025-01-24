@@ -584,6 +584,11 @@ msgstr "Seleziona tutti i tipi di contenuti o nessuno"
 msgid "Select all or none"
 msgstr "Seleziona tutti o nessuno"
 
+#: components/SelectInput/SelectInput
+# defaultMessage: Seleziona un'opzione
+msgid "SelectInput_default_label"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Seleziona un file
 msgid "Seleziona un file"

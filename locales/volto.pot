@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-01-03T12:21:33.430Z\n"
+"POT-Creation-Date: 2025-01-22T15:35:43.837Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -584,6 +584,11 @@ msgstr ""
 #: components/ItaliaTheme/Search/SearchCTs
 # defaultMessage: Seleziona tutti o nessuno
 msgid "Select all or none"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: Seleziona un'opzione
+msgid "SelectInput_default_label"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/FileWidget
