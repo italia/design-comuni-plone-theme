@@ -7,6 +7,7 @@
  * - aggiunto title informativo per link esterni
  * - aggiunta la dimensione del file se il link punta a un file (enhanced_link_infos)
  * - aggiunto il parametro hideFileFormat per nascondere il formato del file dall'enhance link
+ * - aggiunta la condizione su @@display-file e @download-file per gestire i casi in cui questi parametri vengono imposti a monte
  */
 
 import React from 'react';
@@ -86,18 +87,21 @@ const UniversalLink = ({
       }
 
       //case: item of type 'File'
-      if (
-        !token &&
-        config.settings.downloadableObjects.includes(item['@type'])
-      ) {
-        url = `${url}/@@download/file`;
-      }
+      if (!url.includes('@@download') && !url.includes('@@display-file')) {
+        //se non è gia stato aggiunto il suffisso per il download nell'@id dell'item
+        if (
+          !token &&
+          config.settings.downloadableObjects.includes(item['@type'])
+        ) {
+          url = `${url}/@@download/file`;
+        }
 
-      if (
-        !token &&
-        config.settings.viewableInBrowserObjects.includes(item['@type'])
-      ) {
-        url = `${url}/@@display-file/file`;
+        if (
+          !token &&
+          config.settings.viewableInBrowserObjects.includes(item['@type'])
+        ) {
+          url = `${url}/@@display-file/file`;
+        }
       }
     }
   }
