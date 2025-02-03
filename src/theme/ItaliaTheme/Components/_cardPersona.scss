@@ -11,6 +11,10 @@
     // nel momento in cui riusciremo a togliere il padding 0 important
     // dalla classe .card-big-io-comune .card-body globalmente
     padding: 24px !important;
+
+    .card-text {
+      color: $gray-secondary;
+    }
   }
 
   .card-image {
@@ -28,6 +32,15 @@
   .card-title {
     font-size: $card-big-head-size;
     line-height: $card-big-head-l-h;
+
+    a {
+      font-weight: 700;
+    }
+  }
+
+  span.text {
+    font-weight: 600;
+    letter-spacing: 1px;
   }
 
   &.listing-item {
@@ -47,9 +60,14 @@
 
       h3.card-title {
         a {
-          font-size: 1.3rem;
+          font-size: 1.777rem;
           line-height: 1.5rem;
         }
+      }
+
+      .card-text {
+        font-family: 'Lora' !important;
+        color: $card-p-color;
       }
     }
   }
