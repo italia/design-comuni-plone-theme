@@ -151,7 +151,7 @@ const CardWithImageDefault = (props) => {
             <BlockExtraTags {...props} item={item} itemIndex={index} />
             {topics?.length > 0 && (
               <div
-                className={cx('', {
+                className={cx('card-with-image-additional-links', {
                   'mb-3': eventRecurrenceMore,
                 })}
               >
