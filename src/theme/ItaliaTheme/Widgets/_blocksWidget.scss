@@ -14,3 +14,39 @@
     font-family: $font-family-sans-serif;
   }
 }
+
+// <h> styles for text editor content in CTs
+
+#main-content-section.it-page-sections-container .richtext-blocks {
+  h2 {
+    font-size: 1.555rem;
+    line-height: 1.428;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    font-weight: 600;
+    color: $gray-600;
+  }
+
+  h5 {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    font-weight: 600;
+    color: $gray-500;
+  }
+
+  h6 {
+    font-size: 1.2rem;
+    line-height: 1.15;
+    font-weight: 400;
+  }
+}
