@@ -298,6 +298,27 @@ body.cms-ui {
     }
   }
 
+  //cookie banner icons
+  // replaced icon code with left and right as they actually render correctly
+  // and rotated the icon
+  &.section-gdpr-cookie-settings {
+    .cookies-widget .move-buttons {
+      i.icon.arrow.up {
+        transform: rotate(90deg);
+        &::before {
+          content: '\e911';
+        }
+      }
+
+      i.icon.arrow.down {
+        transform: rotate(90deg);
+        &::before {
+          content: '\e905';
+        }
+      }
+    }
+  }
+
   .sidebar-container-enter-done {
     z-index: 150000 !important;
   }
