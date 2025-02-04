@@ -5,9 +5,10 @@ import {
   RichTextSection,
   ContactsCard,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
-import EventoContattiOrganizzatoreEsterno from 'design-comuni-plone-theme/components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno';
-import EventoContattiOrganizzatoreInterno from 'design-comuni-plone-theme/components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreInterno';
+
 import EventoContattiSupportatoDa from 'design-comuni-plone-theme/components/ItaliaTheme/View/EventoView/EventoContattiSupportatoDa';
+import EventoOrganizzatoDa from 'design-comuni-plone-theme/components/ItaliaTheme/View/EventoView/EventoOrganizzatoDa';
+import EventoPatrocinatoDa from 'design-comuni-plone-theme/components/ItaliaTheme/View/EventoView/EventoPatrocinatoDa';
 
 const messages = defineMessages({
   contatti: {
@@ -31,14 +32,14 @@ const EventoContatti = ({ content }) => {
         <ContactsCard contact={contact} key={contact['@id']} />
       ))}
 
-      {/* ---organizzato da esterno */}
-      <EventoContattiOrganizzatoreEsterno content={content} />
-
-      {/* ---contatti interno */}
-      <EventoContattiOrganizzatoreInterno content={content} />
+      {/* ---organizzato da */}
+      <EventoOrganizzatoDa content={content} />
 
       {/* ---supportato da */}
       <EventoContattiSupportatoDa content={content} />
+
+      {/* ---patrocinato da */}
+      <EventoPatrocinatoDa content={content} />
     </RichTextSection>
   ) : null;
 };

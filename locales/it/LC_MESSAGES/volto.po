@@ -2920,15 +2920,10 @@ msgstr "Orario per il pubblico"
 msgid "order_by"
 msgstr "Ordina per"
 
-#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreInterno
+#: components/ItaliaTheme/View/EventoView/EventoOrganizzatoDa
 # defaultMessage: Organizzato da
 msgid "organizzato_da"
 msgstr "Organizzato da"
-
-#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno
-# defaultMessage: Organizzatore
-msgid "organizzatore"
-msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
@@ -2977,7 +2972,7 @@ msgstr "Selettore di pagina"
 msgid "parteciperanno"
 msgstr "Parteciperanno"
 
-#: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
+#: components/ItaliaTheme/View/EventoView/EventoPatrocinatoDa
 # defaultMessage: Patrocinato da
 msgid "patrocinato_da"
 msgstr "Patrocinato da"

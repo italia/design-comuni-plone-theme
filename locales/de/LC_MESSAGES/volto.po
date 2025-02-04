@@ -2935,14 +2935,9 @@ msgstr ""
 msgid "order_by"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreInterno
+#: components/ItaliaTheme/View/EventoView/EventoOrganizzatoDa
 # defaultMessage: Organizzato da
 msgid "organizzato_da"
-msgstr ""
-
-#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno
-# defaultMessage: Organizzatore
-msgid "organizzatore"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
@@ -2992,7 +2987,7 @@ msgstr ""
 msgid "parteciperanno"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
+#: components/ItaliaTheme/View/EventoView/EventoPatrocinatoDa
 # defaultMessage: Patrocinato da
 msgid "patrocinato_da"
 msgstr ""

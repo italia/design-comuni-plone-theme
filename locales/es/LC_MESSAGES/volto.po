@@ -2929,14 +2929,9 @@ msgstr "Hora de apertura"
 msgid "order_by"
 msgstr "Ordenado por"
 
-#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreInterno
+#: components/ItaliaTheme/View/EventoView/EventoOrganizzatoDa
 # defaultMessage: Organizzato da
 msgid "organizzato_da"
-msgstr ""
-
-#: components/ItaliaTheme/View/EventoView/EventoContattiOrganizzatoreEsterno
-# defaultMessage: Organizzatore
-msgid "organizzatore"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
@@ -2986,7 +2981,7 @@ msgstr ""
 msgid "parteciperanno"
 msgstr "Participara"
 
-#: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
+#: components/ItaliaTheme/View/EventoView/EventoPatrocinatoDa
 # defaultMessage: Patrocinato da
 msgid "patrocinato_da"
 msgstr "Patrocinado por"
