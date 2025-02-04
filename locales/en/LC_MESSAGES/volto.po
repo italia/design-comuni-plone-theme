@@ -3740,7 +3740,7 @@ msgstr ""
 #: config/Blocks/ListingOptions/attachmentCardTemplate
 # defaultMessage: Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata altrimenti vengono scaricati.
 msgid "show_pdf_desc"
-msgstr "Allows you to open the preview of all the PDFs in this list in a separate tab otherwise they will be downloaded."
+msgstr "Allows preview of all PDF files in this list to be opened in a separate tab. If not set, PDF files are downloaded instead."
 
 #: config/Blocks/ListingOptions/attachmentCardTemplate
 # defaultMessage: Mostra i PDF in anteprima

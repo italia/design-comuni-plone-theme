@@ -52,16 +52,18 @@ const AttachmentCardTemplate = ({
           {items.map((item, index) => {
             let itemUrl = { ...item };
             //la parte qui sotto commentata non serve perchè gestisce gia tutto UniversalLink e in view si vedrebbe /@@download/file duplicato nell url
-            // if (item['@type'] === 'File') {
-            //   itemUrl = {
-            //     ...item,
-            //     file: item,
-            //     '@id':
-            //       show_pdf_preview && item?.mime_type === 'application/pdf'
-            //         ? item?.['@id'] + '/@@display-file/file'
-            //         : item?.['@id'] + '/@@download/file',
-            //   };
-            // }
+            if (
+              item['@type'] === 'File' &&
+              item?.mime_type === 'application/pdf'
+            ) {
+              itemUrl = {
+                ...item,
+                file: item,
+                '@id': show_pdf_preview
+                  ? item?.['@id'] + '/@@display-file/file'
+                  : item?.['@id'] + '/@@download/file',
+              };
+            }
 
             return (
               <Card
@@ -86,6 +88,7 @@ const AttachmentCardTemplate = ({
                       item={!isEditMode ? itemUrl : null}
                       href={isEditMode ? '#' : null}
                       data-element={id_lighthouse}
+                      download={!show_pdf_preview}
                     >
                       {item.title || item.id}
                     </UniversalLink>
