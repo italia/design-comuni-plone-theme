@@ -89,6 +89,15 @@
       }
     }
   }
+
+  @media (max-width: #{map-get($grid-breakpoints, md)}) {
+    > .row {
+      gap: 1em;
+      > .col {
+        flex: 1 0 100%;
+      }
+    }
+  }
 }
 
 body.cms-ui.has-toolbar.has-sidebar {
