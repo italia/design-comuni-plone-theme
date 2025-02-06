@@ -21,6 +21,7 @@ import {
   getCalendarDate,
   getEventRecurrenceMore,
   getComponentWithFallback,
+  contentHasImage,
 } from 'design-comuni-plone-theme/helpers';
 import { getCategory } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
@@ -61,10 +62,10 @@ const CardWithImageDefault = (props) => {
     : getEventRecurrenceMore(item, isEditMode);
   const listingText = show_description ? <ListingText item={item} /> : null;
 
-  const image = ListingImage({ item, showTitleAttr: false });
-
-  const showImage =
-    (index < imagesToShow || always_show_image) && image != null;
+  const showImage = contentHasImage(
+    item,
+    index < imagesToShow || always_show_image,
+  );
   const category = getCategory(item, show_type, show_section, props);
   const topics = show_topics ? item.tassonomia_argomenti : null;
 
@@ -72,7 +73,6 @@ const CardWithImageDefault = (props) => {
     name: 'BlockExtraTags',
     dependencies: ['CardWithImageDefault', item['@type']],
   }).component;
-
   const isEventAppointment =
     item?.parent?.['@type'] === 'Event' && item?.['@type'] === 'Event';
 
@@ -106,7 +106,7 @@ const CardWithImageDefault = (props) => {
               })}
             >
               <div className="img-responsive img-responsive-panoramic">
-                {image}
+                <ListingImage item={item} showTitleAttr={false} />
                 {item['@type'] === 'Event' && (
                   <CardCalendar
                     start={item.start}

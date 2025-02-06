@@ -8,6 +8,7 @@ import {
   ListingCategory,
   ListingImage,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { contentHasImage } from 'design-comuni-plone-theme/helpers';
 
 export const CardPersona = ({
   item,
@@ -20,13 +21,7 @@ export const CardPersona = ({
   type,
   isEditMode,
 }) => {
-  const image = ListingImage({
-    item,
-    sizes: '130px',
-    showTitleAttr: false,
-  });
-
-  const hasImage = image !== null && showImage;
+  const hasImage = contentHasImage(item) && showImage;
 
   return (
     <Card
@@ -58,7 +53,9 @@ export const CardPersona = ({
           )}
         </CardBody>
         {hasImage && (
-          <div className="card-image card-image-rounded">{image}</div>
+          <div className="card-image card-image-rounded">
+            <ListingImage item={item} sizes="130px" showTitleAttr={false} />
+          </div>
         )}
       </div>
     </Card>

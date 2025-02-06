@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { PageHeader } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import { ListingImage } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { contentHasImage } from 'design-comuni-plone-theme/helpers';
 
 /**
  * List view component class.
@@ -23,8 +24,7 @@ const ListingView = ({ content }) => (
     <PageHeader content={content} />
     <section id="content-core">
       {content.items.map((item) => {
-        const image = ListingImage({ item });
-
+        const hasImage = contentHasImage(item);
         return (
           <div key={item.url} className="listing-item my-4">
             <div>
@@ -35,7 +35,7 @@ const ListingView = ({ content }) => (
               </h2>
               {item.description && <p>{item.description}</p>}
             </div>
-            {image && <>{image}</>}
+            {hasImage && <ListingImage item={item} />}
           </div>
         );
       })}

@@ -11,7 +11,6 @@ const ImageWithErrors = ({ src, fallbackSrc = '', ...rest }) => {
       className,
       sizes,
     });
-
   let commonProps = { ...rest };
   const fallbackStyle = getFallbackImageStyle({
     src,

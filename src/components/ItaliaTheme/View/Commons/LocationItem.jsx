@@ -8,6 +8,7 @@ import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { contentHasImage } from 'design-comuni-plone-theme/helpers';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -41,7 +42,7 @@ const LocationItem = ({
 }) => {
   const intl = useIntl();
   const Image = config.getComponent({ name: 'Image' }).component;
-  const image = Image({ item: location, sizes: '80px', loading: 'lazy' });
+  const showImage = contentHasImage(location);
   const address = ['street', 'city', 'zip_code']
     .map((key) => location?.[key])
     .filter(Boolean)
@@ -104,7 +105,11 @@ const LocationItem = ({
           )}
         </div>
       </div>
-      {image && <div className="avatar size-xl">{image}</div>}
+      {showImage && (
+        <div className="avatar size-xl">
+          <Image item={location} sizes="80px" loading="lazy" />
+        </div>
+      )}
     </div>
   ) : (
     ''

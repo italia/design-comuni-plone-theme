@@ -2,6 +2,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { contentHasImage } from 'design-comuni-plone-theme/helpers';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
@@ -26,7 +27,7 @@ const messages = defineMessages({
 const Location = ({ location, show_icon }) => {
   const intl = useIntl();
   const Image = config.getComponent({ name: 'Image' }).component;
-  const image = Image({ item: location, loading: 'lazy', sizes: '80px' });
+  const showImage = contentHasImage(location);
   return (
     location && (
       <div className="card card-teaser shadow border-left-card mt-3 rounded location-item">
@@ -51,7 +52,11 @@ const Location = ({ location, show_icon }) => {
             </p>
           </div>
         </div>
-        {image && <div className="avatar size-xl">{image}</div>}
+        {showImage && (
+          <div className="avatar size-xl">
+            <Image item={location} loading="lazy" sizes="80px" />
+          </div>
+        )}
       </div>
     )
   );

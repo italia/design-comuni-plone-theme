@@ -50,4 +50,28 @@ const useFallbackImageSrc = ({
   return { currentSrc, handleError, getFallbackImageStyle };
 };
 
-export { FALLBACK_IMAGE_SRC, FALLBACK_IMAGE_SRC_MAX_W, useFallbackImageSrc };
+/*
+ Check if a Content item has a related image
+ This check is done on image_field and image_scales fields, which are
+ the default fields in a JSON response for a content in plone.restapi
+
+ @param {Object} item - The Plone item/brain/content
+*/
+const contentHasImage = (item) => {
+  if (!item) return false;
+  const isFromRealObject = !item.image_scales;
+  const imageFieldWithDefault = item.image_field || 'image';
+
+  const image = isFromRealObject
+    ? item[imageFieldWithDefault]
+    : item.image_scales[imageFieldWithDefault]?.[0];
+
+  return Boolean(image);
+};
+
+export {
+  FALLBACK_IMAGE_SRC,
+  FALLBACK_IMAGE_SRC_MAX_W,
+  useFallbackImageSrc,
+  contentHasImage,
+};

@@ -127,10 +127,10 @@ const PhotogalleryTemplate = ({
 
   const getCaption = (item) => item.description ?? item.rights ?? null;
 
-  const figure = (image, item) => {
+  const figure = (imageProps, item) => {
     return (
       <figure className="img-wrapper volto-image responsive">
-        {image}
+        <ListingImage {...imageProps} />
         {getCaption(item) && <figcaption>{getCaption(item)}</figcaption>}
       </figure>
     );
@@ -152,7 +152,7 @@ const PhotogalleryTemplate = ({
           <CarouselWrapper className="it-card-bg">
             <Slider {...settings} ref={slider}>
               {items.map((item, i) => {
-                const image = ListingImage({
+                const imageProps = {
                   item,
                   sizes: `(max-width:600px) 450px, (max-width:1024px) ${
                     items.length < 2 ? '1000' : '500'
@@ -160,11 +160,12 @@ const PhotogalleryTemplate = ({
                     items.length === 1
                       ? '1300'
                       : items.length === 2
-                        ? '650'
-                        : '450'
+                      ? '650'
+                      : '450'
                   }px`,
                   noWrapLink: true,
-                });
+                  showDefault: true,
+                };
                 return (
                   <SingleSlideWrapper
                     className={cx('', {
@@ -179,7 +180,7 @@ const PhotogalleryTemplate = ({
                         openLinkInNewTab={true}
                         title={intl.formatMessage(messages.viewImage)}
                       >
-                        {figure(image, item)}
+                        {figure(imageProps, item)}
                       </UniversalLink>
                     ) : (
                       <a
@@ -204,7 +205,7 @@ const PhotogalleryTemplate = ({
                           messages.viewPreview,
                         )} ${item.title}`}
                       >
-                        {figure(image, item)}
+                        {figure(imageProps, item)}
                       </a>
                     )}
                   </SingleSlideWrapper>

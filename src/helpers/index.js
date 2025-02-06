@@ -60,4 +60,7 @@ export {
   isResolveUID,
 } from 'design-comuni-plone-theme/helpers/url';
 export { usePaginatedItemsSection } from 'design-comuni-plone-theme/helpers/usePaginatedItemsSection.hook.ts';
-export { useFallbackImageSrc } from 'design-comuni-plone-theme/helpers/images';
+export {
+  useFallbackImageSrc,
+  contentHasImage,
+} from 'design-comuni-plone-theme/helpers/images';
