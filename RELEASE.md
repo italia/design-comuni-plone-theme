@@ -49,6 +49,10 @@
 - Impostando degli heading all'interno delle sezioni di testo nei vari CT, gli stili sono ora coerenti con l'ordine corretto dei titoli utilizzati.
 - La sezione contatti del CT Evento è stata riorganizzata per una maggiore chiarezza e coerenza.
 
+### Novità
+
+- ...
+
 ### Fix
 
 - I bottoni del menu nel pannello di controllo dei cookies visualizzano correttamente le icone.
@@ -57,6 +61,7 @@
 - Sistemata la visualizzazione del blocco griglia su mobile: disposti verticalmente ogni blocco della griglia
 - Sistemata la visualizzazione delle card con immagine in cui il contenuto rappresentato non ha un'immagine da mostrare.
 - a11y - Migliorata l'accessibilità in modifica dei blocchi Contatti, Icone, Numeri.
+- Sistemati alcuni problemi di visualizzazione delle card con avatar.
 
 ## Versione 11.26.3 (15/01/2025)
 
