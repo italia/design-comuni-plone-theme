@@ -3,18 +3,7 @@
     height: auto;
   }
 
-  .ui.basic.button.delete-button {
-    padding: 0.5rem;
-    text-align: center;
-
-    svg:not(:hover) {
-      fill: #fff !important;
-    }
-
-    &:hover {
-      border-radius: 100%;
-    }
-  }
+  @include blocks-with-bg-edit-buttons();
 
   .bg-primary {
     .block-header {
@@ -75,10 +64,6 @@
     .card-wrapper {
       height: 100%;
     }
-
-    .ui.basic.button.delete-button {
-      padding: 0.36rem;
-    }
   }
 
   .button.add-element {
@@ -91,7 +76,6 @@
     }
 
     .contact-title {
-
       margin-bottom: 1rem;
       font-size: 1.35rem;
       font-weight: bold;

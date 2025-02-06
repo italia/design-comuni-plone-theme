@@ -54,13 +54,13 @@ class EditBlock extends SubblockEdit {
 
   componentDidMount() {
     // eslint-disable-next-line no-unused-expressions
-    this.subblock_ref?.current?.addEventListener('keydown', (e) => {
-      if (e.keyCode === 13) {
-        if (!(this.state.focusOn === 'text')) {
-          this.setState({ focusOn: 'text' });
-        }
-      }
-    });
+    // this.subblock_ref?.current?.addEventListener('keydown', (e) => {
+    //   if (e.keyCode === 13) {
+    //     if (!(this.state.focusOn === 'text')) {
+    //       this.setState({ focusOn: 'text' });
+    //     }
+    //   }
+    // });
   }
   /**
    * Render method.
@@ -149,6 +149,11 @@ class EditBlock extends SubblockEdit {
                 fieldName="text"
                 selected={this.props.selected && this.state.focusOn === 'text'}
                 setSelected={(f) => {
+                  if (!this.props.selected) {
+                    //a11y - per il focus del blocco da tastiera con navigazione inversa
+                    this.props.onSubblockChangeFocus(this.props.index);
+                    this.props.onSelectBlock(this.props.block);
+                  }
                   this.setState({ focusOn: f });
                 }}
                 onChangeBlock={(block, _data) => {

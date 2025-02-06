@@ -43,10 +43,6 @@ $accordion-icon-color: #7fb2e5;
             top: -7px;
             right: 0;
             left: unset;
-
-            &:focus {
-              outline: 1px solid $focus-outline-color;
-            }
           }
 
           .accordion-header {

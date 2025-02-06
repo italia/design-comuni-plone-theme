@@ -52,7 +52,10 @@ class Edit extends SubblocksEdit {
   UNSAFE_componentWillReceiveProps(newProps) {
     if (newProps.selected) {
       if (!this.props.selected) {
-        this.setState({ selectedField: 'title' });
+        if (!this.state.selectedField && this.state.subIndexSelected < 0) {
+          //a11y - test subIndexSelected<0 per gestire il focus con navigazione da tastiera al contrario (dal blocco successivo a questo blocco)
+          this.setState({ selectedField: 'title' });
+        }
       }
     } else {
       this.setState({ selectedField: null });
@@ -121,7 +124,11 @@ class Edit extends SubblocksEdit {
 
     return (
       <div className="public-ui" tabIndex="-1" ref={this.nodeF}>
-        <div className="full-width section py-5">
+        <div
+          className="full-width section py-5"
+          role="form"
+          aria-label={this.props.blocksConfig[this.props.type].title}
+        >
           {this.props.data.background?.[0] ? (
             <div className="background-image">
               <Image
@@ -151,6 +158,10 @@ class Edit extends SubblocksEdit {
                       selectedField: f,
                       subIndexSelected: -1,
                     });
+                    if (!this.props.selected) {
+                      //a11y - per il focus del blocco da tastiera
+                      this.props.onSelectBlock(this.props.block);
+                    }
                   }}
                   placeholder={this.props.intl.formatMessage(messages.title)}
                   focusNextField={() => {
@@ -200,7 +211,10 @@ class Edit extends SubblocksEdit {
                       isLast={subindex === this.state.subblocks?.length - 1}
                       openObjectBrowser={this.props.openObjectBrowser}
                       onFocusPreviousBlock={() => {
-                        this.setState({ selectedField: 'description' });
+                        this.setState({
+                          selectedField: 'description',
+                          subIndexSelected: -1,
+                        });
                       }}
                     />
                   </Col>

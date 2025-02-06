@@ -80,9 +80,6 @@ class EditBlock extends SubblockEdit {
                 selected={this.props.selected && this.state.focusOn === 'title'}
                 setSelected={(f) => {
                   this.setState({ focusOn: f });
-                  if (!f) {
-                    this.props.onSubblockChangeFocus(-1);
-                  }
                 }}
                 block={this.props.block}
                 index={this.props.blockIndex}
@@ -120,10 +117,12 @@ class EditBlock extends SubblockEdit {
               fieldName="text"
               selected={this.props.selected && this.state.focusOn === 'text'}
               setSelected={(f) => {
-                this.setState({ focusOn: f });
-                if (!f) {
-                  this.props.onSubblockChangeFocus(-1);
+                if (!this.props.selected) {
+                  //a11y - per il focus del blocco da tastiera con navigazione inversa
+                  this.props.onSubblockChangeFocus(this.props.index);
+                  this.props.onSelectBlock(this.props.block);
                 }
+                this.setState({ focusOn: f });
               }}
               block={this.props.block}
               index={this.props.blockIndex}

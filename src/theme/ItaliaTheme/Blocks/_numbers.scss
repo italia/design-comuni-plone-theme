@@ -5,21 +5,7 @@
     height: auto;
   }
 
-  > .ui.basic.button.delete-button {
-    top: -0.2rem;
-    padding: 0.2rem;
-    border-radius: 100%;
-    line-height: 1rem;
-
-    svg:not(:hover) {
-      fill: #fff !important;
-    }
-
-    &:hover,
-    &:active {
-      background-color: #fff !important;
-    }
-  }
+  @include blocks-with-bg-edit-buttons();
 
   .background-image {
     position: absolute;

@@ -41,6 +41,11 @@
 - ...
  -->
 
+## Versione x.x.x (xx/xx/xxxx)
+
+### Fix
+
+- a11y - Migliorata l'accessibilità in edit dei blocchi Contatti, Icone, Numeri
 
 ## Versione X.X.X (dd/mm/yyyy)
 

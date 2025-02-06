@@ -5,3 +5,16 @@
 @mixin margin-size($key, $value) {
   #{$key}: calc($value / 18) + em;
 }
+
+@mixin blocks-with-bg-edit-buttons {
+  > .ui.basic.button.delete-button {
+    padding: 0.35rem;
+    text-align: center;
+    border-radius: 100%;
+    top: -0.25rem;
+
+    &:not(:hover):not(:focus):not(:focus-within) {
+      color: #fff !important;
+    }
+  }
+}
