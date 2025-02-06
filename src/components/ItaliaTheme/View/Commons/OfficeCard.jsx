@@ -3,6 +3,7 @@ import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { contentHasImage } from 'design-comuni-plone-theme/helpers';
 import config from '@plone/volto/registry';
 
 /**
@@ -24,8 +25,7 @@ const OfficeCard = ({
 }) => {
   const intl = useIntl();
   const Image = config.getComponent({ name: 'Image' }).component;
-  const image =
-    showimage && Image({ item: office, sizes: '80px', loading: 'lazy' });
+  const showImage = showimage && contentHasImage(office);
 
   return (
     <div
@@ -74,7 +74,11 @@ const OfficeCard = ({
 
         {children && <div className="card-text">{children}</div>}
       </div>
-      {image && <div className="image-container">{image}</div>}
+      {showImage && (
+        <div className="image-container">
+          <Image item={office} sizes="80px" loading="lazy" />
+        </div>
+      )}
     </div>
   );
 };

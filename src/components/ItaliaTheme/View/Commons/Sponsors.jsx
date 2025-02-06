@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
+import { contentHasImage } from 'design-comuni-plone-theme/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
 
@@ -23,19 +24,22 @@ const messages = defineMessages({
  */
 const Sponsor = ({ item }) => {
   const Image = config.getComponent({ name: 'Image' }).component;
-  const image =
-    item?.image &&
-    Image({
-      item: item,
-      sizes: '600px',
-      loading: 'lazy',
-      className: 'img-fluid',
-      alt: item.image.filename ?? item.title,
-    });
+  const showImage = contentHasImage(item);
+
   return item ? (
     <div className="sponsor-item">
       <UniversalLink href={item.remoteUrl}>
-        {image ? image : item.title}
+        {showImage ? (
+          <Image
+            item={item}
+            sizes="600px"
+            loading="lazy"
+            className="img-fluid"
+            alt={item.image.filename ?? item.title}
+          />
+        ) : (
+          item.title
+        )}
       </UniversalLink>
     </div>
   ) : null;

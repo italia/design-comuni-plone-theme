@@ -4,7 +4,10 @@ import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-import { getCalendarDate } from 'design-comuni-plone-theme/helpers';
+import {
+  getCalendarDate,
+  contentHasImage,
+} from 'design-comuni-plone-theme/helpers';
 import {
   Icon,
   CardCategory,
@@ -48,23 +51,21 @@ const GenericCard = ({
     </>
   );
   const cooked_image_field = image_field || item.image_field;
-  // (item.preview_image ? 'preview_image' : 'image');
-  const image =
-    showimage &&
-    item &&
-    Image({
-      item: item,
-      imageField: cooked_image_field,
-      alt: '',
-      title: item.title,
-    });
+  const showImage = showimage && contentHasImage(item) && cooked_image_field;
 
   return item ? (
-    image ? (
+    showImage ? (
       <div className={cx('genericcard card shadow rounded mt-3')}>
         <div className="img-responsive-wrapper">
           <div className="img-responsive img-responsive-panoramic">
-            <figure className="img-wrapper">{image}</figure>
+            <figure className="img-wrapper">
+              <Image
+                item={item}
+                imageField={cooked_image_field}
+                alt={''}
+                title={item.title}
+              />
+            </figure>
           </div>
         </div>
         <div className="card-body px-4">

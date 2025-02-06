@@ -218,12 +218,15 @@ const SliderTemplate = ({
 
             <Slider {...settings} ref={slider}>
               {items.map((item, index) => {
-                const image = ListingImage({
-                  item,
-                  loading: index === 0 ? 'eager' : 'lazy',
-                  sizes: `max-width(991px) 620px, ${1300 / nSlidesToShow}px`,
-                  critical: true,
-                });
+                const image = (
+                  <ListingImage
+                    item={item}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    sizes={`max-width(991px) 620px, ${1300 / nSlidesToShow}px`}
+                    critical
+                    showDefault
+                  />
+                );
                 const nextIndex = index < items.length - 1 ? index + 1 : null;
                 const prevIndex = index > 0 ? index - 1 : null;
                 return (
