@@ -42,24 +42,25 @@ const LocationItem = ({
 }) => {
   const intl = useIntl();
   const Image = config.getComponent({ name: 'Image' }).component;
-  const showImage = contentHasImage(location);
+  const showImage = contentHasImage(location) && location['@type'] === 'Venue';
   const address = ['street', 'city', 'zip_code']
     .map((key) => location?.[key])
     .filter(Boolean)
     .join(' - ');
 
   return location ? (
-    <div className="card card-teaser shadow mt-3 border-left-card card-big-io-comune p-4 rounded location-item">
-      {show_icon && (
-        <Icon
-          icon={'it-pin'}
-          title={intl.formatMessage(messages.icona_luoghi)}
-        />
-      )}
+    <div className="card card-teaser shadow mt-3 border-left-card card-big-io-comune pt-4 pb-4 ps-3 pe-4 rounded location-item">
       <div className="card-body">
         <div className="card-title h5 venue-card-title">
           {(location.nome_sede || location.title) && (
             <>
+              {show_icon && (
+                <Icon
+                  icon={'it-pin'}
+                  title={intl.formatMessage(messages.icona_luoghi)}
+                  className="pin-icon"
+                />
+              )}
               {location['@type'] === 'Venue' ||
               (location['@type'] === 'UnitaOrganizzativa' &&
                 show_title_link) ? (
@@ -106,7 +107,7 @@ const LocationItem = ({
         </div>
       </div>
       {showImage && (
-        <div className="avatar size-xl">
+        <div className="avatar size-lg">
           <Image item={location} sizes="80px" loading="lazy" />
         </div>
       )}

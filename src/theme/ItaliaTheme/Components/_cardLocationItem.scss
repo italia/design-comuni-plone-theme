@@ -3,3 +3,15 @@
     flex: 0 0 100%;
   }
 }
+
+.card-wrapper.card-teaser-wrapper .card-teaser.location-item .pin-icon {
+  margin-left: -0.5rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+// Full width for last odd card in locations
+.card-wrapper.card-teaser-wrapper
+  .card-teaser.location-item:nth-child(odd):last-child {
+  flex: 0 0 100%;
+}

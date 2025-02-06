@@ -75,7 +75,7 @@ const OfficeCard = ({
         {children && <div className="card-text">{children}</div>}
       </div>
       {showImage && (
-        <div className="image-container">
+        <div className="avatar size-lg">
           <Image item={office} sizes="80px" loading="lazy" />
         </div>
       )}
