@@ -1,5 +1,29 @@
 
 
+## [11.26.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.26.4...v11.26.5) (2025-02-06)
+
+
+### Bug Fixes
+
+* adapted cardPersona text styles to other cards ([#871](https://github.com/RedTurtle/design-comuni-plone-theme/issues/871)) ([7a25f39](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7a25f39ba8f8f7f6ff92083767af514aa2a25061))
+* changed cookies menu button icon ([#869](https://github.com/RedTurtle/design-comuni-plone-theme/issues/869)) ([fc5fb76](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fc5fb7614c277e32c972a059a46a193d09c1c5f0))
+* changed styles of headings for text editor in cts ([#864](https://github.com/RedTurtle/design-comuni-plone-theme/issues/864)) ([004e6b7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/004e6b77bce8f544102a49f2158523aac6533200))
+* grid block on mobile ([#873](https://github.com/RedTurtle/design-comuni-plone-theme/issues/873)) ([e4823db](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e4823dbe8481a635a74a6d6ac5272ea39bb8626f))
+* image checks and ListingImage ([#861](https://github.com/RedTurtle/design-comuni-plone-theme/issues/861)) ([c2f10fb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c2f10fbbbc67483f69bd8c9e528684e8cfcd391e))
+* improved alignment of topic links in card with image ([#866](https://github.com/RedTurtle/design-comuni-plone-theme/issues/866)) ([fcabb1d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fcabb1d22107b62880bfd82983ec1ff13a0f9342))
+* layout and style issues, customized _avatar.scss to be figma compliant ([#876](https://github.com/RedTurtle/design-comuni-plone-theme/issues/876)) ([be54848](https://github.com/RedTurtle/design-comuni-plone-theme/commit/be548486e1f78fa68b2cbbed21a03d151d0b4344))
+* listing template attachments download and display file ([#868](https://github.com/RedTurtle/design-comuni-plone-theme/issues/868)) ([ffd4f4f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ffd4f4f831792403fef6da681c669ab7a9bdb054))
+* locales ([97e62fb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/97e62fb694249d25dd8a77af9ce791fba2b16eda))
+* news item text rendering race condition ([#859](https://github.com/RedTurtle/design-comuni-plone-theme/issues/859)) ([e40680f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e40680f3c96e40242ecd16885829219bc489f563))
+* rearranged contacts section for events ([#862](https://github.com/RedTurtle/design-comuni-plone-theme/issues/862)) ([e7806d4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e7806d474b003e009d6fba0a833206cd47076712))
+* select input a11y ([#856](https://github.com/RedTurtle/design-comuni-plone-theme/issues/856)) ([93fcb6c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/93fcb6cc92dcabd887e5ea0fe01898ecd1ffe8cd))
+* updated volto-venue to restore copyright and improve a11y ([#877](https://github.com/RedTurtle/design-comuni-plone-theme/issues/877)) ([7278621](https://github.com/RedTurtle/design-comuni-plone-theme/commit/727862199c03ec8c349e4b9f80d9e63ff40ebcc3))
+
+
+### Documentation
+
+* updated publiccode and release log ([4327d47](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4327d474db85463b763f8fc80ed4cf6e38fd681e))
+
 ## [11.26.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.26.3...v11.26.4) (2025-01-16)
 
 
