@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-01-27T16:32:40.367Z\n"
+"POT-Creation-Date: 2025-02-06T14:47:33.684Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -3812,7 +3812,7 @@ msgid "show_only_first_ribbon"
 msgstr ""
 
 #: config/Blocks/ListingOptions/attachmentCardTemplate
-# defaultMessage: Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata altrimenti vengono scaricati.
+# defaultMessage: Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata. Se non impostato, i PDF vengono scaricati.
 msgid "show_pdf_desc"
 msgstr ""
 

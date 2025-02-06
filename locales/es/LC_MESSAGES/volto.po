@@ -3819,7 +3819,7 @@ msgid "show_only_first_ribbon"
 msgstr "Mostrar la cinta solo en la primera tarjeta"
 
 #: config/Blocks/ListingOptions/attachmentCardTemplate
-# defaultMessage: Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata altrimenti vengono scaricati.
+# defaultMessage: Permette di aprire l'anteprima di tutti i PDF di questo elenco in una tab separata. Se non impostato, i PDF vengono scaricati.
 msgid "show_pdf_desc"
 msgstr "Le permite abrir la vista previa de todos los archivos PDF en esta lista en una pestaña separada, de lo contrario, se descargarán."
 
