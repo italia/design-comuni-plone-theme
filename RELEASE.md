@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione x.x.x (xx/xx/xxxx)
+
+### Fix
+
+- rimosse le scrollbar dal widget 'Select' dei filtri di ricerca del blocco 'Cerca'
+
 ## Versione 11.26.5 (06/02/2025)
 
 ### Migliorie
