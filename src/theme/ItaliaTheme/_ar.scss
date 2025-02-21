@@ -1,6 +1,7 @@
 body.is-authenticated {
-  // se l'utente è autenticato e c'è la classe no-user-roles, allora si tratta di un utente del sito che accede solo all'area riservata
-  &.no-user-roles {
+  // se l'utente è autenticato e c'è la classe no-user-roles o role-citizen, allora si tratta di un 
+  // utente del sito (cittadino) che accede solo all'area riservata
+  &.no-user-roles, &.role-citizen {
     #toolbar,
     #sidebar {
       display: none;
