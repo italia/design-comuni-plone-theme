@@ -41,6 +41,8 @@
   span.text {
     font-weight: 600;
     letter-spacing: 1px;
+    color: $caption-text;
+    font-size: 0.875rem;
   }
 
   &.listing-item {
