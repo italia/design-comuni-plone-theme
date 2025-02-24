@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Condizione per la Label per i select ripristinata.
+
 ## Versione 11.26.5 (06/02/2025)
 
 ### Migliorie
