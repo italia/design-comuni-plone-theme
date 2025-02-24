@@ -326,6 +326,7 @@ const SelectInput = ({
   const Select = reactSelect.default;
   return (
     <div className="bootstrap-select-wrapper">
+      {label && <label htmlFor={!labelledby ? id : undefined}>{label}</label>}
       <Select
         components={{
           MenuList,
@@ -347,7 +348,7 @@ const SelectInput = ({
         isMulti={isMulti}
         isClearable={isClearable}
         aria-label={labelDefined}
-        aria-labelledby={labelledby}
+        aria-labelledby={!label ? labelledby : undefined}
         aria-live="polite"
         ariaLiveMessages={getSelectAriaLiveMessages(intl)}
         noOptionsMessage={() =>

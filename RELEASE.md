@@ -55,6 +55,7 @@
 
 - Se su un evento si imposta una ricorrenza mensile per eventi che avvengono in uno specifico giorno della settimana, la ricorrenza viene calcolata correttamente.
 - Aggiunto correttamente il data-element ai link della card con testo animato del blocco Elenco.
+- Condizione per la Label per i select ripristinata.
 
 ## Versione 11.26.5 (06/02/2025)
 
