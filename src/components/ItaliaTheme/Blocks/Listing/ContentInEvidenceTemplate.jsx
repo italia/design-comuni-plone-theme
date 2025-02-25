@@ -86,7 +86,6 @@ const ContentInEvidenceTemplate = (props) => {
                     className="item-image"
                     loading="eager"
                     sizes="(max-width:425px) 400px, (max-width:767px) 520px, 650px"
-                    showTitleAttr={false}
                   />
                 </Col>
               )}

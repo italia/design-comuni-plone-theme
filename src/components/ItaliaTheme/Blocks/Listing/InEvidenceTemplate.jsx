@@ -114,7 +114,6 @@ const InEvidenceTemplate = (props) => {
                       <ListingImage
                         item={item}
                         sizes="(max-width:320px) 200px, 300px"
-                        showTitleAttr={false}
                       />
                       {item['@type'] === 'Event' && (
                         <CardCalendar start={item.start} end={item.end} />

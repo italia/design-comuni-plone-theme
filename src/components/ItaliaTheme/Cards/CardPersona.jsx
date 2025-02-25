@@ -54,7 +54,7 @@ export const CardPersona = ({
         </CardBody>
         {hasImage && (
           <div className="card-image card-image-rounded">
-            <ListingImage item={item} sizes="130px" showTitleAttr={false} />
+            <ListingImage item={item} sizes="130px" />
           </div>
         )}
       </div>

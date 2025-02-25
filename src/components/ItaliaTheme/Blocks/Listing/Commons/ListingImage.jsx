@@ -20,7 +20,6 @@ const ListingImage = ({
   showDefault = false,
   className = 'listing-image',
   responsive = true,
-  showTitleAttr = true,
   sizes = '(max-width:320px) 200px, (max-width:425px) 300px, (max-width:767px) 500px, 410px',
   noWrapLink = false,
   ...imageProps
@@ -46,10 +45,18 @@ const ListingImage = ({
     } else return null;
   }
   const Image = config.getComponent({ name: 'Image' }).component;
+
+  //Verifies if the item has a preview image or an header image
+  const showTitleAttr = !!(item.hasPreviewImage && item.preview_caption);
+
+  //Verifies with caption to show as alt and title text
+  const imageCaption =
+    item.hasPreviewImage && item.preview_caption ? item.preview_caption : null;
+
   let commonImageProps = {
     item,
     'aria-hidden': imageProps.alt || item.title ? false : true,
-    alt: imageProps.alt ?? item.title ?? '',
+    alt: imageProps.alt ?? imageCaption ?? '',
     role: imageProps.alt || item.title ? '' : 'presentation',
     className,
     loading,
@@ -57,8 +64,14 @@ const ListingImage = ({
     sizes,
     ...imageProps,
   };
-  if (showTitleAttr)
-    commonImageProps = { ...commonImageProps, title: item.title };
+
+  // show title attribute if preview_caption or image_caption is present for the alt text
+  if (showTitleAttr) {
+    commonImageProps = {
+      ...commonImageProps,
+      title: imageCaption,
+    };
+  }
 
   return (
     <ListingImageWrapper item={item} noWrapLink={noWrapLink}>
