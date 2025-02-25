@@ -7,10 +7,10 @@ import React, { useEffect } from 'react';
 import cx from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
+import { useIntl } from 'react-intl';
 import { Nav, NavItem, NavLink } from 'design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { useIntl } from 'react-intl';
 import { getSiteProperty } from 'design-comuni-plone-theme/helpers';
 import { getSlimHeader, getItemsByPath } from 'volto-slimheader';
 

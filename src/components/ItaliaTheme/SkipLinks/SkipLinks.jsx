@@ -15,6 +15,10 @@ const messages = defineMessages({
     id: 'skiplink-footer',
     defaultMessage: 'Skip to footer',
   },
+  skiplinks_description: {
+    id: 'skiplinks-description',
+    defaultMessage: 'Skiplinks',
+  },
 });
 
 const SkipLinks = () => {
@@ -32,7 +36,11 @@ const SkipLinks = () => {
 
   return (
     <div className="public-ui">
-      <Skiplink tag="div">
+      <Skiplink
+        tag="div"
+        role="complementary"
+        aria-label={intl.formatMessage(messages.skiplinks_description)}
+      >
         <SkiplinkItem href="#view" tag="a">
           {intl.formatMessage(messages.mainView)}
         </SkiplinkItem>

@@ -24,6 +24,10 @@ const messages = defineMessages({
     id: 'Contenuto',
     defaultMessage: 'Contenuto',
   },
+  sideMenuNavigation: {
+    id: 'sideMenuNavigation',
+    defaultMessage: 'Navigazione della pagina',
+  },
 });
 
 const extractHeaders = (elements, intl) => {
@@ -151,7 +155,10 @@ const SideMenu = ({ data, content_uid }) => {
 
   return headers?.length > 0 ? (
     <div className="sticky-wrapper navbar-wrapper page-side-menu">
-      <nav className="navbar it-navscroll-wrapper navbar-expand-lg">
+      <nav
+        className="navbar it-navscroll-wrapper navbar-expand-lg"
+        aria-label={intl.formatMessage(messages.sideMenuNavigation)}
+      >
         <div className="menu-wrapper">
           <div className="link-list-wrapper menu-link-list">
             <div className="accordion-wrapper">
@@ -162,6 +169,7 @@ const SideMenu = ({ data, content_uid }) => {
                     setIsNavOpen(!isNavOpen);
                   }}
                   aria-controls="side-menu-body"
+                  aria-expanded={isNavOpen}
                 >
                   <h2 className="h3">{intl.formatMessage(messages.index)}</h2>
                 </AccordionHeader>
@@ -171,11 +179,7 @@ const SideMenu = ({ data, content_uid }) => {
                     role="progressbar"
                   />
                 </div>
-                <AccordionBody
-                  active={isNavOpen}
-                  id="side-menu-body"
-                  role="region"
-                >
+                <AccordionBody active={isNavOpen} id="side-menu-body">
                   <ul className="link-list" data-element="page-index">
                     {headers.map((item, i) => {
                       return (
