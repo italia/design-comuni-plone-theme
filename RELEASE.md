@@ -45,7 +45,7 @@
 
 ### Migliorie
 
-- ...
+- Migliorata l'accessibilità del blocco Accordion.
 
 ### Novità
 

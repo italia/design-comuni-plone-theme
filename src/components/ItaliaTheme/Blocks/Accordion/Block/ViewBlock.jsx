@@ -70,6 +70,7 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
           id={`content-${id}-${index}`}
           role="region"
           aria-labelledby={`${id}-${index}`}
+          hidden={!isOpen}
         >
           <div className="accordion-inner" onFocus={toggle()}>
             {redraft(
