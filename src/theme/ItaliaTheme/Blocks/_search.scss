@@ -129,6 +129,10 @@
         div[class*='-placeholder'] {
           color: #484848;
         }
+
+        input {
+          height: 100%;
+        }
       }
     }
   }
@@ -151,13 +155,15 @@
         border-color: hsl(210deg, 17.6470588235%, 43.35%) !important;
         border-bottom: 1px solid;
         font-size: 1rem;
-        transition: border-color 0.3s ease-in,
+        transition:
+          border-color 0.3s ease-in,
           background-color 0.2s cubic-bezier(0, 1, 0, 1) 0.2s;
 
         &[aria-expanded='true'] {
           border-color: transparent !important;
           box-shadow: 0 1rem 2rem -0.25rem rgba(0, 0, 0, 0.15) !important;
-          transition: background-color 0.2s cubic-bezier(0, 1, 0, 1),
+          transition:
+            background-color 0.2s cubic-bezier(0, 1, 0, 1),
             border-color 0.05s cubic-bezier(1, 0, 1, 0);
         }
 
