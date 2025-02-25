@@ -106,7 +106,7 @@ const CardWithImageDefault = (props) => {
               })}
             >
               <div className="img-responsive img-responsive-panoramic">
-                <ListingImage item={item} showTitleAttr={false} />
+                <ListingImage item={item} />
                 {item['@type'] === 'Event' && (
                   <CardCalendar
                     start={item.start}

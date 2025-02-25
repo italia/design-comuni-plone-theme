@@ -55,9 +55,10 @@ const GridGalleryTemplate = ({
         )}
         <div className="grid-gallery-grid">
           {items.map((item, index) => {
-            let image = (
-              <ListingImage item={item} className="" showTitleAttr={false} />
-            );
+            let image = ListingImage({
+              item,
+              className: '',
+            });
             let scale = null;
             let hasImage = contentHasImage(item);
             if (index % 7 === 0 || index % 7 === 6 || index % 7 === 3) {
