@@ -21,6 +21,19 @@ import {
   useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
+import { defineMessages, useIntl } from 'react-intl';
+
+const messages = defineMessages({
+  sideMenuIndex: {
+    id: 'sideMenuIndex',
+    defaultMessage: 'Indice della pagina',
+  },
+  personaContent: {
+    id: 'personaContent',
+    defaultMessage: 'Contenuto del profilo della persona',
+  },
+});
+
 export const PersonaViewSectionsOrder = [
   { /* RUOLO */ component: PersonaRuolo },
   { /* CONTATTI */ component: PersonaContatti },
@@ -36,6 +49,7 @@ export const PersonaViewSectionsOrder = [
  */
 const PersonaView = ({ content }) => {
   let documentBody = createRef();
+  const intl = useIntl();
   const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   return (
@@ -52,13 +66,18 @@ const PersonaView = ({ content }) => {
           showtassonomiaargomenti={true}
         />
         <div className="row row-column-border border-light row-column-menu-left">
-          <aside className="col-lg-4">
+          <aside
+            className="col-lg-4"
+            aria-label={intl.formatMessage(messages.sideMenuIndex)}
+          >
             <SideMenu data={sideMenuElements} content_uid={content?.UID} />
           </aside>
           <section
             className="col-lg-8 it-page-sections-container border-light"
             id="main-content-section"
             ref={documentBody}
+            role="region"
+            aria-label={intl.formatMessage(messages.personaContent)}
           >
             {/* SEZIONI */}
             <ContentTypeViewSections

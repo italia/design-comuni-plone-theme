@@ -166,6 +166,10 @@ const messages = defineMessages({
     id: 'currentActive',
     defaultMessage: 'attivo',
   },
+  searchLabel: {
+    id: 'searchLabel',
+    defaultMessage: 'Cerca nel sito',
+  },
 });
 
 const SearchModal = ({ closeModal, show }) => {
@@ -334,6 +338,7 @@ const SearchModal = ({ closeModal, show }) => {
       id="search-modal"
       isOpen={show}
       toggle={closeModal}
+      role="alertdialog"
     >
       <ModalHeader toggle={closeModal}>
         <Container>
@@ -392,7 +397,11 @@ const SearchModal = ({ closeModal, show }) => {
             <>
               <div className="search-filters search-filters-text">
                 <div className="form-group">
-                  <div className="input-group mb-3">
+                  <div
+                    className="input-group mb-3"
+                    role="search"
+                    aria-label={intl.formatMessage(messages.searchLabel)}
+                  >
                     <input
                       id="search-text"
                       type="text"

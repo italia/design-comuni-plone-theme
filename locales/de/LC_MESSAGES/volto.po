@@ -725,6 +725,11 @@ msgstr ""
 msgid "Type the title…"
 msgstr ""
 
+#: components/ItaliaTheme/View/UOView/UOView
+# defaultMessage: Contenuto dell'unità organizzativa
+msgid "UOContent"
+msgstr ""
+
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 # defaultMessage: Unauthorized
 msgid "Unauthorized"
@@ -925,6 +930,11 @@ msgstr ""
 msgid "argoment"
 msgstr ""
 
+#: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
+# defaultMessage: Contenuto dell'argomento
+msgid "argomentoContent"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
 # defaultMessage: Icona {type}
@@ -1104,6 +1114,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/BandiSearch/Edit
 # defaultMessage: Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale.
 msgid "bandi_search_no_filters"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoView
+# defaultMessage: Contenuto del Bando
+msgid "bandoContent"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/BandoStatus
@@ -1826,6 +1841,11 @@ msgstr ""
 msgid "dirigente"
 msgstr ""
 
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+# defaultMessage: Contenuto del documento
+msgid "documentContent"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Documenti e dati
 msgid "documenti-e-dati"
@@ -2089,6 +2109,11 @@ msgstr ""
 msgid "event_url"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView/EventoView
+# defaultMessage: Contenuto dell'evento
+msgid "eventoContent"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Events
 # defaultMessage: Appuntamenti
 msgid "events"
@@ -2185,6 +2210,11 @@ msgstr ""
 #: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
 # defaultMessage: Error
 msgid "feedback_error"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: Feedback form
+msgid "feedback_form_aria_title"
 msgstr ""
 
 #: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
@@ -2482,6 +2512,11 @@ msgstr ""
 msgid "importi_viaggio"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/RelatedItemInEvidence/RelatedItemInEvidence
+# defaultMessage: Contenuti in evidenza
+msgid "inEvidenceItems"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 # defaultMessage: incarico
@@ -2704,6 +2739,11 @@ msgstr ""
 msgid "mailto"
 msgstr ""
 
+#: overrideTranslations
+# defaultMessage: Menu principale
+msgid "mainMenu"
+msgstr ""
+
 #: config/Blocks/ListingOptions/mapTemplate
 # defaultMessage: Grande
 msgid "map_size_large"
@@ -2787,6 +2827,11 @@ msgstr ""
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 # defaultMessage: undefined
 msgid "natural_image_size"
+msgstr ""
+
+#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+# defaultMessage: Contenuto della notizia
+msgid "newsContent"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemText
@@ -2982,6 +3027,11 @@ msgstr ""
 msgid "paginationLabel"
 msgstr ""
 
+#: components/ItaliaTheme/Header/ParentSiteMenu
+# defaultMessage: Main site menu
+msgid "parent_site_menu"
+msgstr ""
+
 #: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: Parteciperanno
 msgid "parteciperanno"
@@ -3001,6 +3051,11 @@ msgstr ""
 #: components/ItaliaTheme/View/IncaricoView/IncaricoPersone
 # defaultMessage: Persona
 msgid "persona"
+msgstr ""
+
+#: components/ItaliaTheme/View/PersonaView/PersonaView
+# defaultMessage: Contenuto del profilo della persona
+msgid "personaContent"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
@@ -3455,6 +3510,7 @@ msgstr ""
 msgid "searchInSection"
 msgstr ""
 
+#: components/ItaliaTheme/Header/HeaderSearch/HeaderSearch
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Cerca nel sito
 msgid "searchLabel"
@@ -3697,6 +3753,11 @@ msgstr ""
 msgid "servizi_offerti"
 msgstr ""
 
+#: components/ItaliaTheme/View/ServizioView/ServizioView
+# defaultMessage: Contenuto del servizio
+msgid "servizioContent"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioAccedi
 # defaultMessage: Accedi al servizio
 msgid "servizio_canale_digitale"
@@ -3862,6 +3923,24 @@ msgstr ""
 msgid "show_type"
 msgstr ""
 
+#: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
+#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/VenueView/VenueView
+# defaultMessage: Indice della pagina
+msgid "sideMenuIndex"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/SideMenu
+# defaultMessage: Navigazione della pagina
+msgid "sideMenuNavigation"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Silenzio assenso/Dichiarazione dell'interessato sostitutiva del provvedimento finale
@@ -3901,6 +3980,11 @@ msgstr ""
 #: components/ItaliaTheme/SkipLinks/SkipLinks
 # defaultMessage: Skip to navigation
 msgid "skiplink-navigation"
+msgstr ""
+
+#: components/ItaliaTheme/SkipLinks/SkipLinks
+# defaultMessage: Skiplinks
+msgid "skiplinks-description"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
@@ -4299,9 +4383,19 @@ msgstr ""
 msgid "url"
 msgstr ""
 
+#: components/ItaliaTheme/Header/HeaderSlim/HeaderSlim
+# defaultMessage: Link utili
+msgid "utilityMenu"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Variazione situazione patrimoniale
 msgid "variazione_situazione_patrimoniale"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView/VenueView
+# defaultMessage: Informazioni sulla struttura
+msgid "venueContent"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Body

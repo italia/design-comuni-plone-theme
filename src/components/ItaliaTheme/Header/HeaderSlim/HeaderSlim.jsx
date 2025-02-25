@@ -12,12 +12,19 @@ import {
   HeaderContent,
   HeaderRightZone,
 } from 'design-react-kit';
-import { useIntl } from 'react-intl';
+import { defineMessages, useIntl } from 'react-intl';
 import {
   getSiteProperty,
   useHomePath,
 } from 'design-comuni-plone-theme/helpers';
 import { SiteProperty } from 'volto-site-settings';
+
+const messages = defineMessages({
+  utilityMenu: {
+    id: 'utilityMenu',
+    defaultMessage: 'Utility Menu',
+  },
+});
 
 const HeaderSlim = () => {
   const subsite = useSelector((state) => state.subsite?.data);
@@ -38,7 +45,13 @@ const HeaderSlim = () => {
 
   const target = subsite ? null : '_blank';
   return (
-    <Header small={false} theme="" type="slim" role="navigation">
+    <Header
+      small={false}
+      theme=""
+      type="slim"
+      role="navigation"
+      aria-label={intl.formatMessage(messages.utilityMenu)}
+    >
       <HeaderContent>
         <HeaderBrand
           responsive

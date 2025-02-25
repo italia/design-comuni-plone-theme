@@ -64,6 +64,10 @@ defineMessages({
     id: 'toggleMenu_close',
     defaultMessage: 'Chiudi',
   },
+  mainMenu: {
+    id: 'mainMenu',
+    defaultMessage: 'Menu principale',
+  },
   clearDates: {
     id: 'Clear dates',
     defaultMessage: 'Pulisci i campi',

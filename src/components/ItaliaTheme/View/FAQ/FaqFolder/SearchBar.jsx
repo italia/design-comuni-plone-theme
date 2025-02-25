@@ -72,6 +72,8 @@ const SearchBar = ({ searchableText, setSearchableText }) => {
               }}
               type="text"
               aria-controls="faq-search-results-region"
+              role="search"
+              aria-label={intl.formatMessage(messages.search_faq)}
             />
           </div>
         </div>

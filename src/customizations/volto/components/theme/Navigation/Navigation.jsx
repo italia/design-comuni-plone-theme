@@ -93,7 +93,12 @@ const Navigation = ({ pathname }) => {
   return (
     <Header theme="" type="navbar">
       {menu?.length > 0 ? (
-        <HeaderContent expand="lg" megamenu id="navigation">
+        <HeaderContent
+          expand="lg"
+          megamenu
+          id="navigation"
+          aria-label={intl.formatMessage(messages.mainMenu)}
+        >
           <HeaderToggler
             aria-controls="it-navigation-collapse"
             aria-expanded={collapseOpen}
@@ -142,7 +147,12 @@ const Navigation = ({ pathname }) => {
                   </UniversalLink>
                 </div>
                 {/* Main Menu */}
-                <Nav data-element="main-navigation" navbar role="menubar">
+                <Nav
+                  data-element="main-navigation"
+                  navbar
+                  role="menubar"
+                  aria-label={intl.formatMessage(messages.mainMenu)}
+                >
                   {menu
                     ?.filter((item) => item.visible)
                     ?.map((item, index) => (
@@ -205,6 +215,10 @@ const messages = defineMessages({
   toggleMenu_close: {
     id: 'toggleMenu_close',
     defaultMessage: 'Chiudi',
+  },
+  mainMenu: {
+    id: 'mainMenu',
+    defaultMessage: 'Menu principale',
   },
 });
 

@@ -5,7 +5,6 @@
 
 import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
-import { useIntl } from 'react-intl';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import {
   PageHeader,
@@ -39,6 +38,19 @@ import {
   ContentTypeViewSections,
   useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+
+import { defineMessages, useIntl } from 'react-intl';
+
+const messages = defineMessages({
+  sideMenuIndex: {
+    id: 'sideMenuIndex',
+    defaultMessage: 'Indice della pagina',
+  },
+  servizioContent: {
+    id: 'servizioContent',
+    defaultMessage: 'Contenuto del servizio',
+  },
+});
 
 export const ServizioViewSectionsOrder = (props) => [
   {
@@ -126,13 +138,18 @@ const ServizioView = ({ content, moment }) => {
         <ContentImage content={content} position="afterHeader" />
 
         <div className="row row-column-border border-light row-column-menu-left">
-          <aside className="col-lg-4 ">
+          <aside
+            className="col-lg-4"
+            aria-label={intl.formatMessage(messages.sideMenuIndex)}
+          >
             <SideMenu data={sideMenuElements} content_uid={content?.UID} />
           </aside>
           <section
             id="main-content-section"
             className="col-lg-8 it-page-sections-container border-light"
             ref={documentBody}
+            role="region"
+            aria-label={intl.formatMessage(messages.servizioContent)}
           >
             {/* SEZIONI */}
             <ContentTypeViewSections

@@ -32,6 +32,10 @@ const messages = defineMessages({
     id: 'feedback_form_title',
     defaultMessage: 'How clear is the information on this page?',
   },
+  aria_title_feedback: {
+    id: 'feedback_form_aria_title',
+    defaultMessage: 'Feedback form',
+  },
   yes: {
     id: 'feedback_form_yes',
     defaultMessage: 'Yes',
@@ -255,7 +259,11 @@ const FeedbackForm = ({ title, pathname }) => {
       <Container>
         <Row className="d-flex justify-content-center bg-primary">
           <Col className="col-12 col-lg-6">
-            <div className="feedback-form" role="form">
+            <div
+              className="feedback-form"
+              role="form"
+              aria-label={intl.formatMessage(messages.aria_title_feedback)}
+            >
               <Card
                 className="shadow card-wrapper py-4 px-4"
                 data-element="feedback"

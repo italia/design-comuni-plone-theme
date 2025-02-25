@@ -25,6 +25,19 @@ import {
   useSideMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
+import { defineMessages, useIntl } from 'react-intl';
+
+const messages = defineMessages({
+  sideMenuIndex: {
+    id: 'sideMenuIndex',
+    defaultMessage: 'Indice della pagina',
+  },
+  documentContent: {
+    id: 'documentContent',
+    defaultMessage: 'Contenuto del documento',
+  },
+});
+
 export const DocumentoViewSectionsOrder = [
   {
     /* HEADER IMAGE */
@@ -48,6 +61,7 @@ export const DocumentoViewSectionsOrder = [
  */
 const DocumentoView = ({ content, location }) => {
   let documentBody = createRef();
+  const intl = useIntl();
   const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
   //const userLogged = useSelector((state) => state.userSession);
@@ -66,7 +80,10 @@ const DocumentoView = ({ content, location }) => {
         <ContentImage content={content} position="afterHeader" />
 
         <div className="row row-column-border border-light row-column-menu-left">
-          <aside className="col-lg-4">
+          <aside
+            className="col-lg-4"
+            aria-label={intl.formatMessage(messages.sideMenuIndex)}
+          >
             {__CLIENT__ && (
               <SideMenu data={sideMenuElements} content_uid={content?.UID} />
             )}
@@ -75,6 +92,8 @@ const DocumentoView = ({ content, location }) => {
             ref={documentBody}
             id="main-content-section"
             className="col-lg-8 it-page-sections-container border-light"
+            role="region"
+            aria-label={intl.formatMessage(messages.documentContent)}
           >
             {/* SEZIONI */}
             <ContentTypeViewSections

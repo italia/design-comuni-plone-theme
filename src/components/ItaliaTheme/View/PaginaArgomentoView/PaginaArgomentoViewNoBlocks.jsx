@@ -57,6 +57,14 @@ const messages = defineMessages({
     id: 'related_uo',
     defaultMessage: 'Amministrazione',
   },
+  sideMenuIndex: {
+    id: 'sideMenuIndex',
+    defaultMessage: 'Indice della pagina',
+  },
+  argomentoContent: {
+    id: 'argomentoContent',
+    defaultMessage: "Contenuto dell'argomento",
+  },
 });
 
 /**
@@ -85,13 +93,18 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
         <ContentImage content={content} position="afterHeader" />
 
         <div className="row row-column-border border-light row-column-menu-left">
-          <aside className="col-lg-4">
+          <aside
+            className="col-lg-4"
+            aria-label={intl.formatMessage(messages.sideMenuIndex)}
+          >
             <SideMenu data={sideMenuElements} content_uid={content?.UID} />
           </aside>
           <section
             className="col-lg-8 it-page-sections-container border-light"
             id="main-content-section"
             ref={documentBody}
+            role="region"
+            aria-label={intl.formatMessage(messages.argomentoContent)}
           >
             {/* HEADER IMAGE */}
             <ContentImage content={content} position="documentBody" />

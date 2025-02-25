@@ -25,6 +25,18 @@ import {
   useSideMenu,
   useReadingTime,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { defineMessages, useIntl } from 'react-intl';
+
+const messages = defineMessages({
+  sideMenuIndex: {
+    id: 'sideMenuIndex',
+    defaultMessage: 'Indice della pagina',
+  },
+  newsContent: {
+    id: 'newsContent',
+    defaultMessage: 'Contenuto della notizia',
+  },
+});
 
 export const NewsItemViewSectionsOrder = [
   {
@@ -49,6 +61,7 @@ export const NewsItemViewSectionsOrder = [
  */
 const NewsItemView = ({ content, location }) => {
   let documentBody = createRef();
+  const intl = useIntl();
   const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
   const { readingtime } = useReadingTime(content, documentBody);
 
@@ -75,13 +88,18 @@ const NewsItemView = ({ content, location }) => {
         {/* HEADER IMAGE */}
         <ContentImage content={content} position="afterHeader" />
         <div className="row row-column-border border-light row-column-menu-left">
-          <aside className="col-lg-4">
+          <aside
+            className="col-lg-4"
+            aria-label={intl.formatMessage(messages.sideMenuIndex)}
+          >
             <SideMenu data={sideMenuElements} content_uid={content?.UID} />
           </aside>
           <section
             className="col-lg-8 it-page-sections-container border-light"
             id="main-content-section"
             ref={documentBody}
+            role="region"
+            aria-label={intl.formatMessage(messages.newsContent)}
           >
             {/* SEZIONI */}
             <ContentTypeViewSections
