@@ -13,12 +13,7 @@ export const addCardWithSlideUpTextTemplateOptions = (
 ) => {
   let pos = position;
 
-  // hidden to avoid use of lighthouse on this block
-  // which creates problems with asseverazione
-  // 1. clients instructed not to use this variation when data-element is needed
-  // 2. planned intervention to change structure of variation to allow use of
-  //    data element without wrapping entire card in link
-  // pos = addLighthouseField(schema, intl, pos);
+  pos = addLighthouseField(schema, intl, pos);
 
   pos = addDefaultOptions(schema, formData, intl, pos);
 

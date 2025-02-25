@@ -69,17 +69,13 @@ const CardWithSlideUpTextTemplate = (props) => {
             }).component;
 
             return (
-              <UniversalLink
-                item={!isEditMode ? item : null}
-                href={isEditMode ? '#' : null}
+              <div
+                className="listing-item box bg-img"
                 style={
                   image && {
                     backgroundImage: `url(${image})`,
                   }
                 }
-                className="listing-item box bg-img"
-                key={index}
-                data-element={id_lighthouse}
               >
                 <div className="bg-gradient"></div>
                 {(category || date) && (
@@ -89,14 +85,22 @@ const CardWithSlideUpTextTemplate = (props) => {
                     {date}
                   </div>
                 )}
-                <h3
-                  className={cx('title', {
-                    ellipsis: title.length > 50,
-                  })}
-                  title={title.length > 50 ? title : undefined}
+                <UniversalLink
+                  item={!isEditMode ? item : null}
+                  href={isEditMode ? '#' : null}
+                  key={index}
+                  data-element={id_lighthouse}
                 >
-                  {title.substring(0, 50)}
-                </h3>
+                  <h3
+                    className={cx('title', {
+                      ellipsis: title.length > 50,
+                    })}
+                    title={title.length > 50 ? title : undefined}
+                  >
+                    {title.substring(0, 50)}
+                  </h3>
+                </UniversalLink>
+
                 <div className="box-slide-up">
                   {show_description && item.description && (
                     <p>{item.description}</p>
@@ -111,7 +115,12 @@ const CardWithSlideUpTextTemplate = (props) => {
                     className="justify-content-end"
                   />
                 </div>
-              </UniversalLink>
+                <UniversalLink
+                  item={!isEditMode ? item : null}
+                  className="card-link"
+                  aria-hidden="true"
+                ></UniversalLink>
+              </div>
             );
           })}
         </div>
