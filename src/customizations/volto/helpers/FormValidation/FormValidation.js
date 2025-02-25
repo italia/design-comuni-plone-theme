@@ -100,11 +100,14 @@ const widgetValidation = {
   url: {
     isValidURL: (urlValue, urlObj, intlFunc) => {
       var urlRegex = new RegExp(
-        '^(https?:\\/\\/)?' + // validate protocol
-          '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // validate domain name
-          '((\\d{1,3}\\.){3}\\d{1,3}))|' + // validate OR ip (v4) address
-          '(localhost)' + // validate OR localhost address
-          '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // validate port and path
+          '^(https?:\\/\\/)?' + // optional protocol
+          '(' +
+            '([a-z\\d]+(-[a-z\\d]+)*\\.)+[a-z]{2,}|' +  // validate domain name
+            '((\\d{1,3}\\.){3}\\d{1,3}))|' + // OR ip (v4) address
+            '(localhost)' + // OR localhost
+          ')' +
+          '(\\:\\d+)?' + // optional port
+          '(\\/[-a-z\\d%_.~+]*)*' + // path
           '(\\?[;&a-z\\d%_.~+=-]*)?' + // validate query string
           '(\\#[-a-z\\d_]*)?$', // validate fragment locator
         'i',
