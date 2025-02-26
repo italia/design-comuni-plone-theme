@@ -17,6 +17,7 @@ export default function TextInput(props) {
     groupClassName,
     ...otherProps
   } = props;
+
   const [isFocused, setIsFocused] = useState(false);
 
   const toggleFocusLabel = () => {
