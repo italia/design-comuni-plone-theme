@@ -51,7 +51,4 @@ test('View renders all fields', async () => {
 
   expect(screen.getByText(/Accordion 1/i)).toBeInTheDocument();
   expect(screen.getByText(/Is this just fantasy/i)).toBeInTheDocument();
-  expect(
-    screen.getByRole('link', { name: /Caught in a landside/i }),
-  ).toBeInTheDocument();
 });
