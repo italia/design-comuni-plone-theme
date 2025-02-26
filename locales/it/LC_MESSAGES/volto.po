@@ -4302,7 +4302,7 @@ msgid "url"
 msgstr "Sito web"
 
 #: components/ItaliaTheme/Header/HeaderSlim/HeaderSlim
-# defaultMessage: Link utili
+# defaultMessage: Utility Menu
 msgid "utilityMenu"
 msgstr "Link utili"
 
