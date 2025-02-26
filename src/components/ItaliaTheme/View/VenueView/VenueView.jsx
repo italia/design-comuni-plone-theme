@@ -72,21 +72,15 @@ const VenueView = ({ content }) => {
   const intl = useIntl();
   const { sideMenuElements, SideMenu } = useSideMenu(content, documentBody);
 
-  useEffect(() => {
-    if (
-      content.nome_alternativo &&
-      !content.title?.includes(content.nome_alternativo)
-    ) {
-      content.subtitle = content.nome_alternativo;
-    }
-  });
-
   return (
     <>
       <div className="container px-4 my-4 luogo-view">
         <SkipToMainContent />
         <PageHeader
-          content={content}
+          content={{
+            ...content,
+            subtitle: content.nome_alternativo,
+          }}
           readingtime={null}
           showreadingtime={false}
           showdates={false}

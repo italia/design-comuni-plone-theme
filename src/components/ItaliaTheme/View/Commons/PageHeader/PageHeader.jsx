@@ -56,6 +56,7 @@ const PageHeader = (props) => {
   } = props;
   const intl = useIntl();
   const Image = config.getComponent({ name: 'Image' }).component;
+  const subtitle = content.subtitle || content.sottotitolo;
   return (
     <div className="PageHeaderWrapper mb-4">
       <div className="row mb-2 mb-lg-0 page-header">
@@ -75,10 +76,8 @@ const PageHeader = (props) => {
           >
             {content.title}
           </h1>
-          <p className="h2">
-            {content.subtitle && `${content.subtitle}`}
-            {content.sottotitolo && `${content.sottotitolo}`}
-          </p>
+
+          {subtitle && <p className="h2">{subtitle}</p>}
 
           <PageHeaderEventDates content={content} />
 
