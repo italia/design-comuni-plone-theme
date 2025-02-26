@@ -41,15 +41,11 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.27.0 (26/02/2025)
 
 ### Migliorie
 
 - Migliorata l'accessibilità del blocco Accordion.
-
-### Novità
-
-- ...
 
 ### Fix
 
