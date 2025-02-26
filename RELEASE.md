@@ -53,6 +53,7 @@
 
 ### Fix
 
+- Aggiunto correttamente il data-element ai link della card con testo animato del blocco Elenco.
 - Aggiunta una nuova condizione per la corretta compilazione dell’attributo **alt** e **title** nelle immagini dei blocchi listing. Ora questi attributi utilizzano correttamente i testi delle didascalie dell'immagine di anteprima o testata se impostati. L'attributo **title** viene valorizzato solo se esiste una didascalia associata all’immagine.
 - Rimosso l’attributo **showTitleAttr** dal componente _ListingImage_ utilizzato nei template del blocco listing: card con immagine, persona, blocco link completo, contenuto in evidenza, gallery a griglia, e in evidenza. Ora gli attributi **title** e **alt** vengono calcolati e impostati direttamente dal componente _ListingImage_.
 - Condizione per la Label per i select ripristinata.
