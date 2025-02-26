@@ -4369,7 +4369,7 @@ msgid "url"
 msgstr "website"
 
 #: components/ItaliaTheme/Header/HeaderSlim/HeaderSlim
-# defaultMessage: Link utili
+# defaultMessage: Utility Menu
 msgid "utilityMenu"
 msgstr "Utility menu"
 
