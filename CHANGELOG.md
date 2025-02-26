@@ -1,5 +1,34 @@
 
 
+## [11.27.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.26.5...v11.27.0) (2025-02-26)
+
+
+### Features
+
+* **a11y:** porting of volto-form-block autocomplete changes ([#779](https://github.com/RedTurtle/design-comuni-plone-theme/issues/779)) ([c7ba540](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c7ba5405854802cedbfae5735469c6da5eecc297))
+* nasconde il menu sia per chi non ha ruoli, che per chi ha il ruolo Citizen ([#879](https://github.com/RedTurtle/design-comuni-plone-theme/issues/879)) ([bf9f4a2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bf9f4a23ce0244e13d85d98d48762cacf4542bf3))
+
+
+### Bug Fixes
+
+* a11y accordion block ([#880](https://github.com/RedTurtle/design-comuni-plone-theme/issues/880)) ([041f37d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/041f37dde4b87832f2ac9f558cafdb1a8ce0f79f))
+* **a11y:** landmarks ([#860](https://github.com/RedTurtle/design-comuni-plone-theme/issues/860)) ([01af8ec](https://github.com/RedTurtle/design-comuni-plone-theme/commit/01af8ecaa1c9cd19f6022fc1130fbcff344cd9b4))
+* accordion block tests ([ee0dd89](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ee0dd89679b0164ee004e7e91d597f83a0da14c1))
+* added condition to set the listing image caption ([#851](https://github.com/RedTurtle/design-comuni-plone-theme/issues/851)) ([0db23bc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0db23bc210b83881d234f482cfb0a5a736c3c1a8))
+* added lighthouse id to slideuptext + added overlay link ([#884](https://github.com/RedTurtle/design-comuni-plone-theme/issues/884)) ([36f8baf](https://github.com/RedTurtle/design-comuni-plone-theme/commit/36f8baff23c87acd440adba168c92dfe48f42fb1))
+* byweekday value added in getFormValues ([#887](https://github.com/RedTurtle/design-comuni-plone-theme/issues/887)) ([558ee44](https://github.com/RedTurtle/design-comuni-plone-theme/commit/558ee440b27c20501156752189ff7464e5cb0f53))
+* card persona fonts ([#881](https://github.com/RedTurtle/design-comuni-plone-theme/issues/881)) ([1a119fe](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1a119fe3ba1941755cc7b659d7f89c9a05019a4d))
+* non backtracking regex ([#878](https://github.com/RedTurtle/design-comuni-plone-theme/issues/878)) ([f6a76dd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f6a76dd94cc6931ff5ff7167e762eb72a9944308))
+* prevent scrollbars in select-facet of search block ([#883](https://github.com/RedTurtle/design-comuni-plone-theme/issues/883)) ([a187f85](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a187f85a16a18a040c93160292ddfbb63c212014))
+* render of nome_alternativo for Venue view ([#886](https://github.com/RedTurtle/design-comuni-plone-theme/issues/886)) ([c1941f0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c1941f05e62c9c9f9be5b8b04c7dc642f83cbbe2))
+* rollback label selectinput ([#882](https://github.com/RedTurtle/design-comuni-plone-theme/issues/882)) ([c3f37c6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c3f37c6d51e8c83b0235c75111cb715864d4b199))
+* update locales ([892e244](https://github.com/RedTurtle/design-comuni-plone-theme/commit/892e244a4560dd27f4cb0a38a44942c2c85adad2))
+
+
+### Documentation
+
+* updated publiccode and release log ([1ca82cb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1ca82cb2f524d203d12126d95a00275d205322c1))
+
 ## [11.26.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.26.4...v11.26.5) (2025-02-06)
 
 
