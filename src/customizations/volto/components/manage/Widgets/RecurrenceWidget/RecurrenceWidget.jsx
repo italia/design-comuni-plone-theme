@@ -409,8 +409,8 @@ class RecurrenceWidget extends Component {
                 formValues['freq'] = FREQUENCES.MONDAYFRIDAY;
               } else
                 formValues[option] = value.map((d) => {
-                      return this.getWeekday(d);
-                    });
+                  return this.getWeekday(d);
+                });
             }
             break;
           case 'bymonthday':
@@ -441,8 +441,11 @@ class RecurrenceWidget extends Component {
               if (freq === FREQUENCES.YEARLY) {
                 formValues['yearly'] = 'byday';
               }
+              const weekday = this.getWeekday(value[0][0]);
+              weekday.n = value[0][1];
               formValues['weekdayOfTheMonth'] = value[0][0];
               formValues['weekdayOfTheMonthIndex'] = value[0][1];
+              formValues['byweekday'] = weekday;
             }
             break;
           case 'bymonth':
