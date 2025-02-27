@@ -45,7 +45,7 @@
 
 ### Migliorie
 
-- ...
+- Tutti i bottoni della sezione "Accedi al servizio" hanno lo stesso font.
 
 ### Novità
 

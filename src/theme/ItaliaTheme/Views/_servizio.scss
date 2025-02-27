@@ -25,6 +25,12 @@
     .card.border-left-card {
       margin-bottom: 1.2em;
     }
+
+    .richtext-blocks.font-serif {
+      a.btn.btn-primary.inline-link {
+        font-family: 'Titillium Web';
+      }
+    }
   }
 
   #altri_documenti_items {

@@ -37,7 +37,11 @@ const ServizioAccedi = ({ content }) => {
               </p>
             </div>
           )}
-          <RichText data={content.prenota_appuntamento} content={content} />
+          <RichText
+            data={content.prenota_appuntamento}
+            content={content}
+            serif={false}
+          />
           {content.canale_fisico?.map?.((canale) => (
             <div className="mt-3">
               <OfficeCard
