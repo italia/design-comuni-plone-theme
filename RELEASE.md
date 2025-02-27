@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- I campi del CT Servizio - sezione Accedi al Servizio funzionano correttamente.
+
 ## Versione 11.27.0 (26/02/2025)
 
 ### Migliorie
