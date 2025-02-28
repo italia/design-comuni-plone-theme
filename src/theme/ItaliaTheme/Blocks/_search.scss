@@ -258,6 +258,18 @@
       }
     }
   }
+
+  @media (max-width: #{map-get($grid-breakpoints, md)}) {
+    //i filtri della colonna di destra vengono mostrati sotto alla barra di ricerca, prima dei risultati, perchè altrimenti su mobile verrebbero mostrati dopo i risultati.
+    .searchBlock-facets.right-column-facets {
+      > .row > :first-child {
+        order: 1;
+      }
+      .sideColumn {
+        order: 0;
+      }
+    }
+  }
 }
 
 .cms-ui .block.search .sideColumn .columnText .draftjs-buttons a {

@@ -1,0 +1,17 @@
+.bootstrap-select-wrapper {
+  //prevent focus input style, and add focus styles to all select wrapper, because input has a variable width depending on text inputed and if there's no text inside, when it has focus a double vertical lines are displayed.
+  input:focus,
+  input:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  &:has(input:focus),
+  &:has(input:focus-within) {
+    outline: 2px solid $outer-focus-outline !important;
+    outline-offset: 2px;
+
+    border: none !important;
+    box-shadow: 0 0 0 2px $inner-focus-shadow !important;
+  }
+}

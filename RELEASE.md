@@ -46,6 +46,7 @@
 ### Migliorie
 
 - Tutti i bottoni della sezione "Accedi al servizio" hanno lo stesso font.
+- Nel blocco 'Cerca' ora viene fatto lo scroll automatico nel punto dove iniziano i risultati di ricerca quando vengono modificati dei filtri
 
 ### Novità
 
@@ -55,6 +56,7 @@
 ### Fix
 
 - I campi del CT Servizio - sezione Accedi al Servizio funzionano correttamente.
+- Sistemato lo stile del focus nelle select del blocco 'Cerca'
 
 ## Versione 11.27.0 (26/02/2025)
 
