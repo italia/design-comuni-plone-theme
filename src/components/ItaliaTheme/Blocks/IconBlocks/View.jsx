@@ -40,7 +40,11 @@ const IconsBlockView = ({ data, block }) => {
           )}
           <Container className="px-md-4">
             <div className="block-header">
-              {data.title && <div className="title">{data.title}</div>}
+              {data.title && (
+                <div className="title">
+                  <h2>{data.title}</h2>
+                </div>
+              )}
               {data.description && (
                 <div className="description">
                   <TextBlockView data={{ value: data.description }} />
@@ -55,6 +59,7 @@ const IconsBlockView = ({ data, block }) => {
                     key={index}
                     id={id}
                     index={index}
+                    blockHasTitle={!!data.title}
                   />
                 </Col>
               ))}

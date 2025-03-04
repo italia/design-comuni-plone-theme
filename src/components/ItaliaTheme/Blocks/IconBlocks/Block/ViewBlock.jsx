@@ -25,7 +25,7 @@ const messages = defineMessages({
  * @class ViewBlock
  * @extends Component
  */
-const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
+const ViewBlock = ({ data, isOpen, toggle, id, index, blockHasTitle }) => {
   const intl = useIntl();
 
   return (
@@ -42,7 +42,11 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
           </div>
         )}
 
-        {data.title && <div className="iconblock-title">{data.title}</div>}
+        {data.title && (
+          <div className="iconblock-title">
+            {blockHasTitle ? <h3>{data.title}</h3> : data.title}
+          </div>
+        )}
         {data.text && (
           <div className="iconblock-text">
             <TextBlockView data={{ value: data.text }} />

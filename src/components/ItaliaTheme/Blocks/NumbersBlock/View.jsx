@@ -61,7 +61,11 @@ const NumbersView = ({ data, block }) => {
                     </div>
                   )}
 
-                  {data.title && <div className="title">{data.title}</div>}
+                  {data.title && (
+                    <div className="title">
+                      <h2>{data.title}</h2>
+                    </div>
+                  )}
                 </div>
               </Col>
 

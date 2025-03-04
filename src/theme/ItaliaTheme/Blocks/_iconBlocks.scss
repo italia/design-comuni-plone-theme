@@ -52,6 +52,10 @@
       font-weight: bold;
       line-height: 3rem;
       text-align: center;
+
+      h2 {
+        margin: 0px;
+      }
     }
 
     .description {
@@ -126,6 +130,10 @@
       font-weight: bold;
       line-height: 1.8rem;
       text-align: center;
+
+      h3 {
+        margin-bottom: 0px;
+      }
     }
 
     .iconblock-text {
