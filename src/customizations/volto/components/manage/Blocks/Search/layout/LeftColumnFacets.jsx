@@ -1,5 +1,6 @@
 /* CUSTOMIZATIONS:
   - Agid styling
+  - added resultsRef
 */
 import React from 'react';
 import {
@@ -33,6 +34,7 @@ const LeftColumnFacets = (props) => {
     isEditMode,
     querystring = {},
     searchData,
+    resultsRef,
     // mode = 'view',
     // variation,
   } = props;
@@ -117,24 +119,26 @@ const LeftColumnFacets = (props) => {
               </div>
             )}
 
-            <div className="search-results-count-sort d-flex align-center flex-wrap">
-              <SearchDetails
-                text={searchedText}
-                total={totalItems}
-                data={data}
-              />
-              <FilterList
-                {...props}
-                isEditMode={isEditMode}
-                setFacets={(f) => {
-                  flushSync(() => {
-                    setFacets(f);
-                    onTriggerSearch(searchedText || '', f);
-                  });
-                }}
-              />
+            <div ref={resultsRef} className="results-wrapper">
+              <div className="search-results-count-sort d-flex align-center flex-wrap">
+                <SearchDetails
+                  text={searchedText}
+                  total={totalItems}
+                  data={data}
+                />
+                <FilterList
+                  {...props}
+                  isEditMode={isEditMode}
+                  setFacets={(f) => {
+                    flushSync(() => {
+                      setFacets(f);
+                      onTriggerSearch(searchedText || '', f);
+                    });
+                  }}
+                />
+              </div>
+              {children}
             </div>
-            {children}
           </div>
         </Row>
       </Container>
