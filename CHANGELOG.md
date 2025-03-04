@@ -1,5 +1,32 @@
 # Changelog
 
+## [12.0.0-alpha.38](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.37...v12.0.0-alpha.38) (2025-03-04)
+
+
+### Features
+
+* feedback customizations for new volto-feedback version ([#897](https://github.com/RedTurtle/design-comuni-plone-theme/issues/897)) ([086474d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/086474dc726348826e91f9b9b07158d14de1b84d))
+
+
+### Bug Fixes
+
+* added cards to show files uploaded in ct persona trasparenza folders ([#890](https://github.com/RedTurtle/design-comuni-plone-theme/issues/890)) ([fe47198](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fe4719879df2414e239a626bbc2372d1465f73e4))
+* added h tags for icons and numbers block ([#899](https://github.com/RedTurtle/design-comuni-plone-theme/issues/899)) ([d607987](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d607987dc33673a7eaa8c4950965dec5cdcda4aa))
+* changed draftjs buttons font in accedi al servizio section in service ([#892](https://github.com/RedTurtle/design-comuni-plone-theme/issues/892)) ([23d0e11](https://github.com/RedTurtle/design-comuni-plone-theme/commit/23d0e11cbd823ed471c36fe455e77a8bb34f394e))
+* search block focus styles and scroll into view results when apply filters ([#898](https://github.com/RedTurtle/design-comuni-plone-theme/issues/898)) ([85dee8a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/85dee8a0c21add57d15b420957b175ae23ca034e))
+* updated locales ([5f48507](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5f48507aff0cfb339cc45dde438961090a137b3e))
+* urlRegex syntax ([#893](https://github.com/RedTurtle/design-comuni-plone-theme/issues/893)) ([a0aab65](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a0aab65402a4b561f936066f3d9f3fe1e4e87d28))
+
+
+### Maintenance
+
+* release.md info on BE change ([#896](https://github.com/RedTurtle/design-comuni-plone-theme/issues/896)) ([87f8080](https://github.com/RedTurtle/design-comuni-plone-theme/commit/87f80807ee091d06cd119f4729b00128ae397e92))
+
+
+### Documentation
+
+* updated publiccode and release log ([779f19d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/779f19dcb06d033c4c9861469fa7dc8202bea7dc))
+
 ## [12.0.0-alpha.37](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.36...v12.0.0-alpha.37) (2025-02-26)
 
 
