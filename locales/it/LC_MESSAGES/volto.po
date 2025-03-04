@@ -969,6 +969,11 @@ msgstr "Atti e documenti a corredo dell'istanza"
 msgid "atto_nomina"
 msgstr "Atto di nomina"
 
+#: config/italiaConfig
+# defaultMessage: Login/Logout
+msgid "auth_ft"
+msgstr ""
+
 #: config/Blocks/ListingOptions/sliderTemplate
 # defaultMessage: Autoplay
 msgid "autoplay"
@@ -3946,6 +3951,11 @@ msgstr "Qui puoi selezionare, per il template 'Card semplice', un aspetto divers
 # defaultMessage: Un elemento per riga
 msgid "simplecard_listing_appearance_oneforrow"
 msgstr "Un elemento per riga"
+
+#: config/italiaConfig
+# defaultMessage: Sitemap
+msgid "sitemap_ft"
+msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Situazione patrimoniale

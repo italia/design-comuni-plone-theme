@@ -984,6 +984,11 @@ msgstr ""
 msgid "atto_nomina"
 msgstr ""
 
+#: config/italiaConfig
+# defaultMessage: Login/Logout
+msgid "auth_ft"
+msgstr ""
+
 #: config/Blocks/ListingOptions/sliderTemplate
 # defaultMessage: Autoplay
 msgid "autoplay"
@@ -3960,6 +3965,11 @@ msgstr ""
 #: config/Blocks/ListingOptions/simpleCardTemplate
 # defaultMessage: Un elemento per riga
 msgid "simplecard_listing_appearance_oneforrow"
+msgstr ""
+
+#: config/italiaConfig
+# defaultMessage: Sitemap
+msgid "sitemap_ft"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
