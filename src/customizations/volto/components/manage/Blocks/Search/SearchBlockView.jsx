@@ -7,7 +7,7 @@
     the way to handle search sort. If searchableText is setted, discard default sorting and uses plone's ranking only if is configured from sidebar. (Changed applyDefaults fn passing usePloneRanking)
 */
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import ListingBody from '@plone/volto/components/manage/Blocks/Listing/ListingBody';
 import { withBlockExtensions } from '@plone/volto/helpers';
@@ -21,6 +21,7 @@ import cx from 'classnames';
 import { isEqual, isFunction } from 'lodash';
 import { useSelector } from 'react-redux';
 import { compose } from 'redux';
+import { useEffect } from 'react';
 
 const getListingBodyVariation = (data) => {
   const { variations } = config.blocks.blocksConfig.listing;
@@ -109,9 +110,26 @@ const SearchBlockView = (props) => {
   }, [dataListingBodyVariation, mode]);
 
   const root = useSelector((state) => state.breadcrumbs.root);
+  const [defaultListingBodyData] = React.useState(
+    applyDefaults(searchData, root, data.usePloneRanking),
+  );
   const listingBodyData = applyDefaults(searchData, root, data.usePloneRanking);
+
   const { variations } = config.blocks.blocksConfig.listing;
   const listingBodyVariation = variations.find(({ id }) => id === selectedView);
+
+  const query = listingBodyData.query;
+  const resultsRef = React.forwardRef(null);
+
+  useEffect(() => {
+    if (
+      JSON.stringify(defaultListingBodyData.query) !== JSON.stringify(query)
+    ) {
+      //fai lo scroll solo quando vengono modificati i filtri dall'utente. Evita lo scroll al primo load
+      resultsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [query]);
+
   if (!Layout) return null;
   return (
     <div className={cx('block search', { 'public-ui': mode === 'edit' })}>
@@ -120,6 +138,7 @@ const SearchBlockView = (props) => {
         isEditMode={mode === 'edit'}
         selectedView={selectedView}
         setSelectedView={setSelectedView}
+        resultsRef={resultsRef}
       >
         {/* Add class .block.listing to benefit from existing listing template styles */}
         <div className="block listing search-results">
