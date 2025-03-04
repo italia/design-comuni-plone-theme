@@ -1,5 +1,31 @@
 
 
+## [11.28.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.27.0...v11.28.0) (2025-03-04)
+
+
+### Features
+
+* feedback customizations for new volto-feedback version ([#897](https://github.com/RedTurtle/design-comuni-plone-theme/issues/897)) ([ac3f292](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ac3f292ba0fd76af35f64d3bc1a7f1e2b5f46ff4))
+
+
+### Bug Fixes
+
+* added cards to show files uploaded in ct persona trasparenza folders ([#889](https://github.com/RedTurtle/design-comuni-plone-theme/issues/889)) ([5ce0e06](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5ce0e06b24cc9794478e38e95facff7883cd527f))
+* changed draftjs buttons font in accedi al servizio section in service ([#891](https://github.com/RedTurtle/design-comuni-plone-theme/issues/891)) ([c1cc30b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c1cc30b26da79fa3014bb1f9e38478a8ee9b311d))
+* search block focus styles and scroll into view results when apply filters ([#898](https://github.com/RedTurtle/design-comuni-plone-theme/issues/898)) ([3bbe8d0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3bbe8d05c811ca6f5729cb76c9efca4715562053))
+* updated locales ([fdbb495](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fdbb495aa72a9987de62b7a53da4839fbf402766))
+* urlRegex syntax ([#894](https://github.com/RedTurtle/design-comuni-plone-theme/issues/894)) ([6eb2ec9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6eb2ec9325063622335f3174628f1b30cdb1ffbd))
+
+
+### Maintenance
+
+* release.md info on BE change ([#895](https://github.com/RedTurtle/design-comuni-plone-theme/issues/895)) ([83409ef](https://github.com/RedTurtle/design-comuni-plone-theme/commit/83409ef52b7edc312c3685159bc9c9df07f92425))
+
+
+### Documentation
+
+* updated publiccode and release log ([1c28a3a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1c28a3a513898b4c87ccdcaf7e380c434b16fac3))
+
 ## [11.27.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.26.5...v11.27.0) (2025-02-26)
 
 
