@@ -3,6 +3,7 @@
  * CUSTOMIZATIONS:
  *  - rimossi i bottoni di allinemento, textlarger e blockquote perchè non funzionano nel widget e non servono in questi campi
  *  - aggiunta la classe public-ui
+ *  - aggiunta la proprietà "fieldSet" per passare il nome del fieldset dentro SlateEditor. Quaste modifica è stata introdotta su volto 18: https://github.com/plone/volto/pull/6803
  */
 
 import React from 'react';
@@ -31,8 +32,7 @@ import '@plone/volto-slate/widgets/style.css';
 
 const messages = defineMessages({
   error: {
-    id:
-      'An error has occurred while editing "{name}" field. We have been notified and we are looking into it. Please save your work and retry. If the issue persists please contact the site administrator.',
+    id: 'An error has occurred while editing "{name}" field. We have been notified and we are looking into it. Please save your work and retry. If the issue persists please contact the site administrator.',
     defaultMessage:
       'An error has occurred while editing "{name}" field. We have been notified and we are looking into it. Please save your work and retry. If the issue persists please contact the site administrator.',
   },
@@ -44,6 +44,7 @@ const HtmlSlateWidget = (props) => {
     onChange,
     value,
     focus,
+    fieldSet,
     className,
     block,
     placeholder,
@@ -138,6 +139,7 @@ const HtmlSlateWidget = (props) => {
             id={id}
             name={id}
             value={valueFromHtml}
+            fieldSet={fieldSet}
             onChange={handleChange}
             block={block}
             selected={selected}
