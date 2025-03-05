@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- Migliorata l'accessibilità quando è necessario l'uso di Slate dentro ai form fields.
+
+### Novità
+
+- ...
+
+### Fix
+
+- ...
+
 ## Versione 11.28.0 (04/03/2025)
 
 ### Migliorie
