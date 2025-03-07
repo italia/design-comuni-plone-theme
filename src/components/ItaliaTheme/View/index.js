@@ -138,6 +138,7 @@ export NewsItemMetadata from 'design-comuni-plone-theme/components/ItaliaTheme/V
 export PagePlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/PageView/Placeholder/AfterContent';
 export PagePlaceholderAfterRelatedItems from 'design-comuni-plone-theme/components/ItaliaTheme/View/PageView/Placeholder/AfterRelatedItems';
 export PagePlaceholderTitle from 'design-comuni-plone-theme/components/ItaliaTheme/View/PageView/Placeholder/Title';
+export PagePlaceholderHeaderEnd from 'design-comuni-plone-theme/components/ItaliaTheme/View/PageView/Placeholder/HeaderEnd';
 export PaginaArgomentoPlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/PaginaArgomentoView/Placeholder/AfterContent';
 export PaginaArgomentoPlaceholderAfterRelatedItems from 'design-comuni-plone-theme/components/ItaliaTheme/View/PaginaArgomentoView/Placeholder/AfterRelatedItems';
 export PaginaArgomentoViewNoBlocks from 'design-comuni-plone-theme/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks';

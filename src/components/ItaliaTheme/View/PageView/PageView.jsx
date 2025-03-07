@@ -11,6 +11,7 @@ import {
   PagePlaceholderAfterContent,
   PagePlaceholderAfterRelatedItems,
   PagePlaceholderTitle,
+  PagePlaceholderHeaderEnd,
   TextOrBlocks,
   RichText,
   RelatedItemInEvidence,
@@ -76,6 +77,7 @@ const PageView = ({ content, token, location, history }) => {
                 </PagePlaceholderTitle>
 
                 <p className="description">{content?.description}</p>
+
                 {content?.ricerca_in_testata && (
                   <SearchSectionForm content={content} />
                 )}
@@ -118,6 +120,7 @@ const PageView = ({ content, token, location, history }) => {
                 </div>
               )}
             </div>
+            <PagePlaceholderHeaderEnd content={content} />
           </div>
 
           <TextOrBlocks content={content} />
