@@ -45,7 +45,7 @@
 
 ### Migliorie
 
-- ...
+- Nel CT Documento ora è possibile gestire anche il CT File tramite taglia/incolla, la dove serva spostare dei File dentro uno specifico documento
 
 ### Novità
 
