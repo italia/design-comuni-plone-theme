@@ -40,6 +40,13 @@ const Module = ({ item }) => {
         {item.description && <p>{item.description}</p>}
         <div className="download-formats">
           <DownloadFileFormat
+            file={item.file}
+            showLabel={true}
+            title={item.title ?? item.file.filename}
+            hideFileFormatLabel={true}
+            className="mb-4"
+          />
+          <DownloadFileFormat
             file={item.file_principale}
             showLabel={true}
             title={item.title ?? item.file_principale.filename}
