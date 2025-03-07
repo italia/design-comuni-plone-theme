@@ -19,36 +19,38 @@
       width: auto !important;
     }
 
-    &.listing {
-      &.simpleCard,
-      &.attachmentCardTemplate {
-        .card-teaser-block-3 {
-          > .card-teaser {
-            flex: 0 0 49%; //invece di 3 elementi per riga, ne mostro due perchè c'è poco spazio
+    @media (min-width: #{map-get($grid-breakpoints, md)}) {
+      &.listing {
+        &.simpleCard,
+        &.attachmentCardTemplate {
+          .card-teaser-block-3 {
+            > .card-teaser {
+              flex: 0 0 49%; //invece di 3 elementi per riga, ne mostro due perchè c'è poco spazio
+            }
           }
         }
-      }
 
-      &.cardWithImageTemplate,
-      &.ribbonCardTemplate,
-      &.completeBlockLinksTemplate {
-        .col-lg-4,
-        .col-xl-4,
-        .col-lg-3 {
-          width: 50%; //invece di 3 elementi per riga, ne mostro due perchè c'è poco spazio
+        &.cardWithImageTemplate,
+        &.ribbonCardTemplate,
+        &.completeBlockLinksTemplate {
+          .col-lg-4,
+          .col-xl-4,
+          .col-lg-3 {
+            width: 50%; //invece di 3 elementi per riga, ne mostro due perchè c'è poco spazio
+          }
         }
-      }
 
-      &.cardSlideUpTextTemplate,
-      &.quaresImageTemplate {
-        .grid {
-          grid-template-columns: 1fr 1fr;
+        &.cardSlideUpTextTemplate,
+        &.quaresImageTemplate {
+          .grid {
+            grid-template-columns: 1fr 1fr;
+          }
         }
-      }
 
-      &.bandiInEvidenceTemplate {
-        .bandi-in-evidence-cards-wrapper {
-          grid-template-columns: 1fr 1fr;
+        &.bandiInEvidenceTemplate {
+          .bandi-in-evidence-cards-wrapper {
+            grid-template-columns: 1fr 1fr;
+          }
         }
       }
     }

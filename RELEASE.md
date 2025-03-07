@@ -67,6 +67,7 @@
 ### Fix
 
 - Il titolo della homepage del sito è ora accessibile.
+- sistemata la visualizzazione su mobile dei blocchi elenco inseriti all'interno dei blocchi griglia
 
 ## Versione 11.28.0 (04/03/2025)
 
