@@ -1,5 +1,33 @@
 
 
+## [11.29.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.28.0...v11.29.0) (2025-03-07)
+
+
+### Features
+
+* added placeholder PagePlaceholderHeaderEnd in PageView ([#903](https://github.com/RedTurtle/design-comuni-plone-theme/issues/903)) ([dd89da5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dd89da5653dfb22c1fc7d59446b75d0292d6b6c4))
+* allow ct document to contains also File content types and show as a Modulo content type; editors request to handle file cut/paste into ct documento ([#909](https://github.com/RedTurtle/design-comuni-plone-theme/issues/909)) ([71c0f91](https://github.com/RedTurtle/design-comuni-plone-theme/commit/71c0f91e730cabb1e3e9197c93e82e8d1338a73f))
+
+
+### Bug Fixes
+
+* a11y bando and events timeline ([#906](https://github.com/RedTurtle/design-comuni-plone-theme/issues/906)) ([c8ea5f0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c8ea5f004b011f5031faabc3a779e45f3b0808ff))
+* **a11y:** changed display mode of homepage and subsite title([#905](https://github.com/RedTurtle/design-comuni-plone-theme/issues/905)) ([48f6db1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/48f6db19f5c1d7a861d6daa397ce0f2212f472c8))
+* changed homepage h1 from display none to visually hidden ([#904](https://github.com/RedTurtle/design-comuni-plone-theme/issues/904)) ([af0e49b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/af0e49b40e5702d92ed8b5ea96fcbb9dd9bb0eda))
+* no toggle accordion on clicking inside links ([#908](https://github.com/RedTurtle/design-comuni-plone-theme/issues/908)) ([23f6857](https://github.com/RedTurtle/design-comuni-plone-theme/commit/23f68575fa7aa960ab2ef9930dda2d57db036576))
+* styles for listing blocks inside grid block on mobile ([#901](https://github.com/RedTurtle/design-comuni-plone-theme/issues/901)) ([59fc1b5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/59fc1b51ec9c5f158b09c11e748983352471b552))
+
+
+### Documentation
+
+* updated publiccode and release log ([dfbc39c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dfbc39cc0d72d73db6b40226e9104467bc6b01fc))
+
+
+### Maintenance
+
+* fix lockfile ([2c96be2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2c96be2e9ee691f287d6c66612bb0f32fc9703cf))
+* volto-feedback 0.6.1 ([#902](https://github.com/RedTurtle/design-comuni-plone-theme/issues/902)) ([c69eb91](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c69eb91a05847e6d0676c2bcb0f606768b85815e))
+
 ## [11.28.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.27.0...v11.28.0) (2025-03-04)
 
 
