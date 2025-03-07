@@ -72,7 +72,7 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
           aria-labelledby={`${id}-${index}`}
           hidden={!isOpen}
         >
-          <div className="accordion-inner" onFocus={toggle()}>
+          <div className="accordion-inner">
             {redraft(
               data.text,
               config.settings.richtextViewSettings.ToHTMLRenderers,
