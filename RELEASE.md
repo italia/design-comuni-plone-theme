@@ -41,24 +41,21 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.29.0 (07/03/2025)
 
 ### Migliorie
 
-- Correzione del testo visualizzato sul pulsante "cancella tutti i commenti" per la Customer Satisfaction, migliorando la leggibilità e conformità
-- Migliorata l'accessibilità per il widget dei campi di tipo Slate che salvano i dati in formato HTML
-- accessibilità: migliorata l'accessibilità per gli elementi di tipo blockquote
-- a11y: migliorata la lettura delle timline di date nel dettaglio di Bando e Evento
-- Nel CT Documento ora è possibile gestire anche il CT File tramite taglia/incolla, la dove serva spostare dei File dentro uno specifico documento
-
-### Novità
-
-- ...
+- Nel CT Documento ora è possibile gestire anche il CT File tramite taglia/incolla, laddove serva spostare dei File dentro uno specifico documento.
+- Correzione del testo visualizzato sul pulsante "Cancella tutti i commenti" per la Customer Satisfaction, migliorando la leggibilità e conformità.
+- Migliorata l'accessibilità per il widget dei campi di tipo Slate che salvano i dati in formato HTML.
+- Migliorata l'accessibilità per gli elementi di tipo blockquote.
+- Migliorata la lettura delle timeline di date nel dettaglio di Bando e Evento.
 
 ### Fix
 
+- Sistemata la visualizzazione su mobile dei blocchi elenco inseriti all'interno dei blocchi griglia.
 - Il titolo della homepage del sito è ora accessibile.
-- sistemata la visualizzazione su mobile dei blocchi elenco inseriti all'interno dei blocchi griglia
+- Risolto un problema con i link all'interno dei blocchi Accordion.
 
 ## Versione 11.28.0 (04/03/2025)
 
