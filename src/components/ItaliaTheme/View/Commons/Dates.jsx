@@ -100,13 +100,20 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
     <>
       <div className="point-list-wrapper my-4 mb-5">
         <div className="point-list">
-          <div className="point-list-aside point-list-warning">
-            <span className="point-date font-monospace">
+          <div
+            className="point-list-aside point-list-warning"
+            aria-label={start.format('DD MMMM Y')}
+          >
+            <span className="point-date font-monospace" aria-hidden={true}>
               {start.format('DD')}
             </span>
-            <span className="point-month">{start.format('MMMM')}</span>
+            <span className="point-month" aria-hidden={true}>
+              {start.format('MMMM')}
+            </span>
             {!start.isSame(end, 'year') && (
-              <span className="point-month">{start.format('YYYY')}</span>
+              <span className="point-month" aria-hidden={true}>
+                {start.format('YYYY')}
+              </span>
             )}
           </div>
           <div className="point-list-content">
@@ -131,13 +138,20 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
         </div>
         {!openEnd && (
           <div className="point-list">
-            <div className="point-list-aside point-list-warning">
-              <span className="point-date font-monospace">
+            <div
+              className="point-list-aside point-list-warning"
+              aria-label={end.format('DD MMMM Y')}
+            >
+              <span className="point-date font-monospace" aria-hidden={true}>
                 {end?.format('DD')}
               </span>
-              <span className="point-month">{end?.format('MMMM')}</span>
+              <span className="point-month" aria-hidden={true}>
+                {end?.format('MMMM')}
+              </span>
               {!end?.isSame(start, 'year') && (
-                <span className="point-month">{end?.format('YYYY')}</span>
+                <span className="point-month" aria-hidden={true}>
+                  {end?.format('YYYY')}
+                </span>
               )}
             </div>
             <div className="point-list-content">

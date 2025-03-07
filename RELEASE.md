@@ -54,6 +54,11 @@
 ### Fix
 
 - Il titolo della homepage del sito è ora accessibile.
+## Versione x.x.x (x/x/x)
+
+### Migliorie
+
+- a11y: migliorata la lettura delle timline di date nel dettaglio di Bando e Evento
 
 ## Versione 11.28.0 (04/03/2025)
 

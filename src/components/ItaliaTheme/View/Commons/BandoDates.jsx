@@ -57,18 +57,31 @@ const BandoDates = ({ content }) => {
     ? viewDate(intl.locale, content.chiusura_procedimento_bando)
     : null;
 
+  const PointListDate = ({ date }) => {
+    return (
+      <div
+        className="point-list-aside point-list-warning"
+        aria-label={date.format('DD MMMM Y')}
+      >
+        <span className="point-date font-monospace" aria-hidden="true">
+          {date.format('DD')}
+        </span>
+        <span className="point-month" aria-hidden="true">
+          {date.format('MMMM')}
+        </span>
+        <span className="point-month" aria-hidden="true">
+          {date.format('Y')}
+        </span>
+      </div>
+    );
+  };
   return content ? (
     <>
       <div className="point-list-wrapper my-4 mb-5">
         {effective && (
           <div className="point-list">
-            <div className="point-list-aside point-list-warning">
-              <span className="point-date font-monospace">
-                {effective.format('DD')}
-              </span>
-              <span className="point-month">{effective.format('MMMM')}</span>
-              <span className="point-month">{effective.format('Y')}</span>
-            </div>
+            <PointListDate date={effective} />
+
             <div className="point-list-content">
               <Card
                 className="card card-teaser rounded shadow border-left-card"
@@ -87,15 +100,8 @@ const BandoDates = ({ content }) => {
 
         {apertura_bando && (
           <div className="point-list">
-            <div className="point-list-aside point-list-warning">
-              <span className="point-date font-monospace">
-                {apertura_bando.format('DD')}
-              </span>
-              <span className="point-month">
-                {apertura_bando.format('MMMM')}
-              </span>
-              <span className="point-month">{apertura_bando.format('Y')}</span>
-            </div>
+            <PointListDate date={apertura_bando} />
+
             <div className="point-list-content">
               <Card
                 className="card card-teaser rounded shadow border-left-card"
@@ -115,17 +121,8 @@ const BandoDates = ({ content }) => {
 
         {scadenza_domande_bando && (
           <div className="point-list">
-            <div className="point-list-aside point-list-warning">
-              <span className="point-date font-monospace">
-                {scadenza_domande_bando.format('DD')}
-              </span>
-              <span className="point-month">
-                {scadenza_domande_bando.format('MMMM')}
-              </span>
-              <span className="point-month">
-                {scadenza_domande_bando.format('Y')}
-              </span>
-            </div>
+            <PointListDate date={scadenza_domande_bando} />
+
             <div className="point-list-content">
               <Card
                 className="card card-teaser rounded shadow border-left-card"
@@ -145,15 +142,7 @@ const BandoDates = ({ content }) => {
 
         {scadenza_bando && (
           <div className="point-list">
-            <div className="point-list-aside point-list-warning">
-              <span className="point-date font-monospace">
-                {scadenza_bando.format('DD')}
-              </span>
-              <span className="point-month">
-                {scadenza_bando.format('MMMM')}
-              </span>
-              <span className="point-month">{scadenza_bando.format('Y')}</span>
-            </div>
+            <PointListDate date={scadenza_bando} />
             <div className="point-list-content">
               <Card
                 className="card card-teaser rounded shadow border-left-card"
@@ -173,17 +162,8 @@ const BandoDates = ({ content }) => {
 
         {chiusura_procedimento_bando && (
           <div className="point-list">
-            <div className="point-list-aside point-list-warning">
-              <span className="point-date font-monospace">
-                {chiusura_procedimento_bando.format('DD')}
-              </span>
-              <span className="point-month">
-                {chiusura_procedimento_bando.format('MMMM')}
-              </span>
-              <span className="point-month">
-                {chiusura_procedimento_bando.format('Y')}
-              </span>
-            </div>
+            <PointListDate date={chiusura_procedimento_bando} />
+
             <div className="point-list-content">
               <Card
                 className="card card-teaser rounded shadow border-left-card"
