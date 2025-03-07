@@ -1,5 +1,29 @@
 # Changelog
 
+## [12.0.0-alpha.39](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.38...v12.0.0-alpha.39) (2025-03-07)
+
+
+### Features
+
+* added placeholder PagePlaceholderHeaderEnd in PageView ([#903](https://github.com/RedTurtle/design-comuni-plone-theme/issues/903)) ([15597e1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/15597e1403f39f3a29298170f2e38f84b53fe2a3))
+* allow ct document to contains also File content types and show as a Modulo content type; editors request to handle file cut/paste into ct documento ([#909](https://github.com/RedTurtle/design-comuni-plone-theme/issues/909)) ([9a8a17d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9a8a17d8fe4b3c5d4f1893a105781a355adb2f14))
+
+
+### Bug Fixes
+
+* a11y bando and events timeline ([#906](https://github.com/RedTurtle/design-comuni-plone-theme/issues/906)) ([41a0834](https://github.com/RedTurtle/design-comuni-plone-theme/commit/41a0834334a205764c646e679830b96c41a12368))
+* **a11y:** changed display mode of homepage and subsite title([#905](https://github.com/RedTurtle/design-comuni-plone-theme/issues/905)) ([5ff0cbc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5ff0cbcaaf1fe910611cca56f5d8e47fcd2e5587))
+* blockquote a11y ([#907](https://github.com/RedTurtle/design-comuni-plone-theme/issues/907)) ([f5ee3e8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f5ee3e8187d72d9714c3719308c66b05d35d42c9))
+* no toggle accordion on clicking inside links ([#908](https://github.com/RedTurtle/design-comuni-plone-theme/issues/908)) ([b648093](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b648093dda7b949313c9300bdc21b11b836c3f2e))
+* riportate sul file le modifiche fatte su Volto 18 per il componente HtmlSlateWidget ([#900](https://github.com/RedTurtle/design-comuni-plone-theme/issues/900)) ([69f639f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/69f639f8a6cc3acb47dfbcc414afcb146f5265cd))
+* styles for listing blocks inside grid block on mobile ([#901](https://github.com/RedTurtle/design-comuni-plone-theme/issues/901)) ([338e68c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/338e68cace4eb7637eeb029044baf15e17a07eb8))
+
+
+### Maintenance
+
+* fix lockfile ([3b0361f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3b0361fb005425ca2472904cf95529135bfd66a4))
+* volto-feedback 0.6.1 ([#902](https://github.com/RedTurtle/design-comuni-plone-theme/issues/902)) ([da94f2a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/da94f2a2cfd2284ba6a4d3b0bc8df68a1ccd7289))
+
 ## [12.0.0-alpha.38](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.37...v12.0.0-alpha.38) (2025-03-04)
 
 
