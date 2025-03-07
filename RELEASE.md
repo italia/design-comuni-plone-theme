@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Il titolo della homepage del sito è ora accessibile.
+
 ## Versione 11.28.0 (04/03/2025)
 
 ### Migliorie

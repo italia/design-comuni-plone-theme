@@ -2,7 +2,7 @@
 body.public-ui.contenttype-lrf {
   .block-editor-title,
   .documentFirstHeading {
-    display: none;
+    @include visually-hidden;
   }
 }
 
@@ -13,7 +13,9 @@ body.public-ui.contenttype-lrf {
 body.subsite.subsite-root {
   &,
   .public-ui {
-    .documentFirstHeading,
+    .documentFirstHeading {
+      @include visually-hidden;
+    }
     #briciole {
       display: none;
     }
