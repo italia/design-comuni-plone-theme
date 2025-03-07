@@ -41,10 +41,11 @@
 - ...
  -->
 
-## Versione x.x.x (x/x/x)
+## Versione x.x.x (x.x.x)
 
 ### Migliorie
 
+- accessibilità: migliorata l'accessibilità per gli elementi di tipo blockquote
 - a11y: migliorata la lettura delle timline di date nel dettaglio di Bando e Evento
 
 ## Versione 11.28.0 (04/03/2025)

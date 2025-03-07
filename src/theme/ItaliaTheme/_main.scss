@@ -91,7 +91,9 @@ iframe {
     }
 
     ul:last-child,
-    ol:last-child {
+    ol:last-child,
+    p:last-child,
+    p:last-of-type {
       margin-bottom: 0;
     }
 
