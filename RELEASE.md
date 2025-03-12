@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Risolto un problema con la validazione dei link inseriti nei campi url (ad es. URL del CT Collegamento).
+
 ## Versione 11.29.0 (07/03/2025)
 
 ### Migliorie
