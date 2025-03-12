@@ -36,8 +36,7 @@ const messages = defineMessages({
   },
   data_conclusione_incarico: {
     id: 'data_conclusione_incarico',
-    defaultMessage:
-      "Ha fatto parte dell'organizzazione comunale come {incarico} fino al",
+    defaultMessage: "Data di fine dell'incarico",
   },
   data_insediamento: {
     id: 'data_insediamento',
@@ -116,9 +115,7 @@ const IncaricoView = ({ content, moment: momentlib }) => {
         {content.data_conclusione_incarico && (
           <RichTextSection
             tag_id="data_conclusione_incarico"
-            title={intl.formatMessage(messages.data_conclusione_incarico, {
-              incarico: content.title,
-            })}
+            title={intl.formatMessage(messages.data_conclusione_incarico)}
           >
             <div className="font-serif">
               {moment(content.data_conclusione_incarico).format('D-MM-YYYY')}
