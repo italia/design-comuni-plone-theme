@@ -74,11 +74,6 @@ const messages = defineMessages({
     id: 'data_conclusione_incarico_label',
     defaultMessage: "Data di fine dell'incarico",
   },
-  data_conclusione_incarico: {
-    id: 'data_conclusione_incarico',
-    defaultMessage:
-      "Ha fatto parte dell'organizzazione comunale come {incarico} fino al",
-  },
   altri_incarichi: {
     id: 'altri_incarichi',
     defaultMessage: 'Altri incarichi',
@@ -129,13 +124,11 @@ const PersonaRuolo = ({ content }) => {
               )}
             >
               <div className="font-serif">
-                {`${intl.formatMessage(messages.data_conclusione_incarico, {
-                  incarico: content.incarichi_persona[0].title,
-                })} ${viewDate(
+                {viewDate(
                   intl.locale,
                   content.incarichi_persona[0].data_conclusione_incarico,
                   'DD MMMM Y',
-                )}`}
+                )}
               </div>
             </RichTextSection>
           )}
