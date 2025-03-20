@@ -45,7 +45,7 @@
 
 ### Migliorie
 
-- ...
+- Il CT Collegamento identifica meglio i permessi dell'utente e di conseguenza il reindirizzamento automatico è più preciso.
 
 ### Novità
 
