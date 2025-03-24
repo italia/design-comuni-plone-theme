@@ -53,6 +53,7 @@
 
 ### Fix
 
+- I bottoni presentano un contrasto corretto quando selezionati, e il bottone "scroll to top" può essere selezionato tramite navigazione da tastiera.
 - Nel titolo e nel testo del campo "Data di fine dell'incarico" è stato rimosso il riferimento al nome dell'incarico.
 - Risolto un problema con la validazione dei link inseriti nei campi url (ad es. URL del CT Collegamento).
 

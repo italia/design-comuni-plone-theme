@@ -7,6 +7,20 @@
   box-shadow: 0 0 0 2px $inner-focus-shadow !important;
 }
 
+input:focus:not(.focus--mouse) {
+  // only add border to input besides default double outline
+  border: 2px solid $outer-focus-outline !important;
+}
+
 .skiplinks a:focus:not(.focus--mouse) {
   border: 2px solid;
+}
+
+.gdpr-privacy-show-banner:focus:not(.focus--mouse) {
+  // invert general :focus rule since button is always white
+  outline: 2px solid $inner-focus-shadow !important;
+  outline-offset: 2px;
+
+  border: none !important;
+  box-shadow: 0 0 0 2px $outer-focus-outline !important;
 }

@@ -23,6 +23,11 @@
 
             border: none !important;
             box-shadow: 0 0 0 2px $inner-focus-shadow !important;
+
+            //adds border to ensure correct contrast on all bg
+            // dark bg + light button --> internal dark border + outer white shadow
+            // light bg + dark button --> external dark border + inner white shadow
+            border: 2px solid $outer-focus-outline !important;
           }
         }
       }

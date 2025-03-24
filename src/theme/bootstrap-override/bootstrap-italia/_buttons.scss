@@ -6,3 +6,21 @@ button.btn.btn-primary:focus-visible,
     }
   }
 }
+
+button.btn.btn-primary:focus-visible {
+  // fix for primary buttons to ensure contrast upon focus
+  background-color: darken($color: $primary, $amount: 5%);
+  color: color-contrast($primary);
+}
+
+button.btn.btn-secondary:focus-visible {
+  // fix for secondary buttons to ensure contrast upon focus
+  background-color: darken($color: $secondary, $amount: 5%);
+  color: color-contrast($secondary);
+}
+
+button.btn.btn-tertiary:focus-visible {
+  // fix for tertiary buttons to ensure contrast upon focus
+  background-color: darken($color: $tertiary, $amount: 5%);
+  color: color-contrast($tertiary);
+}
