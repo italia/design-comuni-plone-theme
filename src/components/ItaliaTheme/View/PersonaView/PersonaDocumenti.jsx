@@ -240,19 +240,19 @@ const PersonaDocumenti = ({ content }) => {
                 }
               />
             )}
-            {contentFolderHasItems(
-              content,
-              'dichiarazione-insussistenza-cause-di-inconferibilita-e-incompatibilita',
-            ) && (
-              <Attachments
-                content={content}
-                folder_name={
-                  'dichiarazione-insussistenza-cause-di-inconferibilita-e-incompatibilita'
-                }
-                as_section={false}
-              />
-            )}
           </div>
+          {contentFolderHasItems(
+            content,
+            'dichiarazione-insussistenza-cause-di-inconferibilita-e-incompatibilita',
+          ) && (
+            <Attachments
+              content={content}
+              folder_name={
+                'dichiarazione-insussistenza-cause-di-inconferibilita-e-incompatibilita'
+              }
+              as_section={false}
+            />
+          )}
         </RichTextSection>
       )}
       {(content.emolumenti_a_carico_della_finanza_pubblica?.download ||
@@ -277,19 +277,19 @@ const PersonaDocumenti = ({ content }) => {
                 }
               />
             )}
-            {contentFolderHasItems(
-              content,
-              'emolumenti-complessivi-percepiti-a-carico-della-finanza-pubblica',
-            ) && (
-              <Attachments
-                content={content}
-                folder_name={
-                  'emolumenti-complessivi-percepiti-a-carico-della-finanza-pubblica'
-                }
-                as_section={false}
-              />
-            )}
           </div>
+          {contentFolderHasItems(
+            content,
+            'emolumenti-complessivi-percepiti-a-carico-della-finanza-pubblica',
+          ) && (
+            <Attachments
+              content={content}
+              folder_name={
+                'emolumenti-complessivi-percepiti-a-carico-della-finanza-pubblica'
+              }
+              as_section={false}
+            />
+          )}
         </RichTextSection>
       )}
     </>
