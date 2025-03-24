@@ -1,5 +1,22 @@
 
 
+## [11.29.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.29.0...v11.29.1) (2025-03-24)
+
+
+### Bug Fixes
+
+* document cards layout for ct persona ([#921](https://github.com/RedTurtle/design-comuni-plone-theme/issues/921)) ([63ae761](https://github.com/RedTurtle/design-comuni-plone-theme/commit/63ae7618d7202800538d650ee36a174ffe80a204))
+* focus of buttons + focus of inputs + contrast of buttons ([#915](https://github.com/RedTurtle/design-comuni-plone-theme/issues/915)) ([327b7d1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/327b7d1907bfb0ec0f5c7d5e4c688fb4a5cb1dd6))
+* handle slash in search params in url regex ([#914](https://github.com/RedTurtle/design-comuni-plone-theme/issues/914)) ([6a8744d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6a8744d32f8250d25604789cae06528178822329))
+* link view redirects when user cannot edit, also redirects server side ([#919](https://github.com/RedTurtle/design-comuni-plone-theme/issues/919)) ([fee3622](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fee362265f34069ad4ec4fbc8d096a12dc6294a3))
+* restored original end of assignment label ([#910](https://github.com/RedTurtle/design-comuni-plone-theme/issues/910)) ([472f264](https://github.com/RedTurtle/design-comuni-plone-theme/commit/472f2647d0043e85c820868dc3886966da43219a))
+* title link margin with no category + title style and bg gradient ([#917](https://github.com/RedTurtle/design-comuni-plone-theme/issues/917)) ([1f831c5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1f831c5cad258b631f13f681c550dc2101977905))
+
+
+### Documentation
+
+* updated publiccode and release log ([5be2bd3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5be2bd3e4931a943369e07c34aea96b4e7c0fcbc))
+
 ## [11.29.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.28.0...v11.29.0) (2025-03-07)
 
 
