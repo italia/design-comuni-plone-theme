@@ -1,5 +1,23 @@
 # Changelog
 
+## [12.0.0-alpha.41](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.40...v12.0.0-alpha.41) (2025-03-24)
+
+
+### Bug Fixes
+
+* blockquote render ([9cf846d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9cf846d864f6c28ee550c80f3b1f98d45839e8bf))
+* document cards layout for ct persona ([#921](https://github.com/RedTurtle/design-comuni-plone-theme/issues/921)) ([88259a9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/88259a9183e92d63e7c3d5417d5bf873f6c7e304))
+* focus of buttons + focus of inputs + contrast of buttons ([#916](https://github.com/RedTurtle/design-comuni-plone-theme/issues/916)) ([2a38718](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2a3871834076a9cbe01e39c41c943aa97a5e3161))
+* handle slash in search params in url regex ([#914](https://github.com/RedTurtle/design-comuni-plone-theme/issues/914)) ([6b23b55](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6b23b557d8bbd25b4fb80551aee20a8870387c77))
+* link view redirects when user cannot edit, also redirects server side ([#919](https://github.com/RedTurtle/design-comuni-plone-theme/issues/919)) ([2f2fcc7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2f2fcc75b3f3c45839881bc7c591c26842c6c4ff))
+* restored original end of assignment label ([#911](https://github.com/RedTurtle/design-comuni-plone-theme/issues/911)) ([dc564db](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dc564db4b05082b122fedeaf18be975f58aba0e0))
+* title link margin with no category + title style and bg gradient ([#918](https://github.com/RedTurtle/design-comuni-plone-theme/issues/918)) ([2c772bb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2c772bbf3edd8f298fea2fea4e1c6a56c9a93060))
+
+
+### Documentation
+
+* updated publiccode and release log ([2c61feb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2c61feb44a4e566b0e25b3938aad8dc30b31c1cd))
+
 ## [12.0.0-alpha.40](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.39...v12.0.0-alpha.40) (2025-03-07)
 
 
