@@ -90,6 +90,9 @@ const CardWithSlideUpTextTemplate = (props) => {
                   href={isEditMode ? '#' : null}
                   key={index}
                   data-element={id_lighthouse}
+                  className={cx('title-link', {
+                    'auto-margin-link': !category && !date,
+                  })}
                 >
                   <h3
                     className={cx('title', {
