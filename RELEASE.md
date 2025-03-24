@@ -41,15 +41,11 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.29.1 (24/03/2025)
 
 ### Migliorie
 
 - Il CT Collegamento identifica meglio i permessi dell'utente e di conseguenza il reindirizzamento automatico è più preciso.
-
-### Novità
-
-- ...
 
 ### Fix
 
