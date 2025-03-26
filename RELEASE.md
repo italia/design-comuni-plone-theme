@@ -41,7 +41,7 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.29.2 (26/03/2025)
 
 ### Fix
 
