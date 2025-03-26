@@ -1,5 +1,17 @@
 
 
+## [11.29.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.29.1...v11.29.2) (2025-03-26)
+
+
+### Bug Fixes
+
+* rollback volto-blocks-editor to a compatible version, fix volto-blocks-editor text block is always slate in it's block chooser ([#924](https://github.com/RedTurtle/design-comuni-plone-theme/issues/924)) ([95aadac](https://github.com/RedTurtle/design-comuni-plone-theme/commit/95aadac3e8561f65dc03b6de03a4a44bd99e64f4))
+
+
+### Documentation
+
+* updated publiccode and release log ([e057a1c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e057a1cc2394a175d45c40992f95401cf82d1b37))
+
 ## [11.29.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.29.0...v11.29.1) (2025-03-24)
 
 
