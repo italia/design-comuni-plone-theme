@@ -333,20 +333,6 @@ export default function applyConfig(voltoConfig) {
         component: SiteSettingsExtras,
       },
     ],
-    'volto-blocks-widget': {
-      allowedBlocks: [
-        ...(config.settings['volto-blocks-widget']?.allowedBlocks ?? []).filter(
-          (block) => block !== 'maps',
-        ),
-        'break',
-        'testo_riquadro_semplice',
-        'testo_riquadro_immagine',
-        'rssBlock',
-        //se si aggiunge un nuovo blocco, verificare che in edit non ci siano bottoni che provocano il submit della form. Se succede, gestirli con e.prevenDefault() e.stopPropagation().
-      ],
-
-      showRestricted: false,
-    },
 
     'volto-gdpr-privacy': {
       ...config.settings['volto-gdpr-privacy'],
@@ -384,6 +370,24 @@ export default function applyConfig(voltoConfig) {
     },
     videoAllowExternalsDefault: false,
     showTrasparenzaFields: false,
+  };
+  // Moved outside as config.settings.defaultBlockType keeps default value (slate) until object spread is concluded
+  config.settings['volto-blocks-widget'] = {
+    ...config.settings['volto-blocks-widget'],
+    allowedBlocks: [
+      ...(config.settings['volto-blocks-widget']?.allowedBlocks ?? []).filter(
+        (block) => !['maps', 'text', 'slate'].includes(block),
+      ),
+      'break',
+      'testo_riquadro_semplice',
+      'testo_riquadro_immagine',
+      'rssBlock',
+      config.settings.defaultBlockType,
+      //se si aggiunge un nuovo blocco, verificare che in edit non ci siano bottoni che provocano il submit della form. Se succede, gestirli con e.prevenDefault() e.stopPropagation().
+      // Se sono bottoni semantic basta mettere type="button"
+    ],
+
+    showRestricted: false,
   };
 
   config.settings.nonContentRoutes = config.settings.nonContentRoutes.filter(
