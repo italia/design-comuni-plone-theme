@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione x.x.x (x/x/x)
+
+### Novità
+
+- E' ora possibile nascondere il titolo del sito nella testa del sito, spuntando l'apposita opzione del Pannello di contorllo del Sito.
+
 ## Versione 11.29.2 (26/03/2025)
 
 ### Fix
