@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione 12.0.0 (31/03/2025)
+
+### Migliorie
+
+- Aggiornato l'editor predefinito del sito, ora usa un motore più performante.
+
 ## Versione 11.29.2 (26/03/2025)
 
 ### Fix
