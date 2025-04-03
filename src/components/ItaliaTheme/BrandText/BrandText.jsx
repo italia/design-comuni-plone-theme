@@ -35,8 +35,16 @@ const BrandText = ({ mobile = false, subsite, getParent = false }) => {
     </React.Fragment>
   ));
 
+  const hide_title = SiteProperty({
+    property: 'hide_title',
+    defaultValue: false,
+    getValue: true,
+    getParent: false,
+  });
+  const visuallyHidden = !subsite && hide_title;
+
   return (
-    <div className="it-brand-text">
+    <div className={cx('it-brand-text', { 'visually-hidden': visuallyHidden })}>
       {title && <p className="no_toc h2">{title}</p>}
       {description && (
         <p className={cx('no_toc h3', { 'd-none d-md-block': !mobile })}>
