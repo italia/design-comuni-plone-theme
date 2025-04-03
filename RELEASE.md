@@ -55,6 +55,7 @@
 
 - I campi link accettano url contenenti un "/" e altre parti di link dopo un carattere di tipo "#".
 - Il filtro di testo dei blocchi ricerca è ora dotato di una label che lo rende accessibile.
+- Risolti dei problemi nella ricorrenza mensile del widget delle ricorrenze all'interno del CT Evento.
 
 ## Versione 11.29.2 (26/03/2025)
 
