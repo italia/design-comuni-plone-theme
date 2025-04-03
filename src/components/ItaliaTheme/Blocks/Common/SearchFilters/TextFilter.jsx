@@ -8,10 +8,14 @@ const messages = defineMessages({
   },
 });
 
-const TextFilter = ({ value, id, onChange, placeholder }) => {
+const TextFilter = ({ value, id, onChange, placeholder, blockID }) => {
   const intl = useIntl();
+
   return (
     <div className="me-lg-3 my-2 my-lg-1 filter-wrapper text-filter">
+      <label htmlFor={`${blockID}-${id}`} className="visually-hidden">
+        {placeholder}
+      </label>
       <input
         type="text"
         placeholder={
@@ -22,6 +26,7 @@ const TextFilter = ({ value, id, onChange, placeholder }) => {
           onChange(id, e.target.value ?? '');
         }}
         autocomplete="off"
+        id={`${blockID}-${id}`}
       />
     </div>
   );
