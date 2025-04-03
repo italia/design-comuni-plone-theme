@@ -53,7 +53,7 @@
 
 ### Fix
 
-- ...
+- I campi link accettano url contenenti un "/" e altre parti di link dopo un carattere di tipo "#".
 
 ## Versione X.X.X (dd/mm/yyyy)
 

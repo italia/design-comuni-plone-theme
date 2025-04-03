@@ -128,5 +128,15 @@ describe('FormValidation', () => {
         }),
       ).toEqual({});
     });
+    it('validates url with fragment containing a slash', () => {
+      formData.url = 'https://plone.org/Plone#fragment/more';
+      expect(
+        FormValidation.validateFieldsPerFieldset({
+          schema,
+          formData,
+          formatMessage,
+        }),
+      ).toEqual({});
+    });
   });
 });

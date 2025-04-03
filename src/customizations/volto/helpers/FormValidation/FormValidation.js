@@ -109,7 +109,7 @@ const widgetValidation = {
           '(\\:\\d+)?' + // optional port
           '(\\/[-a-z\\d%_.~+]*)*' + // path
           '(\\?[;&a-z\\d%_.~+\\/=-]*)?' + // validate query string
-          '(\\#[-a-z\\d_]*)?$', // validate fragment locator
+          '(\\#[-a-z\\d\\/_]*)?$', // validate fragment locator
         'i',
       );
       const isValid = urlRegex.test(urlValue);
