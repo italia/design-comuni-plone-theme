@@ -49,7 +49,7 @@
 
 ### Novità
 
-- ...
+- È ora possibile nascondere il titolo nella testata del sito, spuntando l'apposita opzione del Pannello di controllo del Sito.
 
 ### Fix
 

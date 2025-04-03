@@ -4,7 +4,7 @@ import { useIntl } from 'react-intl';
 import { SiteProperty } from 'volto-site-settings';
 import { getSiteProperty } from 'design-comuni-plone-theme/helpers';
 
-const BrandText = ({ mobile = false }) => {
+const BrandText = ({ mobile = false, subsite }) => {
   const intl = useIntl();
   let title = SiteProperty({
     property: 'site_title',
@@ -27,8 +27,16 @@ const BrandText = ({ mobile = false }) => {
     </React.Fragment>
   ));
 
+  const hide_title = SiteProperty({
+    property: 'hide_title',
+    defaultValue: false,
+    getValue: true,
+    getParent: false,
+  });
+  const visuallyHidden = !subsite && hide_title;
+
   return (
-    <div className="it-brand-text">
+    <div className={cx('it-brand-text', { 'visually-hidden': visuallyHidden })}>
       {title && <div className="it-brand-title">{title}</div>}
       {description && (
         <div
