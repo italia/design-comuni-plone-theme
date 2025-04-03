@@ -49,7 +49,7 @@
 
 ### Novità
 
-- ...
+- Aggiunto alla persona le cartelle "Emolumenti complessivi percepiti a carico della finanza" e "Dichiarazione insussistenza cause di inconferibilità e incompatibilità" per la gestione dei suddetti allegati.
 
 ### Fix
 
