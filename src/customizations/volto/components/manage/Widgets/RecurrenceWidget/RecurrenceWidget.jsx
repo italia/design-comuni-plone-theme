@@ -628,7 +628,9 @@ class RecurrenceWidget extends Component {
     const byweekday =
       this.state?.rruleSet?.rrules().length > 0
         ? this.state.rruleSet.rrules()[0].origOptions.byweekday
-        : null;
+        : formValues.byweekday
+          ? formValues.byweekday
+          : null;
     const currWeekday = this.getWeekday(moment().day() - 1);
     const currMonth = moment().month() + 1;
 
