@@ -77,11 +77,11 @@ export const FILE_FORMATS = {
     format_name: 'Excel',
   },
   'application/vnd.ms-powerpoint': {
-    icon: { lib: 'far', name: 'file-ppt' },
+    icon: { lib: 'far', name: 'file-powerpoint' },
     format_name: 'PowerPoint',
   },
   'application/vnd.openxmlformats-officedocument.presentationml.presentation': {
-    icon: { lib: 'far', name: 'file-ppt' },
+    icon: { lib: 'far', name: 'file-powerpoint' },
     format_name: 'PowerPoint',
   },
   'text/xml': {
