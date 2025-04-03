@@ -53,7 +53,7 @@
 
 ### Fix
 
-- ...
+- I campi link accettano url contenenti un "/" e altre parti di link dopo un carattere di tipo "#".
 
 ## Versione 11.29.2 (26/03/2025)
 
