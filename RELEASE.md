@@ -41,7 +41,7 @@
 - ...
  -->
  
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.30.0 (04/04/2025)
 
 ### Migliorie
 
