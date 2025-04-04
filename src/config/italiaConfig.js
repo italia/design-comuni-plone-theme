@@ -68,6 +68,7 @@ import {
   FALLBACK_IMAGE_SRC,
   FALLBACK_IMAGE_SRC_MAX_W,
 } from 'design-comuni-plone-theme/helpers/images';
+import ItaliaTeaserBody from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Teaser/ItaliaTeaserBody';
 
 const ReleaseLog = loadable(
   () => import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
@@ -520,6 +521,9 @@ export default function applyConfig(voltoConfig) {
     BlockExtraTags: { component: () => null },
     Image: {
       component: ImageWithErrors,
+    },
+    Teaser: {
+      component: ItaliaTeaserBody,
     },
   };
   config.registerComponent({

@@ -177,6 +177,7 @@ msgid "Content"
 msgstr "Contenuto"
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Contenuto in primo piano
 msgid "Content in evidence"
 msgstr "Contenuto in primo piano"
@@ -373,6 +374,7 @@ msgstr "L'evento non si terrà nelle seguenti date"
 msgid "Link more"
 msgstr "Link ad altro"
 
+#: components/ItaliaTheme/Blocks/Teaser/schema
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 # defaultMessage: Link a
 msgid "Link to"
@@ -380,12 +382,14 @@ msgstr "Link a"
 
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Link ad altro
 msgid "LinkMore"
 msgstr "Link ad altro"
 
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Testo per il link ad altro
 msgid "Linkto title"
 msgstr "Titolo per il link ad altro"
@@ -523,6 +527,11 @@ msgstr "Piccolo"
 msgid "Play slider"
 msgstr "Seleziona per riprodurre"
 
+#: components/ItaliaTheme/Blocks/Teaser/ItaliaTeaserBody
+# defaultMessage: Please choose an existing content as source for this element
+msgid "Please choose an existing content as source for this element"
+msgstr "Per favore, seleziona un contenuto esistente come sorgente per questo elemento."
+
 #: components/ItaliaTheme/Pagination/PaginationItem
 # defaultMessage: Pagina precedente
 msgid "Previous page"
@@ -629,6 +638,11 @@ msgstr "Blocco Tabella"
 # defaultMessage: Table color inverted
 msgid "Table color inverted"
 msgstr "Inverti i colori della tabella"
+
+#: overrideTranslations
+# defaultMessage: Teaser
+msgid "Teaser"
+msgstr "Contenuto in primo piano"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/ContactsBlock/Block/EditBlock
@@ -1179,6 +1193,7 @@ msgstr "Mostra lo sfondo del blocco"
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Colore di sfondo
 msgid "bg_color"
 msgstr "Colore di sfondo"
@@ -1390,6 +1405,7 @@ msgstr "Arancione"
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Primario
 msgid "color_primary"
 msgstr "Colore primario"
@@ -1400,6 +1416,7 @@ msgid "color_success"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Trasparente
 msgid "color_transparent"
 msgstr "Trasparente"
@@ -2812,6 +2829,7 @@ msgid "modulo_formati_alternativi"
 msgstr "Formati alternativi"
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 # defaultMessage: undefined
@@ -3819,6 +3837,7 @@ msgid "share"
 msgstr "Condividi"
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Mostra la data
 msgid "show_date"
 msgstr "Mostra la data"
@@ -3890,6 +3909,7 @@ msgid "show_pointer_list"
 msgstr "Mostra elenco puntato"
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra la sezione
 msgid "show_section"
@@ -3907,6 +3927,7 @@ msgid "show_topics"
 msgstr "Mostra gli argomenti"
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra il tipo
 msgid "show_type"

@@ -70,6 +70,7 @@ import CalloutView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks
 import CalloutEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Callout/Edit';
 
 import { cloneBlock } from 'design-comuni-plone-theme/helpers/blocks';
+import { italiaTeaserSchemaEnhancer } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Teaser/schema';
 
 const italiaBlocks = {
   highlitedContent: {
@@ -79,8 +80,8 @@ const italiaBlocks = {
     group: 'homePage',
     view: HighlightedContentView,
     edit: HighlightedContentEdit,
-    restricted: false,
-    mostUsed: true,
+    restricted: true,
+    mostUsed: false,
     security: {
       addPermission: [],
       view: [],
@@ -384,11 +385,11 @@ const italiaBlocks = {
 };
 
 const getItaliaBlocks = (config) => {
-  delete config.blocks.blocksConfig.teaser;
   config.blocks.blocksConfig.gridBlock.allowedBlocks =
     config.blocks.blocksConfig.gridBlock.allowedBlocks.filter(
       (item) => !['teaser'].includes(item),
     );
+  config.blocks.blocksConfig.teaser.schemaEnhancer = italiaTeaserSchemaEnhancer;
   return italiaBlocks;
 };
 export default getItaliaBlocks;

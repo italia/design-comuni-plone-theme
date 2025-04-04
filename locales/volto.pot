@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-03-11T16:06:49.599Z\n"
+"POT-Creation-Date: 2025-04-04T13:47:56.109Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -179,6 +179,7 @@ msgid "Content"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Contenuto in primo piano
 msgid "Content in evidence"
 msgstr ""
@@ -375,6 +376,7 @@ msgstr ""
 msgid "Link more"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Teaser/schema
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 # defaultMessage: Link a
 msgid "Link to"
@@ -382,12 +384,14 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Link ad altro
 msgid "LinkMore"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Testo per il link ad altro
 msgid "Linkto title"
 msgstr ""
@@ -525,6 +529,11 @@ msgstr ""
 msgid "Play slider"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Teaser/ItaliaTeaserBody
+# defaultMessage: Please choose an existing content as source for this element
+msgid "Please choose an existing content as source for this element"
+msgstr ""
+
 #: components/ItaliaTheme/Pagination/PaginationItem
 # defaultMessage: Pagina precedente
 msgid "Previous page"
@@ -630,6 +639,11 @@ msgstr ""
 #: overrideTranslations
 # defaultMessage: Table color inverted
 msgid "Table color inverted"
+msgstr ""
+
+#: overrideTranslations
+# defaultMessage: Teaser
+msgid "Teaser"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
@@ -1181,6 +1195,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Colore di sfondo
 msgid "bg_color"
 msgstr ""
@@ -1392,6 +1407,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Primario
 msgid "color_primary"
 msgstr ""
@@ -1402,6 +1418,7 @@ msgid "color_success"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Trasparente
 msgid "color_transparent"
 msgstr ""
@@ -2814,6 +2831,7 @@ msgid "modulo_formati_alternativi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 # defaultMessage: undefined
@@ -3821,6 +3839,7 @@ msgid "share"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Mostra la data
 msgid "show_date"
 msgstr ""
@@ -3892,6 +3911,7 @@ msgid "show_pointer_list"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra la sezione
 msgid "show_section"
@@ -3909,6 +3929,7 @@ msgid "show_topics"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/Teaser/schema
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra il tipo
 msgid "show_type"

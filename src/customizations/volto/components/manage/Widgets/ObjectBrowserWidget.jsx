@@ -184,7 +184,7 @@ export class ObjectBrowserWidgetComponent extends Component {
       // add item
       // Check if we want to filter the attributes of the selected item
       let resultantItem = item;
-      if (this.props.selectedItemAttrs) {
+      if (this.props.selectedItemAttrs?.length > 0) {
         const allowedItemKeys = [
           ...this.props.selectedItemAttrs,
           // Add the required attributes for the widget to work

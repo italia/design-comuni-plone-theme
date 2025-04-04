@@ -128,4 +128,9 @@ defineMessages({
     id: 'Divide each row into separate cells',
     defaultMessage: 'Add border to inner columns',
   },
+  // teaser block
+  teaser: {
+    id: 'Teaser',
+    defaultMessage: 'Teaser',
+  },
 });
