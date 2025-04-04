@@ -66,6 +66,7 @@ import CountDownBlockView from 'design-comuni-plone-theme/components/ItaliaTheme
 import CountDownBlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/Edit';
 
 import { cloneBlock } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
+import { italiaTeaserSchemaEnhancer } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Teaser/schema';
 
 const italiaBlocks = {
   highlitedContent: {
@@ -75,8 +76,8 @@ const italiaBlocks = {
     group: 'homePage',
     view: HighlightedContentView,
     edit: HighlightedContentEdit,
-    restricted: false,
-    mostUsed: true,
+    restricted: true,
+    mostUsed: false,
     security: {
       addPermission: [],
       view: [],
@@ -363,11 +364,11 @@ const italiaBlocks = {
 };
 
 const getItaliaBlocks = (config) => {
-  delete config.blocks.blocksConfig.teaser;
   config.blocks.blocksConfig.gridBlock.allowedBlocks =
     config.blocks.blocksConfig.gridBlock.allowedBlocks
       .filter((item) => !['slate', 'teaser'].includes(item))
       .concat(['text']);
+  config.blocks.blocksConfig.teaser.schemaEnhancer = italiaTeaserSchemaEnhancer;
   return italiaBlocks;
 };
 export default getItaliaBlocks;

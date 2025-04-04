@@ -1,14 +1,15 @@
 import getItemIcon_extend from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/common/common_extend';
 
+const type_icons = {
+  Servizio: 'it-settings',
+  UnitaOrganizzativa: 'it-pa',
+  Documento: 'it-file',
+  'News Item': 'it-note',
+  Event: 'it-calendar',
+};
 const getItemIcon = (item) => {
-  const type_icons = {
-    Servizio: 'it-settings',
-    UnitaOrganizzativa: 'it-pa',
-    Documento: 'it-file',
-    'News Item': 'it-note',
-    Event: 'it-calendar',
-  };
-  let icon = type_icons[item['@type']] || 'it-pa'; //default-icon
+  if (!item) return;
+  let icon = item['@type'] ? type_icons[item['@type']] || 'it-pa' : 'it-pa'; //default-icon
 
   if (item['@type'] === 'Pagina Argomento') {
     icon = item.icona ? item.icona : icon;
