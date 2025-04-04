@@ -1,5 +1,29 @@
 # Changelog
 
+## [12.1.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0...v12.1.0) (2025-04-04)
+
+
+### Features
+
+* optionally hide Site Title from control panel ([#929](https://github.com/RedTurtle/design-comuni-plone-theme/issues/929)) ([bc0e5e4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bc0e5e4cad57acaa120a61f63f41fe5c7cda1680))
+* teaser block integration, restricted highlitedContent block as deprecated now ([#935](https://github.com/RedTurtle/design-comuni-plone-theme/issues/935)) ([7c5cddd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7c5cddd4ae62ec1109e6d3516749bfee0576a432))
+
+
+### Bug Fixes
+
+* **a11y:** link file size ([#927](https://github.com/RedTurtle/design-comuni-plone-theme/issues/927)) ([10b3065](https://github.com/RedTurtle/design-comuni-plone-theme/commit/10b30655b12d994592e5f752b209bbd16585d5bb))
+* added label to TextFilter component ([#912](https://github.com/RedTurtle/design-comuni-plone-theme/issues/912)) ([68d0a49](https://github.com/RedTurtle/design-comuni-plone-theme/commit/68d0a4959a7724e70d25b0d2b06c75e55faac442))
+* changed byweekday parameter management in recurrence widget ([#937](https://github.com/RedTurtle/design-comuni-plone-theme/issues/937)) ([23db615](https://github.com/RedTurtle/design-comuni-plone-theme/commit/23db6156abf8a394839a8e4febb2f01fa36ef569))
+* changed icon name for powerpoint icon ([#933](https://github.com/RedTurtle/design-comuni-plone-theme/issues/933)) ([fb4e548](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fb4e548ae3e5a46417d295278a417b4205dd68c6))
+* regex for fragments in formValidation ([#926](https://github.com/RedTurtle/design-comuni-plone-theme/issues/926)) ([07b37d0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/07b37d0fb4649e83b95a9ad1414a57eb9102d6de))
+
+
+### Documentation
+
+* updated publiccode and release log ([eacd52f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/eacd52f8b1e1bf974b62deaa6a45419e383c00c9))
+* updated release.md ([#920](https://github.com/RedTurtle/design-comuni-plone-theme/issues/920)) ([04730ad](https://github.com/RedTurtle/design-comuni-plone-theme/commit/04730add9d5145f28ec68b0faa0e07d0da111536))
+* updated release.md ([#922](https://github.com/RedTurtle/design-comuni-plone-theme/issues/922)) ([f60ed04](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f60ed047900c39f3676c17ffd962e43ce26c5b1e))
+
 ## [12.0.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.0.0-alpha.42...v12.0.0) (2025-03-31)
 
 
