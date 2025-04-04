@@ -41,11 +41,12 @@
 - ...
  -->
  
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 12.1.0 (04/04/2025)
 
 ### Migliorie
 
 - Rimosso il limite al numero di persone collegabili nel campo "Assessori di riferimento" nel CT Unità Organizzativa.
+- a11y: Migliorata la lettura dei lettori di schermo della dimensione di un file: il separatore dei decimali è ora una virgola.
 
 ### Novità
 
@@ -57,19 +58,6 @@
 
 - I campi link accettano url contenenti un "/" e altre parti di link dopo un carattere di tipo "#".
 - Il filtro di testo dei blocchi ricerca è ora dotato di una label che lo rende accessibile.
-
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- a11y: Migliorata la lettura dei lettori di schermo della dimensione di un file: il separatore dei decimali è ora una virgola.
-
-### Novità
-
-- È ora possibile nascondere il titolo nella testata del sito, spuntando l'apposita opzione del Pannello di controllo del Sito.
-
-### Fix
-
 - Risolti dei problemi nella ricorrenza mensile del widget delle ricorrenze all'interno del CT Evento.
 
 ## Versione 12.0.0 (31/03/2025)
