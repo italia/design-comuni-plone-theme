@@ -41,14 +41,12 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
+## Versione 11.30.1 (14/04/2025)
 
 ### Fix
 
 - Sistemato select di ordinamento dei risultati di ricerca nella pagina di ricerca generale del sito, ora tramite url se si inserisce il parametro sort_on con valore "Date", "relevance" o "sortable_title" risultati di ricerca sono ordinati correttamente.
 
- 
 ## Versione 11.30.0 (04/04/2025)
 
 ### Migliorie
