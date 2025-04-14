@@ -1,5 +1,17 @@
 
 
+## [11.30.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.30.0...v11.30.1) (2025-04-14)
+
+
+### Bug Fixes
+
+* fixed sort_on from url param search view ([#939](https://github.com/RedTurtle/design-comuni-plone-theme/issues/939)) ([fc64b64](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fc64b64aa03a9af66f04a0dceacfaca7ed086a67))
+
+
+### Documentation
+
+* updated publiccode and release log ([82f239c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/82f239c70a91132d1a5dec5e082082478c6c8793))
+
 ## [11.30.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.29.2...v11.30.0) (2025-04-04)
 
 
