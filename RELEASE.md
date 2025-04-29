@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Sistemati i formati 'A pieno schermo' e 'Allineamento al centro' del blocco Video, l'immagine in anteprima dava problemi nella visualizzazione di video di Youtube.
+
 ## Versione 12.1.1 (14/04/2025)
 
 ### Fix
