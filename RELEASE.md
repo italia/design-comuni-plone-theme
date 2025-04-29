@@ -45,6 +45,7 @@
 
 ### Fix
 
+- Sistemato stile del blocco callout per la versione mobile.
 - Sistemati i formati 'A pieno schermo' e 'Allineamento al centro' del blocco Video, l'immagine in anteprima dava problemi nella visualizzazione di video di Youtube.
 
 ## Versione 12.1.1 (14/04/2025)
