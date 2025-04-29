@@ -43,8 +43,17 @@
 
 ## Versione X.X.X (dd/mm/yyyy)
 
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
 ### Fix
 
+- L'altezza delle immagini all'interno del blocco 'link solo immagini' è stata aumentata e non ha più un limite massimo. Ora tutte le card avranno la stessa altezza.
 - Sistemato stile del blocco callout per la versione mobile.
 - Sistemati i formati 'A pieno schermo' e 'Allineamento al centro' del blocco Video, l'immagine in anteprima dava problemi nella visualizzazione di video di Youtube.
 
