@@ -1,5 +1,20 @@
 # Changelog
 
+## [12.1.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.1.1...v12.1.2) (2025-05-07)
+
+
+### Bug Fixes
+
+* full width and center alignment of video block ([#941](https://github.com/RedTurtle/design-comuni-plone-theme/issues/941)) ([51b57da](https://github.com/RedTurtle/design-comuni-plone-theme/commit/51b57dac7fb120b29541a3c0261a3ec37397325e))
+* mobile style of callout block ([#944](https://github.com/RedTurtle/design-comuni-plone-theme/issues/944)) ([dcf13fa](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dcf13faaa6617ef8b654ddc3a3f3026c0f805217))
+* multiple location condition in query widget ([#943](https://github.com/RedTurtle/design-comuni-plone-theme/issues/943)) ([8177214](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8177214242124f8e7ebe2413d39085a5a5d293f7))
+* small blocks links image height ([#940](https://github.com/RedTurtle/design-comuni-plone-theme/issues/940)) ([37f3f4c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/37f3f4c6edc604d0b35dc01d895b71997a671b3e))
+
+
+### Documentation
+
+* updated publiccode and release log ([fe19c88](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fe19c887770a07d86b1d1e86aa7a3eec0eea0143))
+
 ## [12.1.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.1.0...v12.1.1) (2025-04-14)
 
 
