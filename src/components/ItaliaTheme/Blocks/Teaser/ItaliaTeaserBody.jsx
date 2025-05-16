@@ -139,9 +139,7 @@ const ItaliaTeaserBody = (props) => {
                       {data.title || content.title}
                     </ConditionalLink>
                   </CardTitle>
-                  {!data.hide_description && (
-                    <CardText>{content.description}</CardText>
-                  )}
+                  <CardText>{content.description||content.Description}</CardText>
                   <BlockExtraTags {...props} item={content} itemIndex={0} />
                   {content.tassonomia_argomenti &&
                     content.tassonomia_argomenti.length > 0 && (
