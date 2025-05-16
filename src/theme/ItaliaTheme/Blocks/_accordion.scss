@@ -63,6 +63,10 @@ $accordion-icon-color: #7fb2e5;
             font-size: 1.2rem;
             font-weight: bold;
 
+            strong {
+              font-weight: bold;
+            }
+
             & > div {
               width: 100%;
             }
