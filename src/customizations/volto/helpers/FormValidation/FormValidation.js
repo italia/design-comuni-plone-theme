@@ -107,8 +107,9 @@ const widgetValidation = {
           'localhost' + // OR localhost
           ')' +
           '(\\:\\d+)?' + // optional port
-          '(\\/[-a-z\\d%_.~+]*)*' + // path
-          '(\\?[;&a-z\\d%_.~+\\/=-]*)?' + // validate query string
+          '(\\/[-a-z\\d%_.~+@]*)*' + // path
+          // '(\\?[;&a-z\\d%_.~+\\/=-]*)?' + // validate query string
+          '(\\?.*)?' + // validate query string (relaxed)
           '(\\#[-a-z\\d\\/_]*)?$', // validate fragment locator
         'i',
       );
