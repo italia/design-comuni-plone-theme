@@ -53,7 +53,7 @@
 
 ### Fix
 
-- ...
+- Corretta la descrizione per la didascalia per l'immagine di testata dentro al CT Argomento.
 
 ## Versione 12.1.2 (07/05/2025)
 

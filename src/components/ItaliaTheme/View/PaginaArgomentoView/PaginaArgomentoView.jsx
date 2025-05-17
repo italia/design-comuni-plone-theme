@@ -140,8 +140,8 @@ const PaginaArgomentoView = ({ content }) => {
                 <div>
                   <Image
                     item={content}
-                    alt={content.caption ?? content.title}
-                    title={content.caption ?? content.title}
+                    alt={content.image_caption ?? content.title}
+                    title={content.image_caption ?? content.title}
                     key={content.image.download}
                     responsive={true}
                     sizes="100vw"
