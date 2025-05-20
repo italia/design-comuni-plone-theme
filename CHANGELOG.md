@@ -1,5 +1,20 @@
 
 
+## [11.30.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.30.2...v11.30.3) (2025-05-20)
+
+
+### Bug Fixes
+
+* added bold style to strong tag in accordion header ([#947](https://github.com/RedTurtle/design-comuni-plone-theme/issues/947)) ([66d4507](https://github.com/RedTurtle/design-comuni-plone-theme/commit/66d4507d2a3f09ffb94f934e7a362c152ce64ce2))
+* correct the alt and title on the Argomento header image ([#950](https://github.com/RedTurtle/design-comuni-plone-theme/issues/950)) ([a6ed6ca](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a6ed6ca6934d278f819738ffde2257bb888e9fa8))
+* spacings and alignments of listing blocks ([#945](https://github.com/RedTurtle/design-comuni-plone-theme/issues/945)) ([d8e27d8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d8e27d88179405d130a4d266a42b7d4944a371a7))
+* url validation for path and querystring with @, :, ... ([#952](https://github.com/RedTurtle/design-comuni-plone-theme/issues/952)) ([731affb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/731affbbd3dc5d4c2cc16a45b95749c91d51a265))
+
+
+### Documentation
+
+* updated publiccode and release log ([7300db4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7300db4f03c537e65bd130268da48e75ca3631e6))
+
 ## [11.30.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.30.1...v11.30.2) (2025-05-07)
 
 
