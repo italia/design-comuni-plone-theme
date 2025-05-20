@@ -25,7 +25,7 @@ const SmallBlockLinksTemplate = ({
 }) => {
   return (
     <div className="small-block-links">
-      <Container className="px-4">
+      <Container className="px-4 pt-3">
         {title && (
           <Row>
             <Col>
@@ -35,13 +35,13 @@ const SmallBlockLinksTemplate = ({
             </Col>
           </Row>
         )}
-        <Row className="items">
+        <Row className={cx('items', { 'pb-3': show_block_bg })}>
           {items.map((item, index) => {
             return (
               <Col
                 md="3"
                 key={item['@id']}
-                className="col-item col-sm-4 col-lg-2"
+                className="col-item col-sm-4 col-lg-2 my-3"
               >
                 <div className="center-image-card">
                   <UniversalLink

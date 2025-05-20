@@ -60,6 +60,7 @@ const RibbonCardTemplate = (props) => {
     show_icon = true,
     show_description = true,
     show_type,
+    show_block_bg,
     hide_dates,
     id_lighthouse,
     titleLine,
@@ -68,7 +69,7 @@ const RibbonCardTemplate = (props) => {
   } = props;
   return (
     <div className="ribbon-card-template">
-      <Container className="px-4">
+      <Container className="px-4 pt-3">
         {title && (
           <Row>
             <Col>
@@ -79,7 +80,7 @@ const RibbonCardTemplate = (props) => {
           </Row>
         )}
 
-        <Row className="mb-4">
+        <Row className={cx({ 'pb-3': show_block_bg })}>
           {items.map((item, index) => {
             const itemTitle = item.title || item.id;
             const showRibbon =
@@ -106,10 +107,10 @@ const RibbonCardTemplate = (props) => {
               item.parent?.['@type'] === 'Event' && item?.['@type'] === 'Event';
 
             return (
-              <Col lg={4} sm={12} key={index}>
+              <Col lg={4} sm={12} key={index} className="pb-3">
                 <Card
                   className={cx(
-                    `card-bg card-big align-items-top rounded shadow`,
+                    `card-bg card-big align-items-top rounded shadow mt-3`,
                     { show_detail_link: show_detail_link },
                   )}
                   noWrapper={false}

@@ -53,7 +53,7 @@ const ContentInEvidenceTemplate = (props) => {
 
   return (
     <div className="contentInEvidenceTemplate">
-      <Container>
+      <Container className="px-4 pt-3">
         {title && (
           <Row>
             <Col>
@@ -78,7 +78,7 @@ const ContentInEvidenceTemplate = (props) => {
             item?.parent?.['@type'] === 'Event' && item?.['@type'] === 'Event';
 
           return (
-            <Row key={item['@id']} className="content-in-evidence">
+            <Row key={item['@id']} className="content-in-evidence my-3">
               {hasImage && (
                 <Col lg={{ size: 6, offset: 1, order: 2 }}>
                   <ListingImage

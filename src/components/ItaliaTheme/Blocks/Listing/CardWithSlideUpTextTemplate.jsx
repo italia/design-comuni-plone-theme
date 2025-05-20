@@ -38,6 +38,7 @@ const CardWithSlideUpTextTemplate = (props) => {
     show_section,
     show_description = true,
     hide_dates = false,
+    show_block_bg,
     id_lighthouse,
     linkmore_id_lighthouse,
     titleLine,
@@ -46,7 +47,7 @@ const CardWithSlideUpTextTemplate = (props) => {
 
   return (
     <div className="card-slide-text-template">
-      <Container>
+      <Container className="px-4 mt-3">
         <div className="title">
           {title && (
             <h2 className={cx('', { 'title-bottom-line': titleLine })}>
@@ -54,7 +55,7 @@ const CardWithSlideUpTextTemplate = (props) => {
             </h2>
           )}
         </div>
-        <div className="grid mb-3 mt-5">
+        <div className={cx('grid pt-3', { 'mb-3': show_block_bg })}>
           {items.map((item, index) => {
             const image = getListingImageBackground(item, 'large');
             const category = getCategory(item, show_type, show_section, props);
@@ -70,7 +71,7 @@ const CardWithSlideUpTextTemplate = (props) => {
 
             return (
               <div
-                className="listing-item box bg-img"
+                className="listing-item box bg-img mb-2"
                 style={
                   image && {
                     backgroundImage: `url(${image})`,

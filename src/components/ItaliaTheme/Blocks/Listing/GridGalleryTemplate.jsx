@@ -37,7 +37,7 @@ const GridGalleryTemplate = ({
   const intl = useIntl();
   return (
     <div className="grid-gallery-template">
-      <Container className="px-4">
+      <Container className="px-4 pt-3">
         {title && (
           <Row>
             <Col>
@@ -53,7 +53,7 @@ const GridGalleryTemplate = ({
             {intl.formatMessage(messages.maxItemsExceeded)}
           </Alert>
         )}
-        <div className="grid-gallery-grid">
+        <div className="grid-gallery-grid my-3 pb-3">
           {items.map((item, index) => {
             let image = ListingImage({
               item,

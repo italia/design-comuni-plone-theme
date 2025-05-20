@@ -22,7 +22,7 @@ const InEvidenceTemplateSkeleton = ({
 }) => {
   return (
     <div className="in-evidence">
-      <Container className="px-4">
+      <Container className="px-4 pt-3">
         <div className="skeleton-template">
           {title && (
             <Row>
@@ -34,7 +34,7 @@ const InEvidenceTemplateSkeleton = ({
             </Row>
           )}
 
-          <div className="in-evidence-cards-wrapper mb-5">
+          <div className="in-evidence-cards-wrapper my-3 pb-2">
             {[0, 1, 2, 3, 4].map((i) => {
               return (
                 <Card key={i} className={cx('listing-item card-bg')}>

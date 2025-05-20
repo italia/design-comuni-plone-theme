@@ -9,7 +9,7 @@ const SmallBlockLinksTemplateSkeleton = ({
 }) => {
   return (
     <div className="small-block-links">
-      <Container className="px-4">
+      <Container className="px-4 pt-3">
         <div className="skeleton-template">
           {title && (
             <Row>

@@ -21,8 +21,8 @@ const BandiInEvidenceTemplateSkeleton = ({
   return (
     <div className={'bandi-in-evidence public-ui'}>
       <div className="full-width">
-        <Container className="listing-container">
-          <div className="skeleton-template ">
+        <Container className="px-4 pt-3">
+          <div className="skeleton-template">
             {title && (
               <Row>
                 <Col>
@@ -33,10 +33,10 @@ const BandiInEvidenceTemplateSkeleton = ({
               </Row>
             )}
 
-            <div className="bandi-in-evidence-cards-wrapper mb-5">
+            <div className="bandi-in-evidence-cards-wrapper mt-2 mb-4">
               {[0, 1, 2, 3, 4, 5].map((i) => {
                 return (
-                  <Card key={i} className="listing-item card-bg">
+                  <Card key={i} className="listing-item card-bg mt-2">
                     <CardBody>
                       <CardTitle tag="h4" className="title">
                         -

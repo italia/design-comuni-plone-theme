@@ -24,8 +24,8 @@ const CardWithImageTemplate = (props) => {
   } = props;
 
   return (
-    <div className="card-with-image-template">
-      <Container className="px-4">
+    <div className="card-with-image-template my-3">
+      <Container className="px-4 pt-3">
         {title && (
           <Row>
             <Col>

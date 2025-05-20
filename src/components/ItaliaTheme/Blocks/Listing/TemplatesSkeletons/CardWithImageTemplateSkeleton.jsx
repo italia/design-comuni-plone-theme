@@ -25,8 +25,8 @@ const CardWithImageTemplateSkeleton = ({
   full_width = true,
 }) => {
   return (
-    <div className="card-with-image-template">
-      <Container className="px-4">
+    <div className="card-with-image-template my-3">
+      <Container className="px-4 pt-3">
         <div className="skeleton-template">
           {title && (
             <Row>

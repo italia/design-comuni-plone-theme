@@ -36,7 +36,7 @@ const AttachmentCardTemplate = ({
   const intl = useIntl();
 
   return (
-    <Container className="px-4">
+    <Container className="px-4 pt-3">
       <div className="simple-card-compact-template">
         {title && (
           <h2
