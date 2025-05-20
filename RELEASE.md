@@ -55,6 +55,7 @@
 
 - I titoli degli elementi del blocco Accordion hanno ora tutti lo stesso stile.
 - Corretta la descrizione per la didascalia per l'immagine di testata dentro al CT Argomento.
+- Uniformato le varie spaziature e allineamenti dei blocchi Elenco.
 
 ## Versione 11.30.2 (07/05/2025)
 

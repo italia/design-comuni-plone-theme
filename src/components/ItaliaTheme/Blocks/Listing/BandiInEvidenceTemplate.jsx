@@ -69,7 +69,7 @@ const BandiInEvidenceTemplate = ({
   const intl = useIntl();
   return (
     <div className="bandi-in-evidence">
-      <Container className="px-4">
+      <Container className="px-4 pt-3">
         {title && (
           <Row>
             <Col>
@@ -84,11 +84,11 @@ const BandiInEvidenceTemplate = ({
             </Col>
           </Row>
         )}
-        <div className="bandi-in-evidence-cards-wrapper mb-5">
+        <div className="bandi-in-evidence-cards-wrapper mt-2 mb-4">
           {items.map((item, index) => {
             const listingText = <ListingText item={item} />;
             return (
-              <Card key={index} className={cx('listing-item card-bg', '')}>
+              <Card key={index} className="listing-item card-bg mt-2">
                 <CardBody>
                   <CardTitle tag="h3" className="title">
                     <UniversalLink

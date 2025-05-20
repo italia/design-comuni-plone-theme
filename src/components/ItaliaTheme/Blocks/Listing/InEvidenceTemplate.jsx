@@ -61,7 +61,7 @@ const InEvidenceTemplate = (props) => {
 
   return (
     <div className="in-evidence">
-      <Container className="px-4">
+      <Container className="px-4 pt-3">
         {title && (
           <Row>
             <Col>
@@ -76,7 +76,7 @@ const InEvidenceTemplate = (props) => {
             </Col>
           </Row>
         )}
-        <div className="in-evidence-cards-wrapper mb-5">
+        <div className="in-evidence-cards-wrapper my-3 pb-2">
           {items.map((item, index) => {
             const icon = show_icon ? getItemIcon(item) : null;
             const date = hide_dates

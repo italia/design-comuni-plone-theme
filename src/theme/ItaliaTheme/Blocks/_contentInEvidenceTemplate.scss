@@ -42,6 +42,11 @@
     }
   }
 
+  .public-ui > :not(.bg-light) .content-in-evidence:nth-of-type(2n) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   @media (min-width: #{map-get($grid-breakpoints, lg)}) {
     .content-in-evidence:nth-of-type(2n) {
       .order-lg-2 {

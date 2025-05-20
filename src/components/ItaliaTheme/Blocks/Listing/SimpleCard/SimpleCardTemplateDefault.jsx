@@ -113,7 +113,7 @@ const SimpleCardTemplateDefault = (props) => {
       )}
 
       <div
-        className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3"
+        className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 my-3"
         id={resultsUID + '_results'}
       >
         {items.map((item, index) => (

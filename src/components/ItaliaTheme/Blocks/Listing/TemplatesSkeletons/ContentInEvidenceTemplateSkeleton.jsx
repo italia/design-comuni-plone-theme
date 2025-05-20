@@ -22,7 +22,7 @@ const ContentInEvidenceTemplateSkeleton = ({
 }) => {
   return (
     <div className="contentInEvidence">
-      <Container>
+      <Container className="px-4 pt-3">
         <div className="skeleton-template">
           {title && (
             <Row>
@@ -36,7 +36,7 @@ const ContentInEvidenceTemplateSkeleton = ({
 
           {[0].map((i) => {
             return (
-              <Row key={i}>
+              <Row key={i} className="my-3">
                 <Col lg={{ size: 6, offset: 1, order: 2 }}>
                   <div className="img-responsive-wrapper item-image">
                     <div className="img-responsive">

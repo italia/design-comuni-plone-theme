@@ -14,7 +14,7 @@ const GridGalleryTemplateSkeleton = ({
 }) => {
   return (
     <div className="grid-gallery-template">
-      <Container className="px-4">
+      <Container className="px-4 pt-3">
         <div className="skeleton-template">
           {title && (
             <Row>
@@ -24,7 +24,7 @@ const GridGalleryTemplateSkeleton = ({
             </Row>
           )}
 
-          <div className="grid-gallery-grid">
+          <div className="grid-gallery-grid my-3 pb-3">
             {[0, 1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} className={cx('grid-gallery-item', `item-${i % 7}`)}>
                 <UniversalLink href="#">

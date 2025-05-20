@@ -20,14 +20,14 @@ const CardWithSlideUpTextTemplateSkeleton = ({
 
   return (
     <div className="card-slide-text-template">
-      <Container>
+      <Container className="px-4 mt-3">
         <div className="title">{title && <h2>{title}</h2>}</div>
-        <div className="grid mb-3 mt-5">
+        <div className="grid pt-3">
           {[0, 1, 2].map((i) => {
             return (
               <UniversalLink
                 href="#"
-                className="listing-item box bg-img"
+                className="listing-item box bg-img mb-2"
                 key={i}
               >
                 <div className="bg-gradient"></div>

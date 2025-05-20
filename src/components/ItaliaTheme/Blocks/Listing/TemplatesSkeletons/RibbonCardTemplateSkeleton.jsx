@@ -28,7 +28,7 @@ const RibbonCardTemplateSkeleton = ({
 }) => {
   return (
     <div className="ribbon-card-template">
-      <Container className="px-4">
+      <Container className="px-4 pt-3">
         <div className="skeleton-template">
           {title && (
             <Row>
@@ -46,7 +46,7 @@ const RibbonCardTemplateSkeleton = ({
                 <Col lg={4} sm={12} key={i}>
                   <Card
                     className={cx(
-                      `card-bg card-big align-items-top rounded shadow`,
+                      `card-bg card-big align-items-top rounded shadow mt-3`,
                       { show_detail_link: show_detail_link },
                     )}
                     noWrapper={false}
