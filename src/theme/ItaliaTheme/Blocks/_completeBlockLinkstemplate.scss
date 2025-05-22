@@ -3,6 +3,10 @@
     text-decoration: none;
   }
 
+  .row {
+    row-gap: 22px;
+  }
+
   .image-container {
     display: flex;
     overflow: hidden;
