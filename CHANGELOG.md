@@ -1,5 +1,17 @@
 
 
+## [11.30.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.30.3...v11.30.4) (2025-05-22)
+
+
+### Bug Fixes
+
+* added a gap between the lines if the completeBlockLinks has 2+ lines of content ([#953](https://github.com/RedTurtle/design-comuni-plone-theme/issues/953)) ([1b7bf1a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1b7bf1aba25c36c1db5f016d924e7f2e9a5910e1))
+
+
+### Documentation
+
+* updated publiccode and release log ([248b2fe](https://github.com/RedTurtle/design-comuni-plone-theme/commit/248b2fec08c86c1380a488e79495b91b0e7ca30c))
+
 ## [11.30.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.30.2...v11.30.3) (2025-05-20)
 
 
