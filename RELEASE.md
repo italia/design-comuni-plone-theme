@@ -41,22 +41,13 @@
 - ...
  -->
 
-## Versione 11.30.3 (20/05/2025)
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
+## Versione 11.30.4 (22/05/2025)
 
 ### Fix
 
-- Spazio aggiunto tra le righe se il blocco ‘completeBlockLinks’ ha più di due righe di contenuto.
+- Spazio aggiunto tra le righe se la variazione "Blocco link completo" ha più di due righe di contenuto.
 
-## Versione 12.1.3 (20/05/2025)
+## Versione 11.30.3 (20/05/2025)
 
 ### Fix
 
