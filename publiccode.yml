@@ -10,9 +10,9 @@ categories:
 dependsOn:
   open:
     - name: nodejs
-      versionMin: '16'
+      versionMin: '20'
     - name: Python
-      versionMin: '3.8'
+      versionMin: '3.11'
     - name: Docker
       versionMin: '18.03'
       optional: true
