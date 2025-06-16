@@ -1,23 +1,6 @@
 .bandi-in-evidence {
-  .bandi-in-evidence-cards-wrapper {
-    display: -ms-grid;
-    display: grid;
-    gap: 1.3rem;
-    -ms-grid-columns: 1fr 1.3rem 1fr 1.3rem 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    .read-more a.read-more {
-      flex-direction: row;
-    }
-  }
-
   .card-wrapper {
     min-height: 340px;
-
-    &:first-child {
-      grid-column: 1;
-      grid-row: 1;
-    }
 
     .listing-item {
       align-items: normal;
@@ -28,6 +11,7 @@
         justify-content: space-between;
         padding: 2.5rem;
         padding-bottom: 0rem;
+        word-break: break-word;
       }
     }
   }
@@ -43,33 +27,6 @@
       font-weight: 600;
       letter-spacing: normal;
       text-decoration: none;
-    }
-  }
-
-  // smartphone
-  @media (max-width: #{map-get($grid-breakpoints, sm)}) {
-    .bandi-in-evidence-cards-wrapper {
-      .card-wrapper {
-        width: 100%;
-        margin: 0px;
-      }
-      display: block;
-      height: 100%;
-    }
-  }
-
-  // tablet
-  .bandi-in-evidence-cards-wrapper {
-    @media (min-width: #{map-get($grid-breakpoints, md)}) and  (max-width: #{map-get($grid-breakpoints, xl)}) {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-
-    @media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)}) {
-      gap: 1rem;
-    }
-
-    @media (min-width: #{map-get($grid-breakpoints, sm)}) and (max-width: #{map-get($grid-breakpoints, md)}) {
-      display: block !important;
     }
   }
 
@@ -123,17 +80,10 @@
       bottom: 0;
       padding-top: 0.75rem;
 
-      @media (max-width: #{map-get($grid-breakpoints, sm)}) {
-        display: flex;
-        align-items: center;
-        font-size: 0.77778rem;
-        font-weight: bold;
-        letter-spacing: 0.9px;
-        text-transform: uppercase;
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        display: block;
+        text-align: right;
       }
-    }
-    @media (max-width: #{map-get($grid-breakpoints, sm)}) {
-      margin-top: 0;
     }
   }
 
