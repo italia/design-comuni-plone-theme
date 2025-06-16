@@ -37,21 +37,48 @@ defineMessages({
     id: 'rrule_weekday',
     defaultMessage: 'giorno feriale',
   },
+  //---- Volto-form-block ----//
   reset: {
-    //volto-form-block
     id: 'form_reset',
     defaultMessage: 'Ricomincia',
   },
   legend_required: {
-    //volto-form-block
     id: 'legend_required',
     defaultMessage: 'I campi contrassegnati da (*) sono obbligatori.',
   },
   default_cancel_label: {
-    //volto-form-block
     id: 'form_default_cancel_label',
     defaultMessage: 'Annulla',
   },
+  is_empty: { id: 'condition_is_empty', defaultMessage: 'È vuoto' },
+  is_not_empty: {
+    id: 'condition_is_not_empty',
+    defaultMessage: 'Non è vuoto',
+  },
+  is_equal_to: { id: 'condition_is_equal_to', defaultMessage: 'È uguale a' },
+  is_not_equal_to: {
+    id: 'condition_is_not_equal_to',
+    defaultMessage: 'Non è uguale a',
+  },
+  contains: { id: 'condition_contains', defaultMessage: 'Contiene' },
+  not_contains: {
+    id: 'condition_not_contains',
+    defaultMessage: 'Non contiene',
+  },
+  greater_than: {
+    id: 'condition_greater_than',
+    defaultMessage: 'È maggiore di',
+  },
+  less_than: { id: 'condition_less_than', defaultMessage: 'È minore di' },
+  greater_or_equal: {
+    id: 'condition_greater_or_equal',
+    defaultMessage: 'È maggiore o uguale',
+  },
+  less_or_equal: {
+    id: 'condition_less_or_equal',
+    defaultMessage: 'È minore o uguale',
+  },
+  //---- end Volto-form-block ----//
   toggleMenu: {
     id: 'toggle-menu',
     defaultMessage: '{action} il menu',

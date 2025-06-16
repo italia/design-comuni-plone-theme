@@ -1457,6 +1457,56 @@ msgstr "Compensations"
 msgid "competenze"
 msgstr "Compétences"
 
+#: overrideTranslations
+# defaultMessage: Contiene
+msgid "condition_contains"
+msgstr "Contient"
+
+#: overrideTranslations
+# defaultMessage: È maggiore o uguale
+msgid "condition_greater_or_equal"
+msgstr "Il est supérieur ou égal à"
+
+#: overrideTranslations
+# defaultMessage: È maggiore di
+msgid "condition_greater_than"
+msgstr "C'est plus grand que"
+
+#: overrideTranslations
+# defaultMessage: È vuoto
+msgid "condition_is_empty"
+msgstr "C'est vide"
+
+#: overrideTranslations
+# defaultMessage: È uguale a
+msgid "condition_is_equal_to"
+msgstr "C'est la même chose que"
+
+#: overrideTranslations
+# defaultMessage: Non è vuoto
+msgid "condition_is_not_empty"
+msgstr "Ce n'est pas vide"
+
+#: overrideTranslations
+# defaultMessage: Non è uguale a
+msgid "condition_is_not_equal_to"
+msgstr "Ce n'est pas la même chose que"
+
+#: overrideTranslations
+# defaultMessage: È minore o uguale
+msgid "condition_less_or_equal"
+msgstr "Il est inférieur ou égal à"
+
+#: overrideTranslations
+# defaultMessage: È minore di
+msgid "condition_less_than"
+msgstr "C'est moins que"
+
+#: overrideTranslations
+# defaultMessage: Non contiene
+msgid "condition_not_contains"
+msgstr "Ne contient pas"
+
 #: components/ItaliaTheme/View/PersonaView/PersonaContatti
 # defaultMessage: Contatti
 msgid "contacts"
