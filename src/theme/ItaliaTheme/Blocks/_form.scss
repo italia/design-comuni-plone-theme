@@ -6,8 +6,8 @@
       @media (max-width: #{map-get($grid-breakpoints, md)}) {
         .form-group {
           display: flex;
-          flex-direction: column;
           max-width: 100%;
+          flex-direction: column;
 
           label {
             position: relative;
@@ -71,6 +71,7 @@
   .volto-subblocks-wrapper,
   .form-field {
     max-width: 100%;
+
     .single-block {
       .dragsubblock {
         top: 0.3rem;
@@ -276,6 +277,22 @@
 .public-ui .form-control:disabled + label,
 .public-ui .form-control[readonly] + label {
   @extend .active;
+}
+
+.cms-ui .ui.modal.modal_visibility_conditions {
+  .column.choice-actions {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.cms-ui .ui.page.modals.dimmer {
+  .ui.modal.modal_visibility_conditions {
+    .content {
+      min-height: 50vh;
+      overflow-y: auto;
+    }
+  }
 }
 
 .grecaptcha-badge {

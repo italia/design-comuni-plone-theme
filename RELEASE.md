@@ -49,6 +49,10 @@
 
 - Le immagini negli slider vengono ora caricate in modalità 'lazy', in modo da alleggerire il caricamento iniziale della pagina.
 
+### Novità
+
+- Blocco form aggiornato, ora è possibile rendere visibili i vari campi solo quando vengono soddisfatte determinate condizioni create dal redattore.
+
 ### Fix
 
 - Sistemata la dimensione delle card nella variazione Bandi del blocco elenco.
