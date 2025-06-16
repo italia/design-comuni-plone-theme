@@ -32,6 +32,7 @@ const Body = ({ data, children, nItems = 0, reactSlick }) => {
     prevArrow: <PrevArrow />,
     infinite: true,
     speed: 500,
+    lazyLoad: true,
     slidesToShow: nItems < 3 ? nItems : 3,
     slidesToScroll: 1,
     responsive: [

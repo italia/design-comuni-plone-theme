@@ -59,6 +59,7 @@ const Gallery = ({
       dots: true,
       infinite: true,
       speed: 500,
+      lazyLoad: true,
       slidesToShow: nItems < 3 ? nItems : 3,
       slidesToScroll: slideToScroll ?? 3,
       nextArrow: <SliderNextArrow intl={intl} />,

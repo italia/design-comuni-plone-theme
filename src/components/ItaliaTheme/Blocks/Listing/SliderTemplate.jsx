@@ -160,6 +160,7 @@ const SliderTemplate = ({
     infinite: true,
     autoplay: autoplay,
     speed: 500,
+    lazyLoad: true,
     slidesToShow: nSlidesToShow,
     slidesToScroll: nSlidesToShow,
     autoplaySpeed: autoplay_speed * 1000,

@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione x.x.x (xx/xx/xx)
+
+### Migliorie
+
+- Le immagini negli slider vengono ora caricate in modalità 'lazy', in modo da alleggerire il caricamento iniziale della pagina.
+
 ## Versione 12.1.4 (22/05/2025)
 
 ### Fix

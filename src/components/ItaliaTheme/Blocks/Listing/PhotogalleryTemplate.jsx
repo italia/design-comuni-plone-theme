@@ -69,6 +69,7 @@ const PhotogalleryTemplate = ({
   const settings = {
     dots: true,
     infinite: true,
+    lazyLoad: true,
     autoplay: autoplay,
     speed: 500,
     slidesToShow: items.length < 3 ? items.length : 3,
@@ -160,8 +161,8 @@ const PhotogalleryTemplate = ({
                     items.length === 1
                       ? '1300'
                       : items.length === 2
-                      ? '650'
-                      : '450'
+                        ? '650'
+                        : '450'
                   }px`,
                   noWrapLink: true,
                   showDefault: true,
