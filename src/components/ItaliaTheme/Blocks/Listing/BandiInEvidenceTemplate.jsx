@@ -84,155 +84,160 @@ const BandiInEvidenceTemplate = ({
             </Col>
           </Row>
         )}
-        <div className="bandi-in-evidence-cards-wrapper mt-2 mb-4">
+
+        <Row className={cx({ 'pb-3': show_block_bg })}>
           {items.map((item, index) => {
             const listingText = <ListingText item={item} />;
             return (
-              <Card key={index} className="listing-item card-bg mt-2">
-                <CardBody>
-                  <CardTitle tag="h3" className="title">
-                    <UniversalLink
-                      className="bando-title"
-                      item={!isEditMode ? item : null}
-                      href={isEditMode ? '#' : null}
-                    >
-                      {item.title || item.id}
-                    </UniversalLink>
-                  </CardTitle>
-
-                  {show_description && listingText && (
-                    <div className="bando-description">{listingText}</div>
-                  )}
-                  <div className="bando-lower-section">
-                    <div className="bando-dati mb-2">
-                      {/* Ente */}
-                      {show_ente && item.ente_bando?.length > 0 && (
-                        <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
-                          <div className="bando-dati-label me-2">
-                            {intl.formatMessage(messages.ente)}:
-                          </div>
-                          <span className="bando-dati-date">
-                            {item.ente_bando.map((ente, i) => (
-                              <span>
-                                {ente}
-                                {i < item.ente_bando.length - 1 ? ', ' : ''}
-                              </span>
-                            ))}
-                          </span>
-                        </span>
-                      )}
-
-                      {/* Tipologia */}
-                      {show_tipologia && item?.tipologia_bando && (
-                        <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
-                          <div className="bando-dati-label me-2">
-                            {intl.formatMessage(messages.tipologia)}:
-                          </div>
-                          <span className="bando-dati-date">
-                            {item.tipologia_bando}
-                          </span>
-                        </span>
-                      )}
-
-                      {/* Pubblicazione */}
-                      {item.effective && (
-                        <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
-                          <div className="bando-dati-label me-2">
-                            {intl.formatMessage(messages.pubblicazione)}:
-                          </div>
-                          <span className="bando-dati-date">
-                            {viewDate(
-                              intl.locale,
-                              item.effective,
-                              'DD-MM-YYYY',
-                            )}
-                          </span>
-                        </span>
-                      )}
-
-                      {/* Scadenza */}
-                      {item.scadenza_bando && (
-                        <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
-                          <div className="bando-dati-label me-2">
-                            {intl.formatMessage(messages.scadenza)}:
-                          </div>
-                          <span className="bando-dati-date">
-                            {item.scadenza_bando &&
-                              viewDate(
-                                intl.locale,
-                                item.scadenza_bando,
-                                'DD-MM-YYYY',
-                              )}
-                          </span>
-                        </span>
-                      )}
-
-                      {/* Chiusura procedimento */}
-                      {item.chiusura_procedimento_bando && (
-                        <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
-                          <div className="bando-dati-label me-2">
-                            {intl.formatMessage(messages.chiusura_procedimento)}
-                            :
-                          </div>
-                          <span className="bando-dati-date">
-                            {item.chiusura_procedimento_bando &&
-                              viewDate(
-                                intl.locale,
-                                item.chiusura_procedimento_bando,
-                                'DD-MM-YYYY',
-                              )}
-                          </span>
-                        </span>
-                      )}
-
-                      {/* Stato */}
-                      {item?.bando_state?.length > 0 && (
-                        <span className="d-flex align-items-baseline bando-dati-info">
-                          <div className="bando-dati-label me-3">
-                            {intl.formatMessage(messages.stato)}:
-                          </div>
-
-                          <span className="bando-dati-date">
-                            <div
-                              className={cx('bando-state', {
-                                open: item.bando_state?.includes('open'),
-                                closed: item.bando_state?.includes('closed'),
-                                scheduled:
-                                  item.bando_state?.includes('scheduled'),
-                                'in-progress':
-                                  item.bando_state?.includes('inProgress'),
-                              })}
-                            >
-                              <BandoStatus content={item} />
-                            </div>
-                          </span>
-                        </span>
-                      )}
-
-                      {/* Note aggiornamenti */}
-                      {item.update_note &&
-                        (item.bando_state?.includes('open') ||
-                          item.bando_state?.includes('inProgress')) && (
-                          <span className="d-flex bando-note">
-                            <strong>{item.update_note}</strong>
-                          </span>
-                        )}
-                    </div>
-                    <div className="read-more">
-                      <CardReadMore
-                        iconName="it-arrow-right"
-                        tag={UniversalLink}
+              <Col lg={4} sm={6} xs={12} key={index} className="pb-3">
+                <Card key={index} className="listing-item card-bg mt-2">
+                  <CardBody>
+                    <CardTitle tag="h3" className="title">
+                      <UniversalLink
+                        className="bando-title"
                         item={!isEditMode ? item : null}
                         href={isEditMode ? '#' : null}
-                        text={intl.formatMessage(messages.vedi)}
-                      />
+                      >
+                        {item.title || item.id}
+                      </UniversalLink>
+                    </CardTitle>
+
+                    {show_description && listingText && (
+                      <div className="bando-description">{listingText}</div>
+                    )}
+                    <div className="bando-lower-section">
+                      <div className="bando-dati mb-2">
+                        {/* Ente */}
+                        {show_ente && item.ente_bando?.length > 0 && (
+                          <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
+                            <div className="bando-dati-label me-2">
+                              {intl.formatMessage(messages.ente)}:
+                            </div>
+                            <span className="bando-dati-date">
+                              {item.ente_bando.map((ente, i) => (
+                                <span>
+                                  {ente}
+                                  {i < item.ente_bando.length - 1 ? ', ' : ''}
+                                </span>
+                              ))}
+                            </span>
+                          </span>
+                        )}
+
+                        {/* Tipologia */}
+                        {show_tipologia && item?.tipologia_bando && (
+                          <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
+                            <div className="bando-dati-label me-2">
+                              {intl.formatMessage(messages.tipologia)}:
+                            </div>
+                            <span className="bando-dati-date">
+                              {item.tipologia_bando}
+                            </span>
+                          </span>
+                        )}
+
+                        {/* Pubblicazione */}
+                        {item.effective && (
+                          <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
+                            <div className="bando-dati-label me-2">
+                              {intl.formatMessage(messages.pubblicazione)}:
+                            </div>
+                            <span className="bando-dati-date">
+                              {viewDate(
+                                intl.locale,
+                                item.effective,
+                                'DD-MM-YYYY',
+                              )}
+                            </span>
+                          </span>
+                        )}
+
+                        {/* Scadenza */}
+                        {item.scadenza_bando && (
+                          <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
+                            <div className="bando-dati-label me-2">
+                              {intl.formatMessage(messages.scadenza)}:
+                            </div>
+                            <span className="bando-dati-date">
+                              {item.scadenza_bando &&
+                                viewDate(
+                                  intl.locale,
+                                  item.scadenza_bando,
+                                  'DD-MM-YYYY',
+                                )}
+                            </span>
+                          </span>
+                        )}
+
+                        {/* Chiusura procedimento */}
+                        {item.chiusura_procedimento_bando && (
+                          <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
+                            <div className="bando-dati-label me-2">
+                              {intl.formatMessage(
+                                messages.chiusura_procedimento,
+                              )}
+                              :
+                            </div>
+                            <span className="bando-dati-date">
+                              {item.chiusura_procedimento_bando &&
+                                viewDate(
+                                  intl.locale,
+                                  item.chiusura_procedimento_bando,
+                                  'DD-MM-YYYY',
+                                )}
+                            </span>
+                          </span>
+                        )}
+
+                        {/* Stato */}
+                        {item?.bando_state?.length > 0 && (
+                          <span className="d-flex align-items-baseline bando-dati-info">
+                            <div className="bando-dati-label me-3">
+                              {intl.formatMessage(messages.stato)}:
+                            </div>
+
+                            <span className="bando-dati-date">
+                              <div
+                                className={cx('bando-state', {
+                                  open: item.bando_state?.includes('open'),
+                                  closed: item.bando_state?.includes('closed'),
+                                  scheduled:
+                                    item.bando_state?.includes('scheduled'),
+                                  'in-progress':
+                                    item.bando_state?.includes('inProgress'),
+                                })}
+                              >
+                                <BandoStatus content={item} />
+                              </div>
+                            </span>
+                          </span>
+                        )}
+
+                        {/* Note aggiornamenti */}
+                        {item.update_note &&
+                          (item.bando_state?.includes('open') ||
+                            item.bando_state?.includes('inProgress')) && (
+                            <span className="d-flex bando-note">
+                              <strong>{item.update_note}</strong>
+                            </span>
+                          )}
+                      </div>
+                      <div className="read-more">
+                        <CardReadMore
+                          iconName="it-arrow-right"
+                          tag={UniversalLink}
+                          item={!isEditMode ? item : null}
+                          href={isEditMode ? '#' : null}
+                          text={intl.formatMessage(messages.vedi)}
+                        />
+                      </div>
                     </div>
-                  </div>
-                </CardBody>
-              </Card>
+                  </CardBody>
+                </Card>
+              </Col>
             );
           })}
-        </div>
+        </Row>
 
         <ListingLinkMore
           title={linkTitle}
