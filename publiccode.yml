@@ -234,17 +234,21 @@ url: 'https://github.com/italia/design-comuni-plone-theme'
 usedBy:
   - ASP Comuni Modenesi Area Nord
   - Azienda Ospedaliero-Universitaria di Ferrara
-  - Azienda USL di Ferrara
+  - Azienda Specialem Cavriago Servizi
   - Biblioteche Pianura Est
   - ASP Comuni Modenesi Area Nord
+  - ASP Circondario Imolese
   - Azienda Ospedaliero-Universitaria di Ferrara
-  - Azienda USL di Ferrara
+  - AUSL Romagna
   - Biblioteca comunale di Imola
   - Biblioteche Pianura Est
   - Camera di Commercio dell'Umbria
-  - Camera di Commercio di Reggio Emilia
+  - Camera di Commercio di Padova
+  - Camera di Commercio dell'Emilia
   - Comune della Spezia
+  - Comune di Bastiglia
   - Comune di Bibbiano
+  - Comune di Bomporto
   - Comune di Borgo Tossignano
   - Comune di Campegine
   - Comune di Camposanto
@@ -253,8 +257,11 @@ usedBy:
   - Comune di Casalfiumanese
   - Comune di Castel del Rio
   - Comune di Castel Guelfo di Bologna
+  - Comune di Castelfranco Emilia
   - Comune di Cavezzo
   - Comune di Cavriago
+  - Comune di Cavriago - Centro culturale Mavarta
+  - Comune di Cavriago - Centro culturale Multiplo
   - Comune di Concordia sul Secchia
   - Comune di Dozza
   - Comune di Gattatico
@@ -264,22 +271,32 @@ usedBy:
   - Comune di Formigine
   - Comune di Frassinoro
   - Comune di Imola
+  - Comune di Imola - siti tematici della rete civica
+  - Comune di Lignano Sabbiadoro
   - Comune di Maranello
   - Comune di Medolla
   - Comune di Mirandola
+  - Comune di Mirandola - Centro la Raganella
   - Comune di Modena
+  - Comune di Modena - siti tematici della rete civica
   - Comune di Montecchio Emilia
   - Comune di Montefiorino
   - Comune di Mordano
+  - Comune di Nonantola
   - Comune di Novellara
   - Comune di Palagano
   - Comune di Parma
+  - Comune di Parma - siti tematici del Comune di Parma
   - Comune di Piacenza
   - Comune di Prignano
+  - Comune di Ravarino
   - Comune di Reggio Emilia
   - Comune di Rolo
+  - Comune di San Cesario sul Panaro
   - Comune di San Felice sul Panaro
   - Comune di San Lazzaro di Savena
+  - Comune di San Lazzaro di Savena - Mediateca
+  - Comune di San Lazzaro di Savena - Sportello Sociale
   - Comune di San Polo d'Enza
   - Comune di San Possidonio
   - Comune di San Prospero
@@ -288,12 +305,19 @@ usedBy:
   - Comune di Toscolano Maderno
   - Comune di Vaiano
   - Comune di Vernio
+  - Comune di Vibo Valentia
   - Comando Generale della Guardia di Finanza
   - NNB Ispra Ambiente
   - Nuovo Circondario Imolese
+  - Ospedali Galliera
   - Ospedali Galliera - Bilancio Sociale
   - Provincia di Pisa
+  - Provincia di Varese
+  - Regione Emilia-Romagna
+  - Regione Liguria - S3 Monitoraggio
+  - Unione Bassa Reggiana
   - Unione Comuni Distretto Ceramico
   - UCMAN (Unione dei Comuni Modenesi Area Nord)
+  - Unione Comuni del Sorbara
   - Unione Val d'Enza
   - Unione Val di Bisenzio
