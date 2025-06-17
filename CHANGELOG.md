@@ -1,5 +1,31 @@
 
 
+## [11.31.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.30.4...v11.31.0) (2025-06-17)
+
+
+### Features
+
+* added new feature of volto-form-block, conditions to show or hide fields ([#946](https://github.com/RedTurtle/design-comuni-plone-theme/issues/946)) ([b7c1d37](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b7c1d377d0bb16f2b32cee44704c273084fcef15))
+
+
+### Bug Fixes
+
+* card width of bandi template ([#955](https://github.com/RedTurtle/design-comuni-plone-theme/issues/955)) ([c3ee303](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c3ee303f780924a4e232be53686e1e4427ee42e2))
+
+
+### Maintenance
+
+* **deps:** bump brace-expansion from 1.1.11 to 1.1.12 ([#958](https://github.com/RedTurtle/design-comuni-plone-theme/issues/958)) ([101dac1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/101dac16f2efb0d3eebd17baaf4eabbf218f01ef))
+* lazyloading images in all slick slider ([#959](https://github.com/RedTurtle/design-comuni-plone-theme/issues/959)) ([0df0b28](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0df0b28602606a8a54be40be009ef90e697d2d18))
+
+
+### Documentation
+
+* nuovo logo ([#208](https://github.com/RedTurtle/design-comuni-plone-theme/issues/208)) ([64ba7d4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/64ba7d4ed182b19a7389cd24c07cf729a8ae356d))
+* **publiccode:** update usedBy ([#207](https://github.com/RedTurtle/design-comuni-plone-theme/issues/207)) ([484c174](https://github.com/RedTurtle/design-comuni-plone-theme/commit/484c17409acb76f52fa81d7e847e94d445136118))
+* updated publiccode ([bee5b60](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bee5b60dca1775db94ad4c33b837be040bb58f95))
+* updated publiccode and release log ([6bdbb36](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6bdbb36cf85f21d989c1128849f00ae16152cb64))
+
 ## [11.30.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.30.3...v11.30.4) (2025-05-22)
 
 
