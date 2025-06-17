@@ -1,5 +1,31 @@
 # Changelog
 
+## [12.2.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.1.4...v12.2.0) (2025-06-17)
+
+
+### Features
+
+* added new feature of volto-form-block, conditions to show or hide fields ([#946](https://github.com/RedTurtle/design-comuni-plone-theme/issues/946)) ([0be0271](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0be02710ae4c77bea35d0cdd81e5600ae3a80414))
+
+
+### Bug Fixes
+
+* card width of bandi template ([#955](https://github.com/RedTurtle/design-comuni-plone-theme/issues/955)) ([98518f5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/98518f52a566ee1e6623d03ce69a81fb2954f752))
+
+
+### Maintenance
+
+* **deps:** bump brace-expansion from 1.1.11 to 1.1.12 ([#958](https://github.com/RedTurtle/design-comuni-plone-theme/issues/958)) ([853b888](https://github.com/RedTurtle/design-comuni-plone-theme/commit/853b88876cdda2751f4e196d960d3ea6ecf246da))
+* lazyloading images in all slick slider ([#959](https://github.com/RedTurtle/design-comuni-plone-theme/issues/959)) ([46c1df8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/46c1df88a467d976e3128903cf10a791664352fc))
+* remove obsolete deployment step ([8dc263b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8dc263b069ee20006bb3958b6a0f2c7a8031b3e9))
+
+
+### Documentation
+
+* nuovo logo ([#208](https://github.com/RedTurtle/design-comuni-plone-theme/issues/208)) ([463a01d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/463a01d59c6bf72a18f34584dbad9e25a333395e))
+* **publiccode:** update usedBy ([#207](https://github.com/RedTurtle/design-comuni-plone-theme/issues/207)) ([c0dcb23](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c0dcb235feb4923cb6e9d3cecef1cf46b10d9993))
+* updated publiccode and release log ([7e67449](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7e67449aa992cbee59209078527ccc3ef5688f84))
+
 ## [12.1.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.1.3...v12.1.4) (2025-05-22)
 
 
