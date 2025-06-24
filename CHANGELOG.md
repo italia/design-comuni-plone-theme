@@ -1,3 +1,5 @@
+## [12.2.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.2.0...v12.2.1) (2025-06-24)
+
 # Changelog
 
 ## [12.2.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.1.4...v12.2.0) (2025-06-17)
