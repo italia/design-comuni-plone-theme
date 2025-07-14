@@ -1,6 +1,27 @@
+# Changelog
+
+## [12.2.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.2.1...v12.2.2) (2025-07-14)
+
+
+### Bug Fixes
+
+* adjusted link and blockquote colors inside the table block ([#964](https://github.com/RedTurtle/design-comuni-plone-theme/issues/964)) ([ba88fbb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ba88fbbe2449251b041d3d86fac2684a769c07a6))
+* style for fieldlabel removed and moved inside the addon ([#963](https://github.com/RedTurtle/design-comuni-plone-theme/issues/963)) ([957da5f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/957da5f5dce74fafef79fa827342959ce08fa2d3))
+* table toolbar + th text transform ([#965](https://github.com/RedTurtle/design-comuni-plone-theme/issues/965)) ([d6c3ef7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d6c3ef7d309497bb7237c2b87a5f790df109e9af))
+
+
+### Maintenance
+
+* **deps:** bump tar-fs from 2.1.1 to 2.1.3 ([#954](https://github.com/RedTurtle/design-comuni-plone-theme/issues/954)) ([4cdebcc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4cdebcc2b5cfa59a874f17ed20de9a9cc87e8012))
+
+
+### Documentation
+
+* updated publiccode and release log ([bf8f014](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bf8f01415a51ce36b1b0564a8dcd3a825c9f7e63))
+
 ## [12.2.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.2.0...v12.2.1) (2025-06-24)
 
-# Changelog
+
 
 ## [12.2.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.1.4...v12.2.0) (2025-06-17)
 
