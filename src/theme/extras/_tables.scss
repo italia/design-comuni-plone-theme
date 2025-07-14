@@ -49,6 +49,26 @@
 
   &.inverted {
     @extend .table-dark;
+    a {
+      color: color-contrast($primary);
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .blockquote,
+    .blockquote-card {
+      border-color: color-contrast($primary) !important;
+    }
+    .blockquote-card {
+      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+      &.dark {
+        background-color: color-contrast($primary);
+        color: $text-color;
+        a {
+          color: $link-color;
+        }
+      }
+    }
   }
 
   &:not(.inverted) {
