@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- La toolbar della tabella è stata riposizionata per non ostacolare la compilazione dei dati, e l'intestazione non forza le lettere maiuscole in modalità di Modifica.
+
 ## Versione 11.31.0 (17/06/2025)
 
 ### Migliorie
