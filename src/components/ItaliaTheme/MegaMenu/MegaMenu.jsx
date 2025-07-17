@@ -261,6 +261,7 @@ const MegaMenu = ({ item, pathname }) => {
           toggle={() => setMenuStatus(!menuStatus)}
         >
           <DropdownToggle
+            role="menuitem"
             aria-haspopup
             color="secondary"
             nav
