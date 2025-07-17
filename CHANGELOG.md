@@ -1,5 +1,17 @@
 # Changelog
 
+## [12.2.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.2.2...v12.2.3) (2025-07-17)
+
+
+### Bug Fixes
+
+* added role='menuitem' to links inside dropdown to fix menubar role hierarchy ([#967](https://github.com/RedTurtle/design-comuni-plone-theme/issues/967)) ([521460a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/521460a6477c1fc647a1a60a04111ed2db37381c))
+
+
+### Documentation
+
+* updated publiccode ([6b3ce2c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6b3ce2ce87761ec40c20960e53cc2166b65d5146))
+
 ## [12.2.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.2.1...v12.2.2) (2025-07-14)
 
 
