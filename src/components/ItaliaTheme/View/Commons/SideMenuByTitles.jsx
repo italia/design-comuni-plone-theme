@@ -20,11 +20,16 @@ const messages = defineMessages({
     id: 'index',
     defaultMessage: 'Indice della pagina',
   },
+  sideMenuNavigation: {
+    id: 'sideMenuNavigation',
+    defaultMessage: 'Navigazione della pagina',
+  },
 });
 
 const extractHeaders = (elements, intl) => {
   let item;
   let headers = [];
+
   for (var index = 0; index < elements.length; index++) {
     item = elements[index];
 
@@ -140,7 +145,10 @@ const SideMenuByTitles = ({ data, content_uid, index_title }) => {
 
   return headers?.length > 0 ? (
     <div className="sticky-wrapper navbar-wrapper page-side-menu">
-      <nav className="navbar it-navscroll-wrapper navbar-expand-lg">
+      <nav
+        className="navbar it-navscroll-wrapper navbar-expand-lg"
+        aria-label={intl.formatMessage(messages.sideMenuNavigation)}
+      >
         <div className="menu-wrapper">
           <div className="link-list-wrapper menu-link-list">
             <div className="accordion-wrapper">
@@ -151,20 +159,20 @@ const SideMenuByTitles = ({ data, content_uid, index_title }) => {
                     setIsNavOpen(!isNavOpen);
                   }}
                   aria-controls="side-menu-body"
+                  aria-expanded={isNavOpen}
                 >
-                  <h3>{index_title ?? intl.formatMessage(messages.index)}</h3>
+                  <h2 className="h3">
+                    {index_title ?? intl.formatMessage(messages.index)}
+                  </h2>
                 </AccordionHeader>
                 <div className="mb-3">
                   <Progress
                     value={progressValue > 0 ? 100 * progressValue : 0}
-                    role="progressbar"
+                    role="progressbar"                    
+                    aria-labelledby={`item-${activeSection}`}
                   />
                 </div>
-                <AccordionBody
-                  active={isNavOpen}
-                  id="side-menu-body"
-                  role="region"
-                >
+                <AccordionBody active={isNavOpen} id="side-menu-body">
                   <ul className="link-list" data-element="page-index">
                     {headers.map((item, i) => {
                       return (

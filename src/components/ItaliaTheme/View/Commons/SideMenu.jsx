@@ -176,7 +176,8 @@ const SideMenu = ({ data, content_uid }) => {
                 <div className="mb-3">
                   <Progress
                     value={progressValue > 0 ? 100 * progressValue : 0}
-                    role="progressbar"
+                    role="progressbar"                    
+                    aria-labelledby={`item-${activeSection}`}
                   />
                 </div>
                 <AccordionBody active={isNavOpen} id="side-menu-body">
