@@ -4014,6 +4014,7 @@ msgid "sideMenuIndex"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SideMenu
+#: components/ItaliaTheme/View/Commons/SideMenuByTitles
 # defaultMessage: Navigazione della pagina
 msgid "sideMenuNavigation"
 msgstr ""

@@ -3997,6 +3997,7 @@ msgid "sideMenuIndex"
 msgstr "Page index"
 
 #: components/ItaliaTheme/View/Commons/SideMenu
+#: components/ItaliaTheme/View/Commons/SideMenuByTitles
 # defaultMessage: Navigazione della pagina
 msgid "sideMenuNavigation"
 msgstr "Elements of the sidebar menu"
