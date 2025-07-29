@@ -8,7 +8,7 @@ const ListingImageWrapper = ({ children, item, noWrapLink }) => {
   return noWrapLink ? (
     children
   ) : (
-    <UniversalLink item={item} className="img-wrapper">
+    <UniversalLink item={item} className="img-wrapper" tabIndex="-1">
       {children}
     </UniversalLink>
   );
