@@ -40,6 +40,19 @@
 
 - ...
  -->
+ ## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Migliorata l'accessibilità nel blocco elenco Link solo Immagini, ora il focus si vede in tutte le immagini.
 
 ## Versione X.X.X (dd/mm/yyyy)
 
