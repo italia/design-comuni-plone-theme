@@ -56,6 +56,17 @@
 - ...
 
 ## Versione 11.31.1 (14/07/2025)
+-
+
+### Novità
+
+- ...
+
+### Fix
+
+- Rimossa la possibilità di raggiungere tramite Tab le immagini nei card quando sono link, evitando doppie letture del titolo.
+
+## Versione 12.2.2 (14/07/2025)
 
 ### Fix
 
