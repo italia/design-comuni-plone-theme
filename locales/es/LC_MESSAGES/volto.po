@@ -4239,6 +4239,46 @@ msgstr ""
 msgid "supported_by"
 msgstr "Con el apoyo de"
 
+#: config/Blocks/ListingOptions/tableTemplate
+# defaultMessage: Colore delle righe alternato
+msgid "table_variation_alternate_rows"
+msgstr ""
+
+#: config/Blocks/ListingOptions/tableTemplate
+# defaultMessage: Colonne della tabella
+msgid "table_variation_columns"
+msgstr ""
+
+#: config/Blocks/ListingOptions/tableTemplate
+# defaultMessage: Colonna
+msgid "table_variaton_column"
+msgstr ""
+
+#: config/Blocks/ListingOptions/tableTemplate
+# defaultMessage: Tipo di contenuto
+msgid "table_variaton_ct"
+msgstr ""
+
+#: config/Blocks/ListingOptions/tableTemplate
+# defaultMessage: Campo
+msgid "table_variaton_field"
+msgstr ""
+
+#: config/Blocks/ListingOptions/tableTemplate
+# defaultMessage: Titolo
+msgid "table_variaton_title"
+msgstr ""
+
+#: config/Blocks/ListingOptions/tableTemplate
+# defaultMessage: Titolo della colonna. Se vuoi, puoi modificare il titolo di default.
+msgid "table_variaton_title_description"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/TableTemplate
+# defaultMessage: Titolo
+msgid "tabletemplate_column_title"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/ContactLink
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 #: helpers/contentHelper
