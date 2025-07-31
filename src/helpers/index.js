@@ -63,3 +63,4 @@ export {
   useFallbackImageSrc,
   contentHasImage,
 } from 'design-comuni-plone-theme/helpers/images';
+export { getWidgetView } from 'design-comuni-plone-theme/helpers/getWidgetView';

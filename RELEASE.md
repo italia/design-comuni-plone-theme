@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- Nuovo tipo di blocco Elenco disponibile: Tabella
+
+### Fix
+
+- ...
+
 ## Versione 11.31.1 (14/07/2025)
 
 ### Fix

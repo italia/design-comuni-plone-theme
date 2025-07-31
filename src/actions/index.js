@@ -39,6 +39,7 @@ import {
   getSearchBandiFilters,
   GET_SEARCH_BANDI_FILTERS,
 } from './getSearchBandiFilters';
+import { getCTSchema, GET_CT_SCHEMA } from './getCTSchema';
 
 export {
   getSearchFilters,
@@ -62,4 +63,6 @@ export {
   getSearchBandiFilters,
   GET_SEARCH_BANDI_FILTERS,
   resetQuerystringResults,
+  getCTSchema,
+  GET_CT_SCHEMA,
 };

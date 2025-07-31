@@ -47,6 +47,8 @@ import CardWithSlideUpTextTemplateSkeleton from 'design-comuni-plone-theme/compo
 
 import AttachmentCardTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate';
 
+import TableTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TableTemplate.jsx';
+import TableTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/TableTemplateSkeleton';
 // import AmministrazioneTrasparenteTablesTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
 // import AmministrazioneTrasparenteTablesTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
 
@@ -67,6 +69,7 @@ import {
   addSmallBlockLinksTemplateOptions,
   addAttachmentCardTemplateOptions,
   cloneBlock,
+  addTableTemplateOptions,
 } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
 import { addLighthouseField } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
@@ -291,6 +294,21 @@ const italiaListingVariations = [
       addLinkMoreOptions(schema, formData, intl);
       return schema;
     },
+    cloneData: cloneBlock,
+  },
+  {
+    id: 'table',
+    isDefault: false,
+    title: 'Tabella',
+    template: TableTemplate,
+    skeleton: TableTemplateSkeleton,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      let pos = addDefaultOptions(schema, formData, intl);
+      addTableTemplateOptions(schema, formData, intl, pos);
+      addLinkMoreOptions(schema, formData, intl);
+      return schema;
+    },
+    fullobjects: true,
     cloneData: cloneBlock,
   },
   //  {
