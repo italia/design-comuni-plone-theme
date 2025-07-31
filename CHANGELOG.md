@@ -1,5 +1,31 @@
 
 
+## [11.32.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.31.2...v11.32.0) (2025-07-31)
+
+
+### Features
+
+* new listing and search variation - table ([#975](https://github.com/RedTurtle/design-comuni-plone-theme/issues/975)) ([4c687f9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4c687f900e3a0bac8321a80be4b44b558d4a09df))
+
+
+### Bug Fixes
+
+* **a11y:** avoided tabbing listing image and reading the item title twice ([#972](https://github.com/RedTurtle/design-comuni-plone-theme/issues/972)) ([3874b22](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3874b227356209d5bec5c8872652cc07324861fc))
+* **a11y:** fixed image focus of smallBlockLinkTemplate ([#974](https://github.com/RedTurtle/design-comuni-plone-theme/issues/974)) ([447bccb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/447bccb73b6f36489f3fd4c06c5a641988dc7a8f))
+* locales ([dc40868](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dc40868867d8560e0c8c02b6be614b0978ce1549))
+* progressbar a11y ([#966](https://github.com/RedTurtle/design-comuni-plone-theme/issues/966)) ([974feb8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/974feb85ceedae259a73f7ecdaa4de45f5732f4c))
+* sync HTML.jsx customization (lang in html tag) ([#968](https://github.com/RedTurtle/design-comuni-plone-theme/issues/968)) ([b37a21e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b37a21ef33f6c7a4af57feb01539eb1fd817c623))
+
+
+### Maintenance
+
+* updated i18n ([d7ea323](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d7ea32359d6c79f0b263f5835efd6755d7e5fe33))
+
+
+### Documentation
+
+* updated publiccode and release log ([4a905c0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4a905c047507b16cd0727fd2e2bf898564085513))
+
 ## [11.31.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.31.1...v11.31.2) (2025-07-17)
 
 
