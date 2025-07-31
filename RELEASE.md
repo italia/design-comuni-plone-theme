@@ -40,25 +40,8 @@
 
 - ...
  -->
- ## Versione X.X.X (dd/mm/yyyy)
 
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
-
-### Fix
-
-- Migliorata l'accessibilità nel blocco elenco Link solo Immagini, ora il focus si vede in tutte le immagini.
-
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
+## Versione 11.32.0 (31/07/2025)
 
 ### Novità
 
@@ -66,20 +49,10 @@
 
 ### Fix
 
-- ...
-
-## Versione 11.31.1 (14/07/2025)
--
-
-### Novità
-
-- ...
-
-### Fix
-
+- Migliorata l'accessibilità nel blocco elenco Link solo Immagini, ora il focus si vede in tutte le immagini.
 - Rimossa la possibilità di raggiungere tramite Tab le immagini nei card quando sono link, evitando doppie letture del titolo.
 
-## Versione 12.2.2 (14/07/2025)
+## Versione 11.31.1 (14/07/2025)
 
 ### Fix
 
