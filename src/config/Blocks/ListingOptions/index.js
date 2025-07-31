@@ -22,3 +22,4 @@ export { addCardWithSlideUpTextTemplateOptions } from 'design-comuni-plone-theme
 export { addPhotogalleryTemplateOptions } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/photogalleryTemplate';
 export { addSmallBlockLinksTemplateOptions } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/smallBlockLinksTemplate';
 export { addAttachmentCardTemplateOptions } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/attachmentCardTemplate';
+export { addTableTemplateOptions } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/tableTemplate';

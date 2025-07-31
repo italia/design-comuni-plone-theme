@@ -1,0 +1,46 @@
+.table-template {
+  table.table {
+    th {
+      vertical-align: top;
+    }
+    td {
+      background-color: #fff;
+    }
+
+    &,
+    p,
+    ul,
+    ul,
+    li,
+    ol {
+      font-size: 0.9rem;
+    }
+
+    .date-column {
+      min-width: 6.5rem;
+    }
+
+    ul.relations.widget {
+      list-style-type: none;
+      padding-left: 0;
+      li {
+        a {
+          .icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  + .pagination-wrapper {
+    .mt-5.pagination-wrapper {
+      margin-top: 0 !important;
+    }
+  }
+
+  .link-button .btn.btn-primary {
+    color: color-contrast($primary);
+    text-decoration: none;
+  }
+}

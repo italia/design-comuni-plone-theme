@@ -10,12 +10,20 @@ import MenuConfigurationForm from 'design-comuni-plone-theme/components/ItaliaTh
 import SecondaryMenuConfigurationForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm';
 import SubFooterConfigurationForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm';
 import SearchSectionsConfigurationWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget';
-import { defaultIconWidgetOptions } from 'design-comuni-plone-theme/helpers';
+import {
+  defaultIconWidgetOptions,
+  getWidgetView,
+} from 'design-comuni-plone-theme/helpers';
 import {
   ColorListWidget,
   PathFiltersWidget,
   LocationFiltersWidget,
   CanaleDigitaleWidget,
+  CTFieldsWidget,
+  CTTitleColumnWidget,
+  BlocksViewWidget,
+  PDCViewWidget,
+  DataGridWidget,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import LuoghiCorrelatiEventoWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/LuoghiCorrelatiEventoWidget';
 
@@ -87,6 +95,21 @@ const getItaliaWidgets = (config) => {
       path_filters: PathFiltersWidget,
       location_filter: LocationFiltersWidget,
       luoghi_correlati_evento: LuoghiCorrelatiEventoWidget,
+      ct_fields: CTFieldsWidget,
+      ct_title_column: CTTitleColumnWidget,
+    },
+    views: {
+      ...config.widgets.views,
+      getWidget: getWidgetView,
+      widget: {
+        ...config.widgets.views.widget,
+        blocks: BlocksViewWidget,
+        data_grid: DataGridWidget,
+      },
+      id: {
+        ...config.widgets.views.id,
+        value_punto_contatto: PDCViewWidget,
+      },
     },
   };
 };
