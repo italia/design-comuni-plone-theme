@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
@@ -226,6 +226,31 @@ const DateFilter = (props) => {
     }
   }, []);
 
+  const endDateInputRef = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const endDateInput = document.querySelector(
+        `#end-date-filter-${blockID}`,
+      );
+      if (endDateInput && !endDateInputRef.current) {
+        endDateInputRef.current = endDateInput;
+        endDateInput.addEventListener('blur', handleEndDateBlur);
+      }
+    }, 100);
+
+    return () => {
+      clearInterval(interval);
+      if (endDateInputRef.current) {
+        endDateInputRef.current.removeEventListener('blur', handleEndDateBlur);
+      }
+    };
+  }, []);
+
+  const handleEndDateBlur = () => {
+    setFocusedDateInput(null);
+  };
+
   return (
     <div className="me-lg-3 my-2 my-lg-1 filter-wrapper date-filter">
       <DateRangePicker
@@ -264,7 +289,7 @@ const DateFilter = (props) => {
         customCloseIcon={
           <Icon
             icon="it-close"
-            color="white"
+            color="black"
             title={intl.formatMessage(messages.clearDates)}
           />
         }
