@@ -51,6 +51,7 @@ const CardWithImageDefault = (props) => {
     natural_image_size = false,
     id_lighthouse,
     rrule,
+    title, // title of entire block
   } = props;
 
   const imagesToShow = set_four_columns ? 4 : 3;
@@ -124,10 +125,11 @@ const CardWithImageDefault = (props) => {
               </CardCategory>
             )}
             <CardTitle
-              tag="h3"
-              className={`${
-                isEventAppointment ? 'rassegna-appointment-title' : ''
-              }`}
+              tag={title ? 'h3' : 'h2'}
+              className={cx('', {
+                'rassegna-appointment-title': isEventAppointment,
+                h3: !title,
+              })}
             >
               <UniversalLink
                 item={!isEditMode ? item : null}

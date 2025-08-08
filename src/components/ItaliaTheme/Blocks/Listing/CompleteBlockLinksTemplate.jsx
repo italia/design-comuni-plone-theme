@@ -92,7 +92,12 @@ const CompleteBlockLinksTemplate = (props) => {
                       )}
                       <div>
                         <CardBody>
-                          <CardTitle tag="h3" className="text-secondary">
+                          <CardTitle
+                            tag={title ? 'h3' : 'h2'}
+                            className={cx('text-secondary', {
+                              h3: !title,
+                            })}
+                          >
                             {item.title}
                             {item['@type'] === 'Link' &&
                               !isInternalURL(

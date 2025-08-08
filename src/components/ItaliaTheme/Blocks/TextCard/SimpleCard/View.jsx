@@ -27,7 +27,7 @@ const TextCardView = ({ data, id, block }) => {
           tag="div"
         >
           <CardBody>
-            <CardTitle tag="h3" className="h4" id={id + '-title'}>
+            <CardTitle tag="h2" className="h4" id={id + '-title'}>
               {data.simple_card_title}
             </CardTitle>
             <hr />

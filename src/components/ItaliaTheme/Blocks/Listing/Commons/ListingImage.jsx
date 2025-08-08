@@ -32,7 +32,6 @@ const ListingImage = ({
             src={DefaultImageSVG}
             alt=""
             sizes={sizes}
-            aria-hidden={true}
             role="presentation"
             className="listing-image responsive"
             style={{
@@ -55,9 +54,9 @@ const ListingImage = ({
 
   let commonImageProps = {
     item,
-    'aria-hidden': imageProps.alt || item.title ? false : true,
+    'aria-hidden': imageProps.alt || imageCaption ? '' : true,
     alt: imageProps.alt ?? imageCaption ?? '',
-    role: imageProps.alt || item.title ? '' : 'presentation',
+    role: imageProps.alt || imageCaption ? '' : 'presentation',
     className,
     loading,
     responsive,

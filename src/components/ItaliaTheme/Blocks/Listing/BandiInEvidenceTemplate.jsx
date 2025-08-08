@@ -92,7 +92,7 @@ const BandiInEvidenceTemplate = ({
               <Col lg={4} sm={6} xs={12} key={index} className="pb-3">
                 <Card key={index} className="listing-item card-bg mt-2">
                   <CardBody>
-                    <CardTitle tag="h3" className="title">
+                    <CardTitle tag={title ? 'h3' : 'h2'} className="title">
                       <UniversalLink
                         className="bando-title"
                         item={!isEditMode ? item : null}

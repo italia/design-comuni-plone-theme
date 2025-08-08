@@ -55,7 +55,7 @@ const Edit = (props) => {
         >
           <CardBody>
             <div className="simple-text-card cms-ui">
-              <CardTitle tag="h3" className="h4">
+              <CardTitle tag="h2" className="h4">
                 <TextEditorWidget
                   {...otherProps}
                   showToolbar={false}

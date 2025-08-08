@@ -67,7 +67,12 @@ const SimpleCardTemplateCompact = ({
               </div>
             )}
             <CardBody>
-              <CardTitle tag="h3">
+              <CardTitle
+                tag={title ? 'h3' : 'h2'}
+                className={cx('', {
+                  h3: !title,
+                })}
+              >
                 <UniversalLink
                   item={!isEditMode ? item : null}
                   href={isEditMode ? '#' : null}
