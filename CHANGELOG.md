@@ -1,5 +1,22 @@
 # Changelog
 
+## [12.3.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.3.0...v12.3.1) (2025-08-08)
+
+
+### Bug Fixes
+
+* **a11y:** fixed titles and images attributes ([#973](https://github.com/RedTurtle/design-comuni-plone-theme/issues/973)) ([bd4cdd6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bd4cdd6bc4b417d1f0f1f6848e08ba346e0e4240))
+* added state to close the date picker modal after endDate loses focus (Tab exit) ([#981](https://github.com/RedTurtle/design-comuni-plone-theme/issues/981)) ([9329f0e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9329f0e0ecf8b2588e2b44aecd81f541b3333df4))
+* contentHasImage function + showImage conditions ([#985](https://github.com/RedTurtle/design-comuni-plone-theme/issues/985)) ([855779b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/855779bfdae49d87c87842a5632ef067d471c6f2))
+* image in template "Blocco link completo"  ([#971](https://github.com/RedTurtle/design-comuni-plone-theme/issues/971)) ([3622357](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3622357abdb17821cad69a17b7110b28db34ce2d))
+* improved link visibility on images within listing blocks ([#978](https://github.com/RedTurtle/design-comuni-plone-theme/issues/978)) ([2beaedc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2beaedce9c176f81cc399fb938835192b1aa90c9))
+* slate link deserializer convert <a> without href attribute into simple text ([#982](https://github.com/RedTurtle/design-comuni-plone-theme/issues/982)) ([f7acb30](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f7acb30b3513ff5e4c3dbbb16ba924eb2ef486c4))
+
+
+### Documentation
+
+* updated publiccode and release log ([598e3e2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/598e3e281838d3bd5124009ffbde811783281dc0))
+
 ## [12.3.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.2.3...v12.3.0) (2025-07-31)
 
 
