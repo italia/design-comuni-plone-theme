@@ -56,7 +56,11 @@
 - Ripristinata la funzionalità per mostrare tutte le immagini del blocco elenco o solo quelle della prima fila, se presenti.
 
 ## Versione 11.32.0 (31/07/2025)
+- Migliorata l'accessibilità rimuovendo la visibilità delle immagini di presentazione nei blocchi elenco.
+- Sistemata la semantica dei titoli nei blocchi elenco migliorando così l'accessibilità della pagina.
+- Migliorata la visualizzazione dei link sulle immagini nei blocchi elenco, rimosso testo non necessario con tipo e dimensione dei file
 - Sistemata la visualizzazione delle immagini all’interno della card del blocco Link completo quando sono in landscape.
+
 ## Versione 12.3.0 (31/07/2025)
 
 ### Novità

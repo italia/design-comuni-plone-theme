@@ -30,4 +30,22 @@
     padding-bottom: 15px;
     border-bottom: 1px solid #455b71;
   }
+
+  //* customizzazione: nascondere enhance-link quando è un'immagine
+  .card-with-image-template,
+  .in-evidence,
+  .contentInEvidenceTemplate,
+  .list-template {
+    .img-responsive-wrapper {
+      .enhance-link {
+        display: none;
+      }
+    }
+  }
+  .small-block-links,
+  .contentInEvidenceTemplate {
+    .enhance-link {
+      display: none;
+    }
+  }
 }
