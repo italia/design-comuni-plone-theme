@@ -62,10 +62,8 @@ const CardWithImageDefault = (props) => {
     : getEventRecurrenceMore(item, isEditMode);
   const listingText = show_description ? <ListingText item={item} /> : null;
 
-  const showImage = contentHasImage(
-    item,
-    index < imagesToShow || always_show_image,
-  );
+  const showImage =
+    contentHasImage(item) && (index < imagesToShow || always_show_image);
   const category = getCategory(item, show_type, show_section, props);
   const topics = show_topics ? item.tassonomia_argomenti : null;
 

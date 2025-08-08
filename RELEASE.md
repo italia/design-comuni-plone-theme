@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Ripristinata la funzionalità per mostrare tutte le immagini del blocco elenco o solo quelle della prima fila, se presenti.
+
 ## Versione 11.32.0 (31/07/2025)
 
 ### Novità
