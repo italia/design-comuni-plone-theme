@@ -41,15 +41,7 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
+## Versione 12.3.1 (08/08/2025)
 
 ### Fix
 
