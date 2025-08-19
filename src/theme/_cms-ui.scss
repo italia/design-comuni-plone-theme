@@ -152,6 +152,12 @@ body.cms-ui {
     }
   }
 
+  &.section-feedback-panel {
+    section#briciole {
+      display: none;
+    }
+  }
+
   .blocks-widget-container {
     .block.table .toolbar {
       top: -3.34rem;
