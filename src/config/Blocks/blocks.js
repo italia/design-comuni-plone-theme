@@ -228,6 +228,7 @@ const italiaBlocks = {
       addPermission: [],
       view: [],
     },
+    blockHasOwnFocusManagement: true,
   },
   testo_riquadro_immagine: {
     id: 'testo_riquadro_immagine',
@@ -245,6 +246,7 @@ const italiaBlocks = {
       view: [],
     },
     sidebarTab: 1,
+    blockHasOwnFocusManagement: true,
   },
   accordion: {
     id: 'accordion',
