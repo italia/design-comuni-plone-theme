@@ -137,6 +137,12 @@ body.cms-ui {
     }
   }
 
+  &.section-feedback-panel {
+    section#briciole {
+      display: none;
+    }
+  }
+
   .simple-text-editor-widget {
     .simple-text-input {
       display: inline-block;
