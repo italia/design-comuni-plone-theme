@@ -1649,6 +1649,26 @@ msgid "dateRangePicker_closeDatePicker"
 msgstr "Cerrar selector de fecha"
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+# defaultMessage: è selezionata
+msgid "dateRangePicker_dateIsSelected"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+# defaultMessage: è selezionata come data di fine
+msgid "dateRangePicker_dateIsSelectedAsEndDate"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+# defaultMessage: è selezionata come data di inizio
+msgid "dateRangePicker_dateIsSelectedAsStartDate"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+# defaultMessage: non disponibile
+msgid "dateRangePicker_dateIsUnavailable"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
 # defaultMessage: Tasto invio
 msgid "dateRangePicker_enterKey"
 msgstr "Tecla Enter"
@@ -1684,14 +1704,14 @@ msgid "dateRangePicker_jumpToPrevMonth"
 msgstr "Mueva hacia atrás para cambiar al mes anterior."
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
-# defaultMessage: Naviga indietro per interagire con il calendario e selezionare una data. Premi il pulsante 'punto interrogativo' per conoscere i tasti rapidi per modificare le date.
+# defaultMessage: Naviga indietro per interagire con il calendario e selezionare una data.
 msgid "dateRangePicker_keyboardBackwardNavigationInstructions"
-msgstr "Navegue hacia atrás para interactuar con el calendario y seleccione una fecha. Presiona la tecla del signo de interrogación para obtener los atajos de teclado para cambiar las fechas."
+msgstr "Navegue hacia atrás para interactuar con el calendario y seleccione una fecha."
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
-# defaultMessage: Naviga avanti per interagire con il calendario e selezionare una data. Premi il pulsante 'punto interrogativo' per conoscere i tasti rapidi per modificare le date.
+# defaultMessage: Naviga avanti per interagire con il calendario e selezionare una data.
 msgid "dateRangePicker_keyboardForwardNavigationInstructions"
-msgstr "Navegue hacia adelante para interactuar con el calendario y seleccione una fecha. Presiona la tecla del signo de interrogación para obtener los atajos de teclado para cambiar las fechas."
+msgstr "Navegue hacia adelante para interactuar con el calendario y seleccione una fecha."
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
 # defaultMessage: Tasti rapidi

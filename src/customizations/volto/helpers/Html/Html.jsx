@@ -12,7 +12,7 @@
  * - Remove link for manifest and svg/apple icons
  * - Aggiunto og:type website
  */
-  
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from '@plone/volto/helpers/Helmet/Helmet';
@@ -129,20 +129,23 @@ class Html extends Component {
             }}
           />
 
-          {/* 
-            * <link rel="icon" href="/favicon.ico" sizes="any" />
-            * <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-            * <link
-            * rel="apple-touch-icon"
-            * sizes="180x180"
-            * href="/apple-touch-icon.png"
-            * />
-            * <link rel="manifest" href="/site.webmanifest" /> 
-            */}
+          {/*
+           * <link rel="icon" href="/favicon.ico" sizes="any" />
+           * <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+           * <link
+           * rel="apple-touch-icon"
+           * sizes="180x180"
+           * href="/apple-touch-icon.png"
+           * />
+           * <link rel="manifest" href="/site.webmanifest" />
+           */}
 
           <meta property="og:type" content="website" />
           <meta name="generator" content="Plone 6 - https://plone.org" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           {process.env.NODE_ENV === 'production' && criticalCss && (
             <style
@@ -157,8 +160,8 @@ class Html extends Component {
               rel: !criticalCss
                 ? elem.props.rel
                 : elem.props.as === 'style'
-                ? 'prefetch'
-                : elem.props.rel,
+                  ? 'prefetch'
+                  : elem.props.rel,
             }),
           )}
           {/* Styles in development are loaded with Webpack's style-loader, in production,
@@ -192,6 +195,7 @@ class Html extends Component {
           <div role="navigation" aria-label="Toolbar" id="toolbar" />
           <div id="main" dangerouslySetInnerHTML={{ __html: markup }} />
           <div role="complementary" aria-label="Sidebar" id="sidebar" />
+
           <script
             dangerouslySetInnerHTML={{
               __html: `window.__data=${serialize(
