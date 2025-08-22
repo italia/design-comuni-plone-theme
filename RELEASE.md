@@ -42,6 +42,20 @@
  -->
 
 ## Versione 11.32.1 (22/08/2025)
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- Introdotto il campo CIG per il CT Bando.
+
+### Fix
+
+- ...
+## Versione 12.3.1 (08/08/2025)
 
 ### Fix
 
