@@ -6,7 +6,9 @@ export const simpleLinkDeserializer = (editor, el) => {
   let parent = el;
   let children = Array.from(parent.childNodes)
     .map((el) => {
-      el.removeAttribute('style');
+      if (el.removeAttribute) {
+        el.removeAttribute('style');
+      }
       return deserialize(editor, el);
     })
     .flat();
