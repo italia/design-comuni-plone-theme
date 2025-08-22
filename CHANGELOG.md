@@ -1,5 +1,20 @@
 
 
+## [11.32.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.32.0...v11.32.1) (2025-08-22)
+
+
+### Bug Fixes
+
+* added state to close the date picker modal after endDate loses focus (Tab exit) ([#981](https://github.com/RedTurtle/design-comuni-plone-theme/issues/981)) ([accf3d6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/accf3d6dff277cef0b7693d4c663636e2ec1c098))
+* contentHasImage function + showImage conditions ([#984](https://github.com/RedTurtle/design-comuni-plone-theme/issues/984)) ([bdb2901](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bdb290101477fff8616498936cfc115a77b33cac))
+* image in template "Blocco link completo"  ([#971](https://github.com/RedTurtle/design-comuni-plone-theme/issues/971)) ([d5d9dc1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d5d9dc175e4d25b1f49976fbe2cfaf12d770fb92))
+* improved link visibility on images within listing blocks ([#978](https://github.com/RedTurtle/design-comuni-plone-theme/issues/978)) ([c6e41af](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c6e41af38911203b2487794a7e423921a33d51e6))
+
+
+### Documentation
+
+* updated publiccode and release log ([d478eb6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d478eb699e0ea75475be1d7de7120d48321873a4))
+
 ## [11.32.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.31.2...v11.32.0) (2025-07-31)
 
 
