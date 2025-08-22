@@ -131,7 +131,7 @@ const BandiInEvidenceTemplate = ({
                               {intl.formatMessage(messages.tipologia)}:
                             </div>
                             <span className="bando-dati-date">
-                              {item.tipologia_bando}
+                              {item.tipologia_bando.title}
                             </span>
                           </span>
                         )}
@@ -210,6 +210,14 @@ const BandiInEvidenceTemplate = ({
                                 <BandoStatus content={item} />
                               </div>
                             </span>
+                          </span>
+                        )}
+
+                        {/* cig */}
+                        {item.cig && (
+                          <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
+                            <div className="bando-dati-label me-2">CIG:</div>
+                            <span className="bando-dati-date">{item.cig}</span>
                           </span>
                         )}
 

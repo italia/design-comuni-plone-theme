@@ -31,6 +31,14 @@ const BandoText = ({ content }) => {
     >
       {/* DESCRIZIONE DEL BANDO */}
       {richTextHasContent(content?.text) && <RichText data={content?.text} />}
+
+      {/* CIG */}
+      {content?.cig && (
+        <div className="mb-2">
+          <h3 className="h5">CIG</h3>
+          {content.cig}
+        </div>
+      )}
       {/* TIPOLOGIA DEL BANDO */}
       <BandoTextTipologia content={content} />
       {/* DESTINATARI DEL BANDO */}
