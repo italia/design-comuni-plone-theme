@@ -655,6 +655,11 @@ msgstr "Título..."
 msgid "Titolo"
 msgstr "Título"
 
+#: components/ItaliaTheme/ScrollToTop/ScrollToTop
+# defaultMessage: Torna all'inizio della pagina
+msgid "Torna all'inizio della pagina"
+msgstr "Volver al inicio de la página"
+
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui il file...
 msgid "Trascina qui il file ..."
