@@ -1,5 +1,29 @@
 
 
+## [11.33.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.32.1...v11.33.0) (2025-08-22)
+
+
+### Features
+
+* cig field in bando ct + bando card ([#979](https://github.com/RedTurtle/design-comuni-plone-theme/issues/979)) ([7469e33](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7469e33db8fcb16752bd44121631138a0c18ee69))
+
+
+### Bug Fixes
+
+* **a11y:** keyboard navigation on DateFilter widget ([#988](https://github.com/RedTurtle/design-comuni-plone-theme/issues/988)) ([0711871](https://github.com/RedTurtle/design-comuni-plone-theme/commit/07118710b693cdcc406007db75c2ed1c1065b512))
+* **a11y:** scroll to top button ([#991](https://github.com/RedTurtle/design-comuni-plone-theme/issues/991)) ([0acf914](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0acf9149d978c1b019d7c8f121d5b6672ac81ba6))
+* shift+enter in testo_riquadro_* blocks ([#986](https://github.com/RedTurtle/design-comuni-plone-theme/issues/986)) ([4dcf69a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4dcf69a2cabc9111c387b1e994a0e5bff9ccc4d8))
+
+
+### Maintenance
+
+* updated volto-feedback to 0.7.2 ([#989](https://github.com/RedTurtle/design-comuni-plone-theme/issues/989)) ([cf071ce](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cf071ce561ab4d02e8e68e553beec075132f85d3))
+
+
+### Documentation
+
+* updated publiccode and release log ([cca5e2a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cca5e2a75094790ba14c994601fb9447149c32fa))
+
 ## [11.32.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.32.0...v11.32.1) (2025-08-22)
 
 
