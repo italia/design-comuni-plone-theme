@@ -41,12 +41,7 @@
 - ...
  -->
 
-## Versione 11.32.1 (22/08/2025)
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
+## Versione 11.33.0 (22/08/2025)
 
 ### Novità
 
@@ -56,7 +51,7 @@
 
 - Sistemata l'accessibilità del bottone "Torna Su" del sito.
 
-## Versione 12.3.1 (08/08/2025)
+## Versione 11.32.1 (22/08/2025)
 
 ### Fix
 
