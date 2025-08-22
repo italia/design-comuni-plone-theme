@@ -53,7 +53,8 @@
 
 ### Fix
 
-- ...
+- Sistemata l'accessibilità del bottone "Torna Su" del sito.
+
 ## Versione 12.3.1 (08/08/2025)
 
 ### Fix

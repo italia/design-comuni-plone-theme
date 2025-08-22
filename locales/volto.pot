@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-08-13T10:57:20.863Z\n"
+"POT-Creation-Date: 2025-08-20T13:31:34.800Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -678,6 +678,11 @@ msgstr ""
 #: config/Slate/Headings/HeadingsMenu
 # defaultMessage: Titolo
 msgid "Titolo"
+msgstr ""
+
+#: components/ItaliaTheme/ScrollToTop/ScrollToTop
+# defaultMessage: Torna all'inizio della pagina
+msgid "Torna all'inizio della pagina"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/FileWidget
