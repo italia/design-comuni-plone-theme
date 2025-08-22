@@ -1,5 +1,31 @@
 # Changelog
 
+## [12.4.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.3.1...v12.4.0) (2025-08-22)
+
+
+### Features
+
+* cig field in bando ct + bando card ([#979](https://github.com/RedTurtle/design-comuni-plone-theme/issues/979)) ([e24f796](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e24f796a689bd2ee426170afc8a81f2f2920d49d))
+
+
+### Bug Fixes
+
+* **a11y:** keyboard navigation on DateFilter widget ([#988](https://github.com/RedTurtle/design-comuni-plone-theme/issues/988)) ([7031d51](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7031d5125268cdeb5b614f5b95dd5c173c49caed))
+* **a11y:** scroll to top button ([#991](https://github.com/RedTurtle/design-comuni-plone-theme/issues/991)) ([d39769f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d39769fd2adab0a9f548b526243e9f93ced88a2e))
+* fixed error in el.removeAttribute simpleLink function ([#990](https://github.com/RedTurtle/design-comuni-plone-theme/issues/990)) ([f142fe0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f142fe090c53941f343295f0c0a30d32843ed6b8))
+* keep formatted text when pasting from Office Online ([#987](https://github.com/RedTurtle/design-comuni-plone-theme/issues/987)) ([c0a9be5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c0a9be5579739d22c914a172499ec1a7418b580d))
+* shift+enter in testo_riquadro_* blocks ([#986](https://github.com/RedTurtle/design-comuni-plone-theme/issues/986)) ([34f6cd7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/34f6cd70d45203389043a1c109674b3ba0a9344c))
+
+
+### Maintenance
+
+* updated volto-feedback to 0.7.2 ([#989](https://github.com/RedTurtle/design-comuni-plone-theme/issues/989)) ([608aa14](https://github.com/RedTurtle/design-comuni-plone-theme/commit/608aa1474c58e658619eb71620d2c462b27a50a4))
+
+
+### Documentation
+
+* updated publiccode and release log ([40f774b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/40f774b30ccf61182ae2ed9737a5e1d5cb848836))
+
 ## [12.3.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.3.0...v12.3.1) (2025-08-08)
 
 
