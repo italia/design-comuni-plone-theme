@@ -41,28 +41,18 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
+## Versione 11.32.1 (22/08/2025)
 
 ### Fix
 
 - Ripristinata la funzionalità per mostrare tutte le immagini del blocco elenco o solo quelle della prima fila, se presenti.
-
-## Versione 11.32.0 (31/07/2025)
 - Migliorata l'accessibilità rimuovendo la visibilità delle immagini di presentazione nei blocchi elenco.
 - Sistemata la semantica dei titoli nei blocchi elenco migliorando così l'accessibilità della pagina.
 - Sistemata la visualizzazione delle immagini all’interno della card del blocco Link completo quando sono in landscape.
 - Ora il calendario si chiude automaticamente quando si passa al campo successivo dopo aver selezionato la data di fine, nei blocchi di ricerca dove è possibile indicare una data di inizio e fine.
-- Migliorata la visualizzazione dei link sulle immagini nei blocchi elenco, rimosso testo non necessario con tipo e dimensione dei file
+- Migliorata la visualizzazione dei link sulle immagini nei blocchi elenco, rimosso testo non necessario con tipo e dimensione dei file.
 
-## Versione 12.3.0 (31/07/2025)
+## Versione 11.32.0 (31/07/2025)
 
 ### Novità
 
