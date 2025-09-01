@@ -1,5 +1,22 @@
 # Changelog
 
+## [12.4.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.4.0...v12.4.1) (2025-09-01)
+
+
+### Bug Fixes
+
+* **a11y:** landmarks for header and aria-hidden elements must not be focusable ([#993](https://github.com/RedTurtle/design-comuni-plone-theme/issues/993)) ([d0f2d5e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d0f2d5e82e208b39d4243e3bdb5b3ef825e99a61))
+
+
+### Maintenance
+
+* updated volto-venue v4.1.2 ([#992](https://github.com/RedTurtle/design-comuni-plone-theme/issues/992)) ([aa0500e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/aa0500e425c861403c818924781781ccdf326254))
+
+
+### Documentation
+
+* updated publiccode ([eff08d9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/eff08d9951dc1b6308015eed3a0783f3822bda02))
+
 ## [12.4.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.3.1...v12.4.0) (2025-08-22)
 
 
