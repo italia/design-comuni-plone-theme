@@ -36,21 +36,24 @@ const Header = ({ pathname }) => {
   return (
     <>
       <div className="public-ui">
-        {/* <div
+        <header>
+          {/* <div
         className="sticky-placeholder"
         style={{ paddingTop: mini ? '50px' : '120px' }}
       /> */}
-        {/* <Headers sticky={true} className={mini ? 'is-sticky' : undefined}> */}
-        <Headers>
-          <HeaderSlim />
+          {/* <Headers sticky={true} className={mini ? 'is-sticky' : undefined}> */}
+          <Headers>
+            <HeaderSlim />
 
-          <div className="it-nav-wrapper">
-            <HeaderCenter />
-            <Navigation pathname={pathname} />
-          </div>
-        </Headers>
-        <SubsiteHeader />
+            <div className="it-nav-wrapper">
+              <HeaderCenter />
+              <Navigation pathname={pathname} />
+            </div>
+          </Headers>
+          <SubsiteHeader />
+        </header>
       </div>
+
       <div id="portal-header-image"></div>
     </>
   );
