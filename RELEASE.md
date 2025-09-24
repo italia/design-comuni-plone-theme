@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- Il pulsante Stile bottone dentro all'editor Slate è ora disponibile soltanto quando si seleziona un link con href.
+
+### Novità
+
+- ...
+
+### Fix
+
+- ...
+
 ## Versione 12.4.0 (22/08/2025)
 
 ### Novità

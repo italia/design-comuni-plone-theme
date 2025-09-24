@@ -11,6 +11,14 @@ import {
 } from 'design-comuni-plone-theme/config/Slate/dropdownUtils';
 import { insertToolbarButtons } from 'design-comuni-plone-theme/config/Slate/utils';
 import { LinkElement as ItaliaLinkElement } from 'design-comuni-plone-theme/config/Slate/Link/renderer';
+import { Editor } from 'slate';
+
+function isLinkWithHref(editor) {
+  const [match] = Editor.nodes(editor, {
+    match: (n) => n.type === 'link' && !!n.data?.url,
+  });
+  return !!match;
+}
 
 const LinkButtonButton = ({ icon, active, ...props }) => {
   const CLASSNAME = 'btn btn-primary inline-link';
@@ -22,6 +30,10 @@ const LinkButtonButton = ({ icon, active, ...props }) => {
       {...props}
       icon={icon}
       active={isActive}
+      disabled={
+        !editor.selection ||
+        (!isLinkStyleActive(editor, CLASSNAME) && !isLinkWithHref(editor))
+      }
       onMouseDown={(e) => {
         e.stopPropagation();
         e.preventDefault();

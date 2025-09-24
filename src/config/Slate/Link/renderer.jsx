@@ -36,6 +36,11 @@ const ViewLink = ({
 export const LinkElement = (props) => {
   const { attributes, children, element, mode = 'edit' } = props;
 
+  // If no URL, just render children without wrapping in <a>/<button>
+  if (!element.data?.url) {
+    return <span {...attributes}>{children}</span>;
+  }
+
   let dataElementAttr = {};
   if (element.data.dataElement) {
     dataElementAttr['data-element'] = element.data.dataElement;
