@@ -237,6 +237,8 @@ const BandiInEvidenceTemplate = ({
                           item={!isEditMode ? item : null}
                           href={isEditMode ? '#' : null}
                           text={intl.formatMessage(messages.vedi)}
+                          aria-hidden="true"
+                          tabindex="-1"
                         />
                       </div>
                     </div>

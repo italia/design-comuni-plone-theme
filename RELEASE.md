@@ -53,6 +53,7 @@
 
 ### Fix
 
+- Migliorato la gestione del link "Vedi" nelle card: ora il titolo è sempre cliccabile e il link "Vedi" non viene più raggiunto dai lettori di schermo o dalla tastiera, garantendo un’esperienza più chiara e accessibile.
 - ...
 
 ## Versione 12.4.0 (22/08/2025)

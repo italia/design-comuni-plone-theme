@@ -119,6 +119,8 @@ const CardWithSlideUpTextTemplate = (props) => {
                     href={isEditMode ? '#' : null}
                     text={intl.formatMessage(messages.vedi)}
                     className="justify-content-end"
+                    aria-hidden="true"
+                    tabindex="-1"
                   />
                 </div>
                 <UniversalLink

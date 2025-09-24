@@ -49,6 +49,8 @@ const BandiInEvidenceTemplateSkeleton = ({
                           tag={Link}
                           to={'#'}
                           text=""
+                          aria-hidden="true"
+                          tabindex="-1"
                         />
                       </div>
                     </CardBody>
