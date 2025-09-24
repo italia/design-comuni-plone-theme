@@ -79,6 +79,7 @@ const CardWithSlideUpTextTemplate = (props) => {
                     backgroundImage: `url(${image})`,
                   }
                 }
+                tabIndex={-1}
               >
                 <div className="bg-gradient"></div>
                 {(category || date) && (
@@ -119,8 +120,8 @@ const CardWithSlideUpTextTemplate = (props) => {
                     href={isEditMode ? '#' : null}
                     text={intl.formatMessage(messages.vedi)}
                     className="justify-content-end"
+                    tabIndex={-1}
                     aria-hidden="true"
-                    tabindex="-1"
                   />
                 </div>
                 <UniversalLink
