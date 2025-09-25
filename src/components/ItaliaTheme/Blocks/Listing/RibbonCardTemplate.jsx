@@ -170,6 +170,7 @@ const RibbonCardTemplate = (props) => {
                           detail_link_label ||
                           intl.formatMessage(messages.default_detail_link)
                         }
+                        tabIndex={-1}
                         aria-hidden="true"
                       />
                     )}

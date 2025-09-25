@@ -175,6 +175,7 @@ const SimpleCardDefault = (props) => {
               detail_link_label ||
               intl.formatMessage(messages.card_detail_label)
             }
+            tabIndex={-1}
             aria-hidden="true"
           />
         )}
