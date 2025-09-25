@@ -1,5 +1,6 @@
 import React from 'react';
 import { useIntl, defineMessages } from 'react-intl';
+import { Input } from 'design-react-kit';
 
 const messages = defineMessages({
   text_filter_placeholder: {
@@ -8,26 +9,53 @@ const messages = defineMessages({
   },
 });
 
-const TextFilter = ({ value, id, onChange, placeholder, blockID }) => {
+const TextFilter = ({
+  value,
+  id,
+  onChange,
+  placeholder,
+  blockID,
+  activeTopLabel = false,
+  infoText = '',
+}) => {
   const intl = useIntl();
+  const placeholderText =
+    placeholder || intl.formatMessage(messages.text_filter_placeholder);
 
   return (
     <div className="me-lg-3 my-2 my-lg-1 filter-wrapper text-filter">
-      <label htmlFor={`${blockID}-${id}`} className="visually-hidden">
-        {placeholder}
-      </label>
-      <input
-        type="text"
-        placeholder={
-          placeholder || intl.formatMessage(messages.text_filter_placeholder)
-        }
-        value={value}
-        onChange={(e, data) => {
-          onChange(id, e.target.value ?? '');
-        }}
-        autocomplete="off"
-        id={`${blockID}-${id}`}
-      />
+      {!activeTopLabel ? (
+        <>
+          {/* Input con label NACOSTA */}
+          <label htmlFor={`${blockID}-${id}`} className="visually-hidden">
+            {placeholderText}
+          </label>
+          <input
+            type="text"
+            placeholder={placeholderText}
+            value={value}
+            onChange={(e, data) => {
+              onChange(id, e.target.value ?? '');
+            }}
+            id={`${blockID}-${id}`}
+          />
+          {infoText && <small className="form-text d-block">{infoText}</small>}
+        </>
+      ) : (
+        <>
+          {/* Input con label VISIBILE */}
+          <Input
+            type="text"
+            label={placeholderText}
+            infoText={infoText} // small text
+            value={value}
+            onChange={(e, data) => {
+              onChange(id, e.target.value ?? '');
+            }}
+            id={`${blockID}-${id}`}
+          />
+        </>
+      )}
     </div>
   );
 };
