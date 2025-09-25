@@ -77,6 +77,7 @@ const SelectFilter = ({
         onChange={(opt) => {
           onChange(id, opt);
         }}
+        label={placeholder}
         options={select_options?.filter((opt) => !!opt.value?.toString()) ?? []}
         isClearable={options?.isClearable ?? true}
         isSearchable={isSearchable}

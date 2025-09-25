@@ -9,6 +9,10 @@
 
       &.text-filter {
         min-width: 35%;
+        
+        .form-group {
+          margin-bottom: 0;
+        }
       }
 
       &.select-filter {
@@ -177,6 +181,58 @@
           .DateRangePickerInput_clearDates svg {
             fill: $secondary-text !important;
           }
+        }
+      }
+    }
+  }
+}
+
+.search-container {
+  .filter-wrapper {
+    &.text-filter {  
+      input.focus--mouse {
+        outline: 2px solid $inner-focus-shadow !important;
+        outline-offset: 2px;
+        border: none !important;
+        box-shadow: 0 0 0 2px $outer-focus-outline !important;
+      }
+  
+      .form-group {
+        margin-bottom: 0;
+      }
+
+      .form-text {
+        display: block;
+      }
+    }
+
+    &.date-filter {
+      position: relative;
+
+      legend {
+        line-height: 1.2rem;
+        font-size: $select-label-size;
+        font-weight: 600;
+        position: absolute;
+        top: -22px;
+      }
+    }
+  }
+}
+
+.bg-primary {
+  .search-container {
+    .filter-wrapper {
+      &.text-filter,
+      &.select-filter {
+        label.active {
+          color: color-contrast($primary);
+        }
+      }
+      
+      &.date-filter {
+        legend {
+          color: color-contrast($primary);
         }
       }
     }

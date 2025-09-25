@@ -46,6 +46,8 @@
 ### Migliorie
 
 - Il campo "data di inizio incarico" nel CT Incarico non è più obbligatorio se la tipologia di incarico è impostata come "Amministrativo"
+- Migliorata l'accessibilità sui campi di input quando vengono applicate delle label ai campi.
+- Il pulsante Stile bottone dentro all'editor Slate è ora disponibile soltanto quando si seleziona un link con href.
 
 ### Novità
 

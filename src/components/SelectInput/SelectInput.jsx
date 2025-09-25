@@ -324,9 +324,14 @@ const SelectInput = ({
   const labelDefined =
     label || intl.formatMessage(messages.SelectInput_default_label);
   const Select = reactSelect.default;
+
   return (
     <div className="bootstrap-select-wrapper">
-      {label && <label htmlFor={!labelledby ? id : undefined}>{label}</label>}
+      {label && (
+        <label className="active" htmlFor={!labelledby ? id : undefined}>
+          {label}
+        </label>
+      )}
       <Select
         components={{
           MenuList,
@@ -338,7 +343,7 @@ const SelectInput = ({
           IndicatorSeparator: null,
           ...components,
         }}
-        id={id}
+        inputId={id}
         value={value}
         onChange={onChange}
         options={options}
