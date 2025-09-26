@@ -1,0 +1,39 @@
+.cms-ui .contacts-configuration-widget {
+  .column .wrapper {
+    height: 100%;
+  }
+
+  .delete-button {
+    margin-top: 1rem;
+    text-align: end;
+  }
+
+  .ui.header.contacts-items-header {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+
+  .contact-items-menu {
+    .move-buttons .button i {
+      transform: rotate(90deg);
+    }
+
+    .item-title {
+      margin-left: 0.5rem;
+    }
+
+    .icon {
+      margin-right: 0;
+    }
+  }
+
+  .help-text {
+    font-size: 0.8rem;
+  }
+
+  .contact-config-form {
+    .inline.field.delete-field {
+      margin-top: 1rem;
+    }
+  }
+}
