@@ -1,0 +1,40 @@
+.contacts-block {
+  box-shadow: inset 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  .contacts-box {
+    background-color: #fff;
+
+    &:after {
+      display: none;
+    }
+
+    h2 {
+      font-size: 1.3333rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .contacts-list {
+      padding: 0;
+      li {
+        list-style-type: none;
+
+        a {
+          column-gap: 2%;
+          .icon-container {
+            width: 5%;
+            display: flex;
+
+            .icon {
+              color: currentColor;
+              fill: currentColor;
+            }
+          }
+
+          .text-container {
+            width: 93%;
+          }
+        }
+      }
+    }
+  }
+}

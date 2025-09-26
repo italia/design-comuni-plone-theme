@@ -50,7 +50,7 @@
 
 ### Novità
 
-- ...
+- E' ora disponibile il blocco contatti: dal pannello di controllo è possibile impostare una lista di contatti da mostrare sopra al footer.
 
 ### Fix
 

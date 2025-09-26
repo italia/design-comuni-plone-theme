@@ -24,6 +24,8 @@ import {
   BlocksViewWidget,
   PDCViewWidget,
   DataGridWidget,
+  ContactsConfigWidget,
+  ContactsConfigForm,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import LuoghiCorrelatiEventoWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/LuoghiCorrelatiEventoWidget';
 
@@ -39,6 +41,10 @@ const getItaliaWidgets = (config) => {
   config.registerComponent({
     name: 'SubFooterConfigurationForm',
     component: SubFooterConfigurationForm,
+  });
+  config.registerComponent({
+    name: 'ContactsConfigForm',
+    component: ContactsConfigForm,
   });
 
   return {
@@ -88,6 +94,7 @@ const getItaliaWidgets = (config) => {
       ),
       subsite_social_links: SubsiteSocialLinksWidget,
       canale_digitale: CanaleDigitaleWidget,
+      contact_configuration: ContactsConfigWidget,
     },
     widget: {
       ...config.widgets.widget,

@@ -833,6 +833,16 @@ msgstr "Vedi azioni"
 msgid "active_filters"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Add contacts item
+msgid "add_contacts_item"
+msgstr "Aggiungi un contatto"
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Add contacts path
+msgid "add_contacts_path"
+msgstr "Aggiungi un percorso per il blocco contatti"
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Vai alla ricerca per sezioni avanzata
 msgid "advandedSectionsFilters"
@@ -1495,10 +1505,40 @@ msgstr ""
 msgid "condition_not_contains"
 msgstr ""
 
+#: components/ItaliaTheme/ContactsBlock/ContactsBlock
+# defaultMessage: Contatta il comune
+msgid "contact_block_title"
+msgstr "Contatta il comune"
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Contact items
+msgid "contact_items_header"
+msgstr "Contatti"
+
 #: components/ItaliaTheme/View/PersonaView/PersonaContatti
 # defaultMessage: Contatti
 msgid "contacts"
 msgstr "Contatti"
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigForm
+# defaultMessage: Contact
+msgid "contacts-config-contact"
+msgstr "Contatto"
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigForm
+# defaultMessage: Delete contact
+msgid "contacts-config-delete-item"
+msgstr "Elimina contatto"
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigForm
+# defaultMessage: Icon name
+msgid "contacts-config-icon"
+msgstr "Nome icona"
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigForm
+# defaultMessage: Contact title
+msgid "contacts-config-title"
+msgstr "Titolo contatto"
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 # defaultMessage: Contatti
@@ -1867,6 +1907,11 @@ msgstr "Decorrenza termine"
 msgid "deleghe"
 msgstr "Deleghe"
 
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Delete
+msgid "delete_button"
+msgstr "Elimina"
+
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Link rapidi
 msgid "desc"
@@ -2143,6 +2188,16 @@ msgstr "Emolumenti a carico della finanza pubblica"
 # defaultMessage: Please select an item in the sidebar in order to show it here
 msgid "emptySelection"
 msgstr "Seleziona un elemento nella barra laterale per mostrarlo qui."
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Add a contact item
+msgid "empty_active_contacts_item"
+msgstr "Aggiungi un contatto"
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Add a contacts path
+msgid "empty_active_contacts_path"
+msgstr "Aggiungi un percorso"
 
 #: components/ItaliaTheme/View/Commons/Dates
 # defaultMessage: Fine evento
@@ -2552,6 +2607,11 @@ msgstr "Icona"
 msgid "iconDescription"
 msgstr "Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawesome 6"
 
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: For a complete list of icon names, see:
+msgid "icon_list_help_text"
+msgstr "Per la lista completa di icone supportate, consulta:"
+
 #: components/ItaliaTheme/View/Commons/Argument/ArgumentIcon
 # defaultMessage: Icona per l'argomento {topic_title}
 msgid "icon_title"
@@ -2902,6 +2962,16 @@ msgstr "File principale"
 # defaultMessage: Formati alternativi
 msgid "modulo_formati_alternativi"
 msgstr "Formati alternativi"
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Move menu item down
+msgid "move_menu_item_down"
+msgstr "Sposta elemento in basso"
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Move menu item up
+msgid "move_menu_item_up"
+msgstr "Sposta elemento in alto"
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: components/ItaliaTheme/Blocks/Teaser/schema
@@ -3305,6 +3375,11 @@ msgstr "Diritti"
 # defaultMessage: Risultati indagini di customer satisfaction
 msgid "risultati_indagini_customer_satisfaction"
 msgstr "Risultati indagini di customer satisfaction"
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Root path
+msgid "root_path"
+msgstr "Percorso radice"
 
 #: overrideTranslations
 # defaultMessage: il giorno

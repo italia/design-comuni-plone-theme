@@ -848,6 +848,16 @@ msgstr ""
 msgid "active_filters"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Add contacts item
+msgid "add_contacts_item"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Add contacts path
+msgid "add_contacts_path"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Vai alla ricerca per sezioni avanzata
 msgid "advandedSectionsFilters"
@@ -1510,9 +1520,39 @@ msgstr ""
 msgid "condition_not_contains"
 msgstr ""
 
+#: components/ItaliaTheme/ContactsBlock/ContactsBlock
+# defaultMessage: Contatta il comune
+msgid "contact_block_title"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Contact items
+msgid "contact_items_header"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaContatti
 # defaultMessage: Contatti
 msgid "contacts"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigForm
+# defaultMessage: Contact
+msgid "contacts-config-contact"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigForm
+# defaultMessage: Delete contact
+msgid "contacts-config-delete-item"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigForm
+# defaultMessage: Icon name
+msgid "contacts-config-icon"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigForm
+# defaultMessage: Contact title
+msgid "contacts-config-title"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
@@ -1882,6 +1922,11 @@ msgstr ""
 msgid "deleghe"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Delete
+msgid "delete_button"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Link rapidi
 msgid "desc"
@@ -2157,6 +2202,16 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/HighlightedContent/Edit
 # defaultMessage: Please select an item in the sidebar in order to show it here
 msgid "emptySelection"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Add a contact item
+msgid "empty_active_contacts_item"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Add a contacts path
+msgid "empty_active_contacts_path"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Dates
@@ -2567,6 +2622,11 @@ msgstr ""
 msgid "iconDescription"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: For a complete list of icon names, see:
+msgid "icon_list_help_text"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Argument/ArgumentIcon
 # defaultMessage: Icona per l'argomento {topic_title}
 msgid "icon_title"
@@ -2916,6 +2976,16 @@ msgstr ""
 #: components/ItaliaTheme/View/ModuloView/ModuloFormatiAlternativi
 # defaultMessage: Formati alternativi
 msgid "modulo_formati_alternativi"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Move menu item down
+msgid "move_menu_item_down"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Move menu item up
+msgid "move_menu_item_up"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
@@ -3319,6 +3389,11 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Risultati indagini di customer satisfaction
 msgid "risultati_indagini_customer_satisfaction"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget
+# defaultMessage: Root path
+msgid "root_path"
 msgstr ""
 
 #: overrideTranslations

@@ -40,6 +40,7 @@ import {
   GET_SEARCH_BANDI_FILTERS,
 } from './getSearchBandiFilters';
 import { getCTSchema, GET_CT_SCHEMA } from './getCTSchema';
+import { getContacts, GET_CONTACTS } from './contacts';
 
 export {
   getSearchFilters,
@@ -65,4 +66,6 @@ export {
   resetQuerystringResults,
   getCTSchema,
   GET_CT_SCHEMA,
+  getContacts,
+  GET_CONTACTS,
 };

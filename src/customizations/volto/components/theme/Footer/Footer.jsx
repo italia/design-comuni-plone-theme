@@ -13,7 +13,10 @@ import {
   SubsiteFooter,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/';
 
-import { FeedbackForm } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import {
+  FeedbackForm,
+  ContactsBlock,
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 /**
  * Footer component class.
@@ -34,8 +37,11 @@ const Footer = () => {
       config.settings.siteProperties.enableFeedbackForm
     : true;
 
+  const showContactsBlock = config.settings.siteProperties.enableContactsForm;
+
   return (
     <>
+      {showContactsBlock && <ContactsBlock />}
       {showFeedbackForm && (
         <div className="public-ui" id="customer-satisfaction-form">
           <FeedbackForm />
