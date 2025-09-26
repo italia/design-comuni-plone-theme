@@ -54,10 +54,11 @@
 
 ### Fix
 
+- Sistemato un problema nell’editor di testo sulla barra laterale delle pagine. Adesso è possibile inserire correttamente link a file ed immagini interni al sito senza errori.
 - Blocco Elenco Card con testo animato: rimosso il focus dal card e dal pulsante “Vedi/Read More”, lasciando la navigazione solo sul titolo.
 - Blocco Elenco Card con testo animato: Aggiunto aria-hidden a “Vedi/Read More” per escluderlo dai lettori di schermo.
 - Migliorato la gestione del link "Vedi" nelle card: ora il titolo è sempre cliccabile e il link "Vedi" non viene più raggiunto dai lettori di schermo o dalla tastiera, garantendo un’esperienza più chiara e accessibile.
-- ...
+
 
 ## Versione 12.4.0 (22/08/2025)
 

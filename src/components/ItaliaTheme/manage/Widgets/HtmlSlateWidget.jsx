@@ -12,6 +12,7 @@ import configureStore from 'redux-mock-store';
 import { MemoryRouter } from 'react-router-dom';
 import { Provider, useSelector } from 'react-redux';
 import { defineMessages, injectIntl } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 
 import { FormFieldWrapper } from '@plone/volto/components';
 import SlateEditor from '@plone/volto-slate/editor/SlateEditor';
@@ -63,7 +64,11 @@ const HtmlSlateWidget = (props) => {
       const mockStore = configureStore();
       const html = ReactDOMServer.renderToStaticMarkup(
         <Provider store={mockStore({ userSession: { token } })}>
-          <MemoryRouter>{serializeNodes(value || [])}</MemoryRouter>
+          <MemoryRouter>
+            <IntlProvider locale={intl.locale}>
+              {serializeNodes(value || [])}
+            </IntlProvider>
+          </MemoryRouter>
         </Provider>,
       );
       //console.log('toHtml', value, ' ----> ', html);
