@@ -24,6 +24,7 @@ export PDCViewWidget from 'design-comuni-plone-theme/components/ItaliaTheme/mana
 export DataGridWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/DataGridWidget.jsx';
 export ContactsConfigWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget.jsx';
 export ContactsConfigForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigForm.jsx';
+export ConditionallyRequiredDateWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/ConditionallyRequiredDateWidget.jsx';
 
 /********* ICONS ********* */
 export getItemIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/common/common';

@@ -45,7 +45,7 @@
 
 ### Migliorie
 
-- ...
+- Il campo "data di inizio incarico" nel CT Incarico non è più obbligatorio se la tipologia di incarico è impostata come "Amministrativo"
 
 ### Novità
 
