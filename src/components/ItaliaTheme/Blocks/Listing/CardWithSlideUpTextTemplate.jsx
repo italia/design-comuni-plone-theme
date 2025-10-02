@@ -77,6 +77,7 @@ const CardWithSlideUpTextTemplate = (props) => {
                     backgroundImage: `url(${image})`,
                   }
                 }
+                tabIndex={-1}
               >
                 <div className="bg-gradient"></div>
                 {(category || date) && (
@@ -125,7 +126,7 @@ const CardWithSlideUpTextTemplate = (props) => {
                   item={!isEditMode ? item : null}
                   className="card-link"
                   aria-hidden="true"
-                  tabIndex="-1"
+                  tabIndex={-1}
                 ></UniversalLink>
               </div>
             );

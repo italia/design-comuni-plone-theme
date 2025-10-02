@@ -54,6 +54,8 @@
 ### Fix
 
 - Migliorato la gestione del link "Vedi" nelle card: ora il titolo è sempre cliccabile e il link "Vedi" non viene più raggiunto dai lettori di schermo o dalla tastiera, garantendo un’esperienza più chiara e accessibile.
+- Blocco Elenco Card con testo animato: rimosso il focus dal card e dal pulsante “Vedi/Read More”, lasciando la navigazione solo sul titolo.
+- Blocco Elenco Card con testo animato: Aggiunto aria-hidden a “Vedi/Read More” per escluderlo dai lettori di schermo.
 
 ## Versione 11.33.0 (22/08/2025)
 
