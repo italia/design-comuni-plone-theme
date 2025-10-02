@@ -2499,14 +2499,14 @@ msgid "form_set_limit"
 msgstr "Set a submission limit"
 
 #: overrideTranslations
-# defaultMessage: Sei stato inserito in lista d'attesa
+# defaultMessage: La tua iscrizione è in lista d'attesa
 msgid "form_submit_success_warning"
-msgstr "You've been added to the waiting list"
+msgstr "Your registration is on the waiting list."
 
 #: overrideTranslations
-# defaultMessage: I tuoi dati sono stati inviati, ma è già stato raggiunto il limite di iscrizioni, sei stato inserito in lista d'attesa.
+# defaultMessage: I tuoi dati sono stati inviati correttamente. Tuttavia, è stato raggiunto il limite massimo di iscrizioni: la tua richiesta è stata inserita in lista d’attesa.
 msgid "form_submit_success_warning_description"
-msgstr "Your data has been submitted, but the subscription limit has been reached and you've been added to the waiting list."
+msgstr "Your data has been submitted successfully. However, the maximum number of registrations has been reached: your request has been placed on the waiting list."
 
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Foto dell'attività politica

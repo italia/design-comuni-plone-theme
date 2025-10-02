@@ -101,12 +101,12 @@ defineMessages({
   },
   success_warning: {
     id: 'form_submit_success_warning',
-    defaultMessage: "Sei stato inserito in lista d'attesa",
+    defaultMessage: "La tua iscrizione è in lista d'attesa",
   },
   success_warning_description: {
     id: 'form_submit_success_warning_description',
     defaultMessage:
-      "I tuoi dati sono stati inviati, ma è già stato raggiunto il limite di iscrizioni, sei stato inserito in lista d'attesa.",
+      'I tuoi dati sono stati inviati correttamente. Tuttavia, è stato raggiunto il limite massimo di iscrizioni: la tua richiesta è stata inserita in lista d’attesa.',
   },
   field_unique_title: {
     id: 'field_unique_title',
