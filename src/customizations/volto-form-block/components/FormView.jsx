@@ -124,216 +124,214 @@ const FormView = ({
   return (
     <div className="block form">
       <div className="public-ui">
-        <div className="p-4">
-          {data?.title && <h2>{data.title}</h2>}
-          {data?.description && (
-            <div className="block-description">{data.description}</div>
-          )}
-          <Card className="card-bg rounded py-3" noWrapper={false} tag="div">
-            <CardBody tag="div">
-              {formState.result ? (
-                <FormResult
-                  formState={formState}
-                  data={data}
-                  resetFormState={resetFormState}
-                />
-              ) : (
-                <form
-                  onSubmit={submit}
-                  noValidate
-                  autoComplete="off"
-                  method="post"
-                >
-                  {/* Controlla che ci siano campi obbligatori al suo interno e applica una legenda  */}
-                  {data.subblocks.some((item) => item.required === true) && (
-                    <legend className="text-muted text-end mb-3">
-                      <small>
-                        {intl.formatMessage(messages.legend_required)}
-                      </small>
-                    </legend>
-                  )}
-                  {data.static_fields && (
-                    <fieldset disabled>
-                      {data.static_fields?.map((field) => (
-                        <Row key={field.field_id} className="static-field">
-                          <Col className="py-2">
-                            <Field
-                              {...field}
-                              field_type={field.field_type || 'text'}
-                              name={
-                                'static_field_' +
-                                (field.field_id ??
-                                  field.name?.toLowerCase()?.replace(' ', ''))
-                              }
-                              value={field.value}
-                              onChange={() => {}}
-                              valid
-                              disabled
-                              formHasErrors={formErrors.length > 0}
-                            />
-                          </Col>
-                        </Row>
-                      ))}
-                    </fieldset>
-                  )}
-                  {data.subblocks.map((subblock, index) => {
-                    let name = getFieldName(subblock.label, subblock.id);
-                    const fields_to_send_with_value =
-                      getFieldsToSendWithValue(subblock);
+        {data?.title && <h2>{data.title}</h2>}
+        {data?.description && (
+          <div className="block-description">{data.description}</div>
+        )}
+        <Card className="card-bg rounded py-3" noWrapper={false} tag="div">
+          <CardBody tag="div">
+            {formState.result ? (
+              <FormResult
+                formState={formState}
+                data={data}
+                resetFormState={resetFormState}
+              />
+            ) : (
+              <form
+                onSubmit={submit}
+                noValidate
+                autoComplete="off"
+                method="post"
+              >
+                {/* Controlla che ci siano campi obbligatori al suo interno e applica una legenda  */}
+                {data.subblocks.some((item) => item.required === true) && (
+                  <legend className="text-muted text-end mb-3">
+                    <small>
+                      {intl.formatMessage(messages.legend_required)}
+                    </small>
+                  </legend>
+                )}
+                {data.static_fields && (
+                  <fieldset disabled>
+                    {data.static_fields?.map((field) => (
+                      <Row key={field.field_id} className="static-field">
+                        <Col className="py-2">
+                          <Field
+                            {...field}
+                            field_type={field.field_type || 'text'}
+                            name={
+                              'static_field_' +
+                              (field.field_id ??
+                                field.name?.toLowerCase()?.replace(' ', ''))
+                            }
+                            value={field.value}
+                            onChange={() => {}}
+                            valid
+                            disabled
+                            formHasErrors={formErrors.length > 0}
+                          />
+                        </Col>
+                      </Row>
+                    ))}
+                  </fieldset>
+                )}
+                {data.subblocks.map((subblock, index) => {
+                  let name = getFieldName(subblock.label, subblock.id);
+                  const fields_to_send_with_value =
+                    getFieldsToSendWithValue(subblock);
 
-                    return (
-                      evaluateAllConditions(
-                        subblock?.visibility_conditions,
-                        formData,
-                      ) && (
-                        <Row key={'row' + index}>
+                  return (
+                    evaluateAllConditions(
+                      subblock?.visibility_conditions,
+                      formData,
+                    ) && (
+                      <Row key={'row' + index}>
+                        <Col className="py-2">
+                          <Field
+                            {...subblock}
+                            name={name}
+                            onChange={(field, value) =>
+                              onChangeFormData(
+                                subblock.id,
+                                field,
+                                value,
+                                fields_to_send_with_value,
+                              )
+                            }
+                            value={
+                              subblock.field_type === 'static_text'
+                                ? subblock.value
+                                : formData[name]?.value
+                            }
+                            valid={isValidField(name)}
+                            errorMessage={getErrorMessage(name)}
+                            formHasErrors={formErrors.length > 0}
+                          />
+                        </Col>
+                      </Row>
+                    )
+                  );
+                })}
+
+                {/*OTP*/}
+                {data.email_otp_verification ? (
+                  data.subblocks
+                    .filter((subblock) => subblock.use_as_bcc)
+                    .map((subblock, index) => {
+                      const fieldName = getFieldName(
+                        subblock.label,
+                        subblock.id,
+                      );
+                      const name = fieldName + OTP_FIELDNAME_EXTENDER;
+                      const fieldValue = formData[fieldName]?.value;
+                      const value = formData[fieldName]?.otp;
+                      const fields_to_send_with_value =
+                        getFieldsToSendWithValue(subblock);
+
+                      return (
+                        <Row key={'row_otp' + index}>
                           <Col className="py-2">
-                            <Field
+                            <OTPWidget
                               {...subblock}
-                              name={name}
-                              onChange={(field, value) =>
+                              fieldValue={fieldValue}
+                              onChange={(field, value) => {
                                 onChangeFormData(
                                   subblock.id,
-                                  field,
-                                  value,
-                                  fields_to_send_with_value,
-                                )
-                              }
-                              value={
-                                subblock.field_type === 'static_text'
-                                  ? subblock.value
-                                  : formData[name]?.value
-                              }
+                                  fieldName,
+                                  fieldValue,
+                                  {
+                                    ...fields_to_send_with_value,
+                                    otp: value,
+                                  },
+                                );
+                              }}
+                              value={value}
                               valid={isValidField(name)}
                               errorMessage={getErrorMessage(name)}
-                              formHasErrors={formErrors.length > 0}
+                              formHasErrors={formErrors?.length > 0}
+                              path={path}
+                              block_id={block_id}
                             />
                           </Col>
                         </Row>
-                      )
-                    );
-                  })}
+                      );
+                    })
+                ) : (
+                  <></>
+                )}
 
-                  {/*OTP*/}
-                  {data.email_otp_verification ? (
-                    data.subblocks
-                      .filter((subblock) => subblock.use_as_bcc)
-                      .map((subblock, index) => {
-                        const fieldName = getFieldName(
-                          subblock.label,
-                          subblock.id,
-                        );
-                        const name = fieldName + OTP_FIELDNAME_EXTENDER;
-                        const fieldValue = formData[fieldName]?.value;
-                        const value = formData[fieldName]?.otp;
-                        const fields_to_send_with_value =
-                          getFieldsToSendWithValue(subblock);
+                {enableCaptcha && <>{captcha.render()}</>}
 
-                        return (
-                          <Row key={'row_otp' + index}>
-                            <Col className="py-2">
-                              <OTPWidget
-                                {...subblock}
-                                fieldValue={fieldValue}
-                                onChange={(field, value) => {
-                                  onChangeFormData(
-                                    subblock.id,
-                                    fieldName,
-                                    fieldValue,
-                                    {
-                                      ...fields_to_send_with_value,
-                                      otp: value,
-                                    },
-                                  );
-                                }}
-                                value={value}
-                                valid={isValidField(name)}
-                                errorMessage={getErrorMessage(name)}
-                                formHasErrors={formErrors?.length > 0}
-                                path={path}
-                                block_id={block_id}
-                              />
-                            </Col>
-                          </Row>
-                        );
-                      })
-                  ) : (
-                    <></>
-                  )}
+                {formErrors.length > 0 && (
+                  <Alert
+                    color="danger"
+                    fade
+                    isOpen
+                    tag="div"
+                    transition={alertTransition}
+                  >
+                    <h4>{intl.formatMessage(messages.error)}</h4>
+                    <p>{intl.formatMessage(messages.form_errors)}</p>
+                  </Alert>
+                )}
+                {formState.error && (
+                  <Alert
+                    color="danger"
+                    fade
+                    isOpen
+                    tag="div"
+                    transition={alertTransition}
+                  >
+                    <h4>{intl.formatMessage(messages.error)}</h4>
+                    <p>{formState.error}</p>
+                  </Alert>
+                )}
 
-                  {enableCaptcha && <>{captcha.render()}</>}
-
-                  {formErrors.length > 0 && (
-                    <Alert
-                      color="danger"
-                      fade
-                      isOpen
-                      tag="div"
-                      transition={alertTransition}
-                    >
-                      <h4>{intl.formatMessage(messages.error)}</h4>
-                      <p>{intl.formatMessage(messages.form_errors)}</p>
-                    </Alert>
-                  )}
-                  {formState.error && (
-                    <Alert
-                      color="danger"
-                      fade
-                      isOpen
-                      tag="div"
-                      transition={alertTransition}
-                    >
-                      <h4>{intl.formatMessage(messages.error)}</h4>
-                      <p>{formState.error}</p>
-                    </Alert>
-                  )}
-
-                  <Row>
-                    <Col align="center">
-                      {data?.show_cancel && (
-                        <Button
-                          color="secondary"
-                          type="button"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            resetFormState();
-                          }}
-                          className="me-2"
-                        >
-                          {data.cancel_label ||
-                            intl.formatMessage(messages.default_cancel_label)}
-                        </Button>
-                      )}
+                <Row>
+                  <Col align="center">
+                    {data?.show_cancel && (
                       <Button
-                        color="primary"
-                        type="submit"
-                        disabled={
-                          (enableCaptcha &&
-                            !captcha?.props?.captchaToken?.current) ||
-                          formState.loading
-                        }
+                        color="secondary"
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          resetFormState();
+                        }}
+                        className="me-2"
                       >
-                        {data.submit_label ||
-                          intl.formatMessage(messages.default_submit_label)}
-
-                        {formState.loading && (
-                          <span>
-                            <Progress
-                              indeterminate={true}
-                              role="progressbar"
-                              tag="div"
-                            />
-                          </span>
-                        )}
+                        {data.cancel_label ||
+                          intl.formatMessage(messages.default_cancel_label)}
                       </Button>
-                    </Col>
-                  </Row>
-                </form>
-              )}
-            </CardBody>
-          </Card>
-        </div>
+                    )}
+                    <Button
+                      color="primary"
+                      type="submit"
+                      disabled={
+                        (enableCaptcha &&
+                          !captcha?.props?.captchaToken?.current) ||
+                        formState.loading
+                      }
+                    >
+                      {data.submit_label ||
+                        intl.formatMessage(messages.default_submit_label)}
+
+                      {formState.loading && (
+                        <span>
+                          <Progress
+                            indeterminate={true}
+                            role="progressbar"
+                            tag="div"
+                          />
+                        </span>
+                      )}
+                    </Button>
+                  </Col>
+                </Row>
+              </form>
+            )}
+          </CardBody>
+        </Card>
       </div>
     </div>
   );
