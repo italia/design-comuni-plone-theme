@@ -26,6 +26,7 @@ import {
   DataGridWidget,
   ContactsConfigWidget,
   ContactsConfigForm,
+  ConditionallyRequiredDateWidget,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import LuoghiCorrelatiEventoWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/LuoghiCorrelatiEventoWidget';
 
@@ -65,6 +66,9 @@ const getItaliaWidgets = (config) => {
         props, //per il content-type FaqFolder
       ) => <IconWidget {...props} defaultOptions={defaultIconWidgetOptions} />,
       cookie_consent_configuration: MultilingualWidget(),
+      data_inizio_incarico: (props) => (
+        <ConditionallyRequiredDateWidget {...props} />
+      ),
       data_conclusione_incarico: (props) => (
         <DatetimeWidget {...props} dateOnly={true} />
       ),
