@@ -125,9 +125,13 @@
     background-position: 99% !important;
     background-size: 22px 20px !important;
 
+    legend {
+      font-weight: 600;
+      line-height: 1.8rem;
+    }
+
     > label {
       position: unset;
-
       display: block;
       padding: 0 $input-spacing-x;
       margin-bottom: 0.55rem;

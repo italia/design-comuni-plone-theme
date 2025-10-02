@@ -49,6 +49,9 @@
 - Migliorata l'accessibilità sui campi di input quando vengono applicate delle label ai campi.
 - Il pulsante Stile bottone dentro all'editor Slate è ora disponibile soltanto quando si seleziona un link con href.
 
+- Migliorata la gestione del copia/incolla da Word e Word online. Ora vengono mantenuti stili e formattazione.
+- Migliorata l'accessibilità per gli input di tipo radio button, checkbox e select all'interno del blocco form.
+  
 ### Novità
 
 - E' ora disponibile il blocco contatti: dal pannello di controllo è possibile impostare una lista di contatti da mostrare sopra al footer.
