@@ -130,6 +130,11 @@ defineMessages({
     defaultMessage:
       'As per the official information architecture outlined in measure 1.4.1, all forms must be properly uploaded in the designated section within Amministrazione > Documenti e Dati > Modulistica, and linked to the relevant service sheet. It is no longer possible to upload files and attachments directly into this container.',
   },
+  warning_enable_save: {
+    id: 'warning_enable_save',
+    defaultMessage:
+      'Selezionare la voce "Salva i dati compilati" nella barra laterale per abilitare il salvataggio e la visualizzazione dei dati',
+  },
   //table block
   hideHeaders: {
     id: 'Hide headers',

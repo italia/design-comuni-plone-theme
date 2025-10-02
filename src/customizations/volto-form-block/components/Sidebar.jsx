@@ -1,65 +1,27 @@
 // CUSTOMIZATION:
 // - 112-113 reset subscription limit to default when set_limit is not active
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  Segment,
-  Accordion,
-  Form,
-  Button,
-  Grid,
-  Confirm,
-  Dimmer,
-  Loader,
-} from 'semantic-ui-react';
+import { Segment, Accordion, Form, Grid } from 'semantic-ui-react';
 import { defineMessages, useIntl, FormattedMessage } from 'react-intl';
 
-import { Icon } from '@plone/volto/components';
+import Icon from '@plone/volto/components/theme/Icon/Icon';
 
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
-import downloadSVG from '@plone/volto/icons/download.svg';
-import deleteSVG from '@plone/volto/icons/delete.svg';
 
-import warningSVG from '@plone/volto/icons/warning.svg';
+import config from '@plone/volto/registry';
 
-import {
-  getFormData,
-  exportCsvFormData,
-  clearFormData,
-  setSubblocksIDList,
-} from 'volto-form-block/actions';
+import { setSubblocksIDList } from 'volto-form-block/actions';
 
 import { BlockDataForm } from '@plone/volto/components';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { getFieldName } from 'volto-form-block/components/utils';
 
 import 'volto-form-block/components/Sidebar.css';
-import config from '@plone/volto/registry';
 
 const messages = defineMessages({
-  exportCsv: {
-    id: 'form_edit_exportCsv',
-    defaultMessage: 'Export data',
-  },
-  clearData: {
-    id: 'form_clear_data',
-    defaultMessage: 'Clear data',
-  },
-  formDataCount: {
-    id: 'form_formDataCount',
-    defaultMessage: '{formDataCount} item(s) stored',
-  },
-  confirmClearData: {
-    id: 'form_confirmClearData',
-    defaultMessage: 'Are you sure you want to delete all saved items?',
-  },
-  cancel: {
-    id: 'Cancel',
-    defaultMessage: 'Cancel',
-  },
   fieldId: {
     id: 'fieldId',
     defaultMessage: 'Field ID',
@@ -91,22 +53,6 @@ const Sidebar = ({
 }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
-  const [confirmOpen, setConfirmOpen] = useState(false);
-
-  const formData = useSelector((state) => state.formData);
-  const clearFormDataState = useSelector(
-    (state) => state.clearFormData?.loaded,
-  );
-  useEffect(() => {
-    if (properties?.['@id'])
-      dispatch(
-        getFormData({
-          path: flattenToAppURL(properties['@id']),
-          block_id: block,
-        }),
-      );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [clearFormDataState]);
 
   if (data.send_email === undefined) data.send_email = true;
 
@@ -149,117 +95,7 @@ const Sidebar = ({
           />
           {properties?.['@components']?.form_data && (
             <Form.Field inline>
-              <Grid>
-                <Grid.Row stretched centered style={{ padding: '1rem 0' }}>
-                  <Dimmer active={formData?.loading}>
-                    <Loader size="tiny" />
-                  </Dimmer>
-                  <p>
-                    {intl.formatMessage(messages.formDataCount, {
-                      formDataCount: formData?.result?.items_total ?? 0,
-                    })}
-                  </p>
-                </Grid.Row>
-                <Grid.Row
-                  stretched
-                  centered
-                  columns={2}
-                  style={{ marginBottom: '0.5rem' }}
-                >
-                  <Grid.Column>
-                    <Button
-                      compact
-                      onClick={() =>
-                        dispatch(
-                          exportCsvFormData(
-                            flattenToAppURL(properties['@id']),
-                            `export-${properties.id ?? 'form'}.csv`,
-                            block,
-                          ),
-                        )
-                      }
-                      size="tiny"
-                      style={{ display: 'flex', alignItems: 'center' }}
-                    >
-                      <Icon name={downloadSVG} size="1.5rem" />{' '}
-                      {intl.formatMessage(messages.exportCsv)}
-                    </Button>
-                  </Grid.Column>
-                  <Grid.Column>
-                    <Button
-                      compact
-                      onClick={() => setConfirmOpen(true)}
-                      size="tiny"
-                      style={{ display: 'flex', alignItems: 'center' }}
-                    >
-                      <Icon name={deleteSVG} size="1.5rem" />{' '}
-                      {intl.formatMessage(messages.clearData)}
-                    </Button>
-                    <Confirm
-                      open={confirmOpen}
-                      content={intl.formatMessage(messages.confirmClearData)}
-                      cancelButton={intl.formatMessage(messages.cancel)}
-                      onCancel={() => setConfirmOpen(false)}
-                      onConfirm={() => {
-                        dispatch(
-                          clearFormData({
-                            path: flattenToAppURL(properties['@id']),
-                            block_id: block,
-                          }),
-                        );
-                        setConfirmOpen(false);
-                      }}
-                    />
-                  </Grid.Column>
-                </Grid.Row>
-                {data.remove_data_after_days > 0 && (
-                  <Grid.Row>
-                    <div class="ui message info tiny">
-                      {formData.loaded &&
-                        formData.result?.expired_total > 0 && (
-                          <>
-                            <p>
-                              <Icon name={warningSVG} size="18px" />
-                              {intl.formatMessage(
-                                messages.remove_data_warning,
-                                {
-                                  record: formData.result.expired_total,
-                                },
-                              )}
-                            </p>
-                            <p>
-                              <Button
-                                onClick={() =>
-                                  dispatch(
-                                    clearFormData({
-                                      path: flattenToAppURL(properties['@id']),
-                                      expired: true,
-                                      block_id: block,
-                                    }),
-                                  )
-                                }
-                                size="tiny"
-                                compact
-                                style={{
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                }}
-                              >
-                                <Icon name={deleteSVG} size="1.5rem" />{' '}
-                                {intl.formatMessage(
-                                  messages.remove_data_button,
-                                )}
-                              </Button>
-                            </p>
-                          </>
-                        )}
-                      <p>
-                        {intl.formatMessage(messages.remove_data_cron_info)}
-                      </p>
-                    </div>
-                  </Grid.Row>
-                )}
-              </Grid>
+              <Grid></Grid>
             </Form.Field>
           )}
         </Segment>
@@ -307,7 +143,6 @@ const Sidebar = ({
                         if (subblock.field_type === 'static_text') {
                           update_values.required = false;
                         }
-
                         onChangeSubBlock(index, {
                           ...subblock,
                           [name]: value,

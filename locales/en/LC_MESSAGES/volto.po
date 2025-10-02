@@ -4571,6 +4571,11 @@ msgstr "View on Google Maps"
 msgid "vincoli"
 msgstr "Constraints"
 
+#: overrideTranslations
+# defaultMessage: Selezionare la voce "Salva i dati compilati" nella barra laterale per abilitare il salvataggio e la visualizzazione dei dati
+msgid "warning_enable_save"
+msgstr "Select the 'Save Filled Data' item in the sidebar to enable saving and viewing of data"
+
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 #: helpers/contentHelper
 # defaultMessage: Whatsapp

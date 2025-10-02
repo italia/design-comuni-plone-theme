@@ -242,8 +242,8 @@ const View = ({ data, id, path }) => {
       .verify()
       .then(() => {
         if (isValidForm()) {
-          let attachments = {};
-          let captcha = {
+          const attachments = {};
+          const captcha = {
             provider: data.captcha,
             token: captchaToken.current,
           };
@@ -251,9 +251,9 @@ const View = ({ data, id, path }) => {
             captcha.value = formData[data.captcha_props.id]?.value ?? '';
           }
 
-          let formattedFormData = { ...formData };
+          const formattedFormData = { ...formData };
           data.subblocks.forEach((subblock) => {
-            let name = getFieldName(subblock.label, subblock.id);
+            const name = getFieldName(subblock.label, subblock.id);
             if (formattedFormData[name]?.value) {
               formattedFormData[name].field_id = subblock.field_id;
               const isAttachment =
@@ -263,7 +263,11 @@ const View = ({ data, id, path }) => {
               // const isDate = subblock.field_type === 'date';
 
               if (isAttachment) {
-                attachments[name] = formattedFormData[name].value;
+                attachments[name] = {
+                  ...formattedFormData[name].value,
+                  label: formattedFormData[name].label,
+                  field_id: subblock.field_id,
+                };
                 delete formattedFormData[name];
               }
 

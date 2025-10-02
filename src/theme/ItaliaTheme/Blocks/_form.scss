@@ -302,3 +302,18 @@
 .grecaptcha-badge {
   bottom: 115px !important;
 }
+
+.cms-ui {
+  .ui.tab.container {
+    .dt-wrapper {
+      button.ui.button {
+        width: auto;
+        padding: 1.2rem;
+      }
+
+      .dt-wrapper-table .ui.table {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
