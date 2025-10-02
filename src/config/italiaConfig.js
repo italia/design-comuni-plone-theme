@@ -302,6 +302,7 @@ export default function applyConfig(voltoConfig) {
       markSpecialLinks: true, // se impostato a false, non marca con icona i link esterni
       markFooterLinks: true, // se impostato a true, viene aggiunta un'icona ai link del footer per renderli riconoscibili
       showContentDateInListingFor: ['Modulo', 'Documento'], // elenco dei content types per i quali mostrare la data di pubblicazione/modifica in listing
+      displayThankYouInAlertMessageFormBlock: false, // imposta a true quando vuoi mostrare il ThankYou message con l'alert del limite di iscrizioni
       fallbackImageSrc: FALLBACK_IMAGE_SRC,
       fallbackImageSrcMaxW: FALLBACK_IMAGE_SRC_MAX_W,
     },
