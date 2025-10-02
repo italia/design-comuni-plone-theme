@@ -388,8 +388,8 @@ export default function applyConfig(voltoConfig) {
       //se si aggiunge un nuovo blocco, verificare che in edit non ci siano bottoni che provocano il submit della form. Se succede, gestirli con e.prevenDefault() e.stopPropagation().
       // Se sono bottoni semantic basta mettere type="button"
     ],
-
     showRestricted: false,
+    voltoVersion: '17',
   };
 
   config.settings.nonContentRoutes = config.settings.nonContentRoutes.filter(
