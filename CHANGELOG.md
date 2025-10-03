@@ -1,5 +1,12 @@
 # Changelog
 
+## [12.5.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.5.0...v12.5.1) (2025-10-03)
+
+
+### Documentation
+
+* updated publiccode and release log ([bc14488](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bc1448828aa2f9583f96f4dab6fadbe2050ced07))
+
 ## [12.5.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.4.1...v12.5.0) (2025-10-03)
 
 
