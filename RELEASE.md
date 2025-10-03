@@ -41,46 +41,27 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- Il campo "data di inizio incarico" nel CT Incarico non è più obbligatorio se la tipologia di incarico è impostata come "Amministrativo"
-- ...
-
-### Novità
-
-- ...
-
-### Fix
-
-- Aggiornata intestazione della sezione Argomento da H5 a H2 all’interno di una pagina per migliorare la gerarchia.
-  -->
-
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 11.34.0 (03/10/2025)
 
 ### Migliorie
 
 - Migliorata l'accessibilità sui campi di input quando vengono applicate delle label ai campi.
-- Il pulsante Stile bottone dentro all'editor Slate è ora disponibile soltanto quando si seleziona un link con href.
-
-- Migliorata la gestione del copia/incolla da Word e Word online. Ora vengono mantenuti stili e formattazione.
 - Migliorata l'accessibilità per gli input di tipo radio button, checkbox e select all'interno del blocco form.
-- Blocco form aggiornato con la possibilità di aggiungere il Messaggio di conferma invio insieme all'alert del Limite di iscrizioni superato
+- Blocco form aggiornato con la possibilità di aggiungere il Messaggio di conferma invio insieme all'alert del Limite di iscrizioni superato.
+- Il campo "data di inizio incarico" nel CT Incarico non è più obbligatorio se la tipologia di incarico è impostata come "Amministrativo".
 
 ### Novità
 
-- E' ora disponibile il blocco contatti: dal pannello di controllo è possibile impostare una lista di contatti da mostrare sopra al footer.
 - Nel blocco form è stata aggiunta la possibilità di consultare i dati compilati di ogni singolo form nella tab "Dati" all'interno del blocco, è possibile inoltre scaricare il file CSV o pulire i dati sempre dalla stessa sezione.
 
 ### Fix
 
-- Migliorato la gestione del link "Vedi" nelle card: ora il titolo è sempre cliccabile e il link "Vedi" non viene più raggiunto dai lettori di schermo o dalla tastiera, garantendo un’esperienza più chiara e accessibile.
 - Blocco Elenco Card con testo animato: rimosso il focus dal card e dal pulsante “Vedi/Read More”, lasciando la navigazione solo sul titolo.
-- Blocco Elenco Card con testo animato: Aggiunto aria-hidden a “Vedi/Read More” per escluderlo dai lettori di schermo.
+- Blocco Elenco Card con testo animato: aggiunto aria-hidden a “Vedi/Read More” per escluderlo dai lettori di schermo.
+- Migliorato la gestione del link "Vedi" nelle card: ora il titolo è sempre cliccabile e il link "Vedi" non viene più raggiunto dai lettori di schermo o dalla tastiera, garantendo un'esperienza più chiara e accessibile.
+- Aggiornata intestazione della sezione Argomento da H5 a H2 all'interno di una pagina per migliorare la gerarchia.
 
 ## Versione 11.33.0 (22/08/2025)
-## Versione 12.4.0 (22/08/2025)
 
 ### Novità
 
