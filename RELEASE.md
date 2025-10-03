@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione 12.5.2 (03/10/2025)
+
+### Fix
+
+- Risolto un problema di performance nel mostrare alcune immagini.
+
 ## Versione 12.5.0 (03/10/2025)
 
 ### Migliorie
