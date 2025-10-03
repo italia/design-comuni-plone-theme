@@ -50,6 +50,7 @@
 - Migliorata la gestione del copia/incolla da Word e Word online. Ora vengono mantenuti stili e formattazione.
 - Migliorata l'accessibilità per gli input di tipo radio button, checkbox e select all'interno del blocco form.
 - Blocco form aggiornato con la possibilità di aggiungere il Messaggio di conferma invio insieme all'alert del Limite di iscrizioni superato.
+- Il campo "data di inizio incarico" nel CT Incarico non è più obbligatorio se la tipologia di incarico è impostata come "Amministrativo".
 
 ### Novità
 
