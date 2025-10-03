@@ -1,5 +1,12 @@
 # Changelog
 
+## [12.5.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.5.1...v12.5.2) (2025-10-03)
+
+
+### Bug Fixes
+
+* porting of https://github.com/plone/volto/pull/7390 ([20cd0c0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/20cd0c0c6809b0e4bdd6dd86a0fb27f5c0fea464))
+
 ## [12.5.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.5.0...v12.5.1) (2025-10-03)
 
 
