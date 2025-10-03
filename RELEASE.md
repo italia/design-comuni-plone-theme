@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione 11.34.1 (03/10/2025)
+
+### Fix
+
+- Risolto un problema di performance nel mostrare alcune immagini.
+
 ## Versione 11.34.0 (03/10/2025)
 
 ### Migliorie
