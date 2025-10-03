@@ -45,12 +45,27 @@
 
 ### Migliorie
 
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Aggiornata intestazione della sezione Argomento da H5 a H2 all’interno di una pagina per migliorare la gerarchia.
+  -->
+
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
 - Migliorata l'accessibilità sui campi di input quando vengono applicate delle label ai campi.
 - Il pulsante Stile bottone dentro all'editor Slate è ora disponibile soltanto quando si seleziona un link con href.
 - Migliorata la gestione del copia/incolla da Word e Word online. Ora vengono mantenuti stili e formattazione.
 - Migliorata l'accessibilità per gli input di tipo radio button, checkbox e select all'interno del blocco form.
 - Blocco form aggiornato con la possibilità di aggiungere il Messaggio di conferma invio insieme all'alert del Limite di iscrizioni superato
-  
+
 ### Novità
 
 - E' ora disponibile il blocco contatti: dal pannello di controllo è possibile impostare una lista di contatti da mostrare sopra al footer.
@@ -62,7 +77,6 @@
 - Blocco Elenco Card con testo animato: rimosso il focus dal card e dal pulsante “Vedi/Read More”, lasciando la navigazione solo sul titolo.
 - Blocco Elenco Card con testo animato: Aggiunto aria-hidden a “Vedi/Read More” per escluderlo dai lettori di schermo.
 - Migliorato la gestione del link "Vedi" nelle card: ora il titolo è sempre cliccabile e il link "Vedi" non viene più raggiunto dai lettori di schermo o dalla tastiera, garantendo un’esperienza più chiara e accessibile.
-
 
 ## Versione 12.4.0 (22/08/2025)
 
