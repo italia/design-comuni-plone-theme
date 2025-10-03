@@ -1,5 +1,36 @@
 
 
+## [11.34.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.33.1...v11.34.0) (2025-10-03)
+
+
+### Features
+
+* contacts block control panel widget ([#1000](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1000)) ([18486b0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/18486b049dd6272b108ae86f5e73ed284183a190))
+* made data_inizio_incarico conditional ([#1007](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1007)) ([b85a44f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b85a44f7107bbca595eeaa9497ee8b4d406344b7))
+* updated volto-blocks-widget v3.4.7 ([#1012](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1012)) ([19c672d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/19c672d4d9a27715c1444cd4546353f6b5526a96))
+* updated volto-form-block with datatable new feature ([#949](https://github.com/RedTurtle/design-comuni-plone-theme/issues/949)) ([0614797](https://github.com/RedTurtle/design-comuni-plone-theme/commit/06147977bce44cc50a02722e975e3615f852223f))
+* updated warning form block message and configured alert with thank-you message ([#1010](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1010)) ([a0da5ae](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a0da5ae7831e1af1a6afb9ebcd587df45933df6f))
+
+
+### Bug Fixes
+
+* **a11y:** radio and checkbox fieldset, select label of form block ([#1009](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1009)) ([2e5625f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2e5625f8b1f7713999fc59e2c5ef12a9218144a7))
+* **a11y:** updated heading from H5 to H2 for improved hierarchy ([#1014](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1014)) ([1b4d5b7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1b4d5b7762e505445b20a7af479a3e6c01ec4028))
+* add aria-hidden and tabindex -1 to read-more links for better accessibility ([#1002](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1002)) ([296e4e6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/296e4e60e4dbc28a5ab9fcbc580a4747b94978ab))
+* disabled contacts block by default ([fb443fd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fb443fdad7aabdb1d3f4ec1a2b2ed8e8c03fe1dd))
+* tabindex and aria-hidden add to CardWithSlideUpTextTemplate for better a11y ([#1003](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1003)) ([82a27a2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/82a27a25bbba91ee99a67cf2a36f54b4a2ee6fb0))
+* updated text, select and date input filter with label props ([#994](https://github.com/RedTurtle/design-comuni-plone-theme/issues/994)) ([a6f2575](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a6f2575bcc87f9d36909451c841302f2a557160f))
+
+
+### Maintenance
+
+* **deps:** bump tar-fs from 2.1.3 to 2.1.4 ([#1008](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1008)) ([07bbfe2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/07bbfe2cd409f999f01b1232f207663041050193))
+
+
+### Documentation
+
+* updated publiccode and release log ([ff70aae](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ff70aae270b0362de7c55c8b2801eb75301ace58))
+
 ## [11.33.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.33.0...v11.33.1) (2025-09-01)
 
 
