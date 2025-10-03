@@ -1,5 +1,17 @@
 
 
+## [11.34.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.34.1...v11.34.2) (2025-10-03)
+
+
+### Bug Fixes
+
+* config field for contacts block ([#1015](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1015)) ([4cfd7c1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4cfd7c1aebf6493220b7eaf79e74a97c1da95545))
+
+
+### Documentation
+
+* updated publiccode ([f9c1d79](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f9c1d7934901199a2d95ddb2265f54de6017cb15))
+
 ## [11.34.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.34.0...v11.34.1) (2025-10-03)
 
 
