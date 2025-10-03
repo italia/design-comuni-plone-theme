@@ -1,5 +1,38 @@
 # Changelog
 
+## [12.5.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.4.1...v12.5.0) (2025-10-03)
+
+
+### Features
+
+* contacts block ([#1004](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1004)) ([f0fcf9a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f0fcf9a7226617adb991511d33da41b24f1aaac8))
+* made data_inizio_incarico conditional ([#1007](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1007)) ([7fac2c0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7fac2c01a5caa7053b9989c873c29bcf08a1a59e))
+* updated volto-form-block with datatable new feature ([#949](https://github.com/RedTurtle/design-comuni-plone-theme/issues/949)) ([75c750b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/75c750bb9d2345afc85b593fa068912b1a5312a0))
+* updated warning form block message and configured alert with thank-you message ([#1010](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1010)) ([9318f0a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9318f0a1415f5f9b22c2f5467ee3af4e58b16ee9))
+
+
+### Bug Fixes
+
+* **a11y:** radio and checkbox fieldset, select label of form block ([#1009](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1009)) ([e7a8529](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e7a852998336e87a3c347e6a3ca3416368a16a20))
+* **a11y:** updated heading from H5 to H2 for improved hierarchy ([#1014](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1014)) ([db2e801](https://github.com/RedTurtle/design-comuni-plone-theme/commit/db2e8017e13927d6b203c9a367db6fcd0a722eda))
+* disabled contacts block by default ([fa0f708](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fa0f708a7a7ee850195d0127481d492e671c9dec))
+* HtmlSlateWidget to link files ([#1001](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1001)) ([1a835bc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1a835bc0b8fe34b36e892e8bd8e42b90a4b5315d))
+* improve compatibility when pasting an empty href with more children ([#1005](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1005)) ([7b95f2f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7b95f2f87d6eb294748768088ba6db5b48c327d3))
+* slate button without href ([#999](https://github.com/RedTurtle/design-comuni-plone-theme/issues/999)) ([de2fcb6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/de2fcb69d9d0d6b47b679ebe1f840f216c4117da))
+* updated text, select and date input filter with label props ([#994](https://github.com/RedTurtle/design-comuni-plone-theme/issues/994)) ([cad8fde](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cad8fdefa411ee09e1715df3608d44d5b4cece5d))
+* volto-blocks-widget missing configuration ([19e6a7f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/19e6a7f61231827302a5ef52a95cc9d55a8ffa7e))
+
+
+### Maintenance
+
+* **deps:** bump tar-fs from 2.1.3 to 2.1.4 ([#1008](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1008)) ([f8c101b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f8c101bb09cd5d8108814231b78e99fb18a0b004))
+* updated volto-blocks-widget v3.4.7 ([#970](https://github.com/RedTurtle/design-comuni-plone-theme/issues/970)) ([a71d56e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a71d56e52fd89d16b2e5a0904ff8a370b86a8bb9))
+
+
+### Documentation
+
+* updated publiccode and release log ([7c55d24](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7c55d24fd3d06d35584371cca6e9156111ca8c3f))
+
 ## [12.4.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.4.0...v12.4.1) (2025-09-01)
 
 
