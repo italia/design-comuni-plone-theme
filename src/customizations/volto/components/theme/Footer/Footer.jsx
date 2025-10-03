@@ -37,7 +37,7 @@ const Footer = () => {
       config.settings.siteProperties.enableFeedbackForm
     : true;
 
-  const showContactsBlock = config.settings.siteProperties.enableContactsForm;
+  const showContactsBlock = config.settings.siteProperties.enableContactsBlock;
 
   return (
     <>
