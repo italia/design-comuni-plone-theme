@@ -1,5 +1,22 @@
 
 
+## [11.35.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.34.2...v11.35.0) (2025-10-07)
+
+
+### Features
+
+* listing table variant is now optional ([#1018](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1018)) ([4cff9d8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4cff9d861d0b24cd8088eb9fde72160381fb0c63))
+
+
+### Bug Fixes
+
+* contact blocks styles ([#1016](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1016)) ([b4f1f2a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b4f1f2a6914fad047111f94372f929c699535e98))
+
+
+### Documentation
+
+* updated publiccode ([d6e7bf8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d6e7bf8d7a8ef49f79840807e3b63fd6861ce100))
+
 ## [11.34.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.34.1...v11.34.2) (2025-10-03)
 
 
