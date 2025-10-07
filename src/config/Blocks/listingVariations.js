@@ -296,21 +296,6 @@ const italiaListingVariations = [
     },
     cloneData: cloneBlock,
   },
-  {
-    id: 'table',
-    isDefault: false,
-    title: 'Tabella',
-    template: TableTemplate,
-    skeleton: TableTemplateSkeleton,
-    schemaEnhancer: ({ schema, formData, intl }) => {
-      let pos = addDefaultOptions(schema, formData, intl);
-      addTableTemplateOptions(schema, formData, intl, pos);
-      addLinkMoreOptions(schema, formData, intl);
-      return schema;
-    },
-    fullobjects: true,
-    cloneData: cloneBlock,
-  },
   //  {
   //    id: 'amministrazioneTrasparenteTablesTemplate',
   //    isDefault: false,
@@ -350,4 +335,22 @@ export const removeListingVariation = (config, id) => {
   if (indexOfVariation >= 0) {
     config.blocks.blocksConfig.listing.variations.splice(indexOfVariation, 1);
   }
+};
+
+export const addTableListingVariation = (config) => {
+  config.blocks.blocksConfig.listing.variations.push({
+    id: 'table',
+    isDefault: false,
+    title: 'Tabella',
+    template: TableTemplate,
+    skeleton: TableTemplateSkeleton,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      let pos = addDefaultOptions(schema, formData, intl);
+      addTableTemplateOptions(schema, formData, intl, pos);
+      addLinkMoreOptions(schema, formData, intl);
+      return schema;
+    },
+    fullobjects: true,
+    cloneData: cloneBlock,
+  });
 };
