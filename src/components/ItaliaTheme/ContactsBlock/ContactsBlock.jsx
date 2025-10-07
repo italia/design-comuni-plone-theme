@@ -42,7 +42,7 @@ const ContactsBlock = () => {
               <Card className="contacts-box">
                 <CardBody>
                   <h2>{intl.formatMessage(messages.contact_block_title)}</h2>
-                  <div>
+                  <div className="contacts-list-container">
                     <ul className="mb-0 mt-3 contacts-list">
                       {contactsItems.map((contact, idx) => (
                         <li key={idx}>
