@@ -13,25 +13,32 @@
       line-height: 1.2;
     }
 
-    .contacts-list {
-      padding: 0;
-      li {
-        list-style-type: none;
+    .contacts-list-container {
+      display: flex;
+      .contacts-list {
+        padding: 0;
 
-        a {
-          column-gap: 2%;
-          .icon-container {
-            width: 5%;
-            display: flex;
+        li {
+          list-style-type: none;
+          line-height: 2.2;
 
-            .icon {
-              color: currentColor;
-              fill: currentColor;
+          a {
+            .icon-container {
+              min-width: 1.5rem;
+              display: flex;
+              margin-right: 0.5rem;
+
+              .icon {
+                max-width: 1.5rem;
+                height: auto;
+                color: currentColor;
+                fill: currentColor;
+              }
             }
-          }
 
-          .text-container {
-            width: 93%;
+            .text-container {
+              width: 93%;
+            }
           }
         }
       }
