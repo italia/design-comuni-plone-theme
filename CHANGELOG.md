@@ -1,5 +1,18 @@
 
 
+## [11.35.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.35.0...v11.35.1) (2025-10-09)
+
+
+### Bug Fixes
+
+* helpbox style ([#1013](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1013)) ([5dbfdf8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5dbfdf83bc44179341627083abbb0b5b74dc84ea))
+* non content routes query for contacts block ([#1020](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1020)) ([91acf90](https://github.com/RedTurtle/design-comuni-plone-theme/commit/91acf9084fb5cab04bb1cc32f8c45d4bfccfa293))
+
+
+### Documentation
+
+* updated publiccode and release log ([66fe1de](https://github.com/RedTurtle/design-comuni-plone-theme/commit/66fe1dec7a47b4f01d01e6365b04e0d693a88c64))
+
 ## [11.35.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.34.2...v11.35.0) (2025-10-07)
 
 
