@@ -40,12 +40,20 @@
 
 - ...
  -->
- ## Versione X.X.X (dd/mm/yyyy)
 
+## Versione X.X.X (dd/mm/yyyy)
 
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
 
 ### Fix
 
+- Il widget Contatti è ora visibile in tutte le rotte, comprese quelle del flusso prenotazioni e la ricerca.
 - Sistemato paragrafo con stile callout nel campo Ulteriori Informazioni dei vari CT
 
 ## Versione 11.34.1 (03/10/2025)
