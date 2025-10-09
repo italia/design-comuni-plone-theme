@@ -40,6 +40,13 @@
 
 - ...
  -->
+ ## Versione X.X.X (dd/mm/yyyy)
+
+
+
+### Fix
+
+- Sistemato paragrafo con stile callout nel campo Ulteriori Informazioni dei vari CT
 
 ## Versione 12.5.2 (03/10/2025)
 
