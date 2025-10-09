@@ -4,6 +4,7 @@ import { useIntl, defineMessages } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import { Container, Row, Col, Spinner, Card, CardBody } from 'design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
+import { getBaseUrl } from '@plone/volto/helpers';
 import { getContacts } from 'design-comuni-plone-theme/actions';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
@@ -19,9 +20,11 @@ const ContactsBlock = () => {
   const { pathname } = useLocation();
   const dispatch = useDispatch();
 
+  const path = getBaseUrl(pathname);
+
   useEffect(() => {
-    dispatch(getContacts(pathname));
-  }, [dispatch, pathname]);
+    dispatch(getContacts(path));
+  }, [dispatch, path]);
 
   const contacts = useSelector((state) => state.contacts) ?? {};
   const contactsItems = contacts?.result?.items ?? [];
