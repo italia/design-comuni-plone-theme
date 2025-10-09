@@ -5,6 +5,13 @@ import { Callout, CalloutTitle } from 'design-react-kit';
 import Icon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/Icon';
 import { RichText } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
+const messages = defineMessages({
+  ulteriori_info: {
+    id: 'ulteriori_info',
+    defaultMessage: 'Icona ulteriori informazioni',
+  },
+});
+
 const HelpBox = ({ text }) => {
   const intl = useIntl();
   return text ? (
@@ -19,8 +26,8 @@ const HelpBox = ({ text }) => {
           title={intl.formatMessage(messages.ulteriori_info)}
         />
         <span className="text"></span>
+        <span className="text-line"></span>
       </CalloutTitle>
-
       <div>
         <RichText data={text} />
       </div>
@@ -31,10 +38,4 @@ HelpBox.propTypes = {
   text: PropTypes.object.isRequired,
 };
 
-const messages = defineMessages({
-  ulteriori_info: {
-    id: 'ulteriori_info',
-    defaultMessage: 'Icona ulteriori informazioni',
-  },
-});
 export default HelpBox;
