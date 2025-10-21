@@ -41,21 +41,13 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
+## Versione 12.6.2 (21/10/2025)
 
 ### Fix
 
-- Sistemata la visualizzazione del blocco Callout all’interno del content type Evento.
+- Sistemata la visualizzazione del blocco con le ulteriori informazioni all'interno del tipo di contenuto Evento.
 - Rimossi gli argomenti dalla fascia dei contenuti correlati in evidenza.
-- Il widget contatti mantiene gli stili anche nelle rotte di back-office.
+- Il widget contatti mantiene gli stili anche nelle pagine di back-office.
 
 ## Versione 12.6.1 (09/10/2025)
 
