@@ -1,5 +1,20 @@
 # Changelog
 
+## [12.6.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.1...v12.6.2) (2025-10-21)
+
+
+### Bug Fixes
+
+* contacts block styles ([#1022](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1022)) ([1adf0cd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1adf0cd706af585b7dc7655c7f5f9ad62767866a))
+* removed the unnecessary arguments part from content in evidence ([#1026](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1026)) ([ea2b8cf](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ea2b8cf0a2640ec978eaf059339b60e0f5372102))
+* tipoIncarico conditions check for data inizio incarico widget ([#1021](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1021)) ([ee803b8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ee803b894dd82469e483cc9ee2f71fd408cf3f35))
+* title overlap the border - callout in event type ([#1023](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1023)) ([46002d2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/46002d227d691554ce01a3fac8998d368a0a53d8))
+
+
+### Documentation
+
+* updated publiccode and release log ([066e479](https://github.com/RedTurtle/design-comuni-plone-theme/commit/066e47993ed645124f5245b9f61ad8593cab8dfe))
+
 ## [12.6.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.0...v12.6.1) (2025-10-09)
 
 
