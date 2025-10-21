@@ -32,7 +32,7 @@ const ContactsBlock = () => {
   const isContactsLoaded = contacts.loaded;
 
   return contactsItems.length > 0 ? (
-    <section className="contacts-block bg-light py-5">
+    <section className="public-ui contacts-block bg-light">
       <Container>
         <Row className="d-flex justify-content-center">
           <Col xs={12} lg={6} xl={6} xxl={6}>

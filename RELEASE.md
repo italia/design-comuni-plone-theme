@@ -56,6 +56,9 @@
 - Rimossi gli argomenti dalla fascia dei contenuti correlati in evidenza.
 
 ## Versione 11.35.1 (09/10/2025)
+- Il widget contatti mantiene gli stili anche nelle rotte di back-office.
+
+## Versione 12.6.1 (09/10/2025)
 
 ### Fix
 
