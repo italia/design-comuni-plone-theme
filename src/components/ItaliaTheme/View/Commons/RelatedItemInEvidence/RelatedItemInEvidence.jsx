@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ItemInEvidence from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/ItemInEvidence';
-import Arguments from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/Arguments';
 import { Container, Row, Col } from 'design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
 
@@ -33,9 +32,6 @@ const RelatedItemInEvidence = ({ content }) => {
               <Row className="m-4">
                 <Col md={6} className="px-3">
                   <ItemInEvidence content={content} />
-                </Col>
-                <Col md={6} className="px-3">
-                  <Arguments content={content} />
                 </Col>
               </Row>
             </Container>
