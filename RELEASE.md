@@ -41,24 +41,14 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
+## Versione 11.35.2 (21/10/2025)
 
 ### Fix
 
 - Rimossi gli argomenti dalla fascia dei contenuti correlati in evidenza.
+- Il widget contatti mantiene gli stili anche nelle pagine di back-office.
 
 ## Versione 11.35.1 (09/10/2025)
-- Il widget contatti mantiene gli stili anche nelle rotte di back-office.
-
-## Versione 12.6.1 (09/10/2025)
 
 ### Fix
 
