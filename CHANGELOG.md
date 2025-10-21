@@ -1,5 +1,19 @@
 
 
+## [11.35.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.35.1...v11.35.2) (2025-10-21)
+
+
+### Bug Fixes
+
+* contacts block styles ([#1022](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1022)) ([2b4143b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2b4143b96e313aa35337a7fa1dbedea954cc2657))
+* removed the unnecessary arguments part from content in evidence ([#1027](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1027)) ([cf05f0d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cf05f0da7360bb1d8136e7c2c01164329bd8c4d0))
+* tipoIncarico conditions check for data inizio incarico widget ([#1021](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1021)) ([630613b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/630613bfb56f7c3e2a50ceede57c3466c8870509))
+
+
+### Documentation
+
+* updated publiccode and release log ([b3c11c9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b3c11c9b65aa32d9b169490a47b634daa9a79642))
+
 ## [11.35.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.35.0...v11.35.1) (2025-10-09)
 
 
