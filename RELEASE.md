@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Il widget contatti mantiene gli stili anche nelle rotte di back-office.
+
 ## Versione 12.6.1 (09/10/2025)
 
 ### Fix

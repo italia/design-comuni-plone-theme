@@ -492,6 +492,15 @@ body.cms-ui {
     }
   }
 
+  .bg-light {
+    --bs-light-rgb: 243, 252, 249;
+    --bs-bg-opacity: 1;
+    background-color: rgba(
+      var(--bs-light-rgb),
+      var(--bs-bg-opacity)
+    ) !important;
+  }
+
   .path-filter-widget {
     padding: 1em 0 1em 0.5em;
     border-left: 1px solid #edf1f2;
