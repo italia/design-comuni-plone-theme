@@ -26,11 +26,11 @@ div.callout {
 
     .text-line {
       position: relative;
+      top: 0.8rem;
       width: 100%;
       min-width: 3rem;
       height: 2px;
       flex: 1;
-      top: 1rem;
       background-color: $color-border-secondary;
     }
   }
