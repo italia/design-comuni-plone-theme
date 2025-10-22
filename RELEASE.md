@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Inserendo un blocco Griglia in pagina, se si salva con il blocco vuoto, la pagina non va più in crash.
+
 ## Versione 12.6.2 (21/10/2025)
 
 ### Fix
