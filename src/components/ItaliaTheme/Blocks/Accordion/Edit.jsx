@@ -14,7 +14,7 @@ import {
 } from 'volto-subblocks';
 
 import { SidebarPortal } from '@plone/volto/components';
-import Sidebar from './Sidebar.jsx';
+import Sidebar from './Sidebar';
 
 import { defineMessages } from 'react-intl';
 

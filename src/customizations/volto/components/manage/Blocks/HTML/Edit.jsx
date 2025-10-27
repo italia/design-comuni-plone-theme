@@ -22,7 +22,7 @@ import showSVG from '@plone/volto/icons/show.svg';
 import clearSVG from '@plone/volto/icons/clear.svg';
 import codeSVG from '@plone/volto/icons/code.svg';
 import indentSVG from '@plone/volto/icons/indent.svg';
-import Sidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/HTML/Sidebar.jsx';
+import Sidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/HTML/Sidebar';
 import { Toast } from '@plone/volto/components';
 
 const Editor = loadable(() => import('react-simple-code-editor'));

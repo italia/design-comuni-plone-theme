@@ -21,7 +21,7 @@ import {
 import clearSVG from '@plone/volto/icons/clear.svg';
 import aheadSVG from '@plone/volto/icons/ahead.svg';
 import videoBlockSVG from '@plone/volto/components/manage/Blocks/Video/block-video.svg';
-import Body from './Body.jsx';
+import Body from './Body';
 import { checkIfValidVideoLink } from 'design-comuni-plone-theme/helpers/index.js';
 import { compose } from 'redux';
 import config from '@plone/volto/registry';

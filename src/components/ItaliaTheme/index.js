@@ -19,12 +19,12 @@ export LocationFiltersWidget from 'design-comuni-plone-theme/components/ItaliaTh
 export CanaleDigitaleWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/CanaleDigitaleWidget';
 export CTFieldsWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/CTFieldsWidget';
 export CTTitleColumnWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/CTTitleColumnWidget';
-export BlocksViewWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/BlocksViewWidget.jsx';
-export PDCViewWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/PDCViewWidget.jsx';
-export DataGridWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/DataGridWidget.jsx';
-export ContactsConfigWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget.jsx';
-export ContactsConfigForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigForm.jsx';
-export ConditionallyRequiredDateWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/ConditionallyRequiredDateWidget.jsx';
+export BlocksViewWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/BlocksViewWidget';
+export PDCViewWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/PDCViewWidget';
+export DataGridWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/DataGridWidget';
+export ContactsConfigWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigWidget';
+export ContactsConfigForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/ContactsWidget/ContactsConfigForm';
+export ConditionallyRequiredDateWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/ConditionallyRequiredDateWidget';
 
 /********* ICONS ********* */
 export getItemIcon from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/common/common';

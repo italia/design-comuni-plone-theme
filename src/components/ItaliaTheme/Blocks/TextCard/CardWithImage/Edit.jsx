@@ -7,8 +7,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import { SidebarPortal } from '@plone/volto/components';
-import Sidebar from './Sidebar.jsx';
-import BodyWrapper from './BodyWrapper.jsx';
+import Sidebar from './Sidebar';
+import BodyWrapper from './BodyWrapper';
 import Block from './Block';
 
 /**

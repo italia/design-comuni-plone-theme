@@ -47,7 +47,7 @@ import CardWithSlideUpTextTemplateSkeleton from 'design-comuni-plone-theme/compo
 
 import AttachmentCardTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/AttachmentCardTemplate';
 
-import TableTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TableTemplate.jsx';
+import TableTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TableTemplate';
 import TableTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/TableTemplateSkeleton';
 // import AmministrazioneTrasparenteTablesTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
 // import AmministrazioneTrasparenteTablesTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
