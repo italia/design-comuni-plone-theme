@@ -1,5 +1,25 @@
 # Changelog
 
+## [12.6.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.2...v12.6.3) (2025-10-27)
+
+
+### Bug Fixes
+
+* Revert "fix: title overlap the border - callout in event type (#1023)" ([bb94d1b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bb94d1b7abcbdd004488903451ea4f0533da947c)), closes [#1023](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1023)
+* conditional chaining in grid block view for columns ([#1028](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1028)) ([eaffd45](https://github.com/RedTurtle/design-comuni-plone-theme/commit/eaffd45bb25e2e1308d72a79ed6dd3719e7b460f))
+* html slate widget state management ([#1029](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1029)) ([8c7cefe](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8c7cefe839b08cc14f9885daa78cb5ad2b7b3186))
+* update volto-form-blocks 3.13.1 ([#1030](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1030)) ([1513a7d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1513a7d12856f1845d677601926d1cd31ce11049))
+
+
+### Maintenance
+
+* updated imports to allow better customizations ([88918b7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/88918b7ceea84e75ac27135caf2a2e9aa6b7f12c))
+
+
+### Documentation
+
+* updated publiccode and release log ([87718a7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/87718a7f843348e26d3465bf28b8fe40d9e73765))
+
 ## [12.6.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.1...v12.6.2) (2025-10-21)
 
 
