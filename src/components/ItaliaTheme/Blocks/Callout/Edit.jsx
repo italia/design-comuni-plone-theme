@@ -10,7 +10,7 @@ import { SidebarPortal } from '@plone/volto/components';
 
 import { Callout, CalloutTitle, CalloutText } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import Sidebar from './Sidebar.jsx';
+import Sidebar from './Sidebar';
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { useHandleDetachedBlockFocus } from 'design-comuni-plone-theme/helpers/blocks';
 
