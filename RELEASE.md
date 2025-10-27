@@ -41,20 +41,12 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
+## Versione 12.6.3 (27/10/2025)
 
 ### Fix
 
 - Inserendo un blocco Griglia in pagina, se si salva con il blocco vuoto, la pagina non va più in crash.
-- L'editor Slate funziona regolarmente quando vengono inseriti link esterni: il cursore non si sposta alla fine del testo all'inserimento di ogni carattere quando nel testo è presente un link a un sito esterno.
+- L'editor di testo funziona regolarmente quando vengono inseriti link esterni: il cursore non si sposta alla fine del testo all'inserimento di ogni carattere quando nel testo è presente un link a un sito esterno.
 
 ## Versione 12.6.2 (21/10/2025)
 
