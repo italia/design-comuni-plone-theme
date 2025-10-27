@@ -1,5 +1,23 @@
 
 
+## [11.35.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.35.2...v11.35.3) (2025-10-27)
+
+
+### Bug Fixes
+
+* conditional chaining in grid block view for columns ([#1028](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1028)) ([7a13014](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7a13014466c77be575eff6f136935a7dc164791c))
+* update volto-form-blocks 3.13.1 ([#1030](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1030)) ([ee41f11](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ee41f119e6bddc30fae488a130a0af21f76cd89c))
+
+
+### Maintenance
+
+* updated imports to allow better customizations ([7bbe21d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7bbe21d3e1ef805fb1b14d701ae6e7778f567492))
+
+
+### Documentation
+
+* updated publiccode and release log ([f090054](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f090054d72de7b689dde5cd4d581760b26361833))
+
 ## [11.35.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v11.35.1...v11.35.2) (2025-10-21)
 
 
