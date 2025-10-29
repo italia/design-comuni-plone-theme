@@ -18,7 +18,7 @@ const ConditionallyRequiredDateWidget = (props) => {
   // the field must not be required
   const isRequired =
     tipoIncarico !== 'amministrativo' &&
-    tipoIncarico.token !== 'amministrativo';
+    tipoIncarico?.token !== 'amministrativo';
 
   return (
     <DatetimeWidget
