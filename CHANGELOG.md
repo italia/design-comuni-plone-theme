@@ -1,5 +1,17 @@
 # Changelog
 
+## [12.6.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.3...v12.6.4) (2025-10-30)
+
+
+### Bug Fixes
+
+* error during Incarico creation ([#1031](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1031)) ([475f099](https://github.com/RedTurtle/design-comuni-plone-theme/commit/475f099cc23ddd54ba2dbbea0df81783b98be43f))
+
+
+### Documentation
+
+* updated publiccode ([333ab04](https://github.com/RedTurtle/design-comuni-plone-theme/commit/333ab0420481417f5a63d4fb07c5d08e208f0d61))
+
 ## [12.6.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.2...v12.6.3) (2025-10-27)
 
 
