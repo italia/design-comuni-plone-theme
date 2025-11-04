@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Rimosse le estensioni file dalla variazione del blocco elenco Card con testo animato.
+
 ## Versione 12.6.3 (27/10/2025)
 
 ### Fix

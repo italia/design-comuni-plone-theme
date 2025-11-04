@@ -71,6 +71,11 @@ const CardWithSlideUpTextTemplate = (props) => {
               dependencies: ['CardWithSlideUpTextTemplate', item['@type']],
             }).component;
 
+            const cardItem = {
+              ...item,
+              enhanced_links_enabled: false,
+            };
+
             return (
               <div
                 className="listing-item box bg-img mb-2"
@@ -90,7 +95,7 @@ const CardWithSlideUpTextTemplate = (props) => {
                   </div>
                 )}
                 <UniversalLink
-                  item={!isEditMode ? item : null}
+                  item={!isEditMode ? cardItem : null}
                   href={isEditMode ? '#' : null}
                   key={index}
                   data-element={id_lighthouse}
@@ -116,7 +121,7 @@ const CardWithSlideUpTextTemplate = (props) => {
                   <CardReadMore
                     iconName="it-arrow-right"
                     tag={UniversalLink}
-                    item={!isEditMode ? item : null}
+                    item={!isEditMode ? cardItem : null}
                     href={isEditMode ? '#' : null}
                     text={intl.formatMessage(messages.vedi)}
                     className="justify-content-end"
@@ -125,7 +130,7 @@ const CardWithSlideUpTextTemplate = (props) => {
                   />
                 </div>
                 <UniversalLink
-                  item={!isEditMode ? item : null}
+                  item={!isEditMode ? cardItem : null}
                   className="card-link"
                   aria-hidden="true"
                   tabIndex="-1"
