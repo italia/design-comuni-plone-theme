@@ -1,5 +1,17 @@
 # Changelog
 
+## [12.6.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.4...v12.6.5) (2025-11-04)
+
+
+### Bug Fixes
+
+* removed file extension from slide up text cards ([#1033](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1033)) ([5c6da97](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5c6da970c8c80b5426ab7dd9aca29b7aaedfdfb2))
+
+
+### Documentation
+
+* updated publiccode and release log ([e726ec9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e726ec9b3bf747426412faf2e75157a4f58b09c4))
+
 ## [12.6.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.3...v12.6.4) (2025-10-30)
 
 
