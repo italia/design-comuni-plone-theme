@@ -53,7 +53,8 @@
 
 ### Fix
 
-- Lo stile di testo "blockquote" dell'editor in versione scura ha sempre un testo a contrasto garantendone la leggibilità
+- L'etichetta dei campi nel blocco Form va a capo se troppo lunga.
+- Lo stile di testo "blockquote" dell'editor in versione scura ha sempre un testo a contrasto garantendone la leggibilità.
 
 ## Versione 12.6.5 (04/11/2025)
 
