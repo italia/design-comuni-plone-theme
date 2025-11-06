@@ -6,11 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [20.x]
 
     steps:
       - name: Main checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Run unit tests
         run: make test-ci
