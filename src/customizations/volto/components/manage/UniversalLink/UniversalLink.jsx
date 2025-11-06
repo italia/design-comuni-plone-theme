@@ -51,6 +51,7 @@ const UniversalLink = ({
   };
   //questo perchè il provider di intl non è sempre definito, ad esempio in slate_wysiwyg_box (Slate RichTextWidget)
   let intl = null;
+
   try {
     intl = useIntl();
     Object.keys(translations).forEach(

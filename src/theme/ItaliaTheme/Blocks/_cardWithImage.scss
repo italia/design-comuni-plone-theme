@@ -166,6 +166,11 @@
         }
       }
     }
+    a.img-wrapper.with-external-link-icon {
+      .external-link {
+        display: none;
+      }
+    }
   }
 
   @include media-breakpoint-only(lg) {
