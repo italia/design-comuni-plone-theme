@@ -456,8 +456,10 @@ export default (props) => {
           props?.field_type !== 'static_text'
             ? ['autocomplete']
             : []),
-          ...(props?.field_type === 'static_text' ? [] : ['required']),
-          'unique',
+          ...(props?.field_type === 'static_text'
+            ? []
+            : [`required-${props?.field_id}`]),
+          `unique-${props?.field_id}`,
           'visibility_conditions',
         ],
       },
@@ -501,13 +503,13 @@ export default (props) => {
         ),
         choices: autocompleteValues,
       },
-      required: {
+      [`required-${props?.field_id}`]: {
         title: intl.formatMessage(messages.field_required),
         type: 'boolean',
         default: false,
         description: intl.formatMessage(messages.field_required_info_text),
       },
-      unique: {
+      [`unique-${props?.field_id}`]: {
         title: intl.formatMessage(messages.field_unique_title),
         description: intl.formatMessage(messages.field_unique_description),
         type: 'boolean',

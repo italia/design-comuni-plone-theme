@@ -59,7 +59,7 @@ const Field = ({
   description,
   name,
   field_type,
-  required,
+  field_id,
   input_values,
   value,
   onChange,
@@ -71,7 +71,9 @@ const Field = ({
   id,
   reactSelect,
   autocomplete,
+  ...props
 }) => {
+  const required = props[`required-${field_id}`];
   const intl = useIntl();
   const Select = reactSelect.default;
 
@@ -100,7 +102,6 @@ const Field = ({
       static_text_value = fromHtml(value);
     } //per retrocompatibilità con il vecchio widget che usava draftjs
   }
-
   return (
     <div className="field">
       {field_type === 'text' && (

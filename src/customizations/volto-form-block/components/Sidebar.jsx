@@ -103,7 +103,7 @@ const Sidebar = ({
           {data.subblocks &&
             data.subblocks.map((subblock, index) => {
               return (
-                <div key={'subblock' + index}>
+                <div key={'subblock' + subblock.id}>
                   <Accordion.Title
                     active={selected === index}
                     index={index}
