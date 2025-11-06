@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Lo stile di testo "blockquote" dell'editor in versione scura ha sempre un testo a contrasto garantendone la leggibilità
+
 ## Versione 12.6.5 (04/11/2025)
 
 ### Fix

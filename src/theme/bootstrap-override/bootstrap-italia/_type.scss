@@ -7,4 +7,10 @@ body.public-ui {
     font-size: 18px;
     line-height: 1.555;
   }
+
+  blockquote.blockquote-card.dark p {
+    // unless there's a specific customization, .blockquote-card.dark is always bg $primary
+    // this ensures the text is always readable
+    color: color-contrast($primary);
+  }
 }
