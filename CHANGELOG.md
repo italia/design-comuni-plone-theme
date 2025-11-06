@@ -1,5 +1,20 @@
 # Changelog
 
+## [12.6.6](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.5...v12.6.6) (2025-11-06)
+
+
+### Bug Fixes
+
+* added unique field name to form block subfields ([#1036](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1036)) ([a812269](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a8122694d7596b52a09783ec2c009d40818f7329))
+* color-contrast on p color in dark blockquote ([#1035](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1035)) ([bae3c83](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bae3c8381e34896d9dcb750944d0bb9cf8bd99da))
+* external link card with image ([#1032](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1032)) ([ed246b9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ed246b9cda61736bc96ea8b01b31adddf0b4c749))
+* style for text wrapping in form block legend ([#1034](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1034)) ([54bd721](https://github.com/RedTurtle/design-comuni-plone-theme/commit/54bd7211b5463184243a0bedb9ba0c098a2d6aa4))
+
+
+### Documentation
+
+* updated publiccode and release log ([a5c1ffe](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a5c1ffe1b39d89076fa253a15a600c255dac26a9))
+
 ## [12.6.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.4...v12.6.5) (2025-11-04)
 
 
