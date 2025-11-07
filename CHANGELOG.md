@@ -1,5 +1,22 @@
 # Changelog
 
+## [12.6.7](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.6...v12.6.7) (2025-11-07)
+
+
+### Bug Fixes
+
+* values saved in volto form restored to 'required' and 'unique' key to avoid breaking existing forms ([#1037](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1037)) ([6395e9a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6395e9a93cb73a2251f8c11a070b420412188d6a))
+
+
+### Maintenance
+
+* updated ci and volto peer deps ([c28f986](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c28f986d1597e7f27c833feb004f06101d366c22))
+
+
+### Documentation
+
+* updated publiccode ([13c7147](https://github.com/RedTurtle/design-comuni-plone-theme/commit/13c7147e6be63d92ad1595b757a2a087ca142cfa))
+
 ## [12.6.6](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.5...v12.6.6) (2025-11-06)
 
 
