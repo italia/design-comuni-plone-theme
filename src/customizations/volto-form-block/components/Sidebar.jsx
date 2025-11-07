@@ -102,6 +102,12 @@ const Sidebar = ({
         <Accordion fluid styled className="form">
           {data.subblocks &&
             data.subblocks.map((subblock, index) => {
+              const subblockData = {
+                ...subblock,
+                [`required-${subblock.field_id}`]: subblock.required,
+                [`unique-${subblock.field_id}`]: subblock.unique,
+              };
+
               return (
                 <div key={'subblock' + subblock.id}>
                   <Accordion.Title
@@ -139,17 +145,24 @@ const Sidebar = ({
                     <BlockDataForm
                       schema={FieldSchema(subblock)}
                       onChangeField={(name, value) => {
+                        let key = name;
                         const update_values = {};
                         if (subblock.field_type === 'static_text') {
                           update_values.required = false;
                         }
+                        if (
+                          name === `required-${subblock.field_id}` ||
+                          name === `unique-${subblock.field_id}`
+                        ) {
+                          key = name.split('-')[0];
+                        }
                         onChangeSubBlock(index, {
                           ...subblock,
-                          [name]: value,
+                          [key]: value,
                           ...update_values,
                         });
                       }}
-                      formData={subblock}
+                      formData={subblockData}
                     />
                   </Accordion.Content>
                 </div>
