@@ -1,5 +1,29 @@
 # Changelog
 
+## [12.7.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.7...v12.7.0) (2025-11-12)
+
+
+### Features
+
+* datatable and advanced visibility fields features are now opt in ([#1040](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1040)) ([95b934b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/95b934bdb3475aad784bbed3034b1552cf6d6977))
+* make CIG optional in BandiInEvidenceTemplate ([#1039](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1039)) ([6861e33](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6861e33dfd9d53db7f6d1cc06b7d326b8f4f5f4c))
+
+
+### Bug Fixes
+
+* condition thank you message form ([#1041](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1041)) ([590db73](https://github.com/RedTurtle/design-comuni-plone-theme/commit/590db734bba38fcca98f5f88756244660d44aad2))
+* locales ([aada03c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/aada03c6236b629090a4b0d55266ac0c7aa4e800))
+
+
+### Maintenance
+
+* update trigger script after release ([b5900da](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b5900da57df71f1a978d111b4a8285eb7249dc75))
+
+
+### Documentation
+
+* updated publiccode and release log ([fed8803](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fed880358db65eda651270e865f8f75f4cdd5752))
+
 ## [12.6.7](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.6...v12.6.7) (2025-11-07)
 
 
