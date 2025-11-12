@@ -181,10 +181,11 @@ const FormView = ({
                     getFieldsToSendWithValue(subblock);
 
                   return (
-                    evaluateAllConditions(
-                      subblock?.visibility_conditions,
-                      formData,
-                    ) && (
+                    (!config.blocks.blocksConfig.form.enableConditionalFields ||
+                      evaluateAllConditions(
+                        subblock?.visibility_conditions,
+                        formData,
+                      )) && (
                       <Row key={'row' + index}>
                         <Col className="py-2">
                           <Field

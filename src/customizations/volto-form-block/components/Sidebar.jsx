@@ -4,7 +4,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Segment, Accordion, Form, Grid } from 'semantic-ui-react';
+import { Segment, Accordion, Form } from 'semantic-ui-react';
 import { defineMessages, useIntl, FormattedMessage } from 'react-intl';
 
 import Icon from '@plone/volto/components/theme/Icon/Icon';
@@ -18,6 +18,7 @@ import { setSubblocksIDList } from 'volto-form-block/actions';
 
 import { BlockDataForm } from '@plone/volto/components';
 import { getFieldName } from 'volto-form-block/components/utils';
+import SidebarDataActions from 'volto-form-block/components/SidebarDataActions';
 
 import 'volto-form-block/components/Sidebar.css';
 
@@ -74,6 +75,8 @@ const Sidebar = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
+  const datatableEnabled = config.blocks.blocksConfig.form.enableDatatableView;
+
   return (
     <Form>
       <Segment.Group raised>
@@ -92,11 +95,14 @@ const Sidebar = ({
               });
             }}
             formData={data}
+            onChangeBlock={() => {}}
           />
-          {properties?.['@components']?.form_data && (
-            <Form.Field inline>
-              <Grid></Grid>
-            </Form.Field>
+          {!datatableEnabled && (
+            <SidebarDataActions
+              properties={properties}
+              block={block}
+              data={data}
+            />
           )}
         </Segment>
         <Accordion fluid styled className="form">
@@ -163,6 +169,7 @@ const Sidebar = ({
                         });
                       }}
                       formData={subblockData}
+                      onChangeBlock={() => {}}
                     />
                   </Accordion.Content>
                 </div>

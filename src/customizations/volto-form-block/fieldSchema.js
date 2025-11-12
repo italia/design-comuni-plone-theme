@@ -438,6 +438,9 @@ export default (props) => {
     ? schemaExtender(intl)
     : { properties: [], fields: [], required: [] };
 
+  const enableConditionalFields =
+    config.blocks.blocksConfig.form.enableConditionalFields;
+
   return {
     title: props?.label || '',
     fieldsets: [
@@ -460,7 +463,7 @@ export default (props) => {
             ? []
             : [`required-${props?.field_id}`]),
           `unique-${props?.field_id}`,
-          'visibility_conditions',
+          ...(enableConditionalFields ? ['visibility_conditions'] : []),
         ],
       },
     ],

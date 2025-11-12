@@ -23,6 +23,7 @@ import EditBlock from 'volto-form-block/components/EditBlock';
 import Sidebar from 'volto-form-block/components/Sidebar';
 import DataTable from 'volto-form-block/components/DataTable';
 import ValidateConfigForm from 'volto-form-block/components/ValidateConfigForm';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   addField: {
@@ -81,6 +82,9 @@ class Edit extends SubblocksEdit {
     if (__SERVER__) {
       return <div />;
     }
+
+    const datatableEnabled =
+      config.blocks.blocksConfig.form.enableDatatableView;
 
     return (
       <div className="public-ui">
@@ -169,28 +173,32 @@ class Edit extends SubblocksEdit {
                     </TabPane>
                   ),
                 },
-                {
-                  menuItem: 'Dati',
-                  render: () => (
-                    <TabPane className="container">
-                      {this.props.data.store ? (
-                        <DataTable
-                          properties={this.props.properties}
-                          blockId={this.props.block}
-                          removeDataAfterDays={
-                            this.props.data.remove_data_after_days
-                          }
-                        />
-                      ) : (
-                        <p>
-                          {this.props.intl.formatMessage(
-                            messages.warning_enable_save,
-                          )}
-                        </p>
-                      )}
-                    </TabPane>
-                  ),
-                },
+                ...(datatableEnabled
+                  ? [
+                      {
+                        menuItem: 'Dati',
+                        render: () => (
+                          <TabPane className="container">
+                            {this.props.data.store ? (
+                              <DataTable
+                                properties={this.props.properties}
+                                blockId={this.props.block}
+                                removeDataAfterDays={
+                                  this.props.data.remove_data_after_days
+                                }
+                              />
+                            ) : (
+                              <p>
+                                {this.props.intl.formatMessage(
+                                  messages.warning_enable_save,
+                                )}
+                              </p>
+                            )}
+                          </TabPane>
+                        ),
+                      },
+                    ]
+                  : []),
               ]}
             />
           </div>
