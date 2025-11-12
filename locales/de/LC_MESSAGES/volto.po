@@ -4001,6 +4001,11 @@ msgstr ""
 msgid "share"
 msgstr ""
 
+#: config/Blocks/ListingOptions/bandiInEvidenceTemplate
+# defaultMessage: Mostra il CIG
+msgid "show_cig"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: components/ItaliaTheme/Blocks/Teaser/schema
 # defaultMessage: Mostra la data
