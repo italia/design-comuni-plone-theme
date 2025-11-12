@@ -60,6 +60,7 @@ const BandiInEvidenceTemplate = ({
   show_ente,
   show_tipologia,
   show_description,
+  show_cig = true,
   linkAlign,
   linkTitle,
   linkHref,
@@ -214,7 +215,7 @@ const BandiInEvidenceTemplate = ({
                         )}
 
                         {/* cig */}
-                        {item.cig && (
+                        {show_cig && item.cig && (
                           <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
                             <div className="bando-dati-label me-2">CIG:</div>
                             <span className="bando-dati-date">{item.cig}</span>
