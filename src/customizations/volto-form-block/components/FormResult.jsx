@@ -81,7 +81,7 @@ const FormResult = ({ formState, data, resetFormState }) => {
         </>
       )}
       {/* Custom message */}
-      {!formState.warning ||
+      {(!formState.warning && data.send_message) ||
         (formState.warning &&
           displayThankYouInAlertMessageFormBlock &&
           data.send_message && (
