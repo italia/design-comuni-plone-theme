@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione 12.7.0 (12/11/2025)
+
+### Novità
+
+- Mostrare il campo CIG dei Bandi nei blocchi elenco ora è opzionale.
+
 ## Versione 12.6.6 (06/11/2025)
 
 ### Fix
