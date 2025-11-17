@@ -21,7 +21,7 @@ const EventoOrganizzatoDa = ({ content }) => {
     <div className="mb-5 mt-3">
       <h3 className="h5 mb-3">{intl.formatMessage(messages.organizzato_da)}</h3>
 
-      {content?.organizzato_da_interno.length > 0 && (
+      {content?.organizzato_da_interno?.length > 0 && (
         <EventoContattiOrganizzatoreInterno content={content} />
       )}
 
