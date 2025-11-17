@@ -1,5 +1,17 @@
 # Changelog
 
+## [12.7.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.7.0...v12.7.1) (2025-11-17)
+
+
+### Bug Fixes
+
+* missing conditional chaining for edge cases with cloned contents ([#1043](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1043)) ([dc872ad](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dc872ad5457c93290ae7c52e2926848f83fbd8ec))
+
+
+### Documentation
+
+* updated publiccode ([aa27ea5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/aa27ea5edf4eb2da917a4ff2e19d580b367e5246))
+
 ## [12.7.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.6.7...v12.7.0) (2025-11-12)
 
 
