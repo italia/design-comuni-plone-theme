@@ -1,5 +1,17 @@
 # Changelog
 
+## [12.7.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.7.1...v12.7.2) (2025-11-21)
+
+
+### Bug Fixes
+
+* check on token to allow display or download file in attachment card listing variation ([#1044](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1044)) ([adf38e8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/adf38e8e69f3b683dd00d329dccf589bddb87058))
+
+
+### Documentation
+
+* updated publiccode and release log ([4555780](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4555780465fb8c1f6db7c2b977ee7d3adf8c2582))
+
 ## [12.7.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.7.0...v12.7.1) (2025-11-17)
 
 
