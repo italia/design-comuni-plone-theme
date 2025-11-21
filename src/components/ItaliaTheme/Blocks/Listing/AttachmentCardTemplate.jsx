@@ -1,4 +1,6 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
@@ -35,6 +37,8 @@ const AttachmentCardTemplate = ({
 }) => {
   const intl = useIntl();
 
+  const token = useSelector((state) => state.userSession?.token);
+
   return (
     <Container className="px-4 pt-3">
       <div className="simple-card-compact-template">
@@ -53,6 +57,7 @@ const AttachmentCardTemplate = ({
             let itemUrl = { ...item };
             //la parte qui sotto commentata non serve perchè gestisce gia tutto UniversalLink e in view si vedrebbe /@@download/file duplicato nell url
             if (
+              !token &&
               item['@type'] === 'File' &&
               item?.mime_type === 'application/pdf'
             ) {
@@ -88,7 +93,6 @@ const AttachmentCardTemplate = ({
                       item={!isEditMode ? itemUrl : null}
                       href={isEditMode ? '#' : null}
                       data-element={id_lighthouse}
-                      download={!show_pdf_preview}
                     >
                       {item.title || item.id}
                     </UniversalLink>
