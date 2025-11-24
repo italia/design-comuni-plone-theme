@@ -47,7 +47,9 @@ const replaceMessage = (text, sent_data) => {
   let i = 0;
   while (i < sent_data.length) {
     let idField = getFieldName(sent_data[i].label, sent_data[i].field_id);
+
     text = text.replaceAll('${' + idField + '}', sent_data[i].value ?? '');
+    console.log(sent_data[i], idField);
     i++;
   }
   text = text.replaceAll(/\$\{[^}]*\}/gm, ''); //replace empty fields with nothing
@@ -59,7 +61,7 @@ const FormResult = ({ formState, data, resetFormState }) => {
   const intl = useIntl();
   const displayThankYouInAlertMessageFormBlock =
     config.settings.siteProperties.displayThankYouInAlertMessageFormBlock;
-
+  console.log(data, formState);
   return (
     <Alert
       color={!formState.warning ? 'success' : 'warning'}
@@ -80,24 +82,23 @@ const FormResult = ({ formState, data, resetFormState }) => {
           <p>{intl.formatMessage(messages.success_warning_description)}</p>
         </>
       )}
-      {/* Custom message */}
-      {(!formState.warning && data.send_message) ||
-        (formState.warning &&
-          displayThankYouInAlertMessageFormBlock &&
-          data.send_message && (
-            <>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: replaceMessage(
-                    data.send_message,
-                    formState.result.data,
-                  ),
-                }}
-              />
-              <br />
-            </>
-          ))}
 
+      {/* Custom message */}
+      {data.send_message &&
+        (!formState.warning ||
+          (formState.warning && displayThankYouInAlertMessageFormBlock)) && (
+          <>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: replaceMessage(
+                  data.send_message,
+                  formState.result.data,
+                ),
+              }}
+            />
+            <br />
+          </>
+        )}
       <Button
         color="primary"
         outline
