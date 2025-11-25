@@ -59,7 +59,6 @@ const FormResult = ({ formState, data, resetFormState }) => {
   const intl = useIntl();
   const displayThankYouInAlertMessageFormBlock =
     config.settings.siteProperties.displayThankYouInAlertMessageFormBlock;
-
   return (
     <Alert
       color={!formState.warning ? 'success' : 'warning'}
@@ -80,24 +79,23 @@ const FormResult = ({ formState, data, resetFormState }) => {
           <p>{intl.formatMessage(messages.success_warning_description)}</p>
         </>
       )}
-      {/* Custom message */}
-      {(!formState.warning && data.send_message) ||
-        (formState.warning &&
-          displayThankYouInAlertMessageFormBlock &&
-          data.send_message && (
-            <>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: replaceMessage(
-                    data.send_message,
-                    formState.result.data,
-                  ),
-                }}
-              />
-              <br />
-            </>
-          ))}
 
+      {/* Custom message */}
+      {data.send_message &&
+        (!formState.warning ||
+          (formState.warning && displayThankYouInAlertMessageFormBlock)) && (
+          <>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: replaceMessage(
+                  data.send_message,
+                  formState.result.data,
+                ),
+              }}
+            />
+            <br />
+          </>
+        )}
       <Button
         color="primary"
         outline

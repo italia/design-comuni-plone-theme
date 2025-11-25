@@ -87,7 +87,7 @@ const RelatedItems = ({
                     <Row>
                       <Col className="text-center">
                         <h2 className="h3">
-                          {intl.formatMessage(messages.related_items)} ???
+                          {intl.formatMessage(messages.related_items)}
                         </h2>
                       </Col>
                     </Row>
