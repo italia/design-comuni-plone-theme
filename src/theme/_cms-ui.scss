@@ -493,7 +493,8 @@ body.cms-ui {
   }
 
   .bg-light {
-    --bs-light-rgb: 243, 252, 249;
+    --bs-light-rgb: #{red($primary-a0)}, #{green($primary-a0)},
+      #{blue($primary-a0)};
     --bs-bg-opacity: 1;
     background-color: rgba(
       var(--bs-light-rgb),

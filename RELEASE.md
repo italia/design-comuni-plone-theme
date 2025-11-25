@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Lo sfondo del blocco elenco viene ora visualizzato nella variante colore corretta sia in modalità visualizzazione che in modalità modifica.
+
 ## Versione 12.7.2 (21/11/2025)
 
 ### Fix
