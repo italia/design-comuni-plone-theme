@@ -55,7 +55,12 @@ const GenericCard = ({
 
   return item ? (
     showImage ? (
-      <div className={cx('genericcard card shadow rounded mt-3')}>
+      <div
+        className={cx(
+          'genericcard card shadow rounded mt-3',
+          size === 'big' ? 'card-big-io-comune' : 'card-small',
+        )}
+      >
         <div className="img-responsive-wrapper">
           <div className="img-responsive img-responsive-panoramic">
             <figure className="img-wrapper">
