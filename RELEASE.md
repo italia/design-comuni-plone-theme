@@ -41,28 +41,14 @@
 - ...
  -->
 
-## Versione x.x.x (x/x/x)
-
-### Fix
-
-- sistemata la visualizzazione del messaggio dopo l'invio di un form.
-- sistemate le classi relative alla dimensione nel componente .genericcard
-
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
-
-### Novità
-
-- ...
+## Versione 12.7.3 (26/11/2025)
 
 ### Fix
 
 - Il blocco "Blocchi con icone" mostra sempre il colore del titolo correttamente, sia in modalità modifica che in modalità visualizzazione.
 - Lo sfondo del blocco elenco viene ora visualizzato nella variante colore corretta sia in modalità visualizzazione che in modalità modifica.
 - Sistemata la visualizzazione del messaggio di ringraziamento dopo l'invio di un form.
+- Sistemati alcuni problemi con gli stili relativi alle dimensioni dei font nelle card.
 
 ## Versione 12.7.2 (21/11/2025)
 
