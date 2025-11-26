@@ -1,5 +1,20 @@
 # Changelog
 
+## [12.7.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.7.2...v12.7.3) (2025-11-26)
+
+
+### Bug Fixes
+
+* conditions to display form thankyou message ([#1047](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1047)) ([a76aba0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a76aba05f49c15f92bf299a6247c1785a12499b5))
+* force title color on icons block title ([#1045](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1045)) ([1a6dd7e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1a6dd7e58ddbe9f91fd27ed8baa7eaa09e161f93))
+* generic card classes ([#1048](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1048)) ([9774b64](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9774b644ee8b7422018238c680ad921025655ee4))
+* used correct colors in bg-light class for cms-ui ([#1046](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1046)) ([2544e35](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2544e35c080137d629a4e2ecad035ed0db654d34))
+
+
+### Documentation
+
+* updated publiccode and release log ([e3d3914](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e3d391471456d15a54f029a81b3dbad2cd7a76e0))
+
 ## [12.7.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.7.1...v12.7.2) (2025-11-21)
 
 
