@@ -30,6 +30,9 @@
       max-height: 100%;
       color: #fff;
       font-size: 1.2rem;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      hyphens: auto;
     }
 
     &:before {
