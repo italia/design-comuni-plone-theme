@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Le card del blocco elenco di tipo "Bandi" mostrano ora la tipologia bando correttamente.
+
 ## Versione 12.7.3 (26/11/2025)
 
 ### Fix

@@ -132,7 +132,7 @@ const BandiInEvidenceTemplate = ({
                               {intl.formatMessage(messages.tipologia)}:
                             </div>
                             <span className="bando-dati-date">
-                              {item.tipologia_bando.title}
+                              {item.tipologia_bando_label}
                             </span>
                           </span>
                         )}
