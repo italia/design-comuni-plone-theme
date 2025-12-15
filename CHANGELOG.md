@@ -1,5 +1,18 @@
 # Changelog
 
+## [12.7.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.7.3...v12.7.4) (2025-12-15)
+
+
+### Bug Fixes
+
+* bando type in bando cards ([#1051](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1051)) ([3c17fbb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3c17fbb002afc8d753a785314f2a7be286e9c81a))
+* hyphen and break word in card titles ([#1049](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1049)) ([4f94903](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4f94903bbbc7683774eb9e772b4f853dc7cd7276))
+
+
+### Documentation
+
+* updated publiccode and release log ([9f430f2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9f430f25b977aa58f3099ee6891cca3be9a1f62a))
+
 ## [12.7.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.7.2...v12.7.3) (2025-11-26)
 
 
