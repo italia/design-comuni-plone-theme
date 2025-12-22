@@ -435,7 +435,7 @@ export default function applyConfig(voltoConfig) {
     { id: 'search', title: 'Ricerca' },
   ];
   const customInitialBlocks = {
-    'Pagina Argomento': ['title', 'description', 'text'],
+    'Pagina Argomento': ['title', 'description', 'slate'],
     'Bando Folder Deepening': ['title', 'description', 'listing'],
   };
   const customRequiredBlocks = ['description'];

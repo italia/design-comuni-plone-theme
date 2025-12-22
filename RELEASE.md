@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- ...
+
+### Fix
+
+- Il blocco di testo inserito automaticamente durante la creazione dei CT Argomento è ora basato su Slate anziché su DraftJS.
+
 ## Versione 12.7.4 (15/12/2025)
 
 ### Fix
