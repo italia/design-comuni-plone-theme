@@ -1,5 +1,17 @@
 # Changelog
 
+## [12.7.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.7.4...v12.7.5) (2025-12-23)
+
+
+### Bug Fixes
+
+* initial block of Argomento CT ([#1053](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1053)) ([48e6d3c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/48e6d3ce79ddd42c46b23172a70a52d98b038ddc))
+
+
+### Documentation
+
+* updated publiccode and release log ([4678457](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4678457faf0179d9da75e70e8adb164bee3546c4))
+
 ## [12.7.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.7.3...v12.7.4) (2025-12-15)
 
 
