@@ -1,5 +1,7 @@
 // CUSTOMIZATION:
 // - 112-113 reset subscription limit to default when set_limit is not active
+// - 99 pass block prop to BlockDataForm (will be merged in volto-form-block)
+// - 174 pass block prop to BlockDataForm (will be merged in volto-form-block)
 
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
@@ -96,6 +98,7 @@ const Sidebar = ({
             }}
             formData={data}
             onChangeBlock={() => {}}
+            block={block}
           />
           {!datatableEnabled && (
             <SidebarDataActions
@@ -170,6 +173,7 @@ const Sidebar = ({
                       }}
                       formData={subblockData}
                       onChangeBlock={() => {}}
+                      block={block}
                     />
                   </Accordion.Content>
                 </div>
