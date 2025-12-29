@@ -1,5 +1,17 @@
 # Changelog
 
+## [12.8.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.7.5...v12.8.0) (2025-12-29)
+
+
+### Features
+
+* updated volto-form-block to have input type number ([#1052](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1052)) ([461a6a9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/461a6a9c71768027e3a36389302ffcda194633f4))
+
+
+### Documentation
+
+* updated publiccode and release log ([a554d41](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a554d41937aa0b373b3dce509ae4c1405a5a4dc3))
+
 ## [12.7.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.7.4...v12.7.5) (2025-12-23)
 
 
