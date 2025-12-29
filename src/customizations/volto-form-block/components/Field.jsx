@@ -140,6 +140,24 @@ const Field = ({
           autoComplete={autocomplete}
         />
       )}
+      {field_type === 'number' && (
+        <Input
+          id={name}
+          name={name}
+          label={getLabel()}
+          type="number"
+          required={required}
+          infoText={infoText}
+          disabled={disabled}
+          readOnly={disabled}
+          invalid={isInvalid() ? 'true' : null}
+          onChange={(e) => {
+            onChange(name, e.target.value);
+          }}
+          value={value ?? ''}
+          autoComplete={autocomplete}
+        />
+      )}
       {field_type === 'select' && (
         <div className="form-group">
           <div
