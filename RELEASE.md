@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione 12.8.0 (29/12/2025)
+
+### Novità
+
+- Nel blocchi di tipo Form è ora possibile inserire campi di tipo Numero.
+
 ## Versione 12.7.5 (23/12/2025)
 
 ### Fix
