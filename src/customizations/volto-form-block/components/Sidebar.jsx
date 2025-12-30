@@ -96,6 +96,7 @@ const Sidebar = ({
             }}
             formData={data}
             onChangeBlock={() => {}}
+            block={block}
           />
           {!datatableEnabled && (
             <SidebarDataActions
@@ -170,6 +171,7 @@ const Sidebar = ({
                       }}
                       formData={subblockData}
                       onChangeBlock={() => {}}
+                      block={block}
                     />
                   </Accordion.Content>
                 </div>
