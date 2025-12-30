@@ -1,7 +1,7 @@
 // CUSTOMIZATION:
 // - added warning state to form
 // - backport for https://github.com/collective/volto-form-block/pull/122
-
+// - handle field errors coming from backend
 import React, { useState, useEffect, useReducer, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -356,11 +356,41 @@ const View = ({ data, id, path }) => {
           });
       }
     } else if (submitResults?.error) {
-      let errorDescription = `${
-        JSON.parse(submitResults.error.response?.text ?? '{}')?.message
-      }`;
+      //CUSTOM: handle field errors coming from backend
+      let fieldsErrors = [];
+      let errorDescription = '';
 
-      setFormState({ type: FORM_STATES.error, error: errorDescription });
+      try {
+        errorDescription = `${
+          JSON.parse(submitResults.error.response?.text ?? '{}')?.message
+        }`;
+
+        if (errorDescription.startsWith('[')) {
+          fieldsErrors = JSON.parse(
+            errorDescription.replaceAll('"', '\\"').replaceAll("'", '"'),
+          );
+        }
+      } catch (e) {
+        errorDescription = 'Error parsing error response';
+      }
+
+      // fieldsErrors = [
+      //   { field_id: '1767088715579', label: 'univoco', message: 'Errore' },
+      // ];
+      if (fieldsErrors?.length > 0) {
+        const v = [];
+        fieldsErrors.forEach((fieldError) => {
+          v.push({
+            field: getFieldName(fieldError.label, fieldError.field_id),
+            message: fieldError.message,
+          });
+        });
+        setFormErrors(v);
+        setFormState({ type: FORM_STATES.error });
+      } else {
+        setFormErrors([]);
+        setFormState({ type: FORM_STATES.error, error: errorDescription });
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [submitResults]);

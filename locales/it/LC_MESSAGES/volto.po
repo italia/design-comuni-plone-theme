@@ -2442,7 +2442,7 @@ msgstr "A volte non capivo se stavo procedendo correttamente"
 #: overrideTranslations
 # defaultMessage: Check this box if the value entered in this field can be used only once.
 msgid "field_unique_description"
-msgstr "Seleziona questo checkbox se il valore inserito in questo campo può essere utilizzato solo una volta"
+msgstr "Richiedi un valore univoco: il valore inserito dagli utenti in questo campo non può essere già stato utilizzato in altre compilazioni del form."
 
 #: overrideTranslations
 # defaultMessage: Unique field
