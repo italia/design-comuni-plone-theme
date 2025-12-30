@@ -18,12 +18,12 @@ const SingleSlideWrapper = (props) => {
       key={wrapperKey}
       data-slide={index}
       role="group"
+      aria-roledescription="slide"
       aria-label={
         intl.formatMessage(messages.carouselSlide) +
         ' ' +
         (index ? index + 1 : '') +
-        ' - ' +
-        (props['aria-label'] ?? '')
+        (props['aria-label'] ? ' - ' + props['aria-label'] : '')
       }
       onKeyDown={onKeyDown}
       onClick={(e) => {
