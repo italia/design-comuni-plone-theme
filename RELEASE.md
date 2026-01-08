@@ -41,20 +41,12 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 12.9.0 (08/01/2026)
 
 ### Migliorie
 
 - Migliorato lo stile dell'indice della pagina, reso più attinente all'ultima versione delle linee guida.
 - Aggiunta visualizzazione dello stato (private, pending, published) nell’Object Browser tramite indicatore e label per migliorare riconoscibilità e accessibilità degli elementi.
-
-### Novità
-
-- ...
-
-### Fix
-
-- ...
 
 ## Versione 12.8.0 (29/12/2025)
 
