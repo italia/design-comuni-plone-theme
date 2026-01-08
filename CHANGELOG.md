@@ -1,5 +1,35 @@
 # Changelog
 
+## [12.9.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.8.0...v12.9.0) (2026-01-08)
+
+
+### Features
+
+* customizable SideMenu header, improved styles ([#1058](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1058)) ([34d7822](https://github.com/RedTurtle/design-comuni-plone-theme/commit/34d78229c811cd47a80889652c60c99ada28b109))
+* new sign to identify private and pending status in the object browser results list ([#1050](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1050)) ([8cb92fc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8cb92fcb52865e27c57d96620173d30be4c52074))
+
+
+### Bug Fixes
+
+* **a11y:** photogallery template keyboard focus ([#1055](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1055)) ([675f6d1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/675f6d11be0bfd33eab0ff5811a4c4efc7c5b44d))
+* handle volto-form-block server error validation messages per field ([#1056](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1056)) ([b250de7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b250de7a41e7cc174bec3916c015689b68ae71c3))
+* updated volto-form-block to 3.17.1 to fix conditions check for numbers ([#1059](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1059)) ([ee5254e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ee5254e1b386e7b957a5aef1e0fa928fbbb3dc41))
+
+
+### Changes
+
+* upgraded volto-form-block to pass block id in form block sidebar ([#1054](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1054)) ([af553a7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/af553a798fa62f8dc5164ff7bf61e342e5a2e298))
+
+
+### Maintenance
+
+* **deps:** bump qs from 6.11.0 to 6.14.1 ([#1057](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1057)) ([1d061e8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1d061e890723bbe0e448e2e352b4e67986000e68))
+
+
+### Documentation
+
+* updated publiccode and release log ([d30a59c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d30a59cb7eadab8b0fa7d0c2f91886b4ae055804))
+
 ## [12.8.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.7.5...v12.8.0) (2025-12-29)
 
 
