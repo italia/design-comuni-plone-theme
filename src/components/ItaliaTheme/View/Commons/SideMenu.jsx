@@ -61,10 +61,12 @@ const extractHeaders = (elements, intl) => {
 /**
  * SideMenu view component class.
  * @function SideMenu
- * @params {object} content: Content object.
+ * @params {data} main content element reference
+ * @params {content_uid} content UID
+ * @params {headerText} optional text to show as header
  * @returns {string} Markup of the component.
  */
-const SideMenu = ({ data, content_uid }) => {
+const SideMenu = ({ data, content_uid, headerText }) => {
   const intl = useIntl();
 
   const [headers, setHeaders] = useState([]);
@@ -171,16 +173,22 @@ const SideMenu = ({ data, content_uid }) => {
                   aria-controls="side-menu-body"
                   aria-expanded={isNavOpen}
                 >
-                  <h2 className="h3">{intl.formatMessage(messages.index)}</h2>
+                  <h2 className="h3">
+                    {headerText || intl.formatMessage(messages.index)}
+                  </h2>
                 </AccordionHeader>
                 <div className="mb-3">
                   <Progress
                     value={progressValue > 0 ? 100 * progressValue : 0}
-                    role="progressbar"                    
+                    role="progressbar"
                     aria-labelledby={`item-${activeSection}`}
                   />
                 </div>
-                <AccordionBody active={isNavOpen} id="side-menu-body">
+                <AccordionBody
+                  active={isNavOpen}
+                  id="side-menu-body"
+                  listClassName="px-0"
+                >
                   <ul className="link-list" data-element="page-index">
                     {headers.map((item, i) => {
                       return (
@@ -193,7 +201,7 @@ const SideMenu = ({ data, content_uid }) => {
                             onClick={handleClickAnchor(item.id)}
                             id={`item-${item.id}`}
                           >
-                            <span>{item.title}</span>
+                            <span className="mx-0">{item.title}</span>
                           </a>
                         </li>
                       );
