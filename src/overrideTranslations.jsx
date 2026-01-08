@@ -165,4 +165,16 @@ defineMessages({
     id: 'Teaser',
     defaultMessage: 'Teaser',
   },
+  private: {
+    id: 'Private',
+    defaultMessage: 'Private',
+  },
+  pending: {
+    id: 'Pending',
+    defaultMessage: 'Pending',
+  },
+  published: {
+    id: 'Published',
+    defaultMessage: 'Published',
+  },
 });

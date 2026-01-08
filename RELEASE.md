@@ -41,6 +41,19 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- Aggiunta visualizzazione dello stato (private, pending, published) nell’Object Browser tramite indicatore e label per migliorare riconoscibilità e accessibilità degli elementi.
+
+### Novità
+
+- ...
+
+### Fix
+
+- ...
 ## Versione 12.8.0 (29/12/2025)
 
 ### Novità

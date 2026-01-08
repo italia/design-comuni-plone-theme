@@ -91,3 +91,21 @@ body.cms-ui {
     }
   }
 }
+
+aside.sidebar-container {
+  .object-listing {
+    li {
+      span.icon-wrapper {
+        span.state {
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          width: 20px;
+          height: 20px;
+        }
+        position: relative;
+        display: inline-block;
+      }
+    }
+  }
+}

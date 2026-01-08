@@ -511,6 +511,11 @@ msgstr "Filtro"
 msgid "Pause slider"
 msgstr "Metti in pausa"
 
+#: overrideTranslations
+# defaultMessage: Pending
+msgid "Pending"
+msgstr "In attesa"
+
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Percorso
@@ -536,6 +541,16 @@ msgstr "Per favore, seleziona un contenuto esistente come sorgente per questo el
 # defaultMessage: Pagina precedente
 msgid "Previous page"
 msgstr "Pagina precedente"
+
+#: overrideTranslations
+# defaultMessage: Private
+msgid "Private"
+msgstr "Privato"
+
+#: overrideTranslations
+# defaultMessage: Published
+msgid "Published"
+msgstr "Pubblicato"
 
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Rimuovi il file
