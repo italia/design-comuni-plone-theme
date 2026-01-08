@@ -5,4 +5,15 @@
     max-width: 220px;
     margin: 0 auto;
   }
+
+  //VOLTO TODO
+  //start
+  .toolbar {
+    .toolbar-body {
+      .button > .icon:not(.button) {
+        opacity: 1;
+      }
+    }
+  }
+  //end
 }
