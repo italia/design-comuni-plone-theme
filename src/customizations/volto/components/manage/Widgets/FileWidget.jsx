@@ -48,6 +48,10 @@ const messages = defineMessages({
     id: 'Choose a file',
     defaultMessage: 'Choose a file',
   },
+  dragAndDropActionA11Y: {
+    id: 'Press Enter to browse files from your computer.',
+    defaultMessage: 'Press Enter to browse files from your computer.',
+  },
 });
 
 /**
@@ -154,10 +158,16 @@ const FileWidget = (props) => {
               </div>
             )}
 
+            {/**BACKPORT to  https://github.com/plone/volto/pull/7781 */}
             <label className="label-file-widget-input">
               {value
                 ? intl.formatMessage(messages.replaceFile)
                 : intl.formatMessage(messages.addNewFile)}
+              {/*start backport*/}
+              <span className="visually-hidden">
+                {intl.formatMessage(messages.dragAndDropActionA11Y)}
+              </span>
+              {/*end backport*/}
             </label>
             <input
               {...getInputProps({
