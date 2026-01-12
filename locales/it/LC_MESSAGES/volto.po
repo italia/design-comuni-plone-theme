@@ -537,6 +537,11 @@ msgstr "Seleziona per riprodurre"
 msgid "Please choose an existing content as source for this element"
 msgstr "Per favore, seleziona un contenuto esistente come sorgente per questo elemento."
 
+#: overrideTranslations
+# defaultMessage: Press Enter to browse files from your computer.
+msgid "Press Enter to browse files from your computer."
+msgstr "Premi Invio per scegliere i file dal tuo computer."
+
 #: components/ItaliaTheme/Pagination/PaginationItem
 # defaultMessage: Pagina precedente
 msgid "Previous page"

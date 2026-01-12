@@ -554,6 +554,11 @@ msgstr "Début"
 msgid "Please choose an existing content as source for this element"
 msgstr ""
 
+#: overrideTranslations
+# defaultMessage: Press Enter to browse files from your computer.
+msgid "Press Enter to browse files from your computer."
+msgstr "Appuyez sur Entrée pour parcourir les fichiers sur votre ordinateur."
+
 #: components/ItaliaTheme/Pagination/PaginationItem
 # defaultMessage: Pagina precedente
 msgid "Previous page"

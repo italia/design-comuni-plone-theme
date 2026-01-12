@@ -177,4 +177,8 @@ defineMessages({
     id: 'Published',
     defaultMessage: 'Published',
   },
+  dragAndDropActionA11Y: {
+    id: 'Press Enter to browse files from your computer.',
+    defaultMessage: 'Press Enter to browse files from your computer.',
+  },
 });
