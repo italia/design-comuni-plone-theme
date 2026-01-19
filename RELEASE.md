@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- Ora è possibile aggiungere titoli in qualsiasi sezione dell’editor di testo
+
+### Fix
+
+- ...
+
 ## Versione 12.9.0 (08/01/2026)
 
 ### Migliorie

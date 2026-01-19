@@ -37,7 +37,7 @@ export const insertToolbarButtons = (buttons = [], insertAfter = '', slate) => {
 };
 
 export const getRichTextWidgetToolbarButtons = (config) => {
-  const EXCLUDE_TOOLBAR_BUTTONS = ['textLarger', 'headings'];
+  const EXCLUDE_TOOLBAR_BUTTONS = ['textLarger'];
 
   let toolbarButtons = (config.settings.slate?.toolbarButtons ?? [])
     .filter((b) => EXCLUDE_TOOLBAR_BUTTONS.indexOf(b) < 0)
