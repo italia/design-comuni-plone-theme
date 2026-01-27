@@ -49,11 +49,11 @@
 
 ### Novità
 
-- Ora è possibile aggiungere titoli in qualsiasi sezione dell’editor di testo
+- Ora è possibile aggiungere titoli in qualsiasi sezione dell'editor di testo.
 
 ### Fix
 
-- ...
+- I pulsanti sulla barra degli strumenti ora rispettano il contrasto minimo previsto per i colori.
 
 ## Versione 12.9.0 (08/01/2026)
 
