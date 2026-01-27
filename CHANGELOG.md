@@ -1,5 +1,23 @@
 # Changelog
 
+## [12.10.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.9.0...v12.10.0) (2026-01-27)
+
+
+### Features
+
+* **a11y:** added class visually-hidden ([#1065](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1065)) ([dcadda2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dcadda2088ca643a80d8f247b17c4603d545e4a2))
+* enabled slate editor heading button ([#1064](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1064)) ([a1a0a4a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a1a0a4a04245f8e5a7687d2674e35c8f062817b1))
+
+
+### Bug Fixes
+
+* **a11y:** lack of contrast on the toolbar buttons ([#1061](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1061)) ([70bc9e7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/70bc9e7d2c6647aa52dc76f8d6f73dbba1c15adf))
+
+
+### Documentation
+
+* updated publiccode and release log ([98f50aa](https://github.com/RedTurtle/design-comuni-plone-theme/commit/98f50aa9ab016c5753de5b503c5c9b824e50be11))
+
 ## [12.9.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.8.0...v12.9.0) (2026-01-08)
 
 
