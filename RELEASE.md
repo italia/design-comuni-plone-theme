@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione 12.10.1 (09/02/2026)
+
+### Fix
+
+- Sistemato un problema di focus sull'edit dei campi con blocchi quando il campo contiene link a file/immagini.
+
 ## Versione 12.10.0 (27/01/2026)
 
 ### Novità
