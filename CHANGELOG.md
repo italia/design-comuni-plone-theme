@@ -1,5 +1,13 @@
 # Changelog
 
+## [12.10.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.10.0...v12.10.1) (2026-02-09)
+
+
+### Maintenance
+
+* updated publiccode and release log ([cc0cb82](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cc0cb82b58d44685b388c6da84f18fc1b6fdd404))
+* updated volto-blocks-widget ([#1072](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1072)) ([84c3e6a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/84c3e6a3a0ca4c9b9b2966ed8b70fb7bb99f2181))
+
 ## [12.10.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.9.0...v12.10.0) (2026-01-27)
 
 
