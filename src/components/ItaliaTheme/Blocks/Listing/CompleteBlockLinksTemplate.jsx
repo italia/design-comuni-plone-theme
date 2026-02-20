@@ -40,6 +40,7 @@ const CompleteBlockLinksTemplate = (props) => {
     id_lighthouse,
     linkmore_id_lighthouse,
     titleLine,
+    wrap_title,
   } = props;
   return (
     <div className="complete-block-links-template">
@@ -96,6 +97,7 @@ const CompleteBlockLinksTemplate = (props) => {
                             tag={title ? 'h3' : 'h2'}
                             className={cx('text-secondary', {
                               h3: !title,
+                              'wrap-title': wrap_title,
                             })}
                           >
                             {item.title}

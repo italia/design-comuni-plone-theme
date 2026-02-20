@@ -21,8 +21,10 @@ export const addCompleteBlockLinksTemplateOptions = (
     schema,
     formData,
     intl,
-    ['show_description'],
-    null,
+    ['show_description', 'wrap_title'],
+    {
+      wrap_title: { default: false },
+    },
     pos,
   );
   return pos;

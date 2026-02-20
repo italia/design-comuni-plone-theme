@@ -54,6 +54,7 @@ const SimpleCardDefault = (props) => {
     show_description = true,
     show_detail_link,
     detail_link_label,
+    wrap_title,
     hide_dates,
     id_lighthouse,
     rrule,
@@ -128,6 +129,7 @@ const SimpleCardDefault = (props) => {
           className={cx('', {
             'rassegna-appointment-title': isEventAppointment,
             h3: !title,
+            'wrap-title': wrap_title,
           })}
         >
           <UniversalLink

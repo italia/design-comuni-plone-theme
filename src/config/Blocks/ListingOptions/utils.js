@@ -58,6 +58,10 @@ const messages = defineMessages({
     defaultMessage:
       'Identificativo di servizio a solo uso interno, utilizzato per le verifiche AgID inerenti al PNRR.',
   },
+  wrap_title: {
+    id: 'Wrap title',
+    defaultMessage: 'Manda a capo il titolo con un trattino se è troppo lungo',
+  },
 });
 
 export const addSchemaField = (

@@ -57,6 +57,7 @@ const InEvidenceTemplate = (props) => {
     id_lighthouse,
     linkmore_id_lighthouse,
     rrule,
+    wrap_title,
   } = props;
 
   return (
@@ -134,6 +135,7 @@ const InEvidenceTemplate = (props) => {
                     className={cx('', {
                       'rassegna-appointment-title': isEventAppointment,
                       h3: !title,
+                      'wrap-title': wrap_title,
                     })}
                   >
                     <UniversalLink

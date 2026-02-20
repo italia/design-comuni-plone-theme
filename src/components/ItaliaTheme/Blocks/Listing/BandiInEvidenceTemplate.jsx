@@ -66,6 +66,7 @@ const BandiInEvidenceTemplate = ({
   linkHref,
   titleLine,
   linkmore_id_lighthouse,
+  wrap_title,
 }) => {
   const intl = useIntl();
   return (
@@ -93,7 +94,10 @@ const BandiInEvidenceTemplate = ({
               <Col lg={4} sm={6} xs={12} key={index} className="pb-3">
                 <Card key={index} className="listing-item card-bg mt-2">
                   <CardBody>
-                    <CardTitle tag={title ? 'h3' : 'h2'} className="title">
+                    <CardTitle
+                      tag={title ? 'h3' : 'h2'}
+                      className={cx('title', { 'wrap-title': wrap_title })}
+                    >
                       <UniversalLink
                         className="bando-title"
                         item={!isEditMode ? item : null}

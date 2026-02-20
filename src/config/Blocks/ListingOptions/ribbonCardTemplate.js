@@ -38,6 +38,7 @@ export const addRibbonCardTemplateOptions = (
       'hide_dates',
       'show_description',
       'show_detail_link',
+      'wrap_title',
     ],
     {
       show_only_first_ribbon: {
@@ -47,6 +48,7 @@ export const addRibbonCardTemplateOptions = (
       hide_dates: { default: false },
       show_detail_link: { default: false },
       show_type: { default: false },
+      wrap_title: { default: false },
     },
     pos,
   );

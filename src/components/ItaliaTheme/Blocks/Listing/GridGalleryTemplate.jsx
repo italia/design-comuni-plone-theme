@@ -33,6 +33,7 @@ const GridGalleryTemplate = ({
   show_block_bg,
   critical = false,
   linkmore_id_lighthouse,
+  wrap_title,
 }) => {
   const intl = useIntl();
   return (
@@ -100,7 +101,9 @@ const GridGalleryTemplate = ({
                       {image}
                     </picture>
                   )}
-                  <h3>{item.title}</h3>
+                  <h3 className={cx({ 'wrap-title': wrap_title })}>
+                    {item.title}
+                  </h3>
                 </UniversalLink>
               </div>
             );

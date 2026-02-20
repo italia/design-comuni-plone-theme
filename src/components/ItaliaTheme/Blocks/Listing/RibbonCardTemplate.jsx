@@ -66,6 +66,7 @@ const RibbonCardTemplate = (props) => {
     titleLine,
     linkmore_id_lighthouse,
     rrule,
+    wrap_title,
   } = props;
   return (
     <div className="ribbon-card-template">
@@ -144,6 +145,7 @@ const RibbonCardTemplate = (props) => {
                       className={cx('', {
                         'rassegna-appointment-title': isEventAppointment,
                         h3: !title,
+                        'wrap-title': wrap_title,
                       })}
                     >
                       <UniversalLink

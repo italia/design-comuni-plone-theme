@@ -52,6 +52,7 @@ const CardWithImageDefault = (props) => {
     id_lighthouse,
     rrule,
     title, // title of entire block
+    wrap_title,
   } = props;
 
   const imagesToShow = set_four_columns ? 4 : 3;
@@ -128,6 +129,7 @@ const CardWithImageDefault = (props) => {
               className={cx('', {
                 'rassegna-appointment-title': isEventAppointment,
                 h3: !title,
+                'wrap-title': wrap_title,
               })}
             >
               <UniversalLink

@@ -26,7 +26,7 @@ export const addAttachmentCardTemplateOptions = (
     schema,
     formData,
     intl,
-    ['show_pdf_preview'],
+    ['show_pdf_preview', 'wrap_title'],
     {
       show_pdf_preview: {
         default: false,

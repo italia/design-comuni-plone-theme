@@ -30,6 +30,7 @@ const SimpleCardTemplateCompact = ({
   linkAlign,
   titleLine,
   linkmore_id_lighthouse,
+  wrap_title,
 }) => {
   const intl = useIntl();
   return (
@@ -71,6 +72,7 @@ const SimpleCardTemplateCompact = ({
                 tag={title ? 'h3' : 'h2'}
                 className={cx('', {
                   h3: !title,
+                  'wrap-title': wrap_title,
                 })}
               >
                 <UniversalLink

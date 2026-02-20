@@ -34,6 +34,7 @@ const AttachmentCardTemplate = ({
   linkAlign,
   titleLine,
   linkmore_id_lighthouse,
+  wrap_title,
 }) => {
   const intl = useIntl();
 
@@ -88,7 +89,10 @@ const AttachmentCardTemplate = ({
                   />
                 )}
                 <CardBody tag="div">
-                  <CardTitle tag="h5" className="mb-0">
+                  <CardTitle
+                    tag="h5"
+                    className={cx('mb-0', { 'wrap-title': wrap_title })}
+                  >
                     <UniversalLink
                       item={!isEditMode ? itemUrl : null}
                       href={isEditMode ? '#' : null}

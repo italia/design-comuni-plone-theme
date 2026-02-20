@@ -69,6 +69,7 @@ export const imageCardTemplateOptions = (
       'hide_dates',
       'show_description',
       'show_topics',
+      'wrap_title',
     ].filter((f) => hide_fields.indexOf(f) < 0),
     {
       always_show_image: {
@@ -85,6 +86,7 @@ export const imageCardTemplateOptions = (
       },
       show_section: { default: false },
       hide_dates: { default: false },
+      wrap_title: { default: false },
       show_topics: { label: intl.formatMessage(messages.show_topics) },
     },
     pos,

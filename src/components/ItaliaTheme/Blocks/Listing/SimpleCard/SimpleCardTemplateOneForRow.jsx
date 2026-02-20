@@ -70,6 +70,7 @@ const SimpleCardTemplateDefaultOneForRow = (props) => {
     id_lighthouse,
     linkmore_id_lighthouse,
     rrule,
+    wrap_title,
   } = props;
 
   let currentPathFilter = additionalFilters
@@ -222,6 +223,7 @@ const SimpleCardTemplateDefaultOneForRow = (props) => {
                   tag={title ? 'h3' : 'h2'}
                   className={cx('', {
                     h3: !title,
+                    'wrap-title': wrap_title,
                   })}
                 >
                   <UniversalLink

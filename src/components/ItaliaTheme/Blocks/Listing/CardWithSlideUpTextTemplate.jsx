@@ -43,6 +43,7 @@ const CardWithSlideUpTextTemplate = (props) => {
     linkmore_id_lighthouse,
     titleLine,
     rrule,
+    wrap_title,
   } = props;
 
   const TitleTag = title ? 'h3' : 'h2';
@@ -107,6 +108,7 @@ const CardWithSlideUpTextTemplate = (props) => {
                     className={cx('title', {
                       h3: !title,
                       ellipsis: itemTitle.length > 50,
+                      'wrap-title': wrap_title,
                     })}
                     title={itemTitle.length > 50 ? itemTitle : undefined}
                   >

@@ -73,6 +73,7 @@ import {
 import { cloneBlock } from 'design-comuni-plone-theme/helpers/blocks';
 
 import { addLighthouseField } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
+import { templatesOptions } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
 const italiaListingVariations = [
   {
@@ -121,7 +122,17 @@ const italiaListingVariations = [
     skeleton: ContentInEvidenceTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
       let pos = addLighthouseField(schema, intl);
-      addDefaultOptions(schema, formData, intl, pos);
+      pos = addDefaultOptions(schema, formData, intl, pos);
+      templatesOptions(
+        schema,
+        formData,
+        intl,
+        ['wrap_title'],
+        {
+          wrap_title: { default: false },
+        },
+        pos,
+      );
       addLinkMoreOptions(schema, formData, intl);
       return schema;
     },
@@ -248,7 +259,17 @@ const italiaListingVariations = [
     template: GridGalleryTemplate,
     skeleton: GridGalleryTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      let pos = addDefaultOptions(schema, formData, intl);
+      templatesOptions(
+        schema,
+        formData,
+        intl,
+        ['wrap_title'],
+        {
+          wrap_title: { default: false },
+        },
+        pos,
+      );
       addLinkMoreOptions(schema, formData, intl);
       return schema;
     },
@@ -323,8 +344,49 @@ const italiaListingVariations = [
   // },
 ];
 
+/** cambia i valori di default delle prop dei template, leggendoli da config.blocks.blocksConfig.listing.defaultVariationProps  */
+const changeDefaults = (variations, config) => {
+  const newDefaults =
+    config?.blocks?.blocksConfig?.listing?.defaultVariationProps;
+  if (!newDefaults || Object.keys(newDefaults).length === 0) return variations;
+  return variations.map((variation) => {
+    const newVariation = { ...variation };
+
+    let variation_defaults = {};
+    if (newDefaults._variations?.[variation.id]) {
+      variation_defaults = {
+        ...newDefaults,
+        ...newDefaults._variations[variation.id],
+      };
+    } else {
+      variation_defaults = { ...newDefaults };
+    }
+    if (
+      newVariation.schemaEnhancer &&
+      typeof newVariation.schemaEnhancer === 'function'
+    ) {
+      newVariation.schemaEnhancer = ({ schema, formData, intl }) => {
+        if (variation.schemaEnhancer) {
+          schema =
+            variation.schemaEnhancer({ schema, formData, intl }) || schema;
+        }
+        Object.keys(variation_defaults)
+          .filter((k) => k !== '_variations')
+          .forEach((f) => {
+            if (schema.properties?.[f]) {
+              schema.properties[f].default = variation_defaults[f];
+            }
+          });
+        return schema;
+      };
+    }
+    return newVariation;
+  });
+};
+
 export const getItaliaListingVariations = (config) => {
-  return italiaListingVariations;
+  const variations = changeDefaults(italiaListingVariations, config);
+  return variations;
 };
 export const removeListingVariation = (config, id) => {
   let indexOfVariation = -1;
