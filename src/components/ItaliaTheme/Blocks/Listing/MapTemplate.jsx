@@ -30,6 +30,7 @@ const MapTemplate = ({
   titleLine,
   show_map_full_width,
   map_size = 'medium',
+  zoom = 15,
   linkmore_id_lighthouse,
 }) => {
   const intl = useIntl();
@@ -91,6 +92,7 @@ const MapTemplate = ({
             <OSMMap
               markers={markers}
               showTooltip
+              zoom={zoom}
               mapOptions={{
                 scrollWheelZoom: false,
                 // tap: false,

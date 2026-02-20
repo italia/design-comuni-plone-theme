@@ -40,6 +40,16 @@ export const addMapTemplateOptions = (schema, formData, intl, position = 1) => {
 
   addSchemaField(
     schema,
+    'zoom',
+    intl.formatMessage(messages.zoom),
+    null,
+    { type: 'number', default: 15 },
+    pos,
+  );
+  pos++;
+
+  addSchemaField(
+    schema,
     'map_size',
     intl.formatMessage(messages.map_size),
     null,
