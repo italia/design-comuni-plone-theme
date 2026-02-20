@@ -3,7 +3,7 @@
  * @module components/Footer/FooterInfos
  */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
@@ -35,27 +35,41 @@ const FooterInfos = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const homepath = useHomePath();
+
+  const [footerColumns, setFooterColumns] = useState([]);
+  const [colWidth, setColWidth] = useState(3);
+
+  const confLoading = useSelector(
+    (state) => state.editableFooterColumns.loadingResults,
+  );
   const footerConfiguration = useSelector(
     (state) => state.editableFooterColumns?.result,
   );
 
   useEffect(() => {
-    dispatch(getEditableFooterColumns());
-  }, [dispatch, location]);
-
-  //filter rootpaths
-  let footerColumns = getItemsByPath(
-    footerConfiguration,
-    location?.pathname?.length ? location.pathname : homepath,
-  );
-  footerColumns.forEach((column) => {
-    if (__CLIENT__) {
-      column.slateText = fromHtml(column.text);
+    if (!footerConfiguration && !confLoading) {
+      dispatch(getEditableFooterColumns());
     }
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const colWidth =
-    12 / (footerColumns.length < N_COLUMNS ? footerColumns.length : N_COLUMNS);
+  useEffect(() => {
+    //filter rootpaths
+    const fc = getItemsByPath(
+      footerConfiguration,
+      location?.pathname?.length ? location.pathname : homepath,
+    );
+    fc.forEach((column) => {
+      if (__CLIENT__) {
+        column.slateText = fromHtml(column.text);
+      }
+    });
+
+    const ncolumns = fc.length < N_COLUMNS ? fc.length : N_COLUMNS;
+    setFooterColumns(fc);
+    setColWidth(12 / ncolumns);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [footerConfiguration, location]);
 
   return (
     <Row tag="div">

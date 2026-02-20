@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione x.x.x (xx/xx/xxxx)
+
+### Fix
+
+- Rimosse chiamate doppie inutili a @footerColumns
+
 ## Versione 12.10.1 (09/02/2026)
 
 ### Fix
