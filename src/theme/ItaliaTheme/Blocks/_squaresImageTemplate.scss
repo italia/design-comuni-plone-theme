@@ -25,14 +25,16 @@
     padding: 1.2rem;
     text-decoration: none;
 
+    .enhance-link {
+      @include visually-hidden;
+    }
+
     .title {
       z-index: 2;
       max-height: 100%;
       color: #fff;
       font-size: 1.2rem;
       overflow-wrap: anywhere;
-      word-break: break-word;
-      hyphens: auto;
     }
 
     &:before {

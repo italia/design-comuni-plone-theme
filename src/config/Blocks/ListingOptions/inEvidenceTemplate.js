@@ -37,11 +37,13 @@ export const addInEvidenceTemplateOptions = (
       'hide_dates',
       'show_description',
       'show_topics',
+      'wrap_title',
     ],
     {
       hide_dates: { default: false },
       show_section: { default: false },
       show_topics: { label: intl.formatMessage(messages.show_topics) },
+      wrap_title: { default: false },
     },
     pos,
   );

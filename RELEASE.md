@@ -48,6 +48,10 @@
 - Sistemato un problema che si verificava durante l'incolla delle tabelle da un file word.
 - Rimosse chiamate doppie inutili a @footerColumns
 
+### Novità
+
+- Nei template del blocco listing, è possibile scegliere con un flag, se mandare a capo automaticamente con un trattino i titoli troppo lunghi (per i casi in cui i titoli "sbordano" dalle card).
+
 ## Versione 12.10.1 (09/02/2026)
 
 ### Fix

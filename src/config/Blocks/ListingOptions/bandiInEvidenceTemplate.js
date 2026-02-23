@@ -29,7 +29,13 @@ export const addBandiInEvidenceTemplateOptions = (
     schema,
     formData,
     intl,
-    ['show_description', 'show_ente', 'show_tipologia', 'show_cig'],
+    [
+      'show_description',
+      'show_ente',
+      'show_tipologia',
+      'show_cig',
+      'wrap_title',
+    ],
     {
       show_ente: {
         default: false,
@@ -43,6 +49,7 @@ export const addBandiInEvidenceTemplateOptions = (
         default: true,
         label: intl.formatMessage(messages.show_cig),
       },
+      wrap_title: { default: false },
     },
     pos,
   );

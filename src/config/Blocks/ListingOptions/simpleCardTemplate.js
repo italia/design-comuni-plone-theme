@@ -72,9 +72,10 @@ export const addSimpleCardTemplateOptions = (
       schema,
       formData,
       intl,
-      ['show_icon'],
+      ['show_icon', 'wrap_title'],
       {
         show_icon: { default: false },
+        wrap_title: { default: false },
       },
       pos,
     );
@@ -109,6 +110,7 @@ export const simpleCardTemplateOptions_appearance_default = (
       'show_description',
       'show_detail_link',
       'show_path_filters',
+      'wrap_title',
     ].filter((f) => hide_fields.indexOf(f) < 0),
     {
       hide_dates: { default: false },
@@ -116,6 +118,7 @@ export const simpleCardTemplateOptions_appearance_default = (
       show_type: { default: false },
       show_detail_link: { default: false },
       show_path_filters: { default: false },
+      wrap_title: { default: false },
     },
     pos,
   );

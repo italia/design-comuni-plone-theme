@@ -34,8 +34,12 @@ import {
   ListingImage,
   RassegnaInfo,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 const ContentInEvidenceTemplate = (props) => {
+  const defaultVariationProps = getVariationPropsDefaults(
+    'contentInEvidenceTemplate',
+  );
   const {
     items,
     title,
@@ -48,6 +52,7 @@ const ContentInEvidenceTemplate = (props) => {
     // linkmore_id_lighthouse,
     titleLine,
     rrule,
+    wrap_title = defaultVariationProps.wrap_title,
   } = props;
   const intl = useIntl();
 
@@ -101,9 +106,10 @@ const ContentInEvidenceTemplate = (props) => {
                     </CardCategory>
                     <CardTitle
                       tag="h2"
-                      className={`${
-                        isEventAppointment ? 'rassegna-appointment-title' : ''
-                      }`}
+                      className={cx('', {
+                        'rassegna-appointment-title': isEventAppointment,
+                        'wrap-title': wrap_title,
+                      })}
                     >
                       <UniversalLink item={item} data-element={id_lighthouse}>
                         {item.title}

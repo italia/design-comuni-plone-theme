@@ -1,4 +1,5 @@
 import { defineMessages } from 'react-intl';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   show_icon: {
@@ -57,6 +58,10 @@ const messages = defineMessages({
     id: 'ID Lighthouse Help Description',
     defaultMessage:
       'Identificativo di servizio a solo uso interno, utilizzato per le verifiche AgID inerenti al PNRR.',
+  },
+  wrap_title: {
+    id: 'Wrap title',
+    defaultMessage: 'Manda a capo il titolo con un trattino se è troppo lungo',
   },
 });
 
@@ -177,4 +182,34 @@ export const addLighthouseField = (schema, intl, position = 1) => {
   pos++;
 
   return pos;
+};
+
+export const getVariationPropsDefaults = (variation_id) => {
+  const newDefaults =
+    config?.blocks?.blocksConfig?.listing?.defaultVariationProps;
+  if (!newDefaults || Object.keys(newDefaults).length === 0) return {};
+
+  let variation_defaults = { ...newDefaults };
+  if (newDefaults._variations?.[variation_id]) {
+    variation_defaults = {
+      ...variation_defaults,
+      ...newDefaults._variations[variation_id],
+    };
+  }
+
+  delete variation_defaults._variations;
+  return variation_defaults;
+};
+/** cambia i valori di default delle prop dei template, leggendoli da config.blocks.blocksConfig.listing.defaultVariationProps  */
+export const changeDefaults = (variation_id, schema) => {
+  const defaults = getVariationPropsDefaults(variation_id);
+
+  Object.keys(defaults)
+    .filter((k) => k !== '_variations')
+    .forEach((f) => {
+      if (schema.properties?.[f]) {
+        schema.properties[f].default = defaults[f];
+      }
+    });
+  return schema;
 };

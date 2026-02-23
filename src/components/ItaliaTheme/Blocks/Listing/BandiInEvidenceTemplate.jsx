@@ -20,6 +20,7 @@ import {
 import { viewDate } from 'design-comuni-plone-theme/helpers';
 
 import { BandoStatus } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 const messages = defineMessages({
   vedi: {
@@ -52,21 +53,27 @@ const messages = defineMessages({
   },
 });
 
-const BandiInEvidenceTemplate = ({
-  items,
-  title,
-  isEditMode,
-  show_block_bg,
-  show_ente,
-  show_tipologia,
-  show_description,
-  show_cig = true,
-  linkAlign,
-  linkTitle,
-  linkHref,
-  titleLine,
-  linkmore_id_lighthouse,
-}) => {
+const BandiInEvidenceTemplate = (props) => {
+  const defaultVariationProps = getVariationPropsDefaults(
+    'bandiInEvidenceTemplate',
+  );
+  const {
+    items,
+    title,
+    isEditMode,
+    show_block_bg,
+    show_ente,
+    show_tipologia,
+    show_description,
+    show_cig = true,
+    linkAlign,
+    linkTitle,
+    linkHref,
+    titleLine,
+    linkmore_id_lighthouse,
+    wrap_title = defaultVariationProps.wrap_title,
+  } = props;
+
   const intl = useIntl();
   return (
     <div className="bandi-in-evidence">
@@ -93,9 +100,14 @@ const BandiInEvidenceTemplate = ({
               <Col lg={4} sm={6} xs={12} key={index} className="pb-3">
                 <Card key={index} className="listing-item card-bg mt-2">
                   <CardBody>
-                    <CardTitle tag={title ? 'h3' : 'h2'} className="title">
+                    <CardTitle
+                      tag={title ? 'h3' : 'h2'}
+                      className={cx('title', { 'wrap-title': wrap_title })}
+                    >
                       <UniversalLink
-                        className="bando-title"
+                        className={cx('bando-title', {
+                          'wrap-title': wrap_title,
+                        })}
                         item={!isEditMode ? item : null}
                         href={isEditMode ? '#' : null}
                       >

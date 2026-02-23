@@ -46,6 +46,14 @@ a {
   }
 }
 
+.wrap-title {
+  &,
+  a {
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
 .listing-item img {
   max-width: unset;
   margin-right: unset;
