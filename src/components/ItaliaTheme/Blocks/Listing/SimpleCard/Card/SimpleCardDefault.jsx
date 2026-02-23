@@ -26,6 +26,7 @@ import {
   getEventRecurrenceMore,
   getComponentWithFallback,
 } from 'design-comuni-plone-theme/helpers';
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -42,7 +43,7 @@ const messages = defineMessages({
 
 const SimpleCardDefault = (props) => {
   const intl = useIntl();
-
+  const defaultVariationProps = getVariationPropsDefaults('simpleCard');
   moment.locale(intl.locale);
 
   const {
@@ -54,7 +55,7 @@ const SimpleCardDefault = (props) => {
     show_description = true,
     show_detail_link,
     detail_link_label,
-    wrap_title,
+    wrap_title = defaultVariationProps.wrap_title,
     hide_dates,
     id_lighthouse,
     rrule,

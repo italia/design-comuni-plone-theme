@@ -29,6 +29,7 @@ import {
   getEventRecurrenceMore,
   getComponentWithFallback,
 } from 'design-comuni-plone-theme/helpers';
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 const messages = defineMessages({
   card_detail_label: { id: 'Card detail label', defaultMessage: 'Vedi' },
@@ -44,6 +45,7 @@ const messages = defineMessages({
 
 const SimpleCardTemplateDefaultOneForRow = (props) => {
   const intl = useIntl();
+  const defaultVariationProps = getVariationPropsDefaults('simpleCard');
 
   moment.locale(intl.locale);
 
@@ -70,7 +72,7 @@ const SimpleCardTemplateDefaultOneForRow = (props) => {
     id_lighthouse,
     linkmore_id_lighthouse,
     rrule,
-    wrap_title,
+    wrap_title = defaultVariationProps.wrap_title,
   } = props;
 
   let currentPathFilter = additionalFilters

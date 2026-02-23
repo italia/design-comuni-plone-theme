@@ -34,8 +34,12 @@ import {
   CardPersona,
   RassegnaInfo,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 const CardWithImageDefault = (props) => {
+  const defaultVariationProps = getVariationPropsDefaults(
+    'cardWithImageTemplate',
+  );
   const {
     item,
     index,
@@ -52,7 +56,7 @@ const CardWithImageDefault = (props) => {
     id_lighthouse,
     rrule,
     title, // title of entire block
-    wrap_title,
+    wrap_title = defaultVariationProps.wrap_title,
   } = props;
 
   const imagesToShow = set_four_columns ? 4 : 3;

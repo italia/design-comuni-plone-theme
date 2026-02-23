@@ -20,6 +20,7 @@ import {
 import { viewDate } from 'design-comuni-plone-theme/helpers';
 
 import { BandoStatus } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 const messages = defineMessages({
   vedi: {
@@ -52,22 +53,27 @@ const messages = defineMessages({
   },
 });
 
-const BandiInEvidenceTemplate = ({
-  items,
-  title,
-  isEditMode,
-  show_block_bg,
-  show_ente,
-  show_tipologia,
-  show_description,
-  show_cig = true,
-  linkAlign,
-  linkTitle,
-  linkHref,
-  titleLine,
-  linkmore_id_lighthouse,
-  wrap_title,
-}) => {
+const BandiInEvidenceTemplate = (props) => {
+  const defaultVariationProps = getVariationPropsDefaults(
+    'bandiInEvidenceTemplate',
+  );
+  const {
+    items,
+    title,
+    isEditMode,
+    show_block_bg,
+    show_ente,
+    show_tipologia,
+    show_description,
+    show_cig = true,
+    linkAlign,
+    linkTitle,
+    linkHref,
+    titleLine,
+    linkmore_id_lighthouse,
+    wrap_title = defaultVariationProps.wrap_title,
+  } = props;
+
   const intl = useIntl();
   return (
     <div className="bandi-in-evidence">

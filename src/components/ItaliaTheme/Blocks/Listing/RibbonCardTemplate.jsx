@@ -30,6 +30,7 @@ import {
   getComponentWithFallback,
 } from 'design-comuni-plone-theme/helpers';
 import { getCategory } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 const messages = defineMessages({
   default_detail_link: {
@@ -45,6 +46,7 @@ const messages = defineMessages({
 const RibbonCardTemplate = (props) => {
   const intl = useIntl();
   moment.locale(intl.locale);
+  const defaultVariationProps = getVariationPropsDefaults('ribbonCardTemplate');
 
   const {
     items,
@@ -66,7 +68,7 @@ const RibbonCardTemplate = (props) => {
     titleLine,
     linkmore_id_lighthouse,
     rrule,
-    wrap_title,
+    wrap_title = defaultVariationProps.wrap_title,
   } = props;
   return (
     <div className="ribbon-card-template">

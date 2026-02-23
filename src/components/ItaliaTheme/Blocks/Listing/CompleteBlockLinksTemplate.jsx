@@ -24,10 +24,14 @@ import {
   contentHasImage,
 } from 'design-comuni-plone-theme/helpers';
 import { isInternalURL } from '@plone/volto/helpers/Url/Url';
-
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 import config from '@plone/volto/registry';
 
 const CompleteBlockLinksTemplate = (props) => {
+  const defaultVariationProps = getVariationPropsDefaults(
+    'completeBlockLinksTemplate',
+  );
+
   const {
     items,
     title,
@@ -40,7 +44,7 @@ const CompleteBlockLinksTemplate = (props) => {
     id_lighthouse,
     linkmore_id_lighthouse,
     titleLine,
-    wrap_title,
+    wrap_title = defaultVariationProps.wrap_title,
   } = props;
   return (
     <div className="complete-block-links-template">

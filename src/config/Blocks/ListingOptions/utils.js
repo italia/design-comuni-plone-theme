@@ -184,11 +184,10 @@ export const addLighthouseField = (schema, intl, position = 1) => {
   return pos;
 };
 
-/** cambia i valori di default delle prop dei template, leggendoli da config.blocks.blocksConfig.listing.defaultVariationProps  */
-export const changeDefaults = (variation_id, schema) => {
+export const getVariationPropsDefaults = (variation_id) => {
   const newDefaults =
     config?.blocks?.blocksConfig?.listing?.defaultVariationProps;
-  if (!newDefaults || Object.keys(newDefaults).length === 0) return schema;
+  if (!newDefaults || Object.keys(newDefaults).length === 0) return {};
 
   let variation_defaults = { ...newDefaults };
   if (newDefaults._variations?.[variation_id]) {
@@ -198,11 +197,18 @@ export const changeDefaults = (variation_id, schema) => {
     };
   }
 
-  Object.keys(variation_defaults)
+  delete variation_defaults._variations;
+  return variation_defaults;
+};
+/** cambia i valori di default delle prop dei template, leggendoli da config.blocks.blocksConfig.listing.defaultVariationProps  */
+export const changeDefaults = (variation_id, schema) => {
+  const defaults = getVariationPropsDefaults(variation_id);
+
+  Object.keys(defaults)
     .filter((k) => k !== '_variations')
     .forEach((f) => {
       if (schema.properties?.[f]) {
-        schema.properties[f].default = variation_defaults[f];
+        schema.properties[f].default = defaults[f];
       }
     });
   return schema;

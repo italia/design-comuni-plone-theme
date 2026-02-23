@@ -13,6 +13,7 @@ import React from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 const messages = defineMessages({
   maxItemsExceeded: {
@@ -22,19 +23,23 @@ const messages = defineMessages({
   },
 });
 
-const GridGalleryTemplate = ({
-  items,
-  isEditMode,
-  title,
-  titleLine,
-  linkAlign,
-  linkTitle,
-  linkHref,
-  show_block_bg,
-  critical = false,
-  linkmore_id_lighthouse,
-  wrap_title,
-}) => {
+const GridGalleryTemplate = (props) => {
+  const defaultVariationProps = getVariationPropsDefaults(
+    'gridGalleryTemplate',
+  );
+  const {
+    items,
+    isEditMode,
+    title,
+    titleLine,
+    linkAlign,
+    linkTitle,
+    linkHref,
+    show_block_bg,
+    critical = false,
+    linkmore_id_lighthouse,
+    wrap_title = defaultVariationProps.wrap_title,
+  } = props;
   const intl = useIntl();
   return (
     <div className="grid-gallery-template">

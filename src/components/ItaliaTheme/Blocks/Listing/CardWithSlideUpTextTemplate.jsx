@@ -16,6 +16,7 @@ import {
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { getCategory } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 import { defineMessages, useIntl } from 'react-intl';
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 const messages = defineMessages({
   vedi: {
@@ -26,7 +27,9 @@ const messages = defineMessages({
 
 const CardWithSlideUpTextTemplate = (props) => {
   const intl = useIntl();
-
+  const defaultVariationProps = getVariationPropsDefaults(
+    'cardSlideUpTextTemplate',
+  );
   const {
     items,
     title,
@@ -43,7 +46,7 @@ const CardWithSlideUpTextTemplate = (props) => {
     linkmore_id_lighthouse,
     titleLine,
     rrule,
-    wrap_title,
+    wrap_title = defaultVariationProps.wrap_title,
   } = props;
 
   const TitleTag = title ? 'h3' : 'h2';

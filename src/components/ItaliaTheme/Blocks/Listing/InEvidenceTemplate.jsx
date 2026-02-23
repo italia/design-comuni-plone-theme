@@ -37,8 +37,11 @@ import {
   RassegnaInfo,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { getCategory } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 const InEvidenceTemplate = (props) => {
+  const defaultVariationProps = getVariationPropsDefaults('inEvidenceTemplate');
+
   const {
     items,
     title,
@@ -57,7 +60,7 @@ const InEvidenceTemplate = (props) => {
     id_lighthouse,
     linkmore_id_lighthouse,
     rrule,
-    wrap_title,
+    wrap_title = defaultVariationProps.wrap_title,
   } = props;
 
   return (

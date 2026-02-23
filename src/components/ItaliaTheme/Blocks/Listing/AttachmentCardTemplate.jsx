@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 import { Container, Card, CardBody, CardTitle } from 'design-react-kit';
 import {
   Icon,
@@ -22,20 +23,26 @@ const messages = defineMessages({
   },
 });
 
-const AttachmentCardTemplate = ({
-  items,
-  isEditMode,
-  linkTitle,
-  linkHref,
-  show_pdf_preview,
-  show_block_bg,
-  title,
-  id_lighthouse,
-  linkAlign,
-  titleLine,
-  linkmore_id_lighthouse,
-  wrap_title,
-}) => {
+const AttachmentCardTemplate = (props) => {
+  const defaultVariationProps = getVariationPropsDefaults(
+    'attachmentCardTemplate',
+  );
+
+  const {
+    items,
+    isEditMode,
+    linkTitle,
+    linkHref,
+    show_pdf_preview,
+    show_block_bg,
+    title,
+    id_lighthouse,
+    linkAlign,
+    titleLine,
+    linkmore_id_lighthouse,
+    wrap_title = defaultVariationProps.wrap_title,
+  } = props;
+
   const intl = useIntl();
 
   const token = useSelector((state) => state.userSession?.token);

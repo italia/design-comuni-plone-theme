@@ -11,6 +11,8 @@ import {
   ListingLinkMore,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
+import { getVariationPropsDefaults } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
+
 const messages = defineMessages({
   argumentIcon: {
     id: 'argument_icon',
@@ -18,21 +20,23 @@ const messages = defineMessages({
   },
 });
 
-const SimpleCardTemplateCompact = ({
-  items,
-  isEditMode,
-  linkTitle,
-  linkHref,
-  show_icon = true,
-  show_block_bg,
-  title,
-  id_lighthouse,
-  linkAlign,
-  titleLine,
-  linkmore_id_lighthouse,
-  wrap_title,
-}) => {
+const SimpleCardTemplateCompact = (props) => {
   const intl = useIntl();
+  const defaultVariationProps = getVariationPropsDefaults('simpleCard');
+  const {
+    items,
+    isEditMode,
+    linkTitle,
+    linkHref,
+    show_icon = true,
+    show_block_bg,
+    title,
+    id_lighthouse,
+    linkAlign,
+    titleLine,
+    linkmore_id_lighthouse,
+    wrap_title = defaultVariationProps.wrap_title,
+  } = props;
   return (
     <div className="simple-card-compact-template">
       {title && (
