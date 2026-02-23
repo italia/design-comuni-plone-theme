@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-11-27T13:35:51.867Z\n"
+"POT-Creation-Date: 2026-02-23T13:41:44.207Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -812,6 +812,11 @@ msgstr ""
 #: overrideTranslations
 # defaultMessage: Visible only in view mode
 msgid "Visible only in view mode"
+msgstr ""
+
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: Manda a capo il titolo con un trattino se è troppo lungo
+msgid "Wrap title"
 msgstr ""
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized

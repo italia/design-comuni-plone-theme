@@ -812,6 +812,11 @@ msgstr "Video gallery"
 msgid "Visible only in view mode"
 msgstr "Visibile solamente in modalità visualizzazione"
 
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: Manda a capo il titolo con un trattino se è troppo lungo
+msgid "Wrap title"
+msgstr ""
+
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 # defaultMessage: You are trying to access a protected resource, please {login} first.
 msgid "You are trying to access a protected resource, please {login} first."
