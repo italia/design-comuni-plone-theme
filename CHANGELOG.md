@@ -1,5 +1,29 @@
 # Changelog
 
+## [12.11.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.10.1...v12.11.0) (2026-02-23)
+
+
+### Features
+
+* configurable default listing props per-site ([#1082](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1082)) ([57249af](https://github.com/RedTurtle/design-comuni-plone-theme/commit/57249af10c6f14b50080f2086260a783d08d2390))
+* customize zoom in map listing variation ([#1068](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1068)) ([d0310c7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d0310c72bdbde13150923d408dd2e445bd3a3ed8))
+
+
+### Bug Fixes
+
+* paste table from word ([#1073](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1073)) ([b7ce403](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b7ce403aa41fd776d6b1e7071296c06d42ee8bbd))
+* unnecessary api calls ([#1079](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1079)) ([1e39b07](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1e39b0775023a9ce34f21c3a83c3416dd7f187f4))
+
+
+### Documentation
+
+* updated publiccode and release log ([2e3e9e4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2e3e9e43f417ddbc4a5462a488d5cc30f8e25ff4))
+
+
+### Maintenance
+
+* translations ([7711e92](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7711e9214e584daab81df1ab536a6f61724f8068))
+
 ## [12.10.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.10.0...v12.10.1) (2026-02-09)
 
 
