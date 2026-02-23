@@ -41,12 +41,13 @@
 - ...
  -->
 
-## Versione x.x.x (xx/xx/xxxx)
+## Versione 12.11.0 (23/02/2026)
 
 ### Fix
 
 - Sistemato un problema che si verificava durante l'incolla delle tabelle da un file word.
-- Rimosse chiamate doppie inutili a @footerColumns
+- Rimosse chiamate doppie inutili.
+- Rimosso l'acapo automatico nei titoli delle card. Ora i titoli vanno a capo solo se espressamente configurato nel campo dedicato nelle impostazioni del template del blocco.
 
 ### Novità
 
