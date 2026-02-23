@@ -107,12 +107,12 @@ const CardWithSlideUpTextTemplate = (props) => {
                   <TitleTag
                     className={cx('title', {
                       h3: !title,
-                      ellipsis: itemTitle.length > 50,
+                      ellipsis: itemTitle.length > 65,
                       'wrap-title': wrap_title,
                     })}
-                    title={itemTitle.length > 50 ? itemTitle : undefined}
+                    title={itemTitle.length > 65 ? itemTitle : undefined}
                   >
-                    {itemTitle.substring(0, 50)}
+                    {itemTitle.substring(0, 65)}
                   </TitleTag>
                 </UniversalLink>
                 <div className="box-slide-up">

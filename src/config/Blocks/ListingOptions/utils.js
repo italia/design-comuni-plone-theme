@@ -1,4 +1,5 @@
 import { defineMessages } from 'react-intl';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   show_icon: {
@@ -181,4 +182,28 @@ export const addLighthouseField = (schema, intl, position = 1) => {
   pos++;
 
   return pos;
+};
+
+/** cambia i valori di default delle prop dei template, leggendoli da config.blocks.blocksConfig.listing.defaultVariationProps  */
+export const changeDefaults = (variation_id, schema) => {
+  const newDefaults =
+    config?.blocks?.blocksConfig?.listing?.defaultVariationProps;
+  if (!newDefaults || Object.keys(newDefaults).length === 0) return schema;
+
+  let variation_defaults = { ...newDefaults };
+  if (newDefaults._variations?.[variation_id]) {
+    variation_defaults = {
+      ...variation_defaults,
+      ...newDefaults._variations[variation_id],
+    };
+  }
+
+  Object.keys(variation_defaults)
+    .filter((k) => k !== '_variations')
+    .forEach((f) => {
+      if (schema.properties?.[f]) {
+        schema.properties[f].default = variation_defaults[f];
+      }
+    });
+  return schema;
 };

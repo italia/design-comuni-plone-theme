@@ -72,7 +72,10 @@ import {
 } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 import { cloneBlock } from 'design-comuni-plone-theme/helpers/blocks';
 
-import { addLighthouseField } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
+import {
+  addLighthouseField,
+  changeDefaults,
+} from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 import { templatesOptions } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
 const italiaListingVariations = [
@@ -84,6 +87,7 @@ const italiaListingVariations = [
     schemaEnhancer: ({ schema, formData, intl }) => {
       addSimpleCardTemplateOptions(schema, formData, intl);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('simpleCard', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -97,6 +101,7 @@ const italiaListingVariations = [
     schemaEnhancer: ({ schema, formData, intl }) => {
       addCardWithImageTemplateOptions(schema, formData, intl);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('cardWithImageTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -110,6 +115,7 @@ const italiaListingVariations = [
     schemaEnhancer: ({ schema, formData, intl }) => {
       addInEvidenceTemplateOptions(schema, formData, intl);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('inEvidenceTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -134,6 +140,7 @@ const italiaListingVariations = [
         pos,
       );
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('contentInEvidenceTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -147,6 +154,7 @@ const italiaListingVariations = [
     schemaEnhancer: ({ schema, formData, intl }) => {
       addRibbonCardTemplateOptions(schema, formData, intl);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('ribbonCardTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -160,6 +168,7 @@ const italiaListingVariations = [
     schemaEnhancer: ({ schema, formData, intl }) => {
       addCardWithSlideUpTextTemplateOptions(schema, formData, intl);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('cardSlideUpTextTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -174,6 +183,7 @@ const italiaListingVariations = [
       let pos = addLighthouseField(schema, intl);
       addDefaultOptions(schema, formData, intl, pos);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('quaresImageTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -188,6 +198,7 @@ const italiaListingVariations = [
       let pos = addDefaultOptions(schema, formData, intl);
       addMapTemplateOptions(schema, formData, intl, pos);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('mapTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -202,6 +213,7 @@ const italiaListingVariations = [
       let pos = addDefaultOptions(schema, formData, intl);
       addSmallBlockLinksTemplateOptions(schema, formData, intl, pos);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('smallBlockLinksTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -215,6 +227,7 @@ const italiaListingVariations = [
     schemaEnhancer: ({ schema, formData, intl }) => {
       addCompleteBlockLinksTemplateOptions(schema, formData, intl);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('completeBlockLinksTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -229,6 +242,7 @@ const italiaListingVariations = [
       let pos = addDefaultOptions(schema, formData, intl);
       addPhotogalleryTemplateOptions(schema, formData, intl, pos);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('photogallery', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -243,6 +257,7 @@ const italiaListingVariations = [
       let pos = addDefaultOptions(schema, formData, intl);
       addSliderTemplateOptions(schema, formData, intl, pos);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('slider', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -271,6 +286,7 @@ const italiaListingVariations = [
         pos,
       );
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('gridGalleryTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -285,6 +301,7 @@ const italiaListingVariations = [
       let pos = addDefaultOptions(schema, formData, intl);
       addBandiInEvidenceTemplateOptions(schema, formData, intl, pos);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('bandiInEvidenceTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -299,6 +316,7 @@ const italiaListingVariations = [
       let pos = addDefaultOptions(schema, formData, intl);
       addSimpleListTemplateOptions(schema, formData, intl, pos);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('simpleListTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -313,6 +331,7 @@ const italiaListingVariations = [
       let pos = addDefaultOptions(schema, formData, intl);
       addAttachmentCardTemplateOptions(schema, formData, intl, pos);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('attachmentCardTemplate', schema);
       return schema;
     },
     cloneData: cloneBlock,
@@ -327,6 +346,7 @@ const italiaListingVariations = [
   //    schemaEnhancer: ({ schema, formData, intl }) => {
   //      /*let pos = */ addDefaultOptions(schema, formData, intl);
   //      addLinkMoreOptions(schema, formData, intl);
+  //      changeDefaults('amministrazioneTrasparenteTablesTemplate', schema);
   //      return schema;
   //    },
   // },
@@ -339,54 +359,14 @@ const italiaListingVariations = [
   //   skeleton: TemplateSkeletonComponent,
   //   schemaEnhancer: ({ schema, formData, intl }) => {
   //        let pos = addDefaultOptions(schema, formData, intl);
+  //        changeDefaults('template_id', schema);
   //        return schema;
   //    },
   // },
 ];
 
-/** cambia i valori di default delle prop dei template, leggendoli da config.blocks.blocksConfig.listing.defaultVariationProps  */
-const changeDefaults = (variations, config) => {
-  const newDefaults =
-    config?.blocks?.blocksConfig?.listing?.defaultVariationProps;
-  if (!newDefaults || Object.keys(newDefaults).length === 0) return variations;
-  return variations.map((variation) => {
-    const newVariation = { ...variation };
-
-    let variation_defaults = {};
-    if (newDefaults._variations?.[variation.id]) {
-      variation_defaults = {
-        ...newDefaults,
-        ...newDefaults._variations[variation.id],
-      };
-    } else {
-      variation_defaults = { ...newDefaults };
-    }
-    if (
-      newVariation.schemaEnhancer &&
-      typeof newVariation.schemaEnhancer === 'function'
-    ) {
-      newVariation.schemaEnhancer = ({ schema, formData, intl }) => {
-        if (variation.schemaEnhancer) {
-          schema =
-            variation.schemaEnhancer({ schema, formData, intl }) || schema;
-        }
-        Object.keys(variation_defaults)
-          .filter((k) => k !== '_variations')
-          .forEach((f) => {
-            if (schema.properties?.[f]) {
-              schema.properties[f].default = variation_defaults[f];
-            }
-          });
-        return schema;
-      };
-    }
-    return newVariation;
-  });
-};
-
 export const getItaliaListingVariations = (config) => {
-  const variations = changeDefaults(italiaListingVariations, config);
-  return variations;
+  return italiaListingVariations;
 };
 export const removeListingVariation = (config, id) => {
   let indexOfVariation = -1;
@@ -410,6 +390,7 @@ export const addTableListingVariation = (config) => {
       let pos = addDefaultOptions(schema, formData, intl);
       addTableTemplateOptions(schema, formData, intl, pos);
       addLinkMoreOptions(schema, formData, intl);
+      changeDefaults('table', schema);
       return schema;
     },
     fullobjects: true,
