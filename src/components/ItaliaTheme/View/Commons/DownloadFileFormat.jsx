@@ -47,7 +47,8 @@ const DownloadFileFormat = ({
     <UniversalLink
       item={{
         ...file,
-        ['@id']: file.download,
+        '@id': file.download,
+        enhanced_links_enabled: !hideFileFormatLabel,
       }}
       title={file.filename}
       className={className}

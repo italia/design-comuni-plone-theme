@@ -21,8 +21,8 @@
   $subsite-button-tertiary: $subsite-tertiary;
   $subsite-button-tertiary-text: $subsite-tertiary-text;
 
-  a.btn-primary,
-  .btn-primary {
+  a.btn.btn-primary,
+  .btn.btn-primary {
     @if $subsite-light-theme {
       @include button-variant(
         $background: darken($subsite-button-primary, 10%),
@@ -68,8 +68,8 @@
     }
   }
 
-  a.btn-secondary,
-  .btn-secondary {
+  a.btn.btn-secondary,
+  .btn.btn-secondary {
     @include button-variant(
       $background: $subsite-button-secondary,
       $border: $subsite-button-secondary-text,
@@ -100,8 +100,8 @@
     }
   }
 
-  a.btn-outline-primary,
-  .btn-outline-primary {
+  a.btn.btn-outline-primary,
+  .btn.btn-outline-primary {
     @if $subsite-light-theme {
       @include button-outline-variant(darken($subsite-button-primary, 40));
     } @else {
@@ -109,13 +109,13 @@
     }
   }
 
-  a.btn-outline-secondary,
-  .btn-outline-secondary {
+  a.btn.btn-outline-secondary,
+  .btn.btn-outline-secondary {
     @include button-outline-variant($subsite-button-secondary);
   }
 
-  a.btn-outline-tertiary,
-  .btn-outline-tertiary {
+  a.btn.btn-outline-tertiary,
+  .btn.btn-outline-tertiary {
     @include button-outline-variant($subsite-button-tertiary);
   }
 }

@@ -377,6 +377,7 @@ export default function applyConfig(voltoConfig) {
       'testo_riquadro_semplice',
       'testo_riquadro_immagine',
       'rssBlock',
+      'callout_block',
       config.settings.defaultBlockType,
       //se si aggiunge un nuovo blocco, verificare che in edit non ci siano bottoni che provocano il submit della form. Se succede, gestirli con e.prevenDefault() e.stopPropagation().
       // Se sono bottoni semantic basta mettere type="button"
