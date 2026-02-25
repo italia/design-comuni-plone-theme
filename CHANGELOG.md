@@ -1,5 +1,17 @@
 # Changelog
 
+## [12.11.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.11.0...v12.11.1) (2026-02-25)
+
+
+### Bug Fixes
+
+* titles in richtext widget + file extensions in download links + callout block in cts ([#1076](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1076)) ([b14ab7b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b14ab7bab53a22b1bb0967e25f56845b0673e2bd))
+
+
+### Documentation
+
+* updated publiccode and release log ([2e2ceee](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2e2ceee1b7cc1767c2eaa12b3831ae1082c36a93))
+
 ## [12.11.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.10.1...v12.11.0) (2026-02-23)
 
 
