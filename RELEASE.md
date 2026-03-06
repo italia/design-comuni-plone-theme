@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione 12.11.2 (06/03/2026)
+
+### Fix
+
+- Sistemato un bug nelle checkbox dei pannelli di controllo che non erano cliccabili in alcuni casi.
+
 ## Versione 12.11.1 (25/02/2026)
 
 ### Migliorie
