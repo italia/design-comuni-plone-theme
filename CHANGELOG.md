@@ -1,5 +1,23 @@
 # Changelog
 
+## [12.11.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.11.1...v12.11.2) (2026-03-06)
+
+
+### Bug Fixes
+
+* deps version ([3819d09](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3819d09d32e289d0d927cf8f75ed604c1aaac8f1))
+* limited unused prevent click to buttons in control panels widgets ([#1080](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1080)) ([ef1f740](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ef1f740c8fb40308343e104a96dee3bff4bb59a8))
+
+
+### Documentation
+
+* updated publiccode and release log ([3b828d5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3b828d5e5bd638a7a53063a6d3bbdf7f4b70ab35))
+
+
+### Maintenance
+
+* updated deps ([f34aa4b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f34aa4b9190d203e94d44265432f06784bd34aba))
+
 ## [12.11.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.11.0...v12.11.1) (2026-02-25)
 
 
