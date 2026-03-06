@@ -8310,12 +8310,12 @@ __metadata:
     volto-multilingual-widget: 3.2.1
     volto-querywidget-with-browser: 0.4.4
     volto-rss-block: 3.0.0
-    volto-secondarymenu: 4.1.5
+    volto-secondarymenu: 4.1.6
     volto-site-settings: 0.4.4
     volto-slimheader: 0.1.6
     volto-social-settings: 3.1.2
     volto-subblocks: 2.1.0
-    volto-subfooter: 3.1.4
+    volto-subfooter: 3.1.5
     volto-subsites: 4.0.2
     volto-venue: 4.1.2
     webpack-image-resize-loader: ^5.0.0
@@ -16450,12 +16450,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-secondarymenu@npm:4.1.5":
-  version: 4.1.5
-  resolution: "volto-secondarymenu@npm:4.1.5"
+"volto-secondarymenu@npm:4.1.6":
+  version: 4.1.6
+  resolution: "volto-secondarymenu@npm:4.1.6"
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 927541450305c41f49752040004802c9a05a58b68573095166d6913ebe5212c8dca7f7401f633d88824cb94cfbd20ab1da81e1799729eeeed0a8d7066cb21fc6
+  checksum: 5e36bbc169379eca46853bde8c3b5ae4f94284614fdf3d0372d33cbbe965c3912fa370e6f228e8649f374c67c717bc1282969239b5acfdd4c5fbfc5bf0e265f0
   languageName: node
   linkType: hard
 
@@ -16500,12 +16500,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-subfooter@npm:3.1.4":
-  version: 3.1.4
-  resolution: "volto-subfooter@npm:3.1.4"
+"volto-subfooter@npm:3.1.5":
+  version: 3.1.5
+  resolution: "volto-subfooter@npm:3.1.5"
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 1c6aaef92f980bd9e2d3743aeddbfe7fc9f3e1b06b8fd582f41cb201b89a382ffbee5c1a112656c2c812185688b90717ac42107c6def1a88630485089dea2c08
+  checksum: b338c09924824a5d2302550d21a18ed7c7d08fa5b386a648cd07a7db7a009729c16efa77630b4e4d02d74870f347c23a266f8356fcbc7d15f6f7f7ffdeabc2fd
   languageName: node
   linkType: hard
 
