@@ -113,36 +113,44 @@ const MenuConfigurationForm = ({ id, menuItem, onChange, deleteMenuItem }) => {
     };
   }
 
-  const preventClick = (e) => {
-    e.preventDefault();
-  };
-
-  const preventEnter = (e) => {
-    if (e.code === 'Enter') {
-      preventClick(e);
-    }
-  };
-
   useEffect(() => {
-    document
-      .querySelector('form.ui.form')
-      .addEventListener('click', preventClick);
+    // Get the main Volto HTML form
+    const form = document.querySelector('form.ui.form');
 
-    document.querySelectorAll('form.ui.form input').forEach((item) => {
-      item.addEventListener('keypress', preventEnter);
-    });
+    // Handler to block any type of submit
+    const preventSubmit = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
+    // global handler to stop Enter from submitting inputs
+    // exception: menu-blocks-container (to add slate blocks)
+    const handleEnter = (e) => {
+      if (e.key === 'Enter') {
+        const targetForm = e.target.closest('form.ui.form');
+        if (targetForm) {
+          const inBlocks = e.target.closest('.menu-blocks-container');
+          if (inBlocks) {
+            // allow enter to add blocks (React/Volto create new blocks)
+            return;
+          }
+          // block enter everywhere else to prevent unwanted submit
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }
+    };
+
+    // prevent native submits (click on buttons that have type submit, etc.)
+    form?.addEventListener('submit', preventSubmit, true);
+
+    // Block Enter outside blocks
+    document.addEventListener('keydown', handleEnter, true);
 
     return () => {
-      // eslint-disable-next-line no-lone-blocks
-      {
-        document.querySelector('form.ui.form') &&
-          document
-            .querySelector('form.ui.form')
-            .removeEventListener('click', preventClick);
-      }
-      document.querySelectorAll('form.ui.form input').forEach((item) => {
-        item.removeEventListener('keypress', preventEnter);
-      });
+      // Cleanup all listeners
+      form?.removeEventListener('submit', preventSubmit, true);
+      document.removeEventListener('keydown', handleEnter, true);
     };
   }, []);
 
