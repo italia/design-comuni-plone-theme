@@ -1,5 +1,17 @@
 # Changelog
 
+## [12.11.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.11.2...v12.11.3) (2026-03-10)
+
+
+### Bug Fixes
+
+* removed Link on images on slider  listing template ([#1086](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1086)) ([d256e2b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d256e2b14b65d85788f0a413207722ac3a420ad3))
+
+
+### Documentation
+
+* updated publiccode and release log ([1b83c01](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1b83c01173a8babbd145d577b394126d37caf920))
+
 ## [12.11.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.11.1...v12.11.2) (2026-03-06)
 
 
