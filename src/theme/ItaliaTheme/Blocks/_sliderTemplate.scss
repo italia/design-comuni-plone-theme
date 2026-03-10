@@ -95,19 +95,19 @@
           margin: 0 auto;
 
           background-color: #3f4142e0;
+          color: $white;
 
           .slide-link {
             color: $white;
+            &:hover,
+            &:active {
+              text-decoration-line: underline;
+            }
           }
 
           font-size: 1.8rem;
           font-weight: bold;
           text-decoration: none;
-
-          &:hover,
-          &:active {
-            text-decoration-line: underline;
-          }
 
           .icon {
             margin-left: 0.5em;

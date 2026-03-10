@@ -226,6 +226,8 @@ const SliderTemplate = ({
                     sizes={`max-width(991px) 620px, ${1300 / nSlidesToShow}px`}
                     critical
                     showDefault
+                    /* Se l'elemento è di tipo Image, disabilitiamo il link che avvolge l'immagine */
+                    noWrapLink={item['@type'] === 'Image'}
                   />
                 );
                 const nextIndex = index < items.length - 1 ? index + 1 : null;

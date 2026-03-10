@@ -41,6 +41,12 @@
 - ...
  -->
 
+## Versione X.X.X (xx/xx/xxxx)
+
+### Fix
+
+- Rimosso il link dagli elementi di tipo immagine dagli slider del blocco elenco.
+
 ## Versione 12.11.2 (06/03/2026)
 
 ### Fix
