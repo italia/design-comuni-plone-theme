@@ -175,7 +175,8 @@ describe('FormValidation', () => {
 
     // RedTurtle
     it('validates url with @, :, /, ... in query', () => {
-      formData.url = 'https://plone.org/foo?remote=http://plone.org/@@foo&baz=2';
+      formData.url =
+        'https://plone.org/foo?remote=http://plone.org/@@foo&baz=2';
       expect(
         FormValidation.validateFieldsPerFieldset({
           schema,
@@ -184,6 +185,5 @@ describe('FormValidation', () => {
         }),
       ).toEqual({});
     });
-
   });
 });

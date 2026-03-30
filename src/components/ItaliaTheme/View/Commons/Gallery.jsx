@@ -115,6 +115,7 @@ const Gallery = ({
             'path.depth': 1,
             sort_on: 'getObjPositionInParent',
             metadata_fields: '_all',
+            b_size: 999,
           },
           folder_name,
         ),

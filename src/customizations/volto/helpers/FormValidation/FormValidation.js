@@ -100,17 +100,19 @@ const widgetValidation = {
   url: {
     isValidURL: (urlValue, urlObj, intlFunc) => {
       var urlRegex = new RegExp(
-        '^(https?:\\/\\/)?' + // optional protocol
+        '^' +
+          '(https?:\\/\\/)?' + // optional protocol
           '(' +
           '([a-z\\d]+(-[a-z\\d]+)*\\.)+[a-z]{2,}|' + // validate domain name
           '(\\d{1,3}\\.){3}\\d{1,3}|' + // OR ip (v4) address
           'localhost' + // OR localhost
           ')' +
           '(\\:\\d+)?' + // optional port
-          '(\\/[-a-z\\d%_.~+@]*)*' + // path
+          '(\\/[-a-z\\d%_.~+@:]*)*' + // path: zero or più caratteri, include ":" per SharePoint
           // '(\\?[;&a-z\\d%_.~+\\/=-]*)?' + // validate query string
           '(\\?.*)?' + // validate query string (relaxed)
-          '(\\#[-a-z\\d\\/_]*)?$', // validate fragment locator
+          '(\\#[-a-z\\d\\/_]*)?' + // validate fragment locator
+          '$',
         'i',
       );
       const isValid = urlRegex.test(urlValue);
