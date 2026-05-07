@@ -1,8 +1,8 @@
 # This repository adheres to the publiccode.yml standard by including this
 # metadata file that makes public software easily discoverable.
-# More info at https://github.com/italia/publiccode.yml
+# More info at https://github.com/publiccodeyml/publiccode.yml
 
-publiccodeYmlVersion: '0.2'
+publiccodeYmlVersion: '0'
 applicationSuite: io-Comune
 categories:
   - content-management
@@ -90,7 +90,6 @@ description:
       - docs/03b-io-comune.png
       - docs/04b-io-comune.png
       - docs/05b-io-comune.png
-    genericName: Gestore di contenuti e site builder
     longDescription: |
       **io-Comune: pensato per i cittadini, costruito con i redattori**
 
@@ -190,28 +189,15 @@ description:
 developmentStatus: stable
 intendedAudience:
   countries:
-    - it
+    - IT
   scope:
     - local-authorities
     - government
     - healthcare
-it:
-  conforme:
-    gdpr: true
-    lineeGuidaDesign: true
-    misureMinimeSicurezza: true
-    modelloInteroperabilita: false
-  countryExtensionVersion: '0.2'
-  piattaforme:
-    anpr: false
-    cie: false
-    pagopa: false
-    spid: false
 landingURL: 'https://www.io-comune.it/'
 legal:
   license: GPL-3.0
   mainCopyrightOwner: RedTurtle Technology srl
-  repoOwner: RedTurtle Technology srl
 localisation:
   availableLanguages:
     - it
