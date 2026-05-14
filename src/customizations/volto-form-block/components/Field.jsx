@@ -154,6 +154,18 @@ const Field = ({
           onChange={(e) => {
             onChange(name, e.target.value);
           }}
+          onKeyDown={(e) => {
+            if (
+              !/[0-9eE+\-.,]/.test(e.key) &&
+              e.key !== 'Backspace' &&
+              e.key !== 'Tab' &&
+              e.key !== 'ArrowLeft' &&
+              e.key !== 'ArrowRight' &&
+              e.key !== 'Delete'
+            ) {
+              e.preventDefault();
+            }
+          }}
           value={value ?? ''}
           autoComplete={autocomplete}
         />
@@ -161,9 +173,8 @@ const Field = ({
       {field_type === 'select' && (
         <div className="form-group">
           <div
-            className={`bootstrap-select-wrapper ${
-              isInvalid() ? 'is-invalid' : ''
-            }`}
+            className={`bootstrap-select-wrapper ${isInvalid() ? 'is-invalid' : ''
+              }`}
           >
             <label id={`${name}-label`} htmlFor={name}>
               {getLabel()}
@@ -202,9 +213,8 @@ const Field = ({
       {field_type === 'single_choice' && (
         <div className="form-group">
           <div
-            className={`bootstrap-checkbox-radio-wrapper ${
-              isInvalid() ? 'is-invalid' : ''
-            }`}
+            className={`bootstrap-checkbox-radio-wrapper ${isInvalid() ? 'is-invalid' : ''
+              }`}
           >
             <fieldset className="radio-group">
               <legend>{getLabel()}</legend>
@@ -242,9 +252,8 @@ const Field = ({
       {field_type === 'multiple_choice' && (
         <div className="form-group">
           <div
-            className={`bootstrap-checkbox-radio-wrapper ${
-              isInvalid() ? 'is-invalid' : ''
-            }`}
+            className={`bootstrap-checkbox-radio-wrapper ${isInvalid() ? 'is-invalid' : ''
+              }`}
           >
             <fieldset className="checkbox-group">
               <legend>{getLabel()}</legend>
@@ -287,9 +296,8 @@ const Field = ({
       {field_type === 'checkbox' && (
         <div className="form-group">
           <div
-            className={`bootstrap-checkbox-radio-wrapper ${
-              isInvalid() ? 'is-invalid' : ''
-            }`}
+            className={`bootstrap-checkbox-radio-wrapper ${isInvalid() ? 'is-invalid' : ''
+              }`}
           >
             <FormGroup check key={name}>
               <Input

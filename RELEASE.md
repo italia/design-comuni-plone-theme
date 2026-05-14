@@ -41,6 +41,15 @@
 - ...
  -->
 
+ 
+ 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Impedire all'input numerico nel blocco Form di inserire caratteri alfabetici
+ 
+
 ## Versione 12.12.0 (27/04/2026)
 
 ### Migliorie
