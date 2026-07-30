@@ -204,5 +204,8 @@
   "peerDependencies": {
     "@plone/volto": "17.22.3"
   },
-  "packageManager": "yarn@3.2.3"
+  "packageManager": "yarn@3.2.3",
+  "resolutions": {
+    "loader-utils": "1.4.1"
+  }
 }
