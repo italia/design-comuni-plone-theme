@@ -96,11 +96,7 @@ description:
 
 
 
-      io-Comune è la soluzione versatile e facile da usare per garantire ai
-
-      cittadini un rapido accesso ai contenuti e ai servizi del tuo Comune, sia
-
-      dal PC che da mobile.
+      io-Comune è la soluzione versatile e facile da usare per garantire ai cittadini un rapido accesso ai contenuti e ai servizi del tuo Comune, sia dal PC che da mobile.
 
 
 
@@ -108,13 +104,7 @@ description:
 
 
 
-      io-Comune segue le linee guida ufficiali per il design dei siti web dei
-
-      Comuni italiani: layout grafico, architettura informativa, struttura dei
-
-      contenuti e flussi di navigazione rispecchiano gli standard definiti da
-
-      AgID.
+      io-Comune segue le linee guida ufficiali per il design dei siti web dei Comuni italiani: layout grafico, architettura informativa, struttura dei contenuti e flussi di navigazione rispecchiano gli standard definiti da AgID.
 
 
 
@@ -122,13 +112,7 @@ description:
 
 
 
-      io-Comune integra componenti e flussi di navigazione suggeriti da AgID con
-
-      l'esperienza ventennale di RedTurtle nella gestione di complesse basi
-
-      informative per darti la migliore esperienza di fruizione e portarti
-
-      velocemente al contenuto desiderato.
+      io-Comune integra componenti e flussi di navigazione suggeriti da AgID con l'esperienza ventennale di RedTurtle nella gestione di complesse basi informative per darti la migliore esperienza di fruizione e portarti velocemente al contenuto desiderato.
 
 
 
@@ -136,15 +120,8 @@ description:
 
 
 
-      io-Comune supporta nativamente le piattaforme abilitanti, come la
-
-      componente di autenticazione SPID e il sistema di pagamento pagoPA.
-
-
-
-      Inoltre, io-Comune permetterà l’integrazione con IO, l'app ufficiale dei
-
-      servizi pubblici, per poter dialogare con i cittadini anche dal telefono.
+      io-Comune supporta nativamente le piattaforme abilitanti, come la componente di autenticazione SPID e il sistema di pagamento pagoPA.
+      Inoltre, io-Comune permetterà l’integrazione con IO, l'app ufficiale dei servizi pubblici, per poter dialogare con i cittadini anche dal telefono.
 
 
 
@@ -152,41 +129,14 @@ description:
 
 
 
-      Puoi acquistare e utilizzare io-Comune in totale sicurezza perché ha
-
-      seguito con successo il [percorso di qualificazione per i fornitori di Software as a Service (SaaS) della PA](https://catalogocloud.acn.gov.it/service/1085).
-
-
-
-      Questo ti garantisce un servizio di qualità e libertà di cambiare
-
-      piattaforma senza vincoli di lock-in.
-
-
-
-      io-Comune è una piattaforma disponibile nel cloud certificato della PA. In
-
-      particolare il servizio viene erogato sulla piattaforma certificata IaaS
-
-      (Infrastructure as a Service) Amazon Web Services presso la server farm di
-
-      Milano, offrendo tutta la robustezza e sicurezza necessaria.
-
-
-
-      io-Comune è basato sul [CMS Open Source Plone](https://www.redturtle.it/plone/): il CMS facile da usare,
-
-      estensibile e che vanta il miglior “security track record”, usato per
-
-      servire migliaia di utenti in ambito PA. Usato da piccoli Enti e anche da
-
-      grandi PA come la Regione Emilia Romagna, l’Università di Bologna e la
-
-      Guardia di Finanza per centinaia di siti.
+      Puoi acquistare e utilizzare io-Comune in totale sicurezza perché ha seguito con successo il [percorso di qualificazione per i fornitori di Software as a Service (SaaS) della PA](https://catalogocloud.acn.gov.it/service/1085).
+      Questo ti garantisce un servizio di qualità e libertà di cambiare piattaforma senza vincoli di lock-in.
+      io-Comune è una piattaforma disponibile nel cloud certificato della PA. In particolare il servizio viene erogato sulla piattaforma certificata IaaS (Infrastructure as a Service) Amazon Web Services presso la server farm di Milano, offrendo tutta la robustezza e sicurezza necessaria.
+      io-Comune è basato sul [CMS Open Source Plone](https://www.redturtle.it/plone/): il CMS facile da usare, estensibile e che vanta il miglior “security track record”, usato per servire migliaia di utenti in ambito PA. Usato da piccoli Enti e anche da grandi PA come la Regione Emilia Romagna, l’Università di Bologna e la Guardia di Finanza per centinaia di siti.
     shortDescription: |-
       Crea con semplicità il nuovo sito del tuo Comune o Ente Pubblico: conforme
 
-      alle nuove linee guida AgID, accessibile a tutti.
+      alle nuove linee guida di Designers Italia, accessibile a tutti.
 developmentStatus: stable
 intendedAudience:
   countries:
