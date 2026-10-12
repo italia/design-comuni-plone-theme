@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import cx from 'classnames';
 import { defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit';
 
@@ -124,7 +125,13 @@ class Edit extends SubblocksEdit {
     }
 
     return (
-      <div className="public-ui" tabIndex="-1" ref={this.nodeF}>
+      <div
+        className={cx('public-ui', {
+          'fluid-layout': this.props.data?.fluid_layout,
+        })}
+        tabIndex="-1"
+        ref={this.nodeF}
+      >
         <div
           className="full-width section py-5"
           role="form"
@@ -154,7 +161,7 @@ class Edit extends SubblocksEdit {
           <Container className="px-md-4">
             <SubblocksWrapper node={this.node}>
               <Row>
-                <Col lg="4">
+                <Col lg="4" className="block-header-col">
                   <div className="block-header">
                     {this.props.data.icon1 ||
                     this.props.data.icon2 ||
@@ -218,7 +225,12 @@ class Edit extends SubblocksEdit {
                 </Col>
 
                 {this.state.subblocks.map((subblock, subindex) => (
-                  <Col sm="6" lg="4" key={subblock.id}>
+                  <Col
+                    sm="6"
+                    lg="4"
+                    key={subblock.id}
+                    className="block-number-col"
+                  >
                     <EditBlock
                       {...this.props}
                       data={subblock}

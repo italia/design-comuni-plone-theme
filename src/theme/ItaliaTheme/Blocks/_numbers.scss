@@ -72,11 +72,20 @@
     }
   }
 
+  // Le colonne dei numeri si allargano in base al contenuto, così il numero
+  // non va mai a capo.
+  .block-number-col {
+    flex: 1 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+
   .block-number {
     .subblock-title {
-      font-size: 5.5rem;
+      font-size: clamp(2.5rem, 8vw, 5.5rem);
       font-weight: 500;
       line-height: 1em;
+      white-space: nowrap;
 
       .simple-text-editor-widget {
         font-family: $font-family-monospace !important;
@@ -105,13 +114,72 @@
     }
 
     .block-number {
-      .subblock-title {
-        font-size: 5rem;
-      }
-
       .subblock-text {
         font-size: 1.2rem;
         line-height: 1.35rem;
+      }
+    }
+  }
+
+  // Su mobile il font dei numeri si adatta alla viewport (sempre, anche senza
+  // layout fluido)
+  @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+    .block-number .subblock-title {
+      font-size: clamp(2.5rem, 8vw, 5.5rem);
+    }
+  }
+
+  // Layout fluido (opt-in): le colonne dei numeri si adattano al contenuto e il
+  // numero non va mai a capo. Da usare con numeri lunghi (> 4-5 caratteri).
+  .fluid-layout {
+    // niente padding sulle colonne e margini negativi della row: la
+    // distanza tra le colonne è data da column-gap
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+      column-gap: 2rem;
+
+      > [class*='col'] {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+    // la colonna è larga quanto il suo numero (senza crescere), così non
+    // occupa lo spazio libero e le colonne restano allineate tra loro
+    .block-header-col,
+    .block-number-col {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: 100%;
+    }
+
+    // la colonna del titolo ha un po' più di margine a destra e non supera un
+    // terzo della riga
+    .block-header-col {
+      max-width: 33%;
+      margin-right: 3.5rem;
+    }
+
+    .block-number .subblock-title {
+      white-space: nowrap;
+    }
+
+    @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+      .row {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        row-gap: 1.5rem;
+      }
+
+      .block-header-col {
+        max-width: 100%;
+        margin-right: 0;
+      }
+
+      .block-header-col,
+      .block-number-col {
+        width: 100%;
       }
     }
   }

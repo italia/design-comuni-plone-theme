@@ -4,7 +4,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { FormattedMessage, injectIntl } from 'react-intl';
 
-import { ObjectBrowserWidget } from '@plone/volto/components';
+import { ObjectBrowserWidget, CheckboxWidget } from '@plone/volto/components';
 import IconWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/IconWidget';
 import { defaultIconWidgetOptions } from 'design-comuni-plone-theme/helpers/index';
 
@@ -20,6 +20,15 @@ const messages = defineMessages({
   backgroundImage: {
     id: 'backgroundImage',
     defaultMessage: 'Immagine di sfondo',
+  },
+  fluidLayout: {
+    id: 'numbers_block_fluid_layout',
+    defaultMessage: 'Abilita layout fluido',
+  },
+  fluidLayoutDescription: {
+    id: 'numbers_block_fluid_layout_description',
+    defaultMessage:
+      'Abilita questa impostazione se hai numeri lunghi (con più di 4-5 caratteri) per adattare la larghezza delle colonne al numero',
   },
 });
 
@@ -59,6 +68,16 @@ const Sidebar = ({
                 },
               }}
               value={data.background ?? []}
+              onChange={(id, value) =>
+                onChangeBlock(block, { ...data, [id]: value })
+              }
+            />
+
+            <CheckboxWidget
+              id="fluid_layout"
+              title={intl.formatMessage(messages.fluidLayout)}
+              description={intl.formatMessage(messages.fluidLayoutDescription)}
+              value={data.fluid_layout ?? false}
               onChange={(id, value) =>
                 onChangeBlock(block, { ...data, [id]: value })
               }

@@ -41,6 +41,20 @@
 - ...
  -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Migliorie
+
+- ...
+
+### Novità
+
+- Nel blocco "Numeri" è stata aggiunta l'opzione "Abilita layout fluido": va attivata quando i numeri sono lunghi (più di 4-5 caratteri) e permette di adattare la larghezza delle colonne al numero, evitando che quest'ultimo vada a capo. Di default il layout resta invariato.
+
+### Fix
+
+- ...
+
 ## Versione 12.16.0 (23/09/2026)
 
 ### Migliorie

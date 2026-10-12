@@ -5,6 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 import ViewBlock from './Block/ViewBlock';
 import { Container, Row, Col } from 'design-react-kit';
@@ -21,7 +22,7 @@ const NumbersView = ({ data, block }) => {
 
   return (
     <div className="block numbersBlock">
-      <div className="public-ui">
+      <div className={cx('public-ui', { 'fluid-layout': data.fluid_layout })}>
         <div className="full-width section py-5">
           {data?.background?.[0] ? (
             <div
@@ -45,7 +46,7 @@ const NumbersView = ({ data, block }) => {
           )}
           <Container className="px-md-4">
             <Row>
-              <Col lg="4">
+              <Col lg="4" className="block-header-col">
                 <div className="block-header">
                   {(data.icon1 || data.icon2 || data.icon3) && (
                     <div className="icons">
@@ -70,7 +71,12 @@ const NumbersView = ({ data, block }) => {
               </Col>
 
               {data.subblocks.map((subblock, index) => (
-                <Col sm="6" lg="4" key={subblock.id}>
+                <Col
+                  sm="6"
+                  lg="4"
+                  key={subblock.id}
+                  className="block-number-col"
+                >
                   <ViewBlock
                     data={subblock}
                     key={index}

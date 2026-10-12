@@ -3268,6 +3268,16 @@ msgstr ""
 msgid "numbers_block"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
+# defaultMessage: Abilita layout fluido
+msgid "numbers_block_fluid_layout"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
+# defaultMessage: Abilita questa impostazione se hai numeri lunghi (con più di 4-5 caratteri) per adattare la larghezza delle colonne al numero
+msgid "numbers_block_fluid_layout_description"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 # defaultMessage: Numero del comunicato stampa
 msgid "numero_progressivo_cs"
