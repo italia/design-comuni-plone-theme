@@ -37,6 +37,22 @@ export const useVideoEmbedFocus = () => {
     }
   }, [active]);
 
+  useEffect(() => {
+    const node = wrapperRef.current;
+    if (!node || typeof MutationObserver === 'undefined') {
+      return;
+    }
+    const setPlaceholderAlt = () => {
+      node.querySelectorAll('img.placeholder:not([alt])').forEach((img) => {
+        img.setAttribute('alt', '');
+      });
+    };
+    setPlaceholderAlt();
+    const observer = new MutationObserver(setPlaceholderAlt);
+    observer.observe(node, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, []);
+
   const activate = () => setActive(true);
 
   return { wrapperRef, active, activate };

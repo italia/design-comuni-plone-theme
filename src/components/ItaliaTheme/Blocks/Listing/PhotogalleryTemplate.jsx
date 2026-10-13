@@ -24,6 +24,7 @@ import {
 import {
   useSlider,
   decorateSliderDots,
+  useClonedSlidesNotFocusable,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/slider';
 import { GalleryPreview } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
@@ -65,6 +66,7 @@ const PhotogalleryTemplate = ({
     SliderPrevArrow,
     handleSlideKeydown,
   } = useSlider(autoplay, setAutoplay, block);
+  const sliderContainerRef = useClonedSlidesNotFocusable();
 
   const toggleAutoplay = () => {
     if (!slider?.current) return;
@@ -161,7 +163,11 @@ const PhotogalleryTemplate = ({
             </Col>
           </Row>
         )}
-        <div className="slider-container px-4 px-md-0" id={'slider_' + block}>
+        <div
+          className="slider-container px-4 px-md-0"
+          id={'slider_' + block}
+          ref={sliderContainerRef}
+        >
           <CarouselWrapper className="it-card-bg">
             <Slider {...settings} ref={slider}>
               {items.map((item, i) => {

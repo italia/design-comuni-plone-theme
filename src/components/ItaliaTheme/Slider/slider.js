@@ -1,8 +1,41 @@
-import { useRef, useEffect, cloneElement } from 'react';
+import { useRef, useEffect, useState, cloneElement } from 'react';
 import {
   NextArrow,
   PrevArrow,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
+
+const FOCUSABLE_SELECTOR =
+  'a[href], area[href], button, input, select, textarea, iframe, [tabindex], [contenteditable="true"]';
+
+export const useClonedSlidesNotFocusable = () => {
+  const [container, setContainer] = useState(null);
+
+  useEffect(() => {
+    if (!container || typeof MutationObserver === 'undefined') return;
+
+    const update = () => {
+      container.querySelectorAll('.slick-cloned').forEach((slide) => {
+        slide.querySelectorAll(FOCUSABLE_SELECTOR).forEach((el) => {
+          if (el.getAttribute('tabindex') !== '-1') {
+            el.setAttribute('tabindex', '-1');
+          }
+        });
+      });
+    };
+
+    update();
+    const observer = new MutationObserver(update);
+    observer.observe(container, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['tabindex', 'href', 'class'],
+    });
+    return () => observer.disconnect();
+  }, [container]);
+
+  return setContainer;
+};
 
 // Aggiunge aria-current al dot attivo dello slider così gli screen reader lo annunciano.
 export const decorateSliderDots = (dots) =>

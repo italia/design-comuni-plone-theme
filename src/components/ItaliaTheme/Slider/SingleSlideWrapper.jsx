@@ -19,12 +19,12 @@ const SingleSlideWrapper = (props) => {
       data-slide={index}
       role="group"
       aria-roledescription="slide"
-      aria-label={
+      aria-label={(
         intl.formatMessage(messages.carouselSlide) +
         ' ' +
-        (index ? index + 1 : '') +
+        (index != null ? index + 1 : '') +
         (props['aria-label'] ? ' - ' + props['aria-label'] : '')
-      }
+      ).trim()}
       onKeyDown={onKeyDown}
       onClick={(e) => {
         //commentato perchè i link esterni non si aprivano

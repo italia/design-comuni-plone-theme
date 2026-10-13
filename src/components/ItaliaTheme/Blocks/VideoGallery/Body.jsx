@@ -14,7 +14,10 @@ import {
   NextArrow,
   PrevArrow,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import { decorateSliderDots } from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/slider';
+import {
+  decorateSliderDots,
+  useClonedSlidesNotFocusable,
+} from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/slider';
 import { Container } from 'design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
 
@@ -26,6 +29,7 @@ import { UniversalLink } from '@plone/volto/components';
 
 const Body = ({ data, children, nItems = 0, reactSlick }) => {
   const Slider = reactSlick.default;
+  const sliderContainerRef = useClonedSlidesNotFocusable();
 
   const settings = {
     dots: true,
@@ -93,7 +97,7 @@ const Body = ({ data, children, nItems = 0, reactSlick }) => {
           </div>
         )}
 
-        <div className="slider-container">
+        <div className="slider-container" ref={sliderContainerRef}>
           <CarouselWrapper>
             <Slider {...settings}>{children}</Slider>
           </CarouselWrapper>

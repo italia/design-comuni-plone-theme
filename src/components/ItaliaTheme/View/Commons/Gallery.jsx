@@ -16,6 +16,7 @@ import {
 import {
   useSlider,
   decorateSliderDots,
+  useClonedSlidesNotFocusable,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/slider';
 
 import PropTypes from 'prop-types';
@@ -56,6 +57,8 @@ const Gallery = ({
 }) => {
   const Slider = reactSlick.default;
   const { SliderNextArrow, SliderPrevArrow } = useSlider();
+  const imagesSliderRef = useClonedSlidesNotFocusable();
+  const videosSliderRef = useClonedSlidesNotFocusable();
   const Image = config.getComponent({ name: 'Image' }).component;
   const getSettings = (nItems, slideToScroll) => {
     return {
@@ -146,7 +149,7 @@ const Gallery = ({
           className={`it-carousel-wrapper it-carousel-landscape-abstract-three-cols ${className}`}
           id={id}
         >
-          <div className="slider-container">
+          <div className="slider-container" ref={imagesSliderRef}>
             <div className="it-header-block">
               <div className="it-header-block-title">
                 {title_type === 'h2' && (
@@ -220,7 +223,7 @@ const Gallery = ({
         <div
           className={`it-carousel-wrapper it-carousel-landscape-abstract-three-cols ${className}`}
         >
-          <div className="slider-container">
+          <div className="slider-container" ref={videosSliderRef}>
             {title_video && (
               <div className="it-header-block">
                 <div className="it-header-block-title">

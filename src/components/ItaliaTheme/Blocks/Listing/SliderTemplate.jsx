@@ -11,7 +11,10 @@ import {
   CarouselWrapper,
   ButtonPlayPause,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import { useSlider } from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/slider';
+import {
+  useSlider,
+  useClonedSlidesNotFocusable,
+} from 'design-comuni-plone-theme/components/ItaliaTheme/Slider/slider';
 import React, { useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
@@ -98,6 +101,7 @@ const SliderTemplate = ({
     SliderPrevArrow,
     handleSlideKeydown,
   } = useSlider(userAutoplay, setUserAutoplay, block_id);
+  const sliderContainerRef = useClonedSlidesNotFocusable();
 
   const toggleAutoplay = () => {
     if (!slider?.current) return;
@@ -214,6 +218,7 @@ const SliderTemplate = ({
             'px-4 px-md-0': !full_width,
             'full-width': full_width,
           })}
+          ref={sliderContainerRef}
         >
           <CarouselWrapper className="it-card-bg">
             {items?.length > nSlidesToShow && (
