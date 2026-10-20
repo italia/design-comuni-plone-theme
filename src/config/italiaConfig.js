@@ -64,6 +64,7 @@ import applyItaliaSlateConfig from 'design-comuni-plone-theme/config/Slate/confi
 import { schemaListing } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/schema.js';
 
 import reducers from 'design-comuni-plone-theme/reducers';
+import sanitizeApiErrors from 'design-comuni-plone-theme/middleware/sanitizeApiErrors';
 import {
   FALLBACK_IMAGE_SRC,
   FALLBACK_IMAGE_SRC_MAX_W,
@@ -586,6 +587,16 @@ export default function applyConfig(voltoConfig) {
     ...config.addonReducers,
     ...reducers,
   };
+
+  // MIDDLEWARE
+  //in coda allo stack: deve vedere le azioni _FAIL generate dal middleware api.
+  //Solo in produzione: in sviluppo gli errori completi in window.__data servono per il debug
+  if (process.env.NODE_ENV === 'production') {
+    config.settings.storeExtenders = [
+      ...(config.settings.storeExtenders ?? []),
+      (stack) => [...stack, sanitizeApiErrors],
+    ];
+  }
 
   // ROUTES
   config.addonRoutes = [
