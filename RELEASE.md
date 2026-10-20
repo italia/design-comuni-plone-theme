@@ -41,11 +41,7 @@
 - ...
  -->
 
-## Versione X.X.X (dd/mm/yyyy)
-
-### Migliorie
-
-- ...
+## Versione 12.16.1 (20/10/2026)
 
 ### Novità
 
@@ -53,7 +49,7 @@
 
 ### Fix
 
-- ...
+- Sistemato il link per la ricerca delle icone sul sito di FontAwesome. _(**Origine / contributo**: Regione Emilia-Romagna)_
 
 ## Versione 12.16.0 (23/09/2026)
 
