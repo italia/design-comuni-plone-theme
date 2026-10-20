@@ -1,5 +1,23 @@
 # Changelog
 
+## [12.16.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.16.0...v12.16.1) (2026-10-20)
+
+
+### Bug Fixes
+
+* a11y heading levels for topics  ([#1196](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1196)) ([7a26035](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7a26035783035e630e9503d956feeca1d48479b3))
+* a11y on sliders ([061135f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/061135f1993ad8284e366010e6a5b4941c6d0aff))
+* changed link requested by client ([#1193](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1193)) ([b70ad9f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b70ad9f10117c9c39bad6769c379549c7549e9f8))
+* don't expose backend details in the SSR html ([#1202](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1202)) ([ad500e3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ad500e33e57edac50d4c867ea6154c4be88b7c53))
+* NumbersBlock numbers no longer wrap, fluid font-size with clamp ([#1198](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1198)) ([f269940](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f26994010b67a95757f9f00ede4e913cedab5101))
+* RSS listing block templates improvements to be like CardTemplate blocks ([#1195](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1195)) ([40f9d03](https://github.com/RedTurtle/design-comuni-plone-theme/commit/40f9d037cf34d971178b729e78a995e127de491a))
+
+
+### Maintenance
+
+* locales ([d3dca0e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d3dca0e1136f22a0fb164b52e418422f3ebadaa0))
+* preparing release 12.16.1 ([5dc8c15](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5dc8c159e6576ef8cb549de63856bea3406e149d))
+
 ## [12.16.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.15.1...v12.16.0) (2026-09-23)
 
 
