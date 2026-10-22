@@ -118,9 +118,9 @@ maintenance:
 name: io-Comune - Il sito AgID per Comuni ed Enti Pubblici
 platforms:
   - web
-releaseDate: '2026-10-20'
+releaseDate: '2026-10-22'
 softwareType: standalone/web
-softwareVersion: 12.16.1
+softwareVersion: 12.16.2
 url: 'https://github.com/italia/design-comuni-plone-theme'
 usedBy:
   - ASL Roma 5
