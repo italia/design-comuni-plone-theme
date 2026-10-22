@@ -1,5 +1,13 @@
 # Changelog
 
+## [12.16.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.16.1...v12.16.2) (2026-10-22)
+
+
+### Maintenance
+
+* preparing releae ([854f75f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/854f75f89b9d1419a1f0fce620a587fba30fa849))
+* update volto to 17.23.1 ([#1205](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1205)) ([68e538a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/68e538a809720c82bf61f8fa6d40b4af220ba824))
+
 ## [12.16.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.16.0...v12.16.1) (2026-10-20)
 
 
