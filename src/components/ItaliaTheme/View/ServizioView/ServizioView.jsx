@@ -153,7 +153,7 @@ const ServizioView = ({ content }) => {
             {/* SEZIONI */}
             <ContentTypeViewSections
               content={content}
-              defaultSections={ServizioViewSectionsOrder({ moment: {default: moment } })}
+              defaultSections={ServizioViewSectionsOrder({ moment })}
             />
           </section>
         </div>

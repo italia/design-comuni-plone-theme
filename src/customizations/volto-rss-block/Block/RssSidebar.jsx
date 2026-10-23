@@ -2,6 +2,7 @@
 // - added hide_date checkbox to hide the date in the card 
 // - added show_description checkbox to show the description in the card
 // - added cards_per_row select to choose 3 or 4 cards per row
+// - added hide_categories checkbox to hide the categories in the card
 
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
@@ -58,6 +59,10 @@ const messages = defineMessages({
   hide_date: {
     id: 'rss_hide_date',
     defaultMessage: 'Nascondi data nella card',
+  },
+  hide_categories: {
+    id: 'rss_hide_categories',
+    defaultMessage: 'Nascondi categorie nella card',
   },
   show_description: {
     id: 'rss_show_description',
@@ -165,6 +170,17 @@ const RssSidebar = ({ data, block, onChangeBlock, required = false }) => {
           id="hide_date"
           title={intl.formatMessage(messages.hide_date)}
           value={data.hide_date ? data.hide_date : false}
+          onChange={(id, value) => {
+            onChangeBlock(block, {
+              ...data,
+              [id]: value,
+            });
+          }}
+        />
+        <CheckboxWidget
+          id="hide_categories"
+          title={intl.formatMessage(messages.hide_categories)}
+          value={data.hide_categories ? data.hide_categories : false}
           onChange={(id, value) => {
             onChangeBlock(block, {
               ...data,
