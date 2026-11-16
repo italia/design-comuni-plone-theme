@@ -41,6 +41,15 @@
 - ...
  -->
 
+
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Nel blocco "Icone" con immagine di sfondo, il colore di sfondo scelto viene usato per definire il colore del titolo e della descrizione per essere leggibile. _(**Origine / contributo**: Regione Emilia-Romagna)_
+
+
+
 ## Versione 12.17.0 (02/11/2026)
 
 ### Migliorie

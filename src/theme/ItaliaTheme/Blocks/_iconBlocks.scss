@@ -55,6 +55,13 @@
     }
   }
 
+  .has-bg-image {
+    &.bg-primary,
+    &.bg-secondary {
+      background-color: transparent !important;
+    }
+  }
+
   .block-header {
     .title {
       margin: 1rem 0 2rem 0;

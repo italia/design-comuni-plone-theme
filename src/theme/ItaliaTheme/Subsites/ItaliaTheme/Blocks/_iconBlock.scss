@@ -7,8 +7,15 @@
   $subsite-light-theme
 ) {
   .iconBlocks {
-    .background-image:after {
-      background-color: transparentize($subsite-primary, 0.5);
+    .full-width.has-bg-image {
+      &.bg-primary,
+      &.bg-secondary {
+        background-color: transparent !important;
+      }
+
+      .background-image:after {
+        background-color: transparentize($subsite-primary, 0.5);
+      }
     }
     .block-header {
       @if $subsite-light-theme {

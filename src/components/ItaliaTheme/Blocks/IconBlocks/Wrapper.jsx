@@ -12,17 +12,13 @@ const Wrapper = ({
 }) => {
   const Image = config.getComponent({ name: 'Image' }).component;
   const backgroundImage = data.background?.[0];
+  const bgColorClass =
+    data.bg_color === 'none' ? '' : 'bg-' + (data.bg_color ?? 'primary');
 
   return (
     <div className="public-ui" {...wrapperProps}>
       <div
-        className={`full-width section py-5 ${
-          !backgroundImage
-            ? data.bg_color === 'none'
-              ? ''
-              : 'bg-' + (data.bg_color ?? 'primary')
-            : ''
-        }`}
+        className={`full-width section py-5 ${bgColorClass} ${backgroundImage ? 'has-bg-image' : ''}`}
       >
         {backgroundImage ? (
           <div className="background-image">
