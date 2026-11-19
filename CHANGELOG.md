@@ -1,5 +1,23 @@
 # Changelog
 
+## [12.17.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.17.0...v12.17.1) (2026-11-19)
+
+
+### Bug Fixes
+
+* icon block color text with background-image ([#1224](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1224)) ([f3c9830](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f3c9830684e132803bed457ff429282f44694434))
+* return HTTP 401 for unauthorized content in SSR ([#1217](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1217)) ([abec8a8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/abec8a88746a2a85d010deb90431ca163af0ee61))
+
+
+### Maintenance
+
+* **deps-dev:** bump postcss from 8.4.31 to 8.5.23 ([#1192](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1192)) ([239760a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/239760af73c9c73a9e695909ee60d0c0363319e2))
+* **deps:** bump brace-expansion from 1.1.18 to 1.1.21 ([#1197](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1197)) ([1f44185](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1f441852496961166355a34a8a3fbada14b801c1))
+* **deps:** bump handlebars from 4.7.7 to 4.7.10 ([#1204](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1204)) ([674af5f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/674af5f696978c1dfecd7c5d9c27389e59df2073))
+* **deps:** bump postcss-selector-parser from 6.0.13 to 6.1.5 ([#1216](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1216)) ([d0c4588](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d0c4588cbadc3408794a1c6815e1f21e3f5fe449))
+* preparing release 12.17.1 ([b61353f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b61353f6d39999753c20a6787e33e8ccaf366fc7))
+* reduce SSR html size by not serializing reduxAsyncConnect in window.__data ([#1220](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1220)) ([9c3d8ce](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9c3d8ce6d3efc5a65d11759a73ad7ea22c7edf15))
+
 ## [12.17.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.16.2...v12.17.0) (2026-11-02)
 
 
