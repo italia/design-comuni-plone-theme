@@ -41,14 +41,11 @@
 - ...
  -->
 
-
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 12.17.1 (19/11/2026)
 
 ### Fix
 
 - Nel blocco "Icone" con immagine di sfondo, il colore di sfondo scelto viene usato per definire il colore del titolo e della descrizione per essere leggibile. _(**Origine / contributo**: Regione Emilia-Romagna)_
-
-
 
 ## Versione 12.17.0 (02/11/2026)
 
@@ -68,7 +65,6 @@
 ### Novità
 
 - Nel blocco "Alert" è possibile impostare un periodo di visualizzazione (data e ora di inizio e di scadenza): fuori da quel periodo l'alert non viene mostrato ai visitatori. Se non viene impostato nessun periodo, l'alert è sempre visibile.
-
 
 ## Versione 12.16.1 (20/10/2026)
 
