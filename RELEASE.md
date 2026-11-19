@@ -75,6 +75,7 @@
 ### Fix
 
 - Sistemato il link per la ricerca delle icone sul sito di FontAwesome. _(**Origine / contributo**: Regione Emilia-Romagna)_
+- Sistemato il livello di intestazione dei titoli per la sezione 'Argomenti' del tipo di contenuto Servizio. 
 
 ## Versione 12.16.0 (23/09/2026)
 
