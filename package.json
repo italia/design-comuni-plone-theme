@@ -188,7 +188,7 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.2",
     "lint-staged": "13.0.3",
-    "postcss": "8.4.31",
+    "postcss": "8.5.23",
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-less": "6.0.0",
     "postcss-load-config": "4.0.2",
