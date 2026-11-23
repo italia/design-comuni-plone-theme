@@ -173,6 +173,7 @@ const getSearchParamsURL = (
   subsite,
   currentLang,
   getObject = false,
+  useSiteSearchSettings = true,
 ) => {
   let baseUrl = subsite
     ? flattenToAppURL(subsite['@id'])
@@ -250,7 +251,8 @@ const getSearchParamsURL = (
       ...portal_type,
       skipNull: true,
       b_start: b_start,
-      use_site_search_settings: true,
+      // the site search settings keep only the searchable types
+      ...(useSiteSearchSettings && { use_site_search_settings: true }),
     };
 
     return obj;

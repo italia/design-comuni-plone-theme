@@ -169,13 +169,23 @@ const searchOrderDict = {
   relevance: {},
   Date: {
     sort_on: 'Date',
+    // explicit: without use_site_search_settings @search sorts ascending
+    sort_order: 'reverse',
   },
   sortable_title: {
     sort_on: 'sortable_title',
   },
 };
 
-const Search = () => {
+// The props let an add-on mount this page on its own filters endpoint
+// (action + reducer key) and search every type, outside the site settings.
+const Search = ({
+  getFilters = getSearchFilters,
+  filtersStateKey = 'searchFilters',
+  useSiteSearchSettings = true,
+  defaultExcludedPortalTypes = config.settings.defaultExcludedFromSearch
+    ?.portalTypes ?? [],
+}) => {
   const intl = useIntl();
   const dispatch = useDispatch();
   const location = useLocation();
@@ -260,10 +270,10 @@ const Search = () => {
     setCurrentPage(activePage?.children ?? 1);
   };
 
-  const searchFilters = useSelector((state) => state.searchFilters.result);
+  const searchFilters = useSelector((state) => state[filtersStateKey]?.result);
   useEffect(() => {
     if (!searchFilters || Object.keys(searchFilters).length === 0)
-      dispatch(getSearchFilters());
+      dispatch(getFilters());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -282,7 +292,7 @@ const Search = () => {
       setPortalTypes(
         parseFetchedPortalTypes(
           searchFilters.portal_types,
-          config.settings.defaultExcludedFromSearch?.portalTypes,
+          defaultExcludedPortalTypes,
           location,
         ),
       );
@@ -336,6 +346,7 @@ const Search = () => {
       subsite,
       intl.locale,
       true,
+      useSiteSearchSettings,
     );
 
     !isEmpty(searchResults.result) &&
