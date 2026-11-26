@@ -1,5 +1,23 @@
 # Changelog
 
+## [12.18.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.17.1...v12.18.0) (2026-11-26)
+
+
+### Features
+
+* let add-ons feed the search page with their own filters ([#1235](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1235)) ([9ffe40a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9ffe40a3d3664998db1ec6c58d8354dbd1e9b51b))
+
+
+### Bug Fixes
+
+* release log ([#1233](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1233)) ([81b50e4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/81b50e4d61982e293526bea19756d5c783fd8ba2))
+* support rercaptcha's submit-triggered captcha in Form block ([#1141](https://github.com/RedTurtle/design-comuni-plone-theme/issues/1141)) ([155d658](https://github.com/RedTurtle/design-comuni-plone-theme/commit/155d6583e5092a7ef86e8115e6927083f4a7bb8b))
+
+
+### Maintenance
+
+* preparing release 12.18.0 ([0627226](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0627226848315ebd440f533067656198d19ef401))
+
 ## [12.17.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v12.17.0...v12.17.1) (2026-11-19)
 
 
