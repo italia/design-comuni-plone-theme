@@ -2,6 +2,9 @@
 // - added warning state to form
 // - backport for https://github.com/collective/volto-form-block/pull/122
 // - handle field errors coming from backend
+// - validate the regular fields before running captcha.verify(), so an
+//   invalid submit never triggers a captcha check (relevant for rercaptcha,
+//   whose invisible mode runs the actual proof-of-work inside verify())
 import React, { useState, useEffect, useReducer, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -152,13 +155,16 @@ const View = ({ data, id, path }) => {
   };
 
   useEffect(() => {
+    // Rivalida solo i campi mentre l'utente corregge: il captcha non è
+    // ancora stato (ri)calcolato a questo punto, quindi non deve comparire
+    // come mancante.
     if (formErrors.length > 0) {
-      isValidForm();
+      isValidForm({ skipCaptcha: true });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [formData]);
 
-  const isValidForm = () => {
+  const isValidForm = ({ skipCaptcha = false } = {}) => {
     const v = [];
     data.subblocks.forEach((subblock, index) => {
       const name = getFieldName(subblock.label, subblock.id);
@@ -225,7 +231,7 @@ const View = ({ data, id, path }) => {
       }
     });
 
-    if (data.captcha && !captchaToken.current) {
+    if (!skipCaptcha && data.captcha && !captchaToken.current) {
       v.push({
         field: 'captcha',
         message: intl.formatMessage(messages.requiredFieldMessage),
@@ -238,6 +244,14 @@ const View = ({ data, id, path }) => {
 
   const submit = (e) => {
     e.preventDefault();
+
+    // Campi normali prima, captcha dopo: un submit già invalido non deve
+    // far partire captcha.verify().
+    if (!isValidForm({ skipCaptcha: true })) {
+      setFormState({ type: FORM_STATES.error });
+      return;
+    }
+
     captcha
       .verify()
       .then(() => {

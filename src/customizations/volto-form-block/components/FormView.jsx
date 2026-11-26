@@ -2,8 +2,35 @@
 - usati i componenti di design-react-kit
 - disabilitato il captcha se nelle siteProperties del config è stato disabilitato.
 - aggiunta legenda per i campi obbligatori
+- rercaptcha (collective.rercaptcha) ha due modalità, decise dal flag
+  `show-button` esposto insieme agli altri dati del captcha
+  (`rercaptcha-data`):
+    - invisibile (default): il token si calcola al click su "Invia", non
+      prima. Il bottone deve restare cliccabile anche senza un token già
+      pronto, altrimenti non si sbloccherebbe mai (il click stesso è ciò
+      che avvia il calcolo, tramite la Promise di captcha.verify() in
+      View.jsx).
+    - bottone esplicito: l'utente calcola il token cliccando un bottone
+      dedicato prima di "Invia". In questo caso il pre-blocco va invece
+      mantenuto, esattamente come per gli altri captcha (es. hcaptcha a
+      checkbox): "Invia" deve restare disabilitato finché la verifica non
+      è completa.
+  Per tutti gli altri tipi di captcha il comportamento resta invariato.
+  Il flag è letto direttamente da Redux (state.content.data['@components']
+  ['rercaptcha-data']), per evitare di inserire qui una dipendenza diretta con l'addon 
+  @regioneer/volto-collective-rercaptcha che verrà installato solo al bisogno.
+  NB: nome/valore del flag `show-button`
+  provvisori, in attesa della chiave definitiva dal backend: se cambia va
+  aggiornata anche qui.
+- rercaptcha si renderizza accanto al bottone di submit, a sinistra e prima
+  nel DOM (non più insieme agli altri campi del form): è l'unico tipo di
+  captcha spostato, gli altri restano dove sono sempre stati. Deve stare
+  prima nel DOM, non solo a sinistra visivamente, altrimenti con la sola
+  tastiera il Tab dopo aver spuntato la checkbox del captcha (modalità
+  bottone) esce dal form invece di raggiungere "Invia".
 */
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
 import { Card, CardBody, Row, Col, Alert, Progress } from 'design-react-kit';
 import { getFieldName } from 'volto-form-block/components/utils';
@@ -82,6 +109,16 @@ const FormView = ({
 
   const enableCaptcha =
     config.settings.siteProperties.enableVoltoFormBlockCaptcha;
+
+  // requiresPreexistingToken: vale per tutti i captcha tranne rercaptcha in
+  // modalità invisibile (vedi nota in testa al file).
+  const rerCaptchaData = useSelector(
+    (state) => state.content?.data?.['@components']?.['rercaptcha-data'],
+  );
+  const rercaptchaShowsOwnButton = !!rerCaptchaData?.['show-button'];
+  const requiresPreexistingToken =
+    enableCaptcha &&
+    (data.captcha !== 'rercaptcha' || rercaptchaShowsOwnButton);
 
   const isValidField = (field) => {
     return formErrors?.filter((e) => e.field === field).length === 0;
@@ -261,7 +298,12 @@ const FormView = ({
                   <></>
                 )}
 
-                {enableCaptcha && <>{captcha.render()}</>}
+                {/* rercaptcha si renderizza accanto al bottone di submit,
+                    più sotto: qui restano tutti gli altri tipi di captcha,
+                    che non cambiano posizione */}
+                {enableCaptcha && data.captcha !== 'rercaptcha' && (
+                  <>{captcha.render()}</>
+                )}
 
                 {formErrors.length > 0 && (
                   <Alert
@@ -305,11 +347,21 @@ const FormView = ({
                           intl.formatMessage(messages.default_cancel_label)}
                       </Button>
                     )}
+                    {/* rercaptcha, se configurato, si affianca al bottone
+                        di submit (a sinistra, prima nel DOM) invece che
+                        comparire più in alto insieme agli altri campi del
+                        form: va prima del bottone anche nel DOM, non solo
+                        visivamente, altrimenti con la sola tastiera il Tab
+                        dopo aver spuntato la checkbox esce dal form invece
+                        di raggiungere "Invia" */}
+                    {enableCaptcha && data.captcha === 'rercaptcha' && (
+                      <>{captcha.render()}</>
+                    )}
                     <Button
                       color="primary"
                       type="submit"
                       disabled={
-                        (enableCaptcha &&
+                        (requiresPreexistingToken &&
                           !captcha?.props?.captchaToken?.current) ||
                         formState.loading
                       }
